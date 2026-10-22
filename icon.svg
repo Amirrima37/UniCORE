@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#0e1f38"/>
+      <stop offset="60%" stop-color="#070e1a"/>
+      <stop offset="100%" stop-color="#03060a"/>
+    </radialGradient>
+
+    <!-- Neon Cyan Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="18" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Amber Glow Filter -->
+    <filter id="amberGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="12" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Core Crystal Gradient -->
+    <linearGradient id="prismLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#0055aa"/>
+    </linearGradient>
+
+    <linearGradient id="prismRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38b6ff"/>
+      <stop offset="100%" stop-color="#002b66"/>
+    </linearGradient>
+
+    <linearGradient id="prismTop" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#55d4ff"/>
+    </linearGradient>
+
+    <!-- Outer Rim Gradient -->
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#004488" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base Cyber Container (Frosted Glass Hexagon/Panel) -->
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="url(#bgGlow)"/>
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="none" stroke="url(#rimGrad)" stroke-width="3"/>
+
+  <!-- Subtle Cyber Grid -->
+  <g stroke="#00d4ff" stroke-width="0.75" opacity="0.15">
+    <line x1="80" y1="32" x2="80" y2="480"/>
+    <line x1="160" y1="32" x2="160" y2="480"/>
+    <line x1="256" y1="32" x2="256" y2="480"/>
+    <line x1="352" y1="32" x2="352" y2="480"/>
+    <line x1="432" y1="32" x2="432" y2="480"/>
+    <line x1="32" y1="80" x2="480" y2="80"/>
+    <line x1="32" y1="160" x2="480" y2="160"/>
+    <line x1="32" y1="256" x2="480" y2="256"/>
+    <line x1="32" y1="352" x2="480" y2="352"/>
+    <line x1="32" y1="432" x2="480" y2="432"/>
+  </g>
+
+  <!-- Corner Tech Accents -->
+  <g stroke="#00e5ff" stroke-width="2" fill="none" opacity="0.7">
+    <path d="M 64 96 L 64 64 L 96 64"/>
+    <path d="M 448 96 L 448 64 L 416 64"/>
+    <path d="M 64 416 L 64 448 L 96 448"/>
+    <path d="M 448 416 L 448 448 L 416 448"/>
+  </g>
+
+  <!-- Detroit: Become Human LED Ring -->
+  <!-- Outer Faint Glow Ring -->
+  <circle cx="256" cy="240" r="150" fill="none" stroke="#00e5ff" stroke-width="2" opacity="0.25"/>
+
+  <!-- Segmented Cyber Ring -->
+  <circle cx="256" cy="240" r="136" fill="none" stroke="#0088cc" stroke-width="3" stroke-dasharray="14 8" opacity="0.4"/>
+
+  <!-- Glowing Primary LED Arc (Cyan) -->
+  <path d="M 256 94 A 146 146 0 1 1 122 300" fill="none" stroke="#00f0ff" stroke-width="8" stroke-linecap="round" filter="url(#neonGlow)"/>
+
+  <!-- Iconic Detroit Amber LED Status Accent (Connor's Thinking Arc) -->
+  <path d="M 126 308 A 146 146 0 0 1 154 148" fill="none" stroke="#ffaa00" stroke-width="9" stroke-linecap="round" filter="url(#amberGlow)"/>
+
+  <!-- Small Amber LED Head Dot -->
+  <circle cx="154" cy="148" r="6" fill="#ffffff" filter="url(#amberGlow)"/>
+
+  <!-- Central Isometric UniCORE Cube (The sterile synthetic core) -->
+  <g filter="url(#neonGlow)">
+    <!-- Top Face -->
+    <polygon points="256,150 334,195 256,240 178,195" fill="url(#prismTop)"/>
+    <!-- Left Face -->
+    <polygon points="178,195 256,240 256,330 178,285" fill="url(#prismLeft)"/>
+    <!-- Right Face -->
+    <polygon points="256,240 334,195 334,285 256,330" fill="url(#prismRight)"/>
+
+    <!-- Subtle Edge Outlines -->
+    <polyline points="178,195 256,240 334,195" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+    <line x1="256" y1="240" x2="256" y2="330" stroke="#00f0ff" stroke-width="2" opacity="0.8"/>
+  </g>
+
+  <!-- Core Pulsing Node -->
+  <circle cx="256" cy="240" r="12" fill="#ffffff" filter="url(#neonGlow)"/>
+  <circle cx="256" cy="240" r="5" fill="#00e5ff"/>
+
+  <!-- UniCORE Tech Logo Text -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-weight="800" text-anchor="middle">
+    <text x="256" y="420" font-size="34" letter-spacing="10" fill="#ffffff" filter="url(#neonGlow)">UNICORE</text>
+    <text x="256" y="445" font-size="11" letter-spacing="5" fill="#00e5ff" opacity="0.85">AI RUNTIME ENVIRONMENT</text>
+  </g>
+</svg>

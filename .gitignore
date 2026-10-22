@@ -1,0 +1,17 @@
+# Godot 4+ specific ignores
+.godot/
+*.translation
+
+# Godot-specific exclusions
+# Mono-specific ignores (if C# is used in future)
+.mono/
+data_*/
+mono_crash.*.json
+
+# System / OS ignores
+.DS_Store
+Thumbs.db
+
+# Temporary & logs
+run_output.txt
+*.log

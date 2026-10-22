@@ -1,0 +1,250 @@
+[gd_scene load_steps=2 format=3 uid="uid://df8a93n4c72b"]
+
+[ext_resource type="Script" path="res://ui/analysis_drawer/analysis_drawer.gd" id="1_drawer"]
+
+[node name="AnalysisDrawer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_drawer")
+
+[node name="DrawerPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = 52.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="DrawerPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DrawerPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HeaderHBox" type="HBoxContainer" parent="DrawerPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="LedMarker" type="ColorRect" parent="DrawerPanel/MarginContainer/VBoxContainer/HeaderHBox"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(1, 0.25, 0.25, 1)
+
+[node name="TitleLabel" type="Label" parent="DrawerPanel/MarginContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 14
+text = "[СБОЙ СЕТИ] Ошибка региона API"
+autowrap_mode = 3
+
+[node name="CloseButton" type="Button" parent="DrawerPanel/MarginContainer/VBoxContainer/HeaderHBox"]
+custom_minimum_size = Vector2(28, 26)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "✕"
+
+[node name="HSeparator1" type="HSeparator" parent="DrawerPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="AnalysisPanel" type="PanelContainer" parent="DrawerPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="DrawerPanel/MarginContainer/VBoxContainer/AnalysisPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="DrawerPanel/MarginContainer/VBoxContainer/AnalysisPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="AnalysisHeaderLabel" type="Label" parent="DrawerPanel/MarginContainer/VBoxContainer/AnalysisPanel/MarginContainer/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.85, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "// АНАЛИЗ И ПРИЧИНА СБОЯ:"
+
+[node name="ExplanationLabel" type="Label" parent="DrawerPanel/MarginContainer/VBoxContainer/AnalysisPanel/MarginContainer/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Запрос к LLM API был отклонен из-за неподдерживаемого региона или отсутствия валидного ключа API."
+autowrap_mode = 3
+
+[node name="QuickActionsHBox" type="HBoxContainer" parent="DrawerPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="CopyButton" type="Button" parent="DrawerPanel/MarginContainer/VBoxContainer/QuickActionsHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "📋 Копировать отчет"
+
+[node name="SettingsButton" type="Button" parent="DrawerPanel/MarginContainer/VBoxContainer/QuickActionsHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "⚙ Настройки API"
+
+[node name="RetryButton" type="Button" parent="DrawerPanel/MarginContainer/VBoxContainer/QuickActionsHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "🔄 Повторить запрос"
+
+[node name="HSeparator2" type="HSeparator" parent="DrawerPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="DrawerPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TechDetails" type="MarginContainer" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Scroll" type="ScrollContainer" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/TechDetails"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/TechDetails/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="HttpLineLabel" type="Label" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/TechDetails/Scroll/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "HTTP Статус: 403 Forbidden"
+
+[node name="UrlLineLabel" type="Label" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/TechDetails/Scroll/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "URL: https://generativelanguage.googleapis.com/v1beta/..."
+autowrap_mode = 3
+
+[node name="ModelLineLabel" type="Label" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/TechDetails/Scroll/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Провайдер: Google Gemini Direct (модель: gemini-2.5-flash)"
+
+[node name="RawTitle" type="Label" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/TechDetails/Scroll/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 0.8)
+theme_override_font_sizes/font_size = 11
+text = "// Сырой ответ / JSON / Тело ошибки:"
+
+[node name="RawResponseEdit" type="TextEdit" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/TechDetails/Scroll/VBox"]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+editable = false
+wrap_mode = 1
+
+[node name="StackTitle" type="Label" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/TechDetails/Scroll/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 0.8)
+theme_override_font_sizes/font_size = 11
+text = "// Стек вызовов / Контекст:"
+
+[node name="StackEdit" type="TextEdit" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/TechDetails/Scroll/VBox"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+editable = false
+wrap_mode = 1
+
+[node name="CodeDetails" type="MarginContainer" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/CodeDetails"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="CodeHeaderLabel" type="Label" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/CodeDetails/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 0.8)
+theme_override_font_sizes/font_size = 11
+text = "// Сгенерированный код модуля (CodeEdit с номерами строк):"
+
+[node name="GeneratedCodeEdit" type="CodeEdit" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/CodeDetails/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 12
+editable = false
+gutters_draw_line_numbers = true
+
+[node name="LogsDetails" type="MarginContainer" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/LogsDetails"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LogsHeaderLabel" type="Label" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/LogsDetails/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 0.8)
+theme_override_font_sizes/font_size = 11
+text = "// Журнал событий DiagnosticLogger:"
+
+[node name="LogsEdit" type="TextEdit" parent="DrawerPanel/MarginContainer/VBoxContainer/TabContainer/LogsDetails/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 11
+editable = false
+wrap_mode = 1
+
+[node name="FooterHBox" type="HBoxContainer" parent="DrawerPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FooterStatusLabel" type="Label" parent="DrawerPanel/MarginContainer/VBoxContainer/FooterHBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.72, 0.8, 0.7)
+theme_override_font_sizes/font_size = 11
+text = "// CYBERLIFE DIAGNOSTICS ACTIVE"
+
+[node name="Spacer" type="Control" parent="DrawerPanel/MarginContainer/VBoxContainer/FooterHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FooterCloseButton" type="Button" parent="DrawerPanel/MarginContainer/VBoxContainer/FooterHBox"]
+custom_minimum_size = Vector2(110, 26)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "ЗАКРЫТЬ [Esc]"

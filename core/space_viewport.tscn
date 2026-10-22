@@ -1,0 +1,63 @@
+[gd_scene load_steps=14 format=3 uid="uid://b8d5a2f8k21m"]
+
+[ext_resource type="Script" path="res://core/space_viewport.gd" id="1_space"]
+[ext_resource type="Script" path="res://core/event_bus.gd" id="2_eventbus"]
+[ext_resource type="Script" path="res://core/module_manager.gd" id="3_modmgr"]
+[ext_resource type="Script" path="res://agent/agent_brain.gd" id="4_brain"]
+[ext_resource type="Script" path="res://agent/providers/gemini_provider.gd" id="5_gemini"]
+[ext_resource type="PackedScene" uid="uid://c3m7x4oab21a" path="res://ui/prompt_bar/prompt_bar.tscn" id="6_promptbar"]
+[ext_resource type="PackedScene" uid="uid://d4m8t5r1x22b" path="res://ui/module_toolbar/module_toolbar.tscn" id="7_toolbar"]
+[ext_resource type="Script" path="res://core/settings_manager.gd" id="8_settings"]
+[ext_resource type="Script" path="res://core/space_manager.gd" id="9_spacemgr"]
+[ext_resource type="PackedScene" uid="uid://df7h184k2001" path="res://ui/hud/top_bar.tscn" id="10_topbar"]
+[ext_resource type="PackedScene" uid="uid://by2qv7fdq07a5" path="res://ui/menu/main_menu.tscn" id="11_mainmenu"]
+[ext_resource type="PackedScene" uid="uid://df8ba3n4c72b" path="res://ui/analysis_drawer/analysis_drawer.tscn" id="12_drawer"]
+
+[sub_resource type="Environment" id="Environment_core"]
+background_mode = 1
+background_color = Color(0.96, 0.96, 0.98, 1)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.8
+
+[node name="SpaceViewport" type="Node3D"]
+script = ExtResource("1_space")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_core")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 0, 20, 0)
+shadow_enabled = true
+
+[node name="EventBus" type="Node" parent="."]
+script = ExtResource("2_eventbus")
+
+[node name="SettingsManager" type="Node" parent="."]
+script = ExtResource("8_settings")
+
+[node name="ModuleManager" type="Node" parent="."]
+script = ExtResource("3_modmgr")
+
+[node name="SpaceManager" type="Node" parent="."]
+script = ExtResource("9_spacemgr")
+
+[node name="WorldRoot" type="Node3D" parent="."]
+
+[node name="AgentBrain" type="Node" parent="."]
+script = ExtResource("4_brain")
+
+[node name="GeminiProvider" type="Node" parent="AgentBrain"]
+script = ExtResource("5_gemini")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TopBar" parent="CanvasLayer" instance=ExtResource("10_topbar")]
+
+[node name="PromptBar" parent="CanvasLayer" instance=ExtResource("6_promptbar")]
+
+[node name="AnalysisDrawer" parent="CanvasLayer" instance=ExtResource("12_drawer")]
+
+[node name="ModuleToolbar" parent="CanvasLayer" instance=ExtResource("7_toolbar")]
+
+[node name="MainMenu" parent="CanvasLayer" instance=ExtResource("11_mainmenu")]

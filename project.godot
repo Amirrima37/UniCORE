@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="UniCORE"
+config/description="Universal Core - An open-ended, self-expanding AI runtime environment"
+run/main_scene="res://core/space_viewport.tscn"
+config/features=PackedStringArray("4.0", "Forward Plus")
+config/icon="res://icon.svg"
+config/version="0.2.0"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.95, 0.95, 0.96, 1)

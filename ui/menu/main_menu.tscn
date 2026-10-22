@@ -1,0 +1,678 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5mainmenu228a"]
+
+[ext_resource type="Script" path="res://ui/menu/main_menu.gd" id="1_menu"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="ModalBackdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01, 0.02, 0.05, 0.7)
+
+[node name="MainPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -460.0
+offset_top = -300.0
+offset_right = 460.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HeaderHBox" type="HBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "UNICORE // СИСТЕМНОЕ МЕНЮ"
+
+[node name="SubLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.7, 0.9, 0.7)
+theme_override_font_sizes/font_size = 12
+text = "[DETROIT: SHELL PROTOCOL]"
+
+[node name="Spacer" type="Control" parent="MainPanel/MarginContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CloseButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/HeaderHBox"]
+custom_minimum_size = Vector2(32, 28)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "✕"
+
+[node name="TabContainer" type="TabContainer" parent="MainPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SpacesTab" type="MarginContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBox" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CurrentSpaceBanner" type="PanelContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox"]
+layout_mode = 2
+
+[node name="CurrentSpaceLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/CurrentSpaceBanner"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "ТЕКУЩЕЕ ПРОСТРАНСТВО: DEFAULT"
+
+[node name="ActionsHBox" type="HBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="NewSpaceButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/ActionsHBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "+ СОЗДАТЬ ПРОСТРАНСТВО"
+
+[node name="QuickSaveButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/ActionsHBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "💾 БЫСТРОЕ СОХРАНЕНИЕ"
+
+[node name="SaveAsButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/ActionsHBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "СОХРАНИТЬ КАК..."
+
+[node name="NewSpaceForm" type="PanelContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox"]
+visible = false
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/NewSpaceForm"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="FormTitle" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/NewSpaceForm/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "СОЗДАНИЕ НОВОГО ПРОСТРАНСТВА:"
+
+[node name="NameEdit" type="LineEdit" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/NewSpaceForm/VBox"]
+layout_mode = 2
+placeholder_text = "Название Пространства (например: Моя Лаборатория)"
+
+[node name="TemplateOption" type="OptionButton" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/NewSpaceForm/VBox"]
+layout_mode = 2
+item_count = 4
+selected = 0
+popup/item_0/text = "Стандартная Студия (Default: Пол + Локомоция)"
+popup/item_0/id = 0
+popup/item_1/text = "Кибер-Пустота (Cyber Void: Темная среда)"
+popup/item_1/id = 1
+popup/item_2/text = "Чистый Холст (Clean Slate: Свободный полет в пустоте)"
+popup/item_2/id = 2
+popup/item_3/text = "Студия Инструментов (Playground: Спавнер Кубов)"
+popup/item_3/id = 3
+
+[node name="ButtonsHBox" type="HBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/NewSpaceForm/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="CreateButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/NewSpaceForm/VBox/ButtonsHBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "СОЗДАТЬ И ВОЙТИ"
+
+[node name="CancelButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/NewSpaceForm/VBox/ButtonsHBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "ОТМЕНА"
+
+[node name="SaveAsForm" type="PanelContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox"]
+visible = false
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/SaveAsForm"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="FormTitle" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/SaveAsForm/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "СОХРАНИТЬ ПРОСТРАНСТВО КАК:"
+
+[node name="SaveAsNameEdit" type="LineEdit" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/SaveAsForm/VBox"]
+layout_mode = 2
+placeholder_text = "Новое название пространства..."
+
+[node name="ButtonsHBox" type="HBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/SaveAsForm/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ConfirmButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/SaveAsForm/VBox/ButtonsHBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "СОХРАНИТЬ"
+
+[node name="CancelButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/SaveAsForm/VBox/ButtonsHBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "ОТМЕНА"
+
+[node name="ListHeader" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.75, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "ДОСТУПНЫЕ ПРОСТРАНСТВА НА ДИСКЕ:"
+
+[node name="Scroll" type="ScrollContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="SpacesList" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SpacesTab/VBox/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="SettingsTab" type="MarginContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Scroll" type="ScrollContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="VBox" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+
+[node name="DisplayHeader" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "// ДИСПЛЕЙ И ГРАФИКА"
+
+[node name="DisplaySection" type="GridContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 8
+columns = 2
+
+[node name="FullscreenLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/DisplaySection"]
+layout_mode = 2
+text = "Полноэкранный режим (F11):"
+
+[node name="FullscreenCheck" type="CheckBox" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/DisplaySection"]
+layout_mode = 2
+text = "Включить полный экран"
+
+[node name="ResolutionLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/DisplaySection"]
+layout_mode = 2
+text = "Разрешение окна:"
+
+[node name="ResolutionOption" type="OptionButton" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/DisplaySection"]
+layout_mode = 2
+item_count = 4
+selected = 0
+popup/item_0/text = "1280 x 720 (HD)"
+popup/item_0/id = 0
+popup/item_1/text = "1600 x 900 (HD+)"
+popup/item_1/id = 1
+popup/item_2/text = "1920 x 1080 (Full HD)"
+popup/item_2/id = 2
+popup/item_3/text = "2560 x 1440 (2K QHD)"
+popup/item_3/id = 3
+
+[node name="VsyncLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/DisplaySection"]
+layout_mode = 2
+text = "Вертикальная синхронизация:"
+
+[node name="VsyncCheck" type="CheckBox" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/DisplaySection"]
+layout_mode = 2
+button_pressed = true
+text = "VSync Включен"
+
+[node name="FpsLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/DisplaySection"]
+layout_mode = 2
+text = "Лимит кадров (FPS):"
+
+[node name="FpsOption" type="OptionButton" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/DisplaySection"]
+layout_mode = 2
+item_count = 4
+selected = 0
+popup/item_0/text = "Без ограничений"
+popup/item_0/id = 0
+popup/item_1/text = "60 FPS"
+popup/item_1/id = 1
+popup/item_2/text = "120 FPS"
+popup/item_2/id = 2
+popup/item_3/text = "144 FPS"
+popup/item_3/id = 3
+
+[node name="HSeparator1" type="HSeparator" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+
+[node name="InterfaceHeader" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "// ИНТЕРФЕЙС / ДИЗАЙН"
+
+[node name="InterfaceSection" type="GridContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 8
+columns = 3
+
+[node name="ThemeLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/InterfaceSection"]
+layout_mode = 2
+text = "Тема оформления:"
+
+[node name="ThemeOption" type="OptionButton" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/InterfaceSection"]
+layout_mode = 2
+item_count = 2
+selected = 0
+popup/item_0/text = "CyberLife White (Liquid Glass)"
+popup/item_0/id = 0
+popup/item_1/text = "Cyber Void (Dark Glass)"
+popup/item_1/id = 1
+
+[node name="SpacerTheme" type="Control" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/InterfaceSection"]
+layout_mode = 2
+
+[node name="OpacityLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/InterfaceSection"]
+layout_mode = 2
+text = "Прозрачность стекла:"
+
+[node name="OpacitySlider" type="HSlider" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/InterfaceSection"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+min_value = 0.2
+max_value = 0.95
+step = 0.01
+value = 0.75
+
+[node name="OpacityValLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/InterfaceSection"]
+layout_mode = 2
+text = "75%"
+
+[node name="LedLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/InterfaceSection"]
+layout_mode = 2
+text = "Интенсивность LED свечения:"
+
+[node name="LedSlider" type="HSlider" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/InterfaceSection"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+min_value = 0.5
+max_value = 2.0
+step = 0.05
+value = 1.0
+
+[node name="LedValLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/InterfaceSection"]
+layout_mode = 2
+text = "100%"
+
+[node name="AutocloseLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/InterfaceSection"]
+layout_mode = 2
+text = "Автозакрытие PromptBar:"
+
+[node name="AutocloseCheck" type="CheckBox" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/InterfaceSection"]
+layout_mode = 2
+button_pressed = true
+text = "Закрывать при успехе"
+
+[node name="SpacerAutoclose" type="Control" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/InterfaceSection"]
+layout_mode = 2
+
+[node name="HSeparatorInterface" type="HSeparator" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+
+[node name="ControlsHeader" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "// УПРАВЛЕНИЕ И КАМЕРА"
+
+[node name="ControlsSection" type="GridContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 8
+columns = 3
+
+[node name="SensLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/ControlsSection"]
+layout_mode = 2
+text = "Чувствительность мыши:"
+
+[node name="SensitivitySlider" type="HSlider" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/ControlsSection"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+min_value = 0.0005
+max_value = 0.008
+step = 0.0001
+value = 0.002
+
+[node name="SensitivityValLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/ControlsSection"]
+layout_mode = 2
+text = "0.0020"
+
+[node name="InvertLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/ControlsSection"]
+layout_mode = 2
+text = "Инверсия оси Y:"
+
+[node name="InvertYCheck" type="CheckBox" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/ControlsSection"]
+layout_mode = 2
+text = "Инвертировать"
+
+[node name="Spacer1" type="Control" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/ControlsSection"]
+layout_mode = 2
+
+[node name="SpeedLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/ControlsSection"]
+layout_mode = 2
+text = "Базовая скорость полета:"
+
+[node name="SpeedSlider" type="HSlider" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/ControlsSection"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+min_value = 4.0
+max_value = 35.0
+step = 1.0
+value = 10.0
+
+[node name="SpeedValLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/ControlsSection"]
+layout_mode = 2
+text = "10.0 m/s"
+
+[node name="HSeparator2" type="HSeparator" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+
+[node name="AudioHeader" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "// АУДИО"
+
+[node name="AudioSection" type="GridContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 8
+columns = 3
+
+[node name="VolLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/AudioSection"]
+layout_mode = 2
+text = "Общая громкость:"
+
+[node name="VolumeSlider" type="HSlider" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/AudioSection"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.8
+
+[node name="VolumeValLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/AudioSection"]
+layout_mode = 2
+text = "80%"
+
+[node name="HSeparator3" type="HSeparator" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+
+[node name="AgentHeader" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "// ИИ-АГЕНТ (LLM CONFIG)"
+
+[node name="AgentSection" type="GridContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 8
+columns = 2
+
+[node name="ProviderLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/AgentSection"]
+layout_mode = 2
+text = "Провайдер ИИ:"
+
+[node name="ProviderOption" type="OptionButton" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/AgentSection"]
+layout_mode = 2
+item_count = 4
+selected = 0
+popup/item_0/text = "Google Gemini (Direct)"
+popup/item_0/id = 0
+popup/item_1/text = "OpenRouter"
+popup/item_1/id = 1
+popup/item_2/text = "OpenAI Official"
+popup/item_2/id = 2
+popup/item_3/text = "DeepSeek API"
+popup/item_3/id = 3
+
+[node name="ModelLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/AgentSection"]
+layout_mode = 2
+text = "Модель ИИ:"
+
+[node name="ModelEdit" type="LineEdit" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/AgentSection"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "gemini-2.5-flash"
+
+[node name="KeyLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/AgentSection"]
+layout_mode = 2
+text = "API Ключ (опционально):"
+
+[node name="KeyEdit" type="LineEdit" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox/AgentSection"]
+layout_mode = 2
+size_flags_horizontal = 3
+secret = true
+placeholder_text = "Введите ключ или задайте в переменных среды"
+
+[node name="SaveSettingsButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/SettingsTab/Scroll/VBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "ПРИМЕНИТЬ И СОХРАНИТЬ НАСТРОЙКИ"
+
+[node name="LibraryTab" type="MarginContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="ModulesTab" type="MarginContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Scroll" type="ScrollContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/ModulesTab"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="ModulesList" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/ModulesTab/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="AboutTab" type="MarginContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Scroll" type="ScrollContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBox" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="AboutTitle" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "UniCORE — Универсальное Ядро и Автономная Среда"
+
+[node name="AboutDesc" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.88, 0.95, 0.9)
+theme_override_font_sizes/font_size = 12
+text = "UniCORE — это открытая расширяемая среда, в которую встроен автономный ИИ-Агент.
+Ядро является стерильным, а вся функциональность мира монтируется динамически в виде GDScript-модулей.
+Дизайн оболочки вдохновлен интерфейсами Detroit: Become Human (матовое стекло, неоновые LED-акценты)."
+autowrap_mode = 3
+
+[node name="KeysTitle" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "// ГОРЯЧИЕ КЛАВИШИ И УПРАВЛЕНИЕ:"
+
+[node name="KeysGrid" type="GridContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 6
+columns = 2
+
+[node name="K1" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 1)
+text = "W, A, S, D"
+
+[node name="D1" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+text = "Перемещение аватара в пространстве"
+
+[node name="K2" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 1)
+text = "ПРОБЕЛ (Space)"
+
+[node name="D2" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+text = "Взлет / Подъем вверх"
+
+[node name="K3" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 1)
+text = "Ctrl"
+
+[node name="D3" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+text = "Спуск вниз"
+
+[node name="K4" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 1)
+text = "Shift"
+
+[node name="D4" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+text = "Ускорение (Спринт)"
+
+[node name="K5" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 1)
+text = "Tab или ~"
+
+[node name="D5" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+text = "Строка команд Агента (Prompt Bar)"
+
+[node name="K6" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 1)
+text = "Esc"
+
+[node name="D6" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+text = "Главное меню / Освобождение курсора"
+
+[node name="K7" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 1)
+text = "F11"
+
+[node name="D7" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+text = "Полноэкранный режим (Toggle Fullscreen)"
+
+[node name="K8" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 1)
+text = "F или ЛКМ"
+
+[node name="D8" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/AboutTab/Scroll/VBox/KeysGrid"]
+layout_mode = 2
+text = "Спавн красных кубов (если активен модуль кубов)"
+
+[node name="FooterHBox" type="HBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ResumeButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/FooterHBox"]
+custom_minimum_size = Vector2(160, 36)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "ПРОДОЛЖИТЬ"
+
+[node name="Spacer" type="Control" parent="MainPanel/MarginContainer/VBoxContainer/FooterHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="QuitButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/FooterHBox"]
+custom_minimum_size = Vector2(140, 36)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "ВЫХОД"
+
+[node name="ConfirmDialog" type="ConfirmationDialog" parent="."]
+title = "Подтверждение"
+initial_position = 2
+size = Vector2i(320, 100)
+ok_button_text = "Да"
+cancel_button_text = "Отмена"

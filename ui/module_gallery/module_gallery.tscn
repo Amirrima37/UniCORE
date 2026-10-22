@@ -1,0 +1,113 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6modgallery118a"]
+
+[ext_resource type="Script" path="res://ui/module_gallery/module_gallery.gd" id="1_gallery"]
+
+[node name="ModuleGallery" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_gallery")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="HeaderPanel" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HeaderPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 6
+
+[node name="HeaderHBox" type="HBoxContainer" parent="VBoxContainer/HeaderPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SearchEdit" type="LineEdit" parent="VBoxContainer/HeaderPanel/MarginContainer/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Поиск модуля по названию или тегам..."
+
+[node name="ClearButton" type="Button" parent="VBoxContainer/HeaderPanel/MarginContainer/HeaderHBox"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "✕"
+
+[node name="CategoryOption" type="OptionButton" parent="VBoxContainer/HeaderPanel/MarginContainer/HeaderHBox"]
+custom_minimum_size = Vector2(170, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="SortOption" type="OptionButton" parent="VBoxContainer/HeaderPanel/MarginContainer/HeaderHBox"]
+custom_minimum_size = Vector2(150, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="RefreshButton" type="Button" parent="VBoxContainer/HeaderPanel/MarginContainer/HeaderHBox"]
+custom_minimum_size = Vector2(32, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+tooltip_text = "Обновить список"
+text = "⟳"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 3
+
+[node name="EmptyLabel" type="Label" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+text = "Модули не найдены по заданным критериям."
+horizontal_alignment = 1
+
+[node name="FooterPanel" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/FooterPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 6
+
+[node name="FooterHBox" type="HBoxContainer" parent="VBoxContainer/FooterPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ImportButton" type="Button" parent="VBoxContainer/FooterPanel/MarginContainer/FooterHBox"]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Импортировать .gd модуль..."
+
+[node name="Spacer" type="Control" parent="VBoxContainer/FooterPanel/MarginContainer/FooterHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StatsLabel" type="Label" parent="VBoxContainer/FooterPanel/MarginContainer/FooterHBox"]
+layout_mode = 2
+text = "Всего: 0 | Активно: 0 | Шаблонов: 0"

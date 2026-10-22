@@ -1,0 +1,608 @@
+class_name ModuleLibrary
+extends Node
+
+## Библиотека Модулей Ядра UniCORE (ModuleLibrary)
+## Сканирует, каталогизирует и управляет жизненным циклом файлов модулей
+## (res://modules/, res://modules/builtin/ и шаблоны ModuleRegistryClient).
+
+signal library_updated()
+
+var _catalog: Array[Dictionary] = []
+var _module_manager = null # ModuleManager
+var _event_bus = null # EventBus
+
+# Регулярные выражения для парсинга метаданных
+var _regex_func_module_id: RegEx
+var _regex_func_module_name: RegEx
+var _regex_id_func_replace: RegEx
+
+func _init() -> void:
+	print("[ModuleLibrary] _init start")
+	_init_regexes()
+	print("[ModuleLibrary] _init done")
+
+func _ready() -> void:
+	if _catalog.is_empty():
+		scan_library()
+
+func _init_regexes() -> void:
+	_regex_func_module_id = RegEx.new()
+	_regex_func_module_id.compile("func\\s+get_module_id\\s*\\([^)]*\\)[^:]*:[^\"']*[\"']([^\"']+)[\"']")
+
+	_regex_func_module_name = RegEx.new()
+	_regex_func_module_name.compile("func\\s+get_module_name\\s*\\([^)]*\\)[^:]*:[^\"']*[\"']([^\"']+)[\"']")
+
+	_regex_id_func_replace = RegEx.new()
+	_regex_id_func_replace.compile("(func\\s+get_module_id\\s*\\([^)]*\\)[^:]*:[^\"'\\r\\n]*(?:\\r?\\n[ \\t]*return[ \\t]+|[ \\t]*return[ \\t]+)?)[ \"']([^\"']+)[ \"']")
+
+## Инициализация ссылок на ModuleManager и EventBus
+func setup(module_manager = null, event_bus = null) -> void:
+	_event_bus = event_bus
+
+	if _module_manager != module_manager:
+		if _module_manager:
+			if _module_manager.module_loaded.is_connected(_on_module_loaded):
+				_module_manager.module_loaded.disconnect(_on_module_loaded)
+			if _module_manager.module_unloaded.is_connected(_on_module_unloaded):
+				_module_manager.module_unloaded.disconnect(_on_module_unloaded)
+
+		_module_manager = module_manager
+
+		if _module_manager:
+			if not _module_manager.module_loaded.is_connected(_on_module_loaded):
+				_module_manager.module_loaded.connect(_on_module_loaded)
+			if not _module_manager.module_unloaded.is_connected(_on_module_unloaded):
+				_module_manager.module_unloaded.connect(_on_module_unloaded)
+
+	_update_active_states()
+	scan_library()
+
+## Сканирует папки res://modules/ и res://modules/builtin/ и объединяет с шаблонами реестра
+func scan_library() -> void:
+	if not _regex_func_module_id:
+		_init_regexes()
+
+	var new_catalog: Array[Dictionary] = []
+	var seen_ids: Dictionary = {} # module_id -> bool
+
+	var registry_templates := ModuleRegistryClient.get_all_templates()
+
+	# 1. Сканирование встроенных модулей (res://modules/builtin/)
+	_scan_directory("res://modules/builtin", true, seen_ids, new_catalog, registry_templates)
+
+	# 2. Сканирование пользовательских модулей (res://modules/)
+	_scan_directory("res://modules", false, seen_ids, new_catalog, registry_templates)
+
+	# 3. Добавление шаблонов из ModuleRegistryClient (версия на диске имеет приоритет)
+	for template in registry_templates:
+		var t_id := str(template.get("id", "")).strip_edges()
+		if t_id.is_empty() or seen_ids.has(t_id):
+			continue
+
+		seen_ids[t_id] = true
+		var t_name := str(template.get("name", t_id.capitalize()))
+		var t_desc := str(template.get("description", ""))
+		var t_cat := _normalize_category(str(template.get("category", "user")))
+		var t_file_path := str(template.get("source_file", ""))
+		var t_tags: Array = template.get("tags", []).duplicate()
+		var t_code := str(template.get("code", ""))
+		var t_size := t_code.to_utf8_buffer().size()
+
+		var entry: Dictionary = {
+			"id": t_id,
+			"name": t_name,
+			"description": t_desc,
+			"category": t_cat,
+			"file_path": t_file_path,
+			"is_builtin": false,
+			"is_active": _is_module_active(t_id),
+			"created_at": 0.0,
+			"file_size": t_size,
+			"tags": t_tags,
+			"source": "registry"
+		}
+		new_catalog.append(entry)
+
+	_catalog = new_catalog
+	_update_active_states()
+	library_updated.emit()
+
+## Возвращает список всех модулей в каталоге с актуальным статусом is_active
+func get_all_modules() -> Array[Dictionary]:
+	if _catalog.is_empty():
+		scan_library()
+	else:
+		_update_active_states()
+	return _catalog.duplicate(true)
+
+## Возвращает модули отфильтрованные по категории (без учета регистра)
+func get_modules_by_category(category: String) -> Array[Dictionary]:
+	var all_mods := get_all_modules()
+	var cat := category.strip_edges().to_lower()
+	if cat.is_empty() or cat == "all":
+		return all_mods
+
+	var filtered: Array[Dictionary] = []
+	for item in all_mods:
+		if str(item.get("category", "")).to_lower() == cat:
+			filtered.append(item)
+	return filtered
+
+## Удаление модуля с диска. Встроенные модули (is_builtin) удалять ЗАПРЕЩЕНО!
+func delete_module(module_id: String) -> bool:
+	if _catalog.is_empty():
+		scan_library()
+
+	var target: Dictionary = _find_catalog_item(module_id)
+	if target.is_empty():
+		push_warning("Module not found: %s" % module_id)
+		return false
+
+	if target.get("is_builtin", false):
+		push_warning("Cannot delete built-in module: %s" % module_id)
+		return false
+
+	if target.get("source", "") == "registry" and not FileAccess.file_exists(target.get("file_path", "")):
+		push_warning("Cannot delete static registry template: %s" % module_id)
+		return false
+
+	if _module_manager and _is_module_active(module_id):
+		_module_manager.unload_module(module_id)
+
+	var file_path: String = target.get("file_path", "")
+	if file_path.is_empty():
+		file_path = "res://modules/%s.gd" % module_id
+
+	if FileAccess.file_exists(file_path):
+		var err := DirAccess.remove_absolute(file_path)
+		if err != OK:
+			push_error("Failed to delete module file: %s (error code %d)" % [file_path, err])
+			return false
+
+	scan_library()
+	return true
+
+## Переименование модуля: меняет ID в get_module_id() и имя файла. Встроенные модули переименовывать ЗАПРЕЩЕНО!
+func rename_module(old_id: String, new_id: String) -> bool:
+	if _catalog.is_empty():
+		scan_library()
+
+	var target: Dictionary = _find_catalog_item(old_id)
+	if target.is_empty():
+		push_warning("Module not found: %s" % old_id)
+		return false
+
+	if target.get("is_builtin", false):
+		push_warning("Cannot rename built-in module: %s" % old_id)
+		return false
+
+	if new_id.is_empty() or not new_id.is_valid_identifier():
+		push_warning("Invalid new module identifier: '%s'" % new_id)
+		return false
+
+	if old_id == new_id:
+		return true
+
+	var target_path := "res://modules/%s.gd" % new_id
+	if FileAccess.file_exists(target_path):
+		push_error("Module '%s' already exists at %s" % [new_id, target_path])
+		return false
+
+	var source_code := get_module_source(old_id)
+	if source_code.is_empty():
+		push_error("Failed to read source code for module '%s'" % old_id)
+		return false
+
+	var updated_source := _replace_module_id_in_source(source_code, new_id)
+
+	_ensure_modules_dir_exists()
+	var f := FileAccess.open(target_path, FileAccess.WRITE)
+	if not f:
+		push_error("Failed to create file: %s" % target_path)
+		return false
+	f.store_string(updated_source)
+	f.close()
+
+	var old_path: String = target.get("file_path", "")
+	if old_path.is_empty():
+		old_path = "res://modules/%s.gd" % old_id
+	if FileAccess.file_exists(old_path) and old_path != target_path:
+		DirAccess.remove_absolute(old_path)
+
+	var was_active: bool = _is_module_active(old_id)
+	if was_active and _module_manager:
+		_module_manager.unload_module(old_id)
+		_module_manager.load_module_from_source(new_id, updated_source)
+
+	scan_library()
+	return true
+
+## Дублирование существующего модуля под новым ID в res://modules/
+func duplicate_module(module_id: String, new_id: String) -> bool:
+	if new_id.is_empty() or not new_id.is_valid_identifier():
+		push_warning("Invalid new module identifier: '%s'" % new_id)
+		return false
+
+	var target_path := "res://modules/%s.gd" % new_id
+	if FileAccess.file_exists(target_path):
+		push_error("Module '%s' already exists at %s" % [new_id, target_path])
+		return false
+
+	var source_code := get_module_source(module_id)
+	if source_code.is_empty():
+		push_error("Failed to retrieve source code for module '%s'" % module_id)
+		return false
+
+	var updated_source := _replace_module_id_in_source(source_code, new_id)
+
+	_ensure_modules_dir_exists()
+	var f := FileAccess.open(target_path, FileAccess.WRITE)
+	if not f:
+		push_error("Failed to create file: %s" % target_path)
+		return false
+	f.store_string(updated_source)
+	f.close()
+
+	scan_library()
+	return true
+
+## Экспорт исходного кода модуля во внешний файл
+func export_module(module_id: String, export_path: String) -> bool:
+	if export_path.is_empty():
+		return false
+
+	var source_code := get_module_source(module_id)
+	if source_code.is_empty():
+		push_error("Cannot export: source code for '%s' is empty or not found" % module_id)
+		return false
+
+	var export_dir := export_path.get_base_dir()
+	if not export_dir.is_empty() and not DirAccess.dir_exists_absolute(export_dir):
+		var dir_err := DirAccess.make_dir_recursive_absolute(export_dir)
+		if dir_err != OK:
+			push_error("Failed to create export directory: %s" % export_dir)
+			return false
+
+	var f := FileAccess.open(export_path, FileAccess.WRITE)
+	if not f:
+		push_error("Failed to open export file for writing: %s" % export_path)
+		return false
+	f.store_string(source_code)
+	f.close()
+	return true
+
+## Импорт модуля из внешнего файла с валидацией через CodeValidator
+func import_module(file_path: String) -> Dictionary:
+	if not FileAccess.file_exists(file_path):
+		return {"success": false, "error": "File not found: %s" % file_path}
+
+	var f := FileAccess.open(file_path, FileAccess.READ)
+	if not f:
+		return {"success": false, "error": "Cannot open file: %s" % file_path}
+	var code := f.get_as_text()
+	f.close()
+
+	var val_res: Dictionary = {}
+	if CodeValidator.has_method("validate_script_source"):
+		val_res = CodeValidator.validate_script_source(code)
+	else:
+		var validator := CodeValidator.new()
+		val_res = validator.validate_module_code(code)
+
+	if not val_res.get("is_valid", false):
+		var err_msg: String = str(val_res.get("error_message", val_res.get("error", "Validation failed")))
+		return {"success": false, "error": err_msg}
+
+	var mod_id := _extract_module_id(code, file_path)
+	if mod_id.is_empty():
+		mod_id = file_path.get_file().get_basename()
+	if not mod_id.is_valid_identifier():
+		mod_id = mod_id.validate_node_name().to_lower()
+
+	_ensure_modules_dir_exists()
+	var target_path := "res://modules/%s.gd" % mod_id
+	var out_f := FileAccess.open(target_path, FileAccess.WRITE)
+	if not out_f:
+		return {"success": false, "error": "Cannot write target file: %s" % target_path}
+	out_f.store_string(code)
+	out_f.close()
+
+	scan_library()
+	return {
+		"success": true,
+		"module_id": mod_id,
+		"file_path": target_path
+	}
+
+## Получение исходного кода модуля (с диска или из шаблона реестра)
+func get_module_source(module_id: String) -> String:
+	for item in _catalog:
+		if item.get("id", "") == module_id:
+			var fp: String = item.get("file_path", "")
+			if not fp.is_empty() and FileAccess.file_exists(fp):
+				var f := FileAccess.open(fp, FileAccess.READ)
+				if f:
+					var code := f.get_as_text()
+					f.close()
+					return code
+			if item.get("source", "") == "registry":
+				for tmpl in ModuleRegistryClient.get_all_templates():
+					if tmpl.get("id", "") == module_id:
+						return ModuleRegistryClient.get_module_source(tmpl)
+
+	# Фоллбек поиск на диске
+	var direct_paths := [
+		"res://modules/%s.gd" % module_id,
+		"res://modules/builtin/%s.gd" % module_id
+	]
+	for dp in direct_paths:
+		if FileAccess.file_exists(dp):
+			var f := FileAccess.open(dp, FileAccess.READ)
+			if f:
+				var code := f.get_as_text()
+				f.close()
+				return code
+
+	# Фоллбек поиск в шаблонах реестра
+	for tmpl in ModuleRegistryClient.get_all_templates():
+		if tmpl.get("id", "") == module_id:
+			return ModuleRegistryClient.get_module_source(tmpl)
+
+	return ""
+
+# ==============================================================================
+# Внутренние вспомогательные функции
+# ==============================================================================
+
+func _scan_directory(dir_path: String, is_builtin_dir: bool, seen_ids: Dictionary, catalog: Array[Dictionary], registry_templates: Array[Dictionary]) -> void:
+	if not DirAccess.dir_exists_absolute(dir_path):
+		return
+
+	var dir := DirAccess.open(dir_path)
+	if not dir:
+		return
+
+	var files := dir.get_files()
+	for file_name in files:
+		if not file_name.ends_with(".gd"):
+			continue
+
+		var full_path := dir_path.path_join(file_name)
+		_process_script_file(full_path, is_builtin_dir, seen_ids, catalog, registry_templates)
+
+func _process_script_file(file_path: String, is_builtin_file: bool, seen_ids: Dictionary, catalog: Array[Dictionary], registry_templates: Array[Dictionary]) -> void:
+	if not FileAccess.file_exists(file_path):
+		return
+
+	var f := FileAccess.open(file_path, FileAccess.READ)
+	if not f:
+		return
+
+	var file_size: int = f.get_length()
+	var content := f.get_as_text()
+	f.close()
+
+	var created_at: float = float(FileAccess.get_modified_time(file_path))
+
+	# Извлечение комментариев шапки (##)
+	var header_comments := _extract_header_comments(content)
+
+	# ID модуля
+	var module_id := _extract_module_id(content, file_path)
+	if module_id.is_empty():
+		module_id = file_path.get_file().get_basename()
+
+	# Имя модуля
+	var module_name := _extract_module_name(content, module_id, header_comments)
+
+	# Описание
+	var description := _extract_description(header_comments)
+
+	# Категория
+	var category := _extract_category(module_id, module_name, file_path, header_comments, registry_templates)
+
+	# Теги
+	var tags := _extract_tags(module_id, category, registry_templates)
+
+	var is_active := _is_module_active(module_id)
+	var source := "builtin" if is_builtin_file else "user"
+
+	var entry: Dictionary = {
+		"id": module_id,
+		"name": module_name,
+		"description": description,
+		"category": category,
+		"file_path": file_path,
+		"is_builtin": is_builtin_file,
+		"is_active": is_active,
+		"created_at": created_at,
+		"file_size": file_size,
+		"tags": tags,
+		"source": source
+	}
+
+	seen_ids[module_id] = true
+	catalog.append(entry)
+
+func _extract_header_comments(content: String) -> Array[String]:
+	var comments: Array[String] = []
+	var lines := content.split("\n")
+	for line in lines:
+		var stripped := line.strip_edges()
+		if stripped.begins_with("##"):
+			var text := stripped.substr(2).strip_edges()
+			if not text.is_empty():
+				comments.append(text)
+		elif stripped.is_empty() or stripped.begins_with("#"):
+			continue
+		elif stripped.begins_with("extends ") or stripped.begins_with("class_name "):
+			continue
+		else:
+			break
+	return comments
+
+func _extract_module_id(content: String, fallback_path: String) -> String:
+	if _regex_func_module_id:
+		var m := _regex_func_module_id.search(content)
+		if m:
+			var id := m.get_string(1).strip_edges()
+			if not id.is_empty():
+				return id
+
+	# Попытка транзиентной компиляции скрипта
+	var script := GDScript.new()
+	script.source_code = content
+	if script.reload() == OK and script.can_instantiate():
+		var instance = script.new()
+		if instance:
+			if instance.has_method("get_module_id"):
+				var res = instance.get_module_id()
+				if res is String and not str(res).is_empty():
+					if not (instance is RefCounted):
+						instance.free()
+					return str(res)
+			if not (instance is RefCounted):
+				instance.free()
+
+	if not fallback_path.is_empty():
+		return fallback_path.get_file().get_basename()
+	return ""
+
+func _extract_module_name(content: String, fallback_id: String, header_comments: Array[String]) -> String:
+	if _regex_func_module_name:
+		var m := _regex_func_module_name.search(content)
+		if m:
+			var nm := m.get_string(1).strip_edges()
+			if not nm.is_empty():
+				return nm
+
+	for c in header_comments:
+		if c.begins_with("Название:"):
+			var nm := c.substr(9).strip_edges()
+			if not nm.is_empty():
+				return nm
+		elif c.to_lower().begins_with("name:"):
+			var nm := c.substr(5).strip_edges()
+			if not nm.is_empty():
+				return nm
+
+	if not header_comments.is_empty():
+		var first_line := header_comments[0].strip_edges()
+		first_line = first_line.trim_prefix("Предустановленный модуль:").strip_edges()
+		if not first_line.is_empty():
+			return first_line
+
+	return fallback_id.capitalize()
+
+func _extract_description(header_comments: Array[String]) -> String:
+	var desc_parts: Array[String] = []
+	for c in header_comments:
+		var low := c.to_lower()
+		if low.begins_with("category:") or low.begins_with("категория:"):
+			continue
+		desc_parts.append(c)
+	return "\n".join(desc_parts)
+
+func _extract_category(module_id: String, module_name: String, file_path: String, header_comments: Array[String], registry_templates: Array[Dictionary]) -> String:
+	for c in header_comments:
+		var low := c.to_lower()
+		if low.begins_with("category:"):
+			var cat := c.substr(9).strip_edges()
+			if not cat.is_empty():
+				return _normalize_category(cat)
+		elif low.begins_with("категория:"):
+			var cat := c.substr(10).strip_edges()
+			if not cat.is_empty():
+				return _normalize_category(cat)
+
+	for tmpl in registry_templates:
+		if tmpl.get("id", "") == module_id and tmpl.has("category"):
+			var cat := str(tmpl.get("category", ""))
+			if not cat.is_empty():
+				return _normalize_category(cat)
+
+	var lower_id := module_id.to_lower()
+	var lower_path := file_path.to_lower()
+	var lower_name := module_name.to_lower()
+	var combined := lower_id + " " + lower_path + " " + lower_name
+
+	if combined.contains("locomotion") or combined.contains("camera"):
+		return "camera"
+	elif combined.contains("ground") or combined.contains("plane") or combined.contains("sky") or combined.contains("environment"):
+		return "environment"
+	elif combined.contains("spawner") or combined.contains("tool"):
+		return "tools"
+	elif combined.contains("physic"):
+		return "physics"
+	elif combined.contains("visual") or combined.contains("vfx") or combined.contains("particle") or combined.contains("shader") or combined.contains("light"):
+		return "visual"
+
+	return "user"
+
+func _normalize_category(cat: String) -> String:
+	match cat.strip_edges().to_lower():
+		"vfx", "visuals":
+			return "visual"
+		"utilities", "utility":
+			return "tools"
+		_:
+			return cat.strip_edges().to_lower()
+
+func _extract_tags(module_id: String, category: String, registry_templates: Array[Dictionary]) -> Array:
+	for tmpl in registry_templates:
+		if tmpl.get("id", "") == module_id and tmpl.has("tags"):
+			return tmpl.get("tags", []).duplicate()
+
+	var tags: Array = []
+	for word in module_id.split("_"):
+		var w := word.strip_edges()
+		if not w.is_empty() and not tags.has(w):
+			tags.append(w)
+	if not tags.has(category):
+		tags.append(category)
+	return tags
+
+func _replace_module_id_in_source(source: String, new_id: String) -> String:
+	if not _regex_id_func_replace:
+		_init_regexes()
+
+	var m := _regex_id_func_replace.search(source)
+	if m:
+		var prefix := m.get_string(1)
+		var replaced_segment := prefix + '"' + new_id + '"'
+		var start_idx := m.get_start()
+		var end_idx := m.get_end()
+		return source.substr(0, start_idx) + replaced_segment + source.substr(end_idx)
+	else:
+		return source + "\n\nfunc get_module_id() -> String:\n\treturn \"%s\"\n" % new_id
+
+func _find_catalog_item(module_id: String) -> Dictionary:
+	for item in _catalog:
+		if item.get("id", "") == module_id:
+			return item
+	return {}
+
+func _is_module_active(module_id: String) -> bool:
+	if _module_manager and _module_manager.has_method("get_active_module_ids"):
+		return _module_manager.get_active_module_ids().has(module_id)
+	return false
+
+func _update_active_states() -> void:
+	var active_ids := []
+	if _module_manager and _module_manager.has_method("get_active_module_ids"):
+		active_ids = _module_manager.get_active_module_ids()
+	for item in _catalog:
+		var mod_id: String = item.get("id", "")
+		item["is_active"] = active_ids.has(mod_id)
+
+func _ensure_modules_dir_exists() -> void:
+	if not DirAccess.dir_exists_absolute("res://modules"):
+		DirAccess.make_dir_recursive_absolute("res://modules")
+
+func _on_module_loaded(_id: String, _instance: Node) -> void:
+	_update_active_states()
+	library_updated.emit()
+
+func _on_module_unloaded(_id: String) -> void:
+	_update_active_states()
+	library_updated.emit()
