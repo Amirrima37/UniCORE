@@ -16,6 +16,12 @@ func get_module_id() -> String:
 func get_module_name() -> String:
 	return "Base Module"
 
+## Возвращает список действий управления для автоматической регистрации в InputMapper.
+## Формат элементов массива:
+## { "action": "action_name", "label": "Имя действия", "default_key": KEY_W, "description": "Описание" }
+func get_action_bindings() -> Array[Dictionary]:
+	return []
+
 func initialize(context: Dictionary) -> bool:
 	core_context = context
 	is_initialized = true

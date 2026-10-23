@@ -90,6 +90,13 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 text = "ЛОГ [F10]"
 
+[node name="NetworkButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/RightBox"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "● СЕТЬ"
+tooltip_text = "Сеть: Offline (клик для подключения)"
+
 [node name="FullscreenButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/RightBox"]
 layout_mode = 2
 focus_mode = 0

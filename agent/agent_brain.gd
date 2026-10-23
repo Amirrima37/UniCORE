@@ -8,13 +8,17 @@ extends Node
 
 signal request_started(prompt: String)
 signal request_completed(module_id: String)
+signal prompt_completed(module_id: String)
 signal request_failed(error_message: String)
 signal diagnostic_emitted(diagnostic: Dictionary)
+signal module_resolved(module_id: String, source_type: String, duration: float)
 
 @export var api_key: String = ""
 
 const ModuleRegistryClient = preload("res://core/module_registry_client.gd")
 const ConversationMemory = preload("res://agent/conversation_memory.gd")
+const SemanticCache = preload("res://core/semantic_cache.gd")
+const CacheSync = preload("res://core/net/cache_sync.gd")
 
 const MAX_REPAIR_ATTEMPTS: int = 3
 
@@ -23,6 +27,13 @@ var _validator: CodeValidator
 var _module_manager: ModuleManager
 var _event_bus: EventBus
 var _diagnostic_logger: DiagnosticLogger = null
+var _semantic_cache: SemanticCache = null
+var _cache_sync: CacheSync = null
+var _module_library: ModuleLibrary = null
+
+var last_module_source: String = "" # "registry", "cache", "p2p", "llm"
+var last_resolution_duration: float = 0.0
+var _resolution_start_ticks: int = 0
 
 var _memory: ConversationMemory
 var _repair_attempts: int = 0
@@ -62,7 +73,20 @@ Module Rules & Contract:
    - If creating an interactive tool, listen to input events in `_unhandled_input(event)`:
      For example, left mouse click (MOUSE_BUTTON_LEFT) or key press (e.g. KEY_F, KEY_E, KEY_G) to spawn more objects or toggle behavior.
 4. SAFETY: NEVER use OS.execute, OS.kill, OS.crash, or FileAccess writes outside 'user://'.
-5. OUTPUT: Output ONLY the raw GDScript code. Do NOT enclose in markdown fences (```gdscript) or conversational text.
+5. METADATA:
+   Каждый генерируемый модуль ОБЯЗАТЕЛЬНО должен содержать в самом начале метаданные в комментариях:
+   ## Name: Название модуля
+   ## Description: Подробное описание назначения и механики модуля
+   ## Tags: tag1, tag2, tag3
+   Это необходимо для автоматической каталогизации и семантического кэширования.
+6. KEY BINDINGS (УПРАВЛЕНИЕ):
+   Если модуль использует клавиши клавиатуры или действия ввода, используй `Input.is_action_pressed('action_name')` или `Input.is_action_just_pressed('action_name')` и обязательно объяви в модуле метод:
+   func get_action_bindings() -> Array[Dictionary]:
+       return [
+           { 'action': 'action_name', 'label': 'Название действия', 'default_key': KEY_F, 'description': 'Описание' }
+       ]
+   Это позволит пользователю видеть клавиши управления в Настройках и легко их переназначать.
+7. OUTPUT: Output ONLY the raw GDScript code. Do NOT enclose in markdown fences (```gdscript) or conversational text.
 """
 
 func _init() -> void:
@@ -76,17 +100,35 @@ func _ready() -> void:
 		_memory = ConversationMemory.new()
 		_memory.load_from_disk()
 
-func setup(event_bus: EventBus, module_manager: ModuleManager, llm_provider: BaseLLMProvider, diagnostic_logger: DiagnosticLogger = null) -> void:
+func setup(
+	event_bus: Node,
+	module_manager: Node,
+	llm_provider: BaseLLMProvider = null,
+	diagnostic_logger: Node = null,
+	conversation_memory: Object = null,
+	module_library: Node = null,
+	semantic_cache: Node = null,
+	cache_sync: Node = null
+) -> void:
 	_init_regexes()
-	_event_bus = event_bus
-	_module_manager = module_manager
+	_event_bus = event_bus as EventBus
+	_module_manager = module_manager as ModuleManager
 	_provider = llm_provider
-	_diagnostic_logger = diagnostic_logger
+	_diagnostic_logger = diagnostic_logger as DiagnosticLogger
 	_validator = CodeValidator.new()
 
-	if not _memory:
+	if conversation_memory:
+		_memory = conversation_memory as ConversationMemory
+	elif not _memory:
 		_memory = ConversationMemory.new()
 		_memory.load_from_disk()
+
+	if module_library:
+		_module_library = module_library as ModuleLibrary
+	if semantic_cache:
+		_semantic_cache = semantic_cache as SemanticCache
+	if cache_sync:
+		_cache_sync = cache_sync as CacheSync
 
 	if _provider:
 		if not _provider.response_received.is_connected(_on_llm_response):
@@ -107,6 +149,18 @@ func register_module_source(mod_id: String, source_code: String) -> void:
 
 func get_memory() -> ConversationMemory:
 	return _memory
+
+func get_semantic_cache() -> SemanticCache:
+	return _semantic_cache
+
+func set_semantic_cache(cache: SemanticCache) -> void:
+	_semantic_cache = cache
+
+func get_cache_sync() -> CacheSync:
+	return _cache_sync
+
+func set_cache_sync(sync: CacheSync) -> void:
+	_cache_sync = sync
 
 func get_repair_attempts() -> int:
 	return _repair_attempts
@@ -129,12 +183,18 @@ func _get_enriched_system_prompt() -> String:
 			enriched += "\n\n" + mod_context
 	return enriched
 
+func process_prompt(prompt: String) -> void:
+	process_user_prompt(prompt)
+
 ## Главная точка входа запроса от пользователя
 func process_user_prompt(user_text: String) -> void:
 	var trimmed = user_text.strip_edges()
 	if trimmed.is_empty():
 		return
 
+	_resolution_start_ticks = Time.get_ticks_msec()
+	last_resolution_duration = 0.0
+	last_module_source = ""
 	_repair_attempts = 0
 	_last_failed_code = ""
 	_last_user_prompt = trimmed
@@ -194,15 +254,102 @@ ID модуля: %s
 		_provider.send_prompt(sys_prompt, edit_prompt, api_key)
 		return
 
-	# 2. Быстрый поиск в реестре готовых проверенных модулей и библиотек (Registry Cache)
-	var template = ModuleRegistryClient.fuzzy_search(trimmed, 0.6)
+	# Шаг 1: Поиск в ModuleRegistryClient (шаблоны реестра)
+	var template = ModuleRegistryClient.fuzzy_search(trimmed, 0.75)
 	if not template.is_empty():
 		var cached_code: String = ModuleRegistryClient.get_module_source(template)
 		if not cached_code.is_empty():
-			print("[UniCORE Agent] Matched pre-verified module '%s' from ModuleRegistry. Loading instantly..." % template["id"])
+			var mod_id: String = str(template.get("id", "registered_module"))
+			last_module_source = "registry"
+			last_resolution_duration = (Time.get_ticks_msec() - _resolution_start_ticks) / 1000.0
+			print("[UniCORE Agent] Matched pre-verified module '%s' from ModuleRegistry. Loading instantly..." % mod_id)
+			var logger := _diagnostic_logger if _diagnostic_logger else DiagnosticLogger.get_instance()
+			if logger:
+				logger.log_agent("INFO", "Registry Cache Hit", "Модуль '%s' найден в ModuleRegistry" % mod_id)
 			_on_llm_response(cached_code)
 			return
 
+	# Шаг 2: Поиск в локальном семантическом кэше (SemanticCache)
+	if _semantic_cache != null and is_instance_valid(_semantic_cache):
+		var cache_hits: Array[Dictionary] = _semantic_cache.search(trimmed, 1, 0.35)
+		if not cache_hits.is_empty():
+			var hit: Dictionary = cache_hits[0]
+			var hit_id: String = str(hit.get("id", ""))
+			var hit_code: String = str(hit.get("source_code", ""))
+			if not hit_code.is_empty():
+				var val = _validator.validate_module_code(hit_code)
+				if val["is_valid"]:
+					print("[UniCORE Agent] Module '%s' found in local semantic cache (score: %.2f)" % [hit_id, float(hit.get("score", 0.0))])
+					var inst = _module_manager.load_module_from_source(hit_id, hit_code)
+					if inst:
+						if inst.has_method("get_module_id"):
+							var real_id = inst.get_module_id()
+							if real_id is String and not real_id.is_empty() and real_id != "base_module":
+								hit_id = real_id
+						_module_source_cache[hit_id] = hit_code
+						_save_module_to_disk(hit_id, hit_code)
+						_semantic_cache.increment_usage(hit_id)
+						last_module_source = "cache"
+						last_resolution_duration = (Time.get_ticks_msec() - _resolution_start_ticks) / 1000.0
+
+						var logger := _diagnostic_logger if _diagnostic_logger else DiagnosticLogger.get_instance()
+						if logger:
+							logger.log_agent("INFO", "Semantic Cache Hit", "Модуль '%s' найден в локальном семантическом кэше" % hit_id)
+
+						var diag := AgentDiagnostic.from_success(hit_id)
+						_log_and_emit_diagnostic(diag)
+
+						module_resolved.emit(hit_id, "cache", last_resolution_duration)
+						request_completed.emit(hit_id)
+						prompt_completed.emit(hit_id)
+						return
+
+	# Шаг 3: Поиск в P2P сети через _cache_sync (если задан и есть подключение)
+	if _cache_sync != null and is_instance_valid(_cache_sync) and _cache_sync.has_connected_peers():
+		var p2p_results: Array[Dictionary] = _cache_sync.query_network(trimmed)
+		if not p2p_results.is_empty():
+			var hit = p2p_results[0]
+			var p2p_code: String = str(hit.get("source_code", ""))
+			var p2p_id: String = str(hit.get("id", "p2p_module"))
+			if not p2p_code.is_empty():
+				var val = _validator.validate_module_code(p2p_code)
+				if val["is_valid"]:
+					var inst = _module_manager.load_module_from_source(p2p_id, p2p_code)
+					if inst:
+						if inst.has_method("get_module_id"):
+							var real_id = inst.get_module_id()
+							if real_id is String and not real_id.is_empty() and real_id != "base_module":
+								p2p_id = real_id
+						_module_source_cache[p2p_id] = p2p_code
+						_save_module_to_disk(p2p_id, p2p_code)
+						if _semantic_cache:
+							var meta := SemanticCache.parse_metadata_from_code(p2p_code)
+							_semantic_cache.add_module({
+								"id": p2p_id,
+								"name": meta.get("name", p2p_id),
+								"description": meta.get("description", trimmed),
+								"tags": meta.get("tags", []),
+								"source_code": p2p_code,
+								"source_hash": SemanticCache.compute_sha256(p2p_code),
+								"verified": true,
+								"author_node": "p2p_peer"
+							})
+						last_module_source = "p2p"
+						last_resolution_duration = (Time.get_ticks_msec() - _resolution_start_ticks) / 1000.0
+
+						var logger := _diagnostic_logger if _diagnostic_logger else DiagnosticLogger.get_instance()
+						if logger:
+							logger.log_agent("INFO", "P2P Cache Hit", "Модуль '%s' получен из P2P сети" % p2p_id)
+
+						var diag := AgentDiagnostic.from_success(p2p_id)
+						_log_and_emit_diagnostic(diag)
+
+						module_resolved.emit(p2p_id, "p2p", last_resolution_duration)
+						request_completed.emit(p2p_id)
+						prompt_completed.emit(p2p_id)
+						return
+
+	# Шаг 4: LLM API fallback (если в кэше ничего не найдено или совпадение ниже порога)
 	if not _provider:
 		_fail_with_error("LLM Provider is not configured")
 		return
@@ -401,6 +548,34 @@ func _on_llm_response(generated_code: String) -> void:
 	_module_source_cache[module_id] = generated_code
 	_save_module_to_disk(module_id, generated_code)
 
+	# Автоматически добавляем в _semantic_cache
+	if _semantic_cache:
+		var meta := SemanticCache.parse_metadata_from_code(generated_code)
+		var desc_val: String = str(meta.get("description", ""))
+		if desc_val.is_empty():
+			desc_val = _last_user_prompt
+		_semantic_cache.add_module({
+			"id": module_id,
+			"name": meta.get("name", module_id),
+			"description": desc_val,
+			"tags": meta.get("tags", []),
+			"source_code": generated_code,
+			"source_hash": SemanticCache.compute_sha256(generated_code),
+			"verified": true,
+			"author_node": "local_llm"
+		})
+
+	if last_module_source != "registry":
+		last_module_source = "llm"
+
+	if _resolution_start_ticks > 0:
+		last_resolution_duration = (Time.get_ticks_msec() - _resolution_start_ticks) / 1000.0
+
+	var logger := _diagnostic_logger if _diagnostic_logger else DiagnosticLogger.get_instance()
+	if logger:
+		if last_module_source == "llm":
+			logger.log_agent("INFO", "LLM Generation", "Модуль сгенерирован через LLM API")
+
 	# 5. Обновляем память диалога
 	if _memory:
 		_memory.add_assistant_response(generated_code, module_id)
@@ -413,7 +588,9 @@ func _on_llm_response(generated_code: String) -> void:
 
 	var success_diag := AgentDiagnostic.from_success(module_id)
 	_log_and_emit_diagnostic(success_diag)
+	module_resolved.emit(module_id, last_module_source, last_resolution_duration)
 	request_completed.emit(module_id)
+	prompt_completed.emit(module_id)
 
 ## Обработка сбоя валидации или компиляции с запуском цикла Self-Repair
 func _handle_repair_or_fail(err_msg: String, failed_code: String) -> void:

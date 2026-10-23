@@ -220,8 +220,8 @@ func _init() -> void:
 
 	# Extreme and invalid dimensions clamping
 	settings_mgr.set_resolution(-100, -100)
-	assert_true(settings_mgr.get_setting("display", "resolution_width") == 320, "Negative width clamped to min 320")
-	assert_true(settings_mgr.get_setting("display", "resolution_height") == 240, "Negative height clamped to min 240")
+	assert_true(settings_mgr.get_setting("display", "resolution_width") == 640, "Negative width clamped to min 640")
+	assert_true(settings_mgr.get_setting("display", "resolution_height") == 360, "Negative height clamped to min 360")
 
 	settings_mgr.set_resolution(50000, 50000)
 	assert_true(settings_mgr.get_setting("display", "resolution_width") == 15360, "Extreme width clamped to max 15360")

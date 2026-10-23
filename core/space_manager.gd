@@ -229,6 +229,26 @@ func save_space_as(new_name: String) -> bool:
 	space_error.emit("Ошибка при сохранении пространства '%s'" % space_name)
 	return false
 
+## Сериализация текущего состояния Пространства в словарь (снимок)
+func serialize() -> Dictionary:
+	var camera_data := _gather_camera_data()
+	var modules_data := _gather_modules_data() if _module_manager else []
+	var environment_data := _gather_environment_data()
+	var now := Time.get_datetime_string_from_system()
+
+	var data: Dictionary = {
+		"id": current_space_id,
+		"name": current_space_name,
+		"description": current_space_data.get("description", "Пользовательское Пространство UniCORE"),
+		"template": current_space_data.get("template", "custom"),
+		"created_at": current_space_data.get("created_at", now),
+		"updated_at": now,
+		"camera": camera_data,
+		"environment": environment_data,
+		"active_modules": modules_data
+	}
+	return data
+
 func clone_space(source_space_id: String, new_name: String = "") -> Dictionary:
 	var file_path := "%s/%s.json" % [SPACES_DIR, source_space_id]
 	if not FileAccess.file_exists(file_path):

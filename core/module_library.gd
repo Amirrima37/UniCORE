@@ -307,6 +307,39 @@ func import_module(file_path: String) -> Dictionary:
 		"file_path": target_path
 	}
 
+## Импорт модуля из переданного исходного кода с валидацией через CodeValidator
+func import_module_from_source(module_id: String, source_code: String) -> Dictionary:
+	if source_code.strip_edges().is_empty():
+		return {"success": false, "error": "Empty source code"}
+
+	var val_res: Dictionary = CodeValidator.validate_script_source(source_code)
+	if not val_res.get("is_valid", false):
+		var err_msg: String = str(val_res.get("error_message", val_res.get("error", "Validation failed")))
+		return {"success": false, "error": err_msg}
+
+	var mod_id := module_id.strip_edges()
+	if mod_id.is_empty():
+		mod_id = _extract_module_id(source_code, "")
+	if mod_id.is_empty():
+		mod_id = "module_%d" % int(Time.get_unix_time_from_system())
+	if not mod_id.is_valid_identifier():
+		mod_id = mod_id.validate_node_name().to_lower()
+
+	_ensure_modules_dir_exists()
+	var target_path := "res://modules/%s.gd" % mod_id
+	var out_f := FileAccess.open(target_path, FileAccess.WRITE)
+	if not out_f:
+		return {"success": false, "error": "Cannot write target file: %s" % target_path}
+	out_f.store_string(source_code)
+	out_f.close()
+
+	scan_library()
+	return {
+		"success": true,
+		"module_id": mod_id,
+		"file_path": target_path
+	}
+
 ## Получение исходного кода модуля (с диска или из шаблона реестра)
 func get_module_source(module_id: String) -> String:
 	for item in _catalog:

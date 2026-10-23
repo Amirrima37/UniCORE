@@ -23,6 +23,17 @@ func get_module_id() -> String:
 func get_module_name() -> String:
 	return "Avatar Locomotion (Built-in)"
 
+func get_action_bindings() -> Array[Dictionary]:
+	return [
+		{"action": "move_forward", "label": "Движение вперед", "default_key": KEY_W, "description": "Перемещение камеры/аватара вперед"},
+		{"action": "move_backward", "label": "Движение назад", "default_key": KEY_S, "description": "Перемещение камеры/аватара назад"},
+		{"action": "move_left", "label": "Движение влево", "default_key": KEY_A, "description": "Перемещение камеры/аватара влево"},
+		{"action": "move_right", "label": "Движение вправо", "default_key": KEY_D, "description": "Перемещение камеры/аватара вправо"},
+		{"action": "move_up", "label": "Подъем / Полет вверх", "default_key": KEY_SPACE, "description": "Набор высоты в режиме полета"},
+		{"action": "move_down", "label": "Спуск / Полет вниз", "default_key": KEY_CTRL, "description": "Снижение высоты в режиме полета"},
+		{"action": "sprint", "label": "Ускорение полета (Спринт)", "default_key": KEY_SHIFT, "description": "Увеличение скорости перемещения"}
+	]
+
 func initialize(context: Dictionary) -> bool:
 	super.initialize(context)
 

@@ -14,7 +14,7 @@ config/name="UniCORE"
 config/description="Universal Core - An open-ended, self-expanding AI runtime environment"
 run/main_scene="res://core/space_viewport.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 config/version="0.2.0"
 
 [display]

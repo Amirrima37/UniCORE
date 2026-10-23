@@ -24,8 +24,19 @@ signal fullscreen_toggle_pressed
 @onready var settings_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/SettingsButton
 @onready var prompt_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/PromptButton
 @onready var log_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/LogButton
+@onready var network_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/NetworkButton
+@onready var network_status_led: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/NetworkButton
 @onready var fullscreen_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/FullscreenButton
 @onready var menu_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/MenuButton
+
+const COLOR_NET_OFFLINE: Color = Color(0.4, 0.45, 0.5, 0.7)
+const COLOR_NET_HOSTING: Color = Color(0.0, 0.9, 1.0, 1.0)
+const COLOR_NET_CONNECTED: Color = Color(0.0, 0.9, 0.45, 1.0)
+const COLOR_NET_SYNCING: Color = Color(1.0, 0.7, 0.0, 1.0)
+
+var _current_net_status: String = "offline"
+var _current_net_peers: int = 0
+var _current_net_host: String = ""
 
 var _settings_manager: Node
 var _space_manager: Node
@@ -39,6 +50,7 @@ func _ready() -> void:
 	settings_btn.pressed.connect(func(): menu_button_pressed.emit("settings"))
 	prompt_btn.pressed.connect(func(): prompt_toggle_pressed.emit())
 	log_btn.pressed.connect(func(): log_button_pressed.emit())
+	network_btn.pressed.connect(func(): menu_button_pressed.emit("network"))
 	fullscreen_btn.pressed.connect(func(): fullscreen_toggle_pressed.emit())
 	menu_btn.pressed.connect(func(): menu_button_pressed.emit("menu"))
 	space_badge_btn.pressed.connect(func(): menu_button_pressed.emit("spaces"))
@@ -172,7 +184,7 @@ func _apply_cyber_styling() -> void:
 		btn_hover = CyberTheme.create_cyber_button_style(Color(0.08, 0.18, 0.32, 0.95), CyberTheme.COLOR_CYAN_GLOW, 1, 3)
 		btn_pressed = CyberTheme.create_cyber_button_style(Color(0.0, 0.45, 0.75, 0.95), CyberTheme.COLOR_CYAN_GLOW, 2, 3)
 
-	for btn in [spaces_btn, settings_btn, prompt_btn, log_btn, fullscreen_btn, menu_btn]:
+	for btn in [spaces_btn, settings_btn, prompt_btn, log_btn, network_btn, fullscreen_btn, menu_btn]:
 		if is_instance_valid(btn):
 			btn.add_theme_stylebox_override("normal", btn_normal)
 			btn.add_theme_stylebox_override("hover", btn_hover)
@@ -187,6 +199,8 @@ func _apply_cyber_styling() -> void:
 	settings_btn.tooltip_text = "Системные Настройки (графика, управление, ИИ-агент)"
 	prompt_btn.tooltip_text = "Командная строка Агента [Tab / ~]"
 	log_btn.tooltip_text = "Журнал и панель диагностики CyberLife [F10]"
+	if is_instance_valid(network_btn):
+		network_btn.tooltip_text = "Сеть: Offline (клик для подключения)"
 	fullscreen_btn.tooltip_text = "Полноэкранный режим [F11]"
 	menu_btn.tooltip_text = "Системное меню UniCORE [Esc]"
 
@@ -205,3 +219,57 @@ func _apply_cyber_styling() -> void:
 		space_badge_btn.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW)
 		space_badge_btn.add_theme_font_size_override("font_size", 12)
 		space_badge_btn.tooltip_text = "Текущее активное пространство (кликните для выбора)"
+
+	update_network_status(_current_net_status, _current_net_peers, _current_net_host)
+
+func update_network_status(status_str: String, peer_count: int = 0, host_name: String = "") -> void:
+	_current_net_status = status_str
+	_current_net_peers = peer_count
+	_current_net_host = host_name
+
+	if not is_instance_valid(network_btn):
+		return
+
+	var s := status_str.to_lower().strip_edges()
+	var col := COLOR_NET_OFFLINE
+	var desc := "Сеть: Offline (клик для подключения)"
+	var btn_title := "● СЕТЬ"
+
+	match s:
+		"hosting", "host":
+			col = COLOR_NET_HOSTING
+			if peer_count > 0:
+				desc = "Хост: %d узла(ов)" % peer_count
+				btn_title = "● ХОСТ (%d)" % peer_count
+			else:
+				desc = "Хост: ожидание пиров"
+				btn_title = "● ХОСТ"
+		"connected", "client":
+			col = COLOR_NET_CONNECTED
+			var target := host_name if not host_name.is_empty() else "Сервер"
+			desc = "Подключен к %s (%d узлов)" % [target, peer_count]
+			btn_title = "● В СЕТИ"
+		"syncing", "sync":
+			col = COLOR_NET_SYNCING
+			desc = "Сеть: Синхронизация данных..."
+			btn_title = "● СИНХР"
+		_:
+			col = COLOR_NET_OFFLINE
+			desc = "Сеть: Offline (клик для подключения)"
+			btn_title = "● СЕТЬ"
+
+	network_btn.text = btn_title
+	network_btn.tooltip_text = desc
+	network_btn.add_theme_color_override("font_color", col)
+	network_btn.add_theme_color_override("font_hover_color", col.lightened(0.2))
+
+func get_network_status_color() -> Color:
+	match _current_net_status.to_lower().strip_edges():
+		"hosting", "host":
+			return COLOR_NET_HOSTING
+		"connected", "client":
+			return COLOR_NET_CONNECTED
+		"syncing", "sync":
+			return COLOR_NET_SYNCING
+		_:
+			return COLOR_NET_OFFLINE

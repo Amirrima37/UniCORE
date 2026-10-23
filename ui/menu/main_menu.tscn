@@ -533,6 +533,140 @@ horizontal_scroll_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 8
+[node name="NetworkTab" type="MarginContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Scroll" type="ScrollContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBox" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="SessionSection" type="PanelContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SessionSection"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HeaderHBox" type="HBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SessionSection/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SessionSection/VBox/HeaderHBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "// СЕТЕВАЯ СЕССИЯ"
+
+[node name="StatusLabel" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SessionSection/VBox/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.4, 0.85, 1, 0.9)
+theme_override_font_sizes/font_size = 12
+text = "СТАТУС: OFFLINE"
+horizontal_alignment = 2
+
+[node name="ControlsHBox" type="HBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SessionSection/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HostButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SessionSection/VBox/ControlsHBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "СОЗДАТЬ СЕССИЮ (ХОСТ)"
+
+[node name="IpPortEdit" type="LineEdit" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SessionSection/VBox/ControlsHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "IP:Порт (например 127.0.0.1:7777)"
+text = "127.0.0.1:7777"
+
+[node name="ConnectButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SessionSection/VBox/ControlsHBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "ПОДКЛЮЧИТЬСЯ"
+
+[node name="DisconnectButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SessionSection/VBox/ControlsHBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "ОТКЛЮЧИТЬСЯ"
+
+[node name="LanSection" type="PanelContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/LanSection"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HeaderHBox" type="HBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/LanSection/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/LanSection/VBox/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "// ОБНАРУЖЕНИЕ (LAN DISCOVERY)"
+
+[node name="RefreshLanButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/LanSection/VBox/HeaderHBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "ОБНОВИТЬ"
+
+[node name="LanPeersList" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/LanSection/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ConnectedSection" type="PanelContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/ConnectedSection"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/ConnectedSection/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "// ПОДКЛЮЧЕННЫЕ УЗЛЫ"
+
+[node name="ConnectedPeersList" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/ConnectedSection/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="SharingSection" type="PanelContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SharingSection"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HeaderHBox" type="HBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SharingSection/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SharingSection/VBox/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "// ОБМЕН МОДУЛЯМИ (P2P SHARING)"
+
+[node name="OfferModuleButton" type="Button" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SharingSection/VBox/HeaderHBox"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "ПРЕДЛОЖИТЬ МОДУЛЬ..."
+
+[node name="ModuleOffersList" type="VBoxContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer/NetworkTab/Scroll/VBox/SharingSection/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
 
 [node name="AboutTab" type="MarginContainer" parent="MainPanel/MarginContainer/VBoxContainer/TabContainer"]
 visible = false

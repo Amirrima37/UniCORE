@@ -12,6 +12,9 @@ mono_crash.*.json
 .DS_Store
 Thumbs.db
 
+# Executables
+*.exe
+
 # Temporary & logs
 run_output.txt
 *.log

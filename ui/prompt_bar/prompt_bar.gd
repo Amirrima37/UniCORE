@@ -223,6 +223,32 @@ func set_status(status_text: String, color: Color = Color.WHITE, diagnostic: Dic
 	_update_toast_style(color)
 	show_toast()
 
+func set_resolution_status(module_id: String, source_type: String, duration: float) -> void:
+	var src_label := "LLM"
+	var color: Color = CyberTheme.COLOR_AMBER_LED
+	match source_type.to_lower():
+		"cache":
+			src_label = "Кэш"
+			color = CyberTheme.COLOR_CYAN_GLOW
+		"p2p":
+			src_label = "P2P Сеть"
+			color = CyberTheme.COLOR_SUCCESS_LED
+		"registry":
+			src_label = "Реестр"
+			color = CyberTheme.COLOR_ELECTRIC_BLUE
+		_:
+			src_label = "LLM API"
+			color = CyberTheme.COLOR_AMBER_LED
+
+	var text := "✓ Модуль '%s' [%s] (%.2f сек)" % [module_id, src_label, duration]
+	set_status(text, color, {
+		"title": "Модуль загружен",
+		"description": "Источник: %s, Время: %.2f сек, ID: %s" % [src_label, duration, module_id],
+		"status_color": color,
+		"last_prompt": _last_prompt,
+		"timestamp": Time.get_datetime_string_from_system()
+	})
+
 func show_toast() -> void:
 	if status_toast:
 		status_toast.show()

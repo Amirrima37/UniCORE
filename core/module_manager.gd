@@ -87,3 +87,23 @@ func get_module(module_id: String) -> Node:
 
 func get_active_module_ids() -> Array:
 	return _active_modules.keys()
+
+func get_active_modules() -> Array:
+	var list: Array = []
+	for node in _active_modules.values():
+		if is_instance_valid(node):
+			list.append(node)
+	return list
+
+func register_module_instance(module_id: String, instance: Node) -> void:
+	if not instance:
+		return
+	if _active_modules.has(module_id):
+		unload_module(module_id)
+	instance.name = module_id
+	if _world_root and not instance.is_inside_tree():
+		_world_root.add_child(instance)
+	_active_modules[module_id] = instance
+	module_loaded.emit(module_id, instance)
+	if _event_bus:
+		_event_bus.emit("module_loaded", {"id": module_id})

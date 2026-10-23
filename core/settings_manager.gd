@@ -78,6 +78,14 @@ const DEFAULT_SETTINGS: Dictionary = {
 		"glass_opacity": 0.75,
 		"led_intensity": 1.0,
 		"prompt_bar_autoclose": true
+	},
+	"network": {
+		"auto_discovery": true,
+		"share_modules": true,
+		"host_port": 7777,
+		"discovery_port": 7778,
+		"player_name": "UniCORE Node",
+		"max_module_size_kb": 64
 	}
 }
 
@@ -189,14 +197,12 @@ func _validate_and_sanitize(category: String, key: String, raw_val: Variant, def
 				"resolution_width":
 					if (raw_val is int or raw_val is float) and not (raw_val is bool):
 						var w := int(raw_val)
-						if w > 0:
-							return clampi(w, 640, 15360)
+						return clampi(w, 640, 15360)
 					return default_val
 				"resolution_height":
 					if (raw_val is int or raw_val is float) and not (raw_val is bool):
 						var h := int(raw_val)
-						if h > 0:
-							return clampi(h, 360, 8640)
+						return clampi(h, 360, 8640)
 					return default_val
 				"resolution_index":
 					if (raw_val is int or raw_val is float) and not (raw_val is bool):
@@ -316,6 +322,35 @@ func _validate_and_sanitize(category: String, key: String, raw_val: Variant, def
 						var s := (raw_val as String).to_lower().strip_edges()
 						if s == "true" or s == "1": return true
 						if s == "false" or s == "0": return false
+					return default_val
+
+		"network":
+			match key:
+				"auto_discovery", "share_modules":
+					if raw_val is bool:
+						return raw_val
+					if (raw_val is int or raw_val is float) and not (raw_val is bool):
+						return int(raw_val) != 0
+					if raw_val is String:
+						var s := (raw_val as String).to_lower().strip_edges()
+						if s == "true" or s == "1": return true
+						if s == "false" or s == "0": return false
+					return default_val
+				"host_port", "discovery_port":
+					if (raw_val is int or raw_val is float) and not (raw_val is bool):
+						var port := int(raw_val)
+						return clampi(port, 1024, 65535)
+					return default_val
+				"player_name":
+					if raw_val is String:
+						var name_str := (raw_val as String).strip_edges()
+						if not name_str.is_empty():
+							return name_str.substr(0, 32)
+					return default_val
+				"max_module_size_kb":
+					if (raw_val is int or raw_val is float) and not (raw_val is bool):
+						var sz := int(raw_val)
+						return clampi(sz, 1, 1024)
 					return default_val
 
 	return raw_val
@@ -479,8 +514,8 @@ func get_resolution_presets() -> Array[Vector2i]:
 	return RESOLUTION_PRESETS.duplicate()
 
 func set_resolution(width: int, height: int, update_stored: bool = true) -> void:
-	width = maxi(640, width)
-	height = maxi(360, height)
+	width = clampi(width, 640, 15360)
+	height = clampi(height, 360, 8640)
 
 	var current_mode := DisplayServer.window_get_mode()
 	var in_fs := is_fullscreen() or current_mode == DisplayServer.WINDOW_MODE_FULLSCREEN or current_mode == DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN
@@ -744,4 +779,10 @@ func set_led_intensity(intensity: float) -> void:
 
 func set_prompt_bar_autoclose(enabled: bool) -> void:
 	set_setting("interface", "prompt_bar_autoclose", enabled, true)
+
+func get_network_settings() -> Dictionary:
+	return get_category("network")
+
+func set_network_setting(key: String, value: Variant) -> void:
+	set_setting("network", key, value, true)
 
