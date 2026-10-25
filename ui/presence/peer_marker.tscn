@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://peermarker001"]
+
+[ext_resource type="Script" path="res://ui/presence/peer_marker.gd" id="1_marker"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_dir"]
+top_radius = 0.0
+bottom_radius = 0.35
+height = 0.8
+
+[sub_resource type="SphereMesh" id="SphereMesh_led"]
+radius = 0.12
+height = 0.24
+
+[node name="PeerMarker" type="Node3D"]
+script = ExtResource("1_marker")
+
+[node name="DirectionMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_dir")
+
+[node name="LedSphere" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+mesh = SubResource("SphereMesh_led")
+
+[node name="NameLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+billboard = 1
+text = "UniNode"
+font_size = 28
+outline_size = 4
+outline_modulate = Color(0, 0, 0, 0.85)
+
+[node name="ActivityLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+billboard = 1
+modulate = Color(0.8, 0.85, 0.9, 0.8)
+text = "idle"
+font_size = 18
+outline_size = 2
+outline_modulate = Color(0, 0, 0, 0.7)

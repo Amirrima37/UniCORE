@@ -41,7 +41,8 @@ func _init() -> void:
 		print("--------------------------------------------------------")
 		
 		var output: Array = []
-		var args := ["--headless", "--path", ".", "-s", suite_path]
+		var proj_path := ProjectSettings.globalize_path("res://")
+		var args := ["--headless", "--path", proj_path, "-s", suite_path]
 		var exit_code := OS.execute(exe_path, args, output, true)
 		
 		if output.size() > 0:

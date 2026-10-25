@@ -16,6 +16,7 @@ signal fullscreen_toggle_pressed
 
 @onready var panel_container: PanelContainer = $PanelContainer
 @onready var detroit_orb: Control = $PanelContainer/MarginContainer/HBoxContainer/LeftBox/DetroitOrb
+@onready var logo_label: Label = $PanelContainer/MarginContainer/HBoxContainer/LeftBox/LogoLabel
 @onready var space_badge_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/LeftBox/SpaceBadgeButton
 @onready var status_ticker_label: Label = $PanelContainer/MarginContainer/HBoxContainer/LeftBox/StatusTicker
 @onready var fps_label: Label = $PanelContainer/MarginContainer/HBoxContainer/RightBox/FpsLabel
@@ -54,6 +55,14 @@ func _ready() -> void:
 	fullscreen_btn.pressed.connect(func(): fullscreen_toggle_pressed.emit())
 	menu_btn.pressed.connect(func(): menu_button_pressed.emit("menu"))
 	space_badge_btn.pressed.connect(func(): menu_button_pressed.emit("spaces"))
+
+	if logo_label:
+		logo_label.mouse_filter = Control.MOUSE_FILTER_STOP
+		logo_label.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		logo_label.gui_input.connect(func(event: InputEvent):
+			if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+				menu_button_pressed.emit("welcome")
+		)
 
 func _process(_delta: float) -> void:
 	if fps_label:
@@ -193,6 +202,14 @@ func _apply_cyber_styling() -> void:
 			btn.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_DARK if is_white else CyberTheme.COLOR_TEXT_PRIMARY)
 			btn.add_theme_color_override("font_hover_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW)
 			btn.add_theme_font_size_override("font_size", 12)
+
+	if is_instance_valid(logo_label):
+		logo_label.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW)
+	var subtitle_lbl: Label = get_node_or_null("PanelContainer/MarginContainer/HBoxContainer/LeftBox/Subtitle") as Label
+	if is_instance_valid(subtitle_lbl):
+		subtitle_lbl.add_theme_color_override("font_color", CyberTheme.get_text_muted_color())
+	if is_instance_valid(fps_label):
+		fps_label.add_theme_color_override("font_color", CyberTheme.get_text_muted_color())
 
 	# Подсказки (Tooltips) для быстрых кнопок
 	spaces_btn.tooltip_text = "Управление Пространствами (создание, загрузка, сохранение)"

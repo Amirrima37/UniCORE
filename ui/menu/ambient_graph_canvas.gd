@@ -10,12 +10,14 @@ extends Control
 
 const DesignTokens = preload("res://ui/theme/design_tokens.gd")
 
-@export var node_count: int = 28
-@export var connection_distance: float = 95.0
+@export var node_count: int = 64
+@export var min_connection_distance: float = 24.0
+@export var connection_distance: float = 115.0
 @export var base_speed: float = 14.0
 @export var dot_radius: float = 1.6
 @export var max_connection_alpha: float = 0.16
 @export var node_base_alpha: float = 0.35
+@export var custom_color: Color = Color(-1, -1, -1, -1)
 
 # Внутренняя структура квантовой ноды
 class SynapticPoint:
@@ -23,6 +25,8 @@ class SynapticPoint:
 	var velocity: Vector2 = Vector2.ZERO
 	var pulse_phase: float = 0.0
 	var pulse_speed: float = 1.0
+	var drift_angle: float = 0.0
+	var base_speed: float = 14.0
 
 var _nodes: Array[SynapticPoint] = []
 var _is_active: bool = true
@@ -55,6 +59,8 @@ func _initialize_nodes() -> void:
 		)
 		var angle := randf_range(0.0, TAU)
 		var speed := randf_range(base_speed * 0.5, base_speed * 1.5)
+		gn.base_speed = speed
+		gn.drift_angle = angle
 		gn.velocity = Vector2(cos(angle), sin(angle)) * speed
 		gn.pulse_phase = randf_range(0.0, TAU)
 		gn.pulse_speed = randf_range(0.8, 2.2)
@@ -69,23 +75,32 @@ func _process(delta: float) -> void:
 		bounds = Vector2(1920, 1080)
 
 	for node in _nodes:
+		# Плавный броуновский дрейф вектора скорости
+		node.drift_angle += randf_range(-1.2, 1.2) * delta
+		var target_vel := Vector2(cos(node.drift_angle), sin(node.drift_angle)) * node.base_speed
+		node.velocity = node.velocity.lerp(target_vel, clampf(delta * 2.0, 0.0, 1.0))
+
 		node.position += node.velocity * delta
 		node.pulse_phase += node.pulse_speed * delta
 
-		# Мягкое отталкивание от границ холста
+		# Мягкое отталкивание от границ холста с перенаправлением угла дрейфа
 		if node.position.x < 0.0:
 			node.position.x = 0.0
-			node.velocity.x *= -1.0
+			node.velocity.x = absf(node.velocity.x)
+			node.drift_angle = atan2(node.velocity.y, node.velocity.x)
 		elif node.position.x > bounds.x:
 			node.position.x = bounds.x
-			node.velocity.x *= -1.0
+			node.velocity.x = -absf(node.velocity.x)
+			node.drift_angle = atan2(node.velocity.y, node.velocity.x)
 
 		if node.position.y < 0.0:
 			node.position.y = 0.0
-			node.velocity.y *= -1.0
+			node.velocity.y = absf(node.velocity.y)
+			node.drift_angle = atan2(node.velocity.y, node.velocity.x)
 		elif node.position.y > bounds.y:
 			node.position.y = bounds.y
-			node.velocity.y *= -1.0
+			node.velocity.y = -absf(node.velocity.y)
+			node.drift_angle = atan2(node.velocity.y, node.velocity.x)
 
 	# Запрашиваем перерисовку кадра
 	queue_redraw()
@@ -94,29 +109,34 @@ func _draw() -> void:
 	if _nodes.is_empty():
 		return
 
-	var cyan_col := DesignTokens.COLOR_ACCENT_PRISM_CYAN
-	var count := _nodes.size()
-	var conn_dist_sq := connection_distance * connection_distance
+	var base_col: Color = custom_color if custom_color.a >= 0.0 else DesignTokens.COLOR_ACCENT_PRISM_CYAN
+	var r: float = base_col.r
+	var g: float = base_col.g
+	var b: float = base_col.b
+	var count: int = _nodes.size()
+	var conn_dist_sq: float = connection_distance * connection_distance
+	var min_dist: float = min_connection_distance
+	var max_dist: float = connection_distance
 
-	# 1. Отрисовка молекулярных связей (линии графа)
+	# 1. Оптимизированная отрисовка молекулярных связей (smoothstep fade/dissolve)
 	for i in range(count):
-		var n1 := _nodes[i]
+		var n1: SynapticPoint = _nodes[i]
+		var p1: Vector2 = n1.position
 		for j in range(i + 1, count):
-			var n2 := _nodes[j]
-			var dist_sq := n1.position.distance_squared_to(n2.position)
-			
+			var n2: SynapticPoint = _nodes[j]
+			var p2: Vector2 = n2.position
+			var dist_sq: float = p1.distance_squared_to(p2)
+
 			if dist_sq < conn_dist_sq:
-				var dist := sqrt(dist_sq)
-				# Плавное угасание линии к границе разрыва связи
-				var proximity_factor := 1.0 - (dist / connection_distance)
-				var line_alpha := proximity_factor * max_connection_alpha
-				
-				var line_color := Color(cyan_col.r, cyan_col.g, cyan_col.b, line_alpha)
-				draw_line(n1.position, n2.position, line_color, 1.0, true)
+				var dist: float = sqrt(dist_sq)
+				# Плавное появление и разрыв по кривой Эрмита (smoothstep)
+				var line_factor: float = smoothstep(max_dist, min_dist, dist)
+				var line_alpha: float = line_factor * max_connection_alpha
+				if line_alpha > 0.003:
+					draw_line(p1, p2, Color(r, g, b, line_alpha), 1.0, true)
 
 	# 2. Отрисовка квантовых микро-нод
 	for node in _nodes:
-		var pulse := (sin(node.pulse_phase) * 0.5 + 0.5) * 0.3
-		var alpha := clampf(node_base_alpha + pulse, 0.1, 0.8)
-		var dot_color := Color(cyan_col.r, cyan_col.g, cyan_col.b, alpha)
-		draw_circle(node.position, dot_radius, dot_color)
+		var pulse: float = (sin(node.pulse_phase) * 0.5 + 0.5) * 0.3
+		var alpha: float = clampf(node_base_alpha + pulse, 0.1, 0.8)
+		draw_circle(node.position, dot_radius, Color(r, g, b, alpha))

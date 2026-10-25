@@ -66,9 +66,36 @@ const DEFAULT_SETTINGS: Dictionary = {
 		"ui_sound_enabled": true
 	},
 	"agent": {
-		"provider": "gemini",
-		"model": "gemini-2.5-flash",
-		"api_key": ""
+		"provider": "local_embedded",
+		"model": "qwen2.5-coder-1.5b",
+		"auto_fallback_to_local": true,
+		"custom_base_url": "",
+		"custom_model": "",
+		"local_model_path": "",
+		"local_server_port": 8080,
+		"local_server_threads": 4,
+		"api_key": "",
+		"api_keys": {
+			"gemini": "",
+			"openai": "",
+			"openrouter": "",
+			"deepseek": "",
+			"groq": "",
+			"anthropic": "",
+			"mistral": "",
+			"custom": ""
+		},
+		"models": {
+			"gemini": "gemini-2.5-flash",
+			"openai": "gpt-4o-mini",
+			"openrouter": "google/gemini-2.5-flash",
+			"deepseek": "deepseek-chat",
+			"groq": "llama-3.3-70b-versatile",
+			"anthropic": "claude-3-5-sonnet-20241022",
+			"mistral": "codestral-latest",
+			"local_embedded": "qwen2.5-coder-1.5b",
+			"custom": ""
+		}
 	},
 	"session": {
 		"last_active_space": "space_default"
@@ -160,6 +187,41 @@ func load_settings() -> void:
 					merged[cat][key] = raw_val
 		else:
 			merged[cat] = data[cat]
+
+	# Smooth migration and defaults integrity for agent settings
+	if merged.has("agent") and merged["agent"] is Dictionary:
+		var agent_dict: Dictionary = merged["agent"]
+		if not (agent_dict.get("api_keys") is Dictionary):
+			agent_dict["api_keys"] = (DEFAULT_SETTINGS["agent"]["api_keys"] as Dictionary).duplicate()
+		else:
+			var def_api_keys: Dictionary = DEFAULT_SETTINGS["agent"]["api_keys"]
+			for k in def_api_keys.keys():
+				if not agent_dict["api_keys"].has(k):
+					agent_dict["api_keys"][k] = def_api_keys[k]
+
+		if not (agent_dict.get("models") is Dictionary):
+			agent_dict["models"] = (DEFAULT_SETTINGS["agent"]["models"] as Dictionary).duplicate()
+		else:
+			var def_models: Dictionary = DEFAULT_SETTINGS["agent"]["models"]
+			for k in def_models.keys():
+				if not agent_dict["models"].has(k):
+					agent_dict["models"][k] = def_models[k]
+
+		# Migration of legacy flat api_key
+		var old_key: String = ""
+		if data.has("agent") and (data["agent"] is Dictionary) and data["agent"].has("api_key"):
+			old_key = str(data["agent"]["api_key"]).strip_edges()
+		elif agent_dict.has("api_key"):
+			old_key = str(agent_dict["api_key"]).strip_edges()
+
+		if not old_key.is_empty():
+			var p_name: String = str(agent_dict.get("provider", "local_embedded"))
+			if agent_dict["api_keys"].has(p_name):
+				if str(agent_dict["api_keys"][p_name]).is_empty():
+					agent_dict["api_keys"][p_name] = old_key
+			else:
+				agent_dict["api_keys"][p_name] = old_key
+			agent_dict["api_key"] = old_key
 
 	_settings = merged
 	print("[SettingsManager] Settings successfully loaded from disk.")
@@ -281,10 +343,46 @@ func _validate_and_sanitize(category: String, key: String, raw_val: Variant, def
 
 		"agent":
 			match key:
-				"provider", "model", "api_key":
+				"provider", "model", "api_key", "custom_base_url", "custom_model", "local_model_path":
 					if raw_val is String:
 						return raw_val
 					return str(raw_val)
+				"auto_fallback_to_local":
+					if raw_val is bool:
+						return raw_val
+					if (raw_val is int or raw_val is float) and not (raw_val is bool):
+						return int(raw_val) != 0
+					if raw_val is String:
+						var s := (raw_val as String).to_lower().strip_edges()
+						if s == "true" or s == "1": return true
+						if s == "false" or s == "0": return false
+					return default_val
+				"local_server_port":
+					if (raw_val is int or raw_val is float) and not (raw_val is bool):
+						var port := int(raw_val)
+						return clampi(port, 1024, 65535)
+					return default_val
+				"local_server_threads":
+					if (raw_val is int or raw_val is float) and not (raw_val is bool):
+						var threads := int(raw_val)
+						return clampi(threads, 1, 64)
+					return default_val
+				"api_keys":
+					if raw_val is Dictionary:
+						var def_keys: Dictionary = default_val if (default_val is Dictionary) else (DEFAULT_SETTINGS["agent"]["api_keys"] as Dictionary).duplicate()
+						var merged_keys: Dictionary = def_keys.duplicate()
+						for k in (raw_val as Dictionary).keys():
+							merged_keys[str(k)] = str((raw_val as Dictionary)[k])
+						return merged_keys
+					return default_val
+				"models":
+					if raw_val is Dictionary:
+						var def_models: Dictionary = default_val if (default_val is Dictionary) else (DEFAULT_SETTINGS["agent"]["models"] as Dictionary).duplicate()
+						var merged_models: Dictionary = def_models.duplicate()
+						for k in (raw_val as Dictionary).keys():
+							merged_models[str(k)] = str((raw_val as Dictionary)[k])
+						return merged_models
+					return default_val
 
 		"session":
 			match key:
@@ -763,7 +861,105 @@ func is_ui_sound_enabled() -> bool:
 func set_agent_config(provider: String, model: String, api_key: String) -> void:
 	set_setting("agent", "provider", provider, false)
 	set_setting("agent", "model", model, false)
-	set_setting("agent", "api_key", api_key, true)
+	set_setting("agent", "api_key", api_key, false)
+	var agent_data: Dictionary = get_category("agent")
+	var api_keys: Dictionary = agent_data.get("api_keys", {}).duplicate()
+	var models: Dictionary = agent_data.get("models", {}).duplicate()
+	api_keys[provider] = api_key
+	models[provider] = model
+	set_setting("agent", "api_keys", api_keys, false)
+	set_setting("agent", "models", models, true)
+
+func get_agent_api_key(provider_name: String) -> String:
+	var agent_data: Dictionary = get_category("agent")
+	var api_keys: Dictionary = agent_data.get("api_keys", {})
+	var key_val: String = str(api_keys.get(provider_name, "")).strip_edges()
+	if not key_val.is_empty():
+		return key_val
+
+	if str(agent_data.get("provider", "")) == provider_name:
+		var flat_key: String = str(agent_data.get("api_key", "")).strip_edges()
+		if not flat_key.is_empty():
+			return flat_key
+
+	match provider_name:
+		"gemini":
+			return OS.get_environment("GEMINI_API_KEY").strip_edges()
+		"openai":
+			return OS.get_environment("OPENAI_API_KEY").strip_edges()
+		"openrouter":
+			return OS.get_environment("OPENROUTER_API_KEY").strip_edges()
+		"deepseek":
+			return OS.get_environment("DEEPSEEK_API_KEY").strip_edges()
+		"groq":
+			return OS.get_environment("GROQ_API_KEY").strip_edges()
+		"anthropic":
+			return OS.get_environment("ANTHROPIC_API_KEY").strip_edges()
+		"mistral":
+			return OS.get_environment("MISTRAL_API_KEY").strip_edges()
+		"custom":
+			return OS.get_environment("CUSTOM_API_KEY").strip_edges()
+	return ""
+
+func set_agent_api_key(provider_name: String, key_value: String) -> void:
+	var agent_data: Dictionary = get_category("agent")
+	var api_keys: Dictionary = agent_data.get("api_keys", {}).duplicate()
+	api_keys[provider_name] = key_value
+	set_setting("agent", "api_keys", api_keys, false)
+	if get_agent_provider() == provider_name:
+		set_setting("agent", "api_key", key_value, false)
+	save_settings()
+
+func get_agent_model(provider_name: String) -> String:
+	var agent_data: Dictionary = get_category("agent")
+	var models: Dictionary = agent_data.get("models", {})
+	if models.has(provider_name) and not str(models[provider_name]).strip_edges().is_empty():
+		return str(models[provider_name]).strip_edges()
+	var def_models: Dictionary = DEFAULT_SETTINGS["agent"]["models"]
+	if def_models.has(provider_name):
+		return str(def_models[provider_name])
+	return str(agent_data.get("model", ""))
+
+func set_agent_model(provider_name: String, model_name: String) -> void:
+	var agent_data: Dictionary = get_category("agent")
+	var models: Dictionary = agent_data.get("models", {}).duplicate()
+	models[provider_name] = model_name
+	set_setting("agent", "models", models, false)
+	if get_agent_provider() == provider_name:
+		set_setting("agent", "model", model_name, false)
+	save_settings()
+
+func get_agent_provider() -> String:
+	return str(get_setting("agent", "provider", "local_embedded"))
+
+func set_agent_provider(provider_name: String) -> void:
+	set_setting("agent", "provider", provider_name, false)
+	var mod_name := get_agent_model(provider_name)
+	if not mod_name.is_empty():
+		set_setting("agent", "model", mod_name, false)
+	var key_val := get_agent_api_key(provider_name)
+	set_setting("agent", "api_key", key_val, false)
+	save_settings()
+
+func is_auto_fallback_to_local_enabled() -> bool:
+	return bool(get_setting("agent", "auto_fallback_to_local", true))
+
+func set_auto_fallback_to_local(enabled: bool) -> void:
+	set_setting("agent", "auto_fallback_to_local", enabled, true)
+
+func get_active_provider_info() -> Dictionary:
+	var prov: String = get_agent_provider()
+	return {
+		"provider": prov,
+		"model": get_agent_model(prov),
+		"api_key": get_agent_api_key(prov),
+		"auto_fallback_to_local": is_auto_fallback_to_local_enabled(),
+		"custom_base_url": str(get_setting("agent", "custom_base_url", "")),
+		"custom_model": str(get_setting("agent", "custom_model", "")),
+		"local_model_path": str(get_setting("agent", "local_model_path", "")),
+		"local_server_port": int(get_setting("agent", "local_server_port", 8080)),
+		"local_server_threads": int(get_setting("agent", "local_server_threads", 4))
+	}
 
 func get_interface_settings() -> Dictionary:
 	return get_category("interface")

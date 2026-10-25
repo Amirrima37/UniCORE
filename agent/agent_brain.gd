@@ -22,7 +22,11 @@ const CacheSync = preload("res://core/net/cache_sync.gd")
 
 const MAX_REPAIR_ATTEMPTS: int = 3
 
-var _provider: BaseLLMProvider
+var _provider: BaseLLMProvider = null
+var _local_provider: BaseLLMProvider = null
+var _auto_fallback_to_local: bool = true
+var _is_executing_fallback: bool = false
+var _last_system_prompt: String = ""
 var _validator: CodeValidator
 var _module_manager: ModuleManager
 var _event_bus: EventBus
@@ -30,6 +34,8 @@ var _diagnostic_logger: DiagnosticLogger = null
 var _semantic_cache: SemanticCache = null
 var _cache_sync: CacheSync = null
 var _module_library: ModuleLibrary = null
+var _space_state_machine: Node = null
+var _presence_manager: Node = null
 
 var last_module_source: String = "" # "registry", "cache", "p2p", "llm"
 var last_resolution_duration: float = 0.0
@@ -108,7 +114,9 @@ func setup(
 	conversation_memory: Object = null,
 	module_library: Node = null,
 	semantic_cache: Node = null,
-	cache_sync: Node = null
+	cache_sync: Node = null,
+	space_state_machine: Node = null,
+	presence_manager: Node = null
 ) -> void:
 	_init_regexes()
 	_event_bus = event_bus as EventBus
@@ -129,6 +137,10 @@ func setup(
 		_semantic_cache = semantic_cache as SemanticCache
 	if cache_sync:
 		_cache_sync = cache_sync as CacheSync
+	if space_state_machine:
+		_space_state_machine = space_state_machine
+	if presence_manager:
+		_presence_manager = presence_manager
 
 	if _provider:
 		if not _provider.response_received.is_connected(_on_llm_response):
@@ -162,6 +174,18 @@ func get_cache_sync() -> CacheSync:
 func set_cache_sync(sync: CacheSync) -> void:
 	_cache_sync = sync
 
+func get_space_state_machine() -> Node:
+	return _space_state_machine
+
+func set_space_state_machine(ssm: Node) -> void:
+	_space_state_machine = ssm
+
+func get_presence_manager() -> Node:
+	return _presence_manager
+
+func set_presence_manager(pm: Node) -> void:
+	_presence_manager = pm
+
 func get_repair_attempts() -> int:
 	return _repair_attempts
 
@@ -173,6 +197,31 @@ func get_diagnostic_logger() -> DiagnosticLogger:
 
 func set_diagnostic_logger(logger: DiagnosticLogger) -> void:
 	_diagnostic_logger = logger
+
+func set_local_provider(local_prov: BaseLLMProvider) -> void:
+	if _local_provider and _local_provider != local_prov:
+		if _local_provider.response_received.is_connected(_on_local_provider_response):
+			_local_provider.response_received.disconnect(_on_local_provider_response)
+		if _local_provider.request_failed.is_connected(_on_local_provider_failure):
+			_local_provider.request_failed.disconnect(_on_local_provider_failure)
+	_local_provider = local_prov
+	if _local_provider:
+		if not _local_provider.response_received.is_connected(_on_local_provider_response):
+			_local_provider.response_received.connect(_on_local_provider_response)
+		if not _local_provider.request_failed.is_connected(_on_local_provider_failure):
+			_local_provider.request_failed.connect(_on_local_provider_failure)
+
+func set_auto_fallback_to_local(enabled: bool) -> void:
+	_auto_fallback_to_local = enabled
+
+func get_local_provider() -> BaseLLMProvider:
+	return _local_provider
+
+func is_auto_fallback_to_local_enabled() -> bool:
+	return _auto_fallback_to_local
+
+func is_executing_fallback() -> bool:
+	return _is_executing_fallback
 
 ## Формирует системный промпт, обогащенный контекстом активных модулей из ConversationMemory
 func _get_enriched_system_prompt() -> String:
@@ -208,6 +257,9 @@ func process_user_prompt(user_text: String) -> void:
 	var start_diag := AgentDiagnostic.from_request(trimmed)
 	_log_and_emit_diagnostic(start_diag)
 	request_started.emit(trimmed)
+
+	if _presence_manager != null and is_instance_valid(_presence_manager) and _presence_manager.has_method("set_local_activity"):
+		_presence_manager.set_local_activity("generating_module", trimmed)
 
 	# 1. Распознавание команд режима редактирования (Edit Mode)
 	var edit_cmd := _check_edit_command(trimmed)
@@ -251,6 +303,9 @@ ID модуля: %s
 """ % [target_mod_id, current_source, instruction, target_mod_id]
 
 		var sys_prompt := _get_enriched_system_prompt()
+		_last_system_prompt = sys_prompt
+		_last_user_prompt = edit_prompt
+		_is_executing_fallback = false
 		_provider.send_prompt(sys_prompt, edit_prompt, api_key)
 		return
 
@@ -299,6 +354,16 @@ ID модуля: %s
 						var diag := AgentDiagnostic.from_success(hit_id)
 						_log_and_emit_diagnostic(diag)
 
+						if _presence_manager != null and is_instance_valid(_presence_manager) and _presence_manager.has_method("set_local_activity"):
+							_presence_manager.set_local_activity("idle")
+						if _space_state_machine != null and is_instance_valid(_space_state_machine) and _space_state_machine.has_method("apply_local_operation"):
+							_space_state_machine.apply_local_operation("module_load", {
+								"module_id": hit_id,
+								"source_code": hit_code,
+								"name": hit_id,
+								"description": trimmed
+							})
+
 						module_resolved.emit(hit_id, "cache", last_resolution_duration)
 						request_completed.emit(hit_id)
 						prompt_completed.emit(hit_id)
@@ -344,6 +409,16 @@ ID модуля: %s
 						var diag := AgentDiagnostic.from_success(p2p_id)
 						_log_and_emit_diagnostic(diag)
 
+						if _presence_manager != null and is_instance_valid(_presence_manager) and _presence_manager.has_method("set_local_activity"):
+							_presence_manager.set_local_activity("idle")
+						if _space_state_machine != null and is_instance_valid(_space_state_machine) and _space_state_machine.has_method("apply_local_operation"):
+							_space_state_machine.apply_local_operation("module_load", {
+								"module_id": p2p_id,
+								"source_code": p2p_code,
+								"name": p2p_id,
+								"description": trimmed
+							})
+
 						module_resolved.emit(p2p_id, "p2p", last_resolution_duration)
 						request_completed.emit(p2p_id)
 						prompt_completed.emit(p2p_id)
@@ -351,6 +426,13 @@ ID модуля: %s
 
 	# Шаг 4: LLM API fallback (если в кэше ничего не найдено или совпадение ниже порога)
 	if not _provider:
+		if _local_provider and _auto_fallback_to_local:
+			_is_executing_fallback = true
+			var enriched_sys_prompt := _get_enriched_system_prompt()
+			_last_system_prompt = enriched_sys_prompt
+			_last_user_prompt = trimmed
+			_local_provider.send_prompt(enriched_sys_prompt, trimmed, "")
+			return
 		_fail_with_error("LLM Provider is not configured")
 		return
 
@@ -359,11 +441,17 @@ ID модуля: %s
 
 	print("[UniCORE Agent] Sending prompt to LLM provider...")
 	var enriched_sys_prompt := _get_enriched_system_prompt()
+	_last_system_prompt = enriched_sys_prompt
+	_last_user_prompt = trimmed
+	_is_executing_fallback = false
 	_provider.send_prompt(enriched_sys_prompt, trimmed, api_key)
 
 func _prepare_api_key() -> bool:
+	if _provider == _local_provider or (_provider != null and _provider.name == "LocalLLMProvider"):
+		return true
+
 	if api_key.is_empty():
-		var candidates = ["OPENROUTER_API_KEY", "OPENAI_API_KEY", "DEEPSEEK_API_KEY", "GEMINI_API_KEY"]
+		var candidates = ["OPENROUTER_API_KEY", "OPENAI_API_KEY", "DEEPSEEK_API_KEY", "GEMINI_API_KEY", "ANTHROPIC_API_KEY", "GROQ_API_KEY", "MISTRAL_API_KEY"]
 		for env_var in candidates:
 			var val = OS.get_environment(env_var)
 			if not val.is_empty():
@@ -376,6 +464,9 @@ func _prepare_api_key() -> bool:
 			if _provider and _provider.get_script():
 				p_path = _provider.get_script().resource_path.to_lower()
 			if not "mock" in p_path:
+				if _provider != _local_provider and _auto_fallback_to_local and _local_provider != null and not _is_executing_fallback:
+					_on_llm_failure("API key is missing for active provider")
+					return false
 				_fail_with_error("API Key is missing. Set OPENROUTER_API_KEY, OPENAI_API_KEY, or GEMINI_API_KEY.")
 				return false
 	return true
@@ -566,7 +657,10 @@ func _on_llm_response(generated_code: String) -> void:
 		})
 
 	if last_module_source != "registry":
-		last_module_source = "llm"
+		if _is_executing_fallback or _provider == _local_provider:
+			last_module_source = "local_llm"
+		else:
+			last_module_source = "llm"
 
 	if _resolution_start_ticks > 0:
 		last_resolution_duration = (Time.get_ticks_msec() - _resolution_start_ticks) / 1000.0
@@ -575,6 +669,8 @@ func _on_llm_response(generated_code: String) -> void:
 	if logger:
 		if last_module_source == "llm":
 			logger.log_agent("INFO", "LLM Generation", "Модуль сгенерирован через LLM API")
+		elif last_module_source == "local_llm":
+			logger.log_agent("INFO", "Local LLM Generation", "Модуль сгенерирован локальным ИИ")
 
 	# 5. Обновляем память диалога
 	if _memory:
@@ -585,9 +681,24 @@ func _on_llm_response(generated_code: String) -> void:
 	_repair_attempts = 0
 	_is_editing = false
 	_editing_module_id = ""
+	_is_executing_fallback = false
 
 	var success_diag := AgentDiagnostic.from_success(module_id)
 	_log_and_emit_diagnostic(success_diag)
+
+	if _presence_manager != null and is_instance_valid(_presence_manager) and _presence_manager.has_method("set_local_activity"):
+		_presence_manager.set_local_activity("idle")
+
+	if _space_state_machine != null and is_instance_valid(_space_state_machine) and _space_state_machine.has_method("apply_local_operation"):
+		var op_type: String = "module_edit" if _is_editing else "module_load"
+		var meta_dict: Dictionary = SemanticCache.parse_metadata_from_code(generated_code) if _semantic_cache else {}
+		_space_state_machine.apply_local_operation(op_type, {
+			"module_id": module_id,
+			"source_code": generated_code,
+			"name": str(meta_dict.get("name", module_id)),
+			"description": str(meta_dict.get("description", _last_user_prompt))
+		})
+
 	module_resolved.emit(module_id, last_module_source, last_resolution_duration)
 	request_completed.emit(module_id)
 	prompt_completed.emit(module_id)
@@ -623,8 +734,12 @@ func _handle_repair_or_fail(err_msg: String, failed_code: String) -> void:
 		var repair_prompt := "Предыдущий сгенерированный код вызвал ошибку: %s.\n\nИсходный код с ошибкой:\n%s\n\nИсправь код полностью. Соблюдай контракт UniCoreModule (get_module_id, get_module_name, initialize, cleanup). Выдай ТОЛЬКО чистый исправленный GDScript код." % [err_msg, _last_failed_code]
 
 		var sys_prompt := _get_enriched_system_prompt()
-		if _provider:
-			_provider.send_prompt(sys_prompt, repair_prompt, api_key)
+		_last_system_prompt = sys_prompt
+		_last_user_prompt = repair_prompt
+		var active_p: BaseLLMProvider = _local_provider if (_is_executing_fallback and _local_provider) else _provider
+		if active_p:
+			var key_to_use := "" if active_p == _local_provider else api_key
+			active_p.send_prompt(sys_prompt, repair_prompt, key_to_use)
 		else:
 			_fail_with_error("LLM Provider is not configured")
 	else:
@@ -632,12 +747,74 @@ func _handle_repair_or_fail(err_msg: String, failed_code: String) -> void:
 		_fail_with_error(err_msg)
 
 func _on_llm_failure(error_message: String) -> void:
-	_fail_with_error(error_message)
+	if _provider != _local_provider and _auto_fallback_to_local and _local_provider != null and not _is_executing_fallback:
+		_is_executing_fallback = true
+		var warn_msg: String = "[AgentBrain] Облачный провайдер вернул ошибку (%s). Автоматическое переключение на локальный ИИ..." % error_message
+		print("[UniCORE Agent] %s" % warn_msg)
+
+		var logger := _diagnostic_logger if _diagnostic_logger else DiagnosticLogger.get_instance()
+		if logger:
+			logger.log_agent("WARN", "LLM Fallback", warn_msg)
+
+		var fallback_diag: Dictionary = {
+			"category": "AGENT",
+			"level": "WARN",
+			"title": "Авто-переключение на локальный ИИ",
+			"message": warn_msg,
+			"details": error_message,
+			"timestamp": Time.get_unix_time_from_system()
+		}
+		_log_and_emit_diagnostic(fallback_diag)
+
+		if _event_bus:
+			_event_bus.emit("agent_status_changed", {
+				"status": "fallback_to_local",
+				"message": warn_msg,
+				"error": error_message
+			})
+
+		if not _local_provider.response_received.is_connected(_on_local_provider_response):
+			_local_provider.response_received.connect(_on_local_provider_response)
+		if not _local_provider.request_failed.is_connected(_on_local_provider_failure):
+			_local_provider.request_failed.connect(_on_local_provider_failure)
+
+		if _last_system_prompt.is_empty():
+			_last_system_prompt = _get_enriched_system_prompt()
+
+		_local_provider.send_prompt(_last_system_prompt, _last_user_prompt, "")
+		return
+
+	# Если fallback отключен или локальный провайдер тоже завершился ошибкой
+	if _repair_attempts > 0 and not _last_failed_code.is_empty():
+		_handle_repair_or_fail(error_message, _last_failed_code)
+	else:
+		_fail_with_error(error_message)
+
+func _on_local_provider_response(generated_code: String) -> void:
+	print("[UniCORE Agent] Local provider responded successfully (%d chars)." % generated_code.length())
+	_on_llm_response(generated_code)
+
+func _on_local_provider_failure(error_message: String) -> void:
+	var warn_msg: String = "[AgentBrain] Локальный провайдер завершился ошибкой: %s" % error_message
+	print("[UniCORE Agent] %s" % warn_msg)
+	_is_executing_fallback = false
+
+	var logger := _diagnostic_logger if _diagnostic_logger else DiagnosticLogger.get_instance()
+	if logger:
+		logger.log_agent("ERROR", "Local LLM Error", warn_msg)
+
+	if _repair_attempts > 0 and not _last_failed_code.is_empty():
+		_handle_repair_or_fail(error_message, _last_failed_code)
+	else:
+		_fail_with_error(error_message)
 
 func _fail_with_error(error_message: String) -> void:
+	if _presence_manager != null and is_instance_valid(_presence_manager) and _presence_manager.has_method("set_local_activity"):
+		_presence_manager.set_local_activity("idle")
 	_repair_attempts = 0
 	_is_editing = false
 	_editing_module_id = ""
+	_is_executing_fallback = false
 	push_error("[UniCORE Agent] %s" % error_message)
 	var diag := AgentDiagnostic.from_error(error_message)
 	_log_and_emit_diagnostic(diag)

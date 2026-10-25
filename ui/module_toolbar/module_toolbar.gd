@@ -26,19 +26,20 @@ func _ready() -> void:
 	_apply_cyber_styling()
 
 func _apply_cyber_styling() -> void:
+	var is_white := CyberTheme.is_white_theme()
 	var bar_style := StyleBoxFlat.new()
-	bar_style.bg_color = Color(0.04, 0.07, 0.13, 0.88)
+	bar_style.bg_color = CyberTheme.get_default_glass_bg()
 	bar_style.border_width_top = 1
-	bar_style.border_color = Color(0.0, 0.85, 1.0, 0.5)
-	bar_style.shadow_color = Color(0.0, 0.85, 1.0, 0.15)
-	bar_style.shadow_size = 4
+	bar_style.border_color = CyberTheme.COLOR_ELECTRIC_BLUE if is_white else Color(0.0, 0.85, 1.0, 0.5)
+	bar_style.shadow_color = Color(bar_style.border_color.r, bar_style.border_color.g, bar_style.border_color.b, clampf(0.15 * CyberTheme.get_led_intensity(), 0.05, 0.8))
+	bar_style.shadow_size = int(round(4 * CyberTheme.get_led_intensity()))
 	bar_style.set_content_margin_all(4)
 	bar_style.content_margin_left = 12
 	bar_style.content_margin_right = 12
 	toolbar_panel.add_theme_stylebox_override("panel", bar_style)
 
-	title_label.add_theme_color_override("font_color", CyberTheme.COLOR_CYAN_GLOW)
-	module_count_label.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_CYAN)
+	title_label.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW)
+	module_count_label.add_theme_color_override("font_color", CyberTheme.get_text_muted_color())
 
 func setup(module_manager: ModuleManager, event_bus: EventBus) -> void:
 	_module_manager = module_manager
@@ -51,6 +52,13 @@ func setup(module_manager: ModuleManager, event_bus: EventBus) -> void:
 	# Subscribe to module_toggled on event_bus
 	if _event_bus:
 		_event_bus.subscribe("module_toggled", _on_event_module_toggled)
+		_event_bus.subscribe("interface_settings_changed", func(_d):
+			_apply_cyber_styling()
+			for mod_id in _module_buttons:
+				var btn: Button = _module_buttons[mod_id]
+				if is_instance_valid(btn):
+					_style_module_button(btn, btn.button_pressed)
+		)
 
 	# Populate with already-loaded modules
 	for mod_id in _module_manager.get_active_module_ids():
@@ -106,15 +114,16 @@ func _on_event_module_toggled(payload: Dictionary) -> void:
 			_style_module_button(btn, enabled)
 
 func _style_module_button(btn: Button, active: bool) -> void:
+	var is_white := CyberTheme.is_white_theme()
 	if active:
 		var on_style := CyberTheme.create_cyber_button_style(
-			Color(0.04, 0.14, 0.25, 0.88),
-			CyberTheme.COLOR_CYAN_GLOW,
+			Color(0.85, 0.92, 0.98, 0.9) if is_white else Color(0.04, 0.14, 0.25, 0.88),
+			CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW,
 			1,
 			3
 		)
 		var hover_style := CyberTheme.create_cyber_button_style(
-			Color(0.08, 0.2, 0.35, 0.95),
+			Color(0.8, 0.9, 0.98, 0.95) if is_white else Color(0.08, 0.2, 0.35, 0.95),
 			CyberTheme.COLOR_CYAN_GLOW,
 			1,
 			3
@@ -123,18 +132,18 @@ func _style_module_button(btn: Button, active: bool) -> void:
 		btn.add_theme_stylebox_override("hover", hover_style)
 		btn.add_theme_stylebox_override("pressed", on_style)
 		btn.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
-		btn.add_theme_color_override("font_color", CyberTheme.COLOR_CYAN_GLOW)
-		btn.add_theme_color_override("font_hover_color", Color.WHITE)
+		btn.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW)
+		btn.add_theme_color_override("font_hover_color", CyberTheme.COLOR_CYAN_GLOW if is_white else Color.WHITE)
 	else:
 		var off_style := CyberTheme.create_cyber_button_style(
-			Color(0.03, 0.05, 0.09, 0.6),
-			Color(0.25, 0.35, 0.45, 0.3),
+			Color(0.92, 0.94, 0.97, 0.7) if is_white else Color(0.03, 0.05, 0.09, 0.6),
+			Color(0.65, 0.75, 0.85, 0.5) if is_white else Color(0.25, 0.35, 0.45, 0.3),
 			1,
 			3
 		)
 		var off_hover := CyberTheme.create_cyber_button_style(
-			Color(0.06, 0.09, 0.15, 0.8),
-			Color(0.4, 0.55, 0.7, 0.5),
+			Color(0.88, 0.92, 0.96, 0.85) if is_white else Color(0.06, 0.09, 0.15, 0.8),
+			Color(0.4, 0.6, 0.85, 0.7) if is_white else Color(0.4, 0.55, 0.7, 0.5),
 			1,
 			3
 		)
@@ -142,7 +151,7 @@ func _style_module_button(btn: Button, active: bool) -> void:
 		btn.add_theme_stylebox_override("hover", off_hover)
 		btn.add_theme_stylebox_override("pressed", off_style)
 		btn.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
-		btn.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_MUTED)
+		btn.add_theme_color_override("font_color", CyberTheme.get_text_muted_color())
 
 func _on_module_unloaded(module_id: String) -> void:
 	if _module_buttons.has(module_id):

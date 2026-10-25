@@ -1,6 +1,6 @@
 # UniCORE Roadmap & Status Tracker
 
-## Текущий статус: Фаза 1, Фаза 2, Фаза 2.5 (a,b,c) и Фаза 3a — «Интерактивное Ядро, Оболочка Detroit, Контекстная Память, Self-Repair, Библиотека Модулей, Сетевой Слой и P2P Семантический Кэш Модулей» (100% готовности)
+## Текущий статус: Фаза 1, Фаза 2, Фаза 2.5 (a,b,c), Фаза 3 (a,b) и Фаза 3c — «Интерактивное Ядро, Оболочка Detroit, Контекстная Память, Self-Repair, Библиотека Модулей, Сетевой Слой, P2P Семантический Кэш, Multiplayer Space Sync, Встроенный Локальный ИИ (llama-server) и Расширенный Стек Облачных Провайдеров» (100% готовности)
 
 ### Выполнено в Фазе 1 («Интерактивное Ядро и Агент»):
 - [x] **Архитектурный манифест:** зафиксирован в [ARCHITECTURE.md](file:///c:/dev/UniCORE/ARCHITECTURE.md).
@@ -167,7 +167,72 @@
 
 ---
 
-### Следующие задачи (Фаза 3b — «P2P Swarm & Распределенные Вычисления»):
-- [ ] **P2P Swarm & Multiplayer:** Синхронизация состояний Пространств между узлами сети и совместное редактирование в реальном времени.
-- [ ] **Распределенный Рой Вычислений:** Балансировка задач синтеза и симуляции по мощности узлов сети.
-- [ ] **Поддержка VR (OpenXR):** Ноды ввода и адаптация Detroit UI для VR-шлемов.
+### Выполнено в Фазе 3b («Multiplayer Space Sync, Присутствие Пиров и Совместное Редактирование»):
+- [x] **Математическая Модель Причинно-Следственного Порядка (VectorClock):**
+  - [x] [vector_clock.gd](file:///c:/dev/UniCORE/core/net/vector_clock.gd) — распределенный вектор логических часов для надежного causal ordering без зависимости от системных таймеров ОС:
+    - [x] Атомарный инкремент `increment(peer_id)` и поэлементное слияние `merge()`.
+    - [x] Отношения частичного порядка `is_before()` и детекция параллельных событий `is_concurrent()`.
+    - [x] Глубокое клонирование `duplicate_clock()` и сериализация/десериализация (`to_dict()`, `from_dict()`).
+- [x] **Реактивная Машина Состояний Пространства (SpaceStateMachine):**
+  - [x] [space_state_machine.gd](file:///c:/dev/UniCORE/core/net/space_state_machine.gd) — распределенная репликация состояний мира поверх канала `"space_sync"`:
+    - [x] Генерация дискретных локальных операций (`module_load`, `module_unload`, `module_edit`, `setting_change`, `space_switch`).
+    - [x] Проверка идемпотентности и фильтрация дубликатов по `op_id`.
+    - [x] Защита от кругового эха (`_is_applying_remote` guard) при вызовах `ModuleManager` и `SpaceManager`.
+    - [x] Матрица CRDT-разрешения конфликтов:
+      - `unload_wins`: при конфликте между загрузкой и выгрузкой выгрузка всегда побеждает (принцип безопасности ядра).
+      - `Last-Writer-Wins (LWW)`: при одновременных правках побеждает операция с более поздним `timestamp`.
+      - `author_id tie-breaker`: при совпадающих отметках времени побеждает пир с большим числовым ID.
+    - [x] Полная синхронизация состояния пространства при входе нового пира (`state_request` / `state_full`).
+  - [x] [test_space_state_machine_suite.gd](file:///c:/dev/UniCORE/tests/test_space_state_machine_suite.gd) — 38/38 проверок пройдено со 100% успехом (exit code 0).
+- [x] **Система Присутствия и 3D Телеметрии (PresenceManager & PeerMarker):**
+  - [x] [presence_manager.gd](file:///c:/dev/UniCORE/core/net/presence_manager.gd) — отслеживание узлов сети в реальном времени по каналу `"presence"`:
+    - [x] 10 FPS вещание позиции, поворота взгляда, текущей активности (`idle`, `generating_module`, `editing_module`) и последнего промпта.
+    - [x] Детерминированная процедурная генерация уникальных неоновых цветов пиров на основе HSV-хэша `peer_id`.
+    - [x] Автоматическая очистка и сигнал `peer_left_presence` при дисконнекте.
+  - [x] [peer_marker.gd](file:///c:/dev/UniCORE/ui/presence/peer_marker.gd) / [peer_marker.tscn](file:///c:/dev/UniCORE/ui/presence/peer_marker.tscn) — визуальный 3D-аватар пира в пространстве:
+    - [x] Направленный неоновый световой конус и парящая LED-сфера.
+    - [x] Billboard 3D текст (имя узла + текущая активность).
+    - [x] Плавная `lerp` и `lerp_angle` интерполяция траектории движения в `_process`.
+- [x] **Встроенный P2P Чат (PeerChat & PeerChatWindow):**
+  - [x] [peer_chat.gd](file:///c:/dev/UniCORE/core/net/peer_chat.gd) — транспорт сообщений по каналу `"chat"`:
+    - [x] Широковещательные (`chat_message`) и приватные (`chat_private`) сообщения.
+    - [x] Кольцевой буфер истории с лимитом в 200 сообщений (`MAX_HISTORY = 200`).
+  - [x] [peer_chat_window.gd](file:///c:/dev/UniCORE/ui/chat/peer_chat_window.gd) / [peer_chat_window.tscn](file:///c:/dev/UniCORE/ui/chat/peer_chat_window.tscn) — плавающее draggable окно Detroit Liquid Glass:
+    - [x] RichTextLabel с BBCode-подсветкой авторов по их уникальным цветам и временными метками `[HH:MM:SS]`.
+    - [x] Отправка по нажатию `Enter` и горячая клавиша быстрого скрытия/показа `T`.
+  - [x] [test_presence_chat_suite.gd](file:///c:/dev/UniCORE/tests/test_presence_chat_suite.gd) — 47/47 проверок пройдено со 100% успехом (exit code 0).
+- [x] **Интеграция с Агентом (AgentBrain Collaborative Flow):**
+  - [x] [agent_brain.gd](file:///c:/dev/UniCORE/agent/agent_brain.gd) — автоматическое оповещение PresenceManager (`generating_module` при старте запроса, `idle` при завершении).
+  - [x] Автоматическая диспетчеризация операции `module_load` / `module_edit` в `SpaceStateMachine` при создании или редактировании модуля: модуль мгновенно монтируется у всех участников сетевой сессии.
+- [x] **Сетевой Интерфейс в MainMenu и SpaceViewport:**
+  - [x] [main_menu.gd](file:///c:/dev/UniCORE/ui/menu/main_menu.gd) — динамические карточки `PresenceSection` и журнала операций `OpsLogSection` с неоновой окантовкой.
+  - [x] [space_viewport.gd](file:///c:/dev/UniCORE/core/space_viewport.gd) — инстанциация 3D маркеров в `WorldRoot`, трансляция положения камеры локального игрока и подключение горячей клавиши `T`.
+- [x] **Комплексное Автоматизированное Тестирование (100% PASS):**
+  - [x] [test_multiplayer_sync_suite.gd](file:///c:/dev/UniCORE/tests/test_multiplayer_sync_suite.gd) — 69/69 проверок сквозного взаимодействия VectorClock, SpaceStateMachine, PresenceManager, PeerChat и синхронного синтеза AgentBrain.
+  - [x] Единый мастер-раннер [test_runner.gd](file:///c:/dev/UniCORE/tests/test_runner.gd) успешно выполнил все 22 сьюта (22 из 22 сьютов PASS, 0 ошибок).
+
+---
+
+### Выполнено в Фазе 3c («Встроенный Локальный ИИ (llama-server) и Расширенный Стек Облачных Провайдеров»):
+- [x] **Встроенный локальный ИИ по умолчанию (llama-server runner & downloader):**
+  - [x] [local_llm_manager.gd](file:///c:/dev/UniCORE/agent/local_llm_manager.gd) — менеджер фонового процесса `llama-server.exe` (порт 8080) с контролем PID, health-check (`/health`) и авто-завершением при выходе.
+  - [x] Автоматическая фоновая загрузка `llama-server.exe` (распаковка через `ZIPReader`) и GGUF-модели (`Qwen2.5-Coder-1.5B`) в `user://bin/` и `user://models/` с сигналами прогресса.
+  - [x] Поддержка выбора кастомных `.gguf` файлов пользователя из файловой системы.
+- [x] **Расширенный стек облачных провайдеров:**
+  - [x] [anthropic_provider.gd](file:///c:/dev/UniCORE/agent/providers/anthropic_provider.gd) — клиент к Anthropic Messages API (`x-api-key`, Claude 3.5 Sonnet / Haiku / Opus).
+  - [x] [openai_compatible_provider.gd](file:///c:/dev/UniCORE/agent/providers/openai_compatible_provider.gd) — поддержка профилей и пресетов для Groq, DeepSeek API, Mistral/Codestral, OpenRouter, OpenAI, Local Embedded (без требования API-ключа) и Custom OpenAI-Compatible.
+- [x] **Отказоустойчивый Fallback и Реконфигурация SettingsManager:**
+  - [x] [settings_manager.gd](file:///c:/dev/UniCORE/core/settings_manager.gd) — расширение категории `"agent"` (изолированные API-ключи для каждого провайдера, выбор моделей, `auto_fallback_to_local`, кастомные URL и параметры локального сервера, плавная миграция со старого формата).
+  - [x] [agent_brain.gd](file:///c:/dev/UniCORE/agent/agent_brain.gd) & [space_viewport.gd](file:///c:/dev/UniCORE/core/space_viewport.gd) — реализация авто-fallback на встроенную локальную модель при ошибках квоты (429), ключа (401) или сети, динамическое монтирование `LocalLLMServerManager`.
+- [x] **Спецификация для UI / Чата Дизайна:**
+  - [x] [design_chat_llm_settings_spec.md](file:///C:/Users/Amirrima37/.gemini/antigravity/brain/51a93ace-161d-4812-aeda-bc1b959a8496/design_chat_llm_settings_spec.md) — структурированное ТЗ для обновления секции настроек ИИ в `ui/menu/main_menu.gd`.
+
+---
+
+### Следующие задачи (Фаза 4 — «Распределенный Рой Вычислений (Swarm Compute) и VR (OpenXR)»):
+- [ ] **Распределенный Рой Вычислений (Distributed Swarm Compute):**
+  - [ ] Балансировка задач синтеза кода и физической симуляции по мощности подключенных узлов локальной сети.
+  - [ ] P2P распределение генеративных задач при отсутствии прямого доступа к LLM у отдельных клиентов.
+- [ ] **Поддержка VR (OpenXR):**
+  - [ ] Ноды ввода OpenXR и поддержка контроллеров движения 6-DoF.
+  - [ ] Адаптация Detroit Liquid Glass интерфейса для пространственного позиционирования в VR-шлеме.

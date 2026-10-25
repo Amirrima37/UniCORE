@@ -19,6 +19,7 @@ const CHANNEL_CHAT: String = "chat"
 const CHANNEL_DISCOVERY: String = "discovery"
 const CHANNEL_HEARTBEAT: String = "heartbeat"
 const CHANNEL_CACHE_SYNC: String = "cache_sync"
+const CHANNEL_PRESENCE: String = "presence"
 
 const SUPPORTED_CHANNELS: Array[String] = [
 	CHANNEL_MODULE_SHARE,
@@ -26,7 +27,8 @@ const SUPPORTED_CHANNELS: Array[String] = [
 	CHANNEL_CHAT,
 	CHANNEL_DISCOVERY,
 	CHANNEL_HEARTBEAT,
-	CHANNEL_CACHE_SYNC
+	CHANNEL_CACHE_SYNC,
+	CHANNEL_PRESENCE
 ]
 
 # Status definitions

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b8d5a2f8k21m"]
+[gd_scene load_steps=16 format=3 uid="uid://b8d5a2f8k21m"]
 
 [ext_resource type="Script" path="res://core/space_viewport.gd" id="1_space"]
 [ext_resource type="Script" path="res://core/event_bus.gd" id="2_eventbus"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://df7h184k2001" path="res://ui/hud/top_bar.tscn" id="10_topbar"]
 [ext_resource type="PackedScene" uid="uid://by2qv7fdq07a5" path="res://ui/menu/main_menu.tscn" id="11_mainmenu"]
 [ext_resource type="PackedScene" uid="uid://df8ba3n4c72b" path="res://ui/analysis_drawer/analysis_drawer.tscn" id="12_drawer"]
+[ext_resource type="PackedScene" uid="uid://d1k7n4obc32b" path="res://ui/welcome_screen/welcome_screen.tscn" id="13_welcome"]
+[ext_resource type="PackedScene" uid="uid://c7x9m3oab10a" path="res://ui/welcome_screen/boot_screen.tscn" id="14_boot"]
 
 [sub_resource type="Environment" id="Environment_core"]
 background_mode = 1
@@ -60,4 +62,8 @@ script = ExtResource("5_gemini")
 
 [node name="ModuleToolbar" parent="CanvasLayer" instance=ExtResource("7_toolbar")]
 
+[node name="WelcomeScreen" parent="CanvasLayer" instance=ExtResource("13_welcome")]
+
 [node name="MainMenu" parent="CanvasLayer" instance=ExtResource("11_mainmenu")]
+
+[node name="BootScreen" parent="CanvasLayer" instance=ExtResource("14_boot")]

@@ -15,6 +15,11 @@ const SpaceSyncScript = preload("res://core/net/space_sync.gd")
 const SemanticCacheScript = preload("res://core/semantic_cache.gd")
 const CacheSyncScript = preload("res://core/net/cache_sync.gd")
 const InputMapperScript = preload("res://core/input_mapper.gd")
+const SpaceStateMachineScript = preload("res://core/net/space_state_machine.gd")
+const PresenceManagerScript = preload("res://core/net/presence_manager.gd")
+const PeerChatScript = preload("res://core/net/peer_chat.gd")
+const PeerMarkerScene = preload("res://ui/presence/peer_marker.tscn")
+const PeerChatWindowScene = preload("res://ui/chat/peer_chat_window.tscn")
 const CodeValidatorScript = preload("res://agent/code_validator.gd")
 const CyberTheme = preload("res://ui/theme/cyber_theme.gd")
 
@@ -32,6 +37,8 @@ const CyberTheme = preload("res://ui/theme/cyber_theme.gd")
 @onready var analysis_drawer: Control = $CanvasLayer/AnalysisDrawer
 @onready var module_toolbar: ModuleToolbar = $CanvasLayer/ModuleToolbar
 @onready var main_menu: Control = $CanvasLayer/MainMenu
+@onready var welcome_screen: Control = $CanvasLayer/WelcomeScreen
+@onready var boot_screen: Control = $CanvasLayer/BootScreen
 
 var module_library: ModuleLibrary = null
 var semantic_cache: Node = null
@@ -41,7 +48,15 @@ var lan_discovery: Node = null
 var module_sharing: Node = null
 var space_sync: Node = null
 var input_mapper: Node = null
+var space_state_machine: Node = null
+var presence_manager: Node = null
+var peer_chat: Node = null
+var peer_chat_window: Control = null
+var local_llm_manager: Node = null
+var local_provider: BaseLLMProvider = null
+var _peer_markers: Dictionary = {} # peer_id (int) -> Node3D (PeerMarker)
 var _last_user_prompt: String = ""
+var _is_in_space: bool = false
 
 func _ready() -> void:
 	print("[UniCORE] Initializing Core Engine & Shell...")
@@ -81,13 +96,16 @@ func _ready() -> void:
 
 	# 6. Инициализация UI-оболочки
 	top_bar.setup(settings_manager, space_manager, agent_brain, event_bus)
-	main_menu.setup(settings_manager, space_manager, module_manager, event_bus, module_library, network_transport, lan_discovery, module_sharing, space_sync, semantic_cache, input_mapper)
+	main_menu.setup(settings_manager, space_manager, module_manager, event_bus, module_library, network_transport, lan_discovery, module_sharing, space_sync, semantic_cache, input_mapper, space_state_machine, presence_manager, peer_chat)
+	if welcome_screen and welcome_screen.has_method("setup"):
+		welcome_screen.setup(settings_manager, space_manager, module_manager, event_bus, input_mapper)
 	module_toolbar.setup(module_manager, event_bus)
 	prompt_bar.setup(event_bus)
 	analysis_drawer.setup(event_bus)
 
 	# 7. Связывание событий интерфейса
 	_wire_ui_events()
+	_wire_welcome_screen_events()
 
 	print("[UniCORE] Shell ready. Current space: '%s', active modules: %s" % [
 		space_manager.current_space_name,
@@ -142,6 +160,40 @@ func _setup_network_layer() -> void:
 		add_child(cache_sync)
 		cache_sync.setup(network_transport, semantic_cache, module_sharing)
 
+	# Multiplayer Synchronization: State Machine, Presence, Chat
+	if not space_state_machine and network_transport and module_manager:
+		space_state_machine = SpaceStateMachineScript.new()
+		space_state_machine.name = "SpaceStateMachine"
+		add_child(space_state_machine)
+		space_state_machine.setup(network_transport, module_manager, space_manager)
+		space_state_machine.operation_applied.connect(_on_operation_applied)
+
+	if not presence_manager and network_transport:
+		presence_manager = PresenceManagerScript.new()
+		presence_manager.name = "PresenceManager"
+		add_child(presence_manager)
+		presence_manager.setup(network_transport, 1, player_name)
+		presence_manager.start_broadcasting_presence(0.1)
+		presence_manager.peer_state_updated.connect(_on_presence_peer_state_updated)
+		presence_manager.peer_left_presence.connect(_on_presence_peer_left)
+
+	if not peer_chat and network_transport:
+		peer_chat = PeerChatScript.new()
+		peer_chat.name = "PeerChat"
+		add_child(peer_chat)
+		peer_chat.setup(network_transport, player_name)
+
+	if not peer_chat_window and canvas_layer:
+		peer_chat_window = PeerChatWindowScene.instantiate()
+		peer_chat_window.name = "PeerChatWindow"
+		canvas_layer.add_child(peer_chat_window)
+		peer_chat_window.setup(peer_chat)
+		peer_chat_window.hide()
+
+	if agent_brain:
+		agent_brain.set_space_state_machine(space_state_machine)
+		agent_brain.set_presence_manager(presence_manager)
+
 	# Wire network signals
 	var update_net_hud := func(_param: Variant = null) -> void:
 		var cur_status: String = network_transport.get_status()
@@ -156,8 +208,10 @@ func _setup_network_layer() -> void:
 	network_transport.connection_status_changed.connect(func(_status: String):
 		update_net_hud.call()
 	)
-	network_transport.peer_connected.connect(func(_pid: int, _info: Dictionary):
+	network_transport.peer_connected.connect(func(pid: int, _info: Dictionary):
 		update_net_hud.call()
+		if space_state_machine and is_instance_valid(space_state_machine):
+			space_state_machine.sync_state_with_peer(pid)
 	)
 	network_transport.peer_disconnected.connect(func(_pid: int):
 		update_net_hud.call()
@@ -178,7 +232,7 @@ func _setup_network_layer() -> void:
 		DiagnosticLogger.log_error("Ошибка сетевого обмена с узлом #%d: %s" % [peer_id, error], "ModuleSharing")
 	)
 
-	main_menu.setup_network(network_transport, lan_discovery, module_sharing, space_sync)
+	main_menu.setup_network(network_transport, lan_discovery, module_sharing, space_sync, space_state_machine, presence_manager, peer_chat)
 
 	# Auto-start LAN discovery listening if enabled
 	var auto_disc: bool = bool(settings_manager.get_setting("network", "auto_discovery", true))
@@ -194,6 +248,54 @@ func _setup_network_layer() -> void:
 	if module_manager:
 		module_manager.module_loaded.connect(func(_id, _inst): _sync_network_peer_info())
 		module_manager.module_unloaded.connect(func(_id): _sync_network_peer_info())
+
+func _process(_delta: float) -> void:
+	if presence_manager and is_instance_valid(presence_manager) and presence_manager.is_broadcasting():
+		var cam: Camera3D = get_viewport().get_camera_3d()
+		if cam and is_instance_valid(cam):
+			presence_manager.update_local_state(cam.global_position, cam.global_rotation)
+
+func _on_operation_applied(op: Dictionary) -> void:
+	var op_type: String = str(op.get("op_type", ""))
+	var author_id: int = int(op.get("author_id", 0))
+	var local_id: int = 1
+	if network_transport and network_transport.has_method("get_local_peer_info"):
+		local_id = int(network_transport.get_local_peer_info().get("id", 1))
+
+	if author_id != local_id and is_instance_valid(prompt_bar):
+		match op_type:
+			"module_load":
+				var mid: String = str(op.get("data", {}).get("module_id", ""))
+				prompt_bar.set_status("Узел #%d смонтировал модуль '%s'" % [author_id, mid], CyberTheme.COLOR_SUCCESS_LED)
+			"module_unload":
+				var mid: String = str(op.get("data", {}).get("module_id", ""))
+				prompt_bar.set_status("Узел #%d выгрузил модуль '%s'" % [author_id, mid], CyberTheme.COLOR_AMBER_LED)
+			"module_edit":
+				var mid: String = str(op.get("data", {}).get("module_id", ""))
+				prompt_bar.set_status("Узел #%d обновил модуль '%s'" % [author_id, mid], CyberTheme.COLOR_CYAN_GLOW)
+
+func _on_presence_peer_state_updated(peer_id: int, state: Dictionary) -> void:
+	if not world_root or not is_instance_valid(world_root):
+		return
+	if not _peer_markers.has(peer_id):
+		var marker: Node3D = PeerMarkerScene.instantiate()
+		marker.name = "PeerMarker_%d" % peer_id
+		world_root.add_child(marker)
+		var p_name: String = str(state.get("name", "Peer #%d" % peer_id))
+		var p_col: Color = state.get("color", PresenceManagerScript.generate_peer_color(peer_id))
+		marker.setup(peer_id, p_name, p_col)
+		_peer_markers[peer_id] = marker
+
+	var marker_inst = _peer_markers.get(peer_id, null)
+	if marker_inst and is_instance_valid(marker_inst):
+		marker_inst.update_state(state)
+
+func _on_presence_peer_left(peer_id: int) -> void:
+	if _peer_markers.has(peer_id):
+		var marker = _peer_markers[peer_id]
+		if is_instance_valid(marker):
+			marker.queue_free()
+		_peer_markers.erase(peer_id)
 
 func _sync_network_peer_info() -> void:
 	if not network_transport or not lan_discovery or not settings_manager:
@@ -217,57 +319,127 @@ func _sync_network_peer_info() -> void:
 
 
 func _setup_llm_provider() -> void:
+	# 1. Монтирование local_llm_manager (LocalLLMServerManager) при наличии скрипта
+	var local_mgr_path := "res://agent/local_llm_manager.gd"
+	if ResourceLoader.exists(local_mgr_path):
+		var mgr_script = load(local_mgr_path)
+		if mgr_script:
+			local_llm_manager = mgr_script.new()
+			local_llm_manager.name = "LocalLLMServerManager"
+			add_child(local_llm_manager)
+
+			if local_llm_manager.has_signal("download_progress"):
+				local_llm_manager.connect("download_progress", Callable(self, "_on_local_llm_download_progress"))
+			if local_llm_manager.has_signal("download_completed"):
+				local_llm_manager.connect("download_completed", Callable(self, "_on_local_llm_download_completed"))
+			if local_llm_manager.has_signal("server_started"):
+				local_llm_manager.connect("server_started", Callable(self, "_on_local_llm_server_started"))
+			if local_llm_manager.has_signal("server_error"):
+				local_llm_manager.connect("server_error", Callable(self, "_on_local_llm_server_error"))
+
+	# 2. Создание локального OpenAICompatibleProvider (preset local_embedded на порт local_server_port)
+	var local_server_port: int = int(settings_manager.get_setting("agent", "local_server_port", 8080))
+	var local_server_threads: int = int(settings_manager.get_setting("agent", "local_server_threads", 4))
+	var auto_fallback: bool = bool(settings_manager.get_setting("agent", "auto_fallback_to_local", true))
+
+	var openai_compat_script = load("res://agent/providers/openai_compatible_provider.gd")
+	local_provider = openai_compat_script.new()
+	local_provider.name = "LocalLLMProvider"
+	var local_url: String = "http://127.0.0.1:%d/v1/chat/completions" % local_server_port
+	if (local_provider as Object).has_method("configure_preset"):
+		(local_provider as Object).call("configure_preset", "local_embedded", "qwen2.5-coder-1.5b", local_url)
+	else:
+		local_provider.set("base_url", local_url)
+		local_provider.set("model", "qwen2.5-coder-1.5b")
+	agent_brain.add_child(local_provider)
+	agent_brain.set_local_provider(local_provider)
+	agent_brain.set_auto_fallback_to_local(auto_fallback)
+
+	# 3. Определение активного провайдера из настроек
+	var active_prov_name: String = ""
+	if settings_manager.has_method("get_agent_provider"):
+		active_prov_name = settings_manager.get_agent_provider()
+	else:
+		active_prov_name = str(settings_manager.get_setting("agent", "provider", "local_embedded"))
+
+	# Запуск локального сервера при необходимости
+	if local_llm_manager != null and (active_prov_name == "local_embedded" or auto_fallback):
+		if local_llm_manager.has_method("start_server"):
+			local_llm_manager.start_server(local_server_port, local_server_threads)
+
+	# 4. Ветвление создания активного провайдера
 	var active_provider: BaseLLMProvider = gemini_provider
 
-	# Проверяем настройки из SettingsManager и системное окружение
-	var saved_provider: String = settings_manager.get_setting("agent", "provider", "")
-	var saved_key: String = settings_manager.get_setting("agent", "api_key", "")
-	var saved_model: String = settings_manager.get_setting("agent", "model", "")
+	match active_prov_name:
+		"local_embedded":
+			active_provider = local_provider
+			agent_brain.api_key = ""
+			print("[UniCORE] Active LLM Provider: Local Embedded (model: %s, port: %d)" % [str(local_provider.get("model")), local_server_port])
 
-	var openrouter_key := saved_key if (saved_provider == "openrouter" and not saved_key.is_empty()) else OS.get_environment("OPENROUTER_API_KEY")
-	var openai_key := saved_key if (saved_provider == "openai" and not saved_key.is_empty()) else OS.get_environment("OPENAI_API_KEY")
-	var deepseek_key := saved_key if (saved_provider == "deepseek" and not saved_key.is_empty()) else OS.get_environment("DEEPSEEK_API_KEY")
-	var gemini_key := saved_key if (saved_provider == "gemini" and not saved_key.is_empty()) else OS.get_environment("GEMINI_API_KEY")
+		"anthropic":
+			var anthropic_path := "res://agent/providers/anthropic_provider.gd"
+			var anthropic_model: String = settings_manager.get_agent_model("anthropic") if settings_manager.has_method("get_agent_model") else "claude-3-5-sonnet-20241022"
+			var anthropic_key: String = settings_manager.get_agent_api_key("anthropic") if settings_manager.has_method("get_agent_api_key") else ""
+			if ResourceLoader.exists(anthropic_path):
+				var anthropic_script = load(anthropic_path)
+				var p = anthropic_script.new()
+				p.name = "AnthropicProvider"
+				p.set("model", anthropic_model)
+				agent_brain.add_child(p)
+				active_provider = p
+				agent_brain.api_key = anthropic_key
+				print("[UniCORE] Active LLM Provider: Anthropic (model: %s)" % anthropic_model)
+			else:
+				push_warning("[UniCORE] AnthropicProvider script not found. Falling back to local/gemini.")
+				active_provider = local_provider if local_provider else gemini_provider
 
-	if not gemini_key.is_empty():
-		agent_brain.api_key = gemini_key
+		"groq", "mistral", "deepseek", "openrouter", "openai", "custom":
+			var p_model: String = settings_manager.get_agent_model(active_prov_name) if settings_manager.has_method("get_agent_model") else ""
+			var p_key: String = settings_manager.get_agent_api_key(active_prov_name) if settings_manager.has_method("get_agent_api_key") else ""
+			var custom_url: String = str(settings_manager.get_setting("agent", "custom_base_url", "")) if active_prov_name == "custom" else ""
+			var p_inst = openai_compat_script.new()
+			p_inst.name = active_prov_name.capitalize() + "Provider"
 
-	if not openrouter_key.is_empty():
-		var openrouter_script = load("res://agent/providers/openai_compatible_provider.gd")
-		var p = openrouter_script.new()
-		p.name = "OpenRouterProvider"
-		p.base_url = "https://openrouter.ai/api/v1/chat/completions"
-		p.model = saved_model if not saved_model.is_empty() else "google/gemini-2.5-flash"
-		agent_brain.add_child(p)
-		active_provider = p
-		agent_brain.api_key = openrouter_key
-		print("[UniCORE] Active LLM Provider: OpenRouter (model: %s)" % p.model)
-	elif not deepseek_key.is_empty():
-		var deepseek_script = load("res://agent/providers/openai_compatible_provider.gd")
-		var p = deepseek_script.new()
-		p.name = "DeepSeekProvider"
-		p.base_url = "https://api.deepseek.com/chat/completions"
-		p.model = saved_model if not saved_model.is_empty() else "deepseek-chat"
-		agent_brain.add_child(p)
-		active_provider = p
-		agent_brain.api_key = deepseek_key
-		print("[UniCORE] Active LLM Provider: DeepSeek (model: %s)" % p.model)
-	elif not openai_key.is_empty():
-		var openai_script = load("res://agent/providers/openai_compatible_provider.gd")
-		var p = openai_script.new()
-		p.name = "OpenAIProvider"
-		p.base_url = "https://api.openai.com/v1/chat/completions"
-		p.model = saved_model if not saved_model.is_empty() else "gpt-4o-mini"
-		agent_brain.add_child(p)
-		active_provider = p
-		agent_brain.api_key = openai_key
-		print("[UniCORE] Active LLM Provider: OpenAI (model: %s)" % p.model)
-	else:
-		if not saved_model.is_empty():
-			gemini_provider.model = saved_model
-		print("[UniCORE] Active LLM Provider: Google Gemini Direct (model: %s)" % gemini_provider.model)
+			var default_endpoints: Dictionary = {
+				"groq": "https://api.groq.com/openai/v1/chat/completions",
+				"mistral": "https://api.mistral.ai/v1/chat/completions",
+				"deepseek": "https://api.deepseek.com/chat/completions",
+				"openrouter": "https://openrouter.ai/api/v1/chat/completions",
+				"openai": "https://api.openai.com/v1/chat/completions",
+				"custom": custom_url
+			}
 
-	agent_brain.setup(event_bus, module_manager, active_provider, null, null, module_library, semantic_cache, cache_sync)
+			if (p_inst as Object).has_method("configure_preset"):
+				(p_inst as Object).call("configure_preset", active_prov_name, p_model, custom_url)
+			else:
+				var target_url: String = str(default_endpoints.get(active_prov_name, "https://api.openai.com/v1/chat/completions"))
+				if active_prov_name == "custom" and target_url.is_empty():
+					target_url = "http://127.0.0.1:8080/v1/chat/completions"
+				p_inst.set("base_url", target_url)
+				p_inst.set("model", p_model)
+
+			agent_brain.add_child(p_inst)
+			active_provider = p_inst
+			agent_brain.api_key = p_key
+			print("[UniCORE] Active LLM Provider: %s (model: %s)" % [p_inst.name, p_model])
+
+		"gemini":
+			var gemini_model: String = settings_manager.get_agent_model("gemini") if settings_manager.has_method("get_agent_model") else "gemini-2.5-flash"
+			var gemini_key: String = settings_manager.get_agent_api_key("gemini") if settings_manager.has_method("get_agent_api_key") else ""
+			if not gemini_model.is_empty():
+				gemini_provider.model = gemini_model
+			active_provider = gemini_provider
+			agent_brain.api_key = gemini_key
+			print("[UniCORE] Active LLM Provider: Google Gemini Direct (model: %s)" % gemini_provider.model)
+
+		_:
+			if local_provider:
+				active_provider = local_provider
+				agent_brain.api_key = ""
+			else:
+				active_provider = gemini_provider
+
+	agent_brain.setup(event_bus, module_manager, active_provider, null, null, module_library, semantic_cache, cache_sync, space_state_machine, presence_manager)
 
 func _wire_ui_events() -> void:
 	# Командная строка prompt_bar
@@ -307,15 +479,18 @@ func _wire_ui_events() -> void:
 	)
 	agent_brain.request_failed.connect(func(err):
 		DiagnosticLogger.log_error("Сбой запроса: %s" % err, "AgentBrain")
-		var prov_name: String = settings_manager.get_setting("agent", "provider", "gemini")
-		var model_name: String = settings_manager.get_setting("agent", "model", "")
+		var prov_name: String = settings_manager.get_setting("agent", "provider", "local_embedded")
+		var model_name: String = settings_manager.get_agent_model(prov_name) if settings_manager.has_method("get_agent_model") else str(settings_manager.get_setting("agent", "model", ""))
 		var endpoint_url := "https://generativelanguage.googleapis.com/v1beta/models/..."
-		if prov_name == "openrouter":
-			endpoint_url = "https://openrouter.ai/api/v1/chat/completions"
-		elif prov_name == "deepseek":
-			endpoint_url = "https://api.deepseek.com/chat/completions"
-		elif prov_name == "openai":
-			endpoint_url = "https://api.openai.com/v1/chat/completions"
+		match prov_name:
+			"openrouter": endpoint_url = "https://openrouter.ai/api/v1/chat/completions"
+			"deepseek": endpoint_url = "https://api.deepseek.com/chat/completions"
+			"openai": endpoint_url = "https://api.openai.com/v1/chat/completions"
+			"groq": endpoint_url = "https://api.groq.com/openai/v1/chat/completions"
+			"mistral": endpoint_url = "https://api.mistral.ai/v1/chat/completions"
+			"anthropic": endpoint_url = "https://api.anthropic.com/v1/messages"
+			"local_embedded": endpoint_url = "http://127.0.0.1:%d/v1/chat/completions" % int(settings_manager.get_setting("agent", "local_server_port", 8080))
+			"custom": endpoint_url = str(settings_manager.get_setting("agent", "custom_base_url", ""))
 		
 		var diag := {
 			"title": "[СБОЙ СЕТИ / АГЕНТА] Ошибка выполнения запроса",
@@ -334,7 +509,9 @@ func _wire_ui_events() -> void:
 
 	# Сигналы TopBar
 	top_bar.menu_button_pressed.connect(func(target_tab: String):
-		if target_tab == "menu":
+		if target_tab == "welcome":
+			_return_to_welcome_screen()
+		elif target_tab == "menu":
 			main_menu.toggle()
 		else:
 			main_menu.open(target_tab)
@@ -375,6 +552,11 @@ func _wire_ui_events() -> void:
 	main_menu.menu_closed.connect(func():
 		if event_bus:
 			event_bus.emit("modal_closed", {"source": "main_menu"})
+		if not _is_in_space and welcome_screen:
+			if welcome_screen.has_method("open_welcome"):
+				welcome_screen.open_welcome()
+			else:
+				welcome_screen.visible = true
 	)
 	prompt_bar.prompt_opened.connect(func():
 		if main_menu.is_open:
@@ -430,6 +612,78 @@ func _wire_ui_events() -> void:
 				module_manager.unload_module(mod_id)
 		)
 
+func _wire_welcome_screen_events() -> void:
+	if not welcome_screen:
+		return
+
+	if DisplayServer.get_name() == "headless":
+		_is_in_space = true
+		welcome_screen.visible = false
+		if boot_screen:
+			boot_screen.visible = false
+	else:
+		_is_in_space = false
+		if welcome_screen.has_method("open_welcome"):
+			welcome_screen.open_welcome()
+		else:
+			welcome_screen.visible = true
+		if event_bus:
+			event_bus.emit("modal_opened", {"source": "welcome_screen"})
+
+	welcome_screen.resume_requested.connect(func():
+		_is_in_space = true
+		if event_bus:
+			event_bus.emit("modal_closed", {"source": "welcome_screen"})
+	)
+
+	welcome_screen.spaces_requested.connect(func():
+		main_menu.open("spaces")
+	)
+
+	welcome_screen.modules_requested.connect(func():
+		main_menu.open("library")
+	)
+
+	welcome_screen.network_requested.connect(func():
+		main_menu.open("network")
+	)
+
+	welcome_screen.settings_requested.connect(func():
+		main_menu.open("settings")
+	)
+
+	welcome_screen.quit_requested.connect(func():
+		get_tree().quit()
+	)
+
+	if main_menu.has_signal("title_screen_requested"):
+		main_menu.title_screen_requested.connect(_return_to_welcome_screen)
+
+	if boot_screen:
+		boot_screen.boot_completed.connect(func():
+			if not _is_in_space and welcome_screen:
+				if welcome_screen.has_method("open_welcome"):
+					welcome_screen.open_welcome()
+				else:
+					welcome_screen.visible = true
+		)
+
+func _return_to_welcome_screen() -> void:
+	_is_in_space = false
+	if main_menu and main_menu.is_open:
+		main_menu.close()
+	if prompt_bar and prompt_bar.is_open:
+		prompt_bar.close()
+	if analysis_drawer and analysis_drawer.is_open:
+		analysis_drawer.close()
+	if welcome_screen:
+		if welcome_screen.has_method("open_welcome"):
+			welcome_screen.open_welcome()
+		else:
+			welcome_screen.visible = true
+	if event_bus:
+		event_bus.emit("modal_opened", {"source": "welcome_screen"})
+
 func _input(event: InputEvent) -> void:
 	var is_toggle_fs := false
 	if InputMap.has_action("toggle_fullscreen") and event.is_action_pressed("toggle_fullscreen"):
@@ -443,6 +697,8 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func _unhandled_input(event: InputEvent) -> void:
+	if not _is_in_space:
+		return
 	if not (event is InputEventKey) or not event.is_pressed() or event.is_echo():
 		return
 
@@ -450,6 +706,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	var is_diag: bool = (InputMap.has_action("toggle_analysis_drawer") and event.is_action_pressed("toggle_analysis_drawer")) or event.keycode == KEY_F10
 	var is_menu: bool = (InputMap.has_action("toggle_menu") and event.is_action_pressed("toggle_menu")) or event.keycode == KEY_ESCAPE
 	var is_prompt: bool = (InputMap.has_action("toggle_prompt_bar") and event.is_action_pressed("toggle_prompt_bar")) or event.keycode == KEY_TAB or event.keycode == KEY_QUOTELEFT
+	var is_chat: bool = (InputMap.has_action("toggle_chat") and event.is_action_pressed("toggle_chat")) or (event.keycode == KEY_T and not event.is_echo())
 
 	if is_gallery:
 		if main_menu.is_open and main_menu.tab_container.current_tab == 2:
@@ -460,8 +717,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif is_diag:
 		analysis_drawer.toggle()
 		get_viewport().set_input_as_handled()
+	elif is_chat:
+		if peer_chat_window and not main_menu.is_open and not prompt_bar.is_open:
+			peer_chat_window.toggle()
+			get_viewport().set_input_as_handled()
 	elif is_menu:
-		if analysis_drawer.is_open:
+		if peer_chat_window and peer_chat_window.visible:
+			peer_chat_window.close()
+			get_viewport().set_input_as_handled()
+		elif analysis_drawer.is_open:
 			analysis_drawer.close()
 			get_viewport().set_input_as_handled()
 		elif prompt_bar.is_open:
@@ -485,3 +749,30 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_user_prompt_submitted(prompt_text: String) -> void:
 	_last_user_prompt = prompt_text
 	agent_brain.process_user_prompt(prompt_text)
+
+func _on_local_llm_download_progress(percent: float, speed_kb: float) -> void:
+	var msg: String = "Загрузка локальной модели: %.1f%% (%.1f KB/s)" % [percent, speed_kb]
+	if prompt_bar and is_instance_valid(prompt_bar):
+		prompt_bar.set_status(msg, CyberTheme.COLOR_AMBER_LED)
+	if top_bar and is_instance_valid(top_bar) and top_bar.detroit_orb:
+		top_bar.detroit_orb.flash_amber()
+
+func _on_local_llm_download_completed(model_path: String) -> void:
+	var msg: String = "Локальная модель загружена: %s" % model_path.get_file()
+	DiagnosticLogger.log_info(msg, "LocalLLM")
+	if prompt_bar and is_instance_valid(prompt_bar):
+		prompt_bar.set_status(msg, CyberTheme.COLOR_SUCCESS_LED)
+	if top_bar and is_instance_valid(top_bar) and top_bar.detroit_orb:
+		top_bar.detroit_orb.flash_success("Модель готова!")
+
+func _on_local_llm_server_started(port: int) -> void:
+	var msg: String = "Локальный ИИ запущен на порту %d" % port
+	DiagnosticLogger.log_info(msg, "LocalLLM")
+	if prompt_bar and is_instance_valid(prompt_bar):
+		prompt_bar.set_status(msg, CyberTheme.COLOR_CYAN_GLOW)
+
+func _on_local_llm_server_error(error_msg: String) -> void:
+	var msg: String = "Ошибка локального сервера ИИ: %s" % error_msg
+	DiagnosticLogger.log_error(msg, "LocalLLM")
+	if prompt_bar and is_instance_valid(prompt_bar):
+		prompt_bar.set_status(msg, CyberTheme.COLOR_RED_LED)

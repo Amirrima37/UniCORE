@@ -216,3 +216,133 @@ func cleanup() -> void:
   * Динамический бейдж последнего источника разрешения (`Источник: [КЭШ / P2P / LLM]`);
   * Список топ-10 популярных модулей с тегами и счетчиками использования;
   * Кнопка быстрой очистки кэша с модальным подтверждением.
+
+---
+
+## 9. Multiplayer Space Sync & Collaborative Editing (Архитектура многопользовательской синхронизации и совместного редактирования)
+
+Архитектура реального времени Фазы 3 построена на распределенной модели репликации операций без единой точки отказа (SPOF) с причинно-следственным упорядочиванием и отслеживанием присутствия узлов в 3D пространстве.
+
+### 9.1. Математическая модель причинности (VectorClock)
+Для независимого определения отношения "произошло раньше" ($\to$, happened-before) без зависимости от рассинхронизации системных часов ОС узлов применяется распределенный вектор логических часов:
+
+* **Вектор часов**: $V = \{p_i: c_i\}$, где $p_i$ — идентификатор узла (peer_id), $c_i$ — монотонно возрастающий локальный счетчик событий.
+* **Инкремент события**: при создании локальной операции узел $p_i$ выполняет $V[p_i] \leftarrow V[p_i] + 1$.
+* **Правило слияния (Merge)**: при получении удаленного вектора $V'$ локальный вектор обновляется как:
+  $$V_{\text{new}}[k] = \max(V[k], V'[k]) \quad \forall k \in \text{dom}(V) \cup \text{dom}(V')$$
+* **Отношение порядка**:
+  $$V_A \le V_B \iff \forall k: V_A[k] \le V_B[k]$$
+  $$V_A < V_B \iff (V_A \le V_B) \land (\exists k: V_A[k] < V_B[k])$$
+* **Параллельность (Concurrency)**: если $\neg (V_A \le V_B)$ и $\neg (V_B \le V_A)$, операции считаются совершенными параллельно ($V_A \parallel V_B$) и направляются в алгоритм разрешения конфликтов.
+
+### 9.2. Реактивная машина состояний и CRDT разрешение конфликтов (`SpaceStateMachine`)
+Каждое действие в пространстве (загрузка модуля, редактирование, выгрузка, переключение пространств, изменение настроек) формирует дискретную операцию `Operation (op)`:
+
+```gdscript
+{
+  "op_id": String,          # UUID операции (например "op_1792726339_8421")
+  "op_type": String,        # "module_load", "module_unload", "module_edit", "setting_change", "space_switch"
+  "author_id": int,         # peer_id автора
+  "timestamp": float,       # Unix time отметки создания
+  "data": Dictionary,       # Модульный payload (module_id, source_code, parameters)
+  "vector_clock": Dictionary # {peer_id: counter}
+}
+```
+
+#### Матрица разрешения конфликтов:
+| Конфликтующие операции | Правило разрешения | Обоснование |
+|---|---|---|
+| `Разные ресурсы (модули)` | `no_conflict` | Независимые ресурсы применяются параллельно без коллизий |
+| `OP_MODULE_LOAD` vs `OP_MODULE_UNLOAD` | `unload_wins` | **Принцип безопасности ядра**: явное удаление/выгрузка опасного или сбойного модуля всегда приоритетнее его загрузки |
+| `OP_MODULE_EDIT` vs `OP_MODULE_EDIT` | `Last-Writer-Wins (LWW)` | Приоритет у операции с большим `timestamp`; при равенстве — тай-брейкер по `author_id` (больший ID побеждает) |
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant PeerA as Узел A (Клиент)
+    participant SSM_A as SpaceStateMachine A
+    participant Net as NetworkTransport
+    participant SSM_B as SpaceStateMachine B
+    participant MM_B as ModuleManager B
+
+    Note over PeerA, SSM_A: Пользователь генерирует или редактирует модуль
+    PeerA->>SSM_A: apply_local_operation("module_load", {mod_id, code})
+    SSM_A->>SSM_A: vector_clock.increment(peer_a)
+    SSM_A->>Net: broadcast("space_sync", {type: "op", op: data})
+    Net-->>SSM_B: handle_message(peer_a, "space_sync", packet)
+    SSM_B->>SSM_B: Проверка идемпотентности (op_id)
+    SSM_B->>SSM_B: vector_clock.merge(op.vector_clock)
+    SSM_B->>SSM_B: _resolve_conflict(recent_ops, op)
+    alt Конфликтов нет или remote_wins
+        SSM_B->>MM_B: load_module_from_source(mod_id, code)
+        SSM_B->>SSM_B: op_log.append(op)
+        SSM_B-->>PeerA: operation_applied(op)
+    else Загрузка отвергнута (unload_wins)
+        SSM_B-->>SSM_B: emit conflict_detected("unload_wins")
+    end
+```
+
+### 9.3. Система 3D присутствия и телеметрии (`PresenceManager` & `PeerMarker`)
+* **Частота вещания**: 10 FPS (`interval = 0.1s`) через легковесный канал `"presence"`.
+* **Пакет телеметрии**: позиция (`Vector3`), направление взгляда/вращение (`Vector3`), статус активности (`idle`, `generating_module`, `editing_module`), текущий промпт и динамически сгенерированный цвет пира.
+* **Детерминированная генерация цвета**:
+  $$\text{Hue} = \frac{|\text{hash}(\text{peer\_id})| \pmod{360}}{360.0}, \quad \text{Saturation} = 0.75, \quad \text{Value} = 0.95$$
+* **3D Визуализация (PeerMarker)**:
+  - Направленный неоновый конус и верхняя светящаяся LED-сфера;
+  - Billboard 3D текстовые метки (имя пользователя + статус активности);
+  - Плавная интерполяция движения с компенсацией задержек:
+    $$\mathbf{P}_{t} = \operatorname{lerp}(\mathbf{P}_{t}, \mathbf{P}_{\text{target}}, 12 \cdot \Delta t)$$
+    $$\theta_{y, t} = \operatorname{lerp\_angle}(\theta_{y, t}, \theta_{y, \text{target}}, 12 \cdot \Delta t)$$
+
+### 9.4. Встроенный P2P Чат (`PeerChat` & `PeerChatWindow`)
+* **Канал `"chat"`**: широковещательные (`chat_message`) и приватные адресные (`chat_private`) сообщения.
+* **Кольцевой буфер**: хранение последних 200 сообщений в оперативной памяти (`MAX_HISTORY = 200`).
+* **Оконный интерфейс**: полупрозрачное плавающее окно Detroit Liquid Glass, перемещаемое мышью, с поддержкой BBCode, цветовой дифференциацией авторов, отправкой по нажатию `Enter` и быстрым скрытием/открытием по горячей клавише `T`.
+
+---
+
+## 10. Встроенный Локальный ИИ и Расширенный Стек LLM (Embedded Local LLM & Cloud Ecosystem)
+
+Начиная с Фазы 3c, UniCORE поставляется с поддержкой работы из коробки без обязательного наличия облачных ключей или внешних аккаунтов:
+
+### 10.1. Встроенный сервер инференса (`agent/local_llm_manager.gd`)
+* **Автономный демон `llama-server.exe`**:
+  * Запуск локального сервера инференса на порту `8080` (`OS.create_process`).
+  * Аргументы запуска: `-m <model_path> --port 8080 -c 4096 -t 4 --nobrowser`.
+  * Контроль процесса: сохранение PID, периодический health-check опрос (`/health`), немедленное и безопасное завершение дочернего процесса при выходе из приложения (`OS.kill(_server_pid)` в `_exit_tree`).
+* **Фоновый загрузчик компонентов (`Downloader`)**:
+  * При первом старте приложения проверяет наличие бинарника в `user://bin/` и GGUF-модели в `user://models/`.
+  * Автоматически скачивает официальный архив `llama.cpp` и распаковывает его через встроенный класс Godot 4 `ZIPReader`.
+  * Скачивает легковесную специализированную кодинг-модель (`Qwen2.5-Coder-1.5B-Instruct-Q4_K_M.gguf` ~1 ГБ) с отображением прогресса (`download_progress: percent, bytes_received, total_bytes`).
+  * Поддерживает подключение любых сторонних кастомных моделей `.gguf` с диска.
+
+### 10.2. Расширенный стек облачных провайдеров
+* **Anthropic Claude (`agent/providers/anthropic_provider.gd`)**:
+  * Прямой клиент к `https://api.anthropic.com/v1/messages`.
+  * Заголовки: `x-api-key: <KEY>`, `anthropic-version: 2023-06-01`.
+  * Модели: `claude-3-5-sonnet-20241022`, `claude-3-5-haiku-20241022`, `claude-3-opus-20240229`.
+* **Универсальный фасад OpenAI-совместимых провайдеров (`agent/providers/openai_compatible_provider.gd`)**:
+  * Готовые оптимизированные пресеты:
+    * `openai`: `https://api.openai.com/v1/chat/completions` (GPT-4o, GPT-4o-mini).
+    * `openrouter`: `https://openrouter.ai/api/v1/chat/completions` (любые открытые и коммерческие модели).
+    * `deepseek`: `https://api.deepseek.com/chat/completions` (DeepSeek-V3, DeepSeek-R1).
+    * `groq`: `https://api.groq.com/openai/v1/chat/completions` (Llama 3.3 70B, DeepSeek R1 Distill).
+    * `mistral`: `https://api.mistral.ai/v1/chat/completions` (Codestral-latest).
+    * `local_embedded`: `http://127.0.0.1:8080/v1/chat/completions` (локальный llama-server, обход требования API-ключа).
+    * `custom`: произвольный Base URL + Model.
+* **Google Gemini (`agent/providers/gemini_provider.gd`)**: прямой клиент к Google Gemini REST API.
+
+### 10.3. Отказоустойчивый Fallback (`AgentBrain` & `SettingsManager`)
+* **Изолированное хранение ключей**: `SettingsManager` сохраняет уникальный API-ключ для каждого провайдера отдельно (`api_keys: { gemini, openai, anthropic, groq, deepseek, mistral, openrouter, custom }`).
+* **Автоматическое переключение (Failover)**:
+  * Если пользователь выбрал облачный сервис, но запрос завершился ошибкой квоты (429), неверного ключа (401) или тайм-аута сети, при активной опции `auto_fallback_to_local` `AgentBrain` бесшовно перенаправляет генерацию на локальный `LocalLLMProvider`.
+  * Пользователь информируется через светодиодную индикацию `DetroitOrb` и тикер статуса в `PromptBar`.
+
+### 10.4. Пользовательский интерфейс конфигурации ИИ (`ui/menu/main_menu.gd`)
+* **Селектор провайдера (9 режимов)**: переключение между локальным встроенным сервером (`local_embedded`), облачными сервисами (Gemini, Claude, OpenAI, OpenRouter, DeepSeek, Groq, Mistral) и кастомным OpenAI-совместимым эндпоинтом (`custom`).
+* **Динамическая адаптация формы в стиле Detroit Liquid Glass**:
+  * В режиме `local_embedded`: скрытие полей ввода API-ключа, показ неонового бейджа Zero-Key Mode, показ панели состояния сервера с LED-индикатором (`[ГОТОВ / 8080]`, `[ЗАГРУЗКА]`, `[ОСТАНОВЛЕН]`, `[ОШИБКА]`), отображение прогресс-бара загрузки модели и файловый диалог для выбора кастомного `.gguf`.
+  * В режиме `custom`: отображение строки ввода кастомного Base URL и ключа.
+  * В облачных режимах: отображение строки ввода API-ключа с кнопкой быстрого скрытия/показа пароля (`secret = true/false`).
+* **Изолированное сохранение ключей и моделей**: при переключении провайдеров в UI автоматически подгружаются сохраненный ключ и модель конкретно для выбранного сервиса (с автоподстановкой рекомендуемой дефолтной модели при первом выборе).
+* **Переключатель Failover**: графический чекбокс управления параметром `auto_fallback_to_local`.

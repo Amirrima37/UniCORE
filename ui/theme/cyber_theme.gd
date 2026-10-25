@@ -1,6 +1,8 @@
 class_name CyberTheme
 extends RefCounted
 
+const DesignTokens = preload("res://ui/theme/design_tokens.gd")
+
 ## Библиотека стилей "Detroit: Become Human" для UniCORE
 ## Реализует эстетику "Liquid Glass":
 ## - Белая тема CyberLife (арктическое/молочное полупрозрачное стекло)
@@ -273,6 +275,18 @@ static func build_theme() -> Theme:
 	var is_white := is_white_theme()
 	var opacity := get_glass_opacity()
 	var intensity := get_led_intensity()
+
+	# 0. Высокотехнологичная типографика (Swiss High-Tech Typography)
+	var main_font: Font = DesignTokens.get_font_sans()
+	if main_font:
+		theme.default_font = main_font
+		theme.default_font_size = 13
+		theme.set_font("font", "Label", main_font)
+		theme.set_font("font", "Button", main_font)
+		theme.set_font("font", "LineEdit", main_font)
+		theme.set_font("font", "TabContainer", main_font)
+		theme.set_font("font", "PopupMenu", main_font)
+		theme.set_font("font", "TooltipLabel", main_font)
 
 	# 1. PanelContainer
 	theme.set_stylebox("panel", "PanelContainer", create_glass_panel_style())

@@ -85,6 +85,7 @@ func scan_library() -> void:
 		var t_tags: Array = template.get("tags", []).duplicate()
 		var t_code := str(template.get("code", ""))
 		var t_size := t_code.to_utf8_buffer().size()
+		var t_ver := str(template.get("version", "1.0.0"))
 
 		var entry: Dictionary = {
 			"id": t_id,
@@ -92,6 +93,7 @@ func scan_library() -> void:
 			"description": t_desc,
 			"category": t_cat,
 			"file_path": t_file_path,
+			"version": t_ver,
 			"is_builtin": false,
 			"is_active": _is_module_active(t_id),
 			"created_at": 0.0,
@@ -104,6 +106,42 @@ func scan_library() -> void:
 	_catalog = new_catalog
 	_update_active_states()
 	library_updated.emit()
+
+## Проверяет, существует ли модуль в библиотеке, на диске или в шаблонах реестра
+func has_module(module_id: String) -> bool:
+	var clean_id := module_id.strip_edges()
+	if clean_id.is_empty():
+		return false
+	for item in _catalog:
+		if item.get("id", "") == clean_id:
+			return true
+	var direct_paths: Array[String] = [
+		"res://modules/%s.gd" % clean_id,
+		"res://modules/builtin/%s.gd" % clean_id,
+		"user://modules/%s.gd" % clean_id
+	]
+	for dp in direct_paths:
+		if FileAccess.file_exists(dp):
+			return true
+	for tmpl in ModuleRegistryClient.get_all_templates():
+		if str(tmpl.get("id", "")).strip_edges() == clean_id:
+			return true
+	return false
+
+## Возвращает метаданные модуля из каталога по его ID
+func get_module_info(module_id: String) -> Dictionary:
+	var clean_id := module_id.strip_edges()
+	if clean_id.is_empty():
+		return {}
+	for item in _catalog:
+		if item.get("id", "") == clean_id:
+			return item.duplicate(true)
+	if has_module(clean_id):
+		scan_library()
+		for item in _catalog:
+			if item.get("id", "") == clean_id:
+				return item.duplicate(true)
+	return {}
 
 ## Возвращает список всех модулей в каталоге с актуальным статусом is_active
 func get_all_modules() -> Array[Dictionary]:
@@ -357,9 +395,10 @@ func get_module_source(module_id: String) -> String:
 						return ModuleRegistryClient.get_module_source(tmpl)
 
 	# Фоллбек поиск на диске
-	var direct_paths := [
+	var direct_paths: Array[String] = [
 		"res://modules/%s.gd" % module_id,
-		"res://modules/builtin/%s.gd" % module_id
+		"res://modules/builtin/%s.gd" % module_id,
+		"user://modules/%s.gd" % module_id
 	]
 	for dp in direct_paths:
 		if FileAccess.file_exists(dp):
@@ -371,7 +410,7 @@ func get_module_source(module_id: String) -> String:
 
 	# Фоллбек поиск в шаблонах реестра
 	for tmpl in ModuleRegistryClient.get_all_templates():
-		if tmpl.get("id", "") == module_id:
+		if str(tmpl.get("id", "")).strip_edges() == module_id:
 			return ModuleRegistryClient.get_module_source(tmpl)
 
 	return ""
@@ -430,6 +469,9 @@ func _process_script_file(file_path: String, is_builtin_file: bool, seen_ids: Di
 	# Теги
 	var tags := _extract_tags(module_id, category, registry_templates)
 
+	# Версия модуля
+	var version := _extract_version(header_comments)
+
 	var is_active := _is_module_active(module_id)
 	var source := "builtin" if is_builtin_file else "user"
 
@@ -439,6 +481,7 @@ func _process_script_file(file_path: String, is_builtin_file: bool, seen_ids: Di
 		"description": description,
 		"category": category,
 		"file_path": file_path,
+		"version": version,
 		"is_builtin": is_builtin_file,
 		"is_active": is_active,
 		"created_at": created_at,
@@ -519,6 +562,15 @@ func _extract_module_name(content: String, fallback_id: String, header_comments:
 			return first_line
 
 	return fallback_id.capitalize()
+
+func _extract_version(header_comments: Array[String]) -> String:
+	for c in header_comments:
+		var low := c.to_lower()
+		if low.begins_with("version:") or low.begins_with("версия:"):
+			var v := c.split(":", true, 1)[1].strip_edges()
+			if not v.is_empty():
+				return v
+	return "1.0.0"
 
 func _extract_description(header_comments: Array[String]) -> String:
 	var desc_parts: Array[String] = []

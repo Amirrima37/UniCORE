@@ -31,6 +31,41 @@ const COLOR_TEXT_MUTED := Color(0.42, 0.47, 0.55, 0.65)         # #6B788C: Сл�
 const COLOR_TEXT_DARK := Color(0.08, 0.12, 0.18, 1.0)           # Текст для белого лабораторного режима
 const COLOR_TEXT_DARK_MUTED := Color(0.35, 0.42, 0.52, 0.85)    # Приглушенный текст для белого режима
 
+# 1.3.1 Шрифты типографики UniCORE
+const FONT_SANS_PATH := "res://ui/assets/fonts/tech_sans.ttf"
+const FONT_BOLD_PATH := "res://ui/assets/fonts/tech_sans_bold.ttf"
+const FONT_MONO_PATH := "res://ui/assets/fonts/tech_mono.ttf"
+
+static func get_font_sans() -> Font:
+	if FileAccess.file_exists(FONT_SANS_PATH):
+		var ff := FontFile.new()
+		ff.data = FileAccess.get_file_as_bytes(FONT_SANS_PATH)
+		return ff
+	return null
+
+static func get_font_bold() -> Font:
+	if FileAccess.file_exists(FONT_BOLD_PATH):
+		var ff := FontFile.new()
+		ff.data = FileAccess.get_file_as_bytes(FONT_BOLD_PATH)
+		return ff
+	return null
+
+static func get_font_mono() -> Font:
+	if FileAccess.file_exists(FONT_MONO_PATH):
+		var ff := FontFile.new()
+		ff.data = FileAccess.get_file_as_bytes(FONT_MONO_PATH)
+		return ff
+	return null
+
+static func get_text_primary_color(is_white: bool) -> Color:
+	return COLOR_TEXT_DARK if is_white else COLOR_TEXT_TITANIUM
+
+static func get_text_secondary_color(is_white: bool) -> Color:
+	return COLOR_TEXT_DARK_MUTED if is_white else COLOR_TEXT_SECONDARY
+
+static func get_text_muted_color(is_white: bool) -> Color:
+	return Color(0.35, 0.42, 0.52, 0.9) if is_white else COLOR_TEXT_MUTED
+
 # 1.4 Спектральная Дисперсия и LED-акценты (Physical Prism Accents)
 const COLOR_ACCENT_PRISM_CYAN := Color(0.0, 0.9, 1.0, 1.0)      # #00E5FF: Оптический циан (фокус, интерфейс)
 const COLOR_ACCENT_ELECTRIC_BLUE := Color(0.12, 0.58, 1.0, 1.0) # #1F94FF: Электрический синий (канал связи)

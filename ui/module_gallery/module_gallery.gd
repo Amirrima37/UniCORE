@@ -141,6 +141,9 @@ func _connect_ui_signals() -> void:
 		import_btn.pressed.connect(_on_import_button_pressed)
 
 func _apply_styling() -> void:
+	var is_white: bool = CyberTheme.is_white_theme()
+	var opacity: float = CyberTheme.get_glass_opacity()
+
 	# Header & Footer panels
 	if is_instance_valid(header_panel):
 		header_panel.add_theme_stylebox_override(
@@ -158,27 +161,39 @@ func _apply_styling() -> void:
 		search_edit.add_theme_stylebox_override("normal", CyberTheme.create_input_style(false))
 		search_edit.add_theme_stylebox_override("focus", CyberTheme.create_input_style(true))
 		search_edit.add_theme_color_override("font_color", CyberTheme.get_text_primary_color())
-		search_edit.add_theme_color_override("placeholder_color", CyberTheme.COLOR_TEXT_MUTED)
+		search_edit.add_theme_color_override(
+			"placeholder_color",
+			Color(0.38, 0.48, 0.58, 0.7) if is_white else CyberTheme.COLOR_TEXT_MUTED
+		)
 
 	# Buttons
+	var btn_bg := Color(0.88, 0.93, 0.98, 0.9) if is_white else Color(0.08, 0.12, 0.2, 0.7)
+	var btn_border := Color(0.2, 0.55, 0.85, 0.4) if is_white else CyberTheme.COLOR_GLASS_BORDER
+
 	if is_instance_valid(clear_search_btn):
-		clear_search_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(Color(0.08, 0.12, 0.2, 0.7), CyberTheme.COLOR_GLASS_BORDER, 1, 3))
+		clear_search_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(btn_bg, btn_border, 1, 3))
+		clear_search_btn.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_DARK if is_white else CyberTheme.COLOR_TEXT_PRIMARY)
 	if is_instance_valid(refresh_btn):
-		refresh_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(Color(0.08, 0.12, 0.2, 0.7), CyberTheme.COLOR_CYAN_GLOW, 1, 3))
+		refresh_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(btn_bg, CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW, 1, 3))
+		refresh_btn.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_DARK if is_white else CyberTheme.COLOR_TEXT_PRIMARY)
 	if is_instance_valid(import_btn):
-		import_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(Color(0.05, 0.14, 0.24, 0.85), CyberTheme.COLOR_CYAN_GLOW, 1, 4, 3))
-		import_btn.add_theme_color_override("font_color", CyberTheme.COLOR_CYAN_GLOW)
+		var import_bg := Color(0.82, 0.91, 0.98, 0.95) if is_white else Color(0.05, 0.14, 0.24, 0.85)
+		var import_border := CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW
+		import_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(import_bg, import_border, 1, 4, 3))
+		import_btn.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW)
 
 	if is_instance_valid(category_opt):
-		category_opt.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(Color(0.06, 0.11, 0.2, 0.8), CyberTheme.COLOR_GLASS_BORDER, 1, 3))
+		category_opt.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(btn_bg, btn_border, 1, 3))
+		category_opt.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_DARK if is_white else CyberTheme.COLOR_TEXT_PRIMARY)
 	if is_instance_valid(sort_opt):
-		sort_opt.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(Color(0.06, 0.11, 0.2, 0.8), CyberTheme.COLOR_GLASS_BORDER, 1, 3))
+		sort_opt.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(btn_bg, btn_border, 1, 3))
+		sort_opt.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_DARK if is_white else CyberTheme.COLOR_TEXT_PRIMARY)
 
 	if is_instance_valid(stats_label):
-		stats_label.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_CYAN)
+		stats_label.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_TEXT_CYAN)
 
 	if is_instance_valid(empty_label):
-		empty_label.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_MUTED)
+		empty_label.add_theme_color_override("font_color", CyberTheme.get_text_muted_color())
 
 func _setup_dialogs() -> void:
 	# 1. Code View Dialog
@@ -666,11 +681,13 @@ func _create_module_card(mod: Dictionary) -> Control:
 	led.add_theme_stylebox_override("panel", led_sb)
 	header_hbox.add_child(led)
 
+	var is_white: bool = CyberTheme.is_white_theme()
+
 	# Category name (10px, muted)
 	var cat_lbl := Label.new()
 	cat_lbl.text = _get_category_display_name(category)
 	cat_lbl.add_theme_font_size_override("font_size", 10)
-	cat_lbl.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_MUTED)
+	cat_lbl.add_theme_color_override("font_color", CyberTheme.get_text_muted_color())
 	header_hbox.add_child(cat_lbl)
 
 	# Spacer
@@ -685,7 +702,7 @@ func _create_module_card(mod: Dictionary) -> Control:
 		status_lbl.add_theme_color_override("font_color", CyberTheme.COLOR_SUCCESS_LED)
 	else:
 		status_lbl.text = "○ НЕАКТИВЕН"
-		status_lbl.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_MUTED)
+		status_lbl.add_theme_color_override("font_color", CyberTheme.get_text_muted_color())
 	status_lbl.add_theme_font_size_override("font_size", 10)
 	header_hbox.add_child(status_lbl)
 
@@ -697,7 +714,10 @@ func _create_module_card(mod: Dictionary) -> Control:
 			type_lbl.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE)
 		"user":
 			type_lbl.text = "[ПОЛЬЗОВАТЕЛЬСКИЙ]"
-			type_lbl.add_theme_color_override("font_color", Color(0.9, 0.9, 1.0, 0.85))
+			type_lbl.add_theme_color_override(
+				"font_color",
+				CyberTheme.COLOR_TEXT_DARK_MUTED if is_white else Color(0.9, 0.9, 1.0, 0.85)
+			)
 		"registry", _:
 			type_lbl.text = "[РЕЕСТР]"
 			type_lbl.add_theme_color_override("font_color", CyberTheme.COLOR_AMBER_LED)
@@ -708,7 +728,10 @@ func _create_module_card(mod: Dictionary) -> Control:
 	var title_lbl := Label.new()
 	title_lbl.text = mod_name
 	title_lbl.add_theme_font_size_override("font_size", 14)
-	title_lbl.add_theme_color_override("font_color", CyberTheme.COLOR_CYAN_GLOW)
+	title_lbl.add_theme_color_override(
+		"font_color",
+		CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW
+	)
 	title_lbl.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	title_lbl.tooltip_text = mod_name
 	vbox.add_child(title_lbl)
@@ -717,7 +740,7 @@ func _create_module_card(mod: Dictionary) -> Control:
 	var id_lbl := Label.new()
 	id_lbl.text = "ID: " + mod_id
 	id_lbl.add_theme_font_size_override("font_size", 10)
-	id_lbl.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_MUTED)
+	id_lbl.add_theme_color_override("font_color", CyberTheme.get_text_muted_color())
 	vbox.add_child(id_lbl)
 
 	# 4. Description
@@ -728,7 +751,7 @@ func _create_module_card(mod: Dictionary) -> Control:
 	desc_lbl.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	desc_lbl.custom_minimum_size = Vector2(0, 36)
 	desc_lbl.add_theme_font_size_override("font_size", 11)
-	desc_lbl.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_PRIMARY)
+	desc_lbl.add_theme_color_override("font_color", CyberTheme.get_text_primary_color())
 	vbox.add_child(desc_lbl)
 
 	# 5. Footer HBox with buttons
@@ -744,10 +767,15 @@ func _create_module_card(mod: Dictionary) -> Control:
 	toggle_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	if is_active:
 		toggle_btn.text = "ВЫГРУЗИТЬ"
-		toggle_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(Color(0.2, 0.05, 0.08, 0.8), CyberTheme.COLOR_RED_LED, 1, 3))
+		var t_bg := Color(0.96, 0.86, 0.88, 0.95) if is_white else Color(0.2, 0.05, 0.08, 0.8)
+		toggle_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(t_bg, CyberTheme.COLOR_RED_LED, 1, 3))
+		toggle_btn.add_theme_color_override("font_color", CyberTheme.COLOR_RED_LED if is_white else Color.WHITE)
 	else:
 		toggle_btn.text = "ЗАГРУЗИТЬ"
-		toggle_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(Color(0.08, 0.16, 0.28, 0.8), CyberTheme.COLOR_CYAN_GLOW, 1, 3))
+		var t_bg := Color(0.86, 0.93, 0.98, 0.95) if is_white else Color(0.08, 0.16, 0.28, 0.8)
+		var t_border := CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW
+		toggle_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(t_bg, t_border, 1, 3))
+		toggle_btn.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else Color.WHITE)
 	toggle_btn.pressed.connect(func(): _on_toggle_module(mod_id, is_active))
 	footer_hbox.add_child(toggle_btn)
 
@@ -757,7 +785,10 @@ func _create_module_card(mod: Dictionary) -> Control:
 	code_btn.custom_minimum_size = Vector2(48, 28)
 	code_btn.add_theme_font_size_override("font_size", 11)
 	code_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-	code_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(Color(0.06, 0.12, 0.2, 0.7), CyberTheme.COLOR_GLASS_BORDER, 1, 3))
+	var sub_btn_bg := Color(0.88, 0.93, 0.98, 0.9) if is_white else Color(0.06, 0.12, 0.2, 0.7)
+	var sub_btn_border := Color(0.2, 0.55, 0.85, 0.4) if is_white else CyberTheme.COLOR_GLASS_BORDER
+	code_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(sub_btn_bg, sub_btn_border, 1, 3))
+	code_btn.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_DARK if is_white else CyberTheme.COLOR_TEXT_PRIMARY)
 	code_btn.pressed.connect(func(): _on_view_code(mod_id))
 	footer_hbox.add_child(code_btn)
 
@@ -767,7 +798,8 @@ func _create_module_card(mod: Dictionary) -> Control:
 	menu_btn.custom_minimum_size = Vector2(30, 28)
 	menu_btn.add_theme_font_size_override("font_size", 13)
 	menu_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-	menu_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(Color(0.06, 0.12, 0.2, 0.7), CyberTheme.COLOR_GLASS_BORDER, 1, 3))
+	menu_btn.add_theme_stylebox_override("normal", CyberTheme.create_cyber_button_style(sub_btn_bg, sub_btn_border, 1, 3))
+	menu_btn.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_DARK if is_white else CyberTheme.COLOR_TEXT_PRIMARY)
 
 	var popup := menu_btn.get_popup()
 	popup.clear()

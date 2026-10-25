@@ -61,59 +61,107 @@ func _ready() -> void:
 
 func setup(event_bus: Node = null) -> void:
 	_event_bus = event_bus
+	if _event_bus:
+		_event_bus.subscribe("interface_settings_changed", func(_d): _apply_cyber_styling())
 
 func _apply_cyber_styling() -> void:
+	var is_white := CyberTheme.is_white_theme()
 	var glass_style := CyberTheme.create_glass_panel_style(
-		Color(0.0, 0.85, 1.0, 0.4),
-		Color(0.03, 0.06, 0.12, 0.95),
+		CyberTheme.COLOR_ELECTRIC_BLUE if is_white else Color(0.0, 0.85, 1.0, 0.4),
+		Color(-1, -1, -1, -1),
 		1,
 		6,
-		10,
-		Color(0.0, 0.85, 1.0, 0.25)
+		int(round(10 * CyberTheme.get_led_intensity())),
+		CyberTheme.COLOR_ELECTRIC_BLUE if is_white else Color(0.0, 0.85, 1.0, 0.25)
 	)
 	drawer_panel.add_theme_stylebox_override("panel", glass_style)
 
 	# Аналитический блок разбора
 	var analysis_box := CyberTheme.create_glass_panel_style(
-		Color(0.0, 0.85, 1.0, 0.5),
-		Color(0.04, 0.08, 0.15, 0.9),
+		CyberTheme.COLOR_ELECTRIC_BLUE if is_white else Color(0.0, 0.85, 1.0, 0.5),
+		Color(0.92, 0.95, 0.99, 0.9) if is_white else Color(0.04, 0.08, 0.15, 0.9),
 		1,
 		4,
-		4,
-		Color(0.0, 0.85, 1.0, 0.15)
+		int(round(4 * CyberTheme.get_led_intensity())),
+		CyberTheme.COLOR_ELECTRIC_BLUE if is_white else Color(0.0, 0.85, 1.0, 0.15)
 	)
 	analysis_panel.add_theme_stylebox_override("panel", analysis_box)
 
 	# Стили кнопок
-	var btn_normal := CyberTheme.create_cyber_button_style(Color(0.06, 0.12, 0.22, 0.8), Color(0.0, 0.75, 1.0, 0.4), 1, 4)
-	var btn_hover := CyberTheme.create_cyber_button_style(Color(0.1, 0.22, 0.38, 0.95), CyberTheme.COLOR_CYAN_GLOW, 1, 4, 3, Color(0.0, 0.85, 1.0, 0.3))
-	var btn_pressed := CyberTheme.create_cyber_button_style(Color(0.0, 0.45, 0.75, 0.95), CyberTheme.COLOR_CYAN_GLOW, 2, 4)
+	var btn_normal := CyberTheme.create_cyber_button_style(
+		Color(0.85, 0.92, 0.98, CyberTheme.get_glass_opacity()) if is_white else Color(0.06, 0.12, 0.22, 0.8),
+		CyberTheme.COLOR_ELECTRIC_BLUE if is_white else Color(0.0, 0.75, 1.0, 0.4),
+		1,
+		4
+	)
+	var btn_hover := CyberTheme.create_cyber_button_style(
+		Color(0.78, 0.88, 0.98, 0.95) if is_white else Color(0.1, 0.22, 0.38, 0.95),
+		CyberTheme.COLOR_CYAN_GLOW,
+		1,
+		4,
+		3,
+		CyberTheme.COLOR_CYAN_GLOW if is_white else Color(0.0, 0.85, 1.0, 0.3)
+	)
+	var btn_pressed := CyberTheme.create_cyber_button_style(
+		Color(0.7, 0.85, 0.98, 0.95) if is_white else Color(0.0, 0.45, 0.75, 0.95),
+		CyberTheme.COLOR_CYAN_GLOW,
+		2,
+		4
+	)
 
 	for btn in [copy_btn, settings_btn, retry_btn, footer_close_btn]:
 		btn.add_theme_stylebox_override("normal", btn_normal)
 		btn.add_theme_stylebox_override("hover", btn_hover)
 		btn.add_theme_stylebox_override("pressed", btn_pressed)
-		btn.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_PRIMARY)
-		btn.add_theme_color_override("font_hover_color", CyberTheme.COLOR_CYAN_GLOW)
+		btn.add_theme_color_override("font_color", CyberTheme.get_text_primary_color())
+		btn.add_theme_color_override("font_hover_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW)
 		btn.add_theme_font_size_override("font_size", 12)
 
 	# Close button
-	var c_style := CyberTheme.create_cyber_button_style(Color(0.18, 0.08, 0.1, 0.6), CyberTheme.COLOR_RED_LED, 1, 3)
-	var c_hover := CyberTheme.create_cyber_button_style(Color(0.35, 0.1, 0.15, 0.9), Color(1.0, 0.4, 0.4, 1.0), 1, 3, 2, Color(1.0, 0.3, 0.3, 0.3))
+	var c_style := CyberTheme.create_cyber_button_style(
+		Color(0.95, 0.85, 0.85, 0.8) if is_white else Color(0.18, 0.08, 0.1, 0.6),
+		CyberTheme.COLOR_RED_LED,
+		1,
+		3
+	)
+	var c_hover := CyberTheme.create_cyber_button_style(
+		Color(1.0, 0.8, 0.8, 0.95) if is_white else Color(0.35, 0.1, 0.15, 0.9),
+		Color(1.0, 0.4, 0.4, 1.0),
+		1,
+		3,
+		2,
+		Color(1.0, 0.3, 0.3, 0.3)
+	)
 	close_btn.add_theme_stylebox_override("normal", c_style)
 	close_btn.add_theme_stylebox_override("hover", c_hover)
-	close_btn.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_PRIMARY)
+	close_btn.add_theme_color_override("font_color", CyberTheme.COLOR_RED_LED if is_white else CyberTheme.COLOR_TEXT_PRIMARY)
+
+	# TabContainer theme
+	tab_container.theme = CyberTheme.build_theme()
+
+	# Labels
+	if is_instance_valid(title_label):
+		title_label.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW)
+	if is_instance_valid(explanation_label):
+		explanation_label.add_theme_color_override("font_color", CyberTheme.get_text_primary_color())
+	if is_instance_valid(http_line_label):
+		http_line_label.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else Color(0.4, 0.85, 1, 0.8))
+	if is_instance_valid(url_line_label):
+		url_line_label.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else Color(0.4, 0.85, 1, 0.8))
+	if is_instance_valid(model_line_label):
+		model_line_label.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else Color(0.4, 0.85, 1, 0.8))
 
 	# TextEdits / CodeEdit styling
 	var editor_box := CyberTheme.create_input_style(false)
+	var text_col := CyberTheme.get_text_primary_color()
 	raw_response_edit.add_theme_stylebox_override("normal", editor_box)
-	raw_response_edit.add_theme_color_override("font_color", Color(0.85, 0.9, 0.95, 0.9))
+	raw_response_edit.add_theme_color_override("font_color", text_col)
 	stack_edit.add_theme_stylebox_override("normal", editor_box)
-	stack_edit.add_theme_color_override("font_color", Color(0.85, 0.9, 0.95, 0.9))
+	stack_edit.add_theme_color_override("font_color", text_col)
 	generated_code_edit.add_theme_stylebox_override("normal", editor_box)
-	generated_code_edit.add_theme_color_override("font_color", Color(0.85, 0.95, 1.0, 1.0))
+	generated_code_edit.add_theme_color_override("font_color", text_col)
 	logs_edit.add_theme_stylebox_override("normal", editor_box)
-	logs_edit.add_theme_color_override("font_color", Color(0.85, 0.9, 0.95, 0.9))
+	logs_edit.add_theme_color_override("font_color", text_col)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.is_pressed() and not event.is_echo():
