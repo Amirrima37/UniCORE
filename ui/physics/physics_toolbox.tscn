@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=3 uid="uid://c67mxp8t19ba"]
+
+[ext_resource type="Script" path="res://ui/physics/physics_toolbox.gd" id="1_toolbox"]
+
+[node name="PhysicsToolbox" type="PanelContainer"]
+custom_minimum_size = Vector2(56, 280)
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -140.0
+offset_right = 72.0
+offset_bottom = 140.0
+grow_vertical = 2
+script = ExtResource("1_toolbox")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="BtnSelect" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(44, 38)
+layout_mode = 2
+tooltip_text = "Курсор / Выделение объектов (Q)"
+theme_override_font_sizes/font_size = 11
+text = "↖
+Q"
+flat = true
+
+[node name="BtnGravity" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(44, 38)
+layout_mode = 2
+tooltip_text = "Астрофизика & СТО: спавн тел (1)"
+theme_override_font_sizes/font_size = 11
+text = "🪐
+1"
+flat = true
+
+[node name="BtnThermodynamics" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(44, 38)
+layout_mode = 2
+tooltip_text = "Термодинамика & Молекулы газа (2)"
+theme_override_font_sizes/font_size = 11
+text = "🌡
+2"
+flat = true
+
+[node name="BtnNuclear" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(44, 38)
+layout_mode = 2
+tooltip_text = "Ядерный распад & Реактор (3)"
+theme_override_font_sizes/font_size = 11
+text = "☢
+3"
+flat = true
+
+[node name="BtnQuantum" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(44, 38)
+layout_mode = 2
+tooltip_text = "Квантовая механика & Волновой пакет (4)"
+theme_override_font_sizes/font_size = 11
+text = "Ψ
+4"
+flat = true
+
+[node name="BtnSensor" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(44, 38)
+layout_mode = 2
+tooltip_text = "3D Датчики & Зонды (5)"
+theme_override_font_sizes/font_size = 11
+text = "📡
+5"
+flat = true

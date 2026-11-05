@@ -85,6 +85,9 @@ static func is_white_theme() -> bool:
 static func get_text_primary_color() -> Color:
 	return COLOR_TEXT_DARK if is_white_theme() else COLOR_TEXT_PRIMARY
 
+static func get_text_secondary_color() -> Color:
+	return DesignTokens.get_text_secondary_color(is_white_theme())
+
 static func get_text_muted_color() -> Color:
 	return COLOR_TEXT_DARK_MUTED if is_white_theme() else COLOR_TEXT_MUTED
 

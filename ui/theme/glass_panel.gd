@@ -13,6 +13,8 @@ const CyberTheme = preload("res://ui/theme/cyber_theme.gd")
 @export var custom_accent_color: Color = Color(-1, -1, -1, -1)
 @export var blur_strength: float = 2.5
 @export var panel_corner_radius: float = 4.0
+@export var bevel_width: float = 16.0
+@export var refraction_strength: float = 0.028
 @export var enable_interactive_hover: bool = false
 @export var use_shader: bool = true
 
@@ -90,6 +92,8 @@ func _update_styling() -> void:
 		_shader_mat.set_shader_parameter("rim_color", rim_col)
 		_shader_mat.set_shader_parameter("rim_boost", 1.2 * led_intensity)
 		_shader_mat.set_shader_parameter("corner_radius", panel_corner_radius)
+		_shader_mat.set_shader_parameter("bevel_width", bevel_width)
+		_shader_mat.set_shader_parameter("refraction_strength", refraction_strength)
 	else:
 		_apply_stylebox_fallback()
 

@@ -19,7 +19,6 @@ const VERIFIED_MODULE_TEMPLATES := {
 		"author": "UniCORE Core Team",
 		"version": "1.0.0",
 		"description": "Инструмент создания интерактивных красных 3D-кубов перед камерой по ЛКМ или клавише F.",
-		"source_file": "res://modules/cube_spawner_tool.gd",
 		"code": """extends UniCoreModule
 
 ## Инструмент создания красных кубов (Cube Spawner Tool)
@@ -568,6 +567,186 @@ func cleanup() -> void:
 	if _particles and is_instance_valid(_particles):
 		_particles.queue_free()
 	super.cleanup()
+"""
+	},
+	"celestial_spawner": {
+		"id": "celestial_spawner_tool",
+		"name": "Астрофизика: Спавнер Небесных Тел",
+		"category": "physics",
+		"tags": ["gravity", "orbit", "planet", "star", "black_hole", "гравитация", "планета", "звезда", "черная дыра", "орбита", "астрофизика"],
+		"author": "UniCORE Physics",
+		"version": "1.0.0",
+		"description": "Интерактивный спавн звезд, планет и черных дыр с заданием импульса и кеплеровской траектории.",
+		"code": """extends UniCoreModule
+
+signal body_spawned_into_gravity(pos: Vector3, vel: Vector3, mass: float, type_name: String)
+
+@export var star_mass: float = 1000.0
+@export var planet_mass: float = 10.0
+@export var black_hole_mass: float = 10000.0
+
+var _gravity_module: Node = null
+var _event_bus: Node = null
+
+func get_module_id() -> String:
+	return "celestial_spawner_tool"
+
+func get_module_name() -> String:
+	return "Астрофизика: Спавнер Небесных Тел"
+
+func initialize(context: Dictionary) -> bool:
+	super.initialize(context)
+	if core_context.has("event_bus") and core_context["event_bus"]:
+		_event_bus = core_context["event_bus"]
+	_resolve_gravity_module()
+	return true
+
+func _resolve_gravity_module() -> void:
+	if not _gravity_module:
+		var root: Node = get_tree().root if get_tree() else null
+		if root:
+			_gravity_module = root.find_child("NBodyGravityModule", true, false)
+
+func spawn_body(pos: Vector3, vel: Vector3, mass: float, btype: String = "planet") -> void:
+	_resolve_gravity_module()
+	if _gravity_module and _gravity_module.has_method("spawn_body"):
+		_gravity_module.spawn_body(pos, vel, mass, btype)
+	body_spawned_into_gravity.emit(pos, vel, mass, btype)
+"""
+	},
+	"particle_injector": {
+		"id": "particle_injector_tool",
+		"name": "Термодинамика: Инжектор Молекул",
+		"category": "physics",
+		"tags": ["thermo", "thermodynamics", "gas", "temperature", "maxwell", "термодинамика", "газ", "температура", "молекулы", "нагрев"],
+		"author": "UniCORE Physics",
+		"version": "1.0.0",
+		"description": "Впрыск частиц газа Леннард-Джонса и динамическая регулировка температуры термостата.",
+		"code": """extends UniCoreModule
+
+signal gas_injected(pos: Vector3, count: int, temperature: float)
+signal temperature_adjusted(new_temp: float)
+
+@export var default_inject_count: int = 50
+@export var default_temperature: float = 1.2
+
+var _md_module: Node = null
+var _event_bus: Node = null
+
+func get_module_id() -> String:
+	return "particle_injector_tool"
+
+func get_module_name() -> String:
+	return "Термодинамика: Инжектор Молекул"
+
+func initialize(context: Dictionary) -> bool:
+	super.initialize(context)
+	if core_context.has("event_bus") and core_context["event_bus"]:
+		_event_bus = core_context["event_bus"]
+	_resolve_md_module()
+	return true
+
+func _resolve_md_module() -> void:
+	if not _md_module:
+		var root: Node = get_tree().root if get_tree() else null
+		if root:
+			_md_module = root.find_child("MolecularDynamicsModule", true, false)
+
+func inject_molecules(pos: Vector3, count: int = 50, temp: float = 1.0) -> void:
+	_resolve_md_module()
+	if _md_module and _md_module.has_method("inject_particles"):
+		_md_module.inject_particles(pos, count, temp)
+	gas_injected.emit(pos, count, temp)
+"""
+	},
+	"nuclear_lab": {
+		"id": "nuclear_lab_tool",
+		"name": "Ядерная Физика: Лабораторный Реактор",
+		"category": "physics",
+		"tags": ["nuclear", "decay", "uranium", "fission", "reactor", "neutron", "ядерная", "реактор", "деление", "нейтрон", "изотоп", "уран"],
+		"author": "UniCORE Physics",
+		"version": "1.0.0",
+		"description": "Размещение топливных сборок изотопов, стрельба нейтронами и контроль стержней СУЗ.",
+		"code": """extends UniCoreModule
+
+signal fuel_assembly_spawned(pos: Vector3, count: int, isotope: String)
+signal neutron_fired(pos: Vector3, vel: Vector3)
+
+var _nuclear_module: Node = null
+
+func get_module_id() -> String:
+	return "nuclear_lab_tool"
+
+func get_module_name() -> String:
+	return "Ядерная Физика: Лабораторный Реактор"
+
+func initialize(context: Dictionary) -> bool:
+	super.initialize(context)
+	var root: Node = get_tree().root if get_tree() else null
+	if root:
+		_nuclear_module = root.find_child("NuclearDecayModule", true, false)
+	return true
+
+func fire_neutron(pos: Vector3, vel: Vector3) -> void:
+	if _nuclear_module and _nuclear_module.has_method("inject_trigger_neutron"):
+		_nuclear_module.inject_trigger_neutron(pos, vel)
+	neutron_fired.emit(pos, vel)
+"""
+	},
+	"quantum_bench": {
+		"id": "quantum_bench_tool",
+		"name": "Квантовая Механика: Оптико-Волновой Стенд",
+		"category": "physics",
+		"tags": ["quantum", "schrodinger", "wavepacket", "tunneling", "slit", "квантовая", "волна", "пакет", "туннелирование", "шредингер"],
+		"author": "UniCORE Physics",
+		"version": "1.0.0",
+		"description": "Генерация волновых пакетов Шрёдингера, дифракционные щели и барьеры туннелирования.",
+		"code": """extends UniCoreModule
+
+signal wavepacket_injected(center: Vector3, k0: float)
+
+var _quantum_module: Node = null
+
+func get_module_id() -> String:
+	return "quantum_bench_tool"
+
+func get_module_name() -> String:
+	return "Квантовая Механика: Оптико-Волновой Стенд"
+
+func initialize(context: Dictionary) -> bool:
+	super.initialize(context)
+	var root: Node = get_tree().root if get_tree() else null
+	if root:
+		_quantum_module = root.find_child("QuantumWavePacketModule", true, false)
+	return true
+
+func inject_wavepacket(center: Vector3, k0: float = 3.0) -> void:
+	if _quantum_module and _quantum_module.has_method("initialize_gaussian_wavepacket"):
+		_quantum_module.initialize_gaussian_wavepacket(center.x, 0.8, k0)
+	wavepacket_injected.emit(center, k0)
+"""
+	},
+	"scientific_probe": {
+		"id": "scientific_probe_tool",
+		"name": "Метрология: Научные Измерительные Зонды",
+		"category": "physics",
+		"tags": ["probe", "sensor", "telemetry", "field", "measurement", "зонд", "датчик", "измерение", "телеметрия", "поле"],
+		"author": "UniCORE Physics",
+		"version": "1.0.0",
+		"description": "Размещение пространственных измерительных датчиков для замеров гравитации, газа, радиации и пси-поля.",
+		"code": """extends UniCoreModule
+
+signal probe_spawned(probe_id: int, pos: Vector3)
+
+func get_module_id() -> String:
+	return "scientific_probe_tool"
+
+func get_module_name() -> String:
+	return "Метрология: Научные Измерительные Зонды"
+
+func initialize(context: Dictionary) -> bool:
+	super.initialize(context)
+	return true
 """
 	}
 }

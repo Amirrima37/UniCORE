@@ -102,7 +102,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if not is_initialized or is_ui_blocking:
 		return
 
-	# 1. Зажатие ПКМ (RMB) для быстрого обзора и полета в стиле 3D-редакторов (Unreal / Godot)
+	# 1. Зажатие ПКМ (RMB) для обзора и полета в стиле 3D-редакторов (Unreal / Godot)
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT:
 		if event.is_pressed():
 			is_rmb_held = true
@@ -115,14 +115,18 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_viewport().set_input_as_handled()
 			return
 
-	# 2. Одиночный клик ЛКМ (LMB) по 3D-пространству для постоянного захвата мыши
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
-			_set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	# 2. Колесо мыши (Mouse Wheel) для плавного зумирования (dolly) камеры
+	if event is InputEventMouseButton and event.is_pressed():
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			yaw_node.global_position -= camera.global_transform.basis.z * (move_speed * 0.15)
+			get_viewport().set_input_as_handled()
+			return
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			yaw_node.global_position += camera.global_transform.basis.z * (move_speed * 0.15)
 			get_viewport().set_input_as_handled()
 			return
 
-	# 3. Клавиша Alt или Esc для освобождения курсора мыши в UI
+	# 3. Клавиша Alt или Esc для принудительного освобождения курсора мыши в UI
 	if event is InputEventKey and event.is_pressed() and not event.is_echo():
 		if event.keycode == KEY_ALT or (event.keycode == KEY_ESCAPE and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED):
 			is_rmb_held = false
@@ -130,7 +134,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_viewport().set_input_as_handled()
 			return
 
-	# 4. Вращение камеры при захваченной мыши
+	# 4. Вращение камеры при зажатой ПКМ / захваченной мыши
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		yaw_node.rotate_y(-event.relative.x * mouse_sensitivity)
 		var y_delta: float = event.relative.y if invert_y else -event.relative.y

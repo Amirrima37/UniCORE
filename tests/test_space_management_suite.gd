@@ -55,19 +55,19 @@ func _init() -> void:
 	# ----------------------------------------------------
 	print("\n--- Requirement 1: Template Spaces Creation ---")
 
-	# 1.1 Default Studio
+	# 1.1 Default Studio (Scientific Void)
 	var s_default = space_mgr.create_new_space("Test Default Studio", "Default Studio")
 	assert_true(s_default.has("id"), "Default Studio created with valid dict")
 	assert_true(space_mgr.current_space_name == "Test Default Studio", "Current space is Test Default Studio")
 	var active_mods = mod_mgr.get_active_module_ids()
-	assert_true("builtin_ground_plane" in active_mods, "Default Studio has builtin_ground_plane")
+	assert_false("builtin_ground_plane" in active_mods, "Default Studio is surface-less (no ground plane)")
 	assert_true("builtin_avatar_locomotion" in active_mods, "Default Studio has builtin_avatar_locomotion")
 
 	# 1.2 Cyber Void
 	var s_cyber = space_mgr.create_new_space("Test Cyber Void", "Cyber Void")
 	assert_true(s_cyber.has("id"), "Cyber Void created with valid dict")
 	active_mods = mod_mgr.get_active_module_ids()
-	assert_true("builtin_ground_plane" in active_mods, "Cyber Void has builtin_ground_plane")
+	assert_false("builtin_ground_plane" in active_mods, "Cyber Void is surface-less (no ground plane)")
 	assert_true("builtin_avatar_locomotion" in active_mods, "Cyber Void has builtin_avatar_locomotion")
 	var cyber_env = s_cyber.get("environment", {})
 	assert_true(cyber_env.get("ambient_energy", 1.0) < 0.5, "Cyber Void has dark ambient energy")
@@ -83,9 +83,9 @@ func _init() -> void:
 	var s_tools = space_mgr.create_new_space("Test Tool Playground", "Tool Playground")
 	assert_true(s_tools.has("id"), "Tool Playground created with valid dict")
 	active_mods = mod_mgr.get_active_module_ids()
-	assert_true("builtin_ground_plane" in active_mods, "Tool Playground has builtin_ground_plane")
+	assert_false("builtin_ground_plane" in active_mods, "Tool Playground is surface-less (no ground plane)")
 	assert_true("builtin_avatar_locomotion" in active_mods, "Tool Playground has builtin_avatar_locomotion")
-	assert_true("cube_spawner_tool" in active_mods, "Tool Playground has cube_spawner_tool")
+	assert_true("n_body_gravity_module" in active_mods, "Tool Playground has n_body_gravity_module")
 
 	# Verify JSON files exist on disk for all created spaces
 	var default_spaces = space_mgr.list_spaces()
@@ -254,14 +254,15 @@ func initialize(context: Dictionary) -> bool:
 	assert_true(booted_space_mgr.normalize_template_type("Default Studio") == "default", "normalize 'Default Studio' -> default")
 	assert_true(booted_space_mgr.normalize_template_type("Cyber Void") == "cyber_void", "normalize 'Cyber Void' -> cyber_void")
 	assert_true(booted_space_mgr.normalize_template_type("Clean Slate") == "clean_slate", "normalize 'Clean Slate' -> clean_slate")
-	assert_true(booted_space_mgr.normalize_template_type("Tool Playground") == "tool_studio", "normalize 'Tool Playground' -> tool_studio")
-	assert_true(booted_space_mgr.normalize_template_type("playground") == "tool_studio", "normalize 'playground' -> tool_studio")
+	assert_true(booted_space_mgr.normalize_template_type("Tool Playground") == "physics_lab", "normalize 'Tool Playground' -> physics_lab")
+	assert_true(booted_space_mgr.normalize_template_type("playground") == "physics_lab", "normalize 'playground' -> physics_lab")
 	assert_true(booted_space_mgr.normalize_template_type("unknown_nonexistent") == "default", "fallback unknown -> default")
 
 	# 6.2 Template definitions inspection
 	var tmpl_defs = booted_space_mgr.get_template_definitions()
 	assert_true(tmpl_defs.size() == 4, "get_template_definitions() returns 4 templates")
-	assert_true(tmpl_defs.has("default") and tmpl_defs.has("cyber_void") and tmpl_defs.has("clean_slate") and tmpl_defs.has("tool_studio"), "All 4 template keys present")
+	assert_true(tmpl_defs.has("default") and tmpl_defs.has("cyber_void") and tmpl_defs.has("clean_slate") and tmpl_defs.has("physics_lab"), "All 4 template keys present")
+
 
 	# 6.3 Manifest and space data inspection
 	var manifest = booted_space_mgr.get_space_manifest()

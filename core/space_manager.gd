@@ -20,7 +20,8 @@ const DEFAULT_SPACE_ID: String = "space_default"
 const TEMPLATE_DEFAULT_STUDIO: String = "default"
 const TEMPLATE_CYBER_VOID: String = "cyber_void"
 const TEMPLATE_CLEAN_SLATE: String = "clean_slate"
-const TEMPLATE_TOOL_PLAYGROUND: String = "tool_studio"
+const TEMPLATE_PHYSICS_LAB: String = "physics_lab"
+const TEMPLATE_TOOL_PLAYGROUND: String = "physics_lab"
 
 var current_space_id: String = DEFAULT_SPACE_ID
 var current_space_name: String = "Default Space"
@@ -172,6 +173,13 @@ func _ensure_default_spaces_exist() -> void:
 	# Default Space, Cyber Void, Clean Slate, Tool Studio
 	if not has_space(DEFAULT_SPACE_ID):
 		_create_template_space_file(DEFAULT_SPACE_ID, "Default Space", "default")
+	else:
+		# Автоматически обновляем устаревший пустой space_default до интерактивной физической лаборатории
+		var sp_info := _read_space_header("%s/%s.json" % [SPACES_DIR, DEFAULT_SPACE_ID])
+		if int(sp_info.get("module_count", 0)) < 3:
+			var data := _build_template_space_data(DEFAULT_SPACE_ID, "Default Space", "default")
+			_write_space_file("%s/%s.json" % [SPACES_DIR, DEFAULT_SPACE_ID], data)
+
 	if not has_space("space_cyber_void"):
 		_create_template_space_file("space_cyber_void", "Cyber Void", "cyber_void")
 	if not has_space("space_clean_slate"):
@@ -450,31 +458,32 @@ func get_template_definitions() -> Dictionary:
 		TEMPLATE_DEFAULT_STUDIO: {
 			"key": TEMPLATE_DEFAULT_STUDIO,
 			"name": "Default Studio",
-			"description": "Стандартная Студия: Пол + Локомоция",
-			"modules": ["builtin_ground_plane", "builtin_avatar_locomotion"],
-			"environment": {"bg_color": [0.96, 0.96, 0.98, 1.0], "ambient_energy": 0.8}
+			"description": "Научная Лаборатория: Чистый 3D-вакуум + Локомоция Наблюдателя",
+			"modules": ["builtin_avatar_locomotion"],
+			"environment": {"bg_color": [0.06, 0.07, 0.09, 1.0], "ambient_energy": 0.6}
 		},
 		TEMPLATE_CYBER_VOID: {
 			"key": TEMPLATE_CYBER_VOID,
 			"name": "Cyber Void",
-			"description": "Кибер-Пустота: Темная неоновая среда",
-			"modules": ["builtin_ground_plane", "builtin_avatar_locomotion"],
+			"description": "Кибер-Пустота: Темная неоновая среда (Без поверхности)",
+			"modules": ["builtin_avatar_locomotion"],
 			"environment": {"bg_color": [0.02, 0.04, 0.08, 1.0], "ambient_energy": 0.35}
 		},
 		TEMPLATE_CLEAN_SLATE: {
 			"key": TEMPLATE_CLEAN_SLATE,
 			"name": "Clean Slate",
-			"description": "Чистый Холст: Свободный полет в пустоте (без пола)",
+			"description": "Чистый Холст: Свободный полет в вакууме",
 			"modules": ["builtin_avatar_locomotion"],
 			"environment": {"bg_color": [0.04, 0.06, 0.12, 1.0], "ambient_energy": 0.5}
 		},
-		TEMPLATE_TOOL_PLAYGROUND: {
-			"key": TEMPLATE_TOOL_PLAYGROUND,
-			"name": "Tool Playground",
-			"description": "Песочница Инструментов: Спавнер 3D-кубов",
-			"modules": ["builtin_ground_plane", "builtin_avatar_locomotion", "cube_spawner_tool"],
-			"environment": {"bg_color": [0.15, 0.18, 0.22, 1.0], "ambient_energy": 0.9}
+		TEMPLATE_PHYSICS_LAB: {
+			"key": TEMPLATE_PHYSICS_LAB,
+			"name": "Physics Laboratory",
+			"description": "Физическая Лаборатория: N-Body Гравитация и Молекулярная Динамика",
+			"modules": ["builtin_avatar_locomotion", "n_body_gravity_module", "molecular_dynamics_module"],
+			"environment": {"bg_color": [0.06, 0.07, 0.09, 1.0], "ambient_energy": 0.6}
 		}
+
 	}
 
 func load_space(space_id: String) -> bool:
@@ -556,7 +565,12 @@ func apply_space_data(data: Dictionary) -> bool:
 		if mod_id.is_empty():
 			continue
 
-		var is_builtin: bool = bool(mod_dict.get("is_builtin", false)) or mod_id.begins_with("builtin_") or FileAccess.file_exists("res://modules/builtin/%s.gd" % mod_id)
+		var is_builtin: bool = bool(mod_dict.get("is_builtin", false)) \
+			or mod_id.begins_with("builtin_") \
+			or FileAccess.file_exists("res://modules/builtin/%s.gd" % mod_id) \
+			or FileAccess.file_exists("res://modules/physics/%s.gd" % mod_id) \
+			or FileAccess.file_exists("res://modules/physics/%s_module.gd" % mod_id) \
+			or FileAccess.file_exists("res://modules/physics/tools/%s.gd" % mod_id)
 
 		var params: Dictionary = {}
 		if mod_dict.has("params") and mod_dict["params"] is Dictionary:
@@ -681,12 +695,25 @@ func _load_builtin_module(mod_id: String) -> bool:
 		path = "res://modules/builtin/ground_plane.gd"
 	elif mod_id == "builtin_avatar_locomotion":
 		path = "res://modules/builtin/avatar_locomotion.gd"
-	elif mod_id == "cube_spawner_tool":
-		path = "res://modules/cube_spawner_tool.gd"
+	elif mod_id == "n_body_gravity_module" or mod_id == "n_body_gravity":
+		path = "res://modules/physics/n_body_gravity_module.gd"
+	elif mod_id == "molecular_dynamics_module" or mod_id == "molecular_dynamics":
+		path = "res://modules/physics/molecular_dynamics_module.gd"
+	elif mod_id == "nuclear_decay_module" or mod_id == "nuclear_decay":
+		path = "res://modules/physics/nuclear_decay_module.gd"
+	elif mod_id == "quantum_wavepacket_module" or mod_id == "quantum_wavepacket":
+		path = "res://modules/physics/quantum_wavepacket_module.gd"
+	elif FileAccess.file_exists("res://modules/physics/%s.gd" % mod_id):
+		path = "res://modules/physics/%s.gd" % mod_id
+	elif FileAccess.file_exists("res://modules/physics/%s_module.gd" % mod_id):
+		path = "res://modules/physics/%s_module.gd" % mod_id
+	elif FileAccess.file_exists("res://modules/physics/tools/%s.gd" % mod_id):
+		path = "res://modules/physics/tools/%s.gd" % mod_id
 	elif FileAccess.file_exists("res://modules/builtin/%s.gd" % mod_id):
 		path = "res://modules/builtin/%s.gd" % mod_id
 	elif FileAccess.file_exists("res://modules/%s.gd" % mod_id):
 		path = "res://modules/%s.gd" % mod_id
+
 
 	if path.is_empty():
 		push_error("[SpaceManager] Unknown built-in module ID: %s" % mod_id)
@@ -941,8 +968,12 @@ func _resolve_module_source(mod_id: String) -> String:
 	var disk_paths: Array[String] = [
 		"res://modules/%s.gd" % mod_id,
 		"res://modules/builtin/%s.gd" % mod_id,
+		"res://modules/physics/%s.gd" % mod_id,
+		"res://modules/physics/%s_module.gd" % mod_id,
+		"res://modules/physics/tools/%s.gd" % mod_id,
 		"user://modules/%s.gd" % mod_id
 	]
+
 	for dp in disk_paths:
 		if FileAccess.file_exists(dp):
 			var f := FileAccess.open(dp, FileAccess.READ)
@@ -1002,7 +1033,11 @@ func _gather_modules_data() -> Array[Dictionary]:
 
 	for mod_id in _module_manager.get_active_module_ids():
 		var inst := _module_manager.get_module(mod_id)
-		var is_builtin: bool = mod_id.begins_with("builtin_") or mod_id == "cube_spawner_tool" or FileAccess.file_exists("res://modules/builtin/%s.gd" % mod_id)
+		var is_builtin: bool = mod_id.begins_with("builtin_") \
+			or FileAccess.file_exists("res://modules/builtin/%s.gd" % mod_id) \
+			or FileAccess.file_exists("res://modules/physics/%s.gd" % mod_id) \
+			or FileAccess.file_exists("res://modules/physics/%s_module.gd" % mod_id) \
+			or FileAccess.file_exists("res://modules/physics/tools/%s.gd" % mod_id)
 		var is_enabled: bool = true
 		var mod_transform := Transform3D.IDENTITY
 		var params: Dictionary = {}
@@ -1044,7 +1079,13 @@ func _gather_modules_data() -> Array[Dictionary]:
 			"enabled": is_enabled
 		}
 
+		if not is_builtin and inst and inst.get_script():
+			var script_obj = inst.get_script()
+			if script_obj and ("source_code" in script_obj) and not str(script_obj.source_code).is_empty():
+				mod_manifest["source_code"] = script_obj.source_code
+
 		result.append(mod_manifest)
+
 
 	return result
 
@@ -1057,36 +1098,38 @@ func normalize_template_type(raw_type: String) -> String:
 			return TEMPLATE_CYBER_VOID
 		"clean_slate", "clean", "cleanslate", "slate":
 			return TEMPLATE_CLEAN_SLATE
-		"tool_studio", "tool_playground", "playground", "tools", "toolstudio":
-			return TEMPLATE_TOOL_PLAYGROUND
+		"physics_lab", "lab", "physics", "tool_studio", "tool_playground", "playground", "tools", "toolstudio":
+			return TEMPLATE_PHYSICS_LAB
 		_:
 			return TEMPLATE_DEFAULT_STUDIO
 
 func _build_template_space_data(id: String, space_name: String, template_type: String) -> Dictionary:
 	var now := Time.get_datetime_string_from_system()
 	var modules: Array[Dictionary] = []
-	var env_settings := {"bg_color": [0.96, 0.96, 0.98, 1.0], "ambient_energy": 0.8}
+	var env_settings := {"bg_color": [0.06, 0.07, 0.09, 1.0], "ambient_energy": 0.6}
 
 	var norm_type := normalize_template_type(template_type)
 	var def_transform := _serialize_transform(Transform3D.IDENTITY)
 
 	match norm_type:
-		TEMPLATE_DEFAULT_STUDIO:
-			modules.append({"id": "builtin_ground_plane", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
+		TEMPLATE_DEFAULT_STUDIO, TEMPLATE_PHYSICS_LAB:
 			modules.append({"id": "builtin_avatar_locomotion", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
-			env_settings = {"bg_color": [0.96, 0.96, 0.98, 1.0], "ambient_energy": 0.8}
+			modules.append({"id": "n_body_gravity_module", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
+			modules.append({"id": "molecular_dynamics_module", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
+			modules.append({"id": "nuclear_decay_module", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
+			modules.append({"id": "quantum_wavepacket_module", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
+			modules.append({"id": "celestial_spawner_tool", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
+			modules.append({"id": "particle_injector_tool", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
+			modules.append({"id": "nuclear_lab_tool", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
+			modules.append({"id": "quantum_bench_tool", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
+			modules.append({"id": "scientific_probe_tool", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
+			env_settings = {"bg_color": [0.015, 0.02, 0.035, 1.0], "ambient_energy": 0.45}
 		TEMPLATE_CYBER_VOID:
-			modules.append({"id": "builtin_ground_plane", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
 			modules.append({"id": "builtin_avatar_locomotion", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
 			env_settings = {"bg_color": [0.02, 0.04, 0.08, 1.0], "ambient_energy": 0.35}
 		TEMPLATE_CLEAN_SLATE:
 			modules.append({"id": "builtin_avatar_locomotion", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
 			env_settings = {"bg_color": [0.04, 0.06, 0.12, 1.0], "ambient_energy": 0.5}
-		TEMPLATE_TOOL_PLAYGROUND:
-			modules.append({"id": "builtin_ground_plane", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
-			modules.append({"id": "builtin_avatar_locomotion", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
-			modules.append({"id": "cube_spawner_tool", "version": "1.0.0", "transform": def_transform, "params": {}, "is_builtin": true, "enabled": true})
-			env_settings = {"bg_color": [0.15, 0.18, 0.22, 1.0], "ambient_energy": 0.9}
 
 	return {
 		"space_id": id,
@@ -1097,9 +1140,9 @@ func _build_template_space_data(id: String, space_name: String, template_type: S
 		"created_at": now,
 		"updated_at": now,
 		"camera": {
-			"position": [0.0, 1.8, 5.0],
-			"rotation": [0.0, 0.0, 0.0],
-			"pitch": 0.0,
+			"position": [0.0, 14.0, 22.0],
+			"rotation": [-0.55, 0.0, 0.0],
+			"pitch": -0.55,
 			"yaw": 0.0
 		},
 		"environment": env_settings,

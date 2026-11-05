@@ -68,8 +68,15 @@ func scan_library() -> void:
 	# 1. Сканирование встроенных модулей (res://modules/builtin/)
 	_scan_directory("res://modules/builtin", true, seen_ids, new_catalog, registry_templates)
 
-	# 2. Сканирование пользовательских модулей (res://modules/)
+	# 2. Сканирование физических модулей (res://modules/physics/)
+	_scan_directory("res://modules/physics", true, seen_ids, new_catalog, registry_templates)
+
+	# 3. Сканирование физических инструментов (res://modules/physics/tools/)
+	_scan_directory("res://modules/physics/tools", true, seen_ids, new_catalog, registry_templates)
+
+	# 4. Сканирование пользовательских модулей (res://modules/)
 	_scan_directory("res://modules", false, seen_ids, new_catalog, registry_templates)
+
 
 	# 3. Добавление шаблонов из ModuleRegistryClient (версия на диске имеет приоритет)
 	for template in registry_templates:
@@ -118,8 +125,12 @@ func has_module(module_id: String) -> bool:
 	var direct_paths: Array[String] = [
 		"res://modules/%s.gd" % clean_id,
 		"res://modules/builtin/%s.gd" % clean_id,
+		"res://modules/physics/%s.gd" % clean_id,
+		"res://modules/physics/%s_module.gd" % clean_id,
+		"res://modules/physics/tools/%s.gd" % clean_id,
 		"user://modules/%s.gd" % clean_id
 	]
+
 	for dp in direct_paths:
 		if FileAccess.file_exists(dp):
 			return true
@@ -398,8 +409,12 @@ func get_module_source(module_id: String) -> String:
 	var direct_paths: Array[String] = [
 		"res://modules/%s.gd" % module_id,
 		"res://modules/builtin/%s.gd" % module_id,
+		"res://modules/physics/%s.gd" % module_id,
+		"res://modules/physics/%s_module.gd" % module_id,
+		"res://modules/physics/tools/%s.gd" % module_id,
 		"user://modules/%s.gd" % module_id
 	]
+
 	for dp in direct_paths:
 		if FileAccess.file_exists(dp):
 			var f := FileAccess.open(dp, FileAccess.READ)

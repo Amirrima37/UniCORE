@@ -15,6 +15,8 @@ var _active_modules: Dictionary = {} # module_id -> Node
 var _event_bus: EventBus = null
 var _world_root: Node3D = null
 var _space_sync: Node = null
+var _time_controller: Node = null
+var _conservation_sentry: Node = null
 
 # Реестр фабрик пользовательских прототипов: prototype_name -> Callable
 var _prototype_factories: Dictionary = {}
@@ -79,6 +81,10 @@ func set_world_root(world_root: Node3D) -> void:
 
 func get_world_root() -> Node3D:
 	return _world_root
+
+func set_physics_context(time_controller: Node, conservation_sentry: Node) -> void:
+	_time_controller = time_controller
+	_conservation_sentry = conservation_sentry
 
 # --- Регистрация прототипов динамических сущностей ---
 
@@ -282,7 +288,9 @@ func load_module_from_script(module_id: String, script: Script) -> Variant:
 			"event_bus": _event_bus,
 			"world_root": _world_root,
 			"module_manager": self,
-			"space_sync": _space_sync
+			"space_sync": _space_sync,
+			"time_controller": _time_controller,
+			"conservation_sentry": _conservation_sentry
 		}
 		instance.call("initialize", context)
 

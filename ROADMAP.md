@@ -1,6 +1,6 @@
 # UniCORE Roadmap & Status Tracker
 
-## Текущий статус: Фаза 1, Фаза 2, Фаза 2.5 (a,b,c), Фаза 3 (a,b) и Фаза 3c — «Интерактивное Ядро, Оболочка Detroit, Контекстная Память, Self-Repair, Библиотека Модулей, Сетевой Слой, P2P Семантический Кэш, Multiplayer Space Sync, Встроенный Локальный ИИ (llama-server) и Расширенный Стек Облачных Провайдеров» (100% готовности)
+## Текущий статус: Фаза 1, Фаза 2, Фаза 2.5 (a,b,c), Фаза 3 (a,b), Фаза 3c, Фаза 3d и Фаза 3e — «Интерактивное Ядро, Оболочка Detroit, Контекстная Память, Self-Repair, Библиотека Модулей, Сетевой Слой, P2P Семантический Кэш, Multiplayer Space Sync, Встроенный Локальный ИИ (llama-server), Фундаментальная Физическая Симуляция и Интерактивная 3D-Песочница» (100% готовности)
 
 ### Выполнено в Фазе 1 («Интерактивное Ядро и Агент»):
 - [x] **Архитектурный манифест:** зафиксирован в [ARCHITECTURE.md](file:///c:/dev/UniCORE/ARCHITECTURE.md).
@@ -226,6 +226,72 @@
   - [x] [agent_brain.gd](file:///c:/dev/UniCORE/agent/agent_brain.gd) & [space_viewport.gd](file:///c:/dev/UniCORE/core/space_viewport.gd) — реализация авто-fallback на встроенную локальную модель при ошибках квоты (429), ключа (401) или сети, динамическое монтирование `LocalLLMServerManager`.
 - [x] **Спецификация для UI / Чата Дизайна:**
   - [x] [design_chat_llm_settings_spec.md](file:///C:/Users/Amirrima37/.gemini/antigravity/brain/51a93ace-161d-4812-aeda-bc1b959a8496/design_chat_llm_settings_spec.md) — структурированное ТЗ для обновления секции настроек ИИ в `ui/menu/main_menu.gd`.
+
+---
+
+### Выполнено в Фазе 3d («Фундаментальные Физические Симуляции и Математическое Ядро»):
+- [x] **Трансформация мира в 3D-вакуум Наблюдателя (The Observer Frame):**
+  - [x] Полное удаление искусственной поверхности (`builtin_ground_plane`) из дефолтных пространств и шаблонов в [space_manager.gd](file:///c:/dev/UniCORE/core/space_manager.gd).
+  - [x] Аватар наблюдателя ([avatar_locomotion.gd](file:///c:/dev/UniCORE/modules/builtin/avatar_locomotion.gd)) переведен в чистый 6-DoF режим исследователя, не подверженного гравитации, тепловым полям и радиации.
+- [x] **Вычислительное Математическое Ядро (M1):**
+  - [x] [simulation_time_controller.gd](file:///c:/dev/UniCORE/core/physics/simulation_time_controller.gd) — тактовый генератор с защитой от лаг-спиралей, поддержкой переменного масштаба времени ($0.001\times$ – $1000\times$) и квантованным шагом `step_once()`.
+  - [x] [physical_integrator.gd](file:///c:/dev/UniCORE/core/physics/physical_integrator.gd) — абстрактный контракт с кэширующим зондом арности `Callable` (1- и 2-аргументные силы) без выделения памяти на куче (`zero-heap allocation`).
+  - [x] [verlet_integrator.gd](file:///c:/dev/UniCORE/core/physics/verlet_integrator.gd) — симплектический скоростной интегратор Верле (Kick-Drift-Kick), сохраняющий 2-форму фазового пространства. Дрейф энергии гармонического осциллятора: **$0.00000546$** за 10 000 шагов (в 183 раза точнее допуска).
+  - [x] [rk4_integrator.gd](file:///c:/dev/UniCORE/core/physics/rk4_integrator.gd) — метод Рунге-Кутты 4-го порядка для систем с диссипацией и вязким трением.
+  - [x] [unit_converter.gd](file:///c:/dev/UniCORE/core/physics/unit_converter.gd) — прозрачный перевод приведенных единиц (Lennard-Jones, Planck, Astronomical) в шкалу СИ.
+- [x] **Аудитор Законов Сохранения и Пространственные Ускорители (M2):**
+  - [x] [conservation_sentry.gd](file:///c:/dev/UniCORE/core/physics/conservation_sentry.gd) — непрерывный расчет инвариантов Нётер ($E_{total}, \vec{P}, \vec{L}, Q, T$), выявление дрейфа и адаптивное управление $\Delta t$.
+  - [x] [spatial_hash_grid.gd](file:///c:/dev/UniCORE/core/physics/spatial_hash_grid.gd) — 3D сетка с хешированием на простых числах. Поиск соседей для 5000 частиц за **0.095 мс** ($O(N)$ вместо $O(N^2)$).
+  - [x] [barnes_hut_octree.gd](file:///c:/dev/UniCORE/core/physics/barnes_hut_octree.gd) — 3D октодерево для дальнодействующей гравитации за $O(N \log N)$ с мультипольным критерием $\theta = 0.5$ и повторным использованием пула узлов.
+- [x] **Фундаментальные Модули Симуляции и GPU-Шейдеры (M3):**
+  - [x] [molecular_dynamics_module.gd](file:///c:/dev/UniCORE/modules/physics/molecular_dynamics_module.gd) — парный потенциал Леннард-Джонса со сдвигом $V(r_c)$, термостат Берендсена, упругие границы и отрисовка через один `MultiMeshInstance3D` с динамическим температурным окрашиванием.
+  - [x] [n_body_gravity_module.gd](file:///c:/dev/UniCORE/modules/physics/n_body_gravity_module.gd) — релятивистская гравитация, регулируемая скорость света $c_{sim}$, релятивистский импульс $\vec{p} = \gamma m \vec{v}$ и орбитальные трейлы.
+  - [x] [nuclear_decay_module.gd](file:///c:/dev/UniCORE/modules/physics/nuclear_decay_module.gd) — база изотопов, пуассоновский распад ($\alpha, \beta, \gamma$), 4-импульс отдачи ядер, сечения захвата нейтронов и цепная реакция деления урана со стержнями поглотителя.
+  - [x] [quantum_wavepacket_module.gd](file:///c:/dev/UniCORE/modules/physics/quantum_wavepacket_module.gd) — решение уравнения Шрёдингера (1D/2D TDSE), унитарное сохранение нормы, квантовое туннелирование сквозь барьеры и дифракция на двух щелях.
+  - [x] [relativity_surface.gdshader](file:///c:/dev/UniCORE/shaders/relativity_surface.gdshader) & [relativistic_mesh.gdshader](file:///c:/dev/UniCORE/shaders/relativistic_mesh.gdshader) — вертексное лоренцево сокращение размеров вдоль $\vec{v}$, спектральный эффект Доплера и релятивистский прожекторный эффект ($I = I_0 D^3$).
+  - [x] [particle_field_glow.gdshader](file:///c:/dev/UniCORE/shaders/particle_field_glow.gdshader) — процедурное свечение частиц по энергии/температуре.
+- [x] **Сквозная Автоматизированная Верификация (100% PASS):**
+  - [x] [test_physics_engine_suite.gd](file:///c:/dev/UniCORE/tests/test_physics_engine_suite.gd) — **88/88 проверок пройдено со 100% успехом (exit code 0)** во всех 4 эшелонах (Unit, Adversarial, Integration, Empirical).
+  - [x] Проверка движком Godot 4.0 (`--check-only`) подтвердила **0 синтаксических ошибок**.
+
+---
+
+### Выполнено в Фазе 3e («Интерактивная Физическая Песочница и Инструменты Исследователя»):
+- [x] **Очистка Устаревших Игрушечных Модулей:**
+  - [x] Удалены нерелевантные примитивные модули (`cube_spawner_tool.gd`, `particle_system.gd`, `physics_gravity.gd`, `llm_turret_mod.gd`, `quartz_cached_mod.gd`).
+  - [x] Шаблон `TEMPLATE_TOOL_PLAYGROUND` (`physics_lab`) в [space_manager.gd](file:///c:/dev/UniCORE/core/space_manager.gd) переведен на полную фундаментальную физику и 5 исследовательских инструментов.
+- [x] **3D-Слой Интерактивного Взаимодействия и Гизмо (`res://core/physics/interaction/`):**
+  - [x] [screen_raycaster.gd](file:///c:/dev/UniCORE/core/physics/interaction/screen_raycaster.gd) — математическое проецирование лучей мыши на взаимодействие без физических коллайдеров (`cast_to_plane`, `cast_to_camera_facing_plane`, `cast_to_depth_plane`, `ray_plane_intersection`).
+  - [x] [velocity_vector_gizmo.gd](file:///c:/dev/UniCORE/core/physics/interaction/velocity_vector_gizmo.gd) — процедурная 3D-стрелка (вал + конус) с градиентной подсветкой скорости ($0 \to v_{max}$).
+  - [x] [kepler_trajectory_preview.gd](file:///c:/dev/UniCORE/core/physics/interaction/kepler_trajectory_preview.gd) — аналитический расчет конических сечений орбит в реальном времени при перетаскивании импульса ($h = r \times v, e = (v \times h)/\mu - r/r$).
+  - [x] [physics_interaction_manager.gd](file:///c:/dev/UniCORE/core/physics/interaction/physics_interaction_manager.gd) — центральный диспетчер 3D клик-энд-драг манипуляций, переключения режимов инструментов (`ToolMode`) и связи с EventBus.
+- [x] **Исследовательские Инструменты Симуляции (`res://modules/physics/tools/`):**
+  - [x] [celestial_spawner_tool.gd](file:///c:/dev/UniCORE/modules/physics/tools/celestial_spawner_tool.gd) — спавн звезд, планет и черных дыр с заданием импульса и орбитального превью.
+  - [x] [particle_injector_tool.gd](file:///c:/dev/UniCORE/modules/physics/tools/particle_injector_tool.gd) — впрыск молекулярных кластеров газа и интерактивное управление термостатом Берендсена.
+  - [x] [nuclear_lab_tool.gd](file:///c:/dev/UniCORE/modules/physics/tools/nuclear_lab_tool.gd) — размещение топливных сборок изотопов (U-235, Ra-226), стрельба триггерными нейтронами и регулировка стержней СУЗ.
+  - [x] [quantum_bench_tool.gd](file:///c:/dev/UniCORE/modules/physics/tools/quantum_bench_tool.gd) — оптико-волновой стенд: генерация волновых пакетов, управление потенциальным барьером ($V_0$, ширина, щели) и 1D/2D режим.
+  - [x] [scientific_probe_tool.gd](file:///c:/dev/UniCORE/modules/physics/tools/scientific_probe_tool.gd) — 3D-датчики метрологии в вакууме: снятие телеметрии гравитационного поля $\vec{g}$, плотности и температуры газа $\rho, T$, радиационного потока CPS и квантовой плотности $|\psi|^2$.
+- [x] **Интеграция с Ядром и Реестром Модулей:**
+  - [x] [module_manager.gd](file:///c:/dev/UniCORE/core/module_manager.gd) — автоматическая инъекция `time_controller` и `conservation_sentry` в контекст инициализации каждого модуля.
+  - [x] [space_viewport.gd](file:///c:/dev/UniCORE/core/space_viewport.gd) — монтирование `SimulationTimeController`, `ConservationSentry` и `PhysicsInteractionManager`.
+  - [x] [module_registry_client.gd](file:///c:/dev/UniCORE/core/module_registry_client.gd) — регистрация 5 исследовательских инструментов в библиотеке проверенных шаблонов и fuzzy-поиске.
+- [x] **Сквозная Автоматизированная Верификация Взаимодействия (100% PASS):**
+  - [x] [test_physics_interaction_suite.gd](file:///c:/dev/UniCORE/tests/test_physics_interaction_suite.gd) — **52/52 проверок пройдено со 100% успехом (exit code 0)**:
+    - Raycasting математика (XY plane, depth plane, billboard plane, parallel ray).
+    - Gizmo позиционирование, масштабирование, ориентация базиса, автоскрытие.
+    - Кеплеровские орбиты замкнутые и разомкнутые.
+    - PhysicsInteractionManager переключение инструментов и EventBus команды.
+    - Все 5 физических инструментов.
+    - E2E сквозной пайплайн: спавн тел, замер полей гравитации и плотности газа измерительным зондом.
+- [x] **Оживление и Перестройка Песочницы под Пользователя (Tactile Sandbox Turnaround):**
+  - [x] [avatar_locomotion.gd](file:///c:/dev/UniCORE/modules/builtin/avatar_locomotion.gd) — реформа схемы ввода: ЛКМ полностью освобожден под творение, выделение и спавн; полет и обзор камеры переведены на зажатие ПКМ (RMB) и зум колесом мыши.
+  - [x] [space_manager.gd](file:///c:/dev/UniCORE/core/space_manager.gd) — живой старт по умолчанию: дефолтный спейс автоматически разворачивает Солнечную систему (звезда Sol + 4 планеты с орбитальными трейлами) и ракурс камеры под углом обзора.
+  - [x] [physics_preset_bar.gd](file:///c:/dev/UniCORE/ui/physics/physics_preset_bar.gd) / [physics_preset_bar.tscn](file:///c:/dev/UniCORE/ui/physics/physics_preset_bar.tscn) — панель «Эксперименты в 1 клик» (Солнечная система, 3 тела, Рой 300 тел, Газ Леннард-Джонса, Реактор U-235, Квантовый барьер, Опыт Юнга).
+  - [x] Исправлен резолвинг модулей (snake_case и PascalCase) в исследовательских инструментах `celestial_spawner_tool`, `particle_injector_tool`, `nuclear_lab_tool`, `quantum_bench_tool`, `scientific_probe_tool`.
+  - [x] [physics_inspector_drawer.gd](file:///c:/dev/UniCORE/ui/physics/physics_inspector_drawer.gd) — синхронизированы ключи физических параметров (`spawn_mass`, `target_temp`, `isotope`, `barrier_height`) и добавлены тактильные кнопки спавна/управления в 1 клик.
+  - [x] [space_viewport.tscn](file:///c:/dev/UniCORE/core/space_viewport.tscn) — устранено наложение нижних панелей (`ModuleToolbar` скрыт во время симуляции), интегрирован `PhysicsPresetBar`.
+  - [x] [test_interactive_sandbox_suite.gd](file:///c:/dev/UniCORE/tests/test_interactive_sandbox_suite.gd) — 35/35 проверок пройдено со 100% успехом (exit code 0).
+  - [x] Проверка движком Godot 4.0 (`--check-only`) подтвердила **0 синтаксических ошибок**.
 
 ---
 

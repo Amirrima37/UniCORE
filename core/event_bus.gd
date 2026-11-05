@@ -34,6 +34,10 @@ func emit(event_name: String, payload: Dictionary = {}) -> void:
 				callback.call(payload)
 		_listeners[event_name] = valid_listeners
 
+func publish(event_name: String, payload: Dictionary = {}) -> void:
+	emit(event_name, payload)
+
+
 func unsubscribe_all_for_target(target: Object) -> void:
 	if not target:
 		return

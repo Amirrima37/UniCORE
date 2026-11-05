@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b8d5a2f8k21m"]
+[gd_scene load_steps=21 format=3 uid="uid://b8d5a2f8k21m"]
 
 [ext_resource type="Script" path="res://core/space_viewport.gd" id="1_space"]
 [ext_resource type="Script" path="res://core/event_bus.gd" id="2_eventbus"]
@@ -14,6 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://df8ba3n4c72b" path="res://ui/analysis_drawer/analysis_drawer.tscn" id="12_drawer"]
 [ext_resource type="PackedScene" uid="uid://d1k7n4obc32b" path="res://ui/welcome_screen/welcome_screen.tscn" id="13_welcome"]
 [ext_resource type="PackedScene" uid="uid://c7x9m3oab10a" path="res://ui/welcome_screen/boot_screen.tscn" id="14_boot"]
+[ext_resource type="PackedScene" uid="uid://c5pk8tmby10a" path="res://ui/physics/physics_time_bar.tscn" id="15_timebar"]
+[ext_resource type="PackedScene" uid="uid://c67mxp8t19ba" path="res://ui/physics/physics_toolbox.tscn" id="16_toolbox"]
+[ext_resource type="PackedScene" uid="uid://b9xpt78ba192c" path="res://ui/physics/physics_inspector_drawer.tscn" id="17_inspectordrawer"]
+[ext_resource type="PackedScene" uid="uid://df7hx81b4m01" path="res://ui/physics/conservation_hud.tscn" id="18_hud"]
+[ext_resource type="PackedScene" uid="uid://cpres810a9bx" path="res://ui/physics/physics_preset_bar.tscn" id="19_presetbar"]
 
 [sub_resource type="Environment" id="Environment_core"]
 background_mode = 1
@@ -61,6 +66,17 @@ script = ExtResource("5_gemini")
 [node name="AnalysisDrawer" parent="CanvasLayer" instance=ExtResource("12_drawer")]
 
 [node name="ModuleToolbar" parent="CanvasLayer" instance=ExtResource("7_toolbar")]
+visible = false
+
+[node name="PhysicsPresetBar" parent="CanvasLayer" instance=ExtResource("19_presetbar")]
+
+[node name="PhysicsTimeBar" parent="CanvasLayer" instance=ExtResource("15_timebar")]
+
+[node name="PhysicsToolbox" parent="CanvasLayer" instance=ExtResource("16_toolbox")]
+
+[node name="PhysicsInspectorDrawer" parent="CanvasLayer" instance=ExtResource("17_inspectordrawer")]
+
+[node name="ConservationHUD" parent="CanvasLayer" instance=ExtResource("18_hud")]
 
 [node name="WelcomeScreen" parent="CanvasLayer" instance=ExtResource("13_welcome")]
 

@@ -351,7 +351,7 @@ func _build_context_showcase(parent_hbox: HBoxContainer) -> void:
 	card_vbox.add_child(_space_name_label)
 
 	_modules_count_label = Label.new()
-	_modules_count_label.text = "АКТИВНЫХ МОДУЛЕЙ: 2 (GroundPlane, AvatarLocomotion)"
+	_modules_count_label.text = "АКТИВНЫХ МОДУЛЕЙ: Физическая Лаборатория (N-Body, MD, Quantum)"
 	card_vbox.add_child(_modules_count_label)
 
 	_agent_status_label = Label.new()

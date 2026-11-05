@@ -22,6 +22,9 @@ const PeerMarkerScene = preload("res://ui/presence/peer_marker.tscn")
 const PeerChatWindowScene = preload("res://ui/chat/peer_chat_window.tscn")
 const CodeValidatorScript = preload("res://agent/code_validator.gd")
 const CyberTheme = preload("res://ui/theme/cyber_theme.gd")
+const SimulationTimeControllerScript = preload("res://core/physics/simulation_time_controller.gd")
+const ConservationSentryScript = preload("res://core/physics/conservation_sentry.gd")
+const PhysicsInteractionManagerScript = preload("res://core/physics/interaction/physics_interaction_manager.gd")
 
 @onready var event_bus: EventBus = $EventBus
 @onready var settings_manager: Node = $SettingsManager
@@ -39,6 +42,11 @@ const CyberTheme = preload("res://ui/theme/cyber_theme.gd")
 @onready var main_menu: Control = $CanvasLayer/MainMenu
 @onready var welcome_screen: Control = $CanvasLayer/WelcomeScreen
 @onready var boot_screen: Control = $CanvasLayer/BootScreen
+@onready var physics_time_bar: Control = $CanvasLayer/PhysicsTimeBar
+@onready var physics_toolbox: Control = $CanvasLayer/PhysicsToolbox
+@onready var physics_inspector_drawer: Control = $CanvasLayer/PhysicsInspectorDrawer
+@onready var conservation_hud: Control = $CanvasLayer/ConservationHUD
+@onready var physics_preset_bar: Control = $CanvasLayer/PhysicsPresetBar
 
 var module_library: ModuleLibrary = null
 var semantic_cache: Node = null
@@ -54,6 +62,9 @@ var peer_chat: Node = null
 var peer_chat_window: Control = null
 var local_llm_manager: Node = null
 var local_provider: BaseLLMProvider = null
+var simulation_time_controller: Node = null
+var conservation_sentry: Node = null
+var physics_interaction_manager: Node = null
 var _peer_markers: Dictionary = {} # peer_id (int) -> Node3D (PeerMarker)
 var _last_user_prompt: String = ""
 var _is_in_space: bool = false
@@ -91,6 +102,9 @@ func _ready() -> void:
 	# 4. Выбор и настройка провайдера LLM и AgentBrain
 	_setup_llm_provider()
 
+	# 4.5 Инициализация физического слоя симуляции и 3D-манипуляций
+	_setup_physics_layer()
+
 	# 5. Менеджер пространств
 	space_manager.setup(module_manager, event_bus, world_root, self, settings_manager)
 
@@ -102,6 +116,16 @@ func _ready() -> void:
 	module_toolbar.setup(module_manager, event_bus)
 	prompt_bar.setup(event_bus)
 	analysis_drawer.setup(event_bus)
+	if physics_time_bar and physics_time_bar.has_method("setup"):
+		physics_time_bar.setup(event_bus)
+	if physics_toolbox and physics_toolbox.has_method("setup"):
+		physics_toolbox.setup(event_bus)
+	if physics_inspector_drawer and physics_inspector_drawer.has_method("setup"):
+		physics_inspector_drawer.setup(event_bus)
+	if conservation_hud and conservation_hud.has_method("setup"):
+		conservation_hud.setup(event_bus)
+	if physics_preset_bar and physics_preset_bar.has_method("setup"):
+		physics_preset_bar.setup(event_bus)
 
 	# 7. Связывание событий интерфейса
 	_wire_ui_events()
@@ -111,6 +135,30 @@ func _ready() -> void:
 		space_manager.current_space_name,
 		str(module_manager.get_active_module_ids())
 	])
+
+func _setup_physics_layer() -> void:
+	if not simulation_time_controller:
+		simulation_time_controller = SimulationTimeControllerScript.new()
+		simulation_time_controller.name = "SimulationTimeController"
+		add_child(simulation_time_controller)
+		if simulation_time_controller.has_method("setup"):
+			simulation_time_controller.setup(event_bus)
+
+	if not conservation_sentry:
+		conservation_sentry = ConservationSentryScript.new()
+		conservation_sentry.name = "ConservationSentry"
+		add_child(conservation_sentry)
+		if conservation_sentry.has_method("setup"):
+			conservation_sentry.setup(event_bus)
+
+	if module_manager and module_manager.has_method("set_physics_context"):
+		module_manager.set_physics_context(simulation_time_controller, conservation_sentry)
+
+	if not physics_interaction_manager:
+		physics_interaction_manager = PhysicsInteractionManagerScript.new()
+		physics_interaction_manager.name = "PhysicsInteractionManager"
+		add_child(physics_interaction_manager)
+		physics_interaction_manager.setup(event_bus, null, module_manager, simulation_time_controller, conservation_sentry)
 
 func _setup_network_layer() -> void:
 	if not network_transport:
@@ -612,6 +660,11 @@ func _wire_ui_events() -> void:
 				module_manager.unload_module(mod_id)
 		)
 
+	# 6. Связывание событий панели инструментов и инспектора физики
+	if physics_toolbox and physics_inspector_drawer:
+		if physics_toolbox.has_signal("tool_changed") and physics_inspector_drawer.has_method("set_active_tool"):
+			physics_toolbox.tool_changed.connect(physics_inspector_drawer.set_active_tool)
+
 func _wire_welcome_screen_events() -> void:
 	if not welcome_screen:
 		return
@@ -676,6 +729,8 @@ func _return_to_welcome_screen() -> void:
 		prompt_bar.close()
 	if analysis_drawer and analysis_drawer.is_open:
 		analysis_drawer.close()
+	if physics_inspector_drawer and physics_inspector_drawer.has_method("close_drawer"):
+		physics_inspector_drawer.close_drawer()
 	if welcome_screen:
 		if welcome_screen.has_method("open_welcome"):
 			welcome_screen.open_welcome()

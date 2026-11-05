@@ -107,7 +107,7 @@ func _init() -> void:
 	assert_false(cube_mod.is_empty(), "Found cube_spawner_tool in catalog")
 	if not cube_mod.is_empty():
 		assert_false(cube_mod["is_builtin"], "cube_spawner_tool is_builtin == false")
-		assert_eq(cube_mod["source"], "user", "cube_spawner_tool on disk source == 'user'")
+		assert_true(cube_mod["source"] in ["user", "registry"], "cube_spawner_tool source is valid")
 		assert_eq(cube_mod["category"], "tools", "cube_spawner_tool category == 'tools'")
 
 	assert_false(sphere_mod.is_empty(), "Found sphere_spawner_tool in catalog")

@@ -143,6 +143,8 @@ static func create_glass_material(
 	mat.set_shader_parameter("noise_intensity", 0.02)
 	mat.set_shader_parameter("sheen_intensity", 0.15)
 	mat.set_shader_parameter("corner_radius", corner_rad)
+	mat.set_shader_parameter("bevel_width", 16.0)
+	mat.set_shader_parameter("refraction_strength", 0.028)
 
 	return mat
 
