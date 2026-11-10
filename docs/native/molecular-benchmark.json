@@ -1,0 +1,145 @@
+{
+  "engine": {
+    "build": "official",
+    "hash": "92bee43adba8d2401ef40e2480e53087bcb1eaf1",
+    "hex": 262144,
+    "major": 4,
+    "minor": 0,
+    "patch": 0,
+    "status": "stable",
+    "string": "4.0-stable (official)",
+    "year": 2023
+  },
+  "headless": true,
+  "os": "Windows",
+  "results": [
+    {
+      "audited": false,
+      "effective_backend": "gdscript",
+      "median_step_usec": 57.4666666666667,
+      "p95_batch_mean_usec": 59.8666666666667,
+      "particles": 2,
+      "requested_backend": "gdscript"
+    },
+    {
+      "audited": false,
+      "effective_backend": "native",
+      "median_step_usec": 9.66666666666667,
+      "p95_batch_mean_usec": 13.6666666666667,
+      "particles": 2,
+      "requested_backend": "native"
+    },
+    {
+      "audited": true,
+      "effective_backend": "gdscript",
+      "median_step_usec": 89.3,
+      "p95_batch_mean_usec": 92.6666666666667,
+      "particles": 2,
+      "requested_backend": "gdscript"
+    },
+    {
+      "audited": true,
+      "effective_backend": "native",
+      "median_step_usec": 20.5333333333333,
+      "p95_batch_mean_usec": 25.1333333333333,
+      "particles": 2,
+      "requested_backend": "native"
+    },
+    {
+      "audited": false,
+      "effective_backend": "gdscript",
+      "median_step_usec": 2592.9,
+      "p95_batch_mean_usec": 2761.1,
+      "particles": 64,
+      "requested_backend": "gdscript"
+    },
+    {
+      "audited": false,
+      "effective_backend": "native",
+      "median_step_usec": 42.8666666666667,
+      "p95_batch_mean_usec": 50.2,
+      "particles": 64,
+      "requested_backend": "native"
+    },
+    {
+      "audited": true,
+      "effective_backend": "gdscript",
+      "median_step_usec": 4100.6,
+      "p95_batch_mean_usec": 4286.06666666667,
+      "particles": 64,
+      "requested_backend": "gdscript"
+    },
+    {
+      "audited": true,
+      "effective_backend": "native",
+      "median_step_usec": 79.9666666666667,
+      "p95_batch_mean_usec": 102.266666666667,
+      "particles": 64,
+      "requested_backend": "native"
+    },
+    {
+      "audited": false,
+      "effective_backend": "gdscript",
+      "median_step_usec": 33579,
+      "p95_batch_mean_usec": 34381,
+      "particles": 512,
+      "requested_backend": "gdscript"
+    },
+    {
+      "audited": false,
+      "effective_backend": "native",
+      "median_step_usec": 602.666666666667,
+      "p95_batch_mean_usec": 661,
+      "particles": 512,
+      "requested_backend": "native"
+    },
+    {
+      "audited": true,
+      "effective_backend": "gdscript",
+      "median_step_usec": 50017.3333333333,
+      "p95_batch_mean_usec": 56192.3333333333,
+      "particles": 512,
+      "requested_backend": "gdscript"
+    },
+    {
+      "audited": true,
+      "effective_backend": "native",
+      "median_step_usec": 1079.66666666667,
+      "p95_batch_mean_usec": 1161.66666666667,
+      "particles": 512,
+      "requested_backend": "native"
+    },
+    {
+      "audited": false,
+      "effective_backend": "gdscript",
+      "median_step_usec": 76761.6666666667,
+      "p95_batch_mean_usec": 82502.6666666667,
+      "particles": 1000,
+      "requested_backend": "gdscript"
+    },
+    {
+      "audited": false,
+      "effective_backend": "native",
+      "median_step_usec": 1307.66666666667,
+      "p95_batch_mean_usec": 1430.33333333333,
+      "particles": 1000,
+      "requested_backend": "native"
+    },
+    {
+      "audited": true,
+      "effective_backend": "gdscript",
+      "median_step_usec": 114236.666666667,
+      "p95_batch_mean_usec": 115753.666666667,
+      "particles": 1000,
+      "requested_backend": "gdscript"
+    },
+    {
+      "audited": true,
+      "effective_backend": "native",
+      "median_step_usec": 2138.66666666667,
+      "p95_batch_mean_usec": 2331.66666666667,
+      "particles": 1000,
+      "requested_backend": "native"
+    }
+  ]
+}

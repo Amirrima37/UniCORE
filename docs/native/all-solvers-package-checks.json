@@ -1,0 +1,122 @@
+{
+  "script": {
+    "checks": [
+      {
+        "script": "test_native_metrics_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "METRICS checks=119 failures=0 native=false"
+        ]
+      },
+      {
+        "script": "test_native_molecular_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "MOLECULAR checks=455 failures=0 native=false"
+        ]
+      },
+      {
+        "script": "test_native_gravity_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "GRAVITY checks=1711 failures=0 native=false"
+        ]
+      },
+      {
+        "script": "test_native_quantum_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "QUANTUM checks=8761 failures=0 native=false"
+        ]
+      },
+      {
+        "script": "test_native_nuclear_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "NUCLEAR checks=16513 failures=0 native=false"
+        ]
+      },
+      {
+        "script": "test_native_remaining_fixtures_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "REMAINING_FIXTURES checks=1 failures=0 native=false"
+        ]
+      },
+      {
+        "script": "test_physics_features_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "Physics Features Audit: passed=14, failed=0"
+        ]
+      }
+    ]
+  },
+  "native": {
+    "checks": [
+      {
+        "script": "test_native_metrics_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "METRICS checks=122 failures=0 native=true"
+        ]
+      },
+      {
+        "script": "test_native_molecular_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "MOLECULAR checks=512 failures=0 native=true"
+        ]
+      },
+      {
+        "script": "test_native_gravity_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "GRAVITY checks=1722 failures=0 native=true"
+        ]
+      },
+      {
+        "script": "test_native_quantum_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "QUANTUM checks=8881 failures=0 native=true"
+        ]
+      },
+      {
+        "script": "test_native_nuclear_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "NUCLEAR checks=16589 failures=0 native=true"
+        ]
+      },
+      {
+        "script": "test_native_remaining_fixtures_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "REMAINING_FIXTURES checks=390 failures=0 native=true"
+        ]
+      },
+      {
+        "script": "test_physics_features_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "Physics Features Audit: passed=14, failed=0"
+        ]
+      }
+    ]
+  }
+}

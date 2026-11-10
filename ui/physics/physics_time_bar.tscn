@@ -1,0 +1,107 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5pk8tmby10a"]
+
+[ext_resource type="Script" path="res://ui/physics/physics_time_bar.gd" id="1_timebar"]
+
+[node name="PhysicsTimeBar" type="PanelContainer"]
+custom_minimum_size = Vector2(680, 48)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -340.0
+offset_top = -68.0
+offset_right = 340.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_timebar")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="BtnPlayPause" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(90, 32)
+layout_mode = 2
+tooltip_text = "Пауза / Запуск симуляции"
+toggle_mode = true
+text = "⏸ ПАУЗА"
+flat = true
+
+[node name="BtnStep" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(36, 32)
+layout_mode = 2
+tooltip_text = "Шаг вперед (1 квант времени)"
+text = "⏭"
+flat = true
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="LabelScaleText" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "МАСШТАБ:"
+vertical_alignment = 1
+
+[node name="BtnScale01" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 28)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "0.1×"
+flat = true
+
+[node name="BtnScale1" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 28)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "1.0×"
+flat = true
+
+[node name="BtnScale10" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 28)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "10×"
+flat = true
+
+[node name="BtnScale100" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(44, 28)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "100×"
+flat = true
+
+[node name="SliderTimeScale" type="HSlider" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 20)
+layout_mode = 2
+size_flags_vertical = 4
+min_value = 0.01
+max_value = 100.0
+step = 0.01
+value = 1.0
+exp_edit = true
+
+[node name="VSeparator2" type="VSeparator" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="LabelSimTimeIcon" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "⏱"
+vertical_alignment = 1
+
+[node name="LabelSimTime" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "t = 0.000 s"
+vertical_alignment = 1

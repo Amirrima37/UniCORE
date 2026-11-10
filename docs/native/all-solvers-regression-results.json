@@ -1,0 +1,261 @@
+[
+  {
+    "script": "tests/test_adversarial_stress_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": true,
+    "seconds": 1.81
+  },
+  {
+    "script": "tests/test_ambient_graph_canvas_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.651
+  },
+  {
+    "script": "tests/test_app_shell_suite.gd",
+    "exit_code": 3221225477,
+    "passed": false,
+    "script_error": false,
+    "seconds": 25.79
+  },
+  {
+    "script": "tests/test_conversation_memory_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.748
+  },
+  {
+    "script": "tests/test_design_system_foundation_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.63
+  },
+  {
+    "script": "tests/test_diagnostic_logger_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": true,
+    "seconds": 6.112
+  },
+  {
+    "script": "tests/test_display_server_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 5.672
+  },
+  {
+    "script": "tests/test_fluid_orb_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.64
+  },
+  {
+    "script": "tests/test_input_mapper_overlay_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.102
+  },
+  {
+    "script": "tests/test_input_mapper_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.501
+  },
+  {
+    "script": "tests/test_interactive_sandbox_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.477
+  },
+  {
+    "script": "tests/test_liquid_glass_settings_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.943
+  },
+  {
+    "script": "tests/test_local_ai_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.929
+  },
+  {
+    "script": "tests/test_module_library_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 3.156
+  },
+  {
+    "script": "tests/test_multiplayer_sync_suite.gd",
+    "exit_code": 1,
+    "passed": false,
+    "script_error": true,
+    "seconds": 2.785
+  },
+  {
+    "script": "tests/test_native_gravity_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 4.167
+  },
+  {
+    "script": "tests/test_native_metrics_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.632
+  },
+  {
+    "script": "tests/test_native_molecular_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.215
+  },
+  {
+    "script": "tests/test_native_nuclear_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.019
+  },
+  {
+    "script": "tests/test_native_quantum_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.279
+  },
+  {
+    "script": "tests/test_native_remaining_fixtures_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.731
+  },
+  {
+    "script": "tests/test_network_layer_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.405
+  },
+  {
+    "script": "tests/test_physics_engine_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.212
+  },
+  {
+    "script": "tests/test_physics_features_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.492
+  },
+  {
+    "script": "tests/test_physics_interaction_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": true,
+    "seconds": 1.568
+  },
+  {
+    "script": "tests/test_precession_diagnostic.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.729
+  },
+  {
+    "script": "tests/test_presence_chat_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.821
+  },
+  {
+    "script": "tests/test_rk4_empirical_verification.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.743
+  },
+  {
+    "script": "tests/test_self_repair_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": true,
+    "seconds": 1.937
+  },
+  {
+    "script": "tests/test_semantic_cache_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.766
+  },
+  {
+    "script": "tests/test_settings_audio_persistence_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 5.382
+  },
+  {
+    "script": "tests/test_space_management_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.307
+  },
+  {
+    "script": "tests/test_space_state_machine_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.628
+  },
+  {
+    "script": "tests/test_space_viewport_start_menu_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 6.556
+  },
+  {
+    "script": "tests/test_validator_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": true,
+    "seconds": 0.623
+  },
+  {
+    "script": "tests/test_verlet_empirical_verification.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.714
+  },
+  {
+    "script": "tests/test_welcome_and_boot_screen_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.078
+  }
+]

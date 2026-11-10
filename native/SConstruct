@@ -1,0 +1,25 @@
+import subprocess
+import os
+from SCons.Errors import UserError
+pin = "9d1c396c54fc3bdfcc7da4f3abcb52b14f6cce8f"
+revision = subprocess.check_output(["git", "-C", "godot-cpp", "rev-parse", "HEAD"], text=True).strip()
+if revision != pin:
+    raise UserError("godot-cpp revision must be " + pin)
+env = SConscript("godot-cpp/SConstruct")
+if env["platform"] != "windows" or env["arch"] != "x86_64" or env["precision"] != "single":
+    raise UserError("Only Windows x86_64 single precision is validated by this build")
+if os.environ.get("UNICORE_CXX"):
+    env.Replace(CXX=os.environ["UNICORE_CXX"], LINK=os.environ["UNICORE_CXX"])
+env["ENV"]["PATH"] = os.environ["PATH"]
+if env["use_mingw"]:
+    env.Append(LINKFLAGS=["-static", "-static-libgcc", "-static-libstdc++"])
+    # GNU ar accepts response files; avoid 900 separate archive rewrites on Windows.
+    env["TEMPFILEARGESCFUNC"] = lambda arg: subprocess.list2cmdline([str(arg).replace(chr(92), "/")])
+    env["ARFLAGS"] = ["rcs"]
+    env["ARCOMSTR"] = "Archiving $TARGET"
+    env["ARCOM"] = '${TEMPFILE("$AR $ARFLAGS $TARGET $SOURCES", "$ARCOMSTR")}'
+env.Append(CPPPATH=["src"])
+env.Append(CXXFLAGS=["-ffp-contract=off"] if env["use_mingw"] else ["/fp:strict"])
+sources = Glob("src/bindings/*.cpp")
+library = env.SharedLibrary("../bin/windows/x86_64/unicore_native" + env["suffix"] + env["SHLIBSUFFIX"], source=sources)
+Default(library)

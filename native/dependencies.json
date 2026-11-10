@@ -1,0 +1,10 @@
+{
+  "godot": "4.0.stable.official.92bee43ad",
+  "precision": "single",
+  "platforms_validated": [],
+  "initial_target": "windows.x86_64",
+  "godot_cpp_url": "https://github.com/godotengine/godot-cpp.git",
+  "godot_cpp_revision": "9d1c396c54fc3bdfcc7da4f3abcb52b14f6cce8f",
+  "scons": "4.10.1",
+  "api_version": 1
+}

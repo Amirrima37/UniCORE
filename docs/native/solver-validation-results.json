@@ -1,0 +1,86 @@
+[
+  {
+    "build": "debug",
+    "suite": "test_native_metrics_suite.gd",
+    "exit_code": 0,
+    "checks": 122,
+    "passed": true
+  },
+  {
+    "build": "debug",
+    "suite": "test_native_molecular_suite.gd",
+    "exit_code": 0,
+    "checks": 512,
+    "passed": true
+  },
+  {
+    "build": "debug",
+    "suite": "test_native_gravity_suite.gd",
+    "exit_code": 0,
+    "checks": 1722,
+    "passed": true
+  },
+  {
+    "build": "debug",
+    "suite": "test_native_quantum_suite.gd",
+    "exit_code": 0,
+    "checks": 8881,
+    "passed": true
+  },
+  {
+    "build": "debug",
+    "suite": "test_native_nuclear_suite.gd",
+    "exit_code": 0,
+    "checks": 16589,
+    "passed": true
+  },
+  {
+    "build": "debug",
+    "suite": "test_native_remaining_fixtures_suite.gd",
+    "exit_code": 0,
+    "checks": 390,
+    "passed": true
+  },
+  {
+    "build": "release",
+    "suite": "test_native_metrics_suite.gd",
+    "exit_code": 0,
+    "checks": 122,
+    "passed": true
+  },
+  {
+    "build": "release",
+    "suite": "test_native_molecular_suite.gd",
+    "exit_code": 0,
+    "checks": 512,
+    "passed": true
+  },
+  {
+    "build": "release",
+    "suite": "test_native_gravity_suite.gd",
+    "exit_code": 0,
+    "checks": 1722,
+    "passed": true
+  },
+  {
+    "build": "release",
+    "suite": "test_native_quantum_suite.gd",
+    "exit_code": 0,
+    "checks": 8881,
+    "passed": true
+  },
+  {
+    "build": "release",
+    "suite": "test_native_nuclear_suite.gd",
+    "exit_code": 0,
+    "checks": 16589,
+    "passed": true
+  },
+  {
+    "build": "release",
+    "suite": "test_native_remaining_fixtures_suite.gd",
+    "exit_code": 0,
+    "checks": 390,
+    "passed": true
+  }
+]

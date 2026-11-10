@@ -1,0 +1,51 @@
+﻿extends SceneTree
+const Editor = preload("res://core/physics/interaction/object_editor.gd")
+const Gravity = preload("res://modules/physics/n_body_gravity_module.gd")
+const Manager = preload("res://core/module_manager.gd")
+var failures := 0
+func check(ok: bool, message: String) -> void:
+	print(("PASS " if ok else "FAIL ") + message)
+	if not ok: failures += 1
+func _init() -> void:
+	call_deferred("run")
+func run() -> void:
+	var world := Node3D.new()
+	root.add_child(world)
+	var camera := Camera3D.new()
+	world.add_child(camera)
+	camera.position = Vector3(0, 0, 10)
+	camera.current = true
+	var manager := Manager.new()
+	world.add_child(manager)
+	var module = load("res://modules/local_cube_module.gd").new()
+	world.add_child(module)
+	module.initialize({})
+	manager._active_modules["cube"] = module
+	var editor := Editor.new()
+	world.add_child(editor)
+	editor.setup(Node.new(), manager, null, null)
+	await process_frame
+	editor.pick(camera, camera.unproject_position(Vector3.ZERO))
+	check(not editor.snapshot().is_empty(), "Generated cube can be picked without colliders")
+	editor.edit("position", Vector3(2, 1, 0))
+	check(module._box.global_position == Vector3(2, 1, 0), "Inspector move updates actual mesh")
+	editor.edit("rotation", Vector3(0, 45, 0))
+	check(is_equal_approx(module._box.rotation_degrees.y, 45), "Rotation updates actual mesh")
+	editor.edit("scale", Vector3(2, 2, 2))
+	check(module._box.scale.is_equal_approx(Vector3(2, 2, 2)), "Scale updates actual mesh")
+	editor.pick(camera, Vector2(-10000, -10000))
+	check(editor.snapshot().is_empty(), "Empty space clears selection")
+	var gravity := Gravity.new()
+	world.add_child(gravity)
+	gravity.add_body("Editable", Vector3.ZERO, Vector3.ZERO, 5, 0.5)
+	check(gravity.edit_body("Editable", "position", Vector3(3, 0, 0)), "Body move accepted")
+	check(gravity.get_editable_body("Editable").position == Vector3(3, 0, 0), "Body solver position updated")
+	check(gravity.edit_body("Editable", "mass", 12), "Body mass accepted")
+	check(gravity.get_editable_body("Editable").mass == 12, "Body solver mass updated")
+	check(not gravity.edit_body("Editable", "mass", -1), "Invalid mass rejected")
+	check(gravity.edit_body("Editable", "name", "Renamed"), "Body rename accepted")
+	check(gravity.get_editable_body("Editable").is_empty(), "Old body identifier removed")
+	editor.dispatcher.free()
+	world.free()
+	print("Failures: ", failures)
+	quit(1 if failures else 0)

@@ -1,0 +1,32 @@
+extends SceneTree
+
+func _init() -> void:
+	print("--- DisplayServer Features ---")
+	print("DisplayServer name: ", DisplayServer.get_name())
+	print("FEATURE_GLOBAL_MENU: ", DisplayServer.has_feature(DisplayServer.FEATURE_GLOBAL_MENU))
+	print("FEATURE_SUBWINDOWS: ", DisplayServer.has_feature(DisplayServer.FEATURE_SUBWINDOWS))
+	print("FEATURE_TOUCHSCREEN: ", DisplayServer.has_feature(DisplayServer.FEATURE_TOUCHSCREEN))
+	print("FEATURE_MOUSE: ", DisplayServer.has_feature(DisplayServer.FEATURE_MOUSE))
+	print("FEATURE_MOUSE_WARP: ", DisplayServer.has_feature(DisplayServer.FEATURE_MOUSE_WARP))
+	print("FEATURE_CLIPBOARD: ", DisplayServer.has_feature(DisplayServer.FEATURE_CLIPBOARD))
+	print("FEATURE_VIRTUAL_KEYBOARD: ", DisplayServer.has_feature(DisplayServer.FEATURE_VIRTUAL_KEYBOARD))
+	print("FEATURE_CURSOR_SHAPE: ", DisplayServer.has_feature(DisplayServer.FEATURE_CURSOR_SHAPE))
+	print("FEATURE_CUSTOM_CURSOR_SHAPE: ", DisplayServer.has_feature(DisplayServer.FEATURE_CUSTOM_CURSOR_SHAPE))
+	print("FEATURE_NATIVE_DIALOG: ", DisplayServer.has_feature(DisplayServer.FEATURE_NATIVE_DIALOG))
+	print("FEATURE_IME: ", DisplayServer.has_feature(DisplayServer.FEATURE_IME))
+	print("FEATURE_WINDOW_TRANSPARENCY: ", DisplayServer.has_feature(DisplayServer.FEATURE_WINDOW_TRANSPARENCY))
+	print("FEATURE_HIDPI: ", DisplayServer.has_feature(DisplayServer.FEATURE_HIDPI))
+	print("FEATURE_ICON: ", DisplayServer.has_feature(DisplayServer.FEATURE_ICON))
+	print("FEATURE_NATIVE_ICON: ", DisplayServer.has_feature(DisplayServer.FEATURE_NATIVE_ICON))
+	print("FEATURE_ORIENTATION: ", DisplayServer.has_feature(DisplayServer.FEATURE_ORIENTATION))
+	print("FEATURE_SWAP_BUFFERS: ", DisplayServer.has_feature(DisplayServer.FEATURE_SWAP_BUFFERS))
+	
+	print("\n--- DisplayServer Modes ---")
+	print("WINDOW_MODE_WINDOWED = ", DisplayServer.WINDOW_MODE_WINDOWED)
+	print("WINDOW_MODE_MINIMIZED = ", DisplayServer.WINDOW_MODE_MINIMIZED)
+	print("WINDOW_MODE_MAXIMIZED = ", DisplayServer.WINDOW_MODE_MAXIMIZED)
+	print("WINDOW_MODE_FULLSCREEN = ", DisplayServer.WINDOW_MODE_FULLSCREEN)
+	print("WINDOW_MODE_EXCLUSIVE_FULLSCREEN = ", DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	print("Current mode = ", DisplayServer.window_get_mode())
+	
+	quit(0)

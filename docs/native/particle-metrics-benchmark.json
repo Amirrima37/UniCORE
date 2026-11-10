@@ -1,0 +1,73 @@
+{
+  "engine": {
+    "build": "official",
+    "hash": "92bee43adba8d2401ef40e2480e53087bcb1eaf1",
+    "hex": 262144,
+    "major": 4,
+    "minor": 0,
+    "patch": 0,
+    "status": "stable",
+    "string": "4.0-stable (official)",
+    "year": 2023
+  },
+  "native": true,
+  "os": "Windows",
+  "results": [
+    {
+      "effective_backend": "gdscript",
+      "median_audit_usec": 2.64,
+      "p95_batch_mean_usec": 2.71,
+      "particles": 2,
+      "requested_backend": "gdscript"
+    },
+    {
+      "effective_backend": "native",
+      "median_audit_usec": 3.4,
+      "p95_batch_mean_usec": 3.48,
+      "particles": 2,
+      "requested_backend": "native"
+    },
+    {
+      "effective_backend": "gdscript",
+      "median_audit_usec": 15.98,
+      "p95_batch_mean_usec": 16.44,
+      "particles": 100,
+      "requested_backend": "gdscript"
+    },
+    {
+      "effective_backend": "native",
+      "median_audit_usec": 4.54,
+      "p95_batch_mean_usec": 6.4,
+      "particles": 100,
+      "requested_backend": "native"
+    },
+    {
+      "effective_backend": "gdscript",
+      "median_audit_usec": 138.47,
+      "p95_batch_mean_usec": 144.31,
+      "particles": 1000,
+      "requested_backend": "gdscript"
+    },
+    {
+      "effective_backend": "native",
+      "median_audit_usec": 14.05,
+      "p95_batch_mean_usec": 23.62,
+      "particles": 1000,
+      "requested_backend": "native"
+    },
+    {
+      "effective_backend": "gdscript",
+      "median_audit_usec": 1439.68,
+      "p95_batch_mean_usec": 1514.78,
+      "particles": 10000,
+      "requested_backend": "gdscript"
+    },
+    {
+      "effective_backend": "native",
+      "median_audit_usec": 116.36,
+      "p95_batch_mean_usec": 122.52,
+      "particles": 10000,
+      "requested_backend": "native"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "timeout_seconds": 120,
+  "scripts": [
+    "tests/test_physics_engine_suite.gd",
+    "tests/test_physics_features_suite.gd",
+    "tests/test_physics_interaction_suite.gd",
+    "tests/test_verlet_empirical_verification.gd",
+    "tests/test_rk4_empirical_verification.gd",
+    "tests/test_precession_diagnostic.gd",
+    "tests/test_native_metrics_suite.gd",
+    "tests/test_native_molecular_suite.gd",
+    "tests/test_native_gravity_suite.gd",
+    "tests/test_native_quantum_suite.gd",
+    "tests/test_native_nuclear_suite.gd",
+    "tests/test_native_remaining_fixtures_suite.gd",
+    "tests/test_native_geometry_suite.gd",
+    "tests/test_native_structural_suite.gd",
+    "tests/test_structural_expansion.gd",
+    "tests/test_native_thermal_suite.gd",
+    "tests/test_materials_thermal_ui.gd",
+    "tests/test_cae_analysis_commands.gd",
+    "tests/test_native_structural_ui.gd",
+    "tests/test_cae_recovery.gd",
+    "tests/test_cae_shell.gd",
+    "tests/test_cae_ai_commands.gd"
+  ]
+}

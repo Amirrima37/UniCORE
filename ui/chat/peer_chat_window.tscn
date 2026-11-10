@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://peerchatwin001"]
+
+[ext_resource type="Script" path="res://ui/chat/peer_chat_window.gd" id="1_chat"]
+
+[node name="PeerChatWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 380.0
+offset_bottom = 440.0
+script = ExtResource("1_chat")
+
+[node name="MainPanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(380, 440)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="MainPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBox" type="VBoxContainer" parent="MainPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Header" type="HBoxContainer" parent="MainPanel/Margin/VBox"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MainPanel/Margin/VBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "P2P КАНАЛ СВЯЗИ"
+
+[node name="CloseButton" type="Button" parent="MainPanel/Margin/VBox/Header"]
+layout_mode = 2
+text = " ✕ "
+
+[node name="MessageDisplay" type="RichTextLabel" parent="MainPanel/Margin/VBox"]
+custom_minimum_size = Vector2(0, 260)
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+scroll_following = true
+
+[node name="InputBar" type="HBoxContainer" parent="MainPanel/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="MessageInput" type="LineEdit" parent="MainPanel/Margin/VBox/InputBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Введите сообщение..."
+
+[node name="SendButton" type="Button" parent="MainPanel/Margin/VBox/InputBar"]
+layout_mode = 2
+text = "ОТПРАВИТЬ"

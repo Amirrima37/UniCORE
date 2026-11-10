@@ -1,0 +1,127 @@
+[gd_scene load_steps=2 format=3 uid="uid://b9xpt78ba192c"]
+
+[ext_resource type="Script" path="res://ui/physics/physics_inspector_drawer.gd" id="1_drawer"]
+
+[node name="PhysicsInspectorDrawer" type="PanelContainer"]
+custom_minimum_size = Vector2(340, 0)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -340.0
+offset_top = 48.0
+offset_bottom = -72.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("1_drawer")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HeaderPanel" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LabelHeader" type="Label" parent="MarginContainer/VBoxContainer/HeaderPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "ФИЗИЧЕСКИЙ ИНСПЕКТОР"
+vertical_alignment = 1
+
+[node name="BtnClose" type="Button" parent="MarginContainer/VBoxContainer/HeaderPanel"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+tooltip_text = "Закрыть инспектор"
+text = "✕"
+flat = true
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ContentVBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="SectionEntityInfo" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="LabelEntityTitle" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/ContentVBox/SectionEntityInfo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.68, 0.73, 0.8, 0.85)
+theme_override_font_sizes/font_size = 11
+text = "ТЕЛЕМЕТРИЯ ОБЪЕКТА"
+
+[node name="LabelEntityName" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/ContentVBox/SectionEntityInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "ОБЪЕКТ НЕ ВЫБРАН"
+
+[node name="LabelMass" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/ContentVBox/SectionEntityInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Масса: —"
+
+[node name="LabelVelocity" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/ContentVBox/SectionEntityInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Скорость: —"
+
+[node name="LabelEnergy" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/ContentVBox/SectionEntityInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Энергия: —"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+
+[node name="SectionParameters" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+
+[node name="SectionActions" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BtnDeleteEntity" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/ContentVBox/SectionActions"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+disabled = true
+text = "УДАЛИТЬ ОБЪЕКТ"
+
+[node name="BtnResetState" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/ContentVBox/SectionActions"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+disabled = true
+text = "СБРОС КИНЕМАТИКИ"
+
+[node name="HSeparator4" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FooterPanel" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FooterLabel" type="Label" parent="MarginContainer/VBoxContainer/FooterPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.42, 0.47, 0.55, 0.65)
+theme_override_font_sizes/font_size = 10
+text = "UniCORE Physics Engine v1.0"
+horizontal_alignment = 1
+vertical_alignment = 1

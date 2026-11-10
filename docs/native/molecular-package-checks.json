@@ -1,0 +1,58 @@
+{
+  "script": {
+    "checks": [
+      {
+        "script": "test_native_metrics_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "METRICS checks=119 failures=0 native=false"
+        ]
+      },
+      {
+        "script": "test_native_molecular_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "MOLECULAR checks=453 failures=0 native=false"
+        ]
+      },
+      {
+        "script": "test_physics_features_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "Physics Features Audit: passed=14, failed=0"
+        ]
+      }
+    ]
+  },
+  "native": {
+    "checks": [
+      {
+        "script": "test_native_metrics_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "METRICS checks=122 failures=0 native=true"
+        ]
+      },
+      {
+        "script": "test_native_molecular_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "MOLECULAR checks=510 failures=0 native=true"
+        ]
+      },
+      {
+        "script": "test_physics_features_suite.gd",
+        "passed": true,
+        "exit_code": 0,
+        "summary": [
+          "Physics Features Audit: passed=14, failed=0"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+# Godot 4+ specific ignores
+.godot/
+*.translation
+
+# Godot-specific exclusions
+# Mono-specific ignores (if C# is used in future)
+.mono/
+data_*/
+mono_crash.*.json
+
+# System / OS ignores
+.DS_Store
+Thumbs.db
+
+# Executables
+*.exe
+
+# Temporary & logs
+run_output.txt
+*.log
+
+# Local native build dependencies and outputs
+.tools/
+native/godot-cpp/
+native/.sconsign*
+*.o
+*.obj
+*.dll
+*.a
+*.lib
+bin/unicore_native.gdextension

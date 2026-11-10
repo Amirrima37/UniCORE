@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "units": "consistent simulation length, mass and time; no conversion",
+  "precision": "Vector3 float32, masses float32, scalar accumulator float64",
+  "positions": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      0
+    ]
+  ],
+  "velocities": [
+    [
+      0,
+      2,
+      0
+    ],
+    [
+      3,
+      0,
+      0
+    ]
+  ],
+  "masses": [
+    2,
+    4
+  ],
+  "expected": {
+    "kinetic_energy": 22.0,
+    "linear_momentum": [
+      12,
+      4,
+      0
+    ],
+    "angular_momentum": [
+      0,
+      0,
+      -20
+    ]
+  }
+}

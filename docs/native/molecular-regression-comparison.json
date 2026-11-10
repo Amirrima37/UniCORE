@@ -1,0 +1,14 @@
+{
+  "baseline_scripts": 32,
+  "native_scripts": 33,
+  "zero_exit_scripts": 31,
+  "known_nonzero_failures": [
+    "tests/test_app_shell_suite.gd",
+    "tests/test_multiplayer_sync_suite.gd"
+  ],
+  "new_failures": [],
+  "new_script_diagnostics": [],
+  "added_suites": [
+    "tests/test_native_molecular_suite.gd"
+  ]
+}

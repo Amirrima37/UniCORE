@@ -1,0 +1,33 @@
+﻿extends SceneTree
+func _initialize():
+	var doc = load("res://core/cae/cae_document.gd").new()
+	assert(doc.execute("CreatePart") == "")
+	assert(doc.execute("SetDimensions", {"index": 0, "values": [-1, 1, 1]}) != "")
+	assert(doc.execute("ApplySupport", {"index": 0, "face": "X-"}) == "")
+	assert(doc.execute("ApplyLoad", {"index": 0, "face": "X+", "force": [0, -1000, 0]}) == "")
+	assert(doc.validate().is_empty())
+	assert(doc.generate_mesh(2) == "")
+	assert(doc.data.mesh.nodes.size() == 27)
+	assert(doc.data.mesh.elements.size() == 8)
+	assert(doc.data.mesh.regions[doc.data.parts[0].id]["X-"].size() == 9)
+	assert(doc.save_project("res://.tools/cae-test.ucae") == OK)
+	var restored = load("res://core/cae/cae_document.gd").new()
+	assert(restored.open_project("res://.tools/cae-test.ucae") == "")
+	assert(JSON.stringify(restored.data) == JSON.stringify(doc.data))
+	doc.execute("Delete", {"index": 0})
+	doc.undo()
+	assert(doc.data.parts.size() == 1)
+	doc.redo()
+	assert(doc.data.parts.is_empty())
+	var workspace = load("res://ui/cae/cae_workspace.gd").new()
+	root.add_child.call_deferred(workspace)
+	await process_frame
+	workspace.document.execute("CreatePart")
+	workspace.selected = 0
+	workspace.refresh()
+	workspace.document.generate_mesh(2)
+	workspace.mesh_visible = true
+	workspace.render_model()
+	workspace.solve()
+	print("CAE document and workspace checks passed")
+	quit()

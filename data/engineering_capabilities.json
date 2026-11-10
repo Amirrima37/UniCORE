@@ -1,0 +1,2570 @@
+{
+  "schema": 1,
+  "description": "Engineering capability references, not proprietary implementations. Full long-term scope retained.",
+  "families": [
+    {
+      "family_reference": "Mechanical / MAPDL",
+      "domain": "Structural and Mechanical",
+      "purpose": "Solid mechanics, dynamics, reliability, manufacturing, acoustics and offshore loading",
+      "mathematical_methods": [
+        "FE stiffness/mass",
+        "nonlinear constitutive updates",
+        "time integration",
+        "eigenproblems",
+        "contact",
+        "wave or hydrodynamic formulations"
+      ],
+      "reusable_unicore": [
+        "TET4/HEX8 static elasticity",
+        "CSR-PCG",
+        "materials records",
+        "worker jobs"
+      ],
+      "missing_infrastructure": [
+        "beam/shell elements",
+        "contact",
+        "plasticity",
+        "modal/dynamic solvers",
+        "fatigue models",
+        "domain benchmarks"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "SuiteSparse",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 2,
+      "validation_requirements": [
+        "patch tests",
+        "bending/convergence",
+        "modal frequencies",
+        "energy/reaction balance"
+      ],
+      "status": "partial: static TET4/HEX8 affine boxes only"
+    },
+    {
+      "family_reference": "LS-DYNA",
+      "domain": "Structural and Mechanical",
+      "purpose": "Solid mechanics, dynamics, reliability, manufacturing, acoustics and offshore loading",
+      "mathematical_methods": [
+        "FE stiffness/mass",
+        "nonlinear constitutive updates",
+        "time integration",
+        "eigenproblems",
+        "contact",
+        "wave or hydrodynamic formulations"
+      ],
+      "reusable_unicore": [
+        "TET4/HEX8 static elasticity",
+        "CSR-PCG",
+        "materials records",
+        "worker jobs"
+      ],
+      "missing_infrastructure": [
+        "beam/shell elements",
+        "contact",
+        "plasticity",
+        "modal/dynamic solvers",
+        "fatigue models",
+        "domain benchmarks"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "SuiteSparse",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 2,
+      "validation_requirements": [
+        "patch tests",
+        "bending/convergence",
+        "modal frequencies",
+        "energy/reaction balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Autodyn",
+      "domain": "Structural and Mechanical",
+      "purpose": "Solid mechanics, dynamics, reliability, manufacturing, acoustics and offshore loading",
+      "mathematical_methods": [
+        "FE stiffness/mass",
+        "nonlinear constitutive updates",
+        "time integration",
+        "eigenproblems",
+        "contact",
+        "wave or hydrodynamic formulations"
+      ],
+      "reusable_unicore": [
+        "TET4/HEX8 static elasticity",
+        "CSR-PCG",
+        "materials records",
+        "worker jobs"
+      ],
+      "missing_infrastructure": [
+        "beam/shell elements",
+        "contact",
+        "plasticity",
+        "modal/dynamic solvers",
+        "fatigue models",
+        "domain benchmarks"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "SuiteSparse",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 2,
+      "validation_requirements": [
+        "patch tests",
+        "bending/convergence",
+        "modal frequencies",
+        "energy/reaction balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Motion",
+      "domain": "Structural and Mechanical",
+      "purpose": "Solid mechanics, dynamics, reliability, manufacturing, acoustics and offshore loading",
+      "mathematical_methods": [
+        "FE stiffness/mass",
+        "nonlinear constitutive updates",
+        "time integration",
+        "eigenproblems",
+        "contact",
+        "wave or hydrodynamic formulations"
+      ],
+      "reusable_unicore": [
+        "TET4/HEX8 static elasticity",
+        "CSR-PCG",
+        "materials records",
+        "worker jobs"
+      ],
+      "missing_infrastructure": [
+        "beam/shell elements",
+        "contact",
+        "plasticity",
+        "modal/dynamic solvers",
+        "fatigue models",
+        "domain benchmarks"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "SuiteSparse",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 2,
+      "validation_requirements": [
+        "patch tests",
+        "bending/convergence",
+        "modal frequencies",
+        "energy/reaction balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Sherlock",
+      "domain": "Structural and Mechanical",
+      "purpose": "Solid mechanics, dynamics, reliability, manufacturing, acoustics and offshore loading",
+      "mathematical_methods": [
+        "FE stiffness/mass",
+        "nonlinear constitutive updates",
+        "time integration",
+        "eigenproblems",
+        "contact",
+        "wave or hydrodynamic formulations"
+      ],
+      "reusable_unicore": [
+        "TET4/HEX8 static elasticity",
+        "CSR-PCG",
+        "materials records",
+        "worker jobs"
+      ],
+      "missing_infrastructure": [
+        "beam/shell elements",
+        "contact",
+        "plasticity",
+        "modal/dynamic solvers",
+        "fatigue models",
+        "domain benchmarks"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "SuiteSparse",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite",
+        "structural/thermal transfer"
+      ],
+      "priority": 2,
+      "validation_requirements": [
+        "patch tests",
+        "bending/convergence",
+        "modal frequencies",
+        "energy/reaction balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Additive Suite / Additive Print",
+      "domain": "Structural and Mechanical",
+      "purpose": "Solid mechanics, dynamics, reliability, manufacturing, acoustics and offshore loading",
+      "mathematical_methods": [
+        "FE stiffness/mass",
+        "nonlinear constitutive updates",
+        "time integration",
+        "eigenproblems",
+        "contact",
+        "wave or hydrodynamic formulations"
+      ],
+      "reusable_unicore": [
+        "TET4/HEX8 static elasticity",
+        "CSR-PCG",
+        "materials records",
+        "worker jobs"
+      ],
+      "missing_infrastructure": [
+        "beam/shell elements",
+        "contact",
+        "plasticity",
+        "modal/dynamic solvers",
+        "fatigue models",
+        "domain benchmarks"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "SuiteSparse",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 2,
+      "validation_requirements": [
+        "patch tests",
+        "bending/convergence",
+        "modal frequencies",
+        "energy/reaction balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Forming",
+      "domain": "Structural and Mechanical",
+      "purpose": "Solid mechanics, dynamics, reliability, manufacturing, acoustics and offshore loading",
+      "mathematical_methods": [
+        "FE stiffness/mass",
+        "nonlinear constitutive updates",
+        "time integration",
+        "eigenproblems",
+        "contact",
+        "wave or hydrodynamic formulations"
+      ],
+      "reusable_unicore": [
+        "TET4/HEX8 static elasticity",
+        "CSR-PCG",
+        "materials records",
+        "worker jobs"
+      ],
+      "missing_infrastructure": [
+        "beam/shell elements",
+        "contact",
+        "plasticity",
+        "modal/dynamic solvers",
+        "fatigue models",
+        "domain benchmarks"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "SuiteSparse",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 2,
+      "validation_requirements": [
+        "patch tests",
+        "bending/convergence",
+        "modal frequencies",
+        "energy/reaction balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Sound",
+      "domain": "Structural and Mechanical",
+      "purpose": "Solid mechanics, dynamics, reliability, manufacturing, acoustics and offshore loading",
+      "mathematical_methods": [
+        "FE stiffness/mass",
+        "nonlinear constitutive updates",
+        "time integration",
+        "eigenproblems",
+        "contact",
+        "wave or hydrodynamic formulations"
+      ],
+      "reusable_unicore": [
+        "TET4/HEX8 static elasticity",
+        "CSR-PCG",
+        "materials records",
+        "worker jobs"
+      ],
+      "missing_infrastructure": [
+        "beam/shell elements",
+        "contact",
+        "plasticity",
+        "modal/dynamic solvers",
+        "fatigue models",
+        "domain benchmarks"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "SuiteSparse",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 2,
+      "validation_requirements": [
+        "patch tests",
+        "bending/convergence",
+        "modal frequencies",
+        "energy/reaction balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Fatigue",
+      "domain": "Structural and Mechanical",
+      "purpose": "Solid mechanics, dynamics, reliability, manufacturing, acoustics and offshore loading",
+      "mathematical_methods": [
+        "FE stiffness/mass",
+        "nonlinear constitutive updates",
+        "time integration",
+        "eigenproblems",
+        "contact",
+        "wave or hydrodynamic formulations"
+      ],
+      "reusable_unicore": [
+        "TET4/HEX8 static elasticity",
+        "CSR-PCG",
+        "materials records",
+        "worker jobs"
+      ],
+      "missing_infrastructure": [
+        "beam/shell elements",
+        "contact",
+        "plasticity",
+        "modal/dynamic solvers",
+        "fatigue models",
+        "domain benchmarks"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "SuiteSparse",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 2,
+      "validation_requirements": [
+        "patch tests",
+        "bending/convergence",
+        "modal frequencies",
+        "energy/reaction balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Aqwa",
+      "domain": "Structural and Mechanical",
+      "purpose": "Solid mechanics, dynamics, reliability, manufacturing, acoustics and offshore loading",
+      "mathematical_methods": [
+        "FE stiffness/mass",
+        "nonlinear constitutive updates",
+        "time integration",
+        "eigenproblems",
+        "contact",
+        "wave or hydrodynamic formulations"
+      ],
+      "reusable_unicore": [
+        "TET4/HEX8 static elasticity",
+        "CSR-PCG",
+        "materials records",
+        "worker jobs"
+      ],
+      "missing_infrastructure": [
+        "beam/shell elements",
+        "contact",
+        "plasticity",
+        "modal/dynamic solvers",
+        "fatigue models",
+        "domain benchmarks"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "SuiteSparse",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 2,
+      "validation_requirements": [
+        "patch tests",
+        "bending/convergence",
+        "modal frequencies",
+        "energy/reaction balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Fluent",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "CFX",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Rocky",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Polyflow",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Chemkin / Reaction Workbench",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Forte",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "FENSAP-ICE",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "EnSight",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "CFD-Post",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "ICEM CFD",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "TurboGrid",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "BladeModeler",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "VistaTF",
+      "domain": "Fluid Dynamics",
+      "purpose": "Continuum/granular/reacting flow, specialized meshing and postprocessing",
+      "mathematical_methods": [
+        "finite volumes",
+        "pressure-velocity coupling",
+        "transport",
+        "constitutive rheology",
+        "reaction kinetics",
+        "particle contacts"
+      ],
+      "reusable_unicore": [
+        "CSR-PCG for SPD pressure blocks",
+        "molecular particle runtime (not DEM/CFD)",
+        "field visualization",
+        "material schema"
+      ],
+      "missing_infrastructure": [
+        "fluid regions",
+        "face flux conservation",
+        "pressure projection",
+        "advection stabilization",
+        "fluid boundary models"
+      ],
+      "library_candidates": [
+        "PETSc",
+        "Gmsh",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 3,
+      "validation_requirements": [
+        "Poiseuille profiles",
+        "lid-driven cavity",
+        "mass/energy conservation",
+        "grid refinement"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "HFSS",
+      "domain": "Electromagnetics and Electronics",
+      "purpose": "Fields, parasitics, electrical machines, signal/power integrity, cooling and RF networks",
+      "mathematical_methods": [
+        "Maxwell curl/div systems",
+        "edge elements",
+        "complex linear algebra",
+        "circuit equations",
+        "thermal coupling"
+      ],
+      "reusable_unicore": [
+        "conduction kernel for limited solid conduction (not electronics cooling)",
+        "material metadata",
+        "jobs/mesh/result infrastructure"
+      ],
+      "missing_infrastructure": [
+        "H(curl) elements",
+        "frequency domain complex solves",
+        "absorbing boundaries",
+        "circuit/network extraction"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "PETSc",
+        "SLEPc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "manufactured Maxwell solutions",
+        "waveguide modes",
+        "RLC references",
+        "electrostatic convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Maxwell",
+      "domain": "Electromagnetics and Electronics",
+      "purpose": "Fields, parasitics, electrical machines, signal/power integrity, cooling and RF networks",
+      "mathematical_methods": [
+        "Maxwell curl/div systems",
+        "edge elements",
+        "complex linear algebra",
+        "circuit equations",
+        "thermal coupling"
+      ],
+      "reusable_unicore": [
+        "conduction kernel for limited solid conduction (not electronics cooling)",
+        "material metadata",
+        "jobs/mesh/result infrastructure"
+      ],
+      "missing_infrastructure": [
+        "H(curl) elements",
+        "frequency domain complex solves",
+        "absorbing boundaries",
+        "circuit/network extraction"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "PETSc",
+        "SLEPc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "manufactured Maxwell solutions",
+        "waveguide modes",
+        "RLC references",
+        "electrostatic convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "SIwave",
+      "domain": "Electromagnetics and Electronics",
+      "purpose": "Fields, parasitics, electrical machines, signal/power integrity, cooling and RF networks",
+      "mathematical_methods": [
+        "Maxwell curl/div systems",
+        "edge elements",
+        "complex linear algebra",
+        "circuit equations",
+        "thermal coupling"
+      ],
+      "reusable_unicore": [
+        "conduction kernel for limited solid conduction (not electronics cooling)",
+        "material metadata",
+        "jobs/mesh/result infrastructure"
+      ],
+      "missing_infrastructure": [
+        "H(curl) elements",
+        "frequency domain complex solves",
+        "absorbing boundaries",
+        "circuit/network extraction"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "PETSc",
+        "SLEPc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "manufactured Maxwell solutions",
+        "waveguide modes",
+        "RLC references",
+        "electrostatic convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Icepak",
+      "domain": "Electromagnetics and Electronics",
+      "purpose": "Fields, parasitics, electrical machines, signal/power integrity, cooling and RF networks",
+      "mathematical_methods": [
+        "Maxwell curl/div systems",
+        "edge elements",
+        "complex linear algebra",
+        "circuit equations",
+        "thermal coupling"
+      ],
+      "reusable_unicore": [
+        "conduction kernel for limited solid conduction (not electronics cooling)",
+        "material metadata",
+        "jobs/mesh/result infrastructure"
+      ],
+      "missing_infrastructure": [
+        "H(curl) elements",
+        "frequency domain complex solves",
+        "absorbing boundaries",
+        "circuit/network extraction"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "PETSc",
+        "SLEPc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite",
+        "structural/thermal transfer"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "manufactured Maxwell solutions",
+        "waveguide modes",
+        "RLC references",
+        "electrostatic convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Q3D Extractor",
+      "domain": "Electromagnetics and Electronics",
+      "purpose": "Fields, parasitics, electrical machines, signal/power integrity, cooling and RF networks",
+      "mathematical_methods": [
+        "Maxwell curl/div systems",
+        "edge elements",
+        "complex linear algebra",
+        "circuit equations",
+        "thermal coupling"
+      ],
+      "reusable_unicore": [
+        "conduction kernel for limited solid conduction (not electronics cooling)",
+        "material metadata",
+        "jobs/mesh/result infrastructure"
+      ],
+      "missing_infrastructure": [
+        "H(curl) elements",
+        "frequency domain complex solves",
+        "absorbing boundaries",
+        "circuit/network extraction"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "PETSc",
+        "SLEPc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "manufactured Maxwell solutions",
+        "waveguide modes",
+        "RLC references",
+        "electrostatic convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Electronics Desktop",
+      "domain": "Electromagnetics and Electronics",
+      "purpose": "Fields, parasitics, electrical machines, signal/power integrity, cooling and RF networks",
+      "mathematical_methods": [
+        "Maxwell curl/div systems",
+        "edge elements",
+        "complex linear algebra",
+        "circuit equations",
+        "thermal coupling"
+      ],
+      "reusable_unicore": [
+        "conduction kernel for limited solid conduction (not electronics cooling)",
+        "material metadata",
+        "jobs/mesh/result infrastructure"
+      ],
+      "missing_infrastructure": [
+        "H(curl) elements",
+        "frequency domain complex solves",
+        "absorbing boundaries",
+        "circuit/network extraction"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "PETSc",
+        "SLEPc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "manufactured Maxwell solutions",
+        "waveguide modes",
+        "RLC references",
+        "electrostatic convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Motor-CAD",
+      "domain": "Electromagnetics and Electronics",
+      "purpose": "Fields, parasitics, electrical machines, signal/power integrity, cooling and RF networks",
+      "mathematical_methods": [
+        "Maxwell curl/div systems",
+        "edge elements",
+        "complex linear algebra",
+        "circuit equations",
+        "thermal coupling"
+      ],
+      "reusable_unicore": [
+        "conduction kernel for limited solid conduction (not electronics cooling)",
+        "material metadata",
+        "jobs/mesh/result infrastructure"
+      ],
+      "missing_infrastructure": [
+        "H(curl) elements",
+        "frequency domain complex solves",
+        "absorbing boundaries",
+        "circuit/network extraction"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "PETSc",
+        "SLEPc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "manufactured Maxwell solutions",
+        "waveguide modes",
+        "RLC references",
+        "electrostatic convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "EMC Plus",
+      "domain": "Electromagnetics and Electronics",
+      "purpose": "Fields, parasitics, electrical machines, signal/power integrity, cooling and RF networks",
+      "mathematical_methods": [
+        "Maxwell curl/div systems",
+        "edge elements",
+        "complex linear algebra",
+        "circuit equations",
+        "thermal coupling"
+      ],
+      "reusable_unicore": [
+        "conduction kernel for limited solid conduction (not electronics cooling)",
+        "material metadata",
+        "jobs/mesh/result infrastructure"
+      ],
+      "missing_infrastructure": [
+        "H(curl) elements",
+        "frequency domain complex solves",
+        "absorbing boundaries",
+        "circuit/network extraction"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "PETSc",
+        "SLEPc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "manufactured Maxwell solutions",
+        "waveguide modes",
+        "RLC references",
+        "electrostatic convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Charge Plus",
+      "domain": "Electromagnetics and Electronics",
+      "purpose": "Fields, parasitics, electrical machines, signal/power integrity, cooling and RF networks",
+      "mathematical_methods": [
+        "Maxwell curl/div systems",
+        "edge elements",
+        "complex linear algebra",
+        "circuit equations",
+        "thermal coupling"
+      ],
+      "reusable_unicore": [
+        "conduction kernel for limited solid conduction (not electronics cooling)",
+        "material metadata",
+        "jobs/mesh/result infrastructure"
+      ],
+      "missing_infrastructure": [
+        "H(curl) elements",
+        "frequency domain complex solves",
+        "absorbing boundaries",
+        "circuit/network extraction"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "PETSc",
+        "SLEPc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "manufactured Maxwell solutions",
+        "waveguide modes",
+        "RLC references",
+        "electrostatic convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "SynMatrix",
+      "domain": "Electromagnetics and Electronics",
+      "purpose": "Fields, parasitics, electrical machines, signal/power integrity, cooling and RF networks",
+      "mathematical_methods": [
+        "Maxwell curl/div systems",
+        "edge elements",
+        "complex linear algebra",
+        "circuit equations",
+        "thermal coupling"
+      ],
+      "reusable_unicore": [
+        "conduction kernel for limited solid conduction (not electronics cooling)",
+        "material metadata",
+        "jobs/mesh/result infrastructure"
+      ],
+      "missing_infrastructure": [
+        "H(curl) elements",
+        "frequency domain complex solves",
+        "absorbing boundaries",
+        "circuit/network extraction"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "PETSc",
+        "SLEPc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "manufactured Maxwell solutions",
+        "waveguide modes",
+        "RLC references",
+        "electrostatic convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "FilterSolutions",
+      "domain": "Electromagnetics and Electronics",
+      "purpose": "Fields, parasitics, electrical machines, signal/power integrity, cooling and RF networks",
+      "mathematical_methods": [
+        "Maxwell curl/div systems",
+        "edge elements",
+        "complex linear algebra",
+        "circuit equations",
+        "thermal coupling"
+      ],
+      "reusable_unicore": [
+        "conduction kernel for limited solid conduction (not electronics cooling)",
+        "material metadata",
+        "jobs/mesh/result infrastructure"
+      ],
+      "missing_infrastructure": [
+        "H(curl) elements",
+        "frequency domain complex solves",
+        "absorbing boundaries",
+        "circuit/network extraction"
+      ],
+      "library_candidates": [
+        "Eigen",
+        "PETSc",
+        "SLEPc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "manufactured Maxwell solutions",
+        "waveguide modes",
+        "RLC references",
+        "electrostatic convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "RedHawk-SC",
+      "domain": "Semiconductors",
+      "purpose": "IC power integrity, reliability, RTL estimation and ESD",
+      "mathematical_methods": [
+        "circuit/network solves",
+        "electrothermal models",
+        "device transport",
+        "RTL activity analysis"
+      ],
+      "reusable_unicore": [
+        "thermal conduction",
+        "material schema",
+        "jobs/results"
+      ],
+      "missing_infrastructure": [
+        "netlist/layout import",
+        "device/ESD laws",
+        "electrical networks",
+        "technology data"
+      ],
+      "library_candidates": [
+        "KLU (SuiteSparse)",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "RC network transients",
+        "device IV references",
+        "power/energy balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Totem",
+      "domain": "Semiconductors",
+      "purpose": "IC power integrity, reliability, RTL estimation and ESD",
+      "mathematical_methods": [
+        "circuit/network solves",
+        "electrothermal models",
+        "device transport",
+        "RTL activity analysis"
+      ],
+      "reusable_unicore": [
+        "thermal conduction",
+        "material schema",
+        "jobs/results"
+      ],
+      "missing_infrastructure": [
+        "netlist/layout import",
+        "device/ESD laws",
+        "electrical networks",
+        "technology data"
+      ],
+      "library_candidates": [
+        "KLU (SuiteSparse)",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "RC network transients",
+        "device IV references",
+        "power/energy balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "PowerArtist",
+      "domain": "Semiconductors",
+      "purpose": "IC power integrity, reliability, RTL estimation and ESD",
+      "mathematical_methods": [
+        "circuit/network solves",
+        "electrothermal models",
+        "device transport",
+        "RTL activity analysis"
+      ],
+      "reusable_unicore": [
+        "thermal conduction",
+        "material schema",
+        "jobs/results"
+      ],
+      "missing_infrastructure": [
+        "netlist/layout import",
+        "device/ESD laws",
+        "electrical networks",
+        "technology data"
+      ],
+      "library_candidates": [
+        "KLU (SuiteSparse)",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "RC network transients",
+        "device IV references",
+        "power/energy balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Pathfinder",
+      "domain": "Semiconductors",
+      "purpose": "IC power integrity, reliability, RTL estimation and ESD",
+      "mathematical_methods": [
+        "circuit/network solves",
+        "electrothermal models",
+        "device transport",
+        "RTL activity analysis"
+      ],
+      "reusable_unicore": [
+        "thermal conduction",
+        "material schema",
+        "jobs/results"
+      ],
+      "missing_infrastructure": [
+        "netlist/layout import",
+        "device/ESD laws",
+        "electrical networks",
+        "technology data"
+      ],
+      "library_candidates": [
+        "KLU (SuiteSparse)",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "RC network transients",
+        "device IV references",
+        "power/energy balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "ParagonX",
+      "domain": "Semiconductors",
+      "purpose": "IC power integrity, reliability, RTL estimation and ESD",
+      "mathematical_methods": [
+        "circuit/network solves",
+        "electrothermal models",
+        "device transport",
+        "RTL activity analysis"
+      ],
+      "reusable_unicore": [
+        "thermal conduction",
+        "material schema",
+        "jobs/results"
+      ],
+      "missing_infrastructure": [
+        "netlist/layout import",
+        "device/ESD laws",
+        "electrical networks",
+        "technology data"
+      ],
+      "library_candidates": [
+        "KLU (SuiteSparse)",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "RC network transients",
+        "device IV references",
+        "power/energy balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "PowerX",
+      "domain": "Semiconductors",
+      "purpose": "IC power integrity, reliability, RTL estimation and ESD",
+      "mathematical_methods": [
+        "circuit/network solves",
+        "electrothermal models",
+        "device transport",
+        "RTL activity analysis"
+      ],
+      "reusable_unicore": [
+        "thermal conduction",
+        "material schema",
+        "jobs/results"
+      ],
+      "missing_infrastructure": [
+        "netlist/layout import",
+        "device/ESD laws",
+        "electrical networks",
+        "technology data"
+      ],
+      "library_candidates": [
+        "KLU (SuiteSparse)",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "RC network transients",
+        "device IV references",
+        "power/energy balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "RaptorX",
+      "domain": "Semiconductors",
+      "purpose": "IC power integrity, reliability, RTL estimation and ESD",
+      "mathematical_methods": [
+        "circuit/network solves",
+        "electrothermal models",
+        "device transport",
+        "RTL activity analysis"
+      ],
+      "reusable_unicore": [
+        "thermal conduction",
+        "material schema",
+        "jobs/results"
+      ],
+      "missing_infrastructure": [
+        "netlist/layout import",
+        "device/ESD laws",
+        "electrical networks",
+        "technology data"
+      ],
+      "library_candidates": [
+        "KLU (SuiteSparse)",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "RC network transients",
+        "device IV references",
+        "power/energy balance"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Zemax OpticStudio",
+      "domain": "Optics and Photonics",
+      "purpose": "Ray/wave optics, visual lighting, optical modes and carrier/thermal device analysis",
+      "mathematical_methods": [
+        "ray tracing",
+        "Yee FDTD",
+        "eigenmodes",
+        "drift-diffusion",
+        "radiometry"
+      ],
+      "reusable_unicore": [
+        "geometry transforms",
+        "quantum runtime patterns (not an optical solver)",
+        "thermal conduction"
+      ],
+      "missing_infrastructure": [
+        "optical surfaces/material dispersion",
+        "Maxwell solver",
+        "optical boundary conditions",
+        "carrier transport"
+      ],
+      "library_candidates": [
+        "SLEPc",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "Snell/Fresnel tests",
+        "cavity/guide modes",
+        "power conservation",
+        "mesh/time convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Speos",
+      "domain": "Optics and Photonics",
+      "purpose": "Ray/wave optics, visual lighting, optical modes and carrier/thermal device analysis",
+      "mathematical_methods": [
+        "ray tracing",
+        "Yee FDTD",
+        "eigenmodes",
+        "drift-diffusion",
+        "radiometry"
+      ],
+      "reusable_unicore": [
+        "geometry transforms",
+        "quantum runtime patterns (not an optical solver)",
+        "thermal conduction"
+      ],
+      "missing_infrastructure": [
+        "optical surfaces/material dispersion",
+        "Maxwell solver",
+        "optical boundary conditions",
+        "carrier transport"
+      ],
+      "library_candidates": [
+        "SLEPc",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "Snell/Fresnel tests",
+        "cavity/guide modes",
+        "power conservation",
+        "mesh/time convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Lumerical FDTD",
+      "domain": "Optics and Photonics",
+      "purpose": "Ray/wave optics, visual lighting, optical modes and carrier/thermal device analysis",
+      "mathematical_methods": [
+        "ray tracing",
+        "Yee FDTD",
+        "eigenmodes",
+        "drift-diffusion",
+        "radiometry"
+      ],
+      "reusable_unicore": [
+        "geometry transforms",
+        "quantum runtime patterns (not an optical solver)",
+        "thermal conduction"
+      ],
+      "missing_infrastructure": [
+        "optical surfaces/material dispersion",
+        "Maxwell solver",
+        "optical boundary conditions",
+        "carrier transport"
+      ],
+      "library_candidates": [
+        "SLEPc",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "Snell/Fresnel tests",
+        "cavity/guide modes",
+        "power conservation",
+        "mesh/time convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Lumerical MODE",
+      "domain": "Optics and Photonics",
+      "purpose": "Ray/wave optics, visual lighting, optical modes and carrier/thermal device analysis",
+      "mathematical_methods": [
+        "ray tracing",
+        "Yee FDTD",
+        "eigenmodes",
+        "drift-diffusion",
+        "radiometry"
+      ],
+      "reusable_unicore": [
+        "geometry transforms",
+        "quantum runtime patterns (not an optical solver)",
+        "thermal conduction"
+      ],
+      "missing_infrastructure": [
+        "optical surfaces/material dispersion",
+        "Maxwell solver",
+        "optical boundary conditions",
+        "carrier transport"
+      ],
+      "library_candidates": [
+        "SLEPc",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "Snell/Fresnel tests",
+        "cavity/guide modes",
+        "power conservation",
+        "mesh/time convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Lumerical CHARGE",
+      "domain": "Optics and Photonics",
+      "purpose": "Ray/wave optics, visual lighting, optical modes and carrier/thermal device analysis",
+      "mathematical_methods": [
+        "ray tracing",
+        "Yee FDTD",
+        "eigenmodes",
+        "drift-diffusion",
+        "radiometry"
+      ],
+      "reusable_unicore": [
+        "geometry transforms",
+        "quantum runtime patterns (not an optical solver)",
+        "thermal conduction"
+      ],
+      "missing_infrastructure": [
+        "optical surfaces/material dispersion",
+        "Maxwell solver",
+        "optical boundary conditions",
+        "carrier transport"
+      ],
+      "library_candidates": [
+        "SLEPc",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "Snell/Fresnel tests",
+        "cavity/guide modes",
+        "power conservation",
+        "mesh/time convergence"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Lumerical HEAT",
+      "domain": "Optics and Photonics",
+      "purpose": "Ray/wave optics, visual lighting, optical modes and carrier/thermal device analysis",
+      "mathematical_methods": [
+        "ray tracing",
+        "Yee FDTD",
+        "eigenmodes",
+        "drift-diffusion",
+        "radiometry"
+      ],
+      "reusable_unicore": [
+        "geometry transforms",
+        "quantum runtime patterns (not an optical solver)",
+        "thermal conduction"
+      ],
+      "missing_infrastructure": [
+        "optical surfaces/material dispersion",
+        "Maxwell solver",
+        "optical boundary conditions",
+        "carrier transport"
+      ],
+      "library_candidates": [
+        "SLEPc",
+        "PETSc"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite",
+        "structural/thermal transfer"
+      ],
+      "priority": 5,
+      "validation_requirements": [
+        "Snell/Fresnel tests",
+        "cavity/guide modes",
+        "power conservation",
+        "mesh/time convergence"
+      ],
+      "status": "partial shared conduction mathematics; no device tool"
+    },
+    {
+      "family_reference": "optiSLang",
+      "domain": "Systems and Optimization",
+      "purpose": "Design exploration, reduced models, MBSE, safety and embedded model development",
+      "mathematical_methods": [
+        "optimization",
+        "sensitivity",
+        "model reduction",
+        "ODE/DAE",
+        "state machines",
+        "reliability logic"
+      ],
+      "reusable_unicore": [
+        "validated command layer",
+        "immutable snapshots",
+        "revision-aware results",
+        "AI provider infrastructure"
+      ],
+      "missing_infrastructure": [
+        "parameter studies",
+        "gradients",
+        "ROM training/validation",
+        "system graph",
+        "safety model semantics"
+      ],
+      "library_candidates": [
+        "NLopt",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "analytic optimization problems",
+        "held-out ROM error",
+        "DAE references",
+        "deterministic replay"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Twin Builder",
+      "domain": "Systems and Optimization",
+      "purpose": "Design exploration, reduced models, MBSE, safety and embedded model development",
+      "mathematical_methods": [
+        "optimization",
+        "sensitivity",
+        "model reduction",
+        "ODE/DAE",
+        "state machines",
+        "reliability logic"
+      ],
+      "reusable_unicore": [
+        "validated command layer",
+        "immutable snapshots",
+        "revision-aware results",
+        "AI provider infrastructure"
+      ],
+      "missing_infrastructure": [
+        "parameter studies",
+        "gradients",
+        "ROM training/validation",
+        "system graph",
+        "safety model semantics"
+      ],
+      "library_candidates": [
+        "NLopt",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "analytic optimization problems",
+        "held-out ROM error",
+        "DAE references",
+        "deterministic replay"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "ModelCenter",
+      "domain": "Systems and Optimization",
+      "purpose": "Design exploration, reduced models, MBSE, safety and embedded model development",
+      "mathematical_methods": [
+        "optimization",
+        "sensitivity",
+        "model reduction",
+        "ODE/DAE",
+        "state machines",
+        "reliability logic"
+      ],
+      "reusable_unicore": [
+        "validated command layer",
+        "immutable snapshots",
+        "revision-aware results",
+        "AI provider infrastructure"
+      ],
+      "missing_infrastructure": [
+        "parameter studies",
+        "gradients",
+        "ROM training/validation",
+        "system graph",
+        "safety model semantics"
+      ],
+      "library_candidates": [
+        "NLopt",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "analytic optimization problems",
+        "held-out ROM error",
+        "DAE references",
+        "deterministic replay"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Medini Analyze",
+      "domain": "Systems and Optimization",
+      "purpose": "Design exploration, reduced models, MBSE, safety and embedded model development",
+      "mathematical_methods": [
+        "optimization",
+        "sensitivity",
+        "model reduction",
+        "ODE/DAE",
+        "state machines",
+        "reliability logic"
+      ],
+      "reusable_unicore": [
+        "validated command layer",
+        "immutable snapshots",
+        "revision-aware results",
+        "AI provider infrastructure"
+      ],
+      "missing_infrastructure": [
+        "parameter studies",
+        "gradients",
+        "ROM training/validation",
+        "system graph",
+        "safety model semantics"
+      ],
+      "library_candidates": [
+        "NLopt",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "analytic optimization problems",
+        "held-out ROM error",
+        "DAE references",
+        "deterministic replay"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "SCADE",
+      "domain": "Systems and Optimization",
+      "purpose": "Design exploration, reduced models, MBSE, safety and embedded model development",
+      "mathematical_methods": [
+        "optimization",
+        "sensitivity",
+        "model reduction",
+        "ODE/DAE",
+        "state machines",
+        "reliability logic"
+      ],
+      "reusable_unicore": [
+        "validated command layer",
+        "immutable snapshots",
+        "revision-aware results",
+        "AI provider infrastructure"
+      ],
+      "missing_infrastructure": [
+        "parameter studies",
+        "gradients",
+        "ROM training/validation",
+        "system graph",
+        "safety model semantics"
+      ],
+      "library_candidates": [
+        "NLopt",
+        "SUNDIALS"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 4,
+      "validation_requirements": [
+        "analytic optimization problems",
+        "held-out ROM error",
+        "DAE references",
+        "deterministic replay"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "GRANTA",
+      "domain": "Materials and Platforms",
+      "purpose": "Engineering data, geometry preparation, study orchestration and automation",
+      "mathematical_methods": [
+        "constitutive data models",
+        "CAD topology",
+        "mesh conversion",
+        "job protocols",
+        "schema validation"
+      ],
+      "reusable_unicore": [
+        "traceable material records",
+        "primitive CAD",
+        "static/thermal studies",
+        "AI commands",
+        "local worker cancellation"
+      ],
+      "missing_infrastructure": [
+        "BREP kernel",
+        "general mesher",
+        "remote jobs",
+        "full data curation",
+        "study dependencies"
+      ],
+      "library_candidates": [
+        "Open CASCADE",
+        "Gmsh",
+        "Eigen"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 1,
+      "validation_requirements": [
+        "material provenance/range checks",
+        "CAD roundtrip",
+        "topology/boundary mapping",
+        "job reproducibility"
+      ],
+      "status": "partial platform foundations; not product-equivalent"
+    },
+    {
+      "family_reference": "Discovery",
+      "domain": "Materials and Platforms",
+      "purpose": "Engineering data, geometry preparation, study orchestration and automation",
+      "mathematical_methods": [
+        "constitutive data models",
+        "CAD topology",
+        "mesh conversion",
+        "job protocols",
+        "schema validation"
+      ],
+      "reusable_unicore": [
+        "traceable material records",
+        "primitive CAD",
+        "static/thermal studies",
+        "AI commands",
+        "local worker cancellation"
+      ],
+      "missing_infrastructure": [
+        "BREP kernel",
+        "general mesher",
+        "remote jobs",
+        "full data curation",
+        "study dependencies"
+      ],
+      "library_candidates": [
+        "Open CASCADE",
+        "Gmsh",
+        "Eigen"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 1,
+      "validation_requirements": [
+        "material provenance/range checks",
+        "CAD roundtrip",
+        "topology/boundary mapping",
+        "job reproducibility"
+      ],
+      "status": "partial platform foundations; not product-equivalent"
+    },
+    {
+      "family_reference": "SpaceClaim",
+      "domain": "Materials and Platforms",
+      "purpose": "Engineering data, geometry preparation, study orchestration and automation",
+      "mathematical_methods": [
+        "constitutive data models",
+        "CAD topology",
+        "mesh conversion",
+        "job protocols",
+        "schema validation"
+      ],
+      "reusable_unicore": [
+        "traceable material records",
+        "primitive CAD",
+        "static/thermal studies",
+        "AI commands",
+        "local worker cancellation"
+      ],
+      "missing_infrastructure": [
+        "BREP kernel",
+        "general mesher",
+        "remote jobs",
+        "full data curation",
+        "study dependencies"
+      ],
+      "library_candidates": [
+        "Open CASCADE",
+        "Gmsh",
+        "Eigen"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 1,
+      "validation_requirements": [
+        "material provenance/range checks",
+        "CAD roundtrip",
+        "topology/boundary mapping",
+        "job reproducibility"
+      ],
+      "status": "partial platform foundations; not product-equivalent"
+    },
+    {
+      "family_reference": "Workbench",
+      "domain": "Materials and Platforms",
+      "purpose": "Engineering data, geometry preparation, study orchestration and automation",
+      "mathematical_methods": [
+        "constitutive data models",
+        "CAD topology",
+        "mesh conversion",
+        "job protocols",
+        "schema validation"
+      ],
+      "reusable_unicore": [
+        "traceable material records",
+        "primitive CAD",
+        "static/thermal studies",
+        "AI commands",
+        "local worker cancellation"
+      ],
+      "missing_infrastructure": [
+        "BREP kernel",
+        "general mesher",
+        "remote jobs",
+        "full data curation",
+        "study dependencies"
+      ],
+      "library_candidates": [
+        "Open CASCADE",
+        "Gmsh",
+        "Eigen"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 1,
+      "validation_requirements": [
+        "material provenance/range checks",
+        "CAD roundtrip",
+        "topology/boundary mapping",
+        "job reproducibility"
+      ],
+      "status": "partial platform foundations; not product-equivalent"
+    },
+    {
+      "family_reference": "CAD geometry interfaces",
+      "domain": "Materials and Platforms",
+      "purpose": "Engineering data, geometry preparation, study orchestration and automation",
+      "mathematical_methods": [
+        "constitutive data models",
+        "CAD topology",
+        "mesh conversion",
+        "job protocols",
+        "schema validation"
+      ],
+      "reusable_unicore": [
+        "traceable material records",
+        "primitive CAD",
+        "static/thermal studies",
+        "AI commands",
+        "local worker cancellation"
+      ],
+      "missing_infrastructure": [
+        "BREP kernel",
+        "general mesher",
+        "remote jobs",
+        "full data curation",
+        "study dependencies"
+      ],
+      "library_candidates": [
+        "Open CASCADE",
+        "Gmsh",
+        "Eigen"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 1,
+      "validation_requirements": [
+        "material provenance/range checks",
+        "CAD roundtrip",
+        "topology/boundary mapping",
+        "job reproducibility"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "Cloud / HPC execution",
+      "domain": "Materials and Platforms",
+      "purpose": "Engineering data, geometry preparation, study orchestration and automation",
+      "mathematical_methods": [
+        "constitutive data models",
+        "CAD topology",
+        "mesh conversion",
+        "job protocols",
+        "schema validation"
+      ],
+      "reusable_unicore": [
+        "traceable material records",
+        "primitive CAD",
+        "static/thermal studies",
+        "AI commands",
+        "local worker cancellation"
+      ],
+      "missing_infrastructure": [
+        "BREP kernel",
+        "general mesher",
+        "remote jobs",
+        "full data curation",
+        "study dependencies"
+      ],
+      "library_candidates": [
+        "Open CASCADE",
+        "Gmsh",
+        "Eigen"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 1,
+      "validation_requirements": [
+        "material provenance/range checks",
+        "CAD roundtrip",
+        "topology/boundary mapping",
+        "job reproducibility"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "family_reference": "PyAnsys-style automation",
+      "domain": "Materials and Platforms",
+      "purpose": "Engineering data, geometry preparation, study orchestration and automation",
+      "mathematical_methods": [
+        "constitutive data models",
+        "CAD topology",
+        "mesh conversion",
+        "job protocols",
+        "schema validation"
+      ],
+      "reusable_unicore": [
+        "traceable material records",
+        "primitive CAD",
+        "static/thermal studies",
+        "AI commands",
+        "local worker cancellation"
+      ],
+      "missing_infrastructure": [
+        "BREP kernel",
+        "general mesher",
+        "remote jobs",
+        "full data curation",
+        "study dependencies"
+      ],
+      "library_candidates": [
+        "Open CASCADE",
+        "Gmsh",
+        "Eigen"
+      ],
+      "library_review_status": "Candidates only; not integrated. Packaging, ABI and licenses must be reviewed per library.",
+      "dependencies": [
+        "validated mesh and material regions",
+        "linear algebra",
+        "benchmark suite"
+      ],
+      "priority": 1,
+      "validation_requirements": [
+        "material provenance/range checks",
+        "CAD roundtrip",
+        "topology/boundary mapping",
+        "job reproducibility"
+      ],
+      "status": "partial platform foundations; not product-equivalent"
+    }
+  ]
+}

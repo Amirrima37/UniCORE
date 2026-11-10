@@ -1,0 +1,26 @@
+{
+  "baseline_scripts": 32,
+  "native_scripts": 37,
+  "zero_exit_scripts": 35,
+  "known_nonzero_failures": [
+    "tests/test_app_shell_suite.gd",
+    "tests/test_multiplayer_sync_suite.gd"
+  ],
+  "new_failures": [],
+  "new_script_diagnostics": [],
+  "script_diagnostic_suites": [
+    "tests/test_adversarial_stress_suite.gd",
+    "tests/test_diagnostic_logger_suite.gd",
+    "tests/test_multiplayer_sync_suite.gd",
+    "tests/test_physics_interaction_suite.gd",
+    "tests/test_self_repair_suite.gd",
+    "tests/test_validator_suite.gd"
+  ],
+  "added_suites": [
+    "tests/test_native_gravity_suite.gd",
+    "tests/test_native_molecular_suite.gd",
+    "tests/test_native_nuclear_suite.gd",
+    "tests/test_native_quantum_suite.gd",
+    "tests/test_native_remaining_fixtures_suite.gd"
+  ]
+}

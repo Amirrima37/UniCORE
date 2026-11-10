@@ -1,0 +1,307 @@
+class_name TopBar
+extends Control
+
+const DetroitOrbScript = preload("res://ui/led_indicator/detroit_orb.gd")
+const SettingsManagerScript = preload("res://core/settings_manager.gd")
+const SpaceManagerScript = preload("res://core/space_manager.gd")
+
+## Верхняя киберпанель интерфейса UniCORE (HUD Top Bar)
+## В стиле "Detroit: Become Human": матовое стекло, неоновые акценты, LED-орб,
+## быстрый доступ к меню, пространствам, настройкам и полноэкранному режиму.
+
+signal menu_button_pressed(target_tab: String)
+signal prompt_toggle_pressed
+signal log_button_pressed
+signal fullscreen_toggle_pressed
+
+@onready var panel_container: PanelContainer = $PanelContainer
+@onready var detroit_orb: Control = $PanelContainer/MarginContainer/HBoxContainer/LeftBox/DetroitOrb
+@onready var logo_label: Label = $PanelContainer/MarginContainer/HBoxContainer/LeftBox/LogoLabel
+@onready var space_badge_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/LeftBox/SpaceBadgeButton
+@onready var status_ticker_label: Label = $PanelContainer/MarginContainer/HBoxContainer/LeftBox/StatusTicker
+@onready var fps_label: Label = $PanelContainer/MarginContainer/HBoxContainer/RightBox/FpsLabel
+
+@onready var spaces_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/SpacesButton
+@onready var settings_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/SettingsButton
+@onready var prompt_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/PromptButton
+@onready var log_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/LogButton
+@onready var network_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/NetworkButton
+@onready var network_status_led: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/NetworkButton
+@onready var fullscreen_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/FullscreenButton
+@onready var menu_btn: Button = $PanelContainer/MarginContainer/HBoxContainer/RightBox/MenuButton
+
+const COLOR_NET_OFFLINE: Color = Color(0.4, 0.45, 0.5, 0.7)
+const COLOR_NET_HOSTING: Color = Color(0.0, 0.9, 1.0, 1.0)
+const COLOR_NET_CONNECTED: Color = Color(0.0, 0.9, 0.45, 1.0)
+const COLOR_NET_SYNCING: Color = Color(1.0, 0.7, 0.0, 1.0)
+
+var _current_net_status: String = "offline"
+var _current_net_peers: int = 0
+var _current_net_host: String = ""
+
+var _settings_manager: Node
+var _space_manager: Node
+var _agent_brain: Node
+var _event_bus: Node
+
+func _ready() -> void:
+	_apply_cyber_styling()
+	space_badge_btn.clip_text = true
+	space_badge_btn.custom_minimum_size.x = 110
+	resized.connect(_fit_navigation)
+	_fit_navigation.call_deferred()
+
+	spaces_btn.pressed.connect(func(): menu_button_pressed.emit("spaces"))
+	settings_btn.pressed.connect(func(): menu_button_pressed.emit("settings"))
+	prompt_btn.pressed.connect(func(): prompt_toggle_pressed.emit())
+	log_btn.pressed.connect(func(): log_button_pressed.emit())
+	network_btn.pressed.connect(func(): menu_button_pressed.emit("network"))
+	fullscreen_btn.pressed.connect(func(): fullscreen_toggle_pressed.emit())
+	menu_btn.pressed.connect(func(): menu_button_pressed.emit("menu"))
+	space_badge_btn.pressed.connect(func(): menu_button_pressed.emit("spaces"))
+
+	if logo_label:
+		logo_label.mouse_filter = Control.MOUSE_FILTER_STOP
+		logo_label.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		logo_label.gui_input.connect(func(event: InputEvent):
+			if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+				menu_button_pressed.emit("welcome")
+		)
+
+func _process(_delta: float) -> void:
+	if fps_label:
+		fps_label.text = "%d FPS" % Engine.get_frames_per_second()
+
+func _fit_navigation() -> void:
+	# Keep the mode selector beside the logo visible even on small windows.
+	status_ticker_label.visible = size.x > 1700
+	space_badge_btn.visible = size.x > 1000
+	spaces_btn.visible = size.x > 1450
+	network_btn.visible = size.x > 1550
+	fps_label.visible = size.x > 1550
+	log_btn.visible = size.x > 1200
+	fullscreen_btn.visible = size.x > 1050
+	settings_btn.visible = size.x > 750
+
+func setup(settings_mgr: Node, space_mgr: Node, brain: Node, event_bus: Node) -> void:
+	_settings_manager = settings_mgr
+	_space_manager = space_mgr
+	_agent_brain = brain
+	_event_bus = event_bus
+
+	if _space_manager:
+		_space_manager.space_loaded.connect(_on_space_loaded)
+		_space_manager.space_saved.connect(_on_space_saved)
+		_space_manager.space_error.connect(_on_space_error)
+		_update_space_badge(_space_manager.current_space_name)
+
+	if _settings_manager:
+		_settings_manager.setting_changed.connect(_on_setting_changed)
+		var is_fs: bool = _settings_manager.get_setting("display", "fullscreen", false)
+		fullscreen_btn.text = "ОКНО [F11]" if is_fs else "ЭКРАН [F11]"
+
+	if _agent_brain:
+		_agent_brain.request_started.connect(func(_p):
+			detroit_orb.set_processing("Генерация модуля...")
+			status_ticker_label.text = "// AGENT: GENERATING MODULE..."
+			status_ticker_label.modulate = CyberTheme.COLOR_AMBER_LED
+		)
+		_agent_brain.request_completed.connect(func(mod_id):
+			detroit_orb.flash_success("Модуль смонтирован!")
+			status_ticker_label.text = "// MODULE MOUNTED: %s" % mod_id.to_upper()
+			status_ticker_label.modulate = CyberTheme.COLOR_SUCCESS_LED
+		)
+		_agent_brain.request_failed.connect(func(err):
+			detroit_orb.flash_error("Сбой агента")
+			status_ticker_label.text = "// ERROR: %s" % err
+			status_ticker_label.modulate = CyberTheme.COLOR_RED_LED
+		)
+
+	if _event_bus:
+		_event_bus.subscribe("space_saved", func(payload):
+			detroit_orb.flash_success("Пространство сохранено!")
+			var sname: String = payload.get("name", "Space")
+			status_ticker_label.text = "// SAVED: %s" % sname.to_upper()
+			status_ticker_label.modulate = CyberTheme.COLOR_SUCCESS_LED
+		)
+		_event_bus.subscribe("space_loaded", func(payload):
+			var sname: String = payload.get("name", "Space")
+			_update_space_badge(sname)
+			detroit_orb.flash_success("Пространство загружено")
+			status_ticker_label.text = "// SPACE READY: %s" % sname.to_upper()
+			status_ticker_label.modulate = CyberTheme.COLOR_TEXT_CYAN
+		)
+		_event_bus.subscribe("space_cloned", func(payload):
+			var sname: String = payload.get("name", "Clone")
+			detroit_orb.flash_success("Пространство клонировано")
+			status_ticker_label.text = "// CLONED: %s" % sname.to_upper()
+			status_ticker_label.modulate = CyberTheme.COLOR_TEXT_CYAN
+		)
+		_event_bus.subscribe("module_loaded", func(payload):
+			var mid: String = payload.get("id", "Module")
+			detroit_orb.flash_success("Модуль активен")
+			status_ticker_label.text = "// MODULE ACTIVE: %s" % mid.to_upper()
+			status_ticker_label.modulate = CyberTheme.COLOR_SUCCESS_LED
+		)
+		_event_bus.subscribe("module_unloaded", func(payload):
+			var mid: String = payload.get("id", "Module")
+			status_ticker_label.text = "// MODULE UNLOADED: %s" % mid.to_upper()
+			status_ticker_label.modulate = CyberTheme.COLOR_TEXT_MUTED
+		)
+
+func _on_space_loaded(data: Dictionary) -> void:
+	var sname: String = data.get("name", "Unnamed Space")
+	_update_space_badge(sname)
+	detroit_orb.flash_success("Пространство загружено")
+	status_ticker_label.text = "// SPACE READY: %s" % sname.to_upper()
+	status_ticker_label.modulate = CyberTheme.COLOR_TEXT_CYAN
+
+func _on_space_saved(sname: String, _path: String) -> void:
+	_update_space_badge(sname)
+	detroit_orb.flash_success("Сохранено")
+	status_ticker_label.text = "// SAVED: %s" % sname.to_upper()
+	status_ticker_label.modulate = CyberTheme.COLOR_SUCCESS_LED
+
+func _update_space_badge(sname: String) -> void:
+	if space_badge_btn:
+		space_badge_btn.text = " ПРОСТРАНСТВО: %s " % sname.to_upper()
+
+func _on_space_error(msg: String) -> void:
+	detroit_orb.flash_error("Сбой пространства")
+	status_ticker_label.text = "// ERROR: %s" % msg.to_upper()
+	status_ticker_label.modulate = CyberTheme.COLOR_RED_LED
+
+func _on_setting_changed(category: String, key: String, value: Variant) -> void:
+	if category == "display" and key == "fullscreen":
+		var is_fs := bool(value)
+		if fullscreen_btn:
+			fullscreen_btn.text = "ОКНО [F11]" if is_fs else "ЭКРАН [F11]"
+	elif category == "interface":
+		_apply_cyber_styling()
+
+func _apply_cyber_styling() -> void:
+	var is_white := CyberTheme.is_white_theme()
+	# Стиль матового стекла с неоновой нижней линией (Cyber HUD Glass)
+	var top_style := StyleBoxFlat.new()
+	top_style.bg_color = CyberTheme.get_default_glass_bg()
+	top_style.border_width_bottom = 1
+	top_style.border_color = CyberTheme.COLOR_ELECTRIC_BLUE if is_white else Color(0.0, 0.85, 1.0, 0.65)
+	top_style.shadow_color = Color(top_style.border_color.r, top_style.border_color.g, top_style.border_color.b, clampf(0.2 * CyberTheme.get_led_intensity(), 0.05, 0.8))
+	top_style.shadow_size = int(round(4 * CyberTheme.get_led_intensity()))
+	top_style.set_content_margin_all(6)
+	top_style.content_margin_left = 14
+	top_style.content_margin_right = 14
+	panel_container.add_theme_stylebox_override("panel", top_style)
+
+	# Стили кнопок
+	var btn_normal: StyleBoxFlat
+	var btn_hover: StyleBoxFlat
+	var btn_pressed: StyleBoxFlat
+	var btn_focus := StyleBoxEmpty.new()
+
+	if is_white:
+		btn_normal = CyberTheme.create_cyber_button_style(Color(0.88, 0.93, 0.98, CyberTheme.get_glass_opacity()), Color(0.2, 0.6, 0.95, 0.5), 1, 3)
+		btn_hover = CyberTheme.create_cyber_button_style(Color(0.8, 0.9, 0.98, 0.95), CyberTheme.COLOR_ELECTRIC_BLUE, 1, 3)
+		btn_pressed = CyberTheme.create_cyber_button_style(Color(0.2, 0.65, 0.95, 0.95), CyberTheme.COLOR_CYAN_GLOW, 2, 3)
+	else:
+		btn_normal = CyberTheme.create_cyber_button_style(Color(0.05, 0.1, 0.18, 0.7), Color(0.0, 0.75, 1.0, 0.35), 1, 3)
+		btn_hover = CyberTheme.create_cyber_button_style(Color(0.08, 0.18, 0.32, 0.95), CyberTheme.COLOR_CYAN_GLOW, 1, 3)
+		btn_pressed = CyberTheme.create_cyber_button_style(Color(0.0, 0.45, 0.75, 0.95), CyberTheme.COLOR_CYAN_GLOW, 2, 3)
+
+	for btn in [spaces_btn, settings_btn, prompt_btn, log_btn, network_btn, fullscreen_btn, menu_btn]:
+		if is_instance_valid(btn):
+			btn.add_theme_stylebox_override("normal", btn_normal)
+			btn.add_theme_stylebox_override("hover", btn_hover)
+			btn.add_theme_stylebox_override("pressed", btn_pressed)
+			btn.add_theme_stylebox_override("focus", btn_focus)
+			btn.add_theme_color_override("font_color", CyberTheme.COLOR_TEXT_DARK if is_white else CyberTheme.COLOR_TEXT_PRIMARY)
+			btn.add_theme_color_override("font_hover_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW)
+			btn.add_theme_font_size_override("font_size", 12)
+
+	if is_instance_valid(logo_label):
+		logo_label.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW)
+	var subtitle_lbl: Label = get_node_or_null("PanelContainer/MarginContainer/HBoxContainer/LeftBox/Subtitle") as Label
+	if is_instance_valid(subtitle_lbl):
+		subtitle_lbl.add_theme_color_override("font_color", CyberTheme.get_text_muted_color())
+	if is_instance_valid(fps_label):
+		fps_label.add_theme_color_override("font_color", CyberTheme.get_text_muted_color())
+
+	# Подсказки (Tooltips) для быстрых кнопок
+	spaces_btn.tooltip_text = "Управление Пространствами (создание, загрузка, сохранение)"
+	settings_btn.tooltip_text = "Системные Настройки (графика, управление, ИИ-агент)"
+	prompt_btn.tooltip_text = "Командная строка Агента [Tab / ~]"
+	log_btn.tooltip_text = "Журнал и панель диагностики CyberLife [F10]"
+	if is_instance_valid(network_btn):
+		network_btn.tooltip_text = "Сеть: Offline (клик для подключения)"
+	fullscreen_btn.tooltip_text = "Полноэкранный режим [F11]"
+	menu_btn.tooltip_text = "Системное меню UniCORE [Esc]"
+
+	# Бейдж пространства
+	var badge_style := CyberTheme.create_cyber_button_style(
+		Color(0.82, 0.9, 0.98, 0.9) if is_white else Color(0.02, 0.14, 0.24, 0.85),
+		CyberTheme.COLOR_ELECTRIC_BLUE if is_white else Color(0.0, 0.85, 1.0, 0.6),
+		1,
+		3
+	)
+	if is_instance_valid(space_badge_btn):
+		space_badge_btn.add_theme_stylebox_override("normal", badge_style)
+		space_badge_btn.add_theme_stylebox_override("hover", btn_hover)
+		space_badge_btn.add_theme_stylebox_override("pressed", btn_pressed)
+		space_badge_btn.add_theme_stylebox_override("focus", btn_focus)
+		space_badge_btn.add_theme_color_override("font_color", CyberTheme.COLOR_ELECTRIC_BLUE if is_white else CyberTheme.COLOR_CYAN_GLOW)
+		space_badge_btn.add_theme_font_size_override("font_size", 12)
+		space_badge_btn.tooltip_text = "Текущее активное пространство (кликните для выбора)"
+
+	update_network_status(_current_net_status, _current_net_peers, _current_net_host)
+
+func update_network_status(status_str: String, peer_count: int = 0, host_name: String = "") -> void:
+	_current_net_status = status_str
+	_current_net_peers = peer_count
+	_current_net_host = host_name
+
+	if not is_instance_valid(network_btn):
+		return
+
+	var s := status_str.to_lower().strip_edges()
+	var col := COLOR_NET_OFFLINE
+	var desc := "Сеть: Offline (клик для подключения)"
+	var btn_title := "● СЕТЬ"
+
+	match s:
+		"hosting", "host":
+			col = COLOR_NET_HOSTING
+			if peer_count > 0:
+				desc = "Хост: %d узла(ов)" % peer_count
+				btn_title = "● ХОСТ (%d)" % peer_count
+			else:
+				desc = "Хост: ожидание пиров"
+				btn_title = "● ХОСТ"
+		"connected", "client":
+			col = COLOR_NET_CONNECTED
+			var target := host_name if not host_name.is_empty() else "Сервер"
+			desc = "Подключен к %s (%d узлов)" % [target, peer_count]
+			btn_title = "● В СЕТИ"
+		"syncing", "sync":
+			col = COLOR_NET_SYNCING
+			desc = "Сеть: Синхронизация данных..."
+			btn_title = "● СИНХР"
+		_:
+			col = COLOR_NET_OFFLINE
+			desc = "Сеть: Offline (клик для подключения)"
+			btn_title = "● СЕТЬ"
+
+	network_btn.text = btn_title
+	network_btn.tooltip_text = desc
+	network_btn.add_theme_color_override("font_color", col)
+	network_btn.add_theme_color_override("font_hover_color", col.lightened(0.2))
+
+func get_network_status_color() -> Color:
+	match _current_net_status.to_lower().strip_edges():
+		"hosting", "host":
+			return COLOR_NET_HOSTING
+		"connected", "client":
+			return COLOR_NET_CONNECTED
+		"syncing", "sync":
+			return COLOR_NET_SYNCING
+		_:
+			return COLOR_NET_OFFLINE

@@ -1,0 +1,400 @@
+{
+  "engine": {
+    "build": "official",
+    "hash": "92bee43adba8d2401ef40e2480e53087bcb1eaf1",
+    "hex": 262144,
+    "major": 4,
+    "minor": 0,
+    "patch": 0,
+    "status": "stable",
+    "string": "4.0-stable (official)",
+    "year": 2023
+  },
+  "headless": true,
+  "results": [
+    {
+      "effective_backend": "gdscript",
+      "kind": "gravity",
+      "median_step_usec": 56.3333333333333,
+      "p95_batch_mean_usec": 59.3333333333333,
+      "requested_backend": "gdscript",
+      "size": 2
+    },
+    {
+      "effective_backend": "native",
+      "kind": "gravity",
+      "median_step_usec": 14,
+      "p95_batch_mean_usec": 14.3333333333333,
+      "requested_backend": "native",
+      "size": 2
+    },
+    {
+      "effective_backend": "native",
+      "kind": "gravity",
+      "median_step_usec": 13.6666666666667,
+      "p95_batch_mean_usec": 14.3333333333333,
+      "requested_backend": "auto",
+      "size": 2
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "gravity",
+      "median_step_usec": 11229,
+      "p95_batch_mean_usec": 11564,
+      "requested_backend": "gdscript",
+      "size": 64
+    },
+    {
+      "effective_backend": "native",
+      "kind": "gravity",
+      "median_step_usec": 141.666666666667,
+      "p95_batch_mean_usec": 142.333333333333,
+      "requested_backend": "native",
+      "size": 64
+    },
+    {
+      "effective_backend": "native",
+      "kind": "gravity",
+      "median_step_usec": 139,
+      "p95_batch_mean_usec": 141.666666666667,
+      "requested_backend": "auto",
+      "size": 64
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "gravity",
+      "median_step_usec": 86982.6666666667,
+      "p95_batch_mean_usec": 103821.666666667,
+      "requested_backend": "gdscript",
+      "size": 256
+    },
+    {
+      "effective_backend": "native",
+      "kind": "gravity",
+      "median_step_usec": 797.333333333333,
+      "p95_batch_mean_usec": 870.333333333333,
+      "requested_backend": "native",
+      "size": 256
+    },
+    {
+      "effective_backend": "native",
+      "kind": "gravity",
+      "median_step_usec": 794.666666666667,
+      "p95_batch_mean_usec": 990.333333333333,
+      "requested_backend": "auto",
+      "size": 256
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "gravity",
+      "median_step_usec": 328128.333333333,
+      "p95_batch_mean_usec": 341327,
+      "requested_backend": "gdscript",
+      "size": 512
+    },
+    {
+      "effective_backend": "native",
+      "kind": "gravity",
+      "median_step_usec": 2564.33333333333,
+      "p95_batch_mean_usec": 3041,
+      "requested_backend": "native",
+      "size": 512
+    },
+    {
+      "effective_backend": "native",
+      "kind": "gravity",
+      "median_step_usec": 3011.33333333333,
+      "p95_batch_mean_usec": 3795.33333333333,
+      "requested_backend": "auto",
+      "size": 512
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "quantum_1d",
+      "median_step_usec": 47.6666666666667,
+      "p95_batch_mean_usec": 58.6666666666667,
+      "requested_backend": "gdscript",
+      "size": 9
+    },
+    {
+      "effective_backend": "native",
+      "kind": "quantum_1d",
+      "median_step_usec": 23.6666666666667,
+      "p95_batch_mean_usec": 26,
+      "requested_backend": "native",
+      "size": 9
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "quantum_1d",
+      "median_step_usec": 31.6666666666667,
+      "p95_batch_mean_usec": 45,
+      "requested_backend": "auto",
+      "size": 9
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "quantum_1d",
+      "median_step_usec": 273.666666666667,
+      "p95_batch_mean_usec": 274.666666666667,
+      "requested_backend": "gdscript",
+      "size": 128
+    },
+    {
+      "effective_backend": "native",
+      "kind": "quantum_1d",
+      "median_step_usec": 54.6666666666667,
+      "p95_batch_mean_usec": 70.6666666666667,
+      "requested_backend": "native",
+      "size": 128
+    },
+    {
+      "effective_backend": "native",
+      "kind": "quantum_1d",
+      "median_step_usec": 31.6666666666667,
+      "p95_batch_mean_usec": 45.6666666666667,
+      "requested_backend": "auto",
+      "size": 128
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "quantum_1d",
+      "median_step_usec": 972.333333333333,
+      "p95_batch_mean_usec": 1141.33333333333,
+      "requested_backend": "gdscript",
+      "size": 512
+    },
+    {
+      "effective_backend": "native",
+      "kind": "quantum_1d",
+      "median_step_usec": 80.3333333333333,
+      "p95_batch_mean_usec": 84.3333333333333,
+      "requested_backend": "native",
+      "size": 512
+    },
+    {
+      "effective_backend": "native",
+      "kind": "quantum_1d",
+      "median_step_usec": 84.3333333333333,
+      "p95_batch_mean_usec": 98,
+      "requested_backend": "auto",
+      "size": 512
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "quantum_2d",
+      "median_step_usec": 19,
+      "p95_batch_mean_usec": 25,
+      "requested_backend": "gdscript",
+      "size": 3
+    },
+    {
+      "effective_backend": "native",
+      "kind": "quantum_2d",
+      "median_step_usec": 18,
+      "p95_batch_mean_usec": 18.6666666666667,
+      "requested_backend": "native",
+      "size": 3
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "quantum_2d",
+      "median_step_usec": 18,
+      "p95_batch_mean_usec": 18.3333333333333,
+      "requested_backend": "auto",
+      "size": 3
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "quantum_2d",
+      "median_step_usec": 413.333333333333,
+      "p95_batch_mean_usec": 429.666666666667,
+      "requested_backend": "gdscript",
+      "size": 16
+    },
+    {
+      "effective_backend": "native",
+      "kind": "quantum_2d",
+      "median_step_usec": 27.3333333333333,
+      "p95_batch_mean_usec": 28,
+      "requested_backend": "native",
+      "size": 16
+    },
+    {
+      "effective_backend": "native",
+      "kind": "quantum_2d",
+      "median_step_usec": 27.6666666666667,
+      "p95_batch_mean_usec": 29,
+      "requested_backend": "auto",
+      "size": 16
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "quantum_2d",
+      "median_step_usec": 1144.33333333333,
+      "p95_batch_mean_usec": 1338.66666666667,
+      "requested_backend": "gdscript",
+      "size": 32
+    },
+    {
+      "effective_backend": "native",
+      "kind": "quantum_2d",
+      "median_step_usec": 59,
+      "p95_batch_mean_usec": 61.3333333333333,
+      "requested_backend": "native",
+      "size": 32
+    },
+    {
+      "effective_backend": "native",
+      "kind": "quantum_2d",
+      "median_step_usec": 57.6666666666667,
+      "p95_batch_mean_usec": 58.3333333333333,
+      "requested_backend": "auto",
+      "size": 32
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "nuclear",
+      "median_step_usec": 31.3333333333333,
+      "p95_batch_mean_usec": 96.6666666666667,
+      "requested_backend": "gdscript",
+      "size": 64
+    },
+    {
+      "effective_backend": "native",
+      "kind": "nuclear",
+      "median_step_usec": 154.666666666667,
+      "p95_batch_mean_usec": 186.666666666667,
+      "requested_backend": "native",
+      "size": 64
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "nuclear",
+      "median_step_usec": 35,
+      "p95_batch_mean_usec": 100.333333333333,
+      "requested_backend": "auto",
+      "size": 64
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "nuclear",
+      "median_step_usec": 838,
+      "p95_batch_mean_usec": 901.333333333333,
+      "requested_backend": "gdscript",
+      "size": 512
+    },
+    {
+      "effective_backend": "native",
+      "kind": "nuclear",
+      "median_step_usec": 576.666666666667,
+      "p95_batch_mean_usec": 902,
+      "requested_backend": "native",
+      "size": 512
+    },
+    {
+      "effective_backend": "native",
+      "kind": "nuclear",
+      "median_step_usec": 484.666666666667,
+      "p95_batch_mean_usec": 571.666666666667,
+      "requested_backend": "auto",
+      "size": 512
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "nuclear",
+      "median_step_usec": 1811.66666666667,
+      "p95_batch_mean_usec": 2047.66666666667,
+      "requested_backend": "gdscript",
+      "size": 1024
+    },
+    {
+      "effective_backend": "native",
+      "kind": "nuclear",
+      "median_step_usec": 945.333333333333,
+      "p95_batch_mean_usec": 992.333333333333,
+      "requested_backend": "native",
+      "size": 1024
+    },
+    {
+      "effective_backend": "native",
+      "kind": "nuclear",
+      "median_step_usec": 953,
+      "p95_batch_mean_usec": 1131.33333333333,
+      "requested_backend": "auto",
+      "size": 1024
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "nuclear_fission",
+      "median_step_usec": 743,
+      "p95_batch_mean_usec": 808.333333333333,
+      "requested_backend": "gdscript",
+      "size": 64
+    },
+    {
+      "effective_backend": "native",
+      "kind": "nuclear_fission",
+      "median_step_usec": 186,
+      "p95_batch_mean_usec": 188.333333333333,
+      "requested_backend": "native",
+      "size": 64
+    },
+    {
+      "effective_backend": "native",
+      "kind": "nuclear_fission",
+      "median_step_usec": 200,
+      "p95_batch_mean_usec": 262,
+      "requested_backend": "auto",
+      "size": 64
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "nuclear_fission",
+      "median_step_usec": 2045.66666666667,
+      "p95_batch_mean_usec": 2481.33333333333,
+      "requested_backend": "gdscript",
+      "size": 512
+    },
+    {
+      "effective_backend": "native",
+      "kind": "nuclear_fission",
+      "median_step_usec": 570,
+      "p95_batch_mean_usec": 774,
+      "requested_backend": "native",
+      "size": 512
+    },
+    {
+      "effective_backend": "native",
+      "kind": "nuclear_fission",
+      "median_step_usec": 556.333333333333,
+      "p95_batch_mean_usec": 618,
+      "requested_backend": "auto",
+      "size": 512
+    },
+    {
+      "effective_backend": "gdscript",
+      "kind": "nuclear_fission",
+      "median_step_usec": 3623.33333333333,
+      "p95_batch_mean_usec": 4373.33333333333,
+      "requested_backend": "gdscript",
+      "size": 1024
+    },
+    {
+      "effective_backend": "native",
+      "kind": "nuclear_fission",
+      "median_step_usec": 1111,
+      "p95_batch_mean_usec": 1808.66666666667,
+      "requested_backend": "native",
+      "size": 1024
+    },
+    {
+      "effective_backend": "native",
+      "kind": "nuclear_fission",
+      "median_step_usec": 1192,
+      "p95_batch_mean_usec": 1285.33333333333,
+      "requested_backend": "auto",
+      "size": 1024
+    }
+  ]
+}

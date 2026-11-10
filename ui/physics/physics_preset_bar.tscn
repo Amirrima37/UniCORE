@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpres810a9bx"]
+
+[ext_resource type="Script" path="res://ui/physics/physics_preset_bar.gd" id="1_presetbar"]
+
+[node name="PhysicsPresetBar" type="PanelContainer"]
+custom_minimum_size = Vector2(760, 38)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -380.0
+offset_top = 50.0
+offset_right = 380.0
+offset_bottom = 88.0
+grow_horizontal = 2
+script = ExtResource("1_presetbar")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="LabelTitle" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.7, 0.2, 1)
+theme_override_font_sizes/font_size = 11
+text = "ЭКСПЕРИМЕНТЫ:"
+
+[node name="BtnSolar" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(105, 28)
+layout_mode = 2
+tooltip_text = "Солнечная система: звезда Sol и 4 орбитальные планеты"
+theme_override_font_sizes/font_size = 11
+text = "🪐 Солнце & Орбиты"
+flat = true
+
+[node name="BtnFigure8" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 28)
+layout_mode = 2
+tooltip_text = "Задача 3 тел: замкнутая орбита-восьмерка Эйлера-Лагранжа"
+theme_override_font_sizes/font_size = 11
+text = "♾️ 3 Тела (Восьмерка)"
+flat = true
+
+[node name="BtnCluster" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(90, 28)
+layout_mode = 2
+tooltip_text = "Звездное скопление: 300 гравитирующих тел Barnes-Hut"
+theme_override_font_sizes/font_size = 11
+text = "✨ Звездный Рой"
+flat = true
+
+[node name="BtnGas" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(95, 28)
+layout_mode = 2
+tooltip_text = "Термодинамика: тепловой газ Леннард-Джонса в контейнере"
+theme_override_font_sizes/font_size = 11
+text = "💨 Газ Л-Джонс"
+flat = true
+
+[node name="BtnNuclear" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(95, 28)
+layout_mode = 2
+tooltip_text = "Ядерная физика: реактор U-235 с поглощающими стержнями"
+theme_override_font_sizes/font_size = 11
+text = "⚛️ Реактор U-235"
+flat = true
+
+[node name="BtnQuantum" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(95, 28)
+layout_mode = 2
+tooltip_text = "Квантовая механика: волновой пакет и туннелирование"
+theme_override_font_sizes/font_size = 11
+text = "🌊 Туннелирование"
+flat = true
+
+[node name="BtnDoubleSlit" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(85, 28)
+layout_mode = 2
+tooltip_text = "Квантовая оптика: дифракция и интерференция на двух щелях"
+theme_override_font_sizes/font_size = 11
+text = "👁️ Опыт Юнга"
+flat = true

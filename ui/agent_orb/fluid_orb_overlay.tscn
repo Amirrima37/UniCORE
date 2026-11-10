@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5y1m8oae11b"]
+
+[ext_resource type="Script" path="res://ui/agent_orb/fluid_orb_overlay.gd" id="1_fluidorb"]
+
+[node name="FluidOrbOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 72.0
+offset_bottom = 72.0
+mouse_filter = 1
+script = ExtResource("1_fluidorb")
