@@ -1,5 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
+__pycache__/
+*.py[cod]
 *.translation
 
 # Godot-specific exclusions
@@ -29,3 +31,37 @@ native/.sconsign*
 *.a
 *.lib
 bin/unicore_native.gdextension
+
+# Local build trees (keep build scripts and dependency manifests tracked)
+/native/build/
+/native/build-*/
+/native/.cache/
+.sconsign.dblite
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+*.pdb
+*.ilk
+*.exp
+
+# Python environments and test/tool caches
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Personal editor settings and temporary files
+.vs/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local secrets (retain shareable example configuration)
+.env
+.env.local
+.env.*.local
