@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad24_failure.py", line 50, in <module>
+    assert terminated and godot.returncode==0 and receipt['recovered'],receipt
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'godot_exit': 0, 'terminated_native': None, 'observed': [{'pid': 22900, 'action': 'box', 'operation_id': 'dfe717f4-4cbc-4f60-a665-c16c2f6b6e79'}], 'recovered': True, 'fault': 'TerminateProcess(77) against observed owned native cut worker; not an OCCT segfault', 'mode': 'terminate-cut', 'stdout': 'C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-terminate-cut-1794655627701212300.stdout.txt', 'stderr': 'C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-terminate-cut-1794655627701212300.stderr.txt', 'launcher': {'state': 'completed', 'exit_code': 0, 'error': '', 'job_object': True, 'seconds': 2.170097199996235, 'peak_process_memory_bytes': 662597632, 'peak_job_memory_bytes': 663859200, 'memory_limit_bytes': 805306368}}

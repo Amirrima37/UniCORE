@@ -1,0 +1,40 @@
+[
+  {
+    "name": "test_stage6_native_matrix",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage6_native_matrix-engine.log",
+      "-s",
+      "res://tests/test_stage6_native_matrix.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 3.547,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_native_matrix.log",
+    "diagnostics": [],
+    "assertions": [
+      "Native Release/Debug/noOMP six TET4 solves, verified imports, axial references, balance and process cleanup PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "restart",
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/stage6_restart_acceptance.py"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 1.205,
+    "log": "docs\\workbench-2\\stage6-final\\restart.log",
+    "diagnostics": [],
+    "assertions": [
+      "Stage 6 cylinder transient pause=3; cross-build restart; corrupt/incompatible/structural rejection; recovery PASS"
+    ],
+    "passed": true
+  }
+]

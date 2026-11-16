@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\compare_godot472_calculix_extreme.py", line 29, in <module>
+    (base/f'{kind}.stdout.txt').write_bytes(result.stdout);(base/f'{kind}.stderr.txt').write_bytes(result.stderr)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 796, in write_bytes
+    with self.open(mode='wb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Victus\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\step-final\\extreme-comparison\\Box.stdout.txt'

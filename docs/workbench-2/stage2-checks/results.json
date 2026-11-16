@@ -1,0 +1,26 @@
+[
+  {
+    "test": "tests/test_workbench2.gd",
+    "graphical": false,
+    "exit_code": 0,
+    "script_error": false,
+    "passed": true,
+    "seconds": 1.824
+  },
+  {
+    "test": "tests/test_workbench2_stage2.gd",
+    "graphical": false,
+    "exit_code": 0,
+    "script_error": false,
+    "passed": true,
+    "seconds": 2.104
+  },
+  {
+    "test": "tests/test_workbench2_stage2.gd",
+    "graphical": true,
+    "exit_code": 0,
+    "script_error": false,
+    "passed": true,
+    "seconds": 4.77
+  }
+]

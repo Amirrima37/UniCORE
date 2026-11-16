@@ -1,0 +1,67 @@
+[
+  {
+    "name": "jacobi",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "name": "block-jacobi",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "name": "ic0",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "name": "auto",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "name": "invalid-method",
+    "exit_code": 2,
+    "error": "INVALID_PRECONDITIONER"
+  },
+  {
+    "name": "invalid-limit",
+    "exit_code": 2,
+    "error": "INVALID_SOLVER_TOLERANCE_OR_LIMIT"
+  },
+  {
+    "name": "invalid-negative",
+    "exit_code": 2,
+    "error": "INVALID_SOLVER_NUMBER"
+  },
+  {
+    "name": "invalid-nan",
+    "exit_code": 2,
+    "error": "INVALID_SOLVER_NUMBER"
+  },
+  {
+    "name": "invalid-zeros",
+    "exit_code": 2,
+    "error": "INVALID_SOLVER_TOLERANCE_OR_LIMIT"
+  },
+  {
+    "name": "invalid-suffix",
+    "exit_code": 2,
+    "error": "INVALID_SOLVER_NUMBER"
+  },
+  {
+    "name": "trailer",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "name": "override",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "name": "bad-trailer",
+    "exit_code": 2,
+    "error": "INVALID_SOLVER_TRAILER"
+  }
+]

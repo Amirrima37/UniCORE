@@ -1,0 +1,38 @@
+[
+  {
+    "test": "test_stage6_sphere",
+    "exit": 0,
+    "seconds": 8.422803599998588,
+    "passed": true
+  },
+  {
+    "test": "test_stage6_sphere_contract",
+    "exit": 0,
+    "seconds": 1.065957900005742,
+    "passed": true
+  },
+  {
+    "test": "test_stage6_sphere_dialog",
+    "exit": 0,
+    "seconds": 0.586954299993522,
+    "passed": true
+  },
+  {
+    "test": "capture_stage6_sphere",
+    "exit": 0,
+    "seconds": 14.026193899997452,
+    "passed": true
+  },
+  {
+    "test": "test_app_shell_suite",
+    "exit": 0,
+    "seconds": 11.503898200004187,
+    "passed": true
+  },
+  {
+    "test": "test_stage5_probes",
+    "exit": 0,
+    "seconds": 2.9669443999955547,
+    "passed": true
+  }
+]

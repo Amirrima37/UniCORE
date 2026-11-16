@@ -1,0 +1,1 @@
+Mesh rejected by quality thresholds: min mean ratio=0.2966286689246733, max edge ratio=4.722667189312015

@@ -1,0 +1,882 @@
+{
+  "assertions": 31615,
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "rows": [
+    {
+      "name": "unit-build",
+      "command": [
+        "C:/Qt/Tools/mingw1310_64/bin/x86_64-w64-mingw32-g++.exe",
+        "-std=c++17",
+        "-O2",
+        "-static",
+        "-ffp-contract=off",
+        "-Inative/src",
+        "native/tests/dynamics_test.cpp",
+        "-o",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 7.9637744999999995,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\unit-build.log"
+    },
+    {
+      "name": "unit-smoke",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8487258999994083,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\unit-smoke.log"
+    },
+    {
+      "name": "free",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe",
+        "free",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.062065599999186816,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\free.log",
+      "analytical_max_errors_u_v_a": [
+        7.565420862082339e-06,
+        1.682430583616057e-05,
+        3.0261683448329357e-05
+      ]
+    },
+    {
+      "name": "damped",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe",
+        "damped",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06070569999792497,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\damped.log",
+      "analytical_max_errors_u_v_a": [
+        3.351466321108859e-06,
+        7.08317100081568e-06,
+        1.4186945366964632e-05
+      ]
+    },
+    {
+      "name": "step",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe",
+        "step",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05614340000101947,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\step.log",
+      "analytical_max_errors_u_v_a": [
+        1.6492988947569565e-05,
+        2.6503796546201164e-05,
+        6.59719557902505e-05
+      ]
+    },
+    {
+      "name": "constant",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe",
+        "constant",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.054245800001808675,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\constant.log",
+      "analytical_max_errors_u_v_a": [
+        1.6492988947569565e-05,
+        2.6503796546201164e-05,
+        6.59719557902505e-05
+      ]
+    },
+    {
+      "name": "sine",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe",
+        "sine",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06116659999679541,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\sine.log",
+      "analytical_max_errors_u_v_a": [
+        6.480568823907795e-06,
+        1.7550545882011326e-05,
+        2.592227529552016e-05
+      ]
+    },
+    {
+      "name": "velocity",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe",
+        "velocity",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05586310000217054,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\velocity.log",
+      "analytical_max_errors_u_v_a": [
+        7.951138964401583e-06,
+        1.9791586738066025e-05,
+        3.1804555857592454e-05
+      ]
+    },
+    {
+      "name": "ramp",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe",
+        "ramp",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06005399999776273,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\ramp.log",
+      "analytical_max_errors_u_v_a": [
+        1.0126959101519617e-05,
+        2.6210361207507082e-05,
+        4.050783640602296e-05
+      ]
+    },
+    {
+      "name": "phase-0.04",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe",
+        "phase",
+        "0.04",
+        "100"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04916120000052615,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\phase-0.04.log",
+      "phase_error_rad": 0.004262575341990704,
+      "normalized_u_v_a_errors": [
+        0.004218523128613465,
+        0.0033874915180486832,
+        0.004218523128613448
+      ]
+    },
+    {
+      "name": "phase-0.02",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe",
+        "phase",
+        "0.02",
+        "200"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04065019999688957,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\phase-0.02.log",
+      "phase_error_rad": 0.0010664107397859723,
+      "normalized_u_v_a_errors": [
+        0.0010551804361977682,
+        0.0008479845621932151,
+        0.0010551804361977682
+      ]
+    },
+    {
+      "name": "phase-0.01",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe",
+        "phase",
+        "0.01",
+        "400"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05344669999976759,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\phase-0.01.log",
+      "phase_error_rad": 0.00026665066780928726,
+      "normalized_u_v_a_errors": [
+        0.00026387928060691776,
+        0.00021202352860372545,
+        0.00026387928060691776
+      ]
+    },
+    {
+      "name": "coupled",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe",
+        "coupled",
+        "0.001",
+        "1000"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07554850000087754,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\coupled.log",
+      "reference_errors_u_v_a": [
+        7.459385990005174e-07,
+        3.4509247289760125e-06,
+        2.255199527356755e-05
+      ]
+    },
+    {
+      "name": "large-step-stability",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dynamics_test.exe",
+        "phase",
+        "1",
+        "100"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04589339999802178,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\large-step-stability.log"
+    },
+    {
+      "name": "native-modal-reference",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\numerical-verified\\stage6-cylinder-1.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\native-modal-reference",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.10600709999926039,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\native-modal-reference.log"
+    },
+    {
+      "name": "cylinder-time-500",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\cylinder-time-500.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\cylinder-time-500",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3828517000001739,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\cylinder-time-500.log",
+      "assembly_ms": 0.8922,
+      "setup_ms": 0.415,
+      "integration_ms": 46.3227,
+      "peak_working_set_bytes": 6254592,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 2.710505431213761e-19,
+      "linear_iterations": 4509,
+      "temporal_normalized_u_v_a_errors": [
+        0.637368536930823,
+        0.6301796001859885,
+        0.6373685369327143
+      ],
+      "phase_error_rad": 0.6552697876371241,
+      "modal_Hz": 310.97638782154206,
+      "estimated_Hz": 309.35481037598174,
+      "expected_discrete_Hz": 309.35481037597566
+    },
+    {
+      "name": "cylinder-time-1000",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\cylinder-time-1000.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\cylinder-time-1000",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7452195000005304,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\cylinder-time-1000.log",
+      "assembly_ms": 0.9939,
+      "setup_ms": 0.6424,
+      "integration_ms": 94.3305,
+      "peak_working_set_bytes": 7110656,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 3.7947076036992655e-19,
+      "linear_iterations": 9009,
+      "temporal_normalized_u_v_a_errors": [
+        0.1627877497545071,
+        0.16455356796251638,
+        0.16278774975227647
+      ],
+      "phase_error_rad": 0.1649762049463135,
+      "modal_Hz": 310.97638782154206,
+      "estimated_Hz": 310.5681259147024,
+      "expected_discrete_Hz": 310.5681259146964
+    },
+    {
+      "name": "cylinder-time-2000",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\cylinder-time-2000.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\cylinder-time-2000",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7643859000017983,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\cylinder-time-2000.log",
+      "assembly_ms": 1.7619,
+      "setup_ms": 0.6577,
+      "integration_ms": 199.6288,
+      "peak_working_set_bytes": 6987776,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 4.87890977618477e-19,
+      "linear_iterations": 20009,
+      "temporal_normalized_u_v_a_errors": [
+        0.040781874661070784,
+        0.041387151464306354,
+        0.04078187466420205
+      ],
+      "phase_error_rad": 0.041317237908742754,
+      "modal_Hz": 310.97638782154206,
+      "estimated_Hz": 310.8741412318629,
+      "expected_discrete_Hz": 310.8741412318568,
+      "fft_peak_Hz": 310.66572209944263,
+      "fft_resolution_Hz": 15.533286104972131
+    },
+    {
+      "name": "spatial-1",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\spatial-1.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\spatial-1",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14479769999888958,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\spatial-1.log",
+      "assembly_ms": 0.9539,
+      "setup_ms": 0.6068,
+      "integration_ms": 8.8458,
+      "peak_working_set_bytes": 5550080,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 1.6263032587282567e-19,
+      "linear_iterations": 1009,
+      "first_discrete_spatial_frequency_Hz": 310.97638782154206
+    },
+    {
+      "name": "spatial-2",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\spatial-2.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\spatial-2",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.39619149999998626,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\spatial-2.log",
+      "assembly_ms": 8.5378,
+      "setup_ms": 4.5554,
+      "integration_ms": 58.1171,
+      "peak_working_set_bytes": 6709248,
+      "max_equilibrium_residual": 3.2426972934225376e-12,
+      "max_energy_balance_J": 1.8973538018496328e-19,
+      "linear_iterations": 810,
+      "first_discrete_spatial_frequency_Hz": 278.6816683285975
+    },
+    {
+      "name": "repeat",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\repeat.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\repeat",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7913775000015448,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\repeat.log",
+      "assembly_ms": 0.7855,
+      "setup_ms": 0.4816,
+      "integration_ms": 207.5075,
+      "peak_working_set_bytes": 7053312,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 4.87890977618477e-19,
+      "linear_iterations": 20009
+    },
+    {
+      "name": "FEM-damped-forced",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\FEM-damped-forced.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\FEM-damped-forced",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3721655000008468,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\FEM-damped-forced.log",
+      "assembly_ms": 0.7264,
+      "setup_ms": 0.7382,
+      "integration_ms": 51.1027,
+      "peak_working_set_bytes": 6373376,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 1.1817803680091998e-17,
+      "linear_iterations": 4509
+    },
+    {
+      "name": "zero-initial-unforced",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\zero-initial-unforced.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\zero-initial-unforced",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08556250000037835,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\zero-initial-unforced.log",
+      "assembly_ms": 1.206,
+      "setup_ms": 0.6602,
+      "integration_ms": 0.3526,
+      "peak_working_set_bytes": 5312512,
+      "max_equilibrium_residual": 0,
+      "max_energy_balance_J": 0,
+      "linear_iterations": 0
+    },
+    {
+      "name": "density-zero",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\density-zero.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\density-zero",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.06785989999843878,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\density-zero.log"
+    },
+    {
+      "name": "density-negative",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\density-negative.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\density-negative",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.07185469999967609,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\density-negative.log"
+    },
+    {
+      "name": "elastic-invalid",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\elastic-invalid.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\elastic-invalid",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.07544039999993402,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\elastic-invalid.log"
+    },
+    {
+      "name": "nonfinite-initial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\nonfinite-initial.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\nonfinite-initial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.07742049999797018,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\nonfinite-initial.log"
+    },
+    {
+      "name": "support-motion",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\support-motion.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\support-motion",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.08719039999778033,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\support-motion.log"
+    },
+    {
+      "name": "trailing",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\trailing.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\trailing",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.07402820000061183,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\trailing.log"
+    },
+    {
+      "name": "malformed-load",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\malformed-load.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\malformed-load",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.07519260000117356,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\malformed-load.log"
+    },
+    {
+      "name": "bad-version",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\bad-version.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\bad-version",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.07613690000289353,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\bad-version.log"
+    },
+    {
+      "name": "nonfinite-velocity",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\nonfinite-velocity.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\nonfinite-velocity",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.0777206999991904,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\nonfinite-velocity.log"
+    },
+    {
+      "name": "output-order",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\output-order.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\output-order",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.07070670000030077,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\output-order.log"
+    },
+    {
+      "name": "excessive-output",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\excessive-output.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\excessive-output",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.06583800000225892,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\excessive-output.log"
+    },
+    {
+      "name": "moving-initial-support",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\moving-initial-support.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\moving-initial-support",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.07386720000067726,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\moving-initial-support.log"
+    },
+    {
+      "name": "dt-zero",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dt-zero.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dt-zero",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.12125279999963823,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\dt-zero.log"
+    },
+    {
+      "name": "dt-negative",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dt-negative.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\dt-negative",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.051606100001663435,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\dt-negative.log"
+    },
+    {
+      "name": "excessive-steps",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\excessive-steps.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\excessive-steps",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.056043500000669155,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\excessive-steps.log"
+    },
+    {
+      "name": "negative-damping",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\negative-damping.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\negative-damping",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.05461269999796059,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\negative-damping.log"
+    },
+    {
+      "name": "nonfinite-damping",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\nonfinite-damping.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\nonfinite-damping",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.05617129999882309,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\nonfinite-damping.log"
+    },
+    {
+      "name": "nonconvergence",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\nonconvergence.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\nonconvergence",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.06539580000026035,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\nonconvergence.log"
+    },
+    {
+      "name": "wall-limit",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\wall-limit.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\wall-limit",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.06172149999838439,
+      "expected_exit": 2,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\wall-limit.log"
+    },
+    {
+      "name": "cancel-running",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\cancel-running.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\cancel-running",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 3,
+      "expected_exit": 3,
+      "seconds": 0.32111689999874216
+    },
+    {
+      "name": "recovery",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\recovery.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-numerical\\recovery",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08066569999937201,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-numerical\\recovery.log",
+      "assembly_ms": 1.1235,
+      "setup_ms": 0.5877,
+      "integration_ms": 13.7506,
+      "peak_working_set_bytes": 5345280,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 7.860465750519907e-19,
+      "linear_iterations": 1809
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "E_factor": 1,
+    "F_factor": 1,
+    "directory": "res://docs/architecture/evidence/calculix/run_354163_0",
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "27945ea078a25e3eaecdce39f3cd8fd52a07b2c9b14570f6c8aa1d458f8e4567",
+      "input_sha256": "15c506ef8d94837c406bc617fc5ddc2ba2080a6ecca572e162ec8eaa5f93775b",
+      "schema": 1
+    },
+    "relative_error": 0,
+    "ux": 0.006
+  },
+  {
+    "E_factor": 2,
+    "F_factor": 1,
+    "directory": "res://docs/architecture/evidence/calculix/run_586844_1",
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "a4b267a540255898d58fd5d939d84f9bfcab429728f77888cbf8ba1394ece84a",
+      "input_sha256": "2a7aa68b4b4053e66272a5846e7050b412edbf9f65f95eb3054711878758a10b",
+      "schema": 1
+    },
+    "relative_error": 0,
+    "ux": 0.003
+  },
+  {
+    "E_factor": 1,
+    "F_factor": 2,
+    "directory": "res://docs/architecture/evidence/calculix/run_827017_2",
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "47b4ec09c1cc820db1a9674d34b244023f86718e8aafe3db6cf1c1c564eff408",
+      "input_sha256": "9585a33cd9a15b6e596bbfcbff933718714d6a0db1d5d418b6acb3a9b8716767",
+      "schema": 1
+    },
+    "relative_error": 0,
+    "ux": 0.012
+  }
+]

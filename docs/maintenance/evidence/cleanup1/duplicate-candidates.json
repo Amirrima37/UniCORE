@@ -1,0 +1,961 @@
+[
+  {
+    "size": 3379526,
+    "sha256": "30cfa001745f450d4a7b7ea3b2fe44526150b7485a38cffe570eac3ed265ffa4",
+    "paths": [
+      ".tools/extreme-axial/model.ucjob",
+      ".tools/hpc23-bench/elastic-large-32.ucjob"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 33554433,
+    "sha256": "bdf7fbb54387c24608fd757a1b31c32cabcd7b6bee8ff3345c897139fffc072a",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad23-oversized-dat-14182238/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad23-oversized-dat-6589641/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad23-oversized-dat-6639885/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad23-oversized-dat-6662057/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1993768,
+    "sha256": "95a5d120325399c05c403e68168bb55c67348115cc96c4e6cf68f6e480077f72",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/10779876/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/12673560/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/13263010/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/24922992/result.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1993768,
+    "sha256": "ae41d46f4b29d767b263b76aa04ff8e1dd451f525fe8e66f3195b45e11bd77ee",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/20747322/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/42769658/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/6236_30078975_66cd886e75130495/result.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2110010,
+    "sha256": "d86e4c66b896e2133b87aca369dbfe348b8b13e4430b2b6621d0891deba08138",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/11536290/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/12110080/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/12218321/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/12521272/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/14814161/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/14922487/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/15462194/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/17127622/result.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1976465,
+    "sha256": "1f5c03c0b57b57dc68e908e237c8a81ae9ac47b550d4d7647ae0d2d517cdf619",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/1190516/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/1210293/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/1299985/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/1346829/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/1398705/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/1461940/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/1561244/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/1640689/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/1877138/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/1888033/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/2098432/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/3956469/result.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1976465,
+    "sha256": "7ca85f5e4b553d712467956198590e76bdcef26719e4b3479c6eac14edd2270b",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/1260686/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/1459574/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/17460_1357643_006fcf47d860ff6c/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/2773860/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/6236_2058065_fe0e9abc75c5d06a/result.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2108219,
+    "sha256": "df552dfab2aa3402c3d0dbc01cc24c4f179c890c3a00560ed7d08d12bc9c8755",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/17460_25879695_1ee7bd50cd5c2cd4/result.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/19989116/result.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 4157390,
+    "sha256": "236dcdc4a0a7cc3c0ff8055ec16571429153a65eebf34d0b5661fd69894cda19",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/100931644/canonical-model.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/37173933/canonical-model.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/43086020/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 10658794,
+    "sha256": "dd043b399c037a4a5af877e5c5fc5691929ffc0c4a53aacbe032397aa8a90365",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/100931644/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/37173933/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/43086020/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 10658794,
+    "sha256": "da02191b8930be7018c2572e8b18a0d129fe54b14af1651de6dcdbf0324260f3",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/23556_39811814_8d5e25ee30612576/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/43277296/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3457164,
+    "sha256": "78dfb8975ca3639e14719c00c8c3d4d76a96e14db0469032a5e348087fb069d5",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/100931644/model.inp",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/37173933/model.inp",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/43086020/model.inp"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 4897669,
+    "sha256": "24a50991da1dbd0831b1b967cb3a5d23b177460377fcdc15dc3537664de22422",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/100931644/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/37173933/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/43086020/request.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1762682,
+    "sha256": "c4c3bdb024243978e48bbcd3079ed8186cad6d800e6b9701044fd71643214865",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/105051915/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/129541207/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/95959228/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-cylinder-o2-3-409c06ac4378/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-cylinder-o2-3-409c06ac4378-129541207/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1762682,
+    "sha256": "2e0c2a99d5ffd218573ed10542217c73d16fd024aaf21e69230313fc5ff105a1",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/115902893/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/161162320/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_143753708_1abb137cc376e39a/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-cylinder-o2-3-0fc7d058318f-115902893/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-cylinder-o2-3-0fc7d058318f-161162320/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-cylinder-o2-3-0fc7d058318f-20984_143753708_1abb137cc376e39a/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1951514,
+    "sha256": "76dd54594a6c0151d1071664ab1bfdb7681f998a621ddedc7c5450d3b612009b",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/124812710/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/22120_99090948_85ce2301ba938eab/model.dat",
+      "docs/architecture/evidence/cad22/solver-jobs/step-hole-2-93488223b24f-c53f3a616a95/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1951514,
+    "sha256": "b67f63ea1afd3f021b2853b558a01d22906c4337200fe5c5b6a9424c6349f5ea",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/64051843/model.dat",
+      "docs/architecture/evidence/cad22/solver-jobs/step-hole-2-516b1480f08e/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1072913,
+    "sha256": "567959a0a26bbf9d0c698c01017f7e4c93096c502fb12b11e119e7a394566e75",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/136553478/canonical-model.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/22120_108479909_9294106ec4a089bb/canonical-model.json",
+      "docs/architecture/evidence/cad22/solver-jobs/step-hole-3-4295cc822907-85d51e0db8dc/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3636106,
+    "sha256": "a517f21071c5a141a99a2b292a66860f9efc5e1938fdcbe51b2c306155bf4055",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/136553478/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/22120_108479909_9294106ec4a089bb/model.dat",
+      "docs/architecture/evidence/cad22/solver-jobs/step-hole-3-4295cc822907-85d51e0db8dc/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3636106,
+    "sha256": "d0a664279ec398472d24b1a5f51f62b0b4d57fd5f2ee53d00d142eb68bb39d53",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/72126320/model.dat",
+      "docs/architecture/evidence/cad22/solver-jobs/step-hole-3-cc322ab097ef/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1216231,
+    "sha256": "4295cc8229077bed1539c5c6f56dc72e7a007d9b0fdb8b909990ddf4a1ed2fc9",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/136553478/model.inp",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/22120_108479909_9294106ec4a089bb/model.inp",
+      "docs/architecture/evidence/cad22/solver-jobs/step-hole-3-4295cc822907-85d51e0db8dc/model.inp"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1216231,
+    "sha256": "cc322ab097ef623358e95064efaa30772f68a9b452cf8199144748f87e72ff22",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/72126320/model.inp",
+      "docs/architecture/evidence/cad22/solver-jobs/step-hole-3-cc322ab097ef/model.inp"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1108666,
+    "sha256": "a9fa56fc2cf9f9ccf979cc5a6d7f2bf0919cc06476c76936085decc5d4cfd44e",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/150695695/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/173786911/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/bending-o2-2-8f8422e79110/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/bending-o2-2-8f8422e79110-173786911/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1108666,
+    "sha256": "687fefb515399b618839d33c77581cfa3de89d4c8cc9efe077ac326fe48c2bee",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/163229758/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_206722506_4c99d428645cbd56/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/237709915/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/bending-o2-2-aa77bec5dfcb-163229758/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/bending-o2-2-aa77bec5dfcb-20984_206722506_4c99d428645cbd56/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/bending-o2-2-aa77bec5dfcb-237709915/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1108666,
+    "sha256": "f049b05c554dbea629e53e6b4a73b6a34dabe6fcfbd5e996c5a3a7dafe0217ef",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_50274549_302b8b28117f9829/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/41363315/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/44592190/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-bar-o2-2-2e0f7c375504-20984_50274549_302b8b28117f9829/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-bar-o2-2-2e0f7c375504-41363315/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-bar-o2-2-2e0f7c375504-44592190/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1108666,
+    "sha256": "16b77097fe9bc5310d6798da6ed16eb0dddd0b5d781ceb9a81765e0bbf34b1a2",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/30201442/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/35125432/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/44874127/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-bar-o2-2-75c2139a8f37/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-bar-o2-2-75c2139a8f37-44874127/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3050410,
+    "sha256": "a7698abc5913bf6924dc977ae5e4362b07419d459b52278db4055fa8c3637519",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/164059614/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/186889030/model.dat",
+      "docs/architecture/evidence/cad23/lifecycle/solver-recovery-1794611879576177900/model.dat",
+      "docs/architecture/evidence/cad23/lifecycle/solver-recovery-1794613773422318400/model.dat",
+      "docs/architecture/evidence/cad23/lifecycle/solver-recovery-1794613923573705700/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/bending-o2-3-972c7581385a/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/bending-o2-3-972c7581385a-186889030/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3050410,
+    "sha256": "7c9441ee7ac592fe4d6539442aaad1f71cf61c1240fb8593fdfe3c0e921b7927",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/177954000/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_222468346_ea3032de53266e0e/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/252738255/model.dat",
+      "docs/architecture/evidence/cad23/lifecycle/solver-recovery-1794617885623420500/model.dat",
+      "docs/architecture/evidence/cad23/lifecycle/solver-recovery-1794624054874480900/model.dat",
+      "docs/architecture/evidence/cad23/lifecycle/solver-recovery-1794656564466473200/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/bending-o2-3-9daeb1e58574-177954000/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/bending-o2-3-9daeb1e58574-20984_222468346_ea3032de53266e0e/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/bending-o2-3-9daeb1e58574-252738255/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3050410,
+    "sha256": "4f751d9c6f55fd21cf705bc1dfb5f9362153bc37cae15925eda727da84e2595b",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_66604682_03e7b99ceac4bec7/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/54572387/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/61849044/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-bar-o2-3-43b5a51a7072-20984_66604682_03e7b99ceac4bec7/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-bar-o2-3-43b5a51a7072-54572387/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-bar-o2-3-43b5a51a7072-61849044/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3050410,
+    "sha256": "dab0bf44cde1ac7e28874f86dfca19c6221378643adf6a572c7ff5ac6f3a6dfb",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/42344567/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/48774659/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/60767682/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-bar-o2-3-e21374af7c88/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/axial-bar-o2-3-e21374af7c88-60767682/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1172186,
+    "sha256": "7d1e26a33ef1b2402eda3e29e1631a4a39d594dc5b171ef831d1a4f85dbcc3a6",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/164059614/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/177954000/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/186889030/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/252738255/request.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1172186,
+    "sha256": "888b8841fd2ffa9e26a9dd05dad29f145f860153bd579aa8969050ba53618ee6",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/42344567/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/48774659/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/54572387/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/60767682/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/61849044/request.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1195049,
+    "sha256": "52dc87e457cb87eaa5c8103ea82adfe8fba12e6c1b0793f9538c29cfc25da79f",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/17681077/canonical-model.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20486453/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 4066566,
+    "sha256": "2d33aab12eb86b187033d195b2c275b7b07cacc04f4292de962efa8817a4794f",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/17681077/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20486453/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1355487,
+    "sha256": "4d8c65b7d1d3d80e84026d0e1d57a7f6dbe952fd38abd6b93fa1fae5dc314518",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/17681077/model.inp",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20486453/model.inp"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2380127,
+    "sha256": "3e273a0dc24029946f73266d0d2d1f08a1e3c0a49fabe6d6e5f2c91923493869",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/18260_138616179_8d63f4866c8ddcb4/canonical-model.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/22612_123199474_c3ea4da58cf130bd/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 7106678,
+    "sha256": "2847463cdae63b6ee1d800db8f80e45e3b2371809b5013f93455b7cc363bfb60",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/18260_138616179_8d63f4866c8ddcb4/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/21436_68552469_71b35a32fd5d6043/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/22612_123199474_c3ea4da58cf130bd/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/85820391/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2126940,
+    "sha256": "68fa7297f50e8cbe5d3172a3b08f49f973f5444b5892ddaa7f62671df7fd3431",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/18260_138616179_8d63f4866c8ddcb4/model.inp",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/21436_68552469_71b35a32fd5d6043/model.inp",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/22612_123199474_c3ea4da58cf130bd/model.inp",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/85820391/model.inp"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2770295,
+    "sha256": "38afab207a57a0a7d5f85cb38988d56c5123d72d92f342cb683529adfc6d4bbe",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/18260_138616179_8d63f4866c8ddcb4/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/22612_123199474_c3ea4da58cf130bd/request.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1552730,
+    "sha256": "c76fed3a99596ce098ca5081f76470d2ba306ad35a2c3465fbea2a0f39be9e4e",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/18260_69092313_d0b2f3eb7877b10f/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/21436_35793726_b1f36f4ec716bff2/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/22612_59376054_5c05c9db4610cdaa/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/33142716/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1165730,
+    "sha256": "3f609a75478949cbb6729a66fda2edaf35b4e881341ef58dda86ed6db212da73",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/187426501/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/204341745/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/210231268/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o1-2-f383e70dd102/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o1-2-f383e70dd102-204341745/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o1-2-f383e70dd102-210231268/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1678938,
+    "sha256": "82912959d753b7e08ba477f8fc5892a81ff41c5362cfddf9ca3e90280b1a2f28",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/192383372/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/210309818/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/215254752/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o1-3-f9465c2cea33/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o1-3-f9465c2cea33-210309818/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o1-3-f9465c2cea33-215254752/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1758786,
+    "sha256": "5f3ebda9dcb1554a73e47c08c968846a768f4498ecfa336b5fd0dbe9b633dd92",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/198573843/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/221591409/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-0-0cef4a8891d6/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-0-0cef4a8891d6-221591409/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1758786,
+    "sha256": "671e77a1c7b597f34e1fbcd0346dd1301bfd1b2be18a361ba88819649db9e37d",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_273853387_19b0672c313c8a67/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/303598046/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-0-e0a7ffd2fb69-20984_273853387_19b0672c313c8a67/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-0-e0a7ffd2fb69-303598046/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1758786,
+    "sha256": "382e1500d86b965b7ab62c005d623a0030ea5ec9165a35f2ca4a313bf48bc5f7",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/217523321/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-0-cd6475e2b8f7-217523321/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1169254,
+    "sha256": "354d9d71ece540f4cb1a9ee94397bc52995e12efaf54c353a0c37730b38ca4f8",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_252726203_09867be36c281077/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/284859518/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o1-2-0fe509edffd2-20984_252726203_09867be36c281077/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o1-2-0fe509edffd2-284859518/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1689842,
+    "sha256": "a87feb126571952a08f1555fe0a66aca78c29a3f8d89c0b6f154f56cf96eed3e",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_260580979_0f2513e71aec9254/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/292976684/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o1-3-90721c654bd3-20984_260580979_0f2513e71aec9254/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o1-3-90721c654bd3-292976684/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1170614,
+    "sha256": "bc843479d8846f36a93a6bfd2d360d7c00e3561b909134e1eabd6483bfc664e4",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_299156615_7c7faa26636a3979/canonical-model.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/323003926/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-1-4547de5bb895-20984_299156615_7c7faa26636a3979/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-1-4547de5bb895-323003926/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3251470,
+    "sha256": "dfaa1bcad9907e8b82b1265c5e0d74e12fdcfb2a76b7efdabe2dd8f8a5ec4978",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_299156615_7c7faa26636a3979/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/323003926/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-1-4547de5bb895-20984_299156615_7c7faa26636a3979/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-1-4547de5bb895-323003926/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3251470,
+    "sha256": "b30bf3b58d2e88cda3bef97e04c19de73ba1cec389ebe1c53541b45b002554ba",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/215546320/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/237028528/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-1-ab467d7a2a3e/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-1-ab467d7a2a3e-237028528/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3251470,
+    "sha256": "cd2584d1355c22f019123f149a85af2bd3b97fb2c6b77c963442c2e728c1af34",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/235274243/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-1-a4ea5b7b7824-235274243/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1383048,
+    "sha256": "675009dcb1858765cd276d5ec01f895ebd8476c6bc4d85e1b33d706c8454fa04",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_299156615_7c7faa26636a3979/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/323003926/request.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1982830,
+    "sha256": "e697398ce77d6edbb31d26685eb25d3b929b978511c8fc6aa1fdc7a68c9041b4",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_337898283_804919b6e34b7d37/canonical-model.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/349320747/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-f42ea0adccc4-20984_337898283_804919b6e34b7d37/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-f42ea0adccc4-349320747/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 5261518,
+    "sha256": "929765a013a952cf7f886eaa249d09e63c866fd8d90b98b8eb94d7fac77699a7",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_337898283_804919b6e34b7d37/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/349320747/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-f42ea0adccc4-20984_337898283_804919b6e34b7d37/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-f42ea0adccc4-349320747/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1663331,
+    "sha256": "f42ea0adccc4bd440c2109f18a2fde8980bde1631cf19d7a2f4dca15efca18d7",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_337898283_804919b6e34b7d37/model.inp",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/349320747/model.inp",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-f42ea0adccc4-20984_337898283_804919b6e34b7d37/model.inp",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-f42ea0adccc4-349320747/model.inp"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2339088,
+    "sha256": "6f4c42bca9a09b489aa6d0114537c3c6cadf4a89f52e057dabbae587abed4218",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_337898283_804919b6e34b7d37/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/349320747/request.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2923264,
+    "sha256": "5d3ac7d4f2cdfba4f1d52eec89659f2051f16d580cbf25db0590d19fa15d5a3b",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_388400179_dc8a42cd3b2de9c6/canonical-model.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/391186100/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-0dcc340e89f3-20984_388400179_dc8a42cd3b2de9c6/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-0dcc340e89f3-391186100/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 7589786,
+    "sha256": "776c50a67961681319d426d781461fa089bf45c0d643ad74696eab3dcef04592",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_388400179_dc8a42cd3b2de9c6/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/391186100/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-0dcc340e89f3-20984_388400179_dc8a42cd3b2de9c6/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-0dcc340e89f3-391186100/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2436753,
+    "sha256": "0dcc340e89f303d0adb8879113ad23ce40a1b83ae79de334a4f4183ca77b8cdd",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_388400179_dc8a42cd3b2de9c6/model.inp",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/391186100/model.inp",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-0dcc340e89f3-20984_388400179_dc8a42cd3b2de9c6/model.inp",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-0dcc340e89f3-391186100/model.inp"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3442735,
+    "sha256": "874d5bf5d9a8e65548cfb5e91a658724ef021ec029b1f137cd7912d3ca2664fa",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/20984_388400179_dc8a42cd3b2de9c6/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/391186100/request.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1170593,
+    "sha256": "a671673aef12e1761e3813347ce641e26cfdb9735a3ed651802fb40828e7c5ac",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/215546320/canonical-model.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/237028528/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-1-ab467d7a2a3e/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-1-ab467d7a2a3e-237028528/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1383065,
+    "sha256": "476487f955764cada9ba6adc3862e2d2ebaaa42715fb64eac3bf1079fe3bbf74",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/215546320/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/235274243/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/237028528/request.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1172192,
+    "sha256": "c7ca60156a2275ca954d07b83f5dac824fbfb182f886f1cf5566585feea5e9eb",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/2159244/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/2579344/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/6224706/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/7706138/request.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1170643,
+    "sha256": "998551ad96ba1c4d0a7cbb73618e1970464bf48c3ad342cf53072e5787e01273",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/235274243/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-1-a4ea5b7b7824-235274243/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 4157424,
+    "sha256": "05fcd6160fd9e0957db8a8d3cebde1c19244960c94fbe0c1d484ec2ff342a0d3",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/23556_39811814_8d5e25ee30612576/canonical-model.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/43277296/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3457133,
+    "sha256": "16d43c4501d09796bc8754ae39f83568a4922eca3c8921b27d93593dd0402fa8",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/23556_39811814_8d5e25ee30612576/model.inp",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/43277296/model.inp"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 4897697,
+    "sha256": "d94186e7729bbc0c98bc494bbb486073f428e8854895e32e82c576181e20479d",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/23556_39811814_8d5e25ee30612576/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/43277296/request.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1978066,
+    "sha256": "0dde070f6aa7dfa7d2fd6c7c2091c15520ebe13782666b51c55ea212cb5fa45a",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/239366762/canonical-model.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/260945687/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-da98da4b9f00/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-da98da4b9f00-260945687/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 5244614,
+    "sha256": "face9f3b21251d5ad157e9138057a1fe910b8247c6155ed92ccb0843918223ad",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/239366762/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/260945687/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-da98da4b9f00/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-da98da4b9f00-260945687/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 5244614,
+    "sha256": "5a464489bafbde8b589c7ceeb7984e47878978535310335d54b04eea5013d54a",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/262932455/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-fc7eff48a752-262932455/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1658608,
+    "sha256": "da98da4b9f00a43aab0e7f80e75c46c65ac03aa7fe9313e1eafb90e6ff01f043",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/239366762/model.inp",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/260945687/model.inp",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-da98da4b9f00/model.inp",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-da98da4b9f00-260945687/model.inp"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2333586,
+    "sha256": "87e301662e239301ddf2207baa9715b0af4863328b27555cfe21677801ceec85",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/239366762/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/260945687/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/262932455/request.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1978103,
+    "sha256": "5fb74bf80c4afd550329b76f93a3d8d353d619e69802028b6226d0b39ca77c02",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/262932455/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-fc7eff48a752-262932455/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1658607,
+    "sha256": "fc7eff48a752c0b09bbaf2bfc016709b56fd6e7b0f9732376683d6385a158344",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/262932455/model.inp",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-2-fc7eff48a752-262932455/model.inp"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2908706,
+    "sha256": "05b23e1b1dda50d5c3dae2f7cc1afce37672035de4d6b0022aef367325ffc557",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/285076646/canonical-model.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/297805104/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-ae1a9337393e/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-ae1a9337393e-297805104/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 7538718,
+    "sha256": "cd90a4b3de40fc7c6793d3445a8007e54cbb09f9e3e475a3ff0209e058670c2a",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/285076646/model.dat",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/297805104/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-ae1a9337393e/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-ae1a9337393e-297805104/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 7538718,
+    "sha256": "c66f1d4be0fc46aa1d2326e5bca3c915535e1034ccd8b739f0ff44958256a613",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/299605480/model.dat",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-cb747c59eb7a-299605480/model.dat"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2422132,
+    "sha256": "ae1a9337393e9ac37ef6633bb51f825e55568cffc136b5173e53e848b12a2bb1",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/285076646/model.inp",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/297805104/model.inp",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-ae1a9337393e/model.inp",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-ae1a9337393e-297805104/model.inp"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3425692,
+    "sha256": "8adc435a4590c0aaec8791cc38631de2973cbcbabc631f39fe9adce5565e5bc5",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/285076646/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/297805104/request.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/299605480/request.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2908763,
+    "sha256": "0150e77dc947548c7f0a8b3db77bc8940458db7605d92abf43ec5f9bf71d35a9",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/299605480/canonical-model.json",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-cb747c59eb7a-299605480/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 2422134,
+    "sha256": "cb747c59eb7a3b5173613f5d6da66eac39d83d6981f51f41ac79db740f729c50",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/299605480/model.inp",
+      "docs/architecture/evidence/cad23/solver-jobs/step-hole-o2-3-cb747c59eb7a-299605480/model.inp"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1072910,
+    "sha256": "e38cf13dd64a45e2247de26f6ec36db23bc13ad816f5a4f66107fb183b767b87",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/72126320/canonical-model.json",
+      "docs/architecture/evidence/cad22/solver-jobs/step-hole-3-cc322ab097ef/canonical-model.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 22065715,
+    "sha256": "bbd3c7857e5ef20d9c4623fc9e6b5968fa146d1de7e01e6f46b5dbbd4d8c79b1",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_13333587/study.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_6852737/study.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 8789810,
+    "sha256": "d6afad05fe82be7fafd5158fe87fb9c0e652a1228c5f7206d37e2ef7bbf230f2",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_16394411/study.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_7764384/study.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 16633776,
+    "sha256": "84ccaf74782939b13c4324b4a94434365a5861ccae75f62b160db048f835b981",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_5100982/study.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_6022598/study.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 8789843,
+    "sha256": "1095000eb97a50c52175790d11d68166cc9ed221daeb2838f54ea8460e6e3e7d",
+    "paths": [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_5706990/study.json",
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_5931675/study.json"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3098072,
+    "sha256": "70c2383cb835ebb5d0dfa1e25aecd5e4e8ecf8599e93c685019f8ec6bb0b5722",
+    "paths": [
+      ".tools/occt-sdk/ucrt64/bin/c++.exe",
+      ".tools/occt-sdk/ucrt64/bin/g++.exe",
+      ".tools/occt-sdk/ucrt64/bin/x86_64-w64-mingw32-c++.exe",
+      ".tools/occt-sdk/ucrt64/bin/x86_64-w64-mingw32-g++.exe"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 3095000,
+    "sha256": "0b52b5b82591cbb11110df1e67a22f1b762afea9496964a33eed2dcb8e0fe43c",
+    "paths": [
+      ".tools/occt-sdk/ucrt64/bin/cc.exe",
+      ".tools/occt-sdk/ucrt64/bin/gcc.exe",
+      ".tools/occt-sdk/ucrt64/bin/x86_64-w64-mingw32-cc.exe",
+      ".tools/occt-sdk/ucrt64/bin/x86_64-w64-mingw32-gcc-15.1.0.exe",
+      ".tools/occt-sdk/ucrt64/bin/x86_64-w64-mingw32-gcc.exe"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1493574,
+    "sha256": "c6b52ff9ca54f9f98373a615d501304db26ad1ea4527def2c88a59377f62b210",
+    "paths": [
+      ".tools/occt-sdk/ucrt64/lib/libraw.a",
+      ".tools/occt-sdk/ucrt64/lib/libraw_r.a"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1173158,
+    "sha256": "2768ac841213a7ae11d1ea7fd0f25a69b39216102dc5dd913ea6ba0f0dc57e28",
+    "paths": [
+      ".tools/occt-sdk/ucrt64/share/libmysofa/default.sofa",
+      ".tools/occt-sdk/ucrt64/share/libmysofa/MIT_KEMAR_normal_pinna.sofa"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  },
+  {
+    "size": 1757266,
+    "sha256": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868",
+    "paths": [
+      "bin/windows/x86_64/unicore_native.windows.template_debug.x86_64.dll",
+      "bin/windows/x86_64/~unicore_native.windows.template_debug.x86_64.dll"
+    ],
+    "action": "preserve: semantic roles not proven redundant"
+  }
+]

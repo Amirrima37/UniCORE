@@ -1,0 +1,1 @@
+{"state": "owner_exited", "exit_code": 1, "error": "", "seconds": 1.039843299993663, "started_utc": "2026-11-13T23:51:57.245114+00:00", "ended_utc": "2026-11-13T23:51:58.284957+00:00", "peak_working_set_bytes": 10756096, "peak_memory_bytes": 13348864, "job_object": true}

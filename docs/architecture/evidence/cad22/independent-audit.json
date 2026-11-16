@@ -1,0 +1,422 @@
+[
+  {
+    "case": "axial-bar",
+    "level": 0,
+    "outcome": "PASS",
+    "analytical_reference_m": 4.761904761904762e-07,
+    "tip_mean_m": 4.761905e-07,
+    "relative_error": 4.9999999918171056e-08,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      4.000000000216294e-13,
+      -999.99998,
+      -3.299999998669665e-13
+    ],
+    "normalized_reaction_imbalance": 1.9999999949504862e-08,
+    "independent_tet_volume_m3": 0.010000000000000002,
+    "sample": null,
+    "effective_h_m": 0.03193649184995276,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-bar-0-a14101f56f88-d51081569db7"
+  },
+  {
+    "case": "axial-bar",
+    "level": 1,
+    "outcome": "PASS",
+    "analytical_reference_m": 4.761904761904762e-07,
+    "tip_mean_m": 4.761905e-07,
+    "relative_error": 4.9999999918171056e-08,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      1.0999999997219911e-13,
+      -999.99998,
+      3.1460000000152008e-12
+    ],
+    "normalized_reaction_imbalance": 1.99999999495051e-08,
+    "independent_tet_volume_m3": 0.010000000000000002,
+    "sample": null,
+    "effective_h_m": 0.02847764255473534,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-bar-1-d100f3dbd25b-af216d188a7d"
+  },
+  {
+    "case": "axial-bar",
+    "level": 2,
+    "outcome": "PASS",
+    "analytical_reference_m": 4.761904761904762e-07,
+    "tip_mean_m": 4.7619049999999994e-07,
+    "relative_error": 4.9999999918171056e-08,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      1.9999999999774524e-12,
+      -1000.00001,
+      -1.5580000000053004e-12
+    ],
+    "normalized_reaction_imbalance": 9.999999974752749e-09,
+    "independent_tet_volume_m3": 0.010000000000000002,
+    "sample": null,
+    "effective_h_m": 0.01764263102281956,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-bar-2-77e98eaa2a0a-ab87fc5837b8"
+  },
+  {
+    "case": "axial-bar",
+    "level": 3,
+    "outcome": "PASS",
+    "analytical_reference_m": 4.761904761904762e-07,
+    "tip_mean_m": 4.761904933333333e-07,
+    "relative_error": 3.600000009207349e-08,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      1.3100000000077224e-12,
+      -1000.00001,
+      6.309999999761515e-13
+    ],
+    "normalized_reaction_imbalance": 9.999999974752534e-09,
+    "independent_tet_volume_m3": 0.010000000000000002,
+    "sample": null,
+    "effective_h_m": 0.012479720924804273,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-bar-3-7af20c00f2f4-ddb08dc02138"
+  },
+  {
+    "case": "axial-cylinder",
+    "level": 0,
+    "outcome": "PASS",
+    "analytical_reference_m": 3.031522725559911e-08,
+    "tip_mean_m": 3.2102693076923076e-08,
+    "relative_error": 0.05896263967454951,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -1.0999999994210086e-08,
+      -999.99997,
+      -1.0999999999067311e-07
+    ],
+    "normalized_reaction_imbalance": 3.000020372058571e-08,
+    "independent_tet_volume_m3": 0.005920055041036592,
+    "sample": null,
+    "effective_h_m": 0.03805616362325506,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-cylinder-0-ed3955026d52-e28b0180dd18"
+  },
+  {
+    "case": "axial-cylinder",
+    "level": 1,
+    "outcome": "PASS",
+    "analytical_reference_m": 3.031522725559911e-08,
+    "tip_mean_m": 3.1172450357142853e-08,
+    "relative_error": 0.028276980882121494,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -5.2999999989884056e-09,
+      -999.99999,
+      3.599999999709738e-09
+    ],
+    "normalized_reaction_imbalance": 1.000000202725222e-08,
+    "independent_tet_volume_m3": 0.0061046823787885745,
+    "sample": null,
+    "effective_h_m": 0.026309964237592503,
+    "observed_error_rate": 1.9908573138483772,
+    "artifacts": "solver-jobs\\axial-cylinder-1-d6ef577bf3f0-590b042ab483"
+  },
+  {
+    "case": "axial-cylinder",
+    "level": 2,
+    "outcome": "PASS",
+    "analytical_reference_m": 3.031522725559911e-08,
+    "tip_mean_m": 3.071865958333333e-08,
+    "relative_error": 0.013307910388820066,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      1.1699999997606529e-08,
+      -1000.00001,
+      -6.5999999995401334e-09
+    ],
+    "normalized_reaction_imbalance": 1.0000008997248377e-08,
+    "independent_tet_volume_m3": 0.0061974222584269155,
+    "sample": null,
+    "effective_h_m": 0.018945349976239898,
+    "observed_error_rate": 2.2951102258884255,
+    "artifacts": "solver-jobs\\axial-cylinder-2-9603cea3d75a-fb942dc2f0e7"
+  },
+  {
+    "case": "axial-cylinder",
+    "level": 3,
+    "outcome": "PASS",
+    "analytical_reference_m": 3.031522725559911e-08,
+    "tip_mean_m": 3.048413460784314e-08,
+    "relative_error": 0.005571700017945158,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      2.040000001228605e-09,
+      -1000.000002,
+      1.5369999992752268e-09
+    ],
+    "normalized_reaction_imbalance": 2.0000016259420754e-09,
+    "independent_tet_volume_m3": 0.006246812877661086,
+    "sample": null,
+    "effective_h_m": 0.012742217840134617,
+    "observed_error_rate": 2.1950969178183786,
+    "artifacts": "solver-jobs\\axial-cylinder-3-4bff6bb65dda-48755ea7f253"
+  },
+  {
+    "case": "bending",
+    "level": 0,
+    "outcome": "PASS",
+    "analytical_reference_m": 0.00019047619047619045,
+    "tip_mean_m": 8.558475416666667e-05,
+    "relative_error": 0.5506800406249999,
+    "applied_force_N": [
+      1000.0,
+      0.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -1000.0011,
+      0.0011999999995566668,
+      -0.0005999999998067551
+    ],
+    "normalized_reaction_imbalance": 1.7349351568853688e-06,
+    "independent_tet_volume_m3": 0.010000000000000002,
+    "sample": null,
+    "effective_h_m": 0.03193649184995276,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\bending-0-48d9ab27184b-26e5c86b4a85"
+  },
+  {
+    "case": "bending",
+    "level": 1,
+    "outcome": "PASS",
+    "analytical_reference_m": 0.00019047619047619045,
+    "tip_mean_m": 0.00010796393333333333,
+    "relative_error": 0.4331893499999999,
+    "applied_force_N": [
+      1000.0,
+      0.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -1000.0003000000002,
+      -0.0007899999996965335,
+      0.00042999999992332505
+    ],
+    "normalized_reaction_imbalance": 9.481561050511792e-07,
+    "independent_tet_volume_m3": 0.010000000000000002,
+    "sample": null,
+    "effective_h_m": 0.02847764255473534,
+    "observed_error_rate": 2.0935098603942692,
+    "artifacts": "solver-jobs\\bending-1-b1114b617008-24f0098c6581"
+  },
+  {
+    "case": "bending",
+    "level": 2,
+    "outcome": "PASS",
+    "analytical_reference_m": 0.00019047619047619045,
+    "tip_mean_m": 0.00015201571500000002,
+    "relative_error": 0.20191749624999977,
+    "applied_force_N": [
+      1000.0,
+      0.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -999.9982800000001,
+      -0.0013000000003557943,
+      9.999999981857854e-06
+    ],
+    "normalized_reaction_imbalance": 2.1560380331655284e-06,
+    "independent_tet_volume_m3": 0.010000000000000002,
+    "sample": null,
+    "effective_h_m": 0.01764263102281956,
+    "observed_error_rate": 1.5942229942386523,
+    "artifacts": "solver-jobs\\bending-2-9c2fd9a8bdf4-db5d4a0145c9"
+  },
+  {
+    "case": "bending",
+    "level": 3,
+    "outcome": "PASS",
+    "analytical_reference_m": 0.00019047619047619045,
+    "tip_mean_m": 0.00016555302888888887,
+    "relative_error": 0.13084659833333334,
+    "applied_force_N": [
+      1000.0,
+      0.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -999.9997399999999,
+      0.0008699999998249552,
+      -9.040000005200444e-05
+    ],
+    "normalized_reaction_imbalance": 9.125087176445479e-07,
+    "independent_tet_volume_m3": 0.010000000000000002,
+    "sample": null,
+    "effective_h_m": 0.012479720924804273,
+    "observed_error_rate": 1.2530820914792542,
+    "artifacts": "solver-jobs\\bending-3-9dd6bd9c48af-b5b065401328"
+  },
+  {
+    "case": "step-hole",
+    "level": 0,
+    "outcome": "PASS",
+    "analytical_reference_m": 5.446308011419238e-07,
+    "tip_mean_m": 5.385456125e-07,
+    "relative_error": 0.01117305269765323,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -2.500000004565907e-09,
+      -1000.00002,
+      1.1400000001122752e-08
+    ],
+    "normalized_reaction_imbalance": 2.0000003354754572e-08,
+    "independent_tet_volume_m3": 0.00884310003010638,
+    "sample": {
+      "point_m": [
+        0.087,
+        0.487,
+        0.083
+      ],
+      "element": 2220,
+      "von_mises_Pa": 113099.12026884661,
+      "association": "containing TET4 integration-point constant stress"
+    },
+    "effective_h_m": 0.01392517154557488,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\step-hole-0-e45b22af546a-279ebb55d9e4"
+  },
+  {
+    "case": "step-hole",
+    "level": 1,
+    "outcome": "PASS",
+    "analytical_reference_m": 5.446308011419238e-07,
+    "tip_mean_m": 5.420595875e-07,
+    "relative_error": 0.004721021353424781,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -3.6300000001861753e-09,
+      -1000.0,
+      6.700000002569343e-10
+    ],
+    "normalized_reaction_imbalance": 3.691314129371263e-12,
+    "independent_tet_volume_m3": 0.00878534422152211,
+    "sample": {
+      "point_m": [
+        0.087,
+        0.487,
+        0.083
+      ],
+      "element": 3826,
+      "von_mises_Pa": 113836.65765917566,
+      "association": "containing TET4 integration-point constant stress"
+    },
+    "effective_h_m": 0.010904567594456994,
+    "observed_error_rate": 3.523198660033493,
+    "artifacts": "solver-jobs\\step-hole-1-769d936708b4-ca32a1124583"
+  },
+  {
+    "case": "step-hole",
+    "level": 2,
+    "outcome": "PASS",
+    "analytical_reference_m": 5.446308011419238e-07,
+    "tip_mean_m": 5.434869823529411e-07,
+    "relative_error": 0.0021001727896852174,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -1.6700000001862821e-09,
+      -999.999991,
+      -1.38999999983974e-09
+    ],
+    "normalized_reaction_imbalance": 9.00000023955496e-09,
+    "independent_tet_volume_m3": 0.008762272756030804,
+    "sample": {
+      "point_m": [
+        0.087,
+        0.487,
+        0.083
+      ],
+      "element": 10668,
+      "von_mises_Pa": 114130.5921240768,
+      "association": "containing TET4 integration-point constant stress"
+    },
+    "effective_h_m": 0.008357657293182786,
+    "observed_error_rate": 3.045092554400952,
+    "artifacts": "solver-jobs\\step-hole-2-93488223b24f-1e093dd351d3"
+  },
+  {
+    "case": "step-hole",
+    "level": 3,
+    "outcome": "PASS",
+    "analytical_reference_m": 5.446308011419238e-07,
+    "tip_mean_m": 5.440347e-07,
+    "relative_error": 0.0010945050127059153,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -1.214000000035205e-09,
+      -1000.0000236,
+      -8.000000000983159e-10
+    ],
+    "normalized_reaction_imbalance": 2.3600000007936907e-08,
+    "independent_tet_volume_m3": 0.008753201684962257,
+    "sample": {
+      "point_m": [
+        0.087,
+        0.487,
+        0.083
+      ],
+      "element": 20621,
+      "von_mises_Pa": 114245.21881146339,
+      "association": "containing TET4 integration-point constant stress"
+    },
+    "effective_h_m": 0.00679607945775612,
+    "observed_error_rate": 3.150946526340759,
+    "artifacts": "solver-jobs\\step-hole-3-4295cc822907-9174e43e9834"
+  }
+]

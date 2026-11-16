@@ -1,0 +1,254 @@
+[
+  {
+    "script": "tests/test_physics_engine_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 2.021
+  },
+  {
+    "script": "tests/test_physics_features_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 1.458
+  },
+  {
+    "script": "tests/test_physics_interaction_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 1.457
+  },
+  {
+    "script": "tests/test_verlet_empirical_verification.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 0.719
+  },
+  {
+    "script": "tests/test_rk4_empirical_verification.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 0.722
+  },
+  {
+    "script": "tests/test_precession_diagnostic.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 0.716
+  },
+  {
+    "script": "tests/test_native_metrics_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 0.533
+  },
+  {
+    "script": "tests/test_native_molecular_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 2.206
+  },
+  {
+    "script": "tests/test_native_gravity_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 3.941
+  },
+  {
+    "script": "tests/test_native_quantum_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 1.178
+  },
+  {
+    "script": "tests/test_native_nuclear_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 0.901
+  },
+  {
+    "script": "tests/test_native_remaining_fixtures_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 0.73
+  },
+  {
+    "script": "tests/test_native_geometry_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 0.71
+  },
+  {
+    "script": "tests/test_native_structural_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 1.077
+  },
+  {
+    "script": "tests/test_structural_expansion.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 3.318
+  },
+  {
+    "script": "tests/test_native_thermal_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 1.376
+  },
+  {
+    "script": "tests/test_materials_thermal_ui.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 2.477
+  },
+  {
+    "script": "tests/test_cae_analysis_commands.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 2.299
+  },
+  {
+    "script": "tests/test_native_structural_ui.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 2.205
+  },
+  {
+    "script": "tests/test_cae_recovery.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 2.303
+  },
+  {
+    "script": "tests/test_cae_shell.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 7.228
+  },
+  {
+    "script": "tests/test_cae_ai_commands.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 3.153
+  },
+  {
+    "script": "tests/test_mesh_inspection.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 0.883
+  },
+  {
+    "script": "tests/test_mesh_result_integration.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 3.498
+  },
+  {
+    "script": "tests/test_native_radiation.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 0.732
+  },
+  {
+    "script": "tests/test_mesh_async.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 2.676
+  },
+  {
+    "script": "tests/test_extreme_equivalence.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 1.174
+  },
+  {
+    "script": "tests/test_extreme_advanced.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "expected_script_errors": 0,
+    "raw_script_error": false,
+    "seconds": 1.454
+  }
+]

@@ -1,0 +1,383 @@
+[
+  {
+    "test": "gui",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 40.45548459999554,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_gui.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\gui-1794607751118601800"
+  },
+  {
+    "test": "gui",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 34.11999829999695,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_gui.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\gui-1794608110787552100"
+  },
+  {
+    "test": "independent",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 1.6324440000025788,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/cad22_independent.py"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\independent-1794608659928958700"
+  },
+  {
+    "test": "lifecycle",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 16.88518589999876,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/cad22_lifecycle.py"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\lifecycle-1794606306394588100"
+  },
+  {
+    "test": "lifecycle",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 15.633310200006235,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/cad22_lifecycle.py"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\lifecycle-1794608324604539100"
+  },
+  {
+    "test": "numerical",
+    "outcome": "FAIL",
+    "exit_code": 1,
+    "seconds": 3.912281000011717,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_numerical.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\numerical-1794605898959129700"
+  },
+  {
+    "test": "numerical",
+    "outcome": "FAIL",
+    "exit_code": 1,
+    "seconds": 3.8687472000019625,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_numerical.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\numerical-1794605962969326000"
+  },
+  {
+    "test": "numerical",
+    "outcome": "FAIL",
+    "exit_code": 1,
+    "seconds": 3.623233199992683,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_numerical.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\numerical-1794606072891558300"
+  },
+  {
+    "test": "numerical",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 80.14081300000544,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_numerical.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\numerical-1794606115820521500"
+  },
+  {
+    "test": "persistence",
+    "outcome": "FAIL",
+    "exit_code": 1,
+    "seconds": 17.137623299990082,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_persistence.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\persistence-1794606185355683300"
+  },
+  {
+    "test": "persistence",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 16.18440159999591,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_persistence.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\persistence-1794606289035927800"
+  },
+  {
+    "test": "persistence",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 16.504981500009308,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_persistence.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\persistence-1794608306977891100"
+  },
+  {
+    "test": "persistence",
+    "outcome": "FAIL",
+    "exit_code": 1,
+    "seconds": 20.228392899996834,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_persistence.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\persistence-1794608462895310800"
+  },
+  {
+    "test": "persistence",
+    "outcome": "FAIL",
+    "exit_code": 1,
+    "seconds": 20.287572800007183,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_persistence.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\persistence-1794608744141466300"
+  },
+  {
+    "test": "persistence",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 23.532933800001047,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_persistence.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\persistence-1794608820651386600"
+  },
+  {
+    "test": "persistence",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 20.153978400005144,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_persistence.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\persistence-1794609002510958200"
+  },
+  {
+    "test": "cad21-geometry",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 5.568219000007957,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/run_cad21.py",
+      "geometry"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\preservation-1794607762593268400"
+  },
+  {
+    "test": "cad21-integration",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 33.119298100005835,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/run_cad21.py",
+      "integration"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\preservation-1794607762593268400"
+  },
+  {
+    "test": "step-modal-transient",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 18.2454185999959,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/run_cad21.py",
+      "preservation"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\preservation-1794607762593268400"
+  },
+  {
+    "test": "default-regressions",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 37.246085999999195,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "native/run_regressions.py",
+      "--godot",
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\regressions-1794606347698254900\\default"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\regressions-1794606347698254900"
+  },
+  {
+    "test": "default-regressions",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 36.82125079999969,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "native/run_regressions.py",
+      "--godot",
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\regressions-1794608391040644000\\default"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\regressions-1794608391040644000"
+  },
+  {
+    "test": "scan",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 11.176968200001284,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--editor",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--quit"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\scan-1794605801651282300"
+  },
+  {
+    "test": "scan",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 16.43088999998872,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--editor",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--quit"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\scan-1794608341414384000"
+  },
+  {
+    "test": "scan",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 14.404420799997752,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--editor",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--quit"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\scan-1794608934859458100"
+  },
+  {
+    "test": "validation",
+    "outcome": "FAIL",
+    "exit_code": 1,
+    "seconds": 1.2232726999936858,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/cad22_validation.py"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\validation-1794605896502053100"
+  },
+  {
+    "test": "validation",
+    "outcome": "FAIL",
+    "exit_code": 1,
+    "seconds": 0.9461748000030639,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/cad22_validation.py"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\validation-1794606070686066200"
+  },
+  {
+    "test": "validation",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 1.9174309000081848,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/cad22_validation.py"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\validation-1794606112668397300"
+  },
+  {
+    "test": "validation",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 2.0701542000024347,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/cad22_validation.py"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\validation-1794608999171525100"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "timeout",
+  "exit_code": 0,
+  "outcome": "PASS",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/cad24_failure.py",
+    "timeout"
+  ],
+  "seconds": 12.769029300005059,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\timeout-1794655651642450500"
+}

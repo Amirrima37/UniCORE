@@ -1,0 +1,4 @@
+ERROR: VerletIntegrator: dt must be positive, got: -0.010000
+   at: push_error (core/variant/variant_utility.cpp:894)
+ERROR: VerletIntegrator: Array size mismatch (pos: 1, vel: 2, mass: 1)
+   at: push_error (core/variant/variant_utility.cpp:894)

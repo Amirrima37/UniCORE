@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad21_geometry.py", line 20, in <module>
+    mesh=mesh_study(ROOT,dict(parts=[p],mesh_divisions=3),.04 if name!='step-cut' else .05)
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\gmsh_study.py", line 132, in mesh_study
+    face_mapping=evaluated_faces(p)
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\cad_model.py", line 78, in evaluated_faces
+    if expected and (history['invalidated'] or set(mapping.values())!=set(expected)):raise ValueError('BRep face identity mismatch: review CAD topology before meshing')
+                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: BRep face identity mismatch: review CAD topology before meshing

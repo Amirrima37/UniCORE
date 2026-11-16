@@ -1,0 +1,150 @@
+[
+  {
+    "area_relative_error": 0.120215011245935,
+    "density": 1,
+    "edge_ratio_max": 2.3344142301803,
+    "edge_ratio_over5_count": 0,
+    "elements": 48,
+    "generation_ms": 1.612,
+    "legacy_warning_count": 12,
+    "mean_ratio_max": 0.867046148806517,
+    "mean_ratio_median": 0.790952876938062,
+    "mean_ratio_min": 0.493390145974644,
+    "nodes": 27,
+    "pressure_resultant_at_1Pa_N": [
+      0.0000000000000000004336808689942,
+      0.00000000000000000281892564846231,
+      -0
+    ],
+    "structural": {
+      "displacement_max_error_m": 0.00000000000000134523739803855,
+      "reaction_sum_N": [
+        -0.00000000000011,
+        -0.00000000000011,
+        -0.00000000000011
+      ],
+      "residual": 0.000000000000192502962088708,
+      "stress_max_error_Pa": 0.0000000000467474947640767
+    },
+    "thermal": {
+      "centroid_flux_volume_l2_relative_error": 0.707304602312861,
+      "energy_relative_error": 0.000000000000124678045665405,
+      "flux_component_max_error_W_m2": 120.710678118655,
+      "heat_reaction_W": -19.2620605862681,
+      "residual": 0.000000000000000126432436037027,
+      "temperature_max_error_K": 0.185899141852985
+    },
+    "volume_relative_error": 0.233586960889871
+  },
+  {
+    "area_relative_error": 0.032438854770906,
+    "density": 2,
+    "edge_ratio_max": 2.95978704589632,
+    "edge_ratio_over5_count": 0,
+    "elements": 384,
+    "generation_ms": 10.898,
+    "legacy_warning_count": 78,
+    "mean_ratio_max": 0.922606374098373,
+    "mean_ratio_median": 0.71157377362765,
+    "mean_ratio_min": 0.272381850131878,
+    "nodes": 125,
+    "pressure_resultant_at_1Pa_N": [
+      -0,
+      0.00000000000000000096900569165892,
+      -0
+    ],
+    "structural": {
+      "displacement_max_error_m": 0.000000000000154752153745576,
+      "reaction_sum_N": [
+        0.00000000000000000173472347597681,
+        0.00000000000000000227682456221956,
+        -0
+      ],
+      "residual": 0.000000000070760390002119,
+      "stress_max_error_Pa": 0.00000000406040157052701
+    },
+    "thermal": {
+      "centroid_flux_volume_l2_relative_error": 0.383996259860558,
+      "energy_relative_error": 0.00000000000010902390101819,
+      "flux_component_max_error_W_m2": 187.559516386208,
+      "heat_reaction_W": -23.4977095597801,
+      "residual": 0.000000000000000301524592295922,
+      "temperature_max_error_K": 0.0607561548517879
+    },
+    "volume_relative_error": 0.0650558430559286
+  },
+  {
+    "area_relative_error": 0.0146467825025959,
+    "density": 3,
+    "edge_ratio_max": 3.25567583994359,
+    "edge_ratio_over5_count": 0,
+    "elements": 1296,
+    "generation_ms": 49.958,
+    "legacy_warning_count": 198,
+    "mean_ratio_max": 0.947074104432643,
+    "mean_ratio_median": 0.69385301535937,
+    "mean_ratio_min": 0.183813076928773,
+    "nodes": 343,
+    "pressure_resultant_at_1Pa_N": [
+      -0,
+      -0,
+      0.00000000000000000669494841509799
+    ],
+    "structural": {
+      "displacement_max_error_m": 0.0000000000000756545400057342,
+      "reaction_sum_N": [
+        -0,
+        -0,
+        -0
+      ],
+      "residual": 0.0000000000347897042196725,
+      "stress_max_error_Pa": 0.00000000374083786169876
+    },
+    "thermal": {
+      "centroid_flux_volume_l2_relative_error": 0.264112191336214,
+      "energy_relative_error": 0.0000000000000202060590481778,
+      "flux_component_max_error_W_m2": 145.994758749541,
+      "heat_reaction_W": -24.3904632499071,
+      "residual": 0.00000000000365373017143688,
+      "temperature_max_error_K": 0.0291516837009453
+    },
+    "volume_relative_error": 0.0295343023690383
+  },
+  {
+    "area_relative_error": 0.00828683825419063,
+    "density": 4,
+    "edge_ratio_max": 4.96753670508593,
+    "edge_ratio_over5_count": 0,
+    "elements": 3072,
+    "generation_ms": 97.353,
+    "legacy_warning_count": 516,
+    "mean_ratio_max": 0.948653346023862,
+    "mean_ratio_median": 0.684097521724488,
+    "mean_ratio_min": 0.136106698150286,
+    "nodes": 729,
+    "pressure_resultant_at_1Pa_N": [
+      0.00000000000000000025749801596531,
+      0.00000000000000000271050543121376,
+      0.0000000000000000110995197408204
+    ],
+    "structural": {
+      "displacement_max_error_m": 0.0000000000000869606443061263,
+      "reaction_sum_N": [
+        -0.00000000000001,
+        -0.00000000000001,
+        -0.00000000000001
+      ],
+      "residual": 0.0000000000618998792513636,
+      "stress_max_error_Pa": 0.00000000660523813422742
+    },
+    "thermal": {
+      "centroid_flux_volume_l2_relative_error": 0.201381020653028,
+      "energy_relative_error": 0.000000000000092148511043888,
+      "flux_component_max_error_W_m2": 146.0710562494,
+      "heat_reaction_W": -24.7120224398911,
+      "residual": 0.0000000000258374000707799,
+      "temperature_max_error_K": 0.017046123307523
+    },
+    "volume_relative_error": 0.0167398687232841
+  }
+]

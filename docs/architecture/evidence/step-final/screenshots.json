@@ -1,0 +1,310 @@
+[
+  {
+    "path": "screenshots\\bar-backend-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "003454fd5d4d2068719d49df463c1476e7ae022bef0e94951d17b96dbe88563b",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-backend-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "fd67056d6f4a59e1ee16a02784e1b79817388664d832a371b89f9b17d0c99177",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-displacement-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "4be2f2ba846148c6a55f13bed138700ed8b269e60901dd48d539abdf21c2681e",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-displacement-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "02c1868f8d4f00eee585232ae3d8b7428f5305686b0f5d03e41027b6d7221633",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-force-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "6120b65fb58ea0c179078a90e8b8f55bdedfb2626a0c6e44282319ec11f0e65e",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-force-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "7668cb7fea57d70335c8a6022fcd426216acbd7377ad9d9864caa70592db5bfd",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-import-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "638edc59b8f1109b2cf844d4da83aade021af5c5f93ac7735e4a0786db42590a",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-import-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "ce51e3dc6ff317bab24793f203e82e15c55818ef3ab9e999d95337393e97db06",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-recalculated-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "78fbd42339ae78aa3f5c9df3a28299713dd05373c76271c469ad50c32d35dc82",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-recalculated-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "149e62de084ef736e77d3c8d0f4d4da4d8bf0c03517b0aa8438672244272e1f8",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-reopened-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "2acc85138f214c9df4a4a55c28a95f4101b31a7daa1e41ba0375c006fe15812e",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-reopened-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "41a83b1de1dd53cc78be99e9b230077d2391f9a1679d3b68f72110f0842b05d3",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-selected-face-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "2f28a04ebd13015e28aec470ca7b0516bb6232d1fc834e1ca3f92a58f4e1f69b",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-selected-face-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "f2a3be306ca14f63a4f63417a23e090af56657530deb1b86f354ba91ce6a7c83",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-solving-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "0971247c1417a7ec50e817850489980ae135aaff3cc6adb857336fe5779e3dec",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-solving-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "c62fe4d82b8d501bdadefeeaeae9318cf09871ba35591359d3a8b2c797bc12e1",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-support-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "3ce47e3b700b8ad5abdadfab2a206dc5dcde702565f53c7ef84716cd83e04834",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-support-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "09d7bab31a8fc6b767489d103d2528fe86c6bf496947c72618d9e6e1363a5df6",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-tet4-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "d7c30085d6495f7edd9916de9a31dfe998e167a96d1393123023189dc883eea9",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-tet4-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "64b45f2e0db00878e30b8eeb183a555a765b2eb854e01ed716aafa92878e423d",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-von-mises-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "44c74d6518b01e8cb04fb4bb40fd14fa7bd1e65984f5fe491e49f8d9fc7945e1",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\bar-von-mises-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "9d0fe39aa8ebfb0351cd559d11c333f06b840d362e657a20a691345281eff55d",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-backend-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "59b56473984e3cee2b2f944ad60bffc973fd62f8e8416c390a51ce42840431a1",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-backend-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "a633c2c5a2d865c43b444083a687fdccff88192faa311e84f0cbcbcd32b38090",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-displacement-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "91bb508c377684bd78569e3b40274c259cf7940261b6e7fffefd828b1747263b",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-displacement-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "b0d91e5cf0800b3142af1c9b64f04bb3fb1b0c2ce598f13d91ed957ada4a697e",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-force-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "890e4559518e21b845f2927e5e5866a3c2e1b439eb2d6759f656713311473642",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-force-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "030b4ac782159dd6d002ca94e37980a07950d8caace4bd6e152591d8d8785f8c",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-import-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "28073b9c7b76f8a8088098642b4af62326de292f44d445bef26598284f2413b3",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-import-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "5bcd44b24a21647bc4f9917ef233828b6290cfb20af5bd0dd3b995d3f309f55b",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-recalculated-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "aecb34270fc7eddb0e895fddac242665696e0a4068a2ce1d866b2b4f3d87a4c0",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-recalculated-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "c728bf141cf538c7734d21342a64136660666be542882be8fd2086c284614c0a",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-reopened-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "f018c5e31e9d32b2dac921e3952394ed3e273b1b47d9e0863beac3e4d6cdbefd",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-reopened-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "d11d91875b59fc7ac6845f578bb0eaf015dc58d5076168aa0ebeb3ba124d9a5d",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-selected-face-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "0c002cc1da0320718ad986062917e2fa0f934d69830b94be24b1d599ce68b7bf",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-selected-face-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "d5fac4b4ce8dc4efded564d8065466a76c26bf09f17ffa448aeefdf6ccffdfd9",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-solving-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "274efeac8182ef169fb76d0566883a2ea322586381496ca0eaf8eb17beb21e77",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-solving-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "b93022c87a1f1bde6ee16fc7ffc5becdf2f67d69579c271c96dadd4619ef10d4",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-support-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "9dbc9587f1ee9337d54a5771cf2326bc5f1a0598c7358da481945424d6d62a02",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-support-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "82ea1b7aa2f2ae8edb45c3e8a12abcc755699b3ecd867e523983401e736654c3",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-tet4-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "be92cd07bb356f6705d2425439212b004ddfe4c37ae5e4dc960d8fef7cb964bc",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-tet4-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "b4c9bc4bcaee11e6d87e31227c0ea52c6a8d5659b32a7854dc6620fa46b942c7",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-von-mises-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "e41363454e4d4699700ca89aa5b419ea3a1d23c682ce1dcd78fea8ef4e2b6f39",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\cylinder-von-mises-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "9f512ba95180e71a90b117b25a07533d0b14a2d20fbf999be437346b30227fce",
+    "outcome": "PASS"
+  }
+]

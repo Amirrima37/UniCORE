@@ -1,0 +1,50 @@
+[
+  {
+    "binary": "unicore_solver.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794442924_605_16108_1312293",
+    "pid_stopped": true,
+    "reference_error": 0.0000000000121005427899945,
+    "residual": 0.000000000040149838285664,
+    "thermal": false
+  },
+  {
+    "binary": "unicore_solver.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794442925_025_16108_1732883",
+    "pid_stopped": true,
+    "reference_error": 0.000000000000113686837721616,
+    "residual": 0.000000000000000501107688440117,
+    "thermal": true
+  },
+  {
+    "binary": "unicore_solver_debug.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794442925_162_16108_1869908",
+    "pid_stopped": true,
+    "reference_error": 0.0000000000121005427899945,
+    "residual": 0.000000000040149838285664,
+    "thermal": false
+  },
+  {
+    "binary": "unicore_solver_debug.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794442925_885_16108_2592987",
+    "pid_stopped": true,
+    "reference_error": 0.000000000000113686837721616,
+    "residual": 0.000000000000000501107688440117,
+    "thermal": true
+  },
+  {
+    "binary": "unicore_solver_noomp.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794442926_014_16108_2721742",
+    "pid_stopped": true,
+    "reference_error": 0.0000000000121005427899945,
+    "residual": 0.000000000040149838285664,
+    "thermal": false
+  },
+  {
+    "binary": "unicore_solver_noomp.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794442926_461_16108_3169094",
+    "pid_stopped": true,
+    "reference_error": 0.000000000000113686837721616,
+    "residual": 0.000000000000000501107688440117,
+    "thermal": true
+  }
+]

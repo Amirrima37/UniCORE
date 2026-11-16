@@ -1,0 +1,144 @@
+[
+  {
+    "variant": "A",
+    "peak_working_set_bytes": 416165888,
+    "seconds": 17.124842699999135,
+    "rows": [
+      {
+        "case": "Box-static_structural",
+        "operation": "import",
+        "n": 5,
+        "median_ms": 9.885,
+        "min_ms": 8.334,
+        "max_ms": 10.752
+      },
+      {
+        "case": "Box-static_structural",
+        "operation": "switch",
+        "n": 6,
+        "median_ms": 23.755499999999998,
+        "min_ms": 19.675,
+        "max_ms": 38.044
+      },
+      {
+        "case": "Box-steady_thermal",
+        "operation": "import",
+        "n": 5,
+        "median_ms": 12.243,
+        "min_ms": 10.079,
+        "max_ms": 12.86
+      },
+      {
+        "case": "Box-steady_thermal",
+        "operation": "switch",
+        "n": 6,
+        "median_ms": 29.205,
+        "min_ms": 21.004,
+        "max_ms": 45.68
+      },
+      {
+        "case": "Cylinder-static_structural",
+        "operation": "import",
+        "n": 5,
+        "median_ms": 425.445,
+        "min_ms": 420.149,
+        "max_ms": 451.669
+      },
+      {
+        "case": "Cylinder-static_structural",
+        "operation": "switch",
+        "n": 6,
+        "median_ms": 632.2574999999999,
+        "min_ms": 581.884,
+        "max_ms": 665.787
+      },
+      {
+        "case": "Cylinder-steady_thermal",
+        "operation": "import",
+        "n": 5,
+        "median_ms": 366.66,
+        "min_ms": 351.582,
+        "max_ms": 404.064
+      },
+      {
+        "case": "Cylinder-steady_thermal",
+        "operation": "switch",
+        "n": 6,
+        "median_ms": 433.29100000000005,
+        "min_ms": 423.384,
+        "max_ms": 560.927
+      }
+    ]
+  },
+  {
+    "variant": "B",
+    "peak_working_set_bytes": 432742400,
+    "seconds": 8.995853500000521,
+    "rows": [
+      {
+        "case": "Box-static_structural",
+        "operation": "import",
+        "n": 5,
+        "median_ms": 7.782,
+        "min_ms": 6.854,
+        "max_ms": 8.057
+      },
+      {
+        "case": "Box-static_structural",
+        "operation": "switch",
+        "n": 6,
+        "median_ms": 12.645,
+        "min_ms": 9.686,
+        "max_ms": 26.057
+      },
+      {
+        "case": "Box-steady_thermal",
+        "operation": "import",
+        "n": 5,
+        "median_ms": 9.338,
+        "min_ms": 8.856,
+        "max_ms": 10.362
+      },
+      {
+        "case": "Box-steady_thermal",
+        "operation": "switch",
+        "n": 6,
+        "median_ms": 22.6115,
+        "min_ms": 18.933,
+        "max_ms": 38.769
+      },
+      {
+        "case": "Cylinder-static_structural",
+        "operation": "import",
+        "n": 5,
+        "median_ms": 314.31,
+        "min_ms": 295.563,
+        "max_ms": 407.77
+      },
+      {
+        "case": "Cylinder-static_structural",
+        "operation": "switch",
+        "n": 6,
+        "median_ms": 36.797,
+        "min_ms": 31.993,
+        "max_ms": 248.069
+      },
+      {
+        "case": "Cylinder-steady_thermal",
+        "operation": "import",
+        "n": 5,
+        "median_ms": 268.076,
+        "min_ms": 265.512,
+        "max_ms": 292.631
+      },
+      {
+        "case": "Cylinder-steady_thermal",
+        "operation": "switch",
+        "n": 6,
+        "median_ms": 37.5975,
+        "min_ms": 29.164,
+        "max_ms": 254.176
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "name": "deck-audit",
+  "exit_code": 0,
+  "outcome": "PASS",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/cad24_deck_audit.py"
+  ],
+  "seconds": 0.4861626000056276,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\deck-audit-1794666308947026600"
+}

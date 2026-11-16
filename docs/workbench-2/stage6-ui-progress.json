@@ -1,0 +1,56 @@
+[
+  {
+    "edit_undo_redo_cases": 5,
+    "elements": 192,
+    "geometry": "Cylinder",
+    "nodes": 75,
+    "residual": 0.0000000000970939136118425,
+    "study": "static_structural",
+    "ui_launch_import": true
+  },
+  {
+    "edit_undo_redo_cases": 5,
+    "elements": 192,
+    "geometry": "Cylinder",
+    "nodes": 75,
+    "residual": 0.0000000000410511352112711,
+    "study": "steady_thermal",
+    "ui_launch_import": true
+  },
+  {
+    "edit_undo_redo_cases": 5,
+    "elements": 384,
+    "geometry": "Sphere",
+    "nodes": 125,
+    "residual": 0.00000000000000743383321733767,
+    "study": "static_structural",
+    "ui_launch_import": true
+  },
+  {
+    "edit_undo_redo_cases": 5,
+    "elements": 384,
+    "geometry": "Sphere",
+    "nodes": 125,
+    "residual": 0.00000000000000116774121305073,
+    "study": "steady_thermal",
+    "ui_launch_import": true
+  },
+  {
+    "edit_undo_redo_cases": 5,
+    "elements": 1536,
+    "geometry": "Pipe",
+    "nodes": 480,
+    "residual": 0.0000000000726594070542043,
+    "study": "static_structural",
+    "ui_launch_import": true
+  },
+  {
+    "edit_undo_redo_cases": 5,
+    "elements": 1536,
+    "geometry": "Pipe",
+    "nodes": 480,
+    "residual": 0.0000000000876942968332062,
+    "study": "steady_thermal",
+    "ui_launch_import": true
+  }
+]

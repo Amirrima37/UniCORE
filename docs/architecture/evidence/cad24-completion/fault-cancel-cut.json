@@ -1,0 +1,43 @@
+{
+  "godot_exit": 0,
+  "terminated_native": {
+    "pid": 22932,
+    "action": "cut",
+    "operation_id": "fec3f964-4341-4db9-aed8-dbb55dfc4bd2"
+  },
+  "observed": [
+    {
+      "pid": 388,
+      "action": "box",
+      "operation_id": "00688204-41a4-4e5e-8a0e-9f3ff006e4a6"
+    },
+    {
+      "pid": 16992,
+      "action": "cylinder",
+      "operation_id": "d82451e0-8bbd-4f74-81ab-8c2abb4da8fa"
+    },
+    {
+      "pid": 22932,
+      "action": "cut",
+      "operation_id": "fec3f964-4341-4db9-aed8-dbb55dfc4bd2"
+    }
+  ],
+  "recovered": true,
+  "fault": "Cooperative job cancellation during observed native Cut",
+  "mode": "cancel-cut",
+  "native_exit_code_dword": 0,
+  "native_process_receipts": [],
+  "stdout": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-cancel-cut-1794666107945333600.stdout.txt",
+  "stderr": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-cancel-cut-1794666107945333600.stderr.txt",
+  "launcher": {
+    "state": "cancelled",
+    "exit_code": 1,
+    "error": "",
+    "job_object": true,
+    "seconds": 3.4162383999937447,
+    "peak_process_memory_bytes": 662601728,
+    "peak_job_memory_bytes": 663859200,
+    "memory_limit_bytes": 805306368
+  },
+  "observed_native_pids_still_alive": []
+}

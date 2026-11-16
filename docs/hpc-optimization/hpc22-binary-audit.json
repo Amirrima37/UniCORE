@@ -1,0 +1,26 @@
+[
+  {
+    "path": ".tools/unicore_solver_hpc21_baseline.exe",
+    "sha256": "027455e47cc846a4bb2ac40aea81a6dc7257cda4027ecbb8d5fc145df8eaa819",
+    "size": 3295856,
+    "gcc_strings": [
+      "GCC: (x86_64-posix-seh-rev1, Built by MinGW-Builds project) 13.1.0"
+    ]
+  },
+  {
+    "path": ".tools/unicore_solver_hpc22_before.exe",
+    "sha256": "65bae8b2c0a8c1d5b24d6471e77e5b795427560a4635401ad1a2b865981577e1",
+    "size": 3338868,
+    "gcc_strings": [
+      "GCC: (x86_64-posix-seh-rev1, Built by MinGW-Builds project) 13.1.0"
+    ]
+  },
+  {
+    "path": "bin/unicore_solver.exe",
+    "sha256": "6362f4fbd74f045d3fda31eac6d76ac5c6bd103b4871f5c3242dc3c97ee9c669",
+    "size": 3342582,
+    "gcc_strings": [
+      "GCC: (x86_64-posix-seh-rev1, Built by MinGW-Builds project) 13.1.0"
+    ]
+  }
+]

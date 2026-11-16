@@ -1,0 +1,11 @@
+{
+  "name": "failure",
+  "exit_code": 1,
+  "outcome": "FAIL",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/cad24_failure.py"
+  ],
+  "seconds": 34.74557420000201,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\failure-1794623566035521400"
+}

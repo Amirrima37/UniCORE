@@ -1,0 +1,20 @@
+[
+  {
+    "density": 1,
+    "nodes": 27,
+    "tets": 48,
+    "mass_kg": 44.12346314603909,
+    "independent_FEM_frequency_Hz": 310.97638782154206,
+    "transient_projected_frequency_Hz": 310.7176288593847,
+    "expected_Newmark_frequency_Hz": 310.7176288593788
+  },
+  {
+    "density": 2,
+    "nodes": 125,
+    "tets": 384,
+    "mass_kg": 47.75889235916284,
+    "independent_FEM_frequency_Hz": 278.6816683285975,
+    "transient_projected_frequency_Hz": 278.4497813362289,
+    "expected_Newmark_frequency_Hz": 278.44978133622556
+  }
+]

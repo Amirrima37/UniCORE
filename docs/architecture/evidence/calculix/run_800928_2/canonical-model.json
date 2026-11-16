@@ -1,0 +1,1 @@
+{"analysis":"static_structural","constraints":[[0,0,0],[0,1,0],[0,2,0],[2,0,0],[2,2,0],[3,0,0]],"elements":[[0,1,2,3]],"loads":[[1,0,2]],"material":{"E":1000,"nu":0.25},"nodes":[[0,0,0],[1,0,0],[0,1,0],[0,0,1]],"schema":1,"units":"SI"}

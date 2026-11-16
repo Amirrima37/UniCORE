@@ -1,0 +1,12 @@
+{
+  "name": "cad23-persistence",
+  "exit_code": 0,
+  "outcome": "PASS",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/run_cad23.py",
+    "persistence"
+  ],
+  "seconds": 44.37409339999431,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-persistence-1794656434304802400"
+}

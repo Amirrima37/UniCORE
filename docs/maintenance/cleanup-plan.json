@@ -1,0 +1,853 @@
+{
+  "candidates": [
+    {
+      "path": "native/godot-cpp/tools/__pycache__/android.cpython-314.pyc",
+      "size": 4434,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "native/godot-cpp/tools/android.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "99a64005aba7bed4318e23834d4f02226923b7815ccfd26213c01de6cd03f5a4",
+      "git_status": "!! native/godot-cpp/\n"
+    },
+    {
+      "path": "native/godot-cpp/tools/__pycache__/ios.cpython-314.pyc",
+      "size": 4272,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "native/godot-cpp/tools/ios.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "bec30b6282093a2480930bc2ebca9f12913b8477626452cc69d4feb9d6d9b561",
+      "git_status": "!! native/godot-cpp/\n"
+    },
+    {
+      "path": "native/godot-cpp/tools/__pycache__/ios_osxcross.cpython-314.pyc",
+      "size": 1258,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "native/godot-cpp/tools/ios_osxcross.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "1d1c2dc402f28aef134c8327a6bf44a3249aedd50a40897bcdebcd580c9b9297",
+      "git_status": "!! native/godot-cpp/\n"
+    },
+    {
+      "path": "native/godot-cpp/tools/__pycache__/javascript.cpython-314.pyc",
+      "size": 2068,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "native/godot-cpp/tools/javascript.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "335f19689004602ec7d75c55e681b6454af15ba4dc12d6346a34409d72fa2287",
+      "git_status": "!! native/godot-cpp/\n"
+    },
+    {
+      "path": "native/godot-cpp/tools/__pycache__/linux.cpython-314.pyc",
+      "size": 1853,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "native/godot-cpp/tools/linux.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "52a6b361025f2efa5d747f85d0b3a967dd05bf0d2caafe1ee456055c80d0a5f2",
+      "git_status": "!! native/godot-cpp/\n"
+    },
+    {
+      "path": "native/godot-cpp/tools/__pycache__/macos.cpython-314.pyc",
+      "size": 2351,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "native/godot-cpp/tools/macos.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "c0923c558df4b6b78df97d386266eb54cd74a7317cb2ce02bfcdee67a86812b2",
+      "git_status": "!! native/godot-cpp/\n"
+    },
+    {
+      "path": "native/godot-cpp/tools/__pycache__/macos_osxcross.cpython-314.pyc",
+      "size": 1633,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "native/godot-cpp/tools/macos_osxcross.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "9696a1a4958396c68c29385366c8eb861bf798733532cf52bfbc5fde417f20ae",
+      "git_status": "!! native/godot-cpp/\n"
+    },
+    {
+      "path": "native/godot-cpp/tools/__pycache__/my_spawn.cpython-314.pyc",
+      "size": 2314,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "native/godot-cpp/tools/my_spawn.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "548d255f5d46138e318beebb70367c82dc9c20eca9aef135e5fcaf78a0489f47",
+      "git_status": "!! native/godot-cpp/\n"
+    },
+    {
+      "path": "native/godot-cpp/tools/__pycache__/targets.cpython-314.pyc",
+      "size": 4109,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "native/godot-cpp/tools/targets.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "69b7c1a4632d04fe2b453650deeb45579f10c2c57ae6f5f9b67b53e1aa912827",
+      "git_status": "!! native/godot-cpp/\n"
+    },
+    {
+      "path": "native/godot-cpp/tools/__pycache__/windows.cpython-314.pyc",
+      "size": 2867,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "native/godot-cpp/tools/windows.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "c6494ecabead5306ceecfb501f92fd6fa6167c18d77c176d5a11e6589bec0f1e",
+      "git_status": "!! native/godot-cpp/\n"
+    },
+    {
+      "path": "native/godot-cpp/__pycache__/binding_generator.cpython-314.pyc",
+      "size": 101409,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "native/godot-cpp/binding_generator.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "93edbb5e9b4958cfee32cb5e50abce90b22d4de248b1661536d6a228ff78376c",
+      "git_status": "!! native/godot-cpp/\n"
+    },
+    {
+      "path": "native/__pycache__/archive_godot472.cpython-314.pyc",
+      "size": 3051,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "native/archive_godot472.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "201a94174c36184041f11b0ff539ab227a5097be85225f6bd6dc01fea5269b74",
+      "git_status": "!! native/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/artifact_retention.cpython-314.pyc",
+      "size": 15036,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/artifact_retention.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "cd2d8af064ee00717e703c3b67efb382b41ff87b2c073a267d1c63c397f038a1",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/cad_model.cpython-314.pyc",
+      "size": 37438,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/cad_model.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "a74a468266147188990d079566e1ba66df5bf276243ce19d62af601273c0a311",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/gmsh_study.cpython-314.pyc",
+      "size": 40593,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/gmsh_study.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "445c5cd8d6467b7247cdc2cb53653fca6c341815e9e7bf56031cbbe4fc9df342",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/mesh_config.cpython-314.pyc",
+      "size": 11600,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/mesh_config.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "301628a1fbfd5acc95a62c2a24b8ab654f19455303da6797ab4aaf2949148dd3",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/mesh_quality.cpython-314.pyc",
+      "size": 6938,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/mesh_quality.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "41d1c646e3bb87064a38d825cc46383e53bb562de0f40971df4129d35d5a78e9",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/native_graph.cpython-314.pyc",
+      "size": 20485,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/native_graph.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "40a539ca97b9f4140512d1ba0ea7e57e6abaedd60d6ed0f0d7f34d4d1f39c501",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/native_occt.cpython-314.pyc",
+      "size": 16661,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/native_occt.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "8797d4818453f992e120e450bf65acaa6d450e150f3a77000677cb0c07155248",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/owned_execution.cpython-314.pyc",
+      "size": 6642,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/owned_execution.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "d4d5d5409b66c49de232aa94b09c1e2522a16b0020d9dcfd24ce135ca390fad7",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/owned_mesh_job.cpython-314.pyc",
+      "size": 9236,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/owned_mesh_job.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "bdda638570746784023746fc629a22bb6aa89ec4e9c75894737dc0a4b33025d1",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/process_memory.cpython-314.pyc",
+      "size": 1761,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/process_memory.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "727358dd43172b09d70b7c3f37b940fe4f4fb75923382f6c3826ac2766674914",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/quadratic_tet.cpython-314.pyc",
+      "size": 33377,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/quadratic_tet.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "2976bcbdb6fc2f2c1b9844128a0a2fa8d37da650e0e00050eee732f24128825e",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/run_owned_geometry.cpython-314.pyc",
+      "size": 10503,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/run_owned_geometry.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "dfe292dc93d622d640c79f245750a8016e2d9a748aaae7234467020c6f987e51",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/run_owned_mesh.cpython-314.pyc",
+      "size": 6954,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/run_owned_mesh.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "a431628a998c5278b570f2d52148bc56a3d33d166387ce4cfa1ca71cddc3534e",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "scripts/engines/__pycache__/run_owned_solver.cpython-314.pyc",
+      "size": 4192,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "scripts/engines/run_owned_solver.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "f50ef81d7231c4738f954f6b5edcfbf369919dde8c920c6683977b418ebdf697",
+      "git_status": "!! scripts/engines/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/benchmark_hpc23.cpython-314.pyc",
+      "size": 24718,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/benchmark_hpc23.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "96d1309a1e4783955486960fc213f16fbd7ebdc2444f41d482e9444cce8b3070",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/cad21_geometry.cpython-314.pyc",
+      "size": 14278,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/cad21_geometry.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "e92f03684986a8f5156bc71db4891b995afb312546a8f8590244f9ed9079a913",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/cad21_lifecycle.cpython-314.pyc",
+      "size": 7400,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/cad21_lifecycle.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "cee74951e78f9288adbc1771341b3f2b1b27f08eb836f4d8217920f06d7bba07",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/cad22_independent.cpython-314.pyc",
+      "size": 12846,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/cad22_independent.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "e672353eac65cc82178648f758e601154fa678da92ec630b779230fca3957262",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/cad22_lifecycle.cpython-314.pyc",
+      "size": 8526,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/cad22_lifecycle.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "ce6990caed93a2a12411491c97a3e39a0f036fbbc02c4f336fd7bbf750b08161",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/cad22_pid_probe.cpython-314.pyc",
+      "size": 1200,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/cad22_pid_probe.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "24eb78a98e088e9e72caf1e4367d121abe2f9a0061f0805559bd3a972ead6ec9",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/cad22_validation.cpython-314.pyc",
+      "size": 8359,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/cad22_validation.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "980fd50d7bd1b27c31bfab057282c8a94e953d1f27540cb9e7790a5d28b50de9",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/compare_godot472_calculix_extreme.cpython-314.pyc",
+      "size": 8877,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/compare_godot472_calculix_extreme.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "753c0e3f1ec5c67d8b30ce659c0872a8c859abf1a4262a0de7d4e99f092601a6",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/run_cad21.cpython-314.pyc",
+      "size": 5424,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/run_cad21.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "79368ef80333a60a2535a870bd5807b298d51d21b7eacd0186bdd35db89551e4",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/run_cad22.cpython-314.pyc",
+      "size": 5296,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/run_cad22.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "ddcb2bab2184c4d43dd83004f9e9bcf3cd2b5212ac371efe50d069e49d3101f7",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/run_godot472_engineering.cpython-314.pyc",
+      "size": 4467,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/run_godot472_engineering.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "db770d02c2d501a6ebe56b4c20a9965c8f859585e9c95b783d185fb71c06350b",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/run_godot472_scan.cpython-314.pyc",
+      "size": 2076,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/run_godot472_scan.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "33b8248700cdae7123cf85653d2239d379a619a417971ea1d7511cf0273b7354",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/run_godot472_startup_cycles.cpython-314.pyc",
+      "size": 4016,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/run_godot472_startup_cycles.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "cf714aa2d4e75e6dbcbe833c61defb642a89c80829d93eece31c8ba2adcd8382",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/run_step_final.cpython-314.pyc",
+      "size": 7183,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/run_step_final.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "3969f25729a3705eb1a2e34dca41aa8333186632adc1cd47b9922d47afca744d",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/stage6_acceptance_runner.cpython-314.pyc",
+      "size": 9969,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/stage6_acceptance_runner.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "7b2601c19f1b26449337432915f3887dc937e3cb49e1b9ffee7c481459520747",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/stage6_dump_inventory.cpython-314.pyc",
+      "size": 8912,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/stage6_dump_inventory.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "690513cfbee7ae2da3fcccc58d181cfc3831faf9361d6233e41f2e5544942d7c",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/stage6_finalize_evidence.cpython-314.pyc",
+      "size": 6861,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/stage6_finalize_evidence.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "bbae06922245ac8d305af3912ce742093d0109226f0c223aa538b684f231c581",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/stage6_lame_reference.cpython-314.pyc",
+      "size": 12403,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/stage6_lame_reference.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "43fb040a42a0082dd92d8ceb52886e8b0a41dfcc7116703797443cc02a35443a",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/stage6_restart_acceptance.cpython-314.pyc",
+      "size": 5236,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/stage6_restart_acceptance.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "87d215ec6d5829ff7f230a68e9eab3e784f623cd2bae7538c48be8b8fb01c942",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/step_final_lifecycle.cpython-314.pyc",
+      "size": 7489,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/step_final_lifecycle.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "fb0f72e4c5b25239a66ad3985ca83b0203feaaf189e694c43b8ad667face3898",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/summarize_cad21.cpython-314.pyc",
+      "size": 30383,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/summarize_cad21.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "676ab8e4a261e13248cd88267ec459e3c19b021af04fef95974be47fce78821b",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/summarize_cad22.cpython-314.pyc",
+      "size": 37762,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/summarize_cad22.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "6fed9eabaaf2c19536bcc274cdf5171fb87b5d158df5c7ca6c97b68638ce3f04",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/summarize_hpc23.cpython-314.pyc",
+      "size": 6094,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/summarize_hpc23.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "6064cf7deacb398864e5be24999b9b129524372d6b337df298466147577c9da9",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/summarize_stage7_dynamics.cpython-314.pyc",
+      "size": 12228,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/summarize_stage7_dynamics.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "0f7e7e9c4f9ad27cdbfc11379d1fe14f0cc133ecfaafd6ab831c61b235f386b8",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/summarize_stage7_modal.cpython-314.pyc",
+      "size": 6253,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/summarize_stage7_modal.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "702583aaf51826c92ebd6b78223f3fc7064c34ca53d1d47f18a50da705807f6b",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/summarize_step_final.cpython-314.pyc",
+      "size": 20291,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/summarize_step_final.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "9c9904d539cc1125b4a2df127461c18880b8f266b578c9105e1db0cb579b8864",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/test_hpc23_numerical.cpython-314.pyc",
+      "size": 5430,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/test_hpc23_numerical.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "d8dda67073ed37a4875299644e7eb5c7550ee4c1741e8291d0d98b0df607f1bc",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/test_hpc23_options.cpython-314.pyc",
+      "size": 6848,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/test_hpc23_options.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "1c8e24adc184d1675e081eff571db5384020ecc471ec7249ed47d2b52588a468",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/validate_stage7_dynamics.cpython-314.pyc",
+      "size": 65573,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/validate_stage7_dynamics.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "624420bcc6a526b3ab7857b7c9b058f79e88dd298b1d431ea893881c51a001c8",
+      "git_status": "!! tests/__pycache__/\n"
+    },
+    {
+      "path": "tests/__pycache__/validate_stage7_modal.cpython-314.pyc",
+      "size": 42323,
+      "classification": "D",
+      "reason": "CPython bytecode with present, compilable source",
+      "dependency_references": [
+        "tests/validate_stage7_modal.py"
+      ],
+      "reproducibility_status": "source compilation verified",
+      "risk_level": "low",
+      "proposed_action": "delete bytecode only",
+      "recovery_method": "Python regenerates on next import",
+      "sha256": "d7044df48cdf3063edcc31c3aa9e48b44a49041c22b8d980327bc1d2f3ef1470",
+      "git_status": "!! tests/__pycache__/\n"
+    }
+  ],
+  "preserved_groups": {
+    "A": "all production and test sources",
+    "B": "all runtime binaries; installation pins require every SDK DLL",
+    "C": "all SDK files and package archives: offline reconstruction not yet independently qualified",
+    "D": "jobs preserved; retention defaults unchanged",
+    "E": "all historical evidence: no approved external archive destination",
+    "F": "duplicate candidates preserved pending semantic audit",
+    "G": "unknown and user-owned files preserved"
+  }
+}

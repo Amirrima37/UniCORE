@@ -1,0 +1,43 @@
+{
+  "godot_exit": 1,
+  "terminated_native": {
+    "pid": 8936,
+    "action": "cut",
+    "operation_id": "34833c60-d47b-4a29-9d7c-d83023ba3a41"
+  },
+  "observed": [
+    {
+      "pid": 408,
+      "action": "box",
+      "operation_id": "ea3d8736-6351-4e91-84dd-f9ab64fa28e6"
+    },
+    {
+      "pid": 15348,
+      "action": "cylinder",
+      "operation_id": "55809c76-9c43-476e-a5dd-1aa9efc486a2"
+    },
+    {
+      "pid": 8936,
+      "action": "cut",
+      "operation_id": "34833c60-d47b-4a29-9d7c-d83023ba3a41"
+    }
+  ],
+  "recovered": false,
+  "fault": "Terminate Godot owner while native worker is active",
+  "mode": "owner-exit",
+  "native_exit_code_dword": 259,
+  "native_process_receipts": [],
+  "stdout": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-owner-exit-1794666077538028600.stdout.txt",
+  "stderr": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-owner-exit-1794666077538028600.stderr.txt",
+  "launcher": {
+    "state": "owner_exited",
+    "exit_code": 1,
+    "error": "",
+    "job_object": true,
+    "seconds": 3.444320599999628,
+    "peak_process_memory_bytes": 662671360,
+    "peak_job_memory_bytes": 663932928,
+    "memory_limit_bytes": 805306368
+  },
+  "observed_native_pids_still_alive": []
+}

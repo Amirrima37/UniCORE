@@ -1,0 +1,7 @@
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+ERROR: Boolean CalculiX result stale/missing: Units: mm (solver SI) | Solve stopped: Select valid support and load regions
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] fail (res://tests/cad21_integration.gd:4)
+       [1] _initialize (res://tests/cad21_integration.gd:23)

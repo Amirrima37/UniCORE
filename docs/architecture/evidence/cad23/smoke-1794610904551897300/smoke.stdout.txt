@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CURRENT_DIAG  formulation=TET10 settings=true
+QUADRATIC_SMOKE 0.00000047619051 expected=0.00000047619048 points=311
+CAD23_SMOKE_PASS

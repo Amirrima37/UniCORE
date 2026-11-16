@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "ok": true,
+  "preparation_ms": 10.3002,
+  "analysis_type": "static_structural",
+  "assembly_ms": 1.3135,
+  "solve_ms": 0.0445,
+  "post_ms": 0.0114,
+  "displacement_flat": [
+    0,
+    0,
+    0,
+    0.006,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "reactions_flat": [
+    -1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "von_mises": [
+    6
+  ],
+  "stress": [
+    [
+      6,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "strain": [
+    [
+      0.006,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "relative_residual": 0,
+  "iterations": 1,
+  "peak_working_set_bytes": 4612096,
+  "total_runtime_ms": 13.5742
+}

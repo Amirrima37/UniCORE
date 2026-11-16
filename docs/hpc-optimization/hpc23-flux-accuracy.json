@@ -1,0 +1,146 @@
+[
+  {
+    "workload": "contrast-conduction-8",
+    "requested": "jacobi",
+    "selected": "jacobi",
+    "tolerance": "default",
+    "relative_residual": 4.8950949524716065e-11,
+    "max_flux_error": 0.15652254582380465,
+    "default_reference_flux_difference": 0.0
+  },
+  {
+    "workload": "contrast-conduction-8",
+    "requested": "jacobi",
+    "selected": "jacobi",
+    "tolerance": "explicit-1e-13",
+    "relative_residual": 6.986591594974936e-14,
+    "max_flux_error": 0.00022908686662503897,
+    "default_reference_flux_difference": 0.1567516326904297
+  },
+  {
+    "workload": "contrast-conduction-8",
+    "requested": "block-jacobi",
+    "selected": "jacobi",
+    "tolerance": "default",
+    "relative_residual": 4.8950949524716065e-11,
+    "max_flux_error": 0.15652254582380465,
+    "default_reference_flux_difference": 0.0
+  },
+  {
+    "workload": "contrast-conduction-8",
+    "requested": "block-jacobi",
+    "selected": "jacobi",
+    "tolerance": "explicit-1e-13",
+    "relative_residual": 6.986591594974936e-14,
+    "max_flux_error": 0.00022908686662503897,
+    "default_reference_flux_difference": 0.1567516326904297
+  },
+  {
+    "workload": "contrast-conduction-8",
+    "requested": "ic0",
+    "selected": "ic0",
+    "tolerance": "default",
+    "relative_residual": 3.0850350602171773e-11,
+    "max_flux_error": 0.05416536331176758,
+    "default_reference_flux_difference": 0.15271520614624023
+  },
+  {
+    "workload": "contrast-conduction-8",
+    "requested": "ic0",
+    "selected": "ic0",
+    "tolerance": "explicit-1e-13",
+    "relative_residual": 7.973767872547274e-14,
+    "max_flux_error": 0.00016995905900785147,
+    "default_reference_flux_difference": 0.1565089225769043
+  },
+  {
+    "workload": "contrast-conduction-8",
+    "requested": "auto",
+    "selected": "jacobi",
+    "tolerance": "default",
+    "relative_residual": 4.8950949524716065e-11,
+    "max_flux_error": 0.15652254582380465,
+    "default_reference_flux_difference": 0.0
+  },
+  {
+    "workload": "contrast-conduction-8",
+    "requested": "auto",
+    "selected": "jacobi",
+    "tolerance": "explicit-1e-13",
+    "relative_residual": 6.986591594974936e-14,
+    "max_flux_error": 0.00022908686662503897,
+    "default_reference_flux_difference": 0.1567516326904297
+  },
+  {
+    "workload": "contrast-conduction-16",
+    "requested": "jacobi",
+    "selected": "jacobi",
+    "tolerance": "default",
+    "relative_residual": 9.071601911322784e-11,
+    "max_flux_error": 0.4238493776414316,
+    "default_reference_flux_difference": 0.0
+  },
+  {
+    "workload": "contrast-conduction-16",
+    "requested": "jacobi",
+    "selected": "jacobi",
+    "tolerance": "explicit-1e-13",
+    "relative_residual": 6.539295162214653e-14,
+    "max_flux_error": 0.0002982282545644921,
+    "default_reference_flux_difference": 0.4239177703857422
+  },
+  {
+    "workload": "contrast-conduction-16",
+    "requested": "block-jacobi",
+    "selected": "jacobi",
+    "tolerance": "default",
+    "relative_residual": 9.071601911322784e-11,
+    "max_flux_error": 0.4238493776414316,
+    "default_reference_flux_difference": 0.0
+  },
+  {
+    "workload": "contrast-conduction-16",
+    "requested": "block-jacobi",
+    "selected": "jacobi",
+    "tolerance": "explicit-1e-13",
+    "relative_residual": 6.539295162214653e-14,
+    "max_flux_error": 0.0002982282545644921,
+    "default_reference_flux_difference": 0.4239177703857422
+  },
+  {
+    "workload": "contrast-conduction-16",
+    "requested": "ic0",
+    "selected": "ic0",
+    "tolerance": "default",
+    "relative_residual": 9.609836381740759e-11,
+    "max_flux_error": 0.7896995544433594,
+    "default_reference_flux_difference": 0.7934341430664062
+  },
+  {
+    "workload": "contrast-conduction-16",
+    "requested": "ic0",
+    "selected": "ic0",
+    "tolerance": "explicit-1e-13",
+    "relative_residual": 8.58975250701102e-14,
+    "max_flux_error": 0.0005474090576171875,
+    "default_reference_flux_difference": 0.4239635467529297
+  },
+  {
+    "workload": "contrast-conduction-16",
+    "requested": "auto",
+    "selected": "jacobi",
+    "tolerance": "default",
+    "relative_residual": 9.071601911322784e-11,
+    "max_flux_error": 0.4238493776414316,
+    "default_reference_flux_difference": 0.0
+  },
+  {
+    "workload": "contrast-conduction-16",
+    "requested": "auto",
+    "selected": "jacobi",
+    "tolerance": "explicit-1e-13",
+    "relative_residual": 6.539295162214653e-14,
+    "max_flux_error": 0.0002982282545644921,
+    "default_reference_flux_difference": 0.4239177703857422
+  }
+]

@@ -1,0 +1,787 @@
+{
+  "verdict": "PARTIAL",
+  "reason": "Only source-backed bytecode cleanup qualified; SDK slimming and external evidence archival deferred.",
+  "branch": "master",
+  "head": "13e40a5a565a273485aa80ea14ed110df36136a2",
+  "before_bytes": 7964948362,
+  "after_bytes": 8571219214,
+  "net_bytes_reduction": -606270852,
+  "net_percent_reduction": -7.611736127411192,
+  "deleted_bytes": 751756,
+  "deleted_bytes_still_absent": 551989,
+  "before_files": 77038,
+  "after_files": 80025,
+  "removed_files": 56,
+  "relocated_files": 0,
+  "preserved_baseline_files": 76989,
+  "source_hash_changes": [
+    "scripts/cleanup_repository.py"
+  ],
+  "pinned_binaries": {
+    "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe": {
+      "expected": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424",
+      "actual": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\calculix\\CalculiX-2.23.0-win-x64\\bin\\ccx.exe": {
+      "expected": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "actual": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_debug.x86_64.dll": {
+      "expected": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc",
+      "actual": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_release.x86_64.dll": {
+      "expected": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f",
+      "actual": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_debug.x86_64.dll": {
+      "expected": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868",
+      "actual": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_release.x86_64.dll": {
+      "expected": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb",
+      "actual": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\gmsh-4.15.2-Windows64-sdk\\lib\\gmsh-4.15.dll": {
+      "expected": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c",
+      "actual": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c"
+    }
+  },
+  "regressions": {
+    "passed": true,
+    "expected": 28,
+    "recorded": 28,
+    "missing": [],
+    "results_file": "results.json"
+  },
+  "campaign": [
+    {
+      "path": "docs/architecture/evidence/cad24-completion/boundary-latest.json",
+      "receipt": {
+        "name": "boundary",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad24_boundary.gd"
+        ],
+        "seconds": 0.8396820000052685,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\boundary-1794666172980771200"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad21-geometry-latest.json",
+      "receipt": {
+        "name": "cad21-geometry",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad21.py",
+          "geometry"
+        ],
+        "seconds": 24.776221799998893,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-geometry-1794666309434980100"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad21-integration-latest.json",
+      "receipt": {
+        "name": "cad21-integration",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad21.py",
+          "integration"
+        ],
+        "seconds": 64.462812999991,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-integration-1794666334218780400"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad21-lifecycle-latest.json",
+      "receipt": {
+        "name": "cad21-lifecycle",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad21.py",
+          "lifecycle"
+        ],
+        "seconds": 30.51406240000506,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-lifecycle-1794666398695001400"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad21-preservation-latest.json",
+      "receipt": {
+        "name": "cad21-preservation",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad21.py",
+          "preservation"
+        ],
+        "seconds": 41.20375119999517,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-preservation-1794666429216806200"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad22-independent-latest.json",
+      "receipt": {
+        "name": "cad22-independent",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad22.py",
+          "independent"
+        ],
+        "seconds": 3.447901199993794,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-independent-1794666668866533600"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad22-lifecycle-latest.json",
+      "receipt": {
+        "name": "cad22-lifecycle",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad22.py",
+          "lifecycle"
+        ],
+        "seconds": 24.74289619999763,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-lifecycle-1794666672317111200"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad22-numerical-latest.json",
+      "receipt": {
+        "name": "cad22-numerical",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad22.py",
+          "numerical"
+        ],
+        "seconds": 151.02085610000358,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-numerical-1794666474520217400"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad22-persistence-latest.json",
+      "receipt": {
+        "name": "cad22-persistence",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad22.py",
+          "persistence"
+        ],
+        "seconds": 43.28809519999777,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-persistence-1794666625569123400"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad22-validation-latest.json",
+      "receipt": {
+        "name": "cad22-validation",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad22.py",
+          "validation"
+        ],
+        "seconds": 4.088574199995492,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-validation-1794666470429621800"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad23-gui-latest.json",
+      "receipt": {
+        "name": "cad23-gui",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad23.py",
+          "gui"
+        ],
+        "seconds": 98.23383979999926,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-gui-1794667285792103900"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad23-independent-latest.json",
+      "receipt": {
+        "name": "cad23-independent",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad23.py",
+          "independent"
+        ],
+        "seconds": 15.40504030000011,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-independent-1794667197305679000"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad23-lifecycle-latest.json",
+      "receipt": {
+        "name": "cad23-lifecycle",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad23.py",
+          "lifecycle"
+        ],
+        "seconds": 49.998414900008356,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-lifecycle-1794667212714632800"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad23-numerical-latest.json",
+      "receipt": {
+        "name": "cad23-numerical",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad23.py",
+          "numerical"
+        ],
+        "seconds": 450.0386853999953,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-numerical-1794666713452079500"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad23-persistence-latest.json",
+      "receipt": {
+        "name": "cad23-persistence",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad23.py",
+          "persistence"
+        ],
+        "seconds": 33.74939090000407,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-persistence-1794667163549358400"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad23-shutdown-latest.json",
+      "receipt": {
+        "name": "cad23-shutdown",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad23.py",
+          "shutdown"
+        ],
+        "seconds": 23.066355599992676,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-shutdown-1794667262720975500"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad23-unit-latest.json",
+      "receipt": {
+        "name": "cad23-unit",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad23.py",
+          "unit"
+        ],
+        "seconds": 16.382244100008393,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-unit-1794666697065706100"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cancel-cut-latest.json",
+      "receipt": {
+        "name": "cancel-cut",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_failure.py",
+          "cancel-cut"
+        ],
+        "seconds": 13.594330899999477,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cancel-cut-1794666107561895400"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cancel-step-latest.json",
+      "receipt": {
+        "name": "cancel-step",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_failure.py",
+          "cancel-step"
+        ],
+        "seconds": 11.23613839999598,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cancel-step-1794666096321705600"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/deck-audit-latest.json",
+      "receipt": {
+        "name": "deck-audit",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_deck_audit.py"
+        ],
+        "seconds": 0.4861626000056276,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\deck-audit-1794666308947026600"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/endurance-latest.json",
+      "receipt": {
+        "name": "endurance",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_endurance.py"
+        ],
+        "seconds": 268.6672563000029,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\endurance-1794665626261888100"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/failure-latest.json",
+      "receipt": {
+        "name": "failure",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_failure.py"
+        ],
+        "seconds": 12.85820160000003,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\failure-1794666121160499300"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/gui-endurance-latest.json",
+      "receipt": {
+        "name": "gui-endurance",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_gui_endurance.py"
+        ],
+        "seconds": 182.17522940000345,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\gui-endurance-1794665894983542300"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/gui-latest.json",
+      "receipt": {
+        "name": "gui",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad24_gui.gd"
+        ],
+        "seconds": 32.94955879999907,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\gui-1794666275989640500"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/history-latest.json",
+      "receipt": {
+        "name": "history",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_history.py"
+        ],
+        "seconds": 13.57876839999517,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\history-1794666137909512400"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/matrix-extra-latest.json",
+      "receipt": {
+        "name": "matrix-extra",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_matrix_extra.py"
+        ],
+        "seconds": 40.09221139999863,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\matrix-extra-1794665586153146600"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/native-latest.json",
+      "receipt": {
+        "name": "native",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_native.py"
+        ],
+        "seconds": 301.19293099999777,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\native-1794665284880912600"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/numerical-latest.json",
+      "receipt": {
+        "name": "numerical",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad24_numerical.gd"
+        ],
+        "seconds": 102.14750379999168,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\numerical-1794666173822329500"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/owner-exit-latest.json",
+      "receipt": {
+        "name": "owner-exit",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_failure.py",
+          "owner-exit"
+        ],
+        "seconds": 7.052947200005292,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\owner-exit-1794666077193707600"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/protocol-latest.json",
+      "receipt": {
+        "name": "protocol",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_protocol.py"
+        ],
+        "seconds": 3.884143299990683,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\protocol-1794666134022862500"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/regressions-latest.json",
+      "receipt": {
+        "name": "regressions",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "native/run_regressions.py",
+          "--godot",
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--output",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\default-regressions"
+        ],
+        "seconds": 37.52563609999197,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\regressions-1794667384040249000"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/retention-latest.json",
+      "receipt": {
+        "name": "retention",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_retention.py"
+        ],
+        "seconds": 1.9691811000084272,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\retention-1794666151492360600"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/scan-latest.json",
+      "receipt": {
+        "name": "scan",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--editor",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "--quit"
+        ],
+        "seconds": 19.51164979999885,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\scan-1794666153463838700"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/timeout-latest.json",
+      "receipt": {
+        "name": "timeout",
+        "exit_code": 0,
+        "outcome": "PASS",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_failure.py",
+          "timeout"
+        ],
+        "seconds": 12.067680699998164,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\timeout-1794666084250176400"
+      }
+    }
+  ],
+  "runtime_audit_exit": 0,
+  "archive": null,
+  "relocation_disk_savings": 0,
+  "compressed_evidence_bytes": 0,
+  "inventory_scope": "Readable regular files including .git; reparse points excluded; access denied directories omitted: counts are lower bounds",
+  "directories_before": [
+    [
+      ".tools",
+      6530021519
+    ],
+    [
+      ".tools/godot472-migration",
+      2424240731
+    ],
+    [
+      ".tools/godot472-migration/roaming",
+      2377789634
+    ],
+    [
+      ".tools/occt-sdk",
+      1915837298
+    ],
+    [
+      ".tools/occt-sdk/ucrt64",
+      1680389656
+    ],
+    [
+      "docs",
+      1204532474
+    ],
+    [
+      "docs/architecture",
+      933439441
+    ],
+    [
+      "docs/architecture/evidence",
+      933290302
+    ],
+    [
+      ".tools/hpc23-bench",
+      817649820
+    ],
+    [
+      ".tools/hpc22",
+      498479590
+    ],
+    [
+      ".tools/hpc23-bench/thermal-large-46",
+      359759892
+    ],
+    [
+      ".tools/engines",
+      280422795
+    ],
+    [
+      ".tools/hpc23-bench/elastic-large-32",
+      187546205
+    ],
+    [
+      "docs/workbench-2",
+      181896639
+    ],
+    [
+      ".tools/engines/gmsh-4.15.2-Windows64-sdk",
+      147322890
+    ],
+    [
+      "native",
+      115019475
+    ],
+    [
+      ".tools/godot",
+      114631456
+    ],
+    [
+      "native/godot-cpp",
+      105133450
+    ],
+    [
+      ".tools/hpc23-bench/thermal-large-62",
+      97858589
+    ],
+    [
+      "docs/hpc-optimization",
+      87185444
+    ]
+  ],
+  "directories_after": [
+    [
+      ".tools",
+      6991551959
+    ],
+    [
+      ".tools/godot472-migration",
+      2885643083
+    ],
+    [
+      ".tools/godot472-migration/roaming",
+      2839191986
+    ],
+    [
+      ".tools/occt-sdk",
+      1915898756
+    ],
+    [
+      ".tools/occt-sdk/ucrt64",
+      1680389656
+    ],
+    [
+      "docs",
+      1349778143
+    ],
+    [
+      "docs/architecture",
+      1041962631
+    ],
+    [
+      "docs/architecture/evidence",
+      1041812270
+    ],
+    [
+      ".tools/hpc23-bench",
+      817649820
+    ],
+    [
+      ".tools/hpc22",
+      498479590
+    ],
+    [
+      ".tools/hpc23-bench/thermal-large-46",
+      359759892
+    ],
+    [
+      ".tools/engines",
+      280422795
+    ],
+    [
+      ".tools/hpc23-bench/elastic-large-32",
+      187546205
+    ],
+    [
+      "docs/workbench-2",
+      181896639
+    ],
+    [
+      ".tools/engines/gmsh-4.15.2-Windows64-sdk",
+      147322890
+    ],
+    [
+      "native",
+      114887856
+    ],
+    [
+      ".tools/godot",
+      114631456
+    ],
+    [
+      "native/godot-cpp",
+      105004882
+    ],
+    [
+      ".tools/hpc23-bench/thermal-large-62",
+      97858589
+    ],
+    [
+      "docs/hpc-optimization",
+      87185444
+    ]
+  ],
+  "groups": {
+    ".tools/occt-sdk/": {
+      "before": 1915837298,
+      "after": 1915898756
+    },
+    ".tools/occt-sdk/ucrt64/bin/": {
+      "before": 384682025,
+      "after": 384682025
+    },
+    "docs/architecture/evidence/": {
+      "before": 933290302,
+      "after": 1041812270
+    }
+  },
+  "context": {
+    "focused_file_count": 891,
+    "baseline_file_count": 77038,
+    "mechanism": "explicit source discovery script, AGENTS.md, Python Git ignore; no claimed .codexignore enforcement"
+  },
+  "limitations": [
+    "No SDK reconstruction attempted: external D:/msys64 compiler dependency retained",
+    "No external archive destination established: all historical evidence preserved",
+    "Reference audit limited to bytecode source backing; no SDK or engineering artifacts deleted",
+    "Inventory access-denied omissions prevent exact whole-project accounting",
+    "Campaign results listed are fresh latest receipts; missing stages must not be treated as passing"
+  ],
+  "numerical_cases": {
+    "cad23": {
+      "path": "docs/architecture/evidence/cad23/numerical.json",
+      "rows": 32
+    },
+    "cad24": {
+      "path": "docs/architecture/evidence/cad24-completion/structural-numerical.json",
+      "rows": 6
+    }
+  },
+  "dependency_references_file": "dependency-references.json",
+  "managed_job_protection_file": "managed-job-protection.json",
+  "regression_receipt": "docs/maintenance/evidence/cleanup1/regressions-retry/receipt.json",
+  "initial_regression_attempt": "regressions/receipt.json; user-profile write errors; preserved for diagnosis",
+  "intentional_maintenance_changes": [
+    "scripts/cleanup_repository.py"
+  ],
+  "unexpected_source_hash_changes": []
+}

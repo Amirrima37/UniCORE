@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad22_validation.py", line 33, in <module>
+    (OUT/('local' if local else 'global')+'.mesh.json').write_text(json.dumps(mesh))
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'WindowsPath' and 'str'

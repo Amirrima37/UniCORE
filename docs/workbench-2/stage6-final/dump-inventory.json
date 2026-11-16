@@ -1,0 +1,934 @@
+{
+  "current_executable": {
+    "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64.exe",
+    "bytes": 114434448,
+    "sha256": "dbc5b785ac1df4878d15e527b7d41f16c83a1107958762ac03c0c7ac35daad5c",
+    "pe_timestamp": 0,
+    "image_size": 116379648
+  },
+  "dumps": [
+    {
+      "path": "C:\\Users\\Victus\\AppData\\Local\\CrashDumps\\Godot_v4.0-stable_win64.exe.13660.dmp",
+      "bytes": 332884316,
+      "sha256": "f37d2c3c0079f5bc107662a7dba975d84d0a6731e9fcc8e2b387061765cd17c2",
+      "thread": 7516,
+      "exception": "0xc0000005",
+      "exception_address": "0x7ff7ec408504",
+      "site": "Godot_v4.0-stable_win64.exe+0x518504",
+      "parameters": [
+        "0x0",
+        "0x159abb2afe8"
+      ],
+      "registers": {
+        "rax": "0x159abb2af80",
+        "rcx": "0x159b01b1b40",
+        "rdx": "0x1b7e5fe820",
+        "rsp": "0x1b7e5fe298",
+        "rbp": "0x1b7e5fe620",
+        "rip": "0x7ff7ec408504"
+      },
+      "modules": [
+        {
+          "base": 140702791958528,
+          "size": 116379648,
+          "timestamp": 0,
+          "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64.exe",
+          "codeview": ""
+        },
+        {
+          "base": 140709152292864,
+          "size": 2523136,
+          "timestamp": 1607703045,
+          "path": "C:\\Windows\\System32\\ntdll.dll",
+          "codeview": "525344535bd431c0a10d6e8a74d06ed6ab2dd9e1010000006e74646c6c2e70646200"
+        },
+        {
+          "base": 140709126406144,
+          "size": 831488,
+          "timestamp": 117254350,
+          "path": "C:\\Windows\\System32\\kernel32.dll",
+          "codeview": "525344538ca4c3e87eac0db68781d8c10020c44f010000006b65726e656c33322e70646200"
+        },
+        {
+          "base": 140709107335168,
+          "size": 4198400,
+          "timestamp": 4220547579,
+          "path": "C:\\Windows\\System32\\KERNELBASE.dll",
+          "codeview": "525344532705b579146f5004eb83df0440bf06c6010000006b65726e656c626173652e70646200"
+        },
+        {
+          "base": 140709117427712,
+          "size": 770048,
+          "timestamp": 2543083369,
+          "path": "C:\\Windows\\System32\\advapi32.dll",
+          "codeview": "52534453a8bf1ff69bbf05af9007bc5ceb34634b0100000061647661706933322e70646200"
+        },
+        {
+          "base": 140709134860288,
+          "size": 692224,
+          "timestamp": 1901987956,
+          "path": "C:\\Windows\\System32\\msvcrt.dll",
+          "codeview": "52534453b81704fc75df5748a6826a24039cc49d010000006d73766372742e70646200"
+        },
+        {
+          "base": 140709120835584,
+          "size": 688128,
+          "timestamp": 1458215946,
+          "path": "C:\\Windows\\System32\\sechost.dll",
+          "codeview": "52534453904013c27779d83b8108d650e6c2e8d701000000736563686f73742e70646200"
+        },
+        {
+          "base": 140709135581184,
+          "size": 1146880,
+          "timestamp": 3525981461,
+          "path": "C:\\Windows\\System32\\rpcrt4.dll",
+          "codeview": "525344537002eb98ffd05f307ed48a570cfd4ff6010000007270637274342e70646200"
+        },
+        {
+          "base": 140709144821760,
+          "size": 176128,
+          "timestamp": 1557283195,
+          "path": "C:\\Windows\\System32\\gdi32.dll",
+          "codeview": "525344532aecc69247be3688c99bc83c2f3ae3550100000067646933322e70646200"
+        },
+        {
+          "base": 140709063688192,
+          "size": 45056,
+          "timestamp": 2310781783,
+          "path": "C:\\Windows\\System32\\avrt.dll",
+          "codeview": "525344534826fb58f27f1c66c5a0d5b568216e8701000000617672742e70646200"
+        },
+        {
+          "base": 140709113823232,
+          "size": 159744,
+          "timestamp": 1206645017,
+          "path": "C:\\Windows\\System32\\win32u.dll",
+          "codeview": "525344532be92bdcb1cdc3ef1195235c45385ff10100000077696e3332752e70646200"
+        },
+        {
+          "base": 140709106089984,
+          "size": 1220608,
+          "timestamp": 2787493540,
+          "path": "C:\\Windows\\System32\\gdi32full.dll",
+          "codeview": "52534453dce39834f5f109c8d213859004f0b6a101000000676469333266756c6c2e70646200"
+        },
+        {
+          "base": 140709102813184,
+          "size": 172032,
+          "timestamp": 3870103153,
+          "path": "C:\\Windows\\System32\\bcrypt.dll",
+          "codeview": "5253445331a38623dcff624ae46e8d773b500fc7010000006263727970742e70646200"
+        },
+        {
+          "base": 140708108894208,
+          "size": 307200,
+          "timestamp": 2135300203,
+          "path": "C:\\Windows\\System32\\dinput8.dll",
+          "codeview": "5253445350cf0fbce3f4805799f1b60e570b35140100000064696e707574382e70646200"
+        },
+        {
+          "base": 140709104779264,
+          "size": 667648,
+          "timestamp": 3961840960,
+          "path": "C:\\Windows\\System32\\msvcp_win.dll",
+          "codeview": "52534453c4ab90e6a0e470a642936d5cb65c760c010000006d737663705f77696e2e70646200"
+        },
+        {
+          "base": 140709041340416,
+          "size": 188416,
+          "timestamp": 2975558474,
+          "path": "C:\\Windows\\System32\\dwmapi.dll",
+          "codeview": "52534453489b4403be640eff155beb1845861af70100000064776d6170692e70646200"
+        },
+        {
+          "base": 140709112381440,
+          "size": 1359872,
+          "timestamp": 1061317723,
+          "path": "C:\\Windows\\System32\\ucrtbase.dll",
+          "codeview": "52534453dfe8a366b8b814866544529e6a6dd4f40100000075637274626173652e70646200"
+        },
+        {
+          "base": 140709051760640,
+          "size": 2531328,
+          "timestamp": 637094160,
+          "path": "C:\\Windows\\System32\\DWrite.dll",
+          "codeview": "52534453ac5b9b04ac9a070c441961f191cbbe62010000004457726974652e70646200"
+        },
+        {
+          "base": 140709118279680,
+          "size": 1929216,
+          "timestamp": 488382889,
+          "path": "C:\\Windows\\System32\\user32.dll",
+          "codeview": "52534453ee56bff0780a7449d49a58173a7cbc7e010000007573657233322e70646200"
+        },
+        {
+          "base": 140709127979008,
+          "size": 200704,
+          "timestamp": 2376539079,
+          "path": "C:\\Windows\\System32\\imm32.dll",
+          "codeview": "52534453a9e7e5fc50b4b04e8bf6492a4ad1e07b01000000696d6d33322e70646200"
+        },
+        {
+          "base": 140709122670592,
+          "size": 3715072,
+          "timestamp": 364401060,
+          "path": "C:\\Windows\\System32\\combase.dll",
+          "codeview": "52534453911dc94a3822f308ae6a3164a1b8b40401000000636f6d626173652e70646200"
+        },
+        {
+          "base": 140709133156352,
+          "size": 1679360,
+          "timestamp": 3476090620,
+          "path": "C:\\Windows\\System32\\ole32.dll",
+          "codeview": "525344538d660e7a7f516751b9ab6fe73bcc86e2010000006f6c6533322e70646200"
+        },
+        {
+          "base": 140709115658240,
+          "size": 888832,
+          "timestamp": 3929124711,
+          "path": "C:\\Windows\\System32\\oleaut32.dll",
+          "codeview": "52534453703c44226af006cc889b34fdde85cedb010000006f6c6561757433322e70646200"
+        },
+        {
+          "base": 140709077647360,
+          "size": 208896,
+          "timestamp": 2286535387,
+          "path": "C:\\Windows\\System32\\IPHLPAPI.DLL",
+          "codeview": "52534453da8d6423964cccdce139dc2340f3030b010000006970686c706170692e70646200"
+        },
+        {
+          "base": 140709136760832,
+          "size": 7979008,
+          "timestamp": 292758140,
+          "path": "C:\\Windows\\System32\\shell32.dll",
+          "codeview": "525344535677253f8904946ba6db9a71397c7908010000007368656c6c33322e70646200"
+        },
+        {
+          "base": 140708282368000,
+          "size": 1097728,
+          "timestamp": 868189093,
+          "path": "C:\\Windows\\System32\\opengl32.dll",
+          "codeview": "525344536bac3226d0d489a843ad9807b88c3546010000006f70656e676c33322e70646200"
+        },
+        {
+          "base": 140708295475200,
+          "size": 233472,
+          "timestamp": 32287505,
+          "path": "C:\\Windows\\System32\\glu32.dll",
+          "codeview": "525344531248eee365dfc0035fdc31c733a7bcc901000000676c7533322e70646200"
+        },
+        {
+          "base": 140709130731520,
+          "size": 417792,
+          "timestamp": 808622087,
+          "path": "C:\\Windows\\System32\\shlwapi.dll",
+          "codeview": "5253445364f60cfb66f6efdea07f7656efcf08d60100000073686c776170692e70646200"
+        },
+        {
+          "base": 140709149802496,
+          "size": 528384,
+          "timestamp": 3829255736,
+          "path": "C:\\Windows\\System32\\ws2_32.dll",
+          "codeview": "525344536009f95198ce7cc2a2c0f2854645cc43010000007773325f33322e70646200"
+        },
+        {
+          "base": 140709044879360,
+          "size": 278528,
+          "timestamp": 2799913401,
+          "path": "C:\\Windows\\System32\\DXCore.dll",
+          "codeview": "5253445362195d26e72a700a179c86a8f531c6d4010000004458436f72652e70646200"
+        },
+        {
+          "base": 140708919377920,
+          "size": 225280,
+          "timestamp": 1985894596,
+          "path": "C:\\Windows\\System32\\winmm.dll",
+          "codeview": "525344537e8c3f3297a2c60a09d0d009c5b9f6ee0100000077696e6d6d2e70646200"
+        },
+        {
+          "base": 140708508598272,
+          "size": 40960,
+          "timestamp": 1501491795,
+          "path": "C:\\Windows\\System32\\wsock32.dll",
+          "codeview": "52534453df54f1b29f916a338fabd0e501ff9caa0100000077736f636b33322e70646200"
+        },
+        {
+          "base": 140709111595008,
+          "size": 704512,
+          "timestamp": 2876941041,
+          "path": "C:\\Windows\\System32\\bcryptPrimitives.dll",
+          "codeview": "52534453abb0b92bbee030f1115e0d962e333f4e010000006263727970747072696d6974697665732e70646200"
+        },
+        {
+          "base": 140708704223232,
+          "size": 1990656,
+          "timestamp": 1503319826,
+          "path": "C:\\Windows\\System32\\inputhost.dll",
+          "codeview": "52534453de7760c8c0bc20c4d1f5a68fecd5706901000000496e707574486f73742e70646200"
+        },
+        {
+          "base": 140709032493056,
+          "size": 1220608,
+          "timestamp": 3978102573,
+          "path": "C:\\Windows\\System32\\CoreMessaging.dll",
+          "codeview": "5253445356b32f0589a412d2b0dc4d9d8ec959dd01000000436f72654d6573736167696e672e70646200"
+        },
+        {
+          "base": 140709121556480,
+          "size": 1019904,
+          "timestamp": 3483543086,
+          "path": "C:\\Windows\\System32\\SHCore.dll",
+          "codeview": "52534453bd54b059332f7bde54e54e5f3aa2a8d4010000007368636f72652e70646200"
+        },
+        {
+          "base": 140709092917248,
+          "size": 49152,
+          "timestamp": 2511681788,
+          "path": "C:\\Windows\\System32\\CRYPTBASE.DLL",
+          "codeview": "5253445397234982ee586a8ee16225f146aae62c010000006372797074626173652e70646200"
+        },
+        {
+          "base": 140709083676672,
+          "size": 110592,
+          "timestamp": 246514534,
+          "path": "C:\\Windows\\System32\\kernel.appcore.dll",
+          "codeview": "52534453dda68e6ee1536629620c37875551e6f6010000004b65726e656c2e417070636f72652e70646200"
+        },
+        {
+          "base": 140709037801472,
+          "size": 684032,
+          "timestamp": 3674736988,
+          "path": "C:\\Windows\\System32\\uxtheme.dll",
+          "codeview": "52534453df08cef37e6688f19a1730536c3574d40100000075787468656d652e70646200"
+        },
+        {
+          "base": 140706171256832,
+          "size": 1052672,
+          "timestamp": 1794415484,
+          "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_debug.x86_64.dll",
+          "codeview": ""
+        },
+        {
+          "base": 140709089705984,
+          "size": 442368,
+          "timestamp": 472419974,
+          "path": "C:\\Windows\\System32\\mswsock.dll",
+          "codeview": "525344536025aef736dae72f67edf4e05c289ae8010000006d7377736f636b2e70646200"
+        },
+        {
+          "base": 140709077909504,
+          "size": 1409024,
+          "timestamp": 2797546626,
+          "path": "C:\\Windows\\System32\\dnsapi.dll",
+          "codeview": "52534453307027a7083041fc23c01b01435fc8c601000000646e736170692e70646200"
+        },
+        {
+          "base": 140709087477760,
+          "size": 53248,
+          "timestamp": 3779774972,
+          "path": "C:\\Windows\\System32\\dsparse.dll",
+          "codeview": "525344538190a48fe4bb8c3dbff3d9797d087db201000000647370617273652e70646200"
+        },
+        {
+          "base": 140709127258112,
+          "size": 40960,
+          "timestamp": 884844404,
+          "path": "C:\\Windows\\System32\\nsi.dll",
+          "codeview": "52534453d03e1b7fb7bd17dbe15f5044390f5136010000006e73692e70646200"
+        },
+        {
+          "base": 140708983930880,
+          "size": 45056,
+          "timestamp": 4225067959,
+          "path": "C:\\Windows\\System32\\rasadhlp.dll",
+          "codeview": "52534453d90ed343ac3998e2723e367f9aab3308010000007261736164686c702e70646200"
+        },
+        {
+          "base": 140709004443648,
+          "size": 548864,
+          "timestamp": 3257643010,
+          "path": "C:\\Windows\\System32\\FWPUCLNT.DLL",
+          "codeview": "525344532f8df240d59310a05cb76e7c89ebe6100100000066777075636c6e742e70646200"
+        }
+      ],
+      "instruction_bytes": "00000000488b4120488b4068c390660f1f44000031c0c390",
+      "rcx_plus_20_bytes": "80afb2ab59010000",
+      "rax_plus_68_readable_in_dump": false,
+      "raw_stack_module_candidates_not_unwound": [
+        {
+          "stack_offset": "0x0",
+          "address": "0x7ff7efebbebb",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x3fcbebb"
+        },
+        {
+          "stack_offset": "0x10",
+          "address": "0x7ff96601d60c",
+          "module_offset": "msvcrt.dll+0x1d60c"
+        },
+        {
+          "stack_offset": "0x50",
+          "address": "0x7ff7efee2882",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x3ff2882"
+        },
+        {
+          "stack_offset": "0x68",
+          "address": "0x7ff7f1052c80",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x5162c80"
+        },
+        {
+          "stack_offset": "0x70",
+          "address": "0x7ff96601d60c",
+          "module_offset": "msvcrt.dll+0x1d60c"
+        },
+        {
+          "stack_offset": "0x90",
+          "address": "0x7ff7f1052c80",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x5162c80"
+        },
+        {
+          "stack_offset": "0xb0",
+          "address": "0x7ff7f03933be",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x44a33be"
+        },
+        {
+          "stack_offset": "0xc0",
+          "address": "0x7ff7f01fb426",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x430b426"
+        },
+        {
+          "stack_offset": "0x110",
+          "address": "0x7ff7efecfa8b",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x3fdfa8b"
+        },
+        {
+          "stack_offset": "0x148",
+          "address": "0x7ff7efee2870",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x3ff2870"
+        },
+        {
+          "stack_offset": "0x160",
+          "address": "0x7ff7ec3cc092",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x4dc092"
+        },
+        {
+          "stack_offset": "0x3b8",
+          "address": "0x7ff7f111fb08",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x522fb08"
+        },
+        {
+          "stack_offset": "0x410",
+          "address": "0x7ff7f2bb4560",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x6cc4560"
+        },
+        {
+          "stack_offset": "0x450",
+          "address": "0x7ff9670d200b",
+          "module_offset": "ntdll.dll+0x3200b"
+        },
+        {
+          "stack_offset": "0x540",
+          "address": "0x7ff96601d60c",
+          "module_offset": "msvcrt.dll+0x1d60c"
+        },
+        {
+          "stack_offset": "0x570",
+          "address": "0x7ff7efed56f6",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x3fe56f6"
+        },
+        {
+          "stack_offset": "0x580",
+          "address": "0x7ff9670d57c4",
+          "module_offset": "ntdll.dll+0x357c4"
+        },
+        {
+          "stack_offset": "0x650",
+          "address": "0x7ff7ec29fab9",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x3afab9"
+        },
+        {
+          "stack_offset": "0x6b0",
+          "address": "0x7ff7f0a3b67d",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x4b4b67d"
+        },
+        {
+          "stack_offset": "0x6e0",
+          "address": "0x7ff7f1052c80",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x5162c80"
+        },
+        {
+          "stack_offset": "0x710",
+          "address": "0x7ff7f013078b",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x424078b"
+        },
+        {
+          "stack_offset": "0x748",
+          "address": "0x7ff7f1209938",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x5319938"
+        },
+        {
+          "stack_offset": "0x750",
+          "address": "0x7ff7f0a92a22",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x4ba2a22"
+        },
+        {
+          "stack_offset": "0x7e0",
+          "address": "0x7ff7efefbc8d",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x400bc8d"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Victus\\AppData\\Local\\CrashDumps\\Godot_v4.0-stable_win64.exe.5172.dmp",
+      "bytes": 329797254,
+      "sha256": "c6e6a5b2d87046028c28012080989d0aa7fa0758cd3eea91dbfbd56ff6efc190",
+      "thread": 14692,
+      "exception": "0xc0000005",
+      "exception_address": "0x7ff7ec408504",
+      "site": "Godot_v4.0-stable_win64.exe+0x518504",
+      "parameters": [
+        "0x0",
+        "0x12f904285c8"
+      ],
+      "registers": {
+        "rax": "0x12f90428560",
+        "rcx": "0x12f96f89080",
+        "rdx": "0x840bfe7a0",
+        "rsp": "0x840bfe1e8",
+        "rbp": "0x840bfe5a0",
+        "rip": "0x7ff7ec408504"
+      },
+      "modules": [
+        {
+          "base": 140702791958528,
+          "size": 116379648,
+          "timestamp": 0,
+          "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64.exe",
+          "codeview": ""
+        },
+        {
+          "base": 140709152292864,
+          "size": 2523136,
+          "timestamp": 1607703045,
+          "path": "C:\\Windows\\System32\\ntdll.dll",
+          "codeview": "525344535bd431c0a10d6e8a74d06ed6ab2dd9e1010000006e74646c6c2e70646200"
+        },
+        {
+          "base": 140709126406144,
+          "size": 831488,
+          "timestamp": 117254350,
+          "path": "C:\\Windows\\System32\\kernel32.dll",
+          "codeview": "525344538ca4c3e87eac0db68781d8c10020c44f010000006b65726e656c33322e70646200"
+        },
+        {
+          "base": 140709107335168,
+          "size": 4198400,
+          "timestamp": 4220547579,
+          "path": "C:\\Windows\\System32\\KERNELBASE.dll",
+          "codeview": "525344532705b579146f5004eb83df0440bf06c6010000006b65726e656c626173652e70646200"
+        },
+        {
+          "base": 140709117427712,
+          "size": 770048,
+          "timestamp": 2543083369,
+          "path": "C:\\Windows\\System32\\advapi32.dll",
+          "codeview": "52534453a8bf1ff69bbf05af9007bc5ceb34634b0100000061647661706933322e70646200"
+        },
+        {
+          "base": 140709134860288,
+          "size": 692224,
+          "timestamp": 1901987956,
+          "path": "C:\\Windows\\System32\\msvcrt.dll",
+          "codeview": "52534453b81704fc75df5748a6826a24039cc49d010000006d73766372742e70646200"
+        },
+        {
+          "base": 140709120835584,
+          "size": 688128,
+          "timestamp": 1458215946,
+          "path": "C:\\Windows\\System32\\sechost.dll",
+          "codeview": "52534453904013c27779d83b8108d650e6c2e8d701000000736563686f73742e70646200"
+        },
+        {
+          "base": 140709135581184,
+          "size": 1146880,
+          "timestamp": 3525981461,
+          "path": "C:\\Windows\\System32\\rpcrt4.dll",
+          "codeview": "525344537002eb98ffd05f307ed48a570cfd4ff6010000007270637274342e70646200"
+        },
+        {
+          "base": 140709144821760,
+          "size": 176128,
+          "timestamp": 1557283195,
+          "path": "C:\\Windows\\System32\\gdi32.dll",
+          "codeview": "525344532aecc69247be3688c99bc83c2f3ae3550100000067646933322e70646200"
+        },
+        {
+          "base": 140709113823232,
+          "size": 159744,
+          "timestamp": 1206645017,
+          "path": "C:\\Windows\\System32\\win32u.dll",
+          "codeview": "525344532be92bdcb1cdc3ef1195235c45385ff10100000077696e3332752e70646200"
+        },
+        {
+          "base": 140709102813184,
+          "size": 172032,
+          "timestamp": 3870103153,
+          "path": "C:\\Windows\\System32\\bcrypt.dll",
+          "codeview": "5253445331a38623dcff624ae46e8d773b500fc7010000006263727970742e70646200"
+        },
+        {
+          "base": 140709063688192,
+          "size": 45056,
+          "timestamp": 2310781783,
+          "path": "C:\\Windows\\System32\\avrt.dll",
+          "codeview": "525344534826fb58f27f1c66c5a0d5b568216e8701000000617672742e70646200"
+        },
+        {
+          "base": 140709106089984,
+          "size": 1220608,
+          "timestamp": 2787493540,
+          "path": "C:\\Windows\\System32\\gdi32full.dll",
+          "codeview": "52534453dce39834f5f109c8d213859004f0b6a101000000676469333266756c6c2e70646200"
+        },
+        {
+          "base": 140708108894208,
+          "size": 307200,
+          "timestamp": 2135300203,
+          "path": "C:\\Windows\\System32\\dinput8.dll",
+          "codeview": "5253445350cf0fbce3f4805799f1b60e570b35140100000064696e707574382e70646200"
+        },
+        {
+          "base": 140709104779264,
+          "size": 667648,
+          "timestamp": 3961840960,
+          "path": "C:\\Windows\\System32\\msvcp_win.dll",
+          "codeview": "52534453c4ab90e6a0e470a642936d5cb65c760c010000006d737663705f77696e2e70646200"
+        },
+        {
+          "base": 140709112381440,
+          "size": 1359872,
+          "timestamp": 1061317723,
+          "path": "C:\\Windows\\System32\\ucrtbase.dll",
+          "codeview": "52534453dfe8a366b8b814866544529e6a6dd4f40100000075637274626173652e70646200"
+        },
+        {
+          "base": 140709041340416,
+          "size": 188416,
+          "timestamp": 2975558474,
+          "path": "C:\\Windows\\System32\\dwmapi.dll",
+          "codeview": "52534453489b4403be640eff155beb1845861af70100000064776d6170692e70646200"
+        },
+        {
+          "base": 140709051760640,
+          "size": 2531328,
+          "timestamp": 637094160,
+          "path": "C:\\Windows\\System32\\DWrite.dll",
+          "codeview": "52534453ac5b9b04ac9a070c441961f191cbbe62010000004457726974652e70646200"
+        },
+        {
+          "base": 140709118279680,
+          "size": 1929216,
+          "timestamp": 488382889,
+          "path": "C:\\Windows\\System32\\user32.dll",
+          "codeview": "52534453ee56bff0780a7449d49a58173a7cbc7e010000007573657233322e70646200"
+        },
+        {
+          "base": 140709127979008,
+          "size": 200704,
+          "timestamp": 2376539079,
+          "path": "C:\\Windows\\System32\\imm32.dll",
+          "codeview": "52534453a9e7e5fc50b4b04e8bf6492a4ad1e07b01000000696d6d33322e70646200"
+        },
+        {
+          "base": 140709122670592,
+          "size": 3715072,
+          "timestamp": 364401060,
+          "path": "C:\\Windows\\System32\\combase.dll",
+          "codeview": "52534453911dc94a3822f308ae6a3164a1b8b40401000000636f6d626173652e70646200"
+        },
+        {
+          "base": 140709133156352,
+          "size": 1679360,
+          "timestamp": 3476090620,
+          "path": "C:\\Windows\\System32\\ole32.dll",
+          "codeview": "525344538d660e7a7f516751b9ab6fe73bcc86e2010000006f6c6533322e70646200"
+        },
+        {
+          "base": 140709115658240,
+          "size": 888832,
+          "timestamp": 3929124711,
+          "path": "C:\\Windows\\System32\\oleaut32.dll",
+          "codeview": "52534453703c44226af006cc889b34fdde85cedb010000006f6c6561757433322e70646200"
+        },
+        {
+          "base": 140709077647360,
+          "size": 208896,
+          "timestamp": 2286535387,
+          "path": "C:\\Windows\\System32\\IPHLPAPI.DLL",
+          "codeview": "52534453da8d6423964cccdce139dc2340f3030b010000006970686c706170692e70646200"
+        },
+        {
+          "base": 140709136760832,
+          "size": 7979008,
+          "timestamp": 292758140,
+          "path": "C:\\Windows\\System32\\shell32.dll",
+          "codeview": "525344535677253f8904946ba6db9a71397c7908010000007368656c6c33322e70646200"
+        },
+        {
+          "base": 140708282368000,
+          "size": 1097728,
+          "timestamp": 868189093,
+          "path": "C:\\Windows\\System32\\opengl32.dll",
+          "codeview": "525344536bac3226d0d489a843ad9807b88c3546010000006f70656e676c33322e70646200"
+        },
+        {
+          "base": 140709130731520,
+          "size": 417792,
+          "timestamp": 808622087,
+          "path": "C:\\Windows\\System32\\shlwapi.dll",
+          "codeview": "5253445364f60cfb66f6efdea07f7656efcf08d60100000073686c776170692e70646200"
+        },
+        {
+          "base": 140708295475200,
+          "size": 233472,
+          "timestamp": 32287505,
+          "path": "C:\\Windows\\System32\\glu32.dll",
+          "codeview": "525344531248eee365dfc0035fdc31c733a7bcc901000000676c7533322e70646200"
+        },
+        {
+          "base": 140709149802496,
+          "size": 528384,
+          "timestamp": 3829255736,
+          "path": "C:\\Windows\\System32\\ws2_32.dll",
+          "codeview": "525344536009f95198ce7cc2a2c0f2854645cc43010000007773325f33322e70646200"
+        },
+        {
+          "base": 140708919377920,
+          "size": 225280,
+          "timestamp": 1985894596,
+          "path": "C:\\Windows\\System32\\winmm.dll",
+          "codeview": "525344537e8c3f3297a2c60a09d0d009c5b9f6ee0100000077696e6d6d2e70646200"
+        },
+        {
+          "base": 140709044879360,
+          "size": 278528,
+          "timestamp": 2799913401,
+          "path": "C:\\Windows\\System32\\DXCore.dll",
+          "codeview": "5253445362195d26e72a700a179c86a8f531c6d4010000004458436f72652e70646200"
+        },
+        {
+          "base": 140708508598272,
+          "size": 40960,
+          "timestamp": 1501491795,
+          "path": "C:\\Windows\\System32\\wsock32.dll",
+          "codeview": "52534453df54f1b29f916a338fabd0e501ff9caa0100000077736f636b33322e70646200"
+        },
+        {
+          "base": 140709111595008,
+          "size": 704512,
+          "timestamp": 2876941041,
+          "path": "C:\\Windows\\System32\\bcryptPrimitives.dll",
+          "codeview": "52534453abb0b92bbee030f1115e0d962e333f4e010000006263727970747072696d6974697665732e70646200"
+        },
+        {
+          "base": 140708704223232,
+          "size": 1990656,
+          "timestamp": 1503319826,
+          "path": "C:\\Windows\\System32\\inputhost.dll",
+          "codeview": "52534453de7760c8c0bc20c4d1f5a68fecd5706901000000496e707574486f73742e70646200"
+        },
+        {
+          "base": 140709032493056,
+          "size": 1220608,
+          "timestamp": 3978102573,
+          "path": "C:\\Windows\\System32\\CoreMessaging.dll",
+          "codeview": "5253445356b32f0589a412d2b0dc4d9d8ec959dd01000000436f72654d6573736167696e672e70646200"
+        },
+        {
+          "base": 140709121556480,
+          "size": 1019904,
+          "timestamp": 3483543086,
+          "path": "C:\\Windows\\System32\\SHCore.dll",
+          "codeview": "52534453bd54b059332f7bde54e54e5f3aa2a8d4010000007368636f72652e70646200"
+        },
+        {
+          "base": 140709092917248,
+          "size": 49152,
+          "timestamp": 2511681788,
+          "path": "C:\\Windows\\System32\\CRYPTBASE.DLL",
+          "codeview": "5253445397234982ee586a8ee16225f146aae62c010000006372797074626173652e70646200"
+        },
+        {
+          "base": 140709083676672,
+          "size": 110592,
+          "timestamp": 246514534,
+          "path": "C:\\Windows\\System32\\kernel.appcore.dll",
+          "codeview": "52534453dda68e6ee1536629620c37875551e6f6010000004b65726e656c2e417070636f72652e70646200"
+        },
+        {
+          "base": 140709037801472,
+          "size": 684032,
+          "timestamp": 3674736988,
+          "path": "C:\\Windows\\System32\\uxtheme.dll",
+          "codeview": "52534453df08cef37e6688f19a1730536c3574d40100000075787468656d652e70646200"
+        },
+        {
+          "base": 140709089705984,
+          "size": 442368,
+          "timestamp": 472419974,
+          "path": "C:\\Windows\\System32\\mswsock.dll",
+          "codeview": "525344536025aef736dae72f67edf4e05c289ae8010000006d7377736f636b2e70646200"
+        },
+        {
+          "base": 140709077909504,
+          "size": 1409024,
+          "timestamp": 2797546626,
+          "path": "C:\\Windows\\System32\\dnsapi.dll",
+          "codeview": "52534453307027a7083041fc23c01b01435fc8c601000000646e736170692e70646200"
+        },
+        {
+          "base": 140709087477760,
+          "size": 53248,
+          "timestamp": 3779774972,
+          "path": "C:\\Windows\\System32\\dsparse.dll",
+          "codeview": "525344538190a48fe4bb8c3dbff3d9797d087db201000000647370617273652e70646200"
+        },
+        {
+          "base": 140709127258112,
+          "size": 40960,
+          "timestamp": 884844404,
+          "path": "C:\\Windows\\System32\\nsi.dll",
+          "codeview": "52534453d03e1b7fb7bd17dbe15f5044390f5136010000006e73692e70646200"
+        },
+        {
+          "base": 140708983930880,
+          "size": 45056,
+          "timestamp": 4225067959,
+          "path": "C:\\Windows\\System32\\rasadhlp.dll",
+          "codeview": "52534453d90ed343ac3998e2723e367f9aab3308010000007261736164686c702e70646200"
+        },
+        {
+          "base": 140709004443648,
+          "size": 548864,
+          "timestamp": 3257643010,
+          "path": "C:\\Windows\\System32\\FWPUCLNT.DLL",
+          "codeview": "525344532f8df240d59310a05cb76e7c89ebe6100100000066777075636c6e742e70646200"
+        }
+      ],
+      "instruction_bytes": "00000000488b4120488b4068c390660f1f44000031c0c390",
+      "rcx_plus_20_bytes": "608542902f010000",
+      "rax_plus_68_readable_in_dump": false,
+      "raw_stack_module_candidates_not_unwound": [
+        {
+          "stack_offset": "0x0",
+          "address": "0x7ff7efebbebb",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x3fcbebb"
+        },
+        {
+          "stack_offset": "0x20",
+          "address": "0x7ff7eff1d2d1",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x402d2d1"
+        },
+        {
+          "stack_offset": "0x50",
+          "address": "0x7ff7efee2882",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x3ff2882"
+        },
+        {
+          "stack_offset": "0x60",
+          "address": "0x7ff7f012cc0b",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x423cc0b"
+        },
+        {
+          "stack_offset": "0xb0",
+          "address": "0x7ff7f03933be",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x44a33be"
+        },
+        {
+          "stack_offset": "0xc0",
+          "address": "0x7ff7f01fb426",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x430b426"
+        },
+        {
+          "stack_offset": "0xd0",
+          "address": "0x7ff96601d60c",
+          "module_offset": "msvcrt.dll+0x1d60c"
+        },
+        {
+          "stack_offset": "0x110",
+          "address": "0x7ff7efecfa8b",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x3fdfa8b"
+        },
+        {
+          "stack_offset": "0x148",
+          "address": "0x7ff7efee2870",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x3ff2870"
+        },
+        {
+          "stack_offset": "0x160",
+          "address": "0x7ff7ec3cc092",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x4dc092"
+        },
+        {
+          "stack_offset": "0x3e8",
+          "address": "0x7ff7f111fb08",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x522fb08"
+        },
+        {
+          "stack_offset": "0x440",
+          "address": "0x7ff7f2bb4560",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x6cc4560"
+        },
+        {
+          "stack_offset": "0x480",
+          "address": "0x7ff9670d200b",
+          "module_offset": "ntdll.dll+0x3200b"
+        },
+        {
+          "stack_offset": "0x570",
+          "address": "0x7ff96601d60c",
+          "module_offset": "msvcrt.dll+0x1d60c"
+        },
+        {
+          "stack_offset": "0x5a0",
+          "address": "0x7ff7efed56f6",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x3fe56f6"
+        },
+        {
+          "stack_offset": "0x5b0",
+          "address": "0x7ff9670d57c4",
+          "module_offset": "ntdll.dll+0x357c4"
+        },
+        {
+          "stack_offset": "0x680",
+          "address": "0x7ff7ec29fab9",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x3afab9"
+        },
+        {
+          "stack_offset": "0x6e0",
+          "address": "0x7ff7f0a3b67d",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x4b4b67d"
+        },
+        {
+          "stack_offset": "0x710",
+          "address": "0x7ff7f1052c80",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x5162c80"
+        },
+        {
+          "stack_offset": "0x740",
+          "address": "0x7ff7f013078b",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x424078b"
+        },
+        {
+          "stack_offset": "0x778",
+          "address": "0x7ff7f1209938",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x5319938"
+        },
+        {
+          "stack_offset": "0x780",
+          "address": "0x7ff7f0a92a22",
+          "module_offset": "Godot_v4.0-stable_win64.exe+0x4ba2a22"
+        }
+      ]
+    }
+  ]
+}

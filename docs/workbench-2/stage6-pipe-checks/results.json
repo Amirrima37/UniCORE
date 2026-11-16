@@ -1,0 +1,50 @@
+[
+  {
+    "test": "test_stage6_pipe",
+    "exit": 0,
+    "passed": true,
+    "seconds": 16.53333439999551
+  },
+  {
+    "test": "test_stage6_pipe_contract",
+    "exit": 1,
+    "passed": false,
+    "seconds": 0.5334994000004372
+  },
+  {
+    "test": "capture_stage6_pipe",
+    "exit": 0,
+    "passed": true,
+    "seconds": 27.602604799998517
+  },
+  {
+    "test": "test_stage6_sphere",
+    "exit": 0,
+    "passed": true,
+    "seconds": 8.029532800006564
+  },
+  {
+    "test": "test_stage6_cylinder",
+    "exit": 0,
+    "passed": true,
+    "seconds": 1.9983367000022554
+  },
+  {
+    "test": "test_stage5_provenance",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.9010258999987855
+  },
+  {
+    "test": "test_stage51_cache",
+    "exit": 0,
+    "passed": true,
+    "seconds": 3.2827269999979762
+  },
+  {
+    "test": "test_app_shell_suite",
+    "exit": 0,
+    "passed": true,
+    "seconds": 8.57656169999973
+  }
+]

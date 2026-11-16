@@ -1,0 +1,15 @@
+{
+  "displacement_flat": 0,
+  "reactions_flat": 0.0,
+  "stress": 0.0,
+  "strain": 0.0,
+  "von_mises": 0.0,
+  "iterations": [
+    32,
+    32
+  ],
+  "residual": [
+    9.051919247460844e-15,
+    9.051919247460844e-15
+  ]
+}

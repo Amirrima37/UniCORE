@@ -1,0 +1,172 @@
+[
+  {
+    "name": "reference",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\reference",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256"
+    ],
+    "exit_code": 0,
+    "expected": 0,
+    "seconds": 0.09857740000006743
+  },
+  {
+    "name": "paused",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256",
+      "--pause-after",
+      "1"
+    ],
+    "exit_code": 3,
+    "expected": 3,
+    "seconds": 0.07840099999884842
+  },
+  {
+    "name": "resume-unicore_solver.exe",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\resume-unicore_solver.exe",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256",
+      "--restart",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate"
+    ],
+    "exit_code": 0,
+    "expected": 0,
+    "seconds": 0.08073819999845,
+    "max_temperature_difference_K": 0
+  },
+  {
+    "name": "resume-unicore_solver_debug.exe",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\resume-unicore_solver_debug.exe",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256",
+      "--restart",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate"
+    ],
+    "exit_code": 0,
+    "expected": 0,
+    "seconds": 0.09196019999944838,
+    "max_temperature_difference_K": 0
+  },
+  {
+    "name": "resume-unicore_solver_noomp.exe",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_noomp.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\resume-unicore_solver_noomp.exe",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256",
+      "--restart",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate"
+    ],
+    "exit_code": 0,
+    "expected": 0,
+    "seconds": 0.08195109999360284,
+    "max_temperature_difference_K": 0
+  },
+  {
+    "name": "corrupt",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\corrupt",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256",
+      "--restart",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\corrupt.ucstate"
+    ],
+    "exit_code": 2,
+    "expected": 2,
+    "seconds": 0.08217619999777526
+  },
+  {
+    "name": "incompatible",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\changed.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\incompatible",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256",
+      "--restart",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate"
+    ],
+    "exit_code": 2,
+    "expected": 2,
+    "seconds": 0.08158710000134306
+  },
+  {
+    "name": "structural-restart-unsupported",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata\\Godot\\app_userdata\\UniCORE\\extreme_jobs\\1794442924_605_16108_1312293\\model.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\structural-restart-unsupported",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256",
+      "--restart",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate"
+    ],
+    "exit_code": 2,
+    "expected": 2,
+    "seconds": 0.05933609999920009
+  },
+  {
+    "name": "recovery",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\recovery",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256"
+    ],
+    "exit_code": 0,
+    "expected": 0,
+    "seconds": 0.0862416999952984
+  }
+]

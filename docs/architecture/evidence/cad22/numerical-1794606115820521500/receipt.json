@@ -1,0 +1,17 @@
+[
+  {
+    "test": "numerical",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 80.14081300000544,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_numerical.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\numerical-1794606115820521500"
+  }
+]

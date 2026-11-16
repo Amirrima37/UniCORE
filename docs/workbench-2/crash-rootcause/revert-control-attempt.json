@@ -1,0 +1,5 @@
+{
+  "timeout_seconds": 30,
+  "outcome": "timeout; not counted as reproduced access violation",
+  "production_source_restored_in_finally": true
+}

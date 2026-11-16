@@ -1,0 +1,44 @@
+[
+  {
+    "variant": "original",
+    "exit": 3221225477,
+    "hex": "0xc0000005",
+    "script_error": false,
+    "seconds": 15.33189449999918
+  },
+  {
+    "variant": "initialize",
+    "exit": 3221225477,
+    "hex": "0xc0000005",
+    "script_error": false,
+    "seconds": 12.385619400003634
+  },
+  {
+    "variant": "deferred",
+    "exit": 3221225477,
+    "hex": "0xc0000005",
+    "script_error": false,
+    "seconds": 11.826845799994771
+  },
+  {
+    "variant": "no_explicit_queue",
+    "exit": 0,
+    "hex": "0x0",
+    "script_error": true,
+    "seconds": 8.790157100003853
+  },
+  {
+    "variant": "no_manual_ready",
+    "exit": 3221225477,
+    "hex": "0xc0000005",
+    "script_error": false,
+    "seconds": 11.507361000003584
+  },
+  {
+    "variant": "no_main_scene",
+    "exit": 3221225477,
+    "hex": "0xc0000005",
+    "script_error": false,
+    "seconds": 6.584384100002353
+  }
+]

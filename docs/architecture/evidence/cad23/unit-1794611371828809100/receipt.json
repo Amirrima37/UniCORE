@@ -1,0 +1,13 @@
+[
+  {
+    "test": "unit",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/cad23_unit.py"
+    ],
+    "seconds": 1.4742961999872932,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\unit-1794611371828809100"
+  }
+]

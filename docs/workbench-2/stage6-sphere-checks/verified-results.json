@@ -1,0 +1,14 @@
+[
+  {
+    "test": "test_stage6_sphere",
+    "exit": 0,
+    "seconds": 9.349614800004929,
+    "passed": true
+  },
+  {
+    "test": "test_stage6_sphere_contract",
+    "exit": 0,
+    "seconds": 1.2437350000036531,
+    "passed": true
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "cad22-numerical",
+  "exit_code": 0,
+  "outcome": "PASS",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/run_cad22.py",
+    "numerical"
+  ],
+  "seconds": 151.02085610000358,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-numerical-1794666474520217400"
+}

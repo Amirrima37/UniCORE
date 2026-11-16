@@ -1,0 +1,1927 @@
+{
+  "iterations": 100,
+  "elapsed_seconds": 264.43452160000743,
+  "rows": [
+    {
+      "iteration": 0,
+      "host_working_set_after_cleanup": 69140480,
+      "native_peak_commit": 23916544,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        15324,
+        8216,
+        22180,
+        12128,
+        24104
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 1,
+      "host_working_set_after_cleanup": 69148672,
+      "native_peak_commit": 23900160,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        15236,
+        24388,
+        23260,
+        15700
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 2,
+      "host_working_set_after_cleanup": 69156864,
+      "native_peak_commit": 23891968,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        23444,
+        24160,
+        1160,
+        19060
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 3,
+      "host_working_set_after_cleanup": 69160960,
+      "native_peak_commit": 23932928,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        10460,
+        3416,
+        15512,
+        24136
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 4,
+      "host_working_set_after_cleanup": 69160960,
+      "native_peak_commit": 23896064,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        13612,
+        2092,
+        23020,
+        22400
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 5,
+      "host_working_set_after_cleanup": 69160960,
+      "native_peak_commit": 23920640,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        20992,
+        19656,
+        20516,
+        21244
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 6,
+      "host_working_set_after_cleanup": 67928064,
+      "native_peak_commit": 23937024,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        10660,
+        19120,
+        2160,
+        19284
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 7,
+      "host_working_set_after_cleanup": 68186112,
+      "native_peak_commit": 23916544,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        21152,
+        20032,
+        23940,
+        18752
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 8,
+      "host_working_set_after_cleanup": 68206592,
+      "native_peak_commit": 23932928,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        20400,
+        23820,
+        9156,
+        19340
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 9,
+      "host_working_set_after_cleanup": 68218880,
+      "native_peak_commit": 23900160,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        23944,
+        17564,
+        10400,
+        11296
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 10,
+      "host_working_set_after_cleanup": 95891456,
+      "native_peak_commit": 23908352,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        10452,
+        14920,
+        17608,
+        12216,
+        2644
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 11,
+      "host_working_set_after_cleanup": 95916032,
+      "native_peak_commit": 23920640,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        21068,
+        21972,
+        19960,
+        21516
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 12,
+      "host_working_set_after_cleanup": 95920128,
+      "native_peak_commit": 23912448,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        22320,
+        2136,
+        23900,
+        16404
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 13,
+      "host_working_set_after_cleanup": 95920128,
+      "native_peak_commit": 23904256,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        17480,
+        24056,
+        21276,
+        21672
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 14,
+      "host_working_set_after_cleanup": 95924224,
+      "native_peak_commit": 23912448,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        21496,
+        24204,
+        17876,
+        13824
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 15,
+      "host_working_set_after_cleanup": 95940608,
+      "native_peak_commit": 23891968,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        20756,
+        15180,
+        13612,
+        11884
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 16,
+      "host_working_set_after_cleanup": 95940608,
+      "native_peak_commit": 23916544,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        5852,
+        10612,
+        11292,
+        13636
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 17,
+      "host_working_set_after_cleanup": 95944704,
+      "native_peak_commit": 23912448,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        14804,
+        18872,
+        4348,
+        23248
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 18,
+      "host_working_set_after_cleanup": 95985664,
+      "native_peak_commit": 23916544,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        22564,
+        23940,
+        24328,
+        18788
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 19,
+      "host_working_set_after_cleanup": 95985664,
+      "native_peak_commit": 23896064,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        21608,
+        23780,
+        17232,
+        20020
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 20,
+      "host_working_set_after_cleanup": 89505792,
+      "native_peak_commit": 23912448,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        6644,
+        15144,
+        21976,
+        21488,
+        21648
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 21,
+      "host_working_set_after_cleanup": 89554944,
+      "native_peak_commit": 23924736,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        15532,
+        23304,
+        2164,
+        15984
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 22,
+      "host_working_set_after_cleanup": 87470080,
+      "native_peak_commit": 23900160,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        19724,
+        18892,
+        14192,
+        22988
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 23,
+      "host_working_set_after_cleanup": 87470080,
+      "native_peak_commit": 23924736,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        12364,
+        9348,
+        8952,
+        15920
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 24,
+      "host_working_set_after_cleanup": 87474176,
+      "native_peak_commit": 23920640,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        23260,
+        1992,
+        19344,
+        23564
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 25,
+      "host_working_set_after_cleanup": 87474176,
+      "native_peak_commit": 23928832,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        8404,
+        17756,
+        15416,
+        19712
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 26,
+      "host_working_set_after_cleanup": 87531520,
+      "native_peak_commit": 23912448,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        13332,
+        5188,
+        23196,
+        8216
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 27,
+      "host_working_set_after_cleanup": 87535616,
+      "native_peak_commit": 23900160,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        18620,
+        2896,
+        20516,
+        15008
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 28,
+      "host_working_set_after_cleanup": 87535616,
+      "native_peak_commit": 23912448,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        20288,
+        21456,
+        21492,
+        19148
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 29,
+      "host_working_set_after_cleanup": 87539712,
+      "native_peak_commit": 23953408,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        11480,
+        24328,
+        22228,
+        19660
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 30,
+      "host_working_set_after_cleanup": 101642240,
+      "native_peak_commit": 23937024,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        15388,
+        4424,
+        22164,
+        17468,
+        12236
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 31,
+      "host_working_set_after_cleanup": 101703680,
+      "native_peak_commit": 23928832,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        17484,
+        10456,
+        23500,
+        17876
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 32,
+      "host_working_set_after_cleanup": 101703680,
+      "native_peak_commit": 23932928,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        2128,
+        16760,
+        21688,
+        21368
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 33,
+      "host_working_set_after_cleanup": 101707776,
+      "native_peak_commit": 23912448,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        17572,
+        22956,
+        18360,
+        19728
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 34,
+      "host_working_set_after_cleanup": 101711872,
+      "native_peak_commit": 23912448,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        3120,
+        6560,
+        21696,
+        14284
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 35,
+      "host_working_set_after_cleanup": 101711872,
+      "native_peak_commit": 23920640,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        10640,
+        6616,
+        22896,
+        3012
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 36,
+      "host_working_set_after_cleanup": 101761024,
+      "native_peak_commit": 23920640,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        8228,
+        21300,
+        10624,
+        24248
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 37,
+      "host_working_set_after_cleanup": 101765120,
+      "native_peak_commit": 23883776,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        9924,
+        23796,
+        21712,
+        19188
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 38,
+      "host_working_set_after_cleanup": 101773312,
+      "native_peak_commit": 23887872,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        12336,
+        17632,
+        12520,
+        7380
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 39,
+      "host_working_set_after_cleanup": 101830656,
+      "native_peak_commit": 23887872,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        13904,
+        10420,
+        21704,
+        20756
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 40,
+      "host_working_set_after_cleanup": 96182272,
+      "native_peak_commit": 23900160,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        2128,
+        24136,
+        5852,
+        20636,
+        17572
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 41,
+      "host_working_set_after_cleanup": 96231424,
+      "native_peak_commit": 23932928,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        6188,
+        22876,
+        14716,
+        18832
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 42,
+      "host_working_set_after_cleanup": 96288768,
+      "native_peak_commit": 23887872,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        16656,
+        23344,
+        16204,
+        3532
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 43,
+      "host_working_set_after_cleanup": 96301056,
+      "native_peak_commit": 23900160,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        23140,
+        20820,
+        9460,
+        7152
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 44,
+      "host_working_set_after_cleanup": 96301056,
+      "native_peak_commit": 23916544,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        6944,
+        20024,
+        12612,
+        19920
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 45,
+      "host_working_set_after_cleanup": 96370688,
+      "native_peak_commit": 23883776,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        13672,
+        21280,
+        9552,
+        21636
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 46,
+      "host_working_set_after_cleanup": 95588352,
+      "native_peak_commit": 23879680,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        13776,
+        22028,
+        12972,
+        8640
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 47,
+      "host_working_set_after_cleanup": 95698944,
+      "native_peak_commit": 23916544,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        23916,
+        21264,
+        11956,
+        24524
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 48,
+      "host_working_set_after_cleanup": 95801344,
+      "native_peak_commit": 23900160,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        22204,
+        15188,
+        23352,
+        12528
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 49,
+      "host_working_set_after_cleanup": 95883264,
+      "native_peak_commit": 23920640,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        3840,
+        14748,
+        18780,
+        15744
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 50,
+      "host_working_set_after_cleanup": 104538112,
+      "native_peak_commit": 23896064,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        14192,
+        8488,
+        9348,
+        24380,
+        12216
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 51,
+      "host_working_set_after_cleanup": 104665088,
+      "native_peak_commit": 23912448,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        10544,
+        9680,
+        18892,
+        24144
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 52,
+      "host_working_set_after_cleanup": 104681472,
+      "native_peak_commit": 23908352,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        12728,
+        20632,
+        24380,
+        19692
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 53,
+      "host_working_set_after_cleanup": 104710144,
+      "native_peak_commit": 23920640,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        18328,
+        4760,
+        22936,
+        17724
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 54,
+      "host_working_set_after_cleanup": 104771584,
+      "native_peak_commit": 23912448,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        14124,
+        7180,
+        17340,
+        21660
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 55,
+      "host_working_set_after_cleanup": 104771584,
+      "native_peak_commit": 23908352,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        4468,
+        19000,
+        18128,
+        20684
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 56,
+      "host_working_set_after_cleanup": 103927808,
+      "native_peak_commit": 23896064,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        12756,
+        724,
+        17232,
+        19300
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 57,
+      "host_working_set_after_cleanup": 104087552,
+      "native_peak_commit": 23891968,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        6616,
+        12480,
+        10128,
+        15572
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 58,
+      "host_working_set_after_cleanup": 104136704,
+      "native_peak_commit": 23900160,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        10120,
+        6192,
+        3508,
+        13008
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 59,
+      "host_working_set_after_cleanup": 104198144,
+      "native_peak_commit": 23879680,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        9828,
+        11776,
+        4352,
+        4436
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 60,
+      "host_working_set_after_cleanup": 99676160,
+      "native_peak_commit": 23908352,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        12364,
+        20144,
+        6572,
+        1676,
+        12996
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 61,
+      "host_working_set_after_cleanup": 99770368,
+      "native_peak_commit": 23900160,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        20852,
+        13864,
+        20076,
+        21380
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 62,
+      "host_working_set_after_cleanup": 97677312,
+      "native_peak_commit": 23924736,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        23160,
+        19060,
+        6392,
+        16188
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 63,
+      "host_working_set_after_cleanup": 97681408,
+      "native_peak_commit": 23904256,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        21340,
+        6548,
+        4612,
+        15744
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 64,
+      "host_working_set_after_cleanup": 97710080,
+      "native_peak_commit": 23887872,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        10972,
+        24548,
+        19376,
+        22548
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 65,
+      "host_working_set_after_cleanup": 97710080,
+      "native_peak_commit": 23883776,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        7848,
+        23624,
+        21308,
+        11792
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 66,
+      "host_working_set_after_cleanup": 97710080,
+      "native_peak_commit": 23883776,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        14632,
+        14124,
+        21392,
+        24376
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 67,
+      "host_working_set_after_cleanup": 97718272,
+      "native_peak_commit": 23908352,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        1140,
+        8116,
+        19468,
+        20516
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 68,
+      "host_working_set_after_cleanup": 97746944,
+      "native_peak_commit": 23912448,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        18972,
+        15164,
+        19656,
+        19276
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 69,
+      "host_working_set_after_cleanup": 97751040,
+      "native_peak_commit": 23941120,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        19300,
+        20204,
+        14552,
+        12712
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 70,
+      "host_working_set_after_cleanup": 104665088,
+      "native_peak_commit": 23928832,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        24196,
+        19880,
+        16188,
+        22144,
+        5840
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 71,
+      "host_working_set_after_cleanup": 104738816,
+      "native_peak_commit": 23924736,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        10576,
+        1956,
+        18260,
+        22612
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 72,
+      "host_working_set_after_cleanup": 104747008,
+      "native_peak_commit": 23920640,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        7432,
+        20536,
+        10640,
+        8660
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 73,
+      "host_working_set_after_cleanup": 104751104,
+      "native_peak_commit": 23908352,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        21424,
+        19608,
+        17104,
+        21108
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 74,
+      "host_working_set_after_cleanup": 104759296,
+      "native_peak_commit": 23916544,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        6416,
+        21668,
+        7240,
+        21428
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 75,
+      "host_working_set_after_cleanup": 104767488,
+      "native_peak_commit": 23920640,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        19584,
+        4612,
+        13940,
+        19188
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 76,
+      "host_working_set_after_cleanup": 103911424,
+      "native_peak_commit": 23924736,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        22900,
+        24220,
+        21588,
+        12800
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 77,
+      "host_working_set_after_cleanup": 104067072,
+      "native_peak_commit": 23945216,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        10900,
+        22180,
+        23644,
+        7300
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 78,
+      "host_working_set_after_cleanup": 104116224,
+      "native_peak_commit": 23953408,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        11792,
+        6808,
+        21932,
+        21828
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 79,
+      "host_working_set_after_cleanup": 104226816,
+      "native_peak_commit": 23924736,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        15720,
+        4260,
+        23348,
+        24472
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 80,
+      "host_working_set_after_cleanup": 100728832,
+      "native_peak_commit": 23937024,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        10284,
+        3880,
+        24172,
+        15500,
+        23292
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 81,
+      "host_working_set_after_cleanup": 100855808,
+      "native_peak_commit": 23941120,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        22264,
+        8756,
+        19744,
+        22836
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 82,
+      "host_working_set_after_cleanup": 98762752,
+      "native_peak_commit": 23908352,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        17192,
+        7076,
+        22672,
+        21308
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 83,
+      "host_working_set_after_cleanup": 98770944,
+      "native_peak_commit": 23920640,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        24512,
+        9340,
+        22752,
+        2348
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 84,
+      "host_working_set_after_cleanup": 98779136,
+      "native_peak_commit": 23924736,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        22420,
+        12912,
+        21796,
+        5828
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 85,
+      "host_working_set_after_cleanup": 98791424,
+      "native_peak_commit": 23920640,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        23084,
+        24488,
+        20832,
+        14936
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 86,
+      "host_working_set_after_cleanup": 98799616,
+      "native_peak_commit": 23928832,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        23800,
+        14508,
+        17104,
+        21804
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 87,
+      "host_working_set_after_cleanup": 98799616,
+      "native_peak_commit": 23932928,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        23468,
+        22480,
+        9644,
+        21340
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 88,
+      "host_working_set_after_cleanup": 98820096,
+      "native_peak_commit": 23969792,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        24040,
+        13812,
+        23892,
+        17328
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 89,
+      "host_working_set_after_cleanup": 98889728,
+      "native_peak_commit": 23945216,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        18188,
+        22800,
+        10124,
+        12128
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 90,
+      "host_working_set_after_cleanup": 104050688,
+      "native_peak_commit": 23916544,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        12484,
+        7680,
+        14624,
+        5188,
+        2088
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 91,
+      "host_working_set_after_cleanup": 104116224,
+      "native_peak_commit": 23937024,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        16620,
+        7944,
+        2780,
+        11980
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 92,
+      "host_working_set_after_cleanup": 104120320,
+      "native_peak_commit": 23941120,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        24192,
+        3572,
+        13360,
+        22968
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 93,
+      "host_working_set_after_cleanup": 104128512,
+      "native_peak_commit": 23932928,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        4784,
+        5984,
+        24400,
+        5448
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 94,
+      "host_working_set_after_cleanup": 104136704,
+      "native_peak_commit": 23937024,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        12364,
+        24152,
+        12188,
+        24316
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 95,
+      "host_working_set_after_cleanup": 104136704,
+      "native_peak_commit": 23949312,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        17032,
+        8756,
+        7028,
+        1992
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 96,
+      "host_working_set_after_cleanup": 103116800,
+      "native_peak_commit": 23920640,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        24032,
+        20024,
+        23500,
+        13860
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 97,
+      "host_working_set_after_cleanup": 103403520,
+      "native_peak_commit": 23924736,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        16576,
+        20636,
+        13776,
+        21152
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 98,
+      "host_working_set_after_cleanup": 103424000,
+      "native_peak_commit": 23916544,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        1724,
+        22516,
+        22316,
+        5828
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    },
+    {
+      "iteration": 99,
+      "host_working_set_after_cleanup": 103497728,
+      "native_peak_commit": 23932928,
+      "native_exits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_pids": [
+        22072,
+        14504,
+        22712,
+        17768
+      ],
+      "orphan_count": 0,
+      "retained_native_temp_directories": 23
+    }
+  ],
+  "scope": "100 native cycles; 10 STEP imports; 10 alternating TET4/TET10 remeshes. Separate campaigns cover solver/GUI/cancellation. No universal leak-free claim."
+}

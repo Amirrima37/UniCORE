@@ -1,0 +1,60 @@
+[
+	{
+		"analysis": "static_structural",
+		"elements": 2688,
+		"nodes": 645,
+		"operation": "import_parse_hash_validate",
+		"samples_ms": [
+			296.596,
+			278.708,
+			288.168
+		]
+	},
+	{
+		"operation": "structural_contour_build",
+		"samples_ms": [
+			124.04,
+			131.059,
+			137.563
+		]
+	},
+	{
+		"operation": "probe_bvh_query",
+		"samples_ms": [
+			0.809,
+			0.589,
+			0.581
+		]
+	},
+	{
+		"field": "displacement",
+		"ms": 239.207,
+		"operation": "field_switch"
+	},
+	{
+		"field": "von_mises",
+		"ms": 163.672,
+		"operation": "field_switch"
+	},
+	{
+		"analysis": "steady_thermal",
+		"elements": 2688,
+		"nodes": 645,
+		"operation": "import_parse_hash_validate",
+		"samples_ms": [
+			254.222,
+			254.689,
+			250.53
+		]
+	},
+	{
+		"field": "temperature",
+		"ms": 187.564,
+		"operation": "field_switch"
+	},
+	{
+		"field": "heat_flux",
+		"ms": 105.135,
+		"operation": "field_switch"
+	}
+]

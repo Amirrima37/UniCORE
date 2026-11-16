@@ -1,0 +1,51 @@
+{
+  "bar": {
+    "sha256": "36edf72004a6e1cda34caeca55fdf2e5e143cd432ad44f4d848f9e2420464c56",
+    "cad_volume": 0.010000000000000002,
+    "expected_volume": 0.01,
+    "bounds": [
+      -1e-07,
+      -1e-07,
+      -1e-07,
+      0.10000010000000001,
+      1.0000001,
+      0.10000010000000001
+    ],
+    "faces": 6,
+    "nodes": 86,
+    "tet4": 201,
+    "mesh_volume": 0.010000000000000021,
+    "minimum_jacobian": 0.00024999999999999816,
+    "physical_surfaces": [
+      "CAD_36edf72004a6e1cd_face_1",
+      "CAD_36edf72004a6e1cd_face_2",
+      "CAD_36edf72004a6e1cd_face_3",
+      "CAD_36edf72004a6e1cd_face_4",
+      "CAD_36edf72004a6e1cd_face_5",
+      "CAD_36edf72004a6e1cd_face_6"
+    ]
+  },
+  "cylinder": {
+    "sha256": "635bf93ade59915a3e4d5fef7ab2530e9bb728db390600f5c957d1c49e8de1c6",
+    "cad_volume": 0.006283185307179587,
+    "expected_volume": 0.0062831853071795875,
+    "bounds": [
+      -0.10000010000000001,
+      -1e-07,
+      -0.10000010000000001,
+      0.10000010000000001,
+      0.20000010000000001,
+      0.10000010000000001
+    ],
+    "faces": 3,
+    "nodes": 85,
+    "tet4": 231,
+    "mesh_volume": 0.0060506026267136935,
+    "minimum_jacobian": 5.413397201034733e-05,
+    "physical_surfaces": [
+      "CAD_635bf93ade59915a_face_1",
+      "CAD_635bf93ade59915a_face_2",
+      "CAD_635bf93ade59915a_face_3"
+    ]
+  }
+}

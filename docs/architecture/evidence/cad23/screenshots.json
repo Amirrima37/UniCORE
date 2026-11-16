@@ -1,0 +1,240 @@
+[
+  {
+    "path": "screenshots/corrected-stress-association-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "85fa68a755cb5a49220e193f2e778250bc323e271c87c6338d67b432c825d14f",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/corrected-stress-association-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "4977f1b12298403f2921f5cc3186b5fd71fba52012b4cf167a30dd74e0b2f8d6",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/displacement-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "d059deea7359215aa7f49468ef56f381c76255b668d51a06282fc2e548d6d7f4",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/displacement-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "8e4ded04f6d8157166699c8e5a7e60f1a6f09a80e7d305862b4fdc262ff0e347",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/engineering-strain-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "178fa2d07a0c5f1676b4bc2b991ff7ce8591eb8d60841b939f4cc27e3964b31d",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/engineering-strain-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "80d80ee8c85c7409c5116d1a87fed0c4988d074e30abc8dd48e6d7e02792c189",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/local-face-refinement-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "df5fd5ea90d77c378414dc332dfe08de836e0d308fbd05415f49fb2aa1315e0f",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/local-face-refinement-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "36fc3f2be3defba71514a55bd97f05994f8a961c8cedbc0c3c880a0e43a996a5",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/mesh-statistics-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "6e7596b8bdaba69b0bca331800cde4bd94fdc8d57c49ce0bf5912dab5af6bc0e",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/mesh-statistics-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "54c18bbe4c2456c30af6249ea80843ca61ba3e9a5f7b00afc0453db9f7c2ca4d",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/quadratic-bending-displacement-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "01cb122ff9d9e8010c2432ab6f0aec24a501d530b6c8f3ce65c4ade94107f5bc",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/quadratic-bending-displacement-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "f5caf2b84e204d00a6f51d2d2b109a8c568a2b317944481b9fdd9371dfb6df80",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/quadratic-bending-von-mises-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "c967b67c98a8e4ddda414a22bfbb2c9f7aef425ab31e59dba1962403f5993460",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/quadratic-bending-von-mises-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "17fb6ba71406ec22d61c51321da3b98c09b559ad7b4f674bcd436d9ae86c7632",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/quadratic-quality-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "61c7b048bed54cd7f64e9e7884b167f435ccd8e7905b72d87ca46bd40532b4ef",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/quadratic-quality-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "ce0b15a930f6834a588258b4b4f8661d337b531d901fbd2ecb933b86c3959ed2",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/quadratic-through-hole-mesh-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "cdd59455243a740e033149ce09d31ca70fdb61f7c6fc192bf091cd8e0b54c940",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/quadratic-through-hole-mesh-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "198d74f4d7b57aa9161a92d4dc5b77bfe47babf83af41ac7ea20dccc86ef9141",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/saved-reopened-current-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "f755f6061742cf246d11aeed4027c7177dd508e2ca87b46a26b5c4ccde3959dd",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/saved-reopened-current-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "f5da89eb93bde856a50485d71511687ca5056716c06bdbc7154d2e0266d0ecce",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/selected-c3d10-integration-points-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "445c131ca64488f7704a398c246578dc7d460f1a48c1f6ad2636106bf906f75b",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/selected-c3d10-integration-points-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "bfc0f75df88f784355866f202ad4d84077dd8def1fa1fe1be5d8f4cc562807fd",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/selected-cad-face-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "98b738599d95e6bb47abb11be3f0b31b7155ac1c2db5612182da06886e02211e",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/selected-cad-face-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "8cc0e6958d2b94275385aa11265c0dab35a6c3526f2a8b0fcbe62c0d7ba1f67a",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/selected-quadratic-node-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "a63be9f640b5f1c5e8eaf918d4d42ec068bc3dafddbc7cb10169192714d3b62d",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/selected-quadratic-node-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "4b84128dd1a78a007557c0da38ee1a85bd79e7ff7d3f44626da5a29ef54fb5a8",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/tet10-settings-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "48f7d9f340213c65b1ac37136400ec682030500ed13dd6fbedbbf410e0b8884a",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/tet10-settings-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "975297718e81e6e17a9512c03e97c3979242cd69b628730c80e63ae60a9cb1e7",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/von-mises-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "c19a716e809665aa82a56b581405f0746dc66dbc908100983ec82aeb57df80b2",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/von-mises-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "3c71b4fdf6e99eee9b5bcb7294aafd3b66f43ff52e482fade0637e198113edf9",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/worst-element-integration-jacobians-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "47229812153b8422bd235e16a9f246f4ad68fec1eede8949200cac35ec09bfbb",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/worst-element-integration-jacobians-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "46b6347bf072c346bce16b2184aa9f470798a9f3beeb43f088c017767ae19a13",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/worst-element-metrics-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "f55dfeef7e915c512b275a74e2832c070b7551447fb0bd1dc0d718b92bd1d44c",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots/worst-element-metrics-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "2c31a00f07e5da4814766ef16160a80319ad3bf3660ca151fad90f6aac6ee29c",
+    "outcome": "PASS"
+  }
+]

@@ -422,6 +422,7 @@ func _test_agent_brain_integration() -> void:
 
 	var brain := AgentBrain.new()
 	track_node(brain)
+	brain.api_key="mock_test_key" # Offline provider still follows the credentials contract.
 	brain.setup(event_bus, module_manager, mock_llm, diag, null, null, null, null, ssm, pm)
 
 	assert_eq(brain.get_space_state_machine(), ssm, "AgentBrain: SpaceStateMachine linked")

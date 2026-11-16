@@ -1,5 +1,6 @@
 #pragma once
 #include <array>
+#include <chrono>
 #include <vector>
 #include <unordered_map>
 #include <cmath>
@@ -7,6 +8,8 @@
 #include <stdexcept>
 #include <algorithm>
 #include "math/sparse_pcg.hpp"
+#include "math/parallel_for.hpp"
+#include "math/nodal_scatter.hpp"
 namespace unicore::structural {
 using V = std::array<double,3>;
 struct Material { double E, nu; };
@@ -14,7 +17,7 @@ struct Tet { std::array<int,4> nodes; Material material; };
 struct Hex { std::array<int,8> nodes; Material material; };
 struct Model { std::vector<V> nodes; std::vector<Tet> elements; std::vector<Hex> hexes; std::vector<double> prescribed; std::vector<double> force; std::vector<bool> fixed; };
 struct Field { std::array<double,6> strain{}, stress{}; double von_mises=0; };
-struct Result { std::vector<double> displacement, reaction; std::vector<Field> fields; double residual=0; int iterations=0; };
+struct Result { math::LinearResult linear_diagnostics; double element_preparation_ms=0,pattern_container_ms=0,preconditioner_ms=0,pcg_ms=0,linear_post_ms=0,integration_ms=0,scatter_ms=0,csr_ms=0,constraint_ms=0;double assembly_ms=0,solve_ms=0,post_ms=0;std::vector<double> displacement, reaction; std::vector<Field> fields; double residual=0; int iterations=0; };
 inline V sub(V a,V b) { return {a[0]-b[0],a[1]-b[1],a[2]-b[2]}; }
 inline V cross(V a,V b) { return {a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]}; }
 inline double dot(V a,V b) {return a[0]*b[0]+a[1]*b[1]+a[2]*b[2];}
@@ -115,27 +118,46 @@ inline Result solve(const Model &m, const std::atomic<bool> &cancel, std::atomic
     // callers must still constrain rigid modes; PCG reports breakdown/nonconvergence.
     if(std::count(m.fixed.begin(),m.fixed.end(),true)<6) throw std::runtime_error("MISSING_SUPPORT");
     if(!m.prescribed.empty()&&m.prescribed.size()!=n)throw std::runtime_error("INVALID_PRESCRIBED_DISPLACEMENT");
+    auto start=std::chrono::steady_clock::now();
     if(phase)phase->store(3);
     auto cells=cells_of(m);
     validate_rigid_modes(m,cells);
+    auto prepared=std::chrono::steady_clock::now();
     std::vector<std::unordered_map<int,double>> K(n);
-    for(auto &t:cells) {
-        if(cancel.load()) throw std::runtime_error("CANCELLED");
-        auto e=integrate(m,t);
-        for(int i=0;i<e.n;++i) for(int j=0;j<e.n;++j) K[t.nodes[i/3]*3+i%3][t.nodes[j/3]*3+j%3]+=e.K[i*e.n+j];
+    auto allocated=std::chrono::steady_clock::now();
+    double integration_ms=0,scatter_ms=0;
+    // Each batch owns bounded local matrices. Group local node occurrences by
+    // global node; each task exclusively owns its three matrix rows. Sorting by
+    // (node, element, local node) retains the original accumulation order.
+    const size_t batch=math::serial_assembly?256:2048;
+    for(size_t begin=0;begin<cells.size();begin+=batch){size_t count=std::min(batch,cells.size()-begin);std::vector<Local>locals(count);
+        auto tick=std::chrono::steady_clock::now();
+        math::parallel_for(count,[&](size_t i){locals[i]=integrate(m,cells[begin+i]);},cancel);
+        integration_ms+=std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now()-tick).count();tick=std::chrono::steady_clock::now();
+        math::nodal_scatter(count,[&](size_t e){return int(cells[begin+e].nodes.size());},
+            [&](size_t e,int i){return cells[begin+e].nodes[i];},
+            [&](size_t index,int local,int node){const auto&t=cells[begin+index];const auto&e=locals[index];
+                for(int axis=0;axis<3;++axis){int i=3*local+axis;auto&row=K[3*node+axis];
+                    for(int j=0;j<e.n;++j)row[t.nodes[j/3]*3+j%3]+=e.K[i*e.n+j];}
+            },cancel);
+        scatter_ms+=std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now()-tick).count();
     }
+    auto assembled=std::chrono::steady_clock::now();
     if(phase)phase->store(4);
-    auto linear=unicore::math::pcg(K,m.force,m.fixed,m.prescribed,cancel);
-    Result out;out.displacement=std::move(linear.x);out.reaction=std::move(linear.reaction);out.residual=linear.residual;out.iterations=linear.iterations;
+    auto linear=unicore::math::pcg(K,m.force,m.fixed,m.prescribed,cancel,nullptr,3);
+    Result out;out.element_preparation_ms=std::chrono::duration<double,std::milli>(prepared-start).count();out.pattern_container_ms=std::chrono::duration<double,std::milli>(allocated-prepared).count();out.preconditioner_ms=linear.preconditioner_ms;out.pcg_ms=linear.pcg_ms;out.linear_post_ms=linear.linear_post_ms;out.integration_ms=integration_ms;out.scatter_ms=scatter_ms;out.csr_ms=linear.csr_ms;out.constraint_ms=linear.constraint_ms;out.displacement=std::move(linear.x);out.reaction=std::move(linear.reaction);out.residual=linear.residual;out.iterations=linear.iterations;
+    out.linear_diagnostics.preconditioner_ms=linear.preconditioner_ms;out.linear_diagnostics.pcg_ms=linear.pcg_ms;out.linear_diagnostics.preconditioner=linear.preconditioner;out.linear_diagnostics.fallback=linear.fallback;out.linear_diagnostics.preconditioner_bytes=linear.preconditioner_bytes;out.linear_diagnostics.symmetry_ms=linear.symmetry_ms;out.linear_diagnostics.absolute_residual=linear.absolute_residual;
+    auto solved=std::chrono::steady_clock::now();
     if(phase)phase->store(5);
-    for(auto &t:cells) {
-        if(cancel.load())throw std::runtime_error("CANCELLED");
+    out.fields.resize(cells.size());
+    math::parallel_for(cells.size(),[&](size_t index){auto &t=cells[index];
         auto e=integrate(m,t); Field f;
         for(int i=0;i<6;++i)for(int j=0;j<e.n;++j)f.strain[i]+=e.B[i*e.n+j]*out.displacement[t.nodes[j/3]*3+j%3];
         for(int i=0;i<6;++i)for(int j=0;j<6;++j)f.stress[i]+=e.D[i][j]*f.strain[j];
         auto s=f.stress; f.von_mises=std::sqrt(0.5*((s[0]-s[1])*(s[0]-s[1])+(s[1]-s[2])*(s[1]-s[2])+(s[2]-s[0])*(s[2]-s[0]))+3*(s[3]*s[3]+s[4]*s[4]+s[5]*s[5]));
-        out.fields.push_back(f);
-    }
+        out.fields[index]=f;
+    },cancel);
+    out.assembly_ms=std::chrono::duration<double,std::milli>(assembled-start).count();out.solve_ms=std::chrono::duration<double,std::milli>(solved-assembled).count();out.post_ms=std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now()-solved).count();
     return out;
 }
 }

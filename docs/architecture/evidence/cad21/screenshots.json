@@ -1,0 +1,114 @@
+[
+  {
+    "path": "screenshots\\boolean-controls-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "18b5a66e5a14b0292621a58dbf17f3e4b37e9e3742f00e092d275b3b8f5b20f7",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\boolean-controls-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "5002dcd7451e809b990240084bd38a34826820fc9e166bf8639f6b9cd21d32ba",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\boolean-preview-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "3bce86b0a25d2c0bc3690be84ead4b5ea7f173f62b8fbe2ae8f2d8eef462395f",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\boolean-preview-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "127cb1fba88610b836511a1cced525cf60037ee0a93bdb6de22ae40ee1b5d771",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\boolean-solid-operation-tree-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "6fa075a496ad6d4bd08e84367dc9637e71bfbb31205b0c501d69901b365b0b61",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\boolean-solid-operation-tree-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "63ea1fe7eaadc51b375a28d371efad34548d72d474afda5d52c2abdd19e66574",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\boolean-tet4-mesh-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "742b2b72330b4001f05dace61f3ae6390e46c4beb9d3740e5c8d546127ff9aeb",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\boolean-tet4-mesh-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "ac323abf7f5727659f4c28558b89ab9a58433385265e6e81b9b95e821bd04505",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\calculix-displacement-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "04d945717b586a7930ff26bf4c6343854f9795fb1df7ccdd9c5057989d50c92f",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\calculix-displacement-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "7516bde08a891b7bc2e08756174707f4965d258ec3cf971d276bbf81d8693e15",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\calculix-von-mises-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "de89dbe97fd027fe2cd559828189d93dc2d1875bc79b600a6a39b38a8530b61e",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\calculix-von-mises-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "74c21c69032475051d833732446b6ac77077a2475b70b53b621855696cf02637",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\edit-cylinder-feature-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "a57e4bee813dd2d8c0723334413760972e2e988e4453b47517645ce666d0c5be",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\edit-cylinder-feature-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "ab4d3d03f2ed122fa6acfcbf82ed72fc19a74d48f32a5d9662d1e8226d3c6294",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\selected-cad-face-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "c64c1a0b1f356ffc6e748f1f4e7632da4d426e2a92e08d16300dfe944acc29d9",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\selected-cad-face-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "21fc14410d76b3a5ddc0c99352156534266f7d7f45244cd25df21580e7b502d4",
+    "outcome": "PASS"
+  }
+]

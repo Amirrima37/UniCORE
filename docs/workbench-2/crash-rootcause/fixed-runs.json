@@ -1,0 +1,42 @@
+[
+  {
+    "run": 0,
+    "exit": 0,
+    "summary": true,
+    "script_error": false,
+    "native_errors": 7,
+    "seconds": 9.256922199994733
+  },
+  {
+    "run": 1,
+    "exit": 0,
+    "summary": true,
+    "script_error": false,
+    "native_errors": 9,
+    "seconds": 8.003932300001907
+  },
+  {
+    "run": 2,
+    "exit": 0,
+    "summary": true,
+    "script_error": false,
+    "native_errors": 9,
+    "seconds": 7.100547399997595
+  },
+  {
+    "run": 3,
+    "exit": 0,
+    "summary": true,
+    "script_error": false,
+    "native_errors": 9,
+    "seconds": 6.715394200000446
+  },
+  {
+    "run": 4,
+    "exit": 0,
+    "summary": true,
+    "script_error": false,
+    "native_errors": 9,
+    "seconds": 7.028014000003168
+  }
+]

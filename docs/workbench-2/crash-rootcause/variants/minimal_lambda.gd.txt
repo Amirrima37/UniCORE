@@ -1,0 +1,13 @@
+extends SceneTree
+func _init():
+ var bus=load("res://core/event_bus.gd").new()
+ root.add_child(bus)
+ var listener=load("res://.tools/crash-isolation/listener.gd").new()
+ root.add_child(listener)
+ listener.register(bus)
+ listener.free()
+ print("BEFORE invalid-listener inspection")
+ bus.unsubscribe_all_for_target(self)
+ print("AFTER invalid-listener inspection")
+ bus.queue_free()
+ quit(0)

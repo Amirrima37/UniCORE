@@ -1,0 +1,7 @@
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+ERROR: bending CalculiX: CalculiX failed/cancelled/timed out: { "state": "failed", "exit_code": 1.0, "error": "[WinError 2] Не удается найти указанный файл: \'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\calculix_jobs\\\\117851276\\\\model.dat\'", "seconds": 0.14759550000599, "started_utc": "2026-11-13T23:08:18.711908+00:00", "ended_utc": "2026-11-13T23:08:18.859502+00:00", "peak_working_set_bytes": 6443008.0, "peak_memory_bytes": 10997760.0, "job_object": true }. Inspect C:/Users/Victus/Desktop/UniCORE-main/.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/117851276/stdout.txt, stderr.txt and launcher-error.txt; check the executable and model, then retry.
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] fail (res://tests/cad23_numerical.gd:5)
+       [1] _initialize (res://tests/cad23_numerical.gd:58)

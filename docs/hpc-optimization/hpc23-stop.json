@@ -1,0 +1,17 @@
+{
+  "reason": "User stopped large benchmark campaign",
+  "completed_measurements": 25,
+  "snapshot": "hpc23-large-stopped.json",
+  "cancelled_configuration": {
+    "workload": "thermal-large-62",
+    "requested": "block-jacobi",
+    "threads": 4,
+    "output": ".tools/hpc23-bench/thermal-large-62/block-jacobi-0",
+    "status": {
+      "state": "Cancelled",
+      "error": "CANCELLED"
+    }
+  },
+  "force_killed": false,
+  "remaining_large_cases": "Not run; no automatic resumption"
+}

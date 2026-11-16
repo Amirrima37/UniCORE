@@ -1,0 +1,4 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CAD24_EXPECTED_ERROR CAD operation cancelled/failed/timed out: { "state": "cancelled", "exit_code": 1.0, "error": "", "job_object": true, "seconds": 2.78686120000202, "peak_process_memory_bytes": 662630400.0, "peak_job_memory_bytes": 663896064.0, "memory_limit_bytes": 805306368.0 }. Logs: C:/Users/Victus/Desktop/UniCORE-main/.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry/19988_645229_3fd766fe8d48d244
+CAD24_FAILURE_RECOVERY_PASS heartbeat=1642

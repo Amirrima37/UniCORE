@@ -1,0 +1,98 @@
+[
+  {
+    "path": "docs\\workbench-2\\stage6-final\\cylinder-displacement-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "2ae53a9eda5abcc251206c54db439f73c46d7c9726fba1d91e3552578cf5834b"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\cylinder-displacement-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "1266950d79fc06934bc9c5560dd1fd110aa28a8a7078d15987ad550457beb131"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\cylinder-heat_flux-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "cd2e739a83c37372bd05438f4a025a94e2bbce07eac69dd003de5ea54ebce2b1"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\cylinder-heat_flux-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "914a21137caec6f185db875310aa7494a1b58738e12378325182a9f615e411ab"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\cylinder-temperature-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "a1599eded5477590de0799d0680463e00baed0d5c821f85fad2f41cb3aa6c3a6"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\cylinder-temperature-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "7acd8e3d7c016f7e67a767a9be87c7d829cdea2f09fa398cece7f7fe56225713"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\cylinder-von_mises-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "3030ed61a0d1c2d2cd6c6f1a8c740c3c8334d06cf5fed7d227b2fcff3790ffab"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\cylinder-von_mises-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "4359a8198bc8c5962d570a681bdc4225b8152623cf49fc5031dc11c459ee8db0"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\refreshed\\stage6-ui-Pipe-static_structural-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "6337e89fd66275f8e4f4b3eb9610541a0e5a82e4792b0b45e3589564652db8b6"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\refreshed\\stage6-ui-Pipe-static_structural-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "490fc003ea7b70d08a887a116d811af7345cf675a1e708e56695d17d91929678"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\refreshed\\stage6-ui-Pipe-steady_thermal-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "4650ed1f5532857e40392048df86cf4db197c953b889218d3e3945ae02d64cc1"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\refreshed\\stage6-ui-Pipe-steady_thermal-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "e76804f99269d9117c9c1ebbafbd5d57fddb20274fc406fa4167b9fce6e8cbad"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\refreshed\\stage6-ui-Sphere-static_structural-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "8a969c0414a8392be580c423264c840ea84c781249a428bd898c678734b0e49b"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\refreshed\\stage6-ui-Sphere-static_structural-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "59e9e089317c747fbbded7a7c0ad0197a42041c0b257c0e191f8e420963ac4ad"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\refreshed\\stage6-ui-Sphere-steady_thermal-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "8f7f3e0a6c142d48adbcd9b3012f4ad48fd26dfc7525d1acd3824fbae88cd320"
+  },
+  {
+    "path": "docs\\workbench-2\\stage6-final\\refreshed\\stage6-ui-Sphere-steady_thermal-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "a3543ad3b73252d120f1e02f3d37f7d665b372017b1267f509d27d310257a126"
+  }
+]

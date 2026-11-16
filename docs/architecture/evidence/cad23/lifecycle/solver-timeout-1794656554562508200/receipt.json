@@ -1,0 +1,1 @@
+{"state": "timeout", "exit_code": 1, "error": "", "seconds": 0.23510259999602567, "started_utc": "2026-11-14T11:42:35.892060+00:00", "ended_utc": "2026-11-14T11:42:36.127162+00:00", "peak_working_set_bytes": 2850816, "peak_memory_bytes": 499712, "job_object": true}

@@ -1,0 +1,17 @@
+[
+  {
+    "test": "persistence",
+    "outcome": "FAIL",
+    "exit_code": 1,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad23_persistence.gd"
+    ],
+    "seconds": 2.612349800008815,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\persistence-1794611785349709300"
+  }
+]

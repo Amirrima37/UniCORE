@@ -1,0 +1,47 @@
+[
+  {
+    "dof": 1331,
+    "elements": 6000,
+    "threads": 1,
+    "wall_s": 0.1945111000095494,
+    "mesh_write_s": 0.012268000005860813,
+    "temperature_error": 3.0710680221091025e-08,
+    "flux_error": 1.8873288354370743e-07,
+    "assembly_ms": 4.697,
+    "solve_ms": 3.8476,
+    "post_ms": 0.13,
+    "peak_working_set_bytes": 7806976,
+    "residual": 7.174768938191247e-11,
+    "iterations": 52
+  },
+  {
+    "dof": 1331,
+    "elements": 6000,
+    "threads": 2,
+    "wall_s": 0.18723579999641515,
+    "mesh_write_s": 0.012268000005860813,
+    "temperature_error": 3.0710680221091025e-08,
+    "flux_error": 1.8873288354370743e-07,
+    "assembly_ms": 4.0391,
+    "solve_ms": 3.453,
+    "post_ms": 0.1246,
+    "peak_working_set_bytes": 7831552,
+    "residual": 7.174768938191247e-11,
+    "iterations": 52
+  },
+  {
+    "dof": 1331,
+    "elements": 6000,
+    "threads": 4,
+    "wall_s": 0.20052929999656044,
+    "mesh_write_s": 0.012268000005860813,
+    "temperature_error": 3.0710680221091025e-08,
+    "flux_error": 1.8873288354370743e-07,
+    "assembly_ms": 4.0471,
+    "solve_ms": 4.5395,
+    "post_ms": 0.1608,
+    "peak_working_set_bytes": 7815168,
+    "residual": 7.174768938191247e-11,
+    "iterations": 52
+  }
+]

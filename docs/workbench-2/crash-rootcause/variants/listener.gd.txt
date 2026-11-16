@@ -1,0 +1,7 @@
+extends Node
+func register(bus):
+ bus.subscribe("x",func(_d): print(name))
+func register_bound(bus):
+ bus.subscribe("x",on_event)
+func on_event(_d):
+ print(name)

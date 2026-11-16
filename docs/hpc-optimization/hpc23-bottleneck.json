@@ -1,0 +1,16 @@
+[
+  {
+    "workload": "thermal-large-46",
+    "requested": "jacobi",
+    "selected": "jacobi",
+    "threads": 4,
+    "wall_s": 709.0524653999892,
+    "cpu_s": 46.765625,
+    "average_busy_cores": 0.06595509822198936,
+    "parse_and_model_ms": 700744.6902,
+    "linear_solve_ms": 1555.0516,
+    "iterations": 229,
+    "residual": 9.045384574951043e-11,
+    "interpretation": "Long off-CPU stall during parsing/model construction; I/O, scheduling and process suspension not distinguished"
+  }
+]

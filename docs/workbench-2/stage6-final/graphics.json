@@ -1,0 +1,91 @@
+[
+  {
+    "name": "test_stage6_workbench",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64.exe",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/test_stage6_workbench.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 38.97,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_workbench.log",
+    "diagnostics": [],
+    "assertions": [
+      "Region element/node ownership PASS Cylinder",
+      "Region element/node ownership PASS Cylinder",
+      "Cylinder static_structural UI PASS",
+      "Region element/node ownership PASS Cylinder",
+      "Region element/node ownership PASS Cylinder",
+      "Cylinder steady_thermal UI PASS",
+      "Region element/node ownership PASS Sphere",
+      "Region element/node ownership PASS Sphere",
+      "Sphere static_structural UI PASS",
+      "Region element/node ownership PASS Sphere",
+      "Region element/node ownership PASS Sphere",
+      "Sphere steady_thermal UI PASS",
+      "Region element/node ownership PASS Pipe",
+      "Region element/node ownership PASS Pipe",
+      "Pipe static_structural UI PASS",
+      "Region element/node ownership PASS Pipe",
+      "Region element/node ownership PASS Pipe",
+      "Pipe steady_thermal UI PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage6_load_persistence",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/test_stage6_load_persistence.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 6.986,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_load_persistence.log",
+    "diagnostics": [
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0"
+    ],
+    "assertions": [
+      "Pipe steady_thermal load/BC edit persistence PASS",
+      "Pipe static_structural load/BC edit persistence PASS",
+      "Sphere steady_thermal load/BC edit persistence PASS",
+      "Sphere static_structural load/BC edit persistence PASS",
+      "Cylinder steady_thermal load/BC edit persistence PASS",
+      "Cylinder static_structural load/BC edit persistence PASS"
+    ],
+    "passed": true
+  }
+]

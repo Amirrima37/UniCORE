@@ -1,6 +1,9 @@
 extends SceneTree
 
-func _init() -> void:
+func _initialize() -> void:
+	call_deferred("_run")
+
+func _run() -> void:
 	print("\n=== [TEST] PHYSICS FEATURES & INTERACTION AUDIT ===")
 	var counters: Array[int] = [0, 0] # [passed, failed]
 	var assert_fn := func(cond: bool, test_name: String) -> void:

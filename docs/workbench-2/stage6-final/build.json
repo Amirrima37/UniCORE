@@ -1,0 +1,81 @@
+[
+  {
+    "name": "compiler",
+    "command": [
+      "C:/Qt/Tools/mingw1310_64/bin/x86_64-w64-mingw32-g++.exe",
+      "--version"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 0.047,
+    "log": "docs\\workbench-2\\stage6-final\\compiler.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": true
+  },
+  {
+    "name": "build-release",
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "native/extreme/build.ps1"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 27.829,
+    "log": "docs\\workbench-2\\stage6-final\\build-release.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": true,
+    "binary": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+    "bytes": 3430727,
+    "sha256": "aae5a2dae05bdaf4bb28fc91c8249aa7ed508e453ddfe18e16d141d9fc79af57"
+  },
+  {
+    "name": "build-debug",
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "native/extreme/build.ps1",
+      "-Debug"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 16.12,
+    "log": "docs\\workbench-2\\stage6-final\\build-debug.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": true,
+    "binary": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug.exe",
+    "bytes": 7555161,
+    "sha256": "d995e56325cbc5de775109288304c80ee00808f7797e2a089c1cc93469faed9b"
+  },
+  {
+    "name": "build-noomp",
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "native/extreme/build.ps1",
+      "-NoOpenMP"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 18.158,
+    "log": "docs\\workbench-2\\stage6-final\\build-noomp.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": true,
+    "binary": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_noomp.exe",
+    "bytes": 3233654,
+    "sha256": "224e8007fa4fe6ac76d0ab8da7d436ebf1eece1433c1e272ea97520a5a0a6a5d"
+  }
+]

@@ -1,0 +1,379 @@
+﻿
+
+TimeCreated : 11.11.2026 20:44:13
+Id          : 1000
+Message     : Имя сбойного приложения: Godot_v4.0-stable_win64.exe, версия: 4.0.0.0, метка времени: 0x00000000
+              Имя сбойного модуля: Godot_v4.0-stable_win64.exe, версия: 4.0.0.0, метка времени: 0x00000000
+              Код исключения: 0xc0000005
+              Смещение ошибки: 0x0000000000518504
+              Идентификатор сбойного процесса: 0x1038
+              Время запуска сбойного приложения: 0x1DD72043EAC81FC
+              Путь сбойного приложения: C:\Users\Victus\Desktop\UniCORE-main\.tools\godot\Godot_v4.0-stable_win64.exe
+              Путь сбойного модуля: C:\Users\Victus\Desktop\UniCORE-main\.tools\godot\Godot_v4.0-stable_win64.exe
+              Идентификатор отчета: a90dda7f-2bf0-470e-b8e8-df4800ceb53e
+              Полное имя сбойного пакета: 
+              Код приложения, связанного со сбойным пакетом: 
+
+TimeCreated : 11.11.2026 20:29:46
+Id          : 1001
+Message     : Контейнер ошибки 1916493199399336857, тип 4
+              Имя события: APPCRASH
+              Отклик: Нет данных
+              Идентификатор CAB: 0
+              
+              Сигнатура проблемы:
+              P1: Godot_v4.0-stable_win64.exe
+              P2: 4.0.0.0
+              P3: 00000000
+              P4: Godot_v4.0-stable_win64.exe
+              P5: 4.0.0.0
+              P6: 00000000
+              P7: c0000005
+              P8: 0000000000518504
+              P9: 
+              P10: 
+              
+              Вложенные файлы:
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.c865ff65-a6fe-412c-bdf8-6944df4e56af.tmp.dmp
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.92854c83-8cc5-4412-ba8a-fde2ba4b799b.tmp.WERInternalMet
+              adata.xml
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.2563abfd-2e5a-48e7-b49c-b93011c6203d.tmp.csv
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.1bb65450-e4f9-434d-80e0-2ae81a0bd9cd.tmp.txt
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.32245dbf-c655-4d9f-ba54-f59d65da837b.tmp.xml
+              
+              Эти файлы можно найти здесь:
+              \\?\C:\ProgramData\Microsoft\Windows\WER\ReportArchive\AppCrash_Godot_v4.0-stabl_c1d98a5e441bea86d5b773ea
+              9237c768d750711_0bf23dce_27984f4e-bbe3-4be0-a522-4ccb7edc075d
+              
+              Символ анализа: 
+              Повторный поиск решения: 0
+              Идентификатор отчета: fc00730f-b79b-4367-8910-5599bbf8f4f1
+              Состояние отчета: 268435456
+              Хэшированный контейнер: a653263605dfb1892a98c0692ca63b99
+              Идентификатор GUID CAB: 0
+
+TimeCreated : 11.11.2026 20:29:42
+Id          : 1000
+Message     : Имя сбойного приложения: Godot_v4.0-stable_win64.exe, версия: 4.0.0.0, метка времени: 0x00000000
+              Имя сбойного модуля: Godot_v4.0-stable_win64.exe, версия: 4.0.0.0, метка времени: 0x00000000
+              Код исключения: 0xc0000005
+              Смещение ошибки: 0x0000000000518504
+              Идентификатор сбойного процесса: 0x538C
+              Время запуска сбойного приложения: 0x1DD7202360E73D0
+              Путь сбойного приложения: C:\Users\Victus\Desktop\UniCORE-main\.tools\godot\Godot_v4.0-stable_win64.exe
+              Путь сбойного модуля: C:\Users\Victus\Desktop\UniCORE-main\.tools\godot\Godot_v4.0-stable_win64.exe
+              Идентификатор отчета: fc00730f-b79b-4367-8910-5599bbf8f4f1
+              Полное имя сбойного пакета: 
+              Код приложения, связанного со сбойным пакетом: 
+
+TimeCreated : 11.11.2026 19:43:28
+Id          : 1001
+Message     : Контейнер ошибки 1916493199399336857, тип 4
+              Имя события: APPCRASH
+              Отклик: Нет данных
+              Идентификатор CAB: 0
+              
+              Сигнатура проблемы:
+              P1: Godot_v4.0-stable_win64.exe
+              P2: 4.0.0.0
+              P3: 00000000
+              P4: Godot_v4.0-stable_win64.exe
+              P5: 4.0.0.0
+              P6: 00000000
+              P7: c0000005
+              P8: 0000000000518504
+              P9: 
+              P10: 
+              
+              Вложенные файлы:
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.b4c9daa4-6dda-42b4-8fa7-9cfb52b0a0a0.tmp.dmp
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.912af4ba-eb26-4f0b-8633-75658960bf4e.tmp.WERInternalMet
+              adata.xml
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.0d503647-9be2-4fb7-a428-79a4febce9de.tmp.csv
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.4931968a-d60f-453a-b6eb-019fb9ddee2e.tmp.txt
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.f1cda30a-7cf3-4f42-bc66-cb6e52ecd4b7.tmp.xml
+              
+              Эти файлы можно найти здесь:
+              \\?\C:\ProgramData\Microsoft\Windows\WER\ReportArchive\AppCrash_Godot_v4.0-stabl_c1d98a5e441bea86d5b773ea
+              9237c768d750711_0bf23dce_40858e3a-fcbb-424e-b099-759a4a559f67
+              
+              Символ анализа: 
+              Повторный поиск решения: 0
+              Идентификатор отчета: 63a08494-b188-416c-966e-34a331283623
+              Состояние отчета: 268435456
+              Хэшированный контейнер: a653263605dfb1892a98c0692ca63b99
+              Идентификатор GUID CAB: 0
+
+TimeCreated : 11.11.2026 19:43:25
+Id          : 1000
+Message     : Имя сбойного приложения: Godot_v4.0-stable_win64.exe, версия: 4.0.0.0, метка времени: 0x00000000
+              Имя сбойного модуля: Godot_v4.0-stable_win64.exe, версия: 4.0.0.0, метка времени: 0x00000000
+              Код исключения: 0xc0000005
+              Смещение ошибки: 0x0000000000518504
+              Идентификатор сбойного процесса: 0x4294
+              Время запуска сбойного приложения: 0x1DD71FBC009F009
+              Путь сбойного приложения: C:\Users\Victus\Desktop\UniCORE-main\.tools\godot\Godot_v4.0-stable_win64.exe
+              Путь сбойного модуля: C:\Users\Victus\Desktop\UniCORE-main\.tools\godot\Godot_v4.0-stable_win64.exe
+              Идентификатор отчета: 63a08494-b188-416c-966e-34a331283623
+              Полное имя сбойного пакета: 
+              Код приложения, связанного со сбойным пакетом: 
+
+TimeCreated : 11.11.2026 19:42:25
+Id          : 1001
+Message     : Контейнер ошибки , тип 0
+              Имя события: BlueScreen
+              Отклик: Нет данных
+              Идентификатор CAB: 0
+              
+              Сигнатура проблемы:
+              P1: 20001
+              P2: 11
+              P3: 7b003958f0
+              P4: 1007
+              P5: ffffe800008c4f00
+              P6: 10_0_26300
+              P7: 0_0
+              P8: 768_1
+              P9: 
+              P10: 
+              
+              Вложенные файлы:
+              \\?\C:\WINDOWS\Minidump\100926-33015-01.dmp
+              \\?\C:\WINDOWS\SystemTemp\WER-33031-0.sysdata.xml
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.fcfcc915-b836-4a2d-a1ba-0ed4f07a22b3.tmp.xml
+              
+              Эти файлы можно найти здесь:
+              \\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_20001_7eba3fd7112bacb3f988799688d01e96b18f40_
+              00000000_42bd121c-1c3b-45a4-9f33-267c72410cb1
+              
+              Символ анализа: 
+              Повторный поиск решения: 0
+              Идентификатор отчета: 117f8f38-0721-4b14-b941-5efc92d5dc15
+              Состояние отчета: 2051
+              Хэшированный контейнер: 
+              Идентификатор GUID CAB: 0
+
+TimeCreated : 11.11.2026 19:42:25
+Id          : 1001
+Message     : Контейнер ошибки , тип 0
+              Имя события: LiveKernelEvent
+              Отклик: Нет данных
+              Идентификатор CAB: 0
+              
+              Сигнатура проблемы:
+              P1: 1b8
+              P2: aaaaaaaaaaaaaaaa
+              P3: aaaaaaaaaaaaaaaa
+              P4: aaaaaaaaaaaaaaaa
+              P5: aaaaaaaaaaaaaaaa
+              P6: 10_0_26300
+              P7: 0_0
+              P8: 768_1
+              P9: 
+              P10: 
+              
+              Вложенные файлы:
+              \\?\C:\WINDOWS\LiveKernelReports\WATCHDOG4400\WATCHDOG4400-20261001-2243.dmp
+              \\?\C:\WINDOWS\SystemTemp\WER-450562-1.sysdata.xml
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.98ae5264-fcd7-4010-bf5a-48d506b77624.tmp.xml
+              
+              Эти файлы можно найти здесь:
+              \\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_1b8_223a757f742e4da59965c650e8299adbc58d3640_
+              00000000_ac8005cc-81ab-4e17-b5cc-2e84be0ba497
+              
+              Символ анализа: 
+              Повторный поиск решения: 0
+              Идентификатор отчета: ac8005cc-81ab-4e17-b5cc-2e84be0ba497
+              Состояние отчета: 2051
+              Хэшированный контейнер: 
+              Идентификатор GUID CAB: 0
+
+TimeCreated : 11.11.2026 19:42:25
+Id          : 1001
+Message     : Контейнер ошибки , тип 0
+              Имя события: LiveKernelEvent
+              Отклик: Нет данных
+              Идентификатор CAB: 0
+              
+              Сигнатура проблемы:
+              P1: 1a8
+              P2: aaaaaaaaaaaaaaaa
+              P3: aaaaaaaaaaaaaaaa
+              P4: aaaaaaaaaaaaaaaa
+              P5: aaaaaaaaaaaaaaaa
+              P6: 10_0_26300
+              P7: 0_0
+              P8: 768_1
+              P9: 
+              P10: 
+              
+              Вложенные файлы:
+              \\?\C:\WINDOWS\LiveKernelReports\WATCHDOG\WATCHDOG-20261001-2243.dmp
+              \\?\C:\WINDOWS\SystemTemp\WER-450453-0.sysdata.xml
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.1b3d3631-5c0f-43e4-bbfc-cb4dc09df29b.tmp.xml
+              
+              Эти файлы можно найти здесь:
+              \\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_1a8_9ca6236ef17de751cc1fe3c2ddda38da343c1d28_
+              00000000_9618e5ee-838e-457c-8d7f-adf1f4379dd9
+              
+              Символ анализа: 
+              Повторный поиск решения: 0
+              Идентификатор отчета: 9618e5ee-838e-457c-8d7f-adf1f4379dd9
+              Состояние отчета: 2051
+              Хэшированный контейнер: 
+              Идентификатор GUID CAB: 0
+
+TimeCreated : 11.11.2026 19:42:25
+Id          : 1001
+Message     : Контейнер ошибки , тип 0
+              Имя события: BlueScreen
+              Отклик: Нет данных
+              Идентификатор CAB: 0
+              
+              Сигнатура проблемы:
+              P1: 139
+              P2: a
+              P3: 0
+              P4: 0
+              P5: fffff80093814a10
+              P6: 10_0_26200
+              P7: 0_0
+              P8: 768_1
+              P9: 
+              P10: 
+              
+              Вложенные файлы:
+              \\?\C:\WINDOWS\Minidump\092426-25906-01.dmp
+              \\?\C:\WINDOWS\SystemTemp\WER-25906-0.sysdata.xml
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.8b7f6532-3f96-449e-a74f-a2f76323ad89.tmp.xml
+              
+              Эти файлы можно найти здесь:
+              \\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_139_10f6a339be83164bd3f720575ed83c5bb2c0dc88_
+              00000000_8fef971b-cfa0-4870-b669-3e2be1009933
+              
+              Символ анализа: 
+              Повторный поиск решения: 0
+              Идентификатор отчета: 0ab9d107-673e-4784-92d1-0fce4227602f
+              Состояние отчета: 2051
+              Хэшированный контейнер: 
+              Идентификатор GUID CAB: 0
+
+TimeCreated : 11.11.2026 19:42:25
+Id          : 1001
+Message     : Контейнер ошибки , тип 0
+              Имя события: LiveKernelEvent
+              Отклик: Нет данных
+              Идентификатор CAB: 0
+              
+              Сигнатура проблемы:
+              P1: 141
+              P2: ffffd583c775e010
+              P3: fffff8026cc3a790
+              P4: 0
+              P5: ffffd583c7d1c080
+              P6: 10_0_26200
+              P7: 0_0
+              P8: 768_1
+              P9: 
+              P10: 
+              
+              Вложенные файлы:
+              \\?\C:\WINDOWS\LiveKernelReports\WATCHDOG\WATCHDOG-20251113-1355.dmp
+              \\?\C:\WINDOWS\SystemTemp\WER-8619890-0.sysdata.xml
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.4894f505-6be3-4ebe-848c-66e2789b1cc9.tmp.WERInternalMet
+              adata.xml
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.cd78d383-94fe-4f29-9df1-8e434d16fef9.tmp.csv
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.e119e082-6344-47ec-801d-0c2201c64297.tmp.txt
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.d0f99ff6-3cbb-4cd2-b10d-ffe17387a9fb.tmp.xml
+              
+              Эти файлы можно найти здесь:
+              \\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_141_20f0d13463903f44bd78d8b25ed12ab89b733654_
+              00000000_6c3746ef-25c8-4496-bfc5-f849e850889d
+              
+              Символ анализа: 
+              Повторный поиск решения: 0
+              Идентификатор отчета: 6c3746ef-25c8-4496-bfc5-f849e850889d
+              Состояние отчета: 2051
+              Хэшированный контейнер: 
+              Идентификатор GUID CAB: 0
+
+TimeCreated : 11.11.2026 19:42:25
+Id          : 1001
+Message     : Контейнер ошибки , тип 0
+              Имя события: LiveKernelEvent
+              Отклик: Нет данных
+              Идентификатор CAB: 0
+              
+              Сигнатура проблемы:
+              P1: 141
+              P2: ffffd583ca693050
+              P3: fffff8026cc3a790
+              P4: 0
+              P5: ffffd583c93e7080
+              P6: 10_0_26200
+              P7: 0_0
+              P8: 768_1
+              P9: 
+              P10: 
+              
+              Вложенные файлы:
+              \\?\C:\WINDOWS\LiveKernelReports\WATCHDOG\WATCHDOG-20251113-1349.dmp
+              \\?\C:\WINDOWS\SystemTemp\WER-8243031-0.sysdata.xml
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.7cfdad2d-3a0a-4ce0-83e2-426bd6f3cb1c.tmp.WERInternalMet
+              adata.xml
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.b3863882-d26a-46d3-9bd5-d3f4a1750f4c.tmp.csv
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.3fd892b0-b4b9-411b-98aa-85ae87a43778.tmp.txt
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.4d4602d9-7a6d-4293-94ab-84475fca4df1.tmp.xml
+              
+              Эти файлы можно найти здесь:
+              \\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_141_85dda2e9e4558e90b3c129655f1f6b24f4b0601a_
+              00000000_bf2361cd-fda9-4856-a4d5-ebe74fa1023e
+              
+              Символ анализа: 
+              Повторный поиск решения: 0
+              Идентификатор отчета: bf2361cd-fda9-4856-a4d5-ebe74fa1023e
+              Состояние отчета: 2051
+              Хэшированный контейнер: 
+              Идентификатор GUID CAB: 0
+
+TimeCreated : 11.11.2026 19:42:25
+Id          : 1001
+Message     : Контейнер ошибки , тип 0
+              Имя события: LiveKernelEvent
+              Отклик: Нет данных
+              Идентификатор CAB: 0
+              
+              Сигнатура проблемы:
+              P1: 141
+              P2: ffffd583c9262010
+              P3: fffff8026cc3a790
+              P4: 0
+              P5: ffffd583c92d5080
+              P6: 10_0_26200
+              P7: 0_0
+              P8: 768_1
+              P9: 
+              P10: 
+              
+              Вложенные файлы:
+              \\?\C:\WINDOWS\LiveKernelReports\WATCHDOG\WATCHDOG-20251113-1341.dmp
+              \\?\C:\WINDOWS\SystemTemp\WER-7756046-0.sysdata.xml
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.6ecfecc7-76e2-43c0-aed3-d19b90e5c0df.tmp.WERInternalMet
+              adata.xml
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.d9920558-d2cb-4829-a3bb-017e8f94b367.tmp.csv
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.7cd4e11b-0794-4640-8638-30605833e716.tmp.txt
+              \\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.5db0a533-4822-48e4-9fd2-fe88fd392393.tmp.xml
+              
+              Эти файлы можно найти здесь:
+              \\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_141_bc6cd454e3900475de4fc6dee36d36d7b14604c_0
+              0000000_b6986477-98aa-46f7-beb1-5b277c4cf212
+              
+              Символ анализа: 
+              Повторный поиск решения: 0
+              Идентификатор отчета: b6986477-98aa-46f7-beb1-5b277c4cf212
+              Состояние отчета: 2051
+              Хэшированный контейнер: 
+              Идентификатор GUID CAB: 0
+
+
+

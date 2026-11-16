@@ -1,0 +1,1 @@
+{"state": "failed", "exit_code": null, "error": "Gmsh request exceeds 128 MiB", "seconds": 0.0032140999974217266, "peak_memory_bytes": 0, "job_object": false}

@@ -1,0 +1,2 @@
+ERROR: Native molecular step rejected; particle state unchanged
+   at: push_error (core/variant/variant_utility.cpp:894)

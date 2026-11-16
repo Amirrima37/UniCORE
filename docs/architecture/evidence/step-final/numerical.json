@@ -1,0 +1,578 @@
+[
+  {
+    "E_Pa": 210000000000.0,
+    "bending": false,
+    "cad_bounds_m": [
+      -1e-07,
+      -1e-07,
+      -1e-07,
+      0.1000001,
+      1.0000001,
+      0.1000001
+    ],
+    "fixture": "bar",
+    "job": "C:/Users/Victus/Desktop/UniCORE-main/.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/3255384",
+    "load_area_m2": 0.01,
+    "load_face": "CAD_36edf72004a6e1cd_face_4",
+    "maximum_displacement_m": 4.7619050747016445e-07,
+    "maximum_von_mises_Pa": 100000.00061557711,
+    "mesh_provenance": {
+      "cad_face_areas": {
+        "CAD_36edf72004a6e1cd_face_1": 0.1,
+        "CAD_36edf72004a6e1cd_face_2": 0.1,
+        "CAD_36edf72004a6e1cd_face_3": 0.01,
+        "CAD_36edf72004a6e1cd_face_4": 0.01,
+        "CAD_36edf72004a6e1cd_face_5": 0.1,
+        "CAD_36edf72004a6e1cd_face_6": 0.1
+      },
+      "cad_sha256": "36edf72004a6e1cda34caeca55fdf2e5e143cd432ad44f4d848f9e2420464c56",
+      "cad_volume": 0.01,
+      "gmsh": "4.15.2",
+      "mesh_volume": 0.00999999999999998,
+      "size": 0.07,
+      "source_to_m": 0.001,
+      "source_units": "mm",
+      "threads": 1.0
+    },
+    "minimum_jacobian": 5.8593749999999686e-05,
+    "minimum_mean_ratio": 0.620132462737397,
+    "nodes": 140,
+    "nu": 0.0,
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "eb2e304ea101f9a6de5ee1a41529dc9f3d54ce5702bf450194568ba9f46a46c2",
+      "input_sha256": "a14101f56f88410e194801d54f325a76d4b3252d77f12c443ad074642f56e008",
+      "schema": 1
+    },
+    "reaction_relative_imbalance": 1.9999999494757503e-08,
+    "reactions_N": [
+      3.999999998628107e-13,
+      -999.9999799999999,
+      -3.2999999970814783e-13
+    ],
+    "reference_m": 4.761904761904762e-07,
+    "relative_error": 4.999999969612645e-08,
+    "size_m": 0.07,
+    "support": "CAD_36edf72004a6e1cd_face_3",
+    "support_area_m2": 0.01,
+    "tet4": 307,
+    "tip_mean_m": 4.761904999999999e-07,
+    "total_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "wall_solve_s": 1.234
+  },
+  {
+    "E_Pa": 210000000000.0,
+    "bending": false,
+    "cad_bounds_m": [
+      -1e-07,
+      -1e-07,
+      -1e-07,
+      0.1000001,
+      1.0000001,
+      0.1000001
+    ],
+    "fixture": "bar",
+    "job": "C:/Users/Victus/Desktop/UniCORE-main/.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/5535116",
+    "load_area_m2": 0.01,
+    "load_face": "CAD_36edf72004a6e1cd_face_4",
+    "maximum_displacement_m": 4.7619050747016445e-07,
+    "maximum_von_mises_Pa": 100000.00117240753,
+    "mesh_provenance": {
+      "cad_face_areas": {
+        "CAD_36edf72004a6e1cd_face_1": 0.1,
+        "CAD_36edf72004a6e1cd_face_2": 0.1,
+        "CAD_36edf72004a6e1cd_face_3": 0.01,
+        "CAD_36edf72004a6e1cd_face_4": 0.01,
+        "CAD_36edf72004a6e1cd_face_5": 0.1,
+        "CAD_36edf72004a6e1cd_face_6": 0.1
+      },
+      "cad_sha256": "36edf72004a6e1cda34caeca55fdf2e5e143cd432ad44f4d848f9e2420464c56",
+      "cad_volume": 0.01,
+      "gmsh": "4.15.2",
+      "mesh_volume": 0.00999999999999999,
+      "size": 0.05,
+      "source_to_m": 0.001,
+      "source_units": "mm",
+      "threads": 1.0
+    },
+    "minimum_jacobian": 2.8221502852854767e-05,
+    "minimum_mean_ratio": 0.4330555772678096,
+    "nodes": 190,
+    "nu": 0.0,
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "9a014f372f284ed4958de933ea7f3319a716b40edeb631f75c978da9318a0466",
+      "input_sha256": "d100f3dbd25b9257ff94c3c4f37138ee62498336d450b9eca1e6fb49764574ad",
+      "schema": 1
+    },
+    "reaction_relative_imbalance": 1.9999999494757503e-08,
+    "reactions_N": [
+      1.100000000152125e-13,
+      -999.9999800000002,
+      3.1460000000234726e-12
+    ],
+    "reference_m": 4.761904761904762e-07,
+    "relative_error": 4.999999969612645e-08,
+    "size_m": 0.05,
+    "support": "CAD_36edf72004a6e1cd_face_3",
+    "support_area_m2": 0.01,
+    "tet4": 433,
+    "tip_mean_m": 4.761904999999999e-07,
+    "total_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "wall_solve_s": 1.475
+  },
+  {
+    "E_Pa": 210000000000.0,
+    "bending": false,
+    "cad_bounds_m": [
+      -1e-07,
+      -1e-07,
+      -1e-07,
+      0.1000001,
+      1.0000001,
+      0.1000001
+    ],
+    "fixture": "bar",
+    "job": "C:/Users/Victus/Desktop/UniCORE-main/.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/8210871",
+    "load_area_m2": 0.01,
+    "load_face": "CAD_36edf72004a6e1cd_face_4",
+    "maximum_displacement_m": 4.7619050747016445e-07,
+    "maximum_von_mises_Pa": 100000.00247485528,
+    "mesh_provenance": {
+      "cad_face_areas": {
+        "CAD_36edf72004a6e1cd_face_1": 0.1,
+        "CAD_36edf72004a6e1cd_face_2": 0.1,
+        "CAD_36edf72004a6e1cd_face_3": 0.01,
+        "CAD_36edf72004a6e1cd_face_4": 0.01,
+        "CAD_36edf72004a6e1cd_face_5": 0.1,
+        "CAD_36edf72004a6e1cd_face_6": 0.1
+      },
+      "cad_sha256": "36edf72004a6e1cda34caeca55fdf2e5e143cd432ad44f4d848f9e2420464c56",
+      "cad_volume": 0.01,
+      "gmsh": "4.15.2",
+      "mesh_volume": 0.00999999999999997,
+      "size": 0.03333333333333,
+      "source_to_m": 0.001,
+      "source_units": "mm",
+      "threads": 1.0
+    },
+    "minimum_jacobian": 1.5188118776440483e-05,
+    "minimum_mean_ratio": 0.38874399532344767,
+    "nodes": 587,
+    "nu": 0.0,
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "85c88f83bda5c0bbd0769518bf0ab17875ac6c5699cc2e36fb92d56bbb15f58c",
+      "input_sha256": "2c8960e5fb6495f5465a0f34ac2e77019f7912ea3c4a266d6c4c6c27a12c1577",
+      "schema": 1
+    },
+    "reaction_relative_imbalance": 9.999999747378752e-09,
+    "reactions_N": [
+      -8.700000000192507e-13,
+      -1000.00001,
+      3.7940000000248956e-12
+    ],
+    "reference_m": 4.761904761904762e-07,
+    "relative_error": 4.9999999474081847e-08,
+    "size_m": 0.03333333333333333,
+    "support": "CAD_36edf72004a6e1cd_face_3",
+    "support_area_m2": 0.01,
+    "tet4": 1779,
+    "tip_mean_m": 4.761904999999998e-07,
+    "total_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "wall_solve_s": 1.562
+  },
+  {
+    "E_Pa": 210000000000.0,
+    "bending": true,
+    "cad_bounds_m": [
+      -1e-07,
+      -1e-07,
+      -1e-07,
+      0.1000001,
+      1.0000001,
+      0.1000001
+    ],
+    "fixture": "bar",
+    "job": "C:/Users/Victus/Desktop/UniCORE-main/.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/10861913",
+    "load_area_m2": 0.01,
+    "load_face": "CAD_36edf72004a6e1cd_face_4",
+    "maximum_displacement_m": 8.587515185354277e-05,
+    "maximum_von_mises_Pa": 3504140.965902806,
+    "mesh_provenance": {
+      "cad_face_areas": {
+        "CAD_36edf72004a6e1cd_face_1": 0.1,
+        "CAD_36edf72004a6e1cd_face_2": 0.1,
+        "CAD_36edf72004a6e1cd_face_3": 0.01,
+        "CAD_36edf72004a6e1cd_face_4": 0.01,
+        "CAD_36edf72004a6e1cd_face_5": 0.1,
+        "CAD_36edf72004a6e1cd_face_6": 0.1
+      },
+      "cad_sha256": "36edf72004a6e1cda34caeca55fdf2e5e143cd432ad44f4d848f9e2420464c56",
+      "cad_volume": 0.01,
+      "gmsh": "4.15.2",
+      "mesh_volume": 0.00999999999999998,
+      "size": 0.07,
+      "source_to_m": 0.001,
+      "source_units": "mm",
+      "threads": 1.0
+    },
+    "minimum_jacobian": 5.8593749999999686e-05,
+    "minimum_mean_ratio": 0.620132462737397,
+    "nodes": 140,
+    "nu": 0.3,
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "c1c8cc6776796c94912af424cd79f278ec07d5d69892c64c231890da8aa0d561",
+      "input_sha256": "48d9ab27184b8a85fd6cffb4b0e6cef569e892f33c0b24ad4de3da296a820df7",
+      "schema": 1
+    },
+    "reaction_relative_imbalance": 1.734935212880373e-06,
+    "reactions_N": [
+      -1000.0010999999997,
+      0.0011999999996987754,
+      -0.0005999999997357008
+    ],
+    "reference_m": 0.00019047619047619037,
+    "relative_error": 0.5506800406249998,
+    "size_m": 0.07,
+    "support": "CAD_36edf72004a6e1cd_face_3",
+    "support_area_m2": 0.01,
+    "tet4": 307,
+    "tip_mean_m": 8.558475416666667e-05,
+    "total_force_N": [
+      1000.0,
+      0.0,
+      0.0
+    ],
+    "wall_solve_s": 1.369
+  },
+  {
+    "E_Pa": 210000000000.0,
+    "bending": true,
+    "cad_bounds_m": [
+      -1e-07,
+      -1e-07,
+      -1e-07,
+      0.1000001,
+      1.0000001,
+      0.1000001
+    ],
+    "fixture": "bar",
+    "job": "C:/Users/Victus/Desktop/UniCORE-main/.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/13347010",
+    "load_area_m2": 0.01,
+    "load_face": "CAD_36edf72004a6e1cd_face_4",
+    "maximum_displacement_m": 0.00010827099322341383,
+    "maximum_von_mises_Pa": 4688116.435235011,
+    "mesh_provenance": {
+      "cad_face_areas": {
+        "CAD_36edf72004a6e1cd_face_1": 0.1,
+        "CAD_36edf72004a6e1cd_face_2": 0.1,
+        "CAD_36edf72004a6e1cd_face_3": 0.01,
+        "CAD_36edf72004a6e1cd_face_4": 0.01,
+        "CAD_36edf72004a6e1cd_face_5": 0.1,
+        "CAD_36edf72004a6e1cd_face_6": 0.1
+      },
+      "cad_sha256": "36edf72004a6e1cda34caeca55fdf2e5e143cd432ad44f4d848f9e2420464c56",
+      "cad_volume": 0.01,
+      "gmsh": "4.15.2",
+      "mesh_volume": 0.00999999999999999,
+      "size": 0.05,
+      "source_to_m": 0.001,
+      "source_units": "mm",
+      "threads": 1.0
+    },
+    "minimum_jacobian": 2.8221502852854767e-05,
+    "minimum_mean_ratio": 0.4330555772678096,
+    "nodes": 190,
+    "nu": 0.3,
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "6d8fdff243622a983f377e5244991473cbfcc176c5f9b6eef719db383e840fa3",
+      "input_sha256": "b1114b617008e1d644fd5b3f1484bf166e805843307be03d2a03fab27b9f6a01",
+      "schema": 1
+    },
+    "reaction_relative_imbalance": 9.481561137363315e-07,
+    "reactions_N": [
+      -1000.0003,
+      -0.0007899999998244311,
+      0.00042999999982384907
+    ],
+    "reference_m": 0.00019047619047619037,
+    "relative_error": 0.4331893499999996,
+    "size_m": 0.05,
+    "support": "CAD_36edf72004a6e1cd_face_3",
+    "support_area_m2": 0.01,
+    "tet4": 433,
+    "tip_mean_m": 0.00010796393333333335,
+    "total_force_N": [
+      1000.0,
+      0.0,
+      0.0
+    ],
+    "wall_solve_s": 2.299
+  },
+  {
+    "E_Pa": 210000000000.0,
+    "bending": true,
+    "cad_bounds_m": [
+      -1e-07,
+      -1e-07,
+      -1e-07,
+      0.1000001,
+      1.0000001,
+      0.1000001
+    ],
+    "fixture": "bar",
+    "job": "C:/Users/Victus/Desktop/UniCORE-main/.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/16794261",
+    "load_area_m2": 0.01,
+    "load_face": "CAD_36edf72004a6e1cd_face_4",
+    "maximum_displacement_m": 0.00014916092914063483,
+    "maximum_von_mises_Pa": 5475497.390737014,
+    "mesh_provenance": {
+      "cad_face_areas": {
+        "CAD_36edf72004a6e1cd_face_1": 0.1,
+        "CAD_36edf72004a6e1cd_face_2": 0.1,
+        "CAD_36edf72004a6e1cd_face_3": 0.01,
+        "CAD_36edf72004a6e1cd_face_4": 0.01,
+        "CAD_36edf72004a6e1cd_face_5": 0.1,
+        "CAD_36edf72004a6e1cd_face_6": 0.1
+      },
+      "cad_sha256": "36edf72004a6e1cda34caeca55fdf2e5e143cd432ad44f4d848f9e2420464c56",
+      "cad_volume": 0.01,
+      "gmsh": "4.15.2",
+      "mesh_volume": 0.00999999999999997,
+      "size": 0.03333333333333,
+      "source_to_m": 0.001,
+      "source_units": "mm",
+      "threads": 1.0
+    },
+    "minimum_jacobian": 1.5188118776440483e-05,
+    "minimum_mean_ratio": 0.38874399532344767,
+    "nodes": 587,
+    "nu": 0.3,
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "37683470317930be248abb265639d20a9d9df26cb608518f5c375b7d2985e23a",
+      "input_sha256": "709e0b82a271013a6262a3e638fb30414335fee779423ea2be1b3c1fd4587bc2",
+      "schema": 1
+    },
+    "reaction_relative_imbalance": 1.265898928977549e-06,
+    "reactions_N": [
+      -999.9995999999999,
+      0.0011999999994714017,
+      5.000000015797923e-05
+    ],
+    "reference_m": 0.00019047619047619037,
+    "relative_error": 0.21916933749999967,
+    "size_m": 0.03333333333333333,
+    "support": "CAD_36edf72004a6e1cd_face_3",
+    "support_area_m2": 0.01,
+    "tet4": 1779,
+    "tip_mean_m": 0.00014872964999999998,
+    "total_force_N": [
+      1000.0,
+      0.0,
+      0.0
+    ],
+    "wall_solve_s": 2.432
+  },
+  {
+    "E_Pa": 210000000000.0,
+    "bending": false,
+    "cad_bounds_m": [
+      -0.1000001,
+      -1e-07,
+      -0.1000001,
+      0.1000001,
+      0.2000001,
+      0.1000001
+    ],
+    "fixture": "cylinder",
+    "job": "C:/Users/Victus/Desktop/UniCORE-main/.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/23349452",
+    "load_area_m2": 0.03141592653589793,
+    "load_face": "CAD_635bf93ade59915a_face_2",
+    "maximum_displacement_m": 3.170207207858766e-08,
+    "maximum_von_mises_Pa": 33629.37145636713,
+    "mesh_provenance": {
+      "cad_face_areas": {
+        "CAD_635bf93ade59915a_face_1": 0.12566370614360003,
+        "CAD_635bf93ade59915a_face_2": 0.03141592653589793,
+        "CAD_635bf93ade59915a_face_3": 0.03141592653589793
+      },
+      "cad_sha256": "635bf93ade59915a3e4d5fef7ab2530e9bb728db390600f5c957d1c49e8de1c6",
+      "cad_volume": 0.00628318530717958,
+      "gmsh": "4.15.2",
+      "mesh_volume": 0.00605060262671369,
+      "size": 0.06,
+      "source_to_m": 0.001,
+      "source_units": "mm",
+      "threads": 1.0
+    },
+    "minimum_jacobian": 5.413397201034733e-05,
+    "minimum_mean_ratio": 0.4111975264671311,
+    "nodes": 85,
+    "nu": 0.0,
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "54b291400d0556e564ee321082af3f367396eb1609eacebec9111cc8075ca8e7",
+      "input_sha256": "65813c8009c7a41ae224a69d976bdd5dce1b3d5865774cfcc528ec0297ce0abd",
+      "schema": 1
+    },
+    "reaction_relative_imbalance": 1.0000010661315173e-08,
+    "reactions_N": [
+      1.0100000006479926e-08,
+      -1000.0000099999999,
+      -1.1000000015026767e-08
+    ],
+    "reference_m": 3.031522725559911e-08,
+    "relative_error": 0.036829054786231774,
+    "size_m": 0.06,
+    "support": "CAD_635bf93ade59915a_face_3",
+    "support_area_m2": 0.03141592653589793,
+    "tet4": 231,
+    "tip_mean_m": 3.143170842105263e-08,
+    "total_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "wall_solve_s": 1.357
+  },
+  {
+    "E_Pa": 210000000000.0,
+    "bending": false,
+    "cad_bounds_m": [
+      -0.1000001,
+      -1e-07,
+      -0.1000001,
+      0.1000001,
+      0.2000001,
+      0.1000001
+    ],
+    "fixture": "cylinder",
+    "job": "C:/Users/Victus/Desktop/UniCORE-main/.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/25802598",
+    "load_area_m2": 0.03141592653589793,
+    "load_face": "CAD_635bf93ade59915a_face_2",
+    "maximum_displacement_m": 3.09858414482278e-08,
+    "maximum_von_mises_Pa": 32875.88624431367,
+    "mesh_provenance": {
+      "cad_face_areas": {
+        "CAD_635bf93ade59915a_face_1": 0.12566370614360003,
+        "CAD_635bf93ade59915a_face_2": 0.03141592653589793,
+        "CAD_635bf93ade59915a_face_3": 0.03141592653589793
+      },
+      "cad_sha256": "635bf93ade59915a3e4d5fef7ab2530e9bb728db390600f5c957d1c49e8de1c6",
+      "cad_volume": 0.00628318530717958,
+      "gmsh": "4.15.2",
+      "mesh_volume": 0.00616327431528599,
+      "size": 0.04,
+      "source_to_m": 0.001,
+      "source_units": "mm",
+      "threads": 1.0
+    },
+    "minimum_jacobian": 1.8714667557152667e-05,
+    "minimum_mean_ratio": 0.42174156145071573,
+    "nodes": 197,
+    "nu": 0.0,
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "d07ff651ffdf40c6a7c6ce1ae7b58439c14b32bddf63bf2296c383d4a32510c8",
+      "input_sha256": "aef565d7856bc3f76a6e8984a9a0864c05a3220dc8f985f87214071007f1c600",
+      "schema": 1
+    },
+    "reaction_relative_imbalance": 1.9999999494757503e-08,
+    "reactions_N": [
+      1.8100000101148317e-09,
+      -1000.0000200000002,
+      -1.799999985868661e-09
+    ],
+    "reference_m": 3.031522725559911e-08,
+    "relative_error": 0.018857216156140888,
+    "size_m": 0.04,
+    "support": "CAD_635bf93ade59915a_face_3",
+    "support_area_m2": 0.03141592653589793,
+    "tet4": 617,
+    "tip_mean_m": 3.0886888048780476e-08,
+    "total_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "wall_solve_s": 2.303
+  },
+  {
+    "E_Pa": 210000000000.0,
+    "bending": false,
+    "cad_bounds_m": [
+      -0.1000001,
+      -1e-07,
+      -0.1000001,
+      0.1000001,
+      0.2000001,
+      0.1000001
+    ],
+    "fixture": "cylinder",
+    "job": "C:/Users/Victus/Desktop/UniCORE-main/.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/29226284",
+    "load_area_m2": 0.03141592653589793,
+    "load_face": "CAD_635bf93ade59915a_face_2",
+    "maximum_displacement_m": 3.056942077250824e-08,
+    "maximum_von_mises_Pa": 32168.60520254993,
+    "mesh_provenance": {
+      "cad_face_areas": {
+        "CAD_635bf93ade59915a_face_1": 0.12566370614360003,
+        "CAD_635bf93ade59915a_face_2": 0.03141592653589793,
+        "CAD_635bf93ade59915a_face_3": 0.03141592653589793
+      },
+      "cad_sha256": "635bf93ade59915a3e4d5fef7ab2530e9bb728db390600f5c957d1c49e8de1c6",
+      "cad_volume": 0.00628318530717958,
+      "gmsh": "4.15.2",
+      "mesh_volume": 0.00623805841314008,
+      "size": 0.025,
+      "source_to_m": 0.001,
+      "source_units": "mm",
+      "threads": 1.0
+    },
+    "minimum_jacobian": 4.142885599587165e-06,
+    "minimum_mean_ratio": 0.40404554584116104,
+    "nodes": 581,
+    "nu": 0.0,
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "2a07b1ff6bd66d10703bd90b12c11c3eab446696f62def7e1a7dd3417dd68da5",
+      "input_sha256": "a321157b84372deeb4edf57a2da4a2364c89210efbf45c813e393d7101a986f7",
+      "schema": 1
+    },
+    "reaction_relative_imbalance": 6.000001576467184e-09,
+    "reactions_N": [
+      -3.699999999310158e-09,
+      -1000.0000060000001,
+      -2.2030000000877042e-09
+    ],
+    "reference_m": 3.031522725559911e-08,
+    "relative_error": 0.0069177284187447174,
+    "size_m": 0.025,
+    "support": "CAD_635bf93ade59915a_face_3",
+    "support_area_m2": 0.03141592653589793,
+    "tet4": 2174,
+    "tip_mean_m": 3.052493976470587e-08,
+    "total_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "wall_solve_s": 2.549
+  }
+]

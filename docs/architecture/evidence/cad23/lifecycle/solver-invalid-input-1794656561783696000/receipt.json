@@ -1,0 +1,1 @@
+{"state": "failed", "exit_code": 0, "error": "", "seconds": 0.5482254000089597, "started_utc": "2026-11-14T11:42:42.990976+00:00", "ended_utc": "2026-11-14T11:42:43.539202+00:00", "peak_working_set_bytes": 8175616, "peak_memory_bytes": 10964992, "job_object": true}

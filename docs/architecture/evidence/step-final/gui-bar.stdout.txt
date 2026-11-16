@@ -1,0 +1,16 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+Vulkan 1.4.315 - Forward+ - Using Device #0: AMD - AMD Radeon(TM) RX 6550M
+
+GUI_INITIALIZE
+GUI_STAGE bar-import
+GUI_STAGE bar-selected-face
+GUI_STAGE bar-tet4
+GUI_STAGE bar-support
+GUI_STAGE bar-force
+GUI_STAGE bar-backend
+GUI_STAGE bar-solving
+GUI_STAGE bar-displacement
+GUI_STAGE bar-von-mises
+GUI_STAGE bar-reopened
+GUI_STAGE bar-recalculated
+STEP_CALCULIX_WORKBENCH_PASS bar nodes=190 elements=433 max_displacement=0.0000002380952

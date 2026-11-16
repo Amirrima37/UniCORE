@@ -1,0 +1,184 @@
+[
+  {
+    "script": "tests/test_physics_engine_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.437
+  },
+  {
+    "script": "tests/test_physics_features_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.832
+  },
+  {
+    "script": "tests/test_physics_interaction_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.853
+  },
+  {
+    "script": "tests/test_verlet_empirical_verification.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.46
+  },
+  {
+    "script": "tests/test_rk4_empirical_verification.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.367
+  },
+  {
+    "script": "tests/test_precession_diagnostic.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.461
+  },
+  {
+    "script": "tests/test_native_metrics_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.379
+  },
+  {
+    "script": "tests/test_native_molecular_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.009
+  },
+  {
+    "script": "tests/test_native_gravity_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.655
+  },
+  {
+    "script": "tests/test_native_quantum_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.661
+  },
+  {
+    "script": "tests/test_native_nuclear_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.555
+  },
+  {
+    "script": "tests/test_native_remaining_fixtures_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.463
+  },
+  {
+    "script": "tests/test_native_geometry_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.371
+  },
+  {
+    "script": "tests/test_native_structural_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.553
+  },
+  {
+    "script": "tests/test_structural_expansion.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.045
+  },
+  {
+    "script": "tests/test_native_thermal_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.726
+  },
+  {
+    "script": "tests/test_materials_thermal_ui.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.014
+  },
+  {
+    "script": "tests/test_cae_analysis_commands.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.725
+  },
+  {
+    "script": "tests/test_native_structural_ui.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.721
+  },
+  {
+    "script": "tests/test_cae_recovery.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.817
+  },
+  {
+    "script": "tests/test_cae_shell.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.965
+  },
+  {
+    "script": "tests/test_cae_ai_commands.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.013
+  },
+  {
+    "script": "tests/test_mesh_inspection.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.348
+  },
+  {
+    "script": "tests/test_mesh_result_integration.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.907
+  },
+  {
+    "script": "tests/test_native_radiation.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.347
+  },
+  {
+    "script": "tests/test_mesh_async.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.013
+  }
+]

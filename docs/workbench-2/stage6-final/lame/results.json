@@ -1,0 +1,71 @@
+[
+  {
+    "density": 1,
+    "source_snapshot": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata\\Godot\\app_userdata\\UniCORE\\extreme_jobs\\ui_failure_11343799\\project.json",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\lame\\density-1.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\lame\\density-1",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256"
+    ],
+    "exit_code": 0,
+    "seconds": 0.08362469999701716,
+    "nodal_displacement_relative_rms": 0.23629176980441072,
+    "radial_stress_centroid_relative_rms": 0.9389982410514178,
+    "hoop_stress_centroid_relative_rms": 0.4100228955679552,
+    "residual": 7.639220408586818e-11,
+    "nodes": 96,
+    "tets": 192
+  },
+  {
+    "density": 2,
+    "source_snapshot": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata\\Godot\\app_userdata\\UniCORE\\extreme_jobs\\1794443246_134_13144_30268864\\project.json",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\lame\\density-2.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\lame\\density-2",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256"
+    ],
+    "exit_code": 0,
+    "seconds": 0.16246980000141775,
+    "nodal_displacement_relative_rms": 0.08596415329977894,
+    "radial_stress_centroid_relative_rms": 0.5420186848229444,
+    "hoop_stress_centroid_relative_rms": 0.2725971335113748,
+    "residual": 9.349091666777187e-11,
+    "nodes": 480,
+    "tets": 1536
+  },
+  {
+    "density": 4,
+    "source_snapshot": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata\\Godot\\app_userdata\\UniCORE\\extreme_jobs\\1794442987_786_16932_13907657\\project.json",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\lame\\density-4.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\lame\\density-4",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256"
+    ],
+    "exit_code": 0,
+    "seconds": 0.844123100003344,
+    "nodal_displacement_relative_rms": 0.02446834811555345,
+    "radial_stress_centroid_relative_rms": 0.2891611250470071,
+    "hoop_stress_centroid_relative_rms": 0.15232627627525688,
+    "residual": 9.345107895795966e-11,
+    "nodes": 2880,
+    "tets": 12288
+  }
+]

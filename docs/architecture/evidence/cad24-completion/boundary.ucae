@@ -1,0 +1,1892 @@
+{
+	"analysis": {
+		"backend": "calculix",
+		"element": "TET4",
+		"type": "static_structural"
+	},
+	"mesh": {
+		"encoding": "unicore-variant-mesh-v1",
+		"payload": "GwAAAAAAAAA="
+	},
+	"parts": [
+		{
+			"cad_base64": "REJSZXBfRHJhd2FibGVTaGFwZQoKQ0FTQ0FERSBUb3BvbG9neSBWMSwgKGMpIE1hdHJhLURhdGF2aXNpb24KTG9jYXRpb25zIDAKQ3VydmUyZHMgMzYKMSAwIDAgMSAwIAoxIDAgMCAxIDAgCjEgMCAwIDEgMCAKMSAwLjEwMDAwMDAwMDAwMDAwMDAxIDAgMCAtMSAKMSAwIDAgMCAxIAoxIDAgMCAwIDEgCjEgMCAtMC4yMDAwMDAwMDAwMDAwMDAwMSAxIDAgCjEgMCAwIDEgMCAKMSAwIDAgMSAwIAoxIDAgMCAwIC0xIAoxIDAgMCAwIDEgCjEgMCAwIDAgMSAKMSAwIDAgMCAxIAoxIDAgMCAxIDAgCjEgMC4xMDAwMDAwMDAwMDAwMDAwMSAwLjE1MDAwMDAwMDAwMDAwMDAyIDAgLTEgCjEgMC4xNTAwMDAwMDAwMDAwMDAwMiAwIC0xIDAgCjEgMCAwLjEwMDAwMDAwMDAwMDAwMDAxIDEgMCAKMSAwIDAuMTUwMDAwMDAwMDAwMDAwMDIgMSAwIAoxIDAgMCAxIDAgCjEgMCAwLjE1MDAwMDAwMDAwMDAwMDAyIDEgMCAKMSAwLjEwMDAwMDAwMDAwMDAwMDAxIDAgMCAxIAoxIDAuMTUwMDAwMDAwMDAwMDAwMDIgMCAwIDEgCjEgMC4xMDAwMDAwMDAwMDAwMDAwMSAwIDAgLTEgCjEgMC4xNTAwMDAwMDAwMDAwMDAwMiAwIDAgMSAKMSAwLjE1MDAwMDAwMDAwMDAwMDAyIDAuMjAwMDAwMDAwMDAwMDAwMDEgLTEgMCAKMSAwLjEwMDAwMDAwMDAwMDAwMDAxIDAuMTUwMDAwMDAwMDAwMDAwMDIgMCAtMSAKMSAwIDAuMTAwMDAwMDAwMDAwMDAwMDEgMSAwIAoxIDAgMC4xNTAwMDAwMDAwMDAwMDAwMiAxIDAgCjEgMCAtMC4yMDAwMDAwMDAwMDAwMDAwMSAxIDAgCjEgMCAwLjE1MDAwMDAwMDAwMDAwMDAyIDEgMCAKMSAwLjE1MDAwMDAwMDAwMDAwMDAyIDAuMjAwMDAwMDAwMDAwMDAwMDEgLTEgMCAKMSAwIDAuMTUwMDAwMDAwMDAwMDAwMDIgMCAtMSAKMSAwLjEwMDAwMDAwMDAwMDAwMDAxIDAgMCAxIAoxIDAuMTUwMDAwMDAwMDAwMDAwMDIgMCAwIDEgCjEgMCAwIDAgLTEgCjEgMC4xNTAwMDAwMDAwMDAwMDAwMiAwIDAgMSAKQ3VydmVzIDEyCjEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIC0wLjEwMDAwMDAwMDAwMDAwMDAxIC0wLjA1MDAwMDAwMDAwMDAwMDAwMyAwIDAgMSAKMSAtMC4wNTAwMDAwMDAwMDAwMDAwMDMgLTAuMTAwMDAwMDAwMDAwMDAwMDEgMC4wNTAwMDAwMDAwMDAwMDAwMDMgLTAgMSAwIAoxIC0wLjA1MDAwMDAwMDAwMDAwMDAwMyAwLjEwMDAwMDAwMDAwMDAwMDAxIC0wLjA1MDAwMDAwMDAwMDAwMDAwMyAwIDAgMSAKMSAtMC4wNTAwMDAwMDAwMDAwMDAwMDMgLTAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIC0wIDEgMCAKOCAwIDAuMTUwMDAwMDAwMDAwMDAwMDIKMSAtMC4wNTAwMDAwMDAwMDAwMDAwMDMgLTAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIDEgMCAwIAo4IDAgMC4xNTAwMDAwMDAwMDAwMDAwMgoxIDAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMTAwMDAwMDAwMDAwMDAwMDEgMC4wNTAwMDAwMDAwMDAwMDAwMDMgLTEgMCAwIAoxIDAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIDAgMCAxIAoxIDAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMTAwMDAwMDAwMDAwMDAwMDEgMC4wNTAwMDAwMDAwMDAwMDAwMDMgMCAxIDAgCjggMCAwLjE1MDAwMDAwMDAwMDAwMDAyCjEgMC4xMDAwMDAwMDAwMDAwMDAwMSAwLjEwMDAwMDAwMDAwMDAwMDAxIDAuMDUwMDAwMDAwMDAwMDAwMDAzIC0xIDAgMCAKMSAwLjEwMDAwMDAwMDAwMDAwMDAxIDAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIDAgMCAxIAo4IDAgMC4xNTAwMDAwMDAwMDAwMDAwMgoxIDAuMTAwMDAwMDAwMDAwMDAwMDEgMC4xMDAwMDAwMDAwMDAwMDAwMSAtMC4wNTAwMDAwMDAwMDAwMDAwMDMgLTEgMCAwIAoxIDAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIDAgMSAwIApQb2x5Z29uM0QgMApQb2x5Z29uT25Ucmlhbmd1bGF0aW9ucyAwClN1cmZhY2VzIDE0CjEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIC0wLjEwMDAwMDAwMDAwMDAwMDAxIC0wLjA1MDAwMDAwMDAwMDAwMDAwMyAxIDAgLTAgMCAwIDEgMCAtMSAwIAoxIC0wLjA1MDAwMDAwMDAwMDAwMDAwMyAtMC4xMDAwMDAwMDAwMDAwMDAwMSAtMC4wNTAwMDAwMDAwMDAwMDAwMDMgLTAgMSAwIDAgMCAxIDEgMCAtMCAKMSAtMC4wNTAwMDAwMDAwMDAwMDAwMDMgLTAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIC0wIDEgMCAwIDAgMSAxIDAgLTAgCjEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIC0wLjEwMDAwMDAwMDAwMDAwMDAxIDAuMDUwMDAwMDAwMDAwMDAwMDAzIDAgMCAxIDEgMCAtMCAtMCAxIDAgCjEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIC0wLjEwMDAwMDAwMDAwMDAwMDAxIDAuMDUwMDAwMDAwMDAwMDAwMDAzIDAgMCAxIDEgMCAtMCAtMCAxIDAgCjEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIDAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIC0wIDEgMCAwIDAgMSAxIDAgLTAgCjEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIDAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIC0wIDEgMCAwIDAgMSAxIDAgLTAgCjEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIC0wLjEwMDAwMDAwMDAwMDAwMDAxIC0wLjA1MDAwMDAwMDAwMDAwMDAwMyAwIDAgMSAxIDAgLTAgLTAgMSAwIAoxIC0wLjA1MDAwMDAwMDAwMDAwMDAwMyAtMC4xMDAwMDAwMDAwMDAwMDAwMSAtMC4wNTAwMDAwMDAwMDAwMDAwMDMgMCAwIDEgMSAwIC0wIC0wIDEgMCAKMSAwIC0wLjEwMDAwMDAwMDAwMDAwMDAxIC0wLjA1MDAwMDAwMDAwMDAwMDAwMyAwIDEgMCAwIC0wIDEgMSAwIC0wIAoxIDAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIDEgMCAwIDAgMCAxIDAgLTEgMCAKMSAwIC0wLjEwMDAwMDAwMDAwMDAwMDAxIDAuMDUwMDAwMDAwMDAwMDAwMDAzIDAgMCAxIDEgMCAtMCAtMCAxIDAgCjEgMCAwLjEwMDAwMDAwMDAwMDAwMDAxIC0wLjA1MDAwMDAwMDAwMDAwMDAwMyAwIDEgMCAwIC0wIDEgMSAwIC0wIAoxIDAgLTAuMTAwMDAwMDAwMDAwMDAwMDEgLTAuMDUwMDAwMDAwMDAwMDAwMDAzIDAgMCAxIDEgMCAtMCAtMCAxIDAgClRyaWFuZ3VsYXRpb25zIDAKClRTaGFwZXMgMzUKVmUKMWUtMDcKLTAuMDUgLTAuMSAwLjA1CjAgMAoKMDEwMTEwMQoqClZlCjFlLTA3Ci0wLjA1IC0wLjEgLTAuMDUKMCAwCgowMTAxMTAxCioKRWQKIDFlLTA3IDEgMSAwCjEgIDEgMCAwIDAuMQoyICAxIDEgMCAwIDAuMQoyICAyIDIgMCAwIDAuMQoyICAzIDMgMCAwIDAuMQowCgowMTAxMDAwCi0zNSAwICszNCAwICoKVmUKMWUtMDcKLTAuMDUgMC4xIDAuMDUKMCAwCgowMTAxMTAxCioKRWQKIDFlLTA3IDEgMSAwCjEgIDIgMCAwIDAuMgoyICA0IDEgMCAwIDAuMgoyICA1IDQgMCAwIDAuMgoyICA2IDUgMCAwIDAuMgowCgowMTAxMDAwCi0zMiAwICszNSAwICoKVmUKMWUtMDcKLTAuMDUgMC4xIC0wLjA1CjAgMAoKMDEwMTEwMQoqCkVkCiAxZS0wNyAxIDEgMAoxICAzIDAgMCAwLjEKMiAgNyAxIDAgMCAwLjEKMiAgOCA2IDAgMCAwLjEKMiAgOSA3IDAgMCAwLjEKMAoKMDEwMTAwMAotMzIgMCArMzAgMCAqCkVkCiAxZS0wNyAxIDEgMAoxICA0IDAgMCAwLjIKMiAgMTAgMSAwIDAgMC4yCjIgIDExIDggMCAwIDAuMgoyICAxMiA5IDAgMCAwLjIKMAoKMDEwMTAwMAotMzAgMCArMzQgMCAqCldpCgowMTAxMTAwCi0zMyAwIC0zMSAwICsyOSAwICsyOCAwICoKRmEKMCAgMWUtMDcgMSAwCgowMTExMDAwCisyNyAwICoKVmUKMWUtMDcKMC4xIC0wLjEgLTAuMDUKMCAwCgowMTAxMTAxCioKRWQKIDFlLTA3IDEgMSAwCjEgIDUgMCAwIDAuMTUKMiAgMTMgMyAwIDAgMC4xNQoyICAxNCA5IDAgMCAwLjE1CjAKCjAxMDEwMDAKKzM0IDAgLTI1IDAgKgpWZQoxZS0wNwowLjEgLTAuMSAwLjA1CjAgMAoKMDEwMTEwMQoqCkVkCiAxZS0wNyAxIDEgMAoxICA2IDAgMCAwLjE1CjIgIDE1IDMgMCAwIDAuMTUKMiAgMTYgNSAwIDAgMC4xNQowCgowMTAxMDAwCisyMyAwIC0zNSAwICoKRWQKIDFlLTA3IDEgMSAwCjEgIDcgMCAwIDAuMQoyICAxNyAxMCAwIDAgMC4xCjIgIDE4IDIgMCAwIDAuMQoyICAxOSAxMSAwIDAgMC4xCjIgIDIwIDMgMCAwIDAuMQowCgowMTAxMDAwCi0yMyAwICsyNSAwICoKV2kKCjAxMDExMDAKLTI0IDAgKzMzIDAgLTIyIDAgLTIxIDAgKgpGYQowICAwIDMgMAoKMDExMTAwMAorMjAgMCAqClZlCjFlLTA3CjAuMSAwLjEgMC4wNQowIDAKCjAxMDExMDEKKgpFZAogMWUtMDcgMSAxIDAKMSAgOCAwIDAgMC4yCjIgIDIxIDEyIDAgMCAwLjIKMiAgMjIgNCAwIDAgMC4yCjIgIDIzIDExIDAgMCAwLjIKMiAgMjQgNSAwIDAgMC4yCjAKCjAxMDEwMDAKLTE4IDAgKzIzIDAgKgpFZAogMWUtMDcgMSAxIDAKMSAgOSAwIDAgMC4xNQoyICAyNSA1IDAgMCAwLjE1CjIgIDI2IDcgMCAwIDAuMTUKMAoKMDEwMTAwMAorMTggMCAtMzIgMCAqCldpCgowMTAxMTAwCi0zMSAwIC0yMiAwICsxNyAwICsxNiAwICoKRmEKMCAgMCA1IDAKCjAxMTEwMDAKKzE1IDAgKgpWZQoxZS0wNwowLjEgMC4xIC0wLjA1CjAgMAoKMDEwMTEwMQoqCkVkCiAxZS0wNyAxIDEgMAoxICAxMCAwIDAgMC4xCjIgIDI3IDEzIDAgMCAwLjEKMiAgMjggNiAwIDAgMC4xCjIgIDI5IDExIDAgMCAwLjEKMiAgMzAgNyAwIDAgMC4xCjAKCjAxMDEwMDAKLTE4IDAgKzEzIDAgKgpFZAogMWUtMDcgMSAxIDAKMSAgMTEgMCAwIDAuMTUKMiAgMzEgOSAwIDAgMC4xNQoyICAzMiA3IDAgMCAwLjE1CjAKCjAxMDEwMDAKKzEzIDAgLTMwIDAgKgpXaQoKMDEwMTEwMAorMjkgMCAtMTYgMCAtMTIgMCArMTEgMCAqCkZhCjAgIDAgNyAwCgowMTExMDAwCisxMCAwICoKRWQKIDFlLTA3IDEgMSAwCjEgIDEyIDAgMCAwLjIKMiAgMzMgMTQgMCAwIDAuMgoyICAzNCA4IDAgMCAwLjIKMiAgMzUgMTEgMCAwIDAuMgoyICAzNiA5IDAgMCAwLjIKMAoKMDEwMTAwMAotMTMgMCArMjUgMCAqCldpCgowMTAxMTAwCi0yOCAwICsyNCAwICs4IDAgKzExIDAgKgpGYQowICAwIDkgMAoKMDExMTAwMAorNyAwICoKV2kKCjAxMDExMDAKLTIxIDAgLTE3IDAgKzEyIDAgKzggMCAqCkZhCjAgIDFlLTA3IDExIDAKCjAxMTEwMDAKKzUgMCAqClNoCgowMTAxMTAwCi0yNiAwIC0xOSAwICsxNCAwICs5IDAgLTYgMCArNCAwICoKU28KCjAxMDAwMDAKKzMgMCAqCkNvCgoxMTAwMDAwCisyIDAgKgoKKzEgMCA=",
+			"cad_boundary_archive": [
+				{
+					"condition": "support",
+					"face": "N_3a691fbc55463bd70fa9f315",
+					"force": [
+						0.0,
+						1000.0,
+						0.0
+					],
+					"geometry_revision": "1ff96f4619defa1088169fbda2e9448dfa3a42062fc22f6383cfb47ffbe34263",
+					"previous_descriptor": {
+						"area": 0.03,
+						"bounds": [
+							-0.0500001,
+							-0.1000001,
+							-0.0500001,
+							0.1000001,
+							0.1000001,
+							-0.0499999
+						],
+						"center": [
+							0.02500000000000001,
+							1.4456028966473391e-18,
+							-0.05
+						],
+						"edges": [
+							{
+								"bounds": [
+									-0.0500001,
+									-0.1000001,
+									-0.0500001,
+									-0.0499999,
+									0.1000001,
+									-0.0499999
+								],
+								"length": 0.2,
+								"points": [
+									[
+										-0.05,
+										-0.1,
+										-0.05
+									],
+									[
+										-0.05,
+										-0.05,
+										-0.05
+									],
+									[
+										-0.05,
+										0.0,
+										-0.05
+									],
+									[
+										-0.05,
+										0.05000000000000002,
+										-0.05
+									],
+									[
+										-0.05,
+										0.1,
+										-0.05
+									]
+								],
+								"type": "Line"
+							},
+							{
+								"bounds": [
+									0.0999999,
+									-0.1000001,
+									-0.0500001,
+									0.1000001,
+									0.1000001,
+									-0.0499999
+								],
+								"length": 0.2,
+								"points": [
+									[
+										0.1,
+										-0.1,
+										-0.05
+									],
+									[
+										0.1,
+										-0.05,
+										-0.05
+									],
+									[
+										0.1,
+										0.0,
+										-0.05
+									],
+									[
+										0.1,
+										0.05000000000000002,
+										-0.05
+									],
+									[
+										0.1,
+										0.1,
+										-0.05
+									]
+								],
+								"type": "Line"
+							},
+							{
+								"bounds": [
+									-0.0500001,
+									-0.1000001,
+									-0.0500001,
+									0.1000001,
+									-0.0999999,
+									-0.0499999
+								],
+								"length": 0.15,
+								"points": [
+									[
+										-0.05,
+										-0.1,
+										-0.05
+									],
+									[
+										-0.0125,
+										-0.1,
+										-0.05
+									],
+									[
+										0.02499999999999999,
+										-0.1,
+										-0.05
+									],
+									[
+										0.06249999999999998,
+										-0.1,
+										-0.05
+									],
+									[
+										0.1,
+										-0.1,
+										-0.05
+									]
+								],
+								"type": "TrimmedCurve"
+							},
+							{
+								"bounds": [
+									-0.05000009999999999,
+									0.0999999,
+									-0.0500001,
+									0.1000001,
+									0.1000001,
+									-0.0499999
+								],
+								"length": 0.15,
+								"points": [
+									[
+										-0.04999999999999999,
+										0.1,
+										-0.05
+									],
+									[
+										-0.01249999999999998,
+										0.1,
+										-0.05
+									],
+									[
+										0.02500000000000001,
+										0.1,
+										-0.05
+									],
+									[
+										0.0625,
+										0.1,
+										-0.05
+									],
+									[
+										0.1,
+										0.1,
+										-0.05
+									]
+								],
+								"type": "TrimmedCurve"
+							}
+						],
+						"inertia": [
+							0.0001,
+							-1.118083490375676e-21,
+							-6.776263578034403e-21,
+							-1.118083490375676e-21,
+							5.625000000000004e-05,
+							0.0,
+							-6.776263578034403e-21,
+							0.0,
+							0.00015625
+						],
+						"type": "Plane"
+					},
+					"reason": "Face modified/deleted/ambiguous"
+				},
+				{
+					"condition": "load_face",
+					"face": "N_61fd64a4682a7c88d2d9350d",
+					"force": [
+						0.0,
+						1000.0,
+						0.0
+					],
+					"geometry_revision": "1ff96f4619defa1088169fbda2e9448dfa3a42062fc22f6383cfb47ffbe34263",
+					"previous_descriptor": {
+						"area": 0.03,
+						"bounds": [
+							-0.0500001,
+							-0.1000001,
+							0.0499999,
+							0.1000001,
+							0.1000001,
+							0.0500001
+						],
+						"center": [
+							0.02500000000000001,
+							1.4456028966473391e-18,
+							0.05
+						],
+						"edges": [
+							{
+								"bounds": [
+									-0.0500001,
+									-0.1000001,
+									0.0499999,
+									-0.0499999,
+									0.1000001,
+									0.0500001
+								],
+								"length": 0.2,
+								"points": [
+									[
+										-0.05,
+										-0.1,
+										0.05
+									],
+									[
+										-0.05,
+										-0.05,
+										0.05
+									],
+									[
+										-0.05,
+										0.0,
+										0.05
+									],
+									[
+										-0.05,
+										0.05000000000000002,
+										0.05
+									],
+									[
+										-0.05,
+										0.1,
+										0.05
+									]
+								],
+								"type": "Line"
+							},
+							{
+								"bounds": [
+									0.0999999,
+									-0.1000001,
+									0.0499999,
+									0.1000001,
+									0.1000001,
+									0.0500001
+								],
+								"length": 0.2,
+								"points": [
+									[
+										0.1,
+										-0.1,
+										0.05
+									],
+									[
+										0.1,
+										-0.05,
+										0.05
+									],
+									[
+										0.1,
+										0.0,
+										0.05
+									],
+									[
+										0.1,
+										0.05000000000000002,
+										0.05
+									],
+									[
+										0.1,
+										0.1,
+										0.05
+									]
+								],
+								"type": "Line"
+							},
+							{
+								"bounds": [
+									-0.05000009999999999,
+									-0.1000001,
+									0.0499999,
+									0.1000001,
+									-0.0999999,
+									0.0500001
+								],
+								"length": 0.15,
+								"points": [
+									[
+										-0.04999999999999999,
+										-0.1,
+										0.05
+									],
+									[
+										-0.01249999999999998,
+										-0.1,
+										0.05
+									],
+									[
+										0.02500000000000001,
+										-0.1,
+										0.05
+									],
+									[
+										0.0625,
+										-0.1,
+										0.05
+									],
+									[
+										0.1,
+										-0.1,
+										0.05
+									]
+								],
+								"type": "TrimmedCurve"
+							},
+							{
+								"bounds": [
+									-0.05000009999999999,
+									0.0999999,
+									0.0499999,
+									0.1000001,
+									0.1000001,
+									0.0500001
+								],
+								"length": 0.15,
+								"points": [
+									[
+										-0.04999999999999999,
+										0.1,
+										0.05
+									],
+									[
+										-0.01249999999999998,
+										0.1,
+										0.05
+									],
+									[
+										0.02500000000000001,
+										0.1,
+										0.05
+									],
+									[
+										0.0625,
+										0.1,
+										0.05
+									],
+									[
+										0.1,
+										0.1,
+										0.05
+									]
+								],
+								"type": "TrimmedCurve"
+							}
+						],
+						"inertia": [
+							0.0001,
+							-1.118083490375676e-21,
+							6.776263578034403e-21,
+							-1.118083490375676e-21,
+							5.625000000000004e-05,
+							0.0,
+							6.776263578034403e-21,
+							0.0,
+							0.00015625
+						],
+						"type": "Plane"
+					},
+					"reason": "Face modified/deleted/ambiguous"
+				}
+			],
+			"cad_bounds": [
+				-0.0500001,
+				-0.1000001,
+				-0.0500001,
+				0.1000001,
+				0.1000001,
+				0.0500001
+			],
+			"cad_cross_kernel": {
+				"area_difference_m2": 0.0,
+				"bounds_budget_m": 2e-07,
+				"bounds_difference_m": 1.0000000000287557e-07,
+				"centroid_difference_m": 3.4694469519536138e-18,
+				"complete_boundary_coverage": true,
+				"face_count": 6.0,
+				"solid_count": 1.0,
+				"volume_difference_m3": 0.0
+			},
+			"cad_face_areas": {
+				"N_3a691fbc55463bd70fa9f315": 0.03,
+				"N_61fd64a4682a7c88d2d9350d": 0.03,
+				"N_6aa498994a4fca8398c077f5": 0.02,
+				"N_7ed9f31a5302e2d69384b86c": 0.02,
+				"N_dee5996587661e5d3201e7d8": 0.015,
+				"N_ea4a040ba549e22e4d052b5a": 0.015
+			},
+			"cad_face_centers": {
+				"N_3a691fbc55463bd70fa9f315": [
+					0.02500000000000001,
+					1.4456028966473391e-18,
+					-0.05
+				],
+				"N_61fd64a4682a7c88d2d9350d": [
+					0.02500000000000001,
+					1.4456028966473391e-18,
+					0.05
+				],
+				"N_6aa498994a4fca8398c077f5": [
+					0.1,
+					1.0842021724855042e-18,
+					1.3552527156068803e-18
+				],
+				"N_7ed9f31a5302e2d69384b86c": [
+					-0.05,
+					1.0842021724855042e-18,
+					1.3552527156068803e-18
+				],
+				"N_dee5996587661e5d3201e7d8": [
+					0.02500000000000003,
+					-0.1,
+					-8.131516293641278e-20
+				],
+				"N_ea4a040ba549e22e4d052b5a": [
+					0.02500000000000003,
+					0.1,
+					1.3552527156068803e-18
+				]
+			},
+			"cad_face_descriptors": {
+				"N_3a691fbc55463bd70fa9f315": {
+					"area": 0.03,
+					"bounds": [
+						-0.0500001,
+						-0.1000001,
+						-0.0500001,
+						0.1000001,
+						0.1000001,
+						-0.0499999
+					],
+					"center": [
+						0.02500000000000001,
+						1.4456028966473391e-18,
+						-0.05
+					],
+					"edges": [
+						{
+							"bounds": [
+								-0.0500001,
+								-0.1000001,
+								-0.0500001,
+								-0.0499999,
+								0.1000001,
+								-0.0499999
+							],
+							"length": 0.2,
+							"points": [
+								[
+									-0.05,
+									-0.1,
+									-0.05
+								],
+								[
+									-0.05,
+									-0.05,
+									-0.05
+								],
+								[
+									-0.05,
+									0.0,
+									-0.05
+								],
+								[
+									-0.05,
+									0.05000000000000002,
+									-0.05
+								],
+								[
+									-0.05,
+									0.1,
+									-0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								0.0999999,
+								-0.1000001,
+								-0.0500001,
+								0.1000001,
+								0.1000001,
+								-0.0499999
+							],
+							"length": 0.2,
+							"points": [
+								[
+									0.1,
+									-0.1,
+									-0.05
+								],
+								[
+									0.1,
+									-0.05,
+									-0.05
+								],
+								[
+									0.1,
+									0.0,
+									-0.05
+								],
+								[
+									0.1,
+									0.05000000000000002,
+									-0.05
+								],
+								[
+									0.1,
+									0.1,
+									-0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								-0.0500001,
+								-0.1000001,
+								-0.0500001,
+								0.1000001,
+								-0.0999999,
+								-0.0499999
+							],
+							"length": 0.15,
+							"points": [
+								[
+									-0.05,
+									-0.1,
+									-0.05
+								],
+								[
+									-0.0125,
+									-0.1,
+									-0.05
+								],
+								[
+									0.02499999999999999,
+									-0.1,
+									-0.05
+								],
+								[
+									0.06249999999999998,
+									-0.1,
+									-0.05
+								],
+								[
+									0.1,
+									-0.1,
+									-0.05
+								]
+							],
+							"type": "TrimmedCurve"
+						},
+						{
+							"bounds": [
+								-0.05000009999999999,
+								0.0999999,
+								-0.0500001,
+								0.1000001,
+								0.1000001,
+								-0.0499999
+							],
+							"length": 0.15,
+							"points": [
+								[
+									-0.04999999999999999,
+									0.1,
+									-0.05
+								],
+								[
+									-0.01249999999999998,
+									0.1,
+									-0.05
+								],
+								[
+									0.02500000000000001,
+									0.1,
+									-0.05
+								],
+								[
+									0.0625,
+									0.1,
+									-0.05
+								],
+								[
+									0.1,
+									0.1,
+									-0.05
+								]
+							],
+							"type": "TrimmedCurve"
+						}
+					],
+					"inertia": [
+						0.0001,
+						-1.118083490375676e-21,
+						-6.776263578034403e-21,
+						-1.118083490375676e-21,
+						5.625000000000004e-05,
+						0.0,
+						-6.776263578034403e-21,
+						0.0,
+						0.00015625
+					],
+					"type": "Plane"
+				},
+				"N_61fd64a4682a7c88d2d9350d": {
+					"area": 0.03,
+					"bounds": [
+						-0.0500001,
+						-0.1000001,
+						0.0499999,
+						0.1000001,
+						0.1000001,
+						0.0500001
+					],
+					"center": [
+						0.02500000000000001,
+						1.4456028966473391e-18,
+						0.05
+					],
+					"edges": [
+						{
+							"bounds": [
+								-0.0500001,
+								-0.1000001,
+								0.0499999,
+								-0.0499999,
+								0.1000001,
+								0.0500001
+							],
+							"length": 0.2,
+							"points": [
+								[
+									-0.05,
+									-0.1,
+									0.05
+								],
+								[
+									-0.05,
+									-0.05,
+									0.05
+								],
+								[
+									-0.05,
+									0.0,
+									0.05
+								],
+								[
+									-0.05,
+									0.05000000000000002,
+									0.05
+								],
+								[
+									-0.05,
+									0.1,
+									0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								0.0999999,
+								-0.1000001,
+								0.0499999,
+								0.1000001,
+								0.1000001,
+								0.0500001
+							],
+							"length": 0.2,
+							"points": [
+								[
+									0.1,
+									-0.1,
+									0.05
+								],
+								[
+									0.1,
+									-0.05,
+									0.05
+								],
+								[
+									0.1,
+									0.0,
+									0.05
+								],
+								[
+									0.1,
+									0.05000000000000002,
+									0.05
+								],
+								[
+									0.1,
+									0.1,
+									0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								-0.05000009999999999,
+								-0.1000001,
+								0.0499999,
+								0.1000001,
+								-0.0999999,
+								0.0500001
+							],
+							"length": 0.15,
+							"points": [
+								[
+									-0.04999999999999999,
+									-0.1,
+									0.05
+								],
+								[
+									-0.01249999999999998,
+									-0.1,
+									0.05
+								],
+								[
+									0.02500000000000001,
+									-0.1,
+									0.05
+								],
+								[
+									0.0625,
+									-0.1,
+									0.05
+								],
+								[
+									0.1,
+									-0.1,
+									0.05
+								]
+							],
+							"type": "TrimmedCurve"
+						},
+						{
+							"bounds": [
+								-0.05000009999999999,
+								0.0999999,
+								0.0499999,
+								0.1000001,
+								0.1000001,
+								0.0500001
+							],
+							"length": 0.15,
+							"points": [
+								[
+									-0.04999999999999999,
+									0.1,
+									0.05
+								],
+								[
+									-0.01249999999999998,
+									0.1,
+									0.05
+								],
+								[
+									0.02500000000000001,
+									0.1,
+									0.05
+								],
+								[
+									0.0625,
+									0.1,
+									0.05
+								],
+								[
+									0.1,
+									0.1,
+									0.05
+								]
+							],
+							"type": "TrimmedCurve"
+						}
+					],
+					"inertia": [
+						0.0001,
+						-1.118083490375676e-21,
+						6.776263578034403e-21,
+						-1.118083490375676e-21,
+						5.625000000000004e-05,
+						0.0,
+						6.776263578034403e-21,
+						0.0,
+						0.00015625
+					],
+					"type": "Plane"
+				},
+				"N_6aa498994a4fca8398c077f5": {
+					"area": 0.02,
+					"bounds": [
+						0.0999999,
+						-0.1000001,
+						-0.0500001,
+						0.1000001,
+						0.1000001,
+						0.0500001
+					],
+					"center": [
+						0.1,
+						1.0842021724855042e-18,
+						1.3552527156068803e-18
+					],
+					"edges": [
+						{
+							"bounds": [
+								0.0999999,
+								-0.1000001,
+								-0.0500001,
+								0.1000001,
+								-0.0999999,
+								0.0500001
+							],
+							"length": 0.1,
+							"points": [
+								[
+									0.1,
+									-0.1,
+									-0.05
+								],
+								[
+									0.1,
+									-0.1,
+									-0.025
+								],
+								[
+									0.1,
+									-0.1,
+									0.0
+								],
+								[
+									0.1,
+									-0.1,
+									0.02500000000000001
+								],
+								[
+									0.1,
+									-0.1,
+									0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								0.0999999,
+								-0.1000001,
+								-0.0500001,
+								0.1000001,
+								0.1000001,
+								-0.0499999
+							],
+							"length": 0.2,
+							"points": [
+								[
+									0.1,
+									-0.1,
+									-0.05
+								],
+								[
+									0.1,
+									-0.05,
+									-0.05
+								],
+								[
+									0.1,
+									0.0,
+									-0.05
+								],
+								[
+									0.1,
+									0.05000000000000002,
+									-0.05
+								],
+								[
+									0.1,
+									0.1,
+									-0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								0.0999999,
+								-0.1000001,
+								0.0499999,
+								0.1000001,
+								0.1000001,
+								0.0500001
+							],
+							"length": 0.2,
+							"points": [
+								[
+									0.1,
+									-0.1,
+									0.05
+								],
+								[
+									0.1,
+									-0.05,
+									0.05
+								],
+								[
+									0.1,
+									0.0,
+									0.05
+								],
+								[
+									0.1,
+									0.05000000000000002,
+									0.05
+								],
+								[
+									0.1,
+									0.1,
+									0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								0.0999999,
+								0.0999999,
+								-0.0500001,
+								0.1000001,
+								0.1000001,
+								0.0500001
+							],
+							"length": 0.1,
+							"points": [
+								[
+									0.1,
+									0.1,
+									-0.05
+								],
+								[
+									0.1,
+									0.1,
+									-0.025
+								],
+								[
+									0.1,
+									0.1,
+									0.0
+								],
+								[
+									0.1,
+									0.1,
+									0.02500000000000001
+								],
+								[
+									0.1,
+									0.1,
+									0.05
+								]
+							],
+							"type": "Line"
+						}
+					],
+					"inertia": [
+						8.333333333333337e-05,
+						0.0,
+						0.0,
+						0.0,
+						1.6666666666666674e-05,
+						-5.082197683525803e-22,
+						0.0,
+						-5.082197683525803e-22,
+						6.66666666666667e-05
+					],
+					"type": "Plane"
+				},
+				"N_7ed9f31a5302e2d69384b86c": {
+					"area": 0.02,
+					"bounds": [
+						-0.0500001,
+						-0.1000001,
+						-0.0500001,
+						-0.0499999,
+						0.1000001,
+						0.0500001
+					],
+					"center": [
+						-0.05,
+						1.0842021724855042e-18,
+						1.3552527156068803e-18
+					],
+					"edges": [
+						{
+							"bounds": [
+								-0.0500001,
+								-0.1000001,
+								-0.0500001,
+								-0.0499999,
+								-0.0999999,
+								0.0500001
+							],
+							"length": 0.1,
+							"points": [
+								[
+									-0.05,
+									-0.1,
+									-0.05
+								],
+								[
+									-0.05,
+									-0.1,
+									-0.025
+								],
+								[
+									-0.05,
+									-0.1,
+									0.0
+								],
+								[
+									-0.05,
+									-0.1,
+									0.02500000000000001
+								],
+								[
+									-0.05,
+									-0.1,
+									0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								-0.0500001,
+								-0.1000001,
+								-0.0500001,
+								-0.0499999,
+								0.1000001,
+								-0.0499999
+							],
+							"length": 0.2,
+							"points": [
+								[
+									-0.05,
+									-0.1,
+									-0.05
+								],
+								[
+									-0.05,
+									-0.05,
+									-0.05
+								],
+								[
+									-0.05,
+									0.0,
+									-0.05
+								],
+								[
+									-0.05,
+									0.05000000000000002,
+									-0.05
+								],
+								[
+									-0.05,
+									0.1,
+									-0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								-0.0500001,
+								-0.1000001,
+								0.0499999,
+								-0.0499999,
+								0.1000001,
+								0.0500001
+							],
+							"length": 0.2,
+							"points": [
+								[
+									-0.05,
+									-0.1,
+									0.05
+								],
+								[
+									-0.05,
+									-0.05,
+									0.05
+								],
+								[
+									-0.05,
+									0.0,
+									0.05
+								],
+								[
+									-0.05,
+									0.05000000000000002,
+									0.05
+								],
+								[
+									-0.05,
+									0.1,
+									0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								-0.0500001,
+								0.0999999,
+								-0.0500001,
+								-0.0499999,
+								0.1000001,
+								0.0500001
+							],
+							"length": 0.1,
+							"points": [
+								[
+									-0.05,
+									0.1,
+									-0.05
+								],
+								[
+									-0.05,
+									0.1,
+									-0.025
+								],
+								[
+									-0.05,
+									0.1,
+									0.0
+								],
+								[
+									-0.05,
+									0.1,
+									0.02500000000000001
+								],
+								[
+									-0.05,
+									0.1,
+									0.05
+								]
+							],
+							"type": "Line"
+						}
+					],
+					"inertia": [
+						8.333333333333337e-05,
+						0.0,
+						0.0,
+						0.0,
+						1.6666666666666674e-05,
+						-5.082197683525803e-22,
+						0.0,
+						-5.082197683525803e-22,
+						6.666666666666668e-05
+					],
+					"type": "Plane"
+				},
+				"N_dee5996587661e5d3201e7d8": {
+					"area": 0.015,
+					"bounds": [
+						-0.0500001,
+						-0.1000001,
+						-0.0500001,
+						0.1000001,
+						-0.0999999,
+						0.0500001
+					],
+					"center": [
+						0.02500000000000003,
+						-0.1,
+						-8.131516293641278e-20
+					],
+					"edges": [
+						{
+							"bounds": [
+								-0.0500001,
+								-0.1000001,
+								-0.0500001,
+								-0.0499999,
+								-0.0999999,
+								0.0500001
+							],
+							"length": 0.1,
+							"points": [
+								[
+									-0.05,
+									-0.1,
+									-0.05
+								],
+								[
+									-0.05,
+									-0.1,
+									-0.025
+								],
+								[
+									-0.05,
+									-0.1,
+									0.0
+								],
+								[
+									-0.05,
+									-0.1,
+									0.02500000000000001
+								],
+								[
+									-0.05,
+									-0.1,
+									0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								0.0999999,
+								-0.1000001,
+								-0.0500001,
+								0.1000001,
+								-0.0999999,
+								0.0500001
+							],
+							"length": 0.1,
+							"points": [
+								[
+									0.1,
+									-0.1,
+									-0.05
+								],
+								[
+									0.1,
+									-0.1,
+									-0.025
+								],
+								[
+									0.1,
+									-0.1,
+									0.0
+								],
+								[
+									0.1,
+									-0.1,
+									0.02500000000000001
+								],
+								[
+									0.1,
+									-0.1,
+									0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								-0.0500001,
+								-0.1000001,
+								-0.0500001,
+								0.1000001,
+								-0.0999999,
+								-0.0499999
+							],
+							"length": 0.15,
+							"points": [
+								[
+									-0.05,
+									-0.1,
+									-0.05
+								],
+								[
+									-0.0125,
+									-0.1,
+									-0.05
+								],
+								[
+									0.02499999999999999,
+									-0.1,
+									-0.05
+								],
+								[
+									0.06249999999999998,
+									-0.1,
+									-0.05
+								],
+								[
+									0.1,
+									-0.1,
+									-0.05
+								]
+							],
+							"type": "TrimmedCurve"
+						},
+						{
+							"bounds": [
+								-0.05000009999999999,
+								-0.1000001,
+								0.0499999,
+								0.1000001,
+								-0.0999999,
+								0.0500001
+							],
+							"length": 0.15,
+							"points": [
+								[
+									-0.04999999999999999,
+									-0.1,
+									0.05
+								],
+								[
+									-0.01249999999999998,
+									-0.1,
+									0.05
+								],
+								[
+									0.02500000000000001,
+									-0.1,
+									0.05
+								],
+								[
+									0.0625,
+									-0.1,
+									0.05
+								],
+								[
+									0.1,
+									-0.1,
+									0.05
+								]
+							],
+							"type": "TrimmedCurve"
+						}
+					],
+					"inertia": [
+						1.2500000000000006e-05,
+						0.0,
+						-1.0164395367051608e-22,
+						0.0,
+						4.0625e-05,
+						0.0,
+						-1.0164395367051608e-22,
+						0.0,
+						2.8124999999999992e-05
+					],
+					"type": "Plane"
+				},
+				"N_ea4a040ba549e22e4d052b5a": {
+					"area": 0.015,
+					"bounds": [
+						-0.0500001,
+						0.0999999,
+						-0.0500001,
+						0.1000001,
+						0.1000001,
+						0.0500001
+					],
+					"center": [
+						0.02500000000000003,
+						0.1,
+						1.3552527156068803e-18
+					],
+					"edges": [
+						{
+							"bounds": [
+								-0.0500001,
+								0.0999999,
+								-0.0500001,
+								-0.0499999,
+								0.1000001,
+								0.0500001
+							],
+							"length": 0.1,
+							"points": [
+								[
+									-0.05,
+									0.1,
+									-0.05
+								],
+								[
+									-0.05,
+									0.1,
+									-0.025
+								],
+								[
+									-0.05,
+									0.1,
+									0.0
+								],
+								[
+									-0.05,
+									0.1,
+									0.02500000000000001
+								],
+								[
+									-0.05,
+									0.1,
+									0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								0.0999999,
+								0.0999999,
+								-0.0500001,
+								0.1000001,
+								0.1000001,
+								0.0500001
+							],
+							"length": 0.1,
+							"points": [
+								[
+									0.1,
+									0.1,
+									-0.05
+								],
+								[
+									0.1,
+									0.1,
+									-0.025
+								],
+								[
+									0.1,
+									0.1,
+									0.0
+								],
+								[
+									0.1,
+									0.1,
+									0.02500000000000001
+								],
+								[
+									0.1,
+									0.1,
+									0.05
+								]
+							],
+							"type": "Line"
+						},
+						{
+							"bounds": [
+								-0.05000009999999999,
+								0.0999999,
+								-0.0500001,
+								0.1000001,
+								0.1000001,
+								-0.0499999
+							],
+							"length": 0.15,
+							"points": [
+								[
+									-0.04999999999999999,
+									0.1,
+									-0.05
+								],
+								[
+									-0.01249999999999998,
+									0.1,
+									-0.05
+								],
+								[
+									0.02500000000000001,
+									0.1,
+									-0.05
+								],
+								[
+									0.0625,
+									0.1,
+									-0.05
+								],
+								[
+									0.1,
+									0.1,
+									-0.05
+								]
+							],
+							"type": "TrimmedCurve"
+						},
+						{
+							"bounds": [
+								-0.05000009999999999,
+								0.0999999,
+								0.0499999,
+								0.1000001,
+								0.1000001,
+								0.0500001
+							],
+							"length": 0.15,
+							"points": [
+								[
+									-0.04999999999999999,
+									0.1,
+									0.05
+								],
+								[
+									-0.01249999999999998,
+									0.1,
+									0.05
+								],
+								[
+									0.02500000000000001,
+									0.1,
+									0.05
+								],
+								[
+									0.0625,
+									0.1,
+									0.05
+								],
+								[
+									0.1,
+									0.1,
+									0.05
+								]
+							],
+							"type": "TrimmedCurve"
+						}
+					],
+					"inertia": [
+						1.2500000000000006e-05,
+						0.0,
+						-5.082197683525816e-23,
+						0.0,
+						4.0625e-05,
+						0.0,
+						-5.082197683525816e-23,
+						0.0,
+						2.8124999999999992e-05
+					],
+					"type": "Plane"
+				}
+			},
+			"cad_faces": [
+				"N_3a691fbc55463bd70fa9f315",
+				"N_61fd64a4682a7c88d2d9350d",
+				"N_6aa498994a4fca8398c077f5",
+				"N_7ed9f31a5302e2d69384b86c",
+				"N_dee5996587661e5d3201e7d8",
+				"N_ea4a040ba549e22e4d052b5a"
+			],
+			"cad_format": "brep",
+			"cad_geometry_revision": "1ff96f4619defa1088169fbda2e9448dfa3a42062fc22f6383cfb47ffbe34263",
+			"cad_graph_encoding": "unicore-cad-graph-v1",
+			"cad_graph_payload": "HAAAAAIAAAAbAAAABAAAAAQAAAAGAAAAc2NoZW1hAAADAAAAAACAPwQAAAAFAAAAdW5pdHMAAAAEAAAAAQAAAG0AAAAEAAAABAAAAHJvb3QEAAAABgAAAHJlc3VsdAAABAAAAAUAAABub2RlcwAAABwAAAADAAAAGwAAAAMAAAAEAAAAAgAAAGlkAAAEAAAAAQAAAGEAAAAEAAAABAAAAHR5cGUEAAAAAwAAAEJveAAEAAAACgAAAGRpbWVuc2lvbnMAABwAAAADAAAAAwABAJqZmZmZmbk/AwABAJqZmZmZmck/AwABAJqZmZmZmbk/GwAAAAQAAAAEAAAAAgAAAGlkAAAEAAAAAQAAAGIAAAAEAAAABAAAAHR5cGUEAAAAAwAAAEJveAAEAAAACgAAAGRpbWVuc2lvbnMAABwAAAADAAAAAwABAJqZmZmZmbk/AwABAJqZmZmZmck/AwABAJqZmZmZmbk/BAAAAAgAAABwb3NpdGlvbhwAAAADAAAAAwABAJqZmZmZmak/AwAAAAAAAAADAAAAAAAAABsAAAAEAAAABAAAAAIAAABpZAAABAAAAAYAAAByZXN1bHQAAAQAAAAEAAAAdHlwZQQAAAAFAAAAVW5pb24AAAAEAAAABAAAAGJhc2UEAAAAAQAAAGEAAAAEAAAABAAAAHRvb2wEAAAAAQAAAGIAAAAbAAAABAAAAAQAAAAGAAAAc2NoZW1hAAADAAAAAACAPwQAAAAFAAAAdW5pdHMAAAAEAAAAAQAAAG0AAAAEAAAABAAAAHJvb3QEAAAABgAAAHJlc3VsdAAABAAAAAUAAABub2RlcwAAABwAAAADAAAAGwAAAAMAAAAEAAAAAgAAAGlkAAAEAAAAAQAAAGEAAAAEAAAABAAAAHR5cGUEAAAAAwAAAEJveAAEAAAACgAAAGRpbWVuc2lvbnMAABwAAAADAAAAAwABAJqZmZmZmbk/AwABAJqZmZmZmck/AwABAJqZmZmZmbk/GwAAAAQAAAAEAAAAAgAAAGlkAAAEAAAAAQAAAGIAAAAEAAAABAAAAHR5cGUEAAAAAwAAAEJveAAEAAAACgAAAGRpbWVuc2lvbnMAABwAAAADAAAAAwABAJqZmZmZmbk/AwABAJqZmZmZmck/AwABAJqZmZmZmbk/BAAAAAgAAABwb3NpdGlvbhwAAAADAAAAAwABAJqZmZmZmak/AwAAAAAAAAADAAAAAAAAABsAAAAEAAAABAAAAAIAAABpZAAABAAAAAYAAAByZXN1bHQAAAQAAAAEAAAAdHlwZQQAAAAFAAAAVW5pb24AAAAEAAAABAAAAGJhc2UEAAAAAQAAAGEAAAAEAAAABAAAAHRvb2wEAAAAAQAAAGIAAAA=",
+			"cad_kernel": {
+				"gmsh": "4.15.2",
+				"occt": "7.8.1",
+				"tolerance_m": 1e-08
+			},
+			"cad_pending_boundaries": {},
+			"cad_safe_continuations": [
+				"N_7ed9f31a5302e2d69384b86c",
+				"N_6aa498994a4fca8398c077f5"
+			],
+			"cad_sha256": "42950b5a9387acf1a6c7e258af8ed14532594d4da8c6fcf90bbb796275b60fe1",
+			"cad_source_to_m": 1.0,
+			"cad_source_units": "m",
+			"cad_topology_metadata": {
+				"native_history": false,
+				"schema": 1
+			},
+			"cad_topology_review": {},
+			"cad_validation": {
+				"analyzer_valid": true,
+				"area": 0.13,
+				"bounds": [
+					-0.05000000000000002,
+					-0.1,
+					-0.05,
+					0.10000000000000002,
+					0.1,
+					0.05
+				],
+				"centroid": [
+					0.025,
+					8.236924838188486e-19,
+					1.6112448952215136e-19
+				],
+				"closed_shells": true,
+				"diagnostics": [],
+				"edge_count": 12.0,
+				"face_count": 6.0,
+				"faces": [
+					{
+						"area": 0.02,
+						"bounds": [
+							-0.05,
+							-0.1,
+							-0.05,
+							-0.05,
+							0.1,
+							0.05
+						],
+						"center": [
+							-0.05,
+							1.0842021724855042e-18,
+							1.3552527156068803e-18
+						],
+						"inertia": [
+							8.333333333333337e-05,
+							0.0,
+							0.0,
+							0.0,
+							1.6666666666666674e-05,
+							-5.082197683525803e-22,
+							0.0,
+							-5.082197683525803e-22,
+							6.666666666666668e-05
+						],
+						"plane_outward_normal": [
+							-1.0,
+							0.0,
+							0.0
+						],
+						"slot": 1.0
+					},
+					{
+						"area": 0.015,
+						"bounds": [
+							-0.05000000000000002,
+							-0.1,
+							-0.05,
+							0.10000000000000002,
+							-0.1,
+							0.05
+						],
+						"center": [
+							0.025,
+							-0.1,
+							-8.131516293641278e-20
+						],
+						"inertia": [
+							1.2500000000000006e-05,
+							0.0,
+							-1.6517142471458857e-22,
+							0.0,
+							4.062500000000002e-05,
+							0.0,
+							-1.6517142471458857e-22,
+							0.0,
+							2.812500000000002e-05
+						],
+						"plane_outward_normal": [
+							0.0,
+							-1.0,
+							0.0
+						],
+						"slot": 2.0
+					},
+					{
+						"area": 0.03,
+						"bounds": [
+							-0.05000000000000002,
+							-0.1,
+							0.05,
+							0.1,
+							0.1,
+							0.05
+						],
+						"center": [
+							0.02500000000000001,
+							1.4456028966473391e-18,
+							0.05
+						],
+						"inertia": [
+							0.0001,
+							-1.118083490375676e-21,
+							6.776263578034403e-21,
+							-1.118083490375676e-21,
+							5.625000000000004e-05,
+							0.0,
+							6.776263578034403e-21,
+							0.0,
+							0.00015625
+						],
+						"plane_outward_normal": [
+							0.0,
+							0.0,
+							1.0
+						],
+						"slot": 3.0
+					},
+					{
+						"area": 0.015,
+						"bounds": [
+							-0.05000000000000002,
+							0.1,
+							-0.05,
+							0.1,
+							0.1,
+							0.05
+						],
+						"center": [
+							0.025,
+							0.1,
+							1.3552527156068803e-18
+						],
+						"inertia": [
+							1.2500000000000006e-05,
+							0.0,
+							-1.3976043629695968e-22,
+							0.0,
+							4.062500000000002e-05,
+							0.0,
+							-1.3976043629695968e-22,
+							0.0,
+							2.812500000000002e-05
+						],
+						"plane_outward_normal": [
+							0.0,
+							1.0,
+							0.0
+						],
+						"slot": 4.0
+					},
+					{
+						"area": 0.03,
+						"bounds": [
+							-0.05000000000000002,
+							-0.1,
+							-0.05,
+							0.10000000000000002,
+							0.1,
+							-0.05
+						],
+						"center": [
+							0.02500000000000001,
+							1.4456028966473391e-18,
+							-0.05
+						],
+						"inertia": [
+							0.0001,
+							-1.118083490375676e-21,
+							-6.776263578034403e-21,
+							-1.118083490375676e-21,
+							5.625000000000004e-05,
+							0.0,
+							-6.776263578034403e-21,
+							0.0,
+							0.00015625
+						],
+						"plane_outward_normal": [
+							0.0,
+							0.0,
+							-1.0
+						],
+						"slot": 5.0
+					},
+					{
+						"area": 0.02,
+						"bounds": [
+							0.1,
+							-0.1,
+							-0.05,
+							0.1,
+							0.1,
+							0.05
+						],
+						"center": [
+							0.1,
+							1.0842021724855042e-18,
+							1.3552527156068803e-18
+						],
+						"inertia": [
+							8.333333333333337e-05,
+							0.0,
+							0.0,
+							0.0,
+							1.6666666666666674e-05,
+							-5.082197683525803e-22,
+							0.0,
+							-5.082197683525803e-22,
+							6.66666666666667e-05
+						],
+						"plane_outward_normal": [
+							1.0,
+							0.0,
+							0.0
+						],
+						"slot": 6.0
+					}
+				],
+				"manifold_edge_incidence": true,
+				"maximum_tolerance_m": 1e-07,
+				"native_available": true,
+				"schema": 1.0,
+				"self_intersection_guarantee": false,
+				"shape_type": 0.0,
+				"shell_count": 1.0,
+				"solid_count": 1.0,
+				"status": "VALID",
+				"vertex_count": 8.0,
+				"volume": 0.003
+			},
+			"cad_volume": 0.003,
+			"dimensions": [
+				0.15000020000000003,
+				0.2000002,
+				0.1000002
+			],
+			"force": [
+				0,
+				1000,
+				0
+			],
+			"id": "fuse",
+			"inner_diameter": 0.10500014000000002,
+			"kind": "CAD",
+			"load_face": "N_61fd64a4682a7c88d2d9350d",
+			"material": {
+				"E": 210000000000.0,
+				"density": 7850.0,
+				"nu": 0.0
+			},
+			"name": "fuse",
+			"position": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"rotation": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"scale": [
+				1.0,
+				1.0,
+				1.0
+			],
+			"support": "N_3a691fbc55463bd70fa9f315",
+			"visible": true
+		}
+	],
+	"results": {},
+	"revision": 4,
+	"schema": 1.0,
+	"units": "m-N-Pa-kg"
+}

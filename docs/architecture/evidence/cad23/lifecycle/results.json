@@ -1,0 +1,298 @@
+[
+  {
+    "test": "mesh-cancel-before",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "cancelled",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 0.8007457000057912,
+      "peak_memory_bytes": 507904,
+      "job_object": true
+    },
+    "pid": 6916,
+    "pid_alive": false,
+    "observed_active": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\mesh-cancel-before-1794667214320970300"
+  },
+  {
+    "test": "mesh-cancel-active",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "cancelled",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 0.4522754000063287,
+      "peak_memory_bytes": 397312,
+      "job_object": true
+    },
+    "pid": 2348,
+    "pid_alive": false,
+    "observed_active": true,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\mesh-cancel-active-1794667215813960500"
+  },
+  {
+    "test": "mesh-timeout",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "timeout",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 0.44453470000007655,
+      "peak_memory_bytes": 393216,
+      "job_object": true
+    },
+    "pid": 20548,
+    "pid_alive": false,
+    "observed_active": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\mesh-timeout-1794667217655560600"
+  },
+  {
+    "test": "mesh-owner-exit",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "terminal": {
+      "state": "owner_exited",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 0.5843603999965126,
+      "peak_memory_bytes": 380928,
+      "job_object": true
+    },
+    "pid": 13052,
+    "pid_alive": false,
+    "observed_active": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\mesh-owner-exit-1794667219474638400"
+  },
+  {
+    "test": "mesh-worker-crash",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "failed",
+      "exit_code": null,
+      "error": "Cannot resume owned child thread",
+      "seconds": 0.4756219999981113,
+      "peak_memory_bytes": 380928,
+      "job_object": true
+    },
+    "pid": 14208,
+    "pid_alive": false,
+    "observed_active": true,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\mesh-worker-crash-1794667221807779400"
+  },
+  {
+    "test": "mesh-invalid-input",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "failed",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 1.8736427000112599,
+      "peak_memory_bytes": 662827008,
+      "job_object": true
+    },
+    "pid": 16604,
+    "pid_alive": false,
+    "observed_active": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\mesh-invalid-input-1794667223846101800"
+  },
+  {
+    "test": "mesh-missing-worker",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "failed",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 1.2383471000066493,
+      "peak_memory_bytes": 636215296,
+      "job_object": true
+    },
+    "pid": 7152,
+    "pid_alive": false,
+    "observed_active": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\mesh-missing-worker-1794667227077522000"
+  },
+  {
+    "test": "mesh-recovery",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "terminal": {
+      "state": "completed",
+      "exit_code": 0,
+      "error": "",
+      "seconds": 19.43167999999423,
+      "peak_memory_bytes": 717877248,
+      "job_object": true
+    },
+    "pid": 21196,
+    "pid_alive": false,
+    "observed_active": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\mesh-recovery-1794667229705764600"
+  },
+  {
+    "test": "solver-cancel-before",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "cancelled",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 0.14299440001195762,
+      "started_utc": "2026-11-14T14:40:51.738505+00:00",
+      "ended_utc": "2026-11-14T14:40:51.881517+00:00",
+      "peak_working_set_bytes": 2105344,
+      "peak_memory_bytes": 462848,
+      "job_object": true
+    },
+    "pid": 11520,
+    "pid_alive": false,
+    "observed_active": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\solver-cancel-before-1794667250513465700"
+  },
+  {
+    "test": "solver-cancel-active",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "cancelled",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 0.22054660000139847,
+      "started_utc": "2026-11-14T14:40:52.464012+00:00",
+      "ended_utc": "2026-11-14T14:40:52.684586+00:00",
+      "peak_working_set_bytes": 2211840,
+      "peak_memory_bytes": 499712,
+      "job_object": true
+    },
+    "pid": 14476,
+    "pid_alive": false,
+    "observed_active": true,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\solver-cancel-active-1794667251910966600"
+  },
+  {
+    "test": "solver-timeout",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "timeout",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 0.1524896000046283,
+      "started_utc": "2026-11-14T14:40:53.902898+00:00",
+      "ended_utc": "2026-11-14T14:40:54.055407+00:00",
+      "peak_working_set_bytes": 2097152,
+      "peak_memory_bytes": 462848,
+      "job_object": true
+    },
+    "pid": 23484,
+    "pid_alive": false,
+    "observed_active": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\solver-timeout-1794667252708671100"
+  },
+  {
+    "test": "solver-owner-exit",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "terminal": {
+      "state": "owner_exited",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 0.4460460999980569,
+      "started_utc": "2026-11-14T14:40:55.272445+00:00",
+      "ended_utc": "2026-11-14T14:40:55.718547+00:00",
+      "peak_working_set_bytes": 2211840,
+      "peak_memory_bytes": 499712,
+      "job_object": true
+    },
+    "pid": 19132,
+    "pid_alive": false,
+    "observed_active": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\solver-owner-exit-1794667254083379600"
+  },
+  {
+    "test": "solver-worker-crash",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "failed",
+      "exit_code": 15,
+      "error": "Cannot resume owned child thread",
+      "seconds": 0.14380309999978635,
+      "started_utc": "2026-11-14T14:40:56.989859+00:00",
+      "ended_utc": "2026-11-14T14:40:57.133682+00:00",
+      "peak_working_set_bytes": 0,
+      "peak_memory_bytes": 434176,
+      "job_object": true
+    },
+    "pid": 9584,
+    "pid_alive": false,
+    "observed_active": true,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\solver-worker-crash-1794667255745821200"
+  },
+  {
+    "test": "solver-invalid-input",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "failed",
+      "exit_code": 0,
+      "error": "",
+      "seconds": 0.37998199999856297,
+      "started_utc": "2026-11-14T14:40:57.630980+00:00",
+      "ended_utc": "2026-11-14T14:40:58.011009+00:00",
+      "peak_working_set_bytes": 8179712,
+      "peak_memory_bytes": 10997760,
+      "job_object": true
+    },
+    "pid": 18280,
+    "pid_alive": false,
+    "observed_active": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\solver-invalid-input-1794667257154453800"
+  },
+  {
+    "test": "solver-missing-worker",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "failed",
+      "exit_code": null,
+      "error": "[WinError 2] \u041d\u0435 \u0443\u0434\u0430\u0435\u0442\u0441\u044f \u043d\u0430\u0439\u0442\u0438 \u0443\u043a\u0430\u0437\u0430\u043d\u043d\u044b\u0439 \u0444\u0430\u0439\u043b",
+      "seconds": 0.0005799000064143911,
+      "started_utc": "2026-11-14T14:40:59.259083+00:00",
+      "ended_utc": "2026-11-14T14:40:59.259661+00:00",
+      "peak_working_set_bytes": 0,
+      "peak_memory_bytes": 0,
+      "job_object": true
+    },
+    "pid": null,
+    "pid_alive": false,
+    "observed_active": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\solver-missing-worker-1794667258052149100"
+  },
+  {
+    "test": "solver-recovery",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "terminal": {
+      "state": "completed",
+      "exit_code": 0,
+      "error": "",
+      "seconds": 2.6373760999995284,
+      "started_utc": "2026-11-14T14:40:59.766401+00:00",
+      "ended_utc": "2026-11-14T14:41:02.404108+00:00",
+      "peak_working_set_bytes": 121036800,
+      "peak_memory_bytes": 184475648,
+      "job_object": true
+    },
+    "pid": 16540,
+    "pid_alive": false,
+    "observed_active": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\solver-recovery-1794667259282832600"
+  }
+]

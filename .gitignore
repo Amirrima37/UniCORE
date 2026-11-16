@@ -65,3 +65,11 @@ htmlcov/
 .env
 .env.local
 .env.*.local
+
+# Local CAD experiment inputs/outputs and native build products
+/assembly-test*.json
+/assembly-test*.json.legacy
+/spooles.out
+/bin/*.gdextension
+/bin/*.gdextension.uid
+

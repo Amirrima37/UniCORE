@@ -1,0 +1,2 @@
+ERROR: Geometry changed since Gmsh generation; regenerate mesh
+   at: push_error (core/variant/variant_utility.cpp:894)

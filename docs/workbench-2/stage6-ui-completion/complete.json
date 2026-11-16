@@ -1,0 +1,14 @@
+[
+  {
+    "test": "test_stage6_dialog_ui",
+    "exit": 0,
+    "passed": true,
+    "seconds": 4.208057999996527
+  },
+  {
+    "test": "test_stage6_workbench",
+    "exit": 0,
+    "passed": false,
+    "seconds": 73.01408900000388
+  }
+]

@@ -1,0 +1,155 @@
+[
+  {
+    "test": "cancel",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "cancelled",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 0.6371195000101579,
+      "peak_memory_bytes": 401408,
+      "job_object": true
+    },
+    "observed_active": true,
+    "pid": 20804,
+    "pid_alive": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\lifecycle\\cancel-1794666673956947500"
+  },
+  {
+    "test": "timeout",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "timeout",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 0.5203902999928687,
+      "peak_memory_bytes": 397312,
+      "job_object": true
+    },
+    "observed_active": false,
+    "pid": 12616,
+    "pid_alive": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\lifecycle\\timeout-1794666675272865900"
+  },
+  {
+    "test": "owner-exit",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "terminal": {
+      "state": "owner_exited",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 0.7063002000068082,
+      "peak_memory_bytes": 401408,
+      "job_object": true
+    },
+    "observed_active": false,
+    "pid": 4416,
+    "pid_alive": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\lifecycle\\owner-exit-1794666677174636800"
+  },
+  {
+    "test": "counts",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "failed",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 1.859691899997415,
+      "peak_memory_bytes": 662679552,
+      "job_object": true
+    },
+    "observed_active": false,
+    "pid": 12744,
+    "pid_alive": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\lifecycle\\counts-1794666679728721500"
+  },
+  {
+    "test": "quality",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "failed",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 2.671190699998988,
+      "peak_memory_bytes": 664551424,
+      "job_object": true
+    },
+    "observed_active": false,
+    "pid": 2976,
+    "pid_alive": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\lifecycle\\quality-1794666683219350600"
+  },
+  {
+    "test": "pathological",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "failed",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 2.0261792999954196,
+      "peak_memory_bytes": 662319104,
+      "job_object": true
+    },
+    "observed_active": false,
+    "pid": 4468,
+    "pid_alive": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\lifecycle\\pathological-1794666687278049300"
+  },
+  {
+    "test": "invalid-config",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "failed",
+      "exit_code": null,
+      "error": "Unsupported mesh settings schema",
+      "seconds": 0.0039050000050337985,
+      "peak_memory_bytes": 0,
+      "job_object": false
+    },
+    "observed_active": false,
+    "pid": null,
+    "pid_alive": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\lifecycle\\invalid-config-1794666690674421800"
+  },
+  {
+    "test": "oversize-request",
+    "outcome": "PASS",
+    "exit_code": 1,
+    "terminal": {
+      "state": "failed",
+      "exit_code": null,
+      "error": "Gmsh request exceeds 128 MiB",
+      "seconds": 0.0032140999974217266,
+      "peak_memory_bytes": 0,
+      "job_object": false
+    },
+    "observed_active": false,
+    "pid": null,
+    "pid_alive": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\lifecycle\\oversize-request-1794666691915166900"
+  },
+  {
+    "test": "recovery",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "terminal": {
+      "state": "completed",
+      "exit_code": 0,
+      "error": "",
+      "seconds": 2.961443299995153,
+      "peak_memory_bytes": 667299840,
+      "job_object": true
+    },
+    "observed_active": false,
+    "pid": 19724,
+    "pid_alive": false,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\lifecycle\\recovery-1794666692505733900"
+  }
+]

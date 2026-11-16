@@ -1,0 +1,39 @@
+Info    :  - Label 'Shapes/Open CASCADE STEP translator 7.8 1' (3D)
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Line)
+Info    : [ 10%] Meshing curve 2 (Line)
+Info    : [ 20%] Meshing curve 3 (Line)
+Info    : [ 30%] Meshing curve 4 (Line)
+Info    : [ 40%] Meshing curve 5 (Line)
+Info    : [ 50%] Meshing curve 6 (Line)
+Info    : [ 60%] Meshing curve 7 (Line)
+Info    : [ 60%] Meshing curve 8 (Line)
+Info    : [ 70%] Meshing curve 9 (Line)
+Info    : [ 80%] Meshing curve 10 (Line)
+Info    : [ 90%] Meshing curve 11 (Line)
+Info    : [100%] Meshing curve 12 (Line)
+Info    : Done meshing 1D (Wall 0.000580072s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 4 (Plane, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 5 (Plane, Frontal-Delaunay)
+Info    : [ 90%] Meshing surface 6 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.052695s, CPU 0.046875s)
+Info    : 884 nodes 1964 elements
+Info    :  - Label 'Shapes/Open CASCADE STEP translator 7.8 1' (3D)
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Circle)
+Info    : [ 40%] Meshing curve 2 (Line)
+Info    : [ 70%] Meshing curve 3 (Circle)
+Info    : Done meshing 1D (Wall 0.000276089s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Cylinder, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.461443s, CPU 0.46875s)
+Info    : 8856 nodes 18002 elements
+bar volume= 0.010000000000000002 faces= 6 display_vertices= 5292
+cylinder volume= 0.006283185307179587 faces= 3 display_vertices= 53124
+STEP_PREVIEW_PASS

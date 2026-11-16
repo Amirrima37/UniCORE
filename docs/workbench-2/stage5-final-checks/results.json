@@ -1,0 +1,92 @@
+[
+  {
+    "name": "test_stage5_provenance",
+    "exit": 0,
+    "seconds": 0.7932777999994869,
+    "passed": true
+  },
+  {
+    "name": "test_stage5_quality",
+    "exit": 0,
+    "seconds": 0.9942453000003297,
+    "passed": true
+  },
+  {
+    "name": "test_stage5_display",
+    "exit": 0,
+    "seconds": 0.6362234000007447,
+    "passed": true
+  },
+  {
+    "name": "test_stage5_probes",
+    "exit": 0,
+    "seconds": 2.098691499999404,
+    "passed": true
+  },
+  {
+    "name": "test_cylinder_fem",
+    "exit": 0,
+    "seconds": 2.7373145000019576,
+    "passed": true
+  },
+  {
+    "name": "test_workbench2",
+    "exit": 0,
+    "seconds": 1.904120299997885,
+    "passed": true
+  },
+  {
+    "name": "test_workbench2_stage2",
+    "exit": 0,
+    "seconds": 2.177085499999521,
+    "passed": true
+  },
+  {
+    "name": "test_workbench2_stage3",
+    "exit": 0,
+    "seconds": 2.750821599998744,
+    "passed": true
+  },
+  {
+    "name": "checkpoint-restart",
+    "exit": 0,
+    "seconds": 0.45011430000158725,
+    "passed": true
+  },
+  {
+    "name": "release-extension-test_native_structural_suite",
+    "exit": 0,
+    "seconds": 1.9537615000008373,
+    "passed": true
+  },
+  {
+    "name": "release-extension-test_native_thermal_suite",
+    "exit": 0,
+    "seconds": 1.2700507000008656,
+    "passed": true
+  },
+  {
+    "name": "release-extension-test_native_radiation",
+    "exit": 0,
+    "seconds": 0.6098949000006542,
+    "passed": true
+  },
+  {
+    "name": "cylinder-graphics-performance",
+    "exit": 0,
+    "seconds": 20.79390720000083,
+    "passed": true
+  },
+  {
+    "name": "box-graphics",
+    "exit": 0,
+    "seconds": 5.817217599997093,
+    "passed": true
+  },
+  {
+    "name": "box-thermal-graphics-playback",
+    "exit": 0,
+    "seconds": 7.193408099999942,
+    "passed": true
+  }
+]

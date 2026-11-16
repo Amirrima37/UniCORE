@@ -1,0 +1,90 @@
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/displacement-1280.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/displacement-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/displacement-1920.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/displacement-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/engineering-strain-1280.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/engineering-strain-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/engineering-strain-1920.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/engineering-strain-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/local-face-refinement-1280.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/local-face-refinement-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/local-face-refinement-1920.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/local-face-refinement-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/mesh-statistics-1280.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/mesh-statistics-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/mesh-statistics-1920.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/mesh-statistics-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/quadratic-quality-1280.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/quadratic-quality-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/quadratic-quality-1920.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/quadratic-quality-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/quadratic-through-hole-mesh-1280.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/quadratic-through-hole-mesh-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/quadratic-through-hole-mesh-1920.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/quadratic-through-hole-mesh-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/saved-reopened-current-1280.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/saved-reopened-current-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/saved-reopened-current-1920.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/saved-reopened-current-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/selected-cad-face-1280.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/selected-cad-face-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/selected-cad-face-1920.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/selected-cad-face-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/tet10-settings-1280.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/tet10-settings-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/tet10-settings-1920.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/tet10-settings-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/von-mises-1280.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/von-mises-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/von-mises-1920.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/von-mises-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/worst-element-metrics-1280.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/worst-element-metrics-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/worst-element-metrics-1920.png and res://docs/architecture/evidence/cad23/gui-1794612829782997600/screenshots/worst-element-metrics-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/displacement-1280.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/displacement-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/displacement-1920.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/displacement-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/engineering-strain-1280.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/engineering-strain-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/engineering-strain-1920.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/engineering-strain-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/local-face-refinement-1280.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/local-face-refinement-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/local-face-refinement-1920.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/local-face-refinement-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/mesh-statistics-1280.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/mesh-statistics-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/mesh-statistics-1920.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/mesh-statistics-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/quadratic-quality-1280.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/quadratic-quality-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/quadratic-quality-1920.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/quadratic-quality-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/quadratic-through-hole-mesh-1280.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/quadratic-through-hole-mesh-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/quadratic-through-hole-mesh-1920.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/quadratic-through-hole-mesh-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/saved-reopened-current-1280.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/saved-reopened-current-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/saved-reopened-current-1920.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/saved-reopened-current-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/selected-cad-face-1280.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/selected-cad-face-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/selected-cad-face-1920.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/selected-cad-face-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/tet10-settings-1280.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/tet10-settings-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/tet10-settings-1920.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/tet10-settings-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/von-mises-1280.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/von-mises-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/von-mises-1920.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/von-mises-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/worst-element-metrics-1280.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/worst-element-metrics-1280.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)
+WARNING: UID duplicate detected between res://docs/architecture/evidence/cad23/screenshots/worst-element-metrics-1920.png and res://docs/architecture/evidence/cad23/gui-1794614693477009900/screenshots/worst-element-metrics-1920.png.
+   at: _process_file_system (editor/file_system/editor_file_system.cpp:1405)

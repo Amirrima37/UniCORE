@@ -1,0 +1,6 @@
+extends SceneTree
+func _init():
+ var c=Control.new()
+ root.add_child(c)
+ c.queue_free()
+ quit(0)

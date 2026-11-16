@@ -1,0 +1,156 @@
+{
+  "checkpoint4": "PASS for representative supported interactions",
+  "stage6": "PARTIAL; Checkpoint 5 not started",
+  "default_passed": 28,
+  "focused_passed": 10,
+  "focused": [
+    {
+      "test": "test_stage6_condition_conflicts",
+      "exit": 0,
+      "passed": true,
+      "seconds": 0.7109029999992345
+    },
+    {
+      "test": "test_stage6_sphere_dialog",
+      "exit": 0,
+      "passed": true,
+      "seconds": 0.6269954000017606
+    },
+    {
+      "test": "test_stage5_provenance",
+      "exit": 0,
+      "passed": true,
+      "seconds": 0.9018808999971952
+    },
+    {
+      "test": "test_stage51_cache",
+      "exit": 0,
+      "passed": true,
+      "seconds": 3.3244295999975293
+    },
+    {
+      "test": "test_stage5_probes",
+      "exit": 0,
+      "passed": true,
+      "seconds": 2.4006942999985768
+    },
+    {
+      "test": "test_app_shell_suite",
+      "exit": 0,
+      "passed": true,
+      "seconds": 9.917326599999797
+    },
+    {
+      "exit": 0,
+      "passed": true,
+      "seconds": 8.946155199999339,
+      "test": "test_stage6_load_persistence"
+    },
+    {
+      "exit": 0,
+      "passed": true,
+      "seconds": 48.14001819999976,
+      "test": "test_stage6_failure_ui"
+    },
+    {
+      "test": "test_stage6_dialog_ui",
+      "exit": 0,
+      "passed": true,
+      "seconds": 4.208057999996527
+    },
+    {
+      "test": "test_stage6_workbench",
+      "exit": 0,
+      "passed": true,
+      "seconds": 73.8056699000008
+    }
+  ],
+  "studies": 6,
+  "dimension_transform_material_undo_sequences": 30,
+  "additional_load_condition_sequences": 6,
+  "density_invalidations": 6,
+  "images": [
+    {
+      "file": "stage6-ui-Sphere-static_structural-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-ui-Sphere-static_structural-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "stage6-ui-Sphere-steady_thermal-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-ui-Sphere-steady_thermal-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "stage6-ui-Pipe-static_structural-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-ui-Pipe-static_structural-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "stage6-ui-Pipe-steady_thermal-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-ui-Pipe-steady_thermal-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "cancellation": {
+    "cancel_pid_stopped": true,
+    "cancel_state": "Cancelled",
+    "malformed_and_nonfinite_rejected": true,
+    "nonzero_native_exit": 2,
+    "recovery": true
+  },
+  "render_diagnostic": [
+    {
+      "test": "render-signal",
+      "exit": 0,
+      "passed": false,
+      "seconds": 2.599027999996906
+    },
+    {
+      "test": "render-control",
+      "exit": 0,
+      "passed": true,
+      "seconds": 2.1621011000024737
+    }
+  ],
+  "deferred": [
+    "Sphere thermal cutaway",
+    "Historical native crash investigation",
+    "Native build matrix and final stabilization"
+  ]
+}

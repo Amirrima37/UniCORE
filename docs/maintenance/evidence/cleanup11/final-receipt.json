@@ -1,0 +1,877 @@
+{
+  "verdict": "PARTIAL",
+  "scope": "User-requested old log deletion and physical storage reduction; remaining 1.1 requirements explicitly deferred",
+  "before_accessible_bytes": 8571221380,
+  "after_accessible_bytes": 8588675032,
+  "logical_working_directory_reduction_bytes": -17453652,
+  "logical_reduction_percent": -0.20363086223307886,
+  "before_files": 80026,
+  "after_files": 80031,
+  "inaccessible_paths": [
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\molecular-native-2as4khhu",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\molecular-native-2as4khhu'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\molecular-native-883glfnc",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\molecular-native-883glfnc'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\molecular-native-o6zi8uc_",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\molecular-native-o6zi8uc_'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\molecular-script-4669g3vh",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\molecular-script-4669g3vh'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\molecular-script-a68wwea5",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\molecular-script-a68wwea5'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\molecular-script-d0l712ju",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\molecular-script-d0l712ju'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\python-packages\\bin",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\python-packages\\\\bin'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\python-packages\\SCons",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\python-packages\\\\SCons'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\python-packages\\scons-4.10.1.dist-info",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\python-packages\\\\scons-4.10.1.dist-info'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\scons-migrate\\bin",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\scons-migrate\\\\bin'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\scons-migrate\\SCons",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\scons-migrate\\\\SCons'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\scons-migrate\\scons-4.10.1.dist-info",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\scons-migrate\\\\scons-4.10.1.dist-info'",
+      "bytes": null
+    }
+  ],
+  "inaccessible_size": null,
+  "inaccessible_size_reason": "Access denied: size unknown; totals cover accessible regular files only",
+  "reparse_points": [],
+  "deleted_logs": 10,
+  "deleted_logical_bytes": 985394,
+  "compression": {
+    "deleted_files": 0,
+    "deleted_logical_bytes": 0,
+    "deleted_allocated_bytes": 0,
+    "compression_logical_bytes": 5379030305,
+    "compression_allocated_before": 5379030305,
+    "compression_allocated_after": 2861538384,
+    "compression_disk_bytes_reclaimed": 2517491921,
+    "hashes_verified": 25862
+  },
+  "bytes_externalized": 0,
+  "bytes_archived": 0,
+  "pinned_binaries": {
+    "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe": {
+      "expected": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424",
+      "actual": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\calculix\\CalculiX-2.23.0-win-x64\\bin\\ccx.exe": {
+      "expected": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "actual": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_debug.x86_64.dll": {
+      "expected": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc",
+      "actual": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_release.x86_64.dll": {
+      "expected": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f",
+      "actual": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_debug.x86_64.dll": {
+      "expected": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868",
+      "actual": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_release.x86_64.dll": {
+      "expected": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb",
+      "actual": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\gmsh-4.15.2-Windows64-sdk\\lib\\gmsh-4.15.dll": {
+      "expected": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c",
+      "actual": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c"
+    }
+  },
+  "all_seven_pins_unchanged": true,
+  "source_hash_changes": [
+    "native/run_regressions.py",
+    "scripts/cleanup_repository.py"
+  ],
+  "authorized_source_changes": [
+    "native/run_regressions.py",
+    "scripts/cleanup_repository.py"
+  ],
+  "regressions": {
+    "receipt": {
+      "passed": true,
+      "expected": 28,
+      "recorded": 28,
+      "missing": [],
+      "results_file": "results.json"
+    },
+    "workspace": "C:\\Users\\Victus\\AppData\\Local\\Temp\\unicore-regressions-c_bek6p2",
+    "exit_code": 0
+  },
+  "native_boolean": {
+    "operation": "Fuse of translated overlapping boxes",
+    "volume": 0.003,
+    "exit_code": 0,
+    "outcome": "PASS",
+    "initial_probe": "Cut divided box into two solids; test assertion failed; corrected to supported single-solid Fuse"
+  },
+  "numerical_validation": "Not rerun in this pass; no new numerical PASS claimed",
+  "runtime_audit": "No DLLs changed; previous 126-module static import audit remains available in cleanup1; not rerun",
+  "groups": {
+    ".tools/occt-sdk": {
+      "before": 1915898756,
+      "after": 1915898756
+    },
+    ".tools/occt-sdk/ucrt64/bin": {
+      "before": 384682025,
+      "after": 384682025
+    },
+    "docs/architecture/evidence": {
+      "before": 1041812270,
+      "after": 1041812270
+    }
+  },
+  "top30_before": [
+    [
+      ".tools",
+      6991551959
+    ],
+    [
+      ".tools/godot472-migration",
+      2885643083
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot",
+      2839191986
+    ],
+    [
+      ".tools/godot472-migration/roaming",
+      2839191986
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE",
+      2839174280
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot/app_userdata",
+      2839174280
+    ],
+    [
+      ".tools/occt-sdk",
+      1915898756
+    ],
+    [
+      ".tools/occt-sdk/ucrt64",
+      1680389656
+    ],
+    [
+      "docs",
+      1349778142
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs",
+      1222501492
+    ],
+    [
+      ".tools/occt-sdk/ucrt64/lib",
+      1052490517
+    ],
+    [
+      "docs/architecture",
+      1041962631
+    ],
+    [
+      "docs/architecture/evidence",
+      1041812270
+    ],
+    [
+      ".tools/hpc23-bench",
+      817649820
+    ],
+    [
+      "docs/architecture/evidence/cad23",
+      679496594
+    ],
+    [
+      ".tools/hpc22",
+      498479590
+    ],
+    [
+      ".tools/occt-sdk/ucrt64/bin",
+      384682025
+    ],
+    [
+      "docs/architecture/evidence/cad23/solver-jobs",
+      359941240
+    ],
+    [
+      ".tools/hpc23-bench/thermal-large-46",
+      359759892
+    ],
+    [
+      ".tools/engines",
+      280422795
+    ],
+    [
+      ".tools/occt-sdk/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0",
+      202066046
+    ],
+    [
+      ".tools/occt-sdk/ucrt64/lib/gcc/x86_64-w64-mingw32",
+      202066046
+    ],
+    [
+      ".tools/occt-sdk/ucrt64/lib/gcc",
+      202066046
+    ],
+    [
+      ".tools/occt-sdk/ucrt64/lib/python3.12",
+      191518674
+    ],
+    [
+      ".tools/hpc23-bench/elastic-large-32",
+      187546205
+    ],
+    [
+      "docs/workbench-2",
+      181896639
+    ],
+    [
+      "docs/architecture/evidence/cad24-completion",
+      172785191
+    ],
+    [
+      ".tools/occt-sdk/ucrt64/share",
+      170915303
+    ],
+    [
+      "docs/architecture/evidence/cad23/lifecycle",
+      170481670
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad_geometry",
+      156113150
+    ]
+  ],
+  "top20_after": [
+    [
+      ".tools",
+      6990587629
+    ],
+    [
+      ".tools/godot472-migration",
+      2885643083
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot",
+      2839191986
+    ],
+    [
+      ".tools/godot472-migration/roaming",
+      2839191986
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE",
+      2839174280
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot/app_userdata",
+      2839174280
+    ],
+    [
+      ".tools/occt-sdk",
+      1915898756
+    ],
+    [
+      ".tools/occt-sdk/ucrt64",
+      1680389656
+    ],
+    [
+      "docs",
+      1368176760
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs",
+      1222501492
+    ],
+    [
+      ".tools/occt-sdk/ucrt64/lib",
+      1052490517
+    ],
+    [
+      "docs/architecture",
+      1041962631
+    ],
+    [
+      "docs/architecture/evidence",
+      1041812270
+    ],
+    [
+      ".tools/hpc23-bench",
+      817649820
+    ],
+    [
+      "docs/architecture/evidence/cad23",
+      679496594
+    ],
+    [
+      ".tools/hpc22",
+      498479590
+    ],
+    [
+      ".tools/occt-sdk/ucrt64/bin",
+      384682025
+    ],
+    [
+      "docs/architecture/evidence/cad23/solver-jobs",
+      359941240
+    ],
+    [
+      ".tools/hpc23-bench/thermal-large-46",
+      359759892
+    ],
+    [
+      ".tools/engines",
+      280422795
+    ]
+  ],
+  "largest100_before": [
+    {
+      "path": ".tools/occt-sdk/ucrt64/lib/librsvg-2.a",
+      "size": 154910394,
+      "mtime": 1742505822.0
+    },
+    {
+      "path": ".tools/godot/Godot_v4.0-stable_win64.exe",
+      "size": 114434448,
+      "mtime": 1677653702.0
+    },
+    {
+      "path": ".tools/hpc23-bench/thermal-large-62/jacobi-0/results.json",
+      "size": 97857703,
+      "mtime": 1794394218.1958232
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/lib/libPyImath_Python3_12.dll.a",
+      "size": 89326852,
+      "mtime": 1730711958.0
+    },
+    {
+      "path": ".tools/engines/gmsh-4.15.2-Windows64-sdk/lib/gmsh-4.15.dll",
+      "size": 89212416,
+      "mtime": 1774344610.0
+    },
+    {
+      "path": ".tools/hpc23-bench/thermal-large-62.ucjob",
+      "size": 75504835,
+      "mtime": 1794394084.3567321
+    },
+    {
+      "path": ".tools/godot-4.0.zip",
+      "size": 51584042,
+      "mtime": 1793911304.2087684
+    },
+    {
+      "path": ".tools/occt-sdk/gcc.pkg.tar.zst",
+      "size": 48819949,
+      "mtime": 1794619058.9213867
+    },
+    {
+      "path": "docs/architecture/evidence/cad23/gui-quadratic.ucae",
+      "size": 45310496,
+      "mtime": 1794667374.4983387
+    },
+    {
+      "path": ".tools/engines/gmsh.zip",
+      "size": 42334565,
+      "mtime": 1794479984.3625388
+    },
+    {
+      "path": ".tools/engines/gmsh-4.15.2-Windows64-sdk/lib/gmsh.dll.lib",
+      "size": 41748338,
+      "mtime": 1774344530.0
+    },
+    {
+      "path": ".tools/occt-sdk/opencascade-7.8.1-2.pkg.tar.zst",
+      "size": 40562661,
+      "mtime": 1794618785.6687374
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/cc1plus.exe",
+      "size": 40069990,
+      "mtime": 1745588620.0
+    },
+    {
+      "path": ".tools/hpc23-bench/thermal-large-46/ic0-2/results.json",
+      "size": 40011012,
+      "mtime": 1794394067.0486398
+    },
+    {
+      "path": ".tools/hpc23-bench/thermal-large-46/ic0-1/results.json",
+      "size": 40011006,
+      "mtime": 1794393135.4829485
+    },
+    {
+      "path": ".tools/hpc23-bench/thermal-large-46/ic0-0/results.json",
+      "size": 40010983,
+      "mtime": 1794393084.3605185
+    },
+    {
+      "path": ".tools/hpc23-bench/thermal-large-46/block-jacobi-2/results.json",
+      "size": 39953800,
+      "mtime": 1794394004.580614
+    },
+    {
+      "path": ".tools/hpc23-bench/thermal-large-46/block-jacobi-1/results.json",
+      "size": 39953799,
+      "mtime": 1794393186.9398444
+    },
+    {
+      "path": ".tools/hpc23-bench/thermal-large-46/block-jacobi-0/results.json",
+      "size": 39953788,
+      "mtime": 1794393034.9308152
+    },
+    {
+      "path": ".tools/hpc23-bench/thermal-large-46/jacobi-2/results.json",
+      "size": 39953777,
+      "mtime": 1794393950.7473855
+    },
+    {
+      "path": ".tools/hpc23-bench/thermal-large-46/jacobi-0/results.json",
+      "size": 39953774,
+      "mtime": 1794392988.0183764
+    },
+    {
+      "path": ".tools/hpc23-bench/thermal-large-46/jacobi-1/results.json",
+      "size": 39953762,
+      "mtime": 1794393238.9213274
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/cc1.exe",
+      "size": 37877157,
+      "mtime": 1745588620.0
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/lto1.exe",
+      "size": 36643682,
+      "mtime": 1745588620.0
+    },
+    {
+      "path": "docs/hpc-optimization/hpc24-paired.json",
+      "size": 34550412,
+      "mtime": 1794405635.5217896
+    },
+    {
+      "path": "docs/hpc-optimization/hpc24-final-paired.json",
+      "size": 34550397,
+      "mtime": 1794405862.752505
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad23-oversized-dat-14182238/model.dat",
+      "size": 33554433,
+      "mtime": 1794613176.2306793
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad23-oversized-dat-6002467/model.dat",
+      "size": 33554433,
+      "mtime": 1794667170.062198
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad23-oversized-dat-6589641/model.dat",
+      "size": 33554433,
+      "mtime": 1794656442.3645425
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad23-oversized-dat-6639885/model.dat",
+      "size": 33554433,
+      "mtime": 1794623958.7668715
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/cad23-oversized-dat-6662057/model.dat",
+      "size": 33554433,
+      "mtime": 1794617814.0003092
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/plugin/cc1plus.exe.a",
+      "size": 33100362,
+      "mtime": 1745588620.0
+    },
+    {
+      "path": "docs/architecture/evidence/cad23/tet10-step-hole.ucae",
+      "size": 32218624,
+      "mtime": 1794667163.2576232
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/plugin/cc1.exe.a",
+      "size": 31003342,
+      "mtime": 1745588620.0
+    },
+    {
+      "path": "docs/architecture/evidence/cad23/lifecycle/mesh-recovery-1794611810889636800/mesh.json",
+      "size": 30037169,
+      "mtime": 1794611870.8273647
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/through-hole-tet2.ucae",
+      "size": 29871999,
+      "mtime": 1794666255.508
+    },
+    {
+      "path": ".tools/hpc23-bench/thermal-large-46.ucjob",
+      "size": 29408843,
+      "mtime": 1794392942.0208693
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/lib/libx265.a",
+      "size": 28765100,
+      "mtime": 1735469912.0
+    },
+    {
+      "path": "docs/architecture/evidence/cad22/gui-refined.ucae",
+      "size": 26880848,
+      "mtime": 1794608140.9124444
+    },
+    {
+      "path": ".tools/engines/calculix-2.23.zip",
+      "size": 26400736,
+      "mtime": 1794511385.3245547
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/bin/libPyImath_Python3_12-3_1.dll",
+      "size": 25570464,
+      "mtime": 1730711958.0
+    },
+    {
+      "path": ".tools/occt-sdk/mingw-w64-ucrt-x86_64-python-3.12.10-1-any.pkg.tar.zst",
+      "size": 24299266,
+      "mtime": 1794619616.8751545
+    },
+    {
+      "path": "docs/architecture/evidence/cad22/refined-hole.ucae",
+      "size": 23966348,
+      "mtime": 1794666625.2539015
+    },
+    {
+      "path": "native/godot-cpp/bin/libgodot-cpp.windows.template_debug.x86_64.a",
+      "size": 23521494,
+      "mtime": 1793947491.3453183
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_2088_7445731_198eae524146e3ec/study.json",
+      "size": 22321430,
+      "mtime": 1794667295.1946404
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_23556_6733396_90c7a9f02ccd6fb7/study.json",
+      "size": 22312725,
+      "mtime": 1794656610.200312
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_7018401/study.json",
+      "size": 22288896,
+      "mtime": 1794624087.979965
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_6695391/study.json",
+      "size": 22066967,
+      "mtime": 1794617916.7407503
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_13333587/study.json",
+      "size": 22065715,
+      "mtime": 1794613555.461555
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_6852737/study.json",
+      "size": 22065715,
+      "mtime": 1794612837.5745406
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/lib/libTKDESTEP.dll.a",
+      "size": 21038956,
+      "mtime": 1748206074.0
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/bin/x265.exe",
+      "size": 20967051,
+      "mtime": 1735469912.0
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/bin/libx265-215.dll",
+      "size": 20828283,
+      "mtime": 1735469912.0
+    },
+    {
+      "path": "native/godot-cpp/bin/libgodot-cpp.windows.template_release.x86_64.a",
+      "size": 20347836,
+      "mtime": 1793947176.3687284
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/lib/ffmpeg4.4/libavcodec.a",
+      "size": 20157778,
+      "mtime": 1748186336.0
+    },
+    {
+      "path": ".tools/engines/gmsh-4.15.2-source.tgz",
+      "size": 18496049,
+      "mtime": 1794510682.3008578
+    },
+    {
+      "path": ".tools/occt-sdk/mingw-w64-ucrt-x86_64-librsvg-2.60.0-1-any.pkg.tar.zst",
+      "size": 17889846,
+      "mtime": 1794622377.2020473
+    },
+    {
+      "path": "docs/hpc-optimization/hpc24-initial.json",
+      "size": 17275269,
+      "mtime": 1794405539.8301525
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_5100982/study.json",
+      "size": 16633776,
+      "mtime": 1794608116.6247804
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_6022598/study.json",
+      "size": 16633776,
+      "mtime": 1794607758.0332992
+    },
+    {
+      "path": "docs/maintenance/evidence/cleanup1/after-inventory.json",
+      "size": 15439392,
+      "mtime": 1794667593.8780756
+    },
+    {
+      "path": "docs/maintenance/evidence/cleanup1/baseline-inventory.json",
+      "size": 14752805,
+      "mtime": 1794665235.8905387
+    },
+    {
+      "path": ".tools/occt-sdk/ucrt64/bin/avcodec-58.dll",
+      "size": 14680414,
+      "mtime": 1748186336.0
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_2088_7445731_198eae524146e3ec/mesh.json",
+      "size": 13867365,
+      "mtime": 1794667316.8945713
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_23556_6733396_90c7a9f02ccd6fb7/mesh.json",
+      "size": 13864135,
+      "mtime": 1794656632.4163053
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_7018401/mesh.json",
+      "size": 13855825,
+      "mtime": 1794624113.0637915
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_6695391/mesh.json",
+      "size": 13827786,
+      "mtime": 1794617937.1757722
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_6852737/mesh.json",
+      "size": 13826801,
+      "mtime": 1794612863.2333589
+    },
+    {
+      "path": ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/gmsh_13333587/mesh.json",
+      "size": 13826800,
+      "mtime": 1794613620.5906968
+    },
+    {
+      "path": "docs/architecture/evidence/cad23/corrupt-schema.ucae",
+      "size": 13033369,
+      "mtime": 1794667170.5577214
+    },
+    {
+      "path": "docs/architecture/evidence/cad23/tet10-axial-bar.ucae",
+      "size": 12825286,
+      "mtime": 1794666810.1113431
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/block-jacobi-2/results.json",
+      "size": 12526747,
+      "mtime": 1794392842.020818
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/block-jacobi-0/results.json",
+      "size": 12526693,
+      "mtime": 1794392763.58115
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/block-jacobi-1/results.json",
+      "size": 12526689,
+      "mtime": 1794392806.4818785
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/block-jacobi-3/results.json",
+      "size": 12526676,
+      "mtime": 1794392885.4947698
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/block-jacobi-4/results.json",
+      "size": 12526661,
+      "mtime": 1794392922.0675983
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/ic0-3/results.json",
+      "size": 12519375,
+      "mtime": 1794392872.2844284
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/ic0-2/results.json",
+      "size": 12519333,
+      "mtime": 1794392857.351467
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/ic0-0/results.json",
+      "size": 12519324,
+      "mtime": 1794392778.2663596
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/ic0-4/results.json",
+      "size": 12519316,
+      "mtime": 1794392937.0123699
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/ic0-1/results.json",
+      "size": 12519312,
+      "mtime": 1794392793.4912057
+    },
+    {
+      "path": ".tools/hpc22/hpc23-jacobi/2/results.json",
+      "size": 12461924,
+      "mtime": 1794392547.6813507
+    },
+    {
+      "path": ".tools/hpc22/hpc23-jacobi/4/results.json",
+      "size": 12461923,
+      "mtime": 1794392591.4567828
+    },
+    {
+      "path": ".tools/hpc22/hpc23-jacobi/1/results.json",
+      "size": 12461916,
+      "mtime": 1794392516.5271785
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/jacobi-4/results.json",
+      "size": 12461914,
+      "mtime": 1794392908.7658548
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/jacobi-1/results.json",
+      "size": 12461913,
+      "mtime": 1794392817.8118234
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/jacobi-2/results.json",
+      "size": 12461900,
+      "mtime": 1794392829.2355852
+    },
+    {
+      "path": ".tools/hpc22/hpc23-jacobi/0/results.json",
+      "size": 12461897,
+      "mtime": 1794392505.6824527
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/jacobi-3/results.json",
+      "size": 12461882,
+      "mtime": 1794392897.1903684
+    },
+    {
+      "path": ".tools/hpc23-bench/elastic-large-32/jacobi-0/results.json",
+      "size": 12461881,
+      "mtime": 1794392750.419746
+    },
+    {
+      "path": ".tools/hpc22/hpc23-jacobi/3/results.json",
+      "size": 12461866,
+      "mtime": 1794392558.902089
+    },
+    {
+      "path": ".tools/hpc22/passive-row-owned/4/results.json",
+      "size": 12461696,
+      "mtime": 1794388874.392412
+    },
+    {
+      "path": ".tools/hpc22/serial/1/results.json",
+      "size": 12461695,
+      "mtime": 1794388118.6673167
+    },
+    {
+      "path": ".tools/hpc22/serial/4/results.json",
+      "size": 12461695,
+      "mtime": 1794388185.4624226
+    },
+    {
+      "path": ".tools/hpc22/hpc22-jacobi/2/results.json",
+      "size": 12461694,
+      "mtime": 1794392536.4110508
+    },
+    {
+      "path": ".tools/hpc22/serial/2/results.json",
+      "size": 12461694,
+      "mtime": 1794388133.3916326
+    },
+    {
+      "path": ".tools/hpc22/passive-serial/2/results.json",
+      "size": 12461692,
+      "mtime": 1794388783.5148594
+    },
+    {
+      "path": ".tools/hpc22/passive-serial/4/results.json",
+      "size": 12461688,
+      "mtime": 1794388843.4545457
+    },
+    {
+      "path": ".tools/hpc22/hpc22-jacobi/1/results.json",
+      "size": 12461685,
+      "mtime": 1794392526.3569324
+    },
+    {
+      "path": ".tools/hpc22/passive-row-owned/3/results.json",
+      "size": 12461685,
+      "mtime": 1794388808.5068078
+    }
+  ],
+  "limitations": [
+    "Logical active-directory 30% reduction not achieved; NTFS compression reduces physical storage while retaining logical file sizes",
+    "Full migration of historical CAD acceptance runners to external roots remains unfinished; only default regression runner migrated",
+    "No external archival destination configured; historical evidence remains in place",
+    "No SDK development files removed",
+    "NTFS compression is transparent and reversible; it may add CPU work when reading large compressed outputs",
+    "No new TET10, CalculiX or save/reopen acceptance run; previous cleanup1 full campaign is historical evidence only",
+    "Regression temporary workspace retained for diagnostic review; no automatic deletion of its potentially active jobs"
+  ]
+}

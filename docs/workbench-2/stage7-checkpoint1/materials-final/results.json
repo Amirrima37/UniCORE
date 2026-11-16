@@ -1,0 +1,75 @@
+{
+  "assertions": 52,
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "rows": [
+    {
+      "name": "heterogeneous-material-mapping",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\materials-final\\heterogeneous-material-mapping.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\materials-final\\heterogeneous-material-mapping",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09563300000445452,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\materials-final\\heterogeneous-material-mapping.log",
+      "expected_exit": 0,
+      "independent_spectrum_relative_error": 9.732525896311017e-11,
+      "mass_orthogonality_error": 8.881784197001252e-16,
+      "independent_residuals": [
+        2.3493367259463414e-12,
+        1.70169816651298e-12,
+        7.156510883118361e-08
+      ],
+      "frequencies_Hz": [
+        30.948508684637698,
+        31.198313609989675,
+        173.4045191393975
+      ],
+      "nodes": 20,
+      "elements": 24,
+      "active_dofs": 48,
+      "stiffness_nnz": 820,
+      "mass_nnz": 330,
+      "assembly_ms": 0.4991,
+      "solve_ms": 10.948,
+      "peak_working_set_bytes": 5808128,
+      "eigen_iterations": 5,
+      "linear_iterations": 3568
+    },
+    {
+      "name": "inverted",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\materials-final\\inverted.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\materials-final\\inverted"
+      ],
+      "exit_code": 2,
+      "seconds": 0.07048600000416627,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\materials-final\\inverted.log",
+      "expected_exit": 2
+    },
+    {
+      "name": "all-constrained",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\materials-final\\all-constrained.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\materials-final\\all-constrained"
+      ],
+      "exit_code": 2,
+      "seconds": 0.07273919999715872,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\materials-final\\all-constrained.log",
+      "expected_exit": 2
+    }
+  ]
+}

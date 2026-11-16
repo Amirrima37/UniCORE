@@ -1,0 +1,143 @@
+Godot Engine v4.0.stable.official.92bee43ad - https://godotengine.org
+ 
+==================================================================
+       UniCORE Scientific Physics Engine: E2E Master Test Suite    
+==================================================================
+Engine: Godot 4.0.stable (Headless)
+Verification Tiers: 1 (Unit), 2 (Adversarial), 3 (Integration), 4 (Empirical)
+
+
+--- Tier 1.1: SimulationTimeController Feature Coverage ---
+  [PASS] T1.1.1: Default properties initialized correctly
+  [PASS] T1.1.2: Time scale set and signal emitted
+  [PASS] T1.1.2b: Time scale clamped to MIN_TIME_SCALE (0.001)
+  [PASS] T1.1.2c: Time scale clamped to MAX_TIME_SCALE (1000.0)
+  [PASS] T1.1.3: Toggle pause to true
+  [PASS] T1.1.3b: Set pause to false
+  [PASS] T1.1.4: Set fixed_delta to 0.005
+  [PASS] T1.1.4b: Negative fixed_delta rejected
+  [PASS] T1.1.5: step_once advances sim_time by exactly fixed_delta and emits signals
+  [PASS] T1.1.6: _physics_process executed exactly 2 substeps for delta 0.025
+
+--- Tier 1.2: UnitConverter Feature Coverage ---
+  [PASS] T1.2.1: Default Lennard-Jones Argon scales match physical standards
+  [PASS] T1.2.2: SI <-> LJ Length conversion round-trip is exact (2.0 reduced units)
+  [PASS] T1.2.3: Vector3 velocity conversion round-trip preserves direction and magnitude
+  [PASS] T1.2.4: Planck scales match universal constants c and hbar
+  [PASS] T1.2.5: Astronomical scales match 1 AU and 1 Solar Mass
+  [PASS] T1.2.6: Custom LJ configuration correctly computes derived time unit tau = sqrt(2)
+
+--- Tier 1.3: PhysicalIntegrator Base Contract Coverage ---
+  [PASS] T1.3.1: Matched arrays pass validate_state
+  [PASS] T1.3.2: Mismatched array size rejected
+  [PASS] T1.3.3: Positive dt passes validate_inputs
+  [PASS] T1.3.3b: Negative dt rejected by validate_inputs
+  [PASS] T1.3.3c: Zero dt rejected by validate_inputs
+  [PASS] T1.3.4: 1-arg Callable auto-probed and evaluated
+  [PASS] T1.3.5: 2-arg Callable auto-probed and evaluated
+  [PASS] T1.3.6: clear_buffers resets capacity
+
+--- Tier 1.4: VerletIntegrator Feature Coverage ---
+  [PASS] T1.4.1: Free fall single step exact match to analytical kinematics
+  [PASS] T1.4.2: Zero delta leaves state untouched
+  [PASS] T1.4.3: Acceleration buffer preallocated to size 1
+  [PASS] T1.4.3b: Acceleration buffer cleared
+  [PASS] T1.4.4: Multi-particle in-place ballistic trajectory exact
+  [PASS] T1.4.5: Negative dt rejected without state modification
+
+--- Tier 1.5: RK4Integrator Feature Coverage ---
+  [PASS] T1.5.1: Uniform motion under zero force
+  [PASS] T1.5.2: Velocity-dependent damping matches analytical exponential decay (< 1e-6 error)
+  [PASS] T1.5.3: Scratch buffers allocated to size 1
+  [PASS] T1.5.3b: Scratch buffers cleared successfully
+  [PASS] T1.5.4: Zero dt leaves state untouched
+  [PASS] T1.5.5: Unequal mass particles accelerated correctly
+
+--- Tier 1.6: ConservationSentry Feature Coverage ---
+  [PASS] T1.6.1: Baseline invariants registered explicitly
+  [PASS] T1.6.2: Exact evaluation of Ek, Ep, Etot, P, L, and T
+  [PASS] T1.6.3: Auto-registration on first audit
+  [PASS] T1.6.4: Energy drift computed and warning signal emitted
+  [PASS] T1.6.5: Audit count and snapshot cached
+
+--- Tier 1.7: SpatialHashGrid Feature Coverage ---
+  [PASS] T1.7.1: Initialized cell size and inverse cell size
+  [PASS] T1.7.1b: get_cell_coords calculates floor lattice coordinates
+  [PASS] T1.7.2: Particles inserted into same bucket
+  [PASS] T1.7.3: Neighbor query returns particles within radius
+  [PASS] T1.7.3b: Query far outside returns empty array
+  [PASS] T1.7.4: Bulk build creates 4 distinct buckets
+  [PASS] T1.7.5: Clear resets particle count and bucket dictionary
+
+--- Tier 1.8: BarnesHutOctree Feature Coverage ---
+  [PASS] T1.8.1: Octree initialized with configurable properties
+  [PASS] T1.8.2: 2 particles built with total mass 8.0
+  [PASS] T1.8.2b: Particle 0 acceleration matches analytical value (+0.25 X)
+  [PASS] T1.8.3: Newton's Third Law strictly satisfied (a0 = -a1)
+  [PASS] T1.8.4: Symmetric center of mass is exactly (0, 0, 0)
+  [PASS] T1.8.5: Batch accelerations and forces match single queries
+  [PASS] T1.8.6: Total gravitational potential energy matches analytical -4.0
+
+--- Tier 2: Boundary & Corner Cases (Adversarial Robustness) ---
+  [PASS] T2.1: Integrators gracefully ignore empty particle arrays without crash
+  [PASS] T2.2: Array size mismatch safely aborted without modification
+  [PASS] T2.3: Zero mass in Verlet clamped without NaN or Inf division error
+  [PASS] T2.3b: Zero mass in RK4 clamped without NaN or Inf division error
+  [PASS] T2.4: Negative coordinate floor quantization maps to correct integer cell lattice
+  [PASS] T2.5: Negative search radius returns empty array
+  [PASS] T2.6: Extreme search radius clamped to MAX_CELL_SPAN without memory crash
+  [PASS] T2.7: Coincident particles aggregated into leaf node without infinite subdivision loop
+  [PASS] T2.8: Single particle self-acceleration is strictly Vector3.ZERO
+  [PASS] T2.9: ConservationSentry safeguards against division by zero when baselines are 0
+  [PASS] T2.10: Empty particle audit returns safe conserved snapshot
+  [PASS] T2.11: Negative sigma in LJ rejected
+  [PASS] T2.11b: Zero epsilon in LJ rejected
+  [PASS] T2.11c: Zero length in Astronomical rejected
+  [PASS] T2.12: Large coordinate and velocity state remains finite
+
+--- Tier 3: Cross-Feature Combinations (Integration Workflows) ---
+  [PASS] T3.1: SimulationTimeController step_once driving Verlet ballistic trajectory matches analytical kinematics at 1.0s
+  [PASS] T3.2: Verlet + Sentry 3-body coupled oscillator maintains energy drift < 0.1% over 500 steps
+  [PASS] T3.3: Close particles detected by SpatialHashGrid
+  [PASS] T3.3b: Separated particle excluded from short-range interaction
+  [PASS] T3.4: BarnesHutOctree + Verlet preserves total linear momentum (internal forces sum to zero)
+  [PASS] T3.5: Dimensionless scaling transforms 6.8 Angstroms into 2.0 sigma
+  [PASS] T3.6: Dissipative RK4 system correctly triggers ConservationSentry violation warning
+
+--- Tier 4: Real-World Application Scenarios (Empirical Rigor) ---
+
+[Scenario 4.1] Harmonic Oscillator: 10,000 steps with VerletIntegrator
+  [HO Benchmark] Max Energy Drift: 0.000100, Min E: 1.999800, Max E: 2.000007
+  [PASS] T4.1: Harmonic oscillator maintains energy drift < 0.00015 (0.015%) over 10,000 steps (Velocity-Verlet symplectic conservation)
+
+[Scenario 4.2] Closed 2-Body Keplerian Orbit: 5,000 steps with ConservationSentry
+  [PASS] T4.2a: Initial Kepler orbital energy E_0 = -0.25
+  [Kepler Benchmark] Max Energy Drift: 0.000003, Max P Drift: 0.000000, Max L Drift: 0.000002
+  [PASS] T4.2: Closed 2-body Keplerian orbit energy drift < 0.001 (Acceptance Criteria)
+  [PASS] T4.2b: Linear and angular momentum strictly conserved over 5,000 steps
+
+[Scenario 4.3] 5,000-Particle SpatialHashGrid Performance & Correctness
+  [PASS] T4.3a: Bulk build loaded all 5,000 particles
+  [SpatialHashGrid Benchmark] Query on 5,000 particles took: 0.320 ms (found 6 neighbors)
+  [PASS] T4.3b: SpatialHashGrid neighbor query on 5,000 particles executes in < 10 ms (Acceptance Criteria)
+  [PASS] T4.3c: SpatialHashGrid neighbors match brute-force ground truth 100% exactly
+
+[Scenario 4.4] Barnes-Hut Octree Multipole Gravity vs Direct Summation
+  [PASS] T4.4a: Barnes-Hut with theta=0.0 matches direct N-body summation (< 1e-5 error)
+  [Barnes-Hut MAC Benchmark] Theta=0.5 relative acceleration error: 0.4563%
+  [PASS] T4.4b: Barnes-Hut with theta=0.5 retains < 2% relative error vs direct summation
+  [PASS] T4.4c: Barnes-Hut total potential energy matches direct pairwise potential (< 1e-4 error)
+
+[Scenario 4.5] Memory Stability: Node Pool Recycling across 10 Cycles
+  [PASS] T4.5: Node pool recycled across 10 build cycles with zero reallocation leakage
+
+==================================================================
+E2E PHYSICS ENGINE SUITE EXECUTION SUMMARY
+==================================================================
+Total Passed:   88
+Total Failed:   0
+Total Asserts:  88
+Total Duration: 1279.53 ms
+
+RESULT: ALL TESTS PASSED (100% SUCCESS) (Exit Code: 0)
+==================================================================

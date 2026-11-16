@@ -1,0 +1,35 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CAD23_NUMERICAL axial-bar order=1 level=0 nodes=140 volume_error=0.0 displacement_error=0.00000005
+CAD23_NUMERICAL axial-bar order=1 level=1 nodes=190 volume_error=0.0 displacement_error=0.00000005
+CAD23_NUMERICAL axial-bar order=1 level=2 nodes=594 volume_error=0.0 displacement_error=0.00000005
+CAD23_NUMERICAL axial-bar order=1 level=3 nodes=1458 volume_error=0.0 displacement_error=0.000000036
+CAD23_NUMERICAL axial-bar order=2 level=0 nodes=724 volume_error=0.0 displacement_error=0.00000005
+CAD23_NUMERICAL axial-bar order=2 level=1 nodes=998 volume_error=0.0 displacement_error=0.00000005
+CAD23_NUMERICAL axial-bar order=2 level=2 nodes=3518 volume_error=0.0 displacement_error=0.00000005
+CAD23_NUMERICAL axial-bar order=2 level=3 nodes=9186 volume_error=0.0 displacement_error=0.00000005
+CAD23_NUMERICAL axial-cylinder order=1 level=0 nodes=55 volume_error=0.05779397684293 displacement_error=0.05896263967455
+CAD23_NUMERICAL axial-cylinder order=1 level=1 nodes=124 volume_error=0.02840962340981 displacement_error=0.02827698088212
+CAD23_NUMERICAL axial-cylinder order=1 level=2 nodes=274 volume_error=0.01364961314362 displacement_error=0.01330791038882
+CAD23_NUMERICAL axial-cylinder order=1 level=3 nodes=767 volume_error=0.00578885195013 displacement_error=0.00557170001795
+CAD23_NUMERICAL axial-cylinder order=2 level=0 nodes=275 volume_error=0.00026422851414 displacement_error=0.00019425862624
+CAD23_NUMERICAL axial-cylinder order=2 level=1 nodes=701 volume_error=0.00006386395859 displacement_error=0.0000545151854
+CAD23_NUMERICAL axial-cylinder order=2 level=2 nodes=1684 volume_error=0.00001432677165 displacement_error=0.00001233054337
+CAD23_NUMERICAL axial-cylinder order=2 level=3 nodes=5070 volume_error=0.00000257019566 displacement_error=0.0000022372977
+CAD23_NUMERICAL bending order=1 level=0 nodes=140 volume_error=0.0 displacement_error=0.550680040625
+CAD23_NUMERICAL bending order=1 level=1 nodes=190 volume_error=0.0 displacement_error=0.43318935
+CAD23_NUMERICAL bending order=1 level=2 nodes=594 volume_error=0.0 displacement_error=0.20191749625
+CAD23_NUMERICAL bending order=1 level=3 nodes=1458 volume_error=0.0 displacement_error=0.13084659833333
+CAD23_NUMERICAL bending order=2 level=0 nodes=724 volume_error=0.0 displacement_error=0.00368994797297
+CAD23_NUMERICAL bending order=2 level=1 nodes=998 volume_error=0.0 displacement_error=0.0016665554054
+CAD23_NUMERICAL bending order=2 level=2 nodes=3518 volume_error=0.0 displacement_error=0.00082098538461
+CAD23_NUMERICAL bending order=2 level=3 nodes=9186 volume_error=0.0 displacement_error=0.00015575429936
+CAD23_NUMERICAL step-hole order=1 level=0 nodes=864 volume_error=0.01140717733475 displacement_error=0.01117671725964
+CAD23_NUMERICAL step-hole order=1 level=1 nodes=1708 volume_error=0.00480150295178 displacement_error=0.00472153202047
+CAD23_NUMERICAL step-hole order=1 level=2 nodes=2879 volume_error=0.00267644278175 displacement_error=0.00260423761188
+CAD23_NUMERICAL step-hole order=1 level=3 nodes=4240 volume_error=0.00178458097148 displacement_error=0.00173102044364
+CAD23_NUMERICAL step-hole order=2 level=0 nodes=5408 volume_error=0.00007094232703 displacement_error=0.00006763965947
+CAD23_NUMERICAL step-hole order=2 level=1 nodes=10281 volume_error=0.00001232977037 displacement_error=0.00001158996704
+CAD23_NUMERICAL step-hole order=2 level=2 nodes=16937 volume_error=0.00000385578969 displacement_error=0.00000341654806
+CAD23_NUMERICAL step-hole order=2 level=3 nodes=24658 volume_error=0.00000168313942 displacement_error=0.00000148586901
+CAD23_NUMERICAL_PASS

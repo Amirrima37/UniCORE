@@ -1,0 +1,58 @@
+[
+  {
+    "name": "test_analysis_drawer_listener_lifetime",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_analysis_drawer_listener_lifetime-engine.log",
+      "-s",
+      "res://tests/test_analysis_drawer_listener_lifetime.gd"
+    ],
+    "exit_code": 3221225477,
+    "seconds": 3.905,
+    "log": "docs\\workbench-2\\stage6-final\\test_analysis_drawer_listener_lifetime.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": false
+  },
+  {
+    "name": "test_app_shell_suite",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_app_shell_suite-engine.log",
+      "-s",
+      "res://tests/test_app_shell_suite.gd"
+    ],
+    "exit_code": 3221225477,
+    "seconds": 2.323,
+    "log": "docs\\workbench-2\\stage6-final\\test_app_shell_suite.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": false
+  },
+  {
+    "name": "diagnose_stage6_render_wait",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\diagnose_stage6_render_wait-engine.log",
+      "-s",
+      "res://tests/diagnose_stage6_render_wait.gd"
+    ],
+    "exit_code": 3221225477,
+    "seconds": 1.689,
+    "log": "docs\\workbench-2\\stage6-final\\diagnose_stage6_render_wait.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": false
+  }
+]

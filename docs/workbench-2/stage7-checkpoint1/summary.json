@@ -1,0 +1,36 @@
+{
+  "numerical-verified": {
+    "assertions": 5995,
+    "operations": 40
+  },
+  "materials-verified": {
+    "assertions": 52,
+    "operations": 3
+  },
+  "provenance-verified": {
+    "assertions": 8,
+    "operations": 2
+  },
+  "builds-verified": {
+    "assertions": 274,
+    "operations": 21
+  },
+  "regression-verified": {
+    "assertions": 14,
+    "operations": 7
+  },
+  "default_manifest": {
+    "passed": 28,
+    "total": 28
+  },
+  "source_sha256": {
+    "native\\src\\math\\symmetric_modes.hpp": "486dcac308c999909717621d68817916ad1b384a6f2ea82698546e98098cdceb",
+    "native\\src\\kernels\\modal_solver.hpp": "6c9ccc9dea339c96c9753b907070edf1445ddb76158432a13037feff004d94cb",
+    "native\\extreme\\modal_output.hpp": "881b9eb3f84e972faa70659225a8e93b5e31343dd937af2deae1e971e149707e",
+    "native\\extreme\\main.cpp": "81cd6d7499618db12590e88f6a29c8162de6216b12d24d7f18378eed6c858cbc",
+    "native\\extreme\\build.ps1": "528ea57797860aa35816063b8a920561499c96bf5001ff0a687762824c40c788",
+    "native\\extreme\\CMakeLists.txt": "5fb69481f7005fbbfc2d58e0aca46606ab3c9d6ee954d642873f53231b5c1610"
+  },
+  "verdict": "PASS — CHECKPOINT 1 COMPLETE (bounded native constrained TET4 scope)",
+  "stage6_crash": "UNRESOLVED"
+}

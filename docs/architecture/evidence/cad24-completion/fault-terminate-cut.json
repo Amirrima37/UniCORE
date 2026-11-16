@@ -1,0 +1,50 @@
+{
+  "godot_exit": 0,
+  "terminated_native": {
+    "pid": 15556,
+    "action": "cut",
+    "operation_id": "5c88e6a0-c50c-4917-9095-dfe66eac45ee"
+  },
+  "observed": [
+    {
+      "pid": 13236,
+      "action": "box",
+      "operation_id": "a232e573-318d-46a9-9560-d07fa261ee88"
+    },
+    {
+      "pid": 4872,
+      "action": "cylinder",
+      "operation_id": "86f28100-9695-43d3-948a-c96fb81fc7cc"
+    },
+    {
+      "pid": 15556,
+      "action": "cut",
+      "operation_id": "5c88e6a0-c50c-4917-9095-dfe66eac45ee"
+    }
+  ],
+  "recovered": true,
+  "fault": "TerminateProcess(77) against observed owned native Cut worker; injected termination, not an OCCT segfault",
+  "mode": "terminate-cut",
+  "native_exit_code_dword": 77,
+  "native_process_receipts": [
+    {
+      "pid": 15556,
+      "exit_code": 77,
+      "seconds": 0.23733430000720546,
+      "job_object": true
+    }
+  ],
+  "stdout": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-terminate-cut-1794666122332370700.stdout.txt",
+  "stderr": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-terminate-cut-1794666122332370700.stderr.txt",
+  "launcher": {
+    "state": "completed",
+    "exit_code": 0,
+    "error": "",
+    "job_object": true,
+    "seconds": 2.810781699998188,
+    "peak_process_memory_bytes": 662716416,
+    "peak_job_memory_bytes": 663969792,
+    "memory_limit_bytes": 805306368
+  },
+  "observed_native_pids_still_alive": []
+}

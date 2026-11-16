@@ -1,0 +1,215 @@
+extends SceneTree
+
+# Automated Test Suite for UniCORE App Shell, Settings, Space Management, and UI
+
+var passed_count: int = 0
+var failed_count: int = 0
+
+func assert_true(condition: bool, test_name: String, error_msg: String = "") -> void:
+	if condition:
+		print("  [PASS] %s" % test_name)
+		passed_count += 1
+	else:
+		print("  [FAIL] %s - %s" % [test_name, error_msg])
+		failed_count += 1
+
+func assert_false(condition: bool, test_name: String, error_msg: String = "") -> void:
+	assert_true(not condition, test_name, error_msg)
+
+func _init() -> void:
+	print("==================================================")
+	print("Starting UniCORE Phase 2 App Shell & Space Test Suite")
+	print("==================================================")
+
+	# ----------------------------------------------------
+	# Group 3: SettingsManager Persistence & Display Modes
+	# ----------------------------------------------------
+	print("\n--- Testing SettingsManager ---")
+	var settings_script = load("res://core/settings_manager.gd")
+	assert_true(settings_script != null, "settings_manager.gd loads")
+
+	var settings_mgr = settings_script.new()
+	root.add_child(settings_mgr)
+
+	var eb_script = load("res://core/event_bus.gd")
+	var event_bus = eb_script.new()
+	root.add_child(event_bus)
+
+	settings_mgr.setup(event_bus)
+	settings_mgr.reset_to_defaults()
+
+	# Verify default values
+	var def_fs = settings_mgr.get_setting("display", "fullscreen")
+	assert_true(def_fs == false, "display/fullscreen default is false")
+
+	var def_sens = settings_mgr.get_setting("controls", "mouse_sensitivity")
+	assert_true(def_sens == 0.002, "default mouse_sensitivity is 0.002")
+
+	# Test modifying setting and persistence
+	settings_mgr.set_setting("controls", "mouse_sensitivity", 0.0045, true)
+	assert_true(settings_mgr.get_setting("controls", "mouse_sensitivity") == 0.0045, "mouse_sensitivity updated")
+
+	# Test resolution presets
+	assert_true(settings_mgr.RESOLUTION_PRESETS.size() >= 4, "Resolution presets exist")
+	settings_mgr.set_resolution_by_index(0)
+	assert_true(settings_mgr.get_setting("display", "resolution_width") == 1280, "Resolution preset 0 width is 1280")
+
+	# Test toggle fullscreen function
+	var toggled_mode = settings_mgr.toggle_fullscreen()
+	assert_true(toggled_mode == true, "Fullscreen toggled on")
+	var toggled_back = settings_mgr.toggle_fullscreen()
+	assert_true(toggled_back == false, "Fullscreen toggled back off")
+
+	# Test agent config
+	settings_mgr.set_agent_config("openrouter", "google/gemini-2.5-flash", "test_key_123")
+	assert_true(settings_mgr.get_setting("agent", "provider") == "openrouter", "Agent provider updated")
+	assert_true(settings_mgr.get_setting("agent", "api_key") == "test_key_123", "Agent api key stored")
+
+	# Reload from disk
+	settings_mgr.load_settings()
+	assert_true(settings_mgr.get_setting("controls", "mouse_sensitivity") == 0.0045, "Settings persisted and reloaded from disk")
+
+	# ----------------------------------------------------
+	# Group 4: SpaceManager Lifecycle & Serialization
+	# ----------------------------------------------------
+	print("\n--- Testing SpaceManager & Spaces ---")
+	var mod_mgr_script = load("res://core/module_manager.gd")
+	var mod_mgr = mod_mgr_script.new()
+	root.add_child(mod_mgr)
+
+	var world_root = Node3D.new()
+	root.add_child(world_root)
+	mod_mgr.setup(event_bus, world_root)
+
+	var space_mgr_script = load("res://core/space_manager.gd")
+	assert_true(space_mgr_script != null, "space_manager.gd loads")
+
+	var space_mgr = space_mgr_script.new()
+	root.add_child(space_mgr)
+	space_mgr.setup(mod_mgr, event_bus, world_root, null)
+
+	# List spaces
+	var spaces_list = space_mgr.list_spaces()
+	assert_true(spaces_list.size() >= 1, "Default spaces exist", "Spaces count: %d" % spaces_list.size())
+
+	# Create a new space from template
+	var test_space_name = "Unit Test Cyber Space"
+	var new_space_data = space_mgr.create_new_space(test_space_name, "cyber_void")
+	assert_true(new_space_data.get("name") == test_space_name, "create_new_space creates correct space name")
+	assert_true(space_mgr.current_space_name == test_space_name, "current_space_name updated to new space")
+
+	# Save current space as
+	var copy_name = "Unit Test Cyber Space Copy"
+	var saved_ok = space_mgr.save_space_as(copy_name)
+	assert_true(saved_ok, "save_space_as returns true")
+	assert_true(space_mgr.current_space_name == copy_name, "current_space_name updated to copy")
+
+	# Verify it appears in spaces list
+	var updated_list = space_mgr.list_spaces()
+	var found_copy = false
+	var copy_id = ""
+	for s in updated_list:
+		if s.get("name") == copy_name:
+			found_copy = true
+			copy_id = s.get("id")
+			break
+	assert_true(found_copy, "Saved copy found in space list")
+
+	# Delete spaces created in test
+	if not copy_id.is_empty():
+		var deleted = space_mgr.delete_space(copy_id)
+		assert_true(deleted, "delete_space successfully removes space copy")
+
+	if new_space_data.has("id"):
+		var orig_deleted = space_mgr.delete_space(new_space_data["id"])
+		assert_true(orig_deleted, "delete_space cleanly removes original test space")
+
+	# ----------------------------------------------------
+	# Group 8: Detroit CyberLife AnalysisDrawer & DiagnosticLogger
+	# ----------------------------------------------------
+	print("\n--- Testing AnalysisDrawer & DiagnosticLogger ---")
+	var drawer_scene = load("res://ui/analysis_drawer/analysis_drawer.tscn")
+	assert_true(drawer_scene != null, "analysis_drawer.tscn loads successfully")
+
+	var drawer_inst = drawer_scene.instantiate()
+	assert_true(drawer_inst != null, "analysis_drawer instantiates cleanly")
+	root.add_child(drawer_inst)
+	drawer_inst.setup(event_bus)
+
+	# Test DiagnosticLogger
+	var test_diag_logger := DiagnosticLogger.new()
+	root.add_child(test_diag_logger)
+	test_diag_logger.clear()
+	test_diag_logger.log_system("INFO", "CORE", "System online")
+	test_diag_logger.log_system("WARN", "MEMORY", "High memory usage")
+	test_diag_logger.log_agent("ERROR", "AGENT", "API connection failed")
+	var logs = test_diag_logger.get_recent_entries()
+	assert_true(logs.size() == 3, "DiagnosticLogger stored 3 entries")
+	var logs_text = test_diag_logger.export_session_log()
+	assert_true("API connection failed" in logs_text, "DiagnosticLogger formatted text contains error log")
+	test_diag_logger.queue_free()
+
+	# Test opening AnalysisDrawer with rich diagnostic data
+	var test_diag_data := {
+		"title": "[СБОЙ СЕТИ] Ошибка региона API",
+		"description": "User location is not supported for Gemini API direct access.",
+		"http_code": 403,
+		"url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash",
+		"provider": "GEMINI DIRECT",
+		"model": "gemini-2.5-flash",
+		"last_prompt": "Создай летающую сферу",
+		"error_body": "{\"error\": {\"code\": 403, \"message\": \"User location is not supported.\"}}",
+		"code": "extends UniCoreModule\nfunc get_module_id():\n    return 'flying_sphere'",
+		"logs": logs
+	}
+	drawer_inst.open(test_diag_data)
+	assert_true(drawer_inst.is_open, "AnalysisDrawer open() sets is_open to true")
+	assert_true(drawer_inst.title_label.text == "[СБОЙ СЕТИ] Ошибка региона API", "Title matches diagnostic data")
+	assert_true("Региональное ограничение" in drawer_inst.explanation_label.text, "Human-readable root cause analyzed correctly")
+	assert_true("403" in drawer_inst.http_line_label.text, "HTTP Code 403 displayed")
+
+	# Test clipboard report generation and copying
+	var copied_report = drawer_inst.copy_report_to_clipboard()
+	assert_true(not copied_report.is_empty(), "copy_report_to_clipboard returns non-empty report")
+	assert_true("UNICORE CYBERLIFE DIAGNOSTIC REPORT" in copied_report, "Report contains CyberLife header")
+	assert_true("HTTP Статус: 403" in copied_report, "Report contains HTTP 403")
+	assert_true("flying_sphere" in copied_report, "Report contains generated GDScript source code")
+	assert_true(drawer_inst.last_copied_report == copied_report, "drawer.last_copied_report matches copied report")
+
+	# Test quick action signals
+	var settings_req_section := [""]
+	drawer_inst.open_settings_requested.connect(func(sec): settings_req_section[0] = sec)
+	drawer_inst.settings_btn.pressed.emit()
+	assert_true(settings_req_section[0] == "api", "SettingsButton emits open_settings_requested with 'api'")
+
+	var retry_prompt := [""]
+	drawer_inst.retry_requested.connect(func(p): retry_prompt[0] = p)
+	drawer_inst.retry_btn.pressed.emit()
+	assert_true(retry_prompt[0] == "Создай летающую сферу", "RetryButton emits retry_requested with last prompt")
+
+	# Test toggle and close
+	drawer_inst.close()
+	assert_false(drawer_inst.is_open, "AnalysisDrawer close() works")
+	drawer_inst.toggle()
+	assert_true(drawer_inst.is_open, "AnalysisDrawer toggle() opens when closed")
+	drawer_inst.toggle()
+	assert_false(drawer_inst.is_open, "AnalysisDrawer toggle() closes when open")
+
+	drawer_inst.queue_free()
+
+	# Clean up test nodes and reset test settings
+	space_mgr.queue_free()
+	mod_mgr.queue_free()
+	world_root.queue_free()
+	event_bus.queue_free()
+	settings_mgr.reset_to_defaults()
+	settings_mgr.queue_free()
+
+	print("\n==================================================")
+	print("Test Results: %d Passed, %d Failed" % [passed_count, failed_count])
+	print("==================================================")
+
+	if failed_count == 0:
+		quit(0)
+	else:
+		quit(1)

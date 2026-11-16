@@ -1,0 +1,17 @@
+[
+  {
+    "test": "regressions",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "native/run_regressions.py",
+      "--godot",
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\regressions-1794615854096520300\\default"
+    ],
+    "seconds": 40.73437489999924,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\regressions-1794615854096520300"
+  }
+]

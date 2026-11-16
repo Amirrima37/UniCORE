@@ -1,0 +1,12 @@
+{
+  "name": "cad21-preservation",
+  "exit_code": 0,
+  "outcome": "PASS",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/run_cad21.py",
+    "preservation"
+  ],
+  "seconds": 23.879930900002364,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-preservation-1794657105926211600"
+}

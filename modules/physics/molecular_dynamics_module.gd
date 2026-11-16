@@ -348,6 +348,13 @@ func _initialize_maxwell_boltzmann_velocities() -> void:
 		for i in range(n):
 			_velocities[i] = _velocities[i] * scale
 
+	# Rescaling stores float32 vectors and can reintroduce a rounding residual.
+	# Close the stored momentum sum without changing the temperature target tolerance.
+	if n>1:
+		var prefix:=Vector3.ZERO
+		for i in n-1: prefix+=_velocities[i]*particle_mass
+		_velocities[n-1]=-prefix/particle_mass
+
 func reset_to_maxwell_boltzmann() -> void:
 	if _positions.is_empty():
 		return

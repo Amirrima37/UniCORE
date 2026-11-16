@@ -1,0 +1,17 @@
+[
+  {
+    "case": "integration",
+    "outcome": "FAIL",
+    "exit_code": 1,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad21_integration.gd"
+    ],
+    "seconds": 1.5178977000032319,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\integration-1794598982605258500"
+  }
+]

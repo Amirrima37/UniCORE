@@ -1,0 +1,14 @@
+{
+  "preparation_ms": 5407.3104,
+  "integration_ms": 625.8054,
+  "scatter_ms": 467.6116,
+  "csr_ms": 373.3368,
+  "constraint_ms": 34.6338,
+  "assembly_ms": 1133.4589,
+  "solve_ms": 920.8858,
+  "post_ms": 1042.4491,
+  "relative_residual": 9.051919247460844e-15,
+  "iterations": 32,
+  "peak_working_set_bytes": 508293120,
+  "total_runtime_ms": 11054.8633
+}

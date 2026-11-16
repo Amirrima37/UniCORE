@@ -1,0 +1,26 @@
+[
+  {
+    "test": "test_stage6_pipe",
+    "exit": 0,
+    "passed": true,
+    "seconds": 16.723215099998924
+  },
+  {
+    "test": "test_stage6_pipe_contract",
+    "exit": 0,
+    "passed": true,
+    "seconds": 5.346649500002968
+  },
+  {
+    "test": "capture_stage6_pipe",
+    "exit": 0,
+    "passed": true,
+    "seconds": 25.993812100001378
+  },
+  {
+    "test": "test_app_shell_suite",
+    "exit": 0,
+    "passed": true,
+    "seconds": 8.396192000000156
+  }
+]

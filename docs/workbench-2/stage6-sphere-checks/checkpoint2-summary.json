@@ -1,0 +1,131 @@
+{
+  "checkpoint2": "PASS (bounded single sphere, density 1-4)",
+  "stage6": "PARTIAL",
+  "default_regressions": 28,
+  "focused_tests": [
+    {
+      "test": "test_stage6_sphere",
+      "exit": 0,
+      "seconds": 9.349614800004929,
+      "passed": true
+    },
+    {
+      "test": "test_stage6_sphere_contract",
+      "exit": 0,
+      "seconds": 1.2437350000036531,
+      "passed": true
+    },
+    {
+      "test": "test_workbench2_stage2",
+      "exit": 0,
+      "seconds": 2.9290437000017846,
+      "passed": true
+    },
+    {
+      "test": "test_stage6_cylinder",
+      "exit": 0,
+      "seconds": 2.2033299999966403,
+      "passed": true
+    },
+    {
+      "test": "test_cylinder_fem",
+      "exit": 0,
+      "seconds": 7.179894799999602,
+      "passed": true
+    },
+    {
+      "test": "test_stage5_provenance",
+      "exit": 0,
+      "seconds": 0.9929074999963632,
+      "passed": true
+    },
+    {
+      "test": "test_stage51_cache",
+      "exit": 0,
+      "seconds": 3.3009193999969284,
+      "passed": true
+    },
+    {
+      "test": "test_stage6_sphere_dialog",
+      "exit": 0,
+      "seconds": 0.586954299993522,
+      "passed": true
+    },
+    {
+      "test": "test_app_shell_suite",
+      "exit": 0,
+      "seconds": 11.503898200004187,
+      "passed": true
+    },
+    {
+      "test": "test_stage5_probes",
+      "exit": 0,
+      "seconds": 2.9669443999955547,
+      "passed": true
+    }
+  ],
+  "graphics": {
+    "test": "capture_stage6_sphere",
+    "exit": 0,
+    "seconds": 14.026193899997452,
+    "passed": true
+  },
+  "screenshots": [
+    {
+      "file": "stage6-sphere-mesh-1280.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "stage6-sphere-mesh-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "file": "stage6-sphere-hemisphere-1280.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "stage6-sphere-hemisphere-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "file": "stage6-sphere-displacement-1280.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "stage6-sphere-displacement-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "file": "stage6-sphere-temperature-1280.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "stage6-sphere-temperature-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "file": "stage6-sphere-heat_flux-1280.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "stage6-sphere-heat_flux-1920.png",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "limitations": [
+    "Mapped cube corner quality degrades with density",
+    "Local heat flux maximum error is not monotonic",
+    "Historical crash remains unresolved; clean exit is not proof of repair",
+    "No new native builds or sphere checkpoint/restart validation"
+  ]
+}

@@ -1,0 +1,8 @@
+Godot Engine v4.0.stable.official.92bee43ad - https://godotengine.org
+ 
+HEX8 axial relative displacement error: 0
+HEX8 beam n=2 u=0.00000347891463 relative beam error=0.70777117129299
+HEX8 beam n=4 u=0.00000739687375 relative beam error=0.37866260459198
+HEX8 beam n=8 u=0.00001043760827 relative beam error=0.12324090571073
+HEX8 beam n=16 u=0.00001170200671 relative beam error=0.01703143650674
+Expanded structural checks: 0 failures

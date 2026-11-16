@@ -1,0 +1,254 @@
+[
+  {
+    "fixture": ".tools\\extreme-thermal\\model.ucjob",
+    "executable": "unicore_solver_hpc21_baseline.exe",
+    "threads": 1,
+    "maximum_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0,
+      "radiative_power_W": 0,
+      "heat_reactions": 0.0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-thermal\\model.ucjob",
+    "executable": "unicore_solver.exe",
+    "threads": 1,
+    "maximum_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0,
+      "radiative_power_W": 0,
+      "heat_reactions": 0.0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-thermal\\model.ucjob",
+    "executable": "unicore_solver.exe",
+    "threads": 2,
+    "maximum_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0,
+      "radiative_power_W": 0,
+      "heat_reactions": 0.0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-thermal\\model.ucjob",
+    "executable": "unicore_solver.exe",
+    "threads": 4,
+    "maximum_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0,
+      "radiative_power_W": 0,
+      "heat_reactions": 0.0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-thermal\\model.ucjob",
+    "executable": "unicore_solver.exe",
+    "threads": 6,
+    "maximum_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0,
+      "radiative_power_W": 0,
+      "heat_reactions": 0.0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-thermal\\model.ucjob",
+    "executable": "unicore_solver.exe",
+    "threads": 8,
+    "maximum_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0,
+      "radiative_power_W": 0,
+      "heat_reactions": 0.0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-thermal\\model.ucjob",
+    "executable": "unicore_solver.exe",
+    "threads": 12,
+    "maximum_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0,
+      "radiative_power_W": 0,
+      "heat_reactions": 0.0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-checkpoint\\model.ucjob",
+    "executable": "unicore_solver_hpc21_baseline.exe",
+    "threads": 1,
+    "maximum_differences": {
+      "temperature": 0.0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0.0,
+      "radiative_power_W": 0.0,
+      "heat_reactions": 0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-checkpoint\\model.ucjob",
+    "executable": "unicore_solver.exe",
+    "threads": 1,
+    "maximum_differences": {
+      "temperature": 0.0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0.0,
+      "radiative_power_W": 0.0,
+      "heat_reactions": 0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-checkpoint\\model.ucjob",
+    "executable": "unicore_solver.exe",
+    "threads": 2,
+    "maximum_differences": {
+      "temperature": 0.0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0.0,
+      "radiative_power_W": 0.0,
+      "heat_reactions": 0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-checkpoint\\model.ucjob",
+    "executable": "unicore_solver.exe",
+    "threads": 4,
+    "maximum_differences": {
+      "temperature": 0.0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0.0,
+      "radiative_power_W": 0.0,
+      "heat_reactions": 0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-checkpoint\\model.ucjob",
+    "executable": "unicore_solver.exe",
+    "threads": 6,
+    "maximum_differences": {
+      "temperature": 0.0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0.0,
+      "radiative_power_W": 0.0,
+      "heat_reactions": 0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-checkpoint\\model.ucjob",
+    "executable": "unicore_solver.exe",
+    "threads": 8,
+    "maximum_differences": {
+      "temperature": 0.0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0.0,
+      "radiative_power_W": 0.0,
+      "heat_reactions": 0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  },
+  {
+    "fixture": ".tools\\extreme-checkpoint\\model.ucjob",
+    "executable": "unicore_solver.exe",
+    "threads": 12,
+    "maximum_differences": {
+      "temperature": 0.0,
+      "heat_flux": 0.0,
+      "heat_flux_history": 0,
+      "radiative_heat_flux": 0.0,
+      "radiative_power_W": 0.0,
+      "heat_reactions": 0,
+      "history": 0,
+      "energy_balance_W": 0.0,
+      "relative_residual": 0.0,
+      "iterations": 0,
+      "nonlinear_iterations": 0
+    }
+  }
+]

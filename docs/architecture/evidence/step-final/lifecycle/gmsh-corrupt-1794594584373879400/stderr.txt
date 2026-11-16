@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\gmsh_study.py", line 182, in <module>
+    result=preview_step(root,study['parts'][0]) if len(sys.argv)>3 and sys.argv[3]=='preview' else mesh_study(root,study,float(sys.argv[3]))
+                                                                                                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\gmsh_study.py", line 84, in mesh_study
+    raise ValueError('Embedded CAD asset size or SHA-256 mismatch')
+ValueError: Embedded CAD asset size or SHA-256 mismatch

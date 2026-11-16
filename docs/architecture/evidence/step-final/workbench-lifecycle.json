@@ -1,0 +1,87 @@
+[
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "open_completed_study"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "missing_boundary_group"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "missing_solver_actionable"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "mesh_observed_owned_launch"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "mesh_save_while_active"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "mesh_overlap_guard"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "mesh_cancel_join"
+  },
+  {
+    "detail": "124",
+    "outcome": "PASS",
+    "test": "mesh_main_thread_frames"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "mesh_reopen_after_cancel"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "solve_observed_owned_launch"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "solve_save_while_active"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "solve_overlap_guard"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "solve_cancel_join"
+  },
+  {
+    "detail": "262",
+    "outcome": "PASS",
+    "test": "solve_main_thread_frames"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "cancelled_solve_not_published"
+  },
+  {
+    "detail": "",
+    "outcome": "PASS",
+    "test": "solve_reopen_after_cancel"
+  },
+  {
+    "detail": "{ \"state\": \"cancelled\", \"exit_code\": 1.0, \"started_utc\": \"2026-11-13T19:37:23.409260+00:00\", \"ended_utc\": \"2026-11-13T19:37:23.565115+00:00\" }",
+    "outcome": "PASS",
+    "test": "shutdown_owned_solver"
+  }
+]

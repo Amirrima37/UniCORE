@@ -1,0 +1,20 @@
+[
+  {
+    "test": "topology",
+    "exit": 0,
+    "seconds": 30.149904199999582,
+    "passed": true
+  },
+  {
+    "test": "app-shell-repeat1",
+    "exit": 0,
+    "seconds": 11.645694799997727,
+    "passed": true
+  },
+  {
+    "test": "app-shell-repeat2",
+    "exit": 0,
+    "seconds": 10.048244899997371,
+    "passed": true
+  }
+]

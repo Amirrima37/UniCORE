@@ -1,0 +1,31 @@
+[
+  {
+    "case": "empty",
+    "exit": 2,
+    "error": "UNSUPPORTED_JOB_VERSION"
+  },
+  {
+    "case": "version",
+    "exit": 2,
+    "error": "UNSUPPORTED_JOB_VERSION"
+  },
+  {
+    "case": "negative_count",
+    "exit": 2,
+    "error": "INVALID_COUNT_OR_BUDGET"
+  },
+  {
+    "case": "bad_index",
+    "exit": 2,
+    "error": "INVALID_NODE_INDEX"
+  },
+  {
+    "case": "unsupported",
+    "exit": 2,
+    "error": "UNSUPPORTED_ANALYSIS"
+  },
+  {
+    "case": "Unicode and shell metacharacters in paths",
+    "exit": 0
+  }
+]

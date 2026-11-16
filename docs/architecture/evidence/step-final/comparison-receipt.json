@@ -1,0 +1,15 @@
+[
+  {
+    "name": "extreme-comparison-retry",
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/compare_godot472_calculix_extreme.py",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\step-final\\extreme-comparison-1794594640369087700"
+    ],
+    "exit_code": 0,
+    "outcome": "PASS",
+    "state": "completed",
+    "seconds": 0.5255566999985604
+  }
+]

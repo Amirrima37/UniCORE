@@ -1,0 +1,114 @@
+[
+  {
+    "name": "build-debug-noomp",
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "native/extreme/build.ps1",
+      "-Debug",
+      "-NoOpenMP"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 16.716,
+    "log": "docs\\workbench-2\\stage6-final\\build-debug-noomp.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": true,
+    "binary": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug_noomp.exe",
+    "bytes": 7353066,
+    "sha256": "42b60a69d89c4f6180b3220f42861d1eb95519b06066b6376e5cec1d94b483d4"
+  },
+  {
+    "name": "test_stage6_native_matrix",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/test_stage6_native_matrix.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 3.561,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_native_matrix.log",
+    "diagnostics": [],
+    "assertions": [
+      "Native Release/Debug with and without OpenMP: eight TET4 solves, verified imports, axial references, balance and process cleanup PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "restart-final",
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/stage6_restart_acceptance.py"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 1.101,
+    "log": "docs\\workbench-2\\stage6-final\\restart-final.log",
+    "diagnostics": [],
+    "assertions": [
+      "Stage 6 cylinder transient pause=3; cross-build restart; corrupt/incompatible/structural rejection; recovery PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "lame",
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/stage6_lame_reference.py"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 3.359,
+    "log": "docs\\workbench-2\\stage6-final\\lame.log",
+    "diagnostics": [],
+    "assertions": [
+      "Plane strain Lame displacement/radial stress/hoop stress refinement PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage51_cache",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/test_stage51_cache.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 4.035,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage51_cache.log",
+    "diagnostics": [],
+    "assertions": [
+      "Exact-state cache invalidation / bypassed revisions / field mutation / resource reuse PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "capture_stage6_final_cylinder",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64.exe",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/capture_stage6_final_cylinder.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 16.961,
+    "log": "docs\\workbench-2\\stage6-final\\capture_stage6_final_cylinder.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": true
+  }
+]

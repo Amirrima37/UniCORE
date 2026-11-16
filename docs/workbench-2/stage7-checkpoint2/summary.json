@@ -1,0 +1,46 @@
+{
+  "numerical-final": {
+    "assertions": 31615,
+    "operations": 44
+  },
+  "builds-final": {
+    "assertions": 3132,
+    "operations": 24
+  },
+  "regression-final": {
+    "assertions": 22,
+    "operations": 11
+  },
+  "imports-final": {
+    "assertions": 2,
+    "operations": 1
+  },
+  "provenance-final": {
+    "assertions": 1300,
+    "operations": 1
+  },
+  "default_manifest": {
+    "passed": 28,
+    "total": 28
+  },
+  "lifecycle_extra": {
+    "operations": 3,
+    "all_expected_rejections": true
+  },
+  "unchanged_modal_sources": {
+    "native/src/kernels/modal_solver.hpp": "6c9ccc9dea339c96c9753b907070edf1445ddb76158432a13037feff004d94cb",
+    "native/src/math/symmetric_modes.hpp": "486dcac308c999909717621d68817916ad1b384a6f2ea82698546e98098cdceb",
+    "native/extreme/modal_output.hpp": "881b9eb3f84e972faa70659225a8e93b5e31343dd937af2deae1e971e149707e"
+  },
+  "source_sha256": {
+    "native/src/math/newmark.hpp": "723047329c8d0b4fdb6d4118599985046f97675452fbff3a2d388e5938f5fc59",
+    "native/src/kernels/transient_structural.hpp": "90af64fb9555599653419bd2aaaf5443b7a10df9d3d10dc63606072eccdf6b80",
+    "native/extreme/dynamic_output.hpp": "2c72a0d4cea6731309382f6067685ad680e20faea4f151ffa54334930ba3f277",
+    "native/extreme/main.cpp": "c4d08e0fdd75a463973c2acf821fbbd5f1482955f6c017450d11d7ac7193137b",
+    "native/extreme/CMakeLists.txt": "b5dcb6dea98005d291b8483eb2b2d3db0bb9836d24ab8fafd9bd70aaec75a76f"
+  },
+  "verdict": "PASS — native constrained TET4 transient structural scope",
+  "structural_restart": "DEFERRED",
+  "workbench_dynamic_ui": "DEFERRED",
+  "historical_Godot_crash": "UNRESOLVED"
+}

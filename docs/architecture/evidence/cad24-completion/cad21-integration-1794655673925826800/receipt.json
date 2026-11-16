@@ -1,0 +1,12 @@
+{
+  "name": "cad21-integration",
+  "exit_code": 0,
+  "outcome": "PASS",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/run_cad21.py",
+    "integration"
+  ],
+  "seconds": 74.10745070000121,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-integration-1794655673925826800"
+}

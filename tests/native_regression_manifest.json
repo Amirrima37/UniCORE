@@ -22,6 +22,17 @@
     "tests/test_native_structural_ui.gd",
     "tests/test_cae_recovery.gd",
     "tests/test_cae_shell.gd",
-    "tests/test_cae_ai_commands.gd"
-  ]
+    "tests/test_cae_ai_commands.gd",
+    "tests/test_mesh_inspection.gd",
+    "tests/test_mesh_result_integration.gd",
+    "tests/test_native_radiation.gd",
+    "tests/test_mesh_async.gd",
+    "tests/test_extreme_equivalence.gd",
+    "tests/test_extreme_advanced.gd"
+  ],
+  "expected_anonymous_parse_errors": {
+    "tests/test_diagnostic_logger_suite.gd": 1,
+    "tests/test_self_repair_suite.gd": 5,
+    "tests/test_validator_suite.gd": 1
+  }
 }

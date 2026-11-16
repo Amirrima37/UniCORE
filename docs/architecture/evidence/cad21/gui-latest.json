@@ -1,0 +1,16 @@
+[
+  {
+    "case": "gui",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad21_gui.gd"
+    ],
+    "seconds": 12.887667699993472,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\gui-1794603464945423200"
+  }
+]

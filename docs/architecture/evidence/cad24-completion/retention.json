@@ -1,0 +1,40 @@
+{
+  "bytes_before": 4228,
+  "bytes_after": 3170,
+  "protected_bytes": 3170,
+  "removed": [
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\tmp3etlh5og\\gmsh_old"
+  ],
+  "errors": [],
+  "quota_bytes": 0,
+  "quota_accounted_bytes": 0,
+  "quota_met": true,
+  "failed_cleanup": {
+    "bytes_before": 3234,
+    "bytes_after": 3234,
+    "protected_bytes": 3170,
+    "removed": [],
+    "errors": [
+      "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\tmp3etlh5og\\\\gmsh_locked' -> 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\tmp3etlh5og\\\\.cad24-trash-139b57e764b14b2c8238979ffd38c6a5'"
+    ],
+    "quota_bytes": 0,
+    "quota_accounted_bytes": 64,
+    "quota_met": false
+  },
+  "recovery": {
+    "bytes_before": 3234,
+    "bytes_after": 3170,
+    "protected_bytes": 3170,
+    "removed": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\tmp3etlh5og\\gmsh_locked"
+    ],
+    "errors": [],
+    "quota_bytes": 0,
+    "quota_accounted_bytes": 0,
+    "quota_met": true
+  },
+  "concurrent_sweeper_skipped": true,
+  "reparse_escape_protected": true,
+  "abandoned_job_recovered": true,
+  "concurrent_completion_marker_retry": true
+}

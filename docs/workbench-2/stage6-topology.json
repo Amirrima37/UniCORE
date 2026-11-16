@@ -1,0 +1,58 @@
+[
+  {
+    "components": 1,
+    "density": 1,
+    "elements": 96,
+    "exterior": 80,
+    "nodes": 45
+  },
+  {
+    "components": 1,
+    "density": 2,
+    "elements": 768,
+    "exterior": 320,
+    "nodes": 225
+  },
+  {
+    "components": 1,
+    "density": 3,
+    "elements": 2592,
+    "exterior": 720,
+    "nodes": 637
+  },
+  {
+    "components": 1,
+    "density": 4,
+    "elements": 6144,
+    "exterior": 1280,
+    "nodes": 1377
+  },
+  {
+    "components": 1,
+    "density": 5,
+    "elements": 12000,
+    "exterior": 2000,
+    "nodes": 2541
+  },
+  {
+    "components": 1,
+    "density": 6,
+    "elements": 20736,
+    "exterior": 2880,
+    "nodes": 4225
+  },
+  {
+    "components": 1,
+    "density": 7,
+    "elements": 32928,
+    "exterior": 3920,
+    "nodes": 6525
+  },
+  {
+    "components": 1,
+    "density": 8,
+    "elements": 49152,
+    "exterior": 5120,
+    "nodes": 9537
+  }
+]

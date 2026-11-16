@@ -1,0 +1,63 @@
+extends RefCounted
+## Exterior triangles retain element ownership; no stress averaging or extrapolation.
+const Display = preload("res://core/cae/mesh_display.gd")
+const Colors = preload("res://core/cae/engineering_visuals.gd")
+func values(result: Dictionary, field: String) -> Array:
+	if field=="von_mises": return result.get(field,[])
+	var output := []
+	for u in result.get("displacement",[]):
+		output.append(sqrt(u[0]*u[0]+u[1]*u[1]+u[2]*u[2]) if u is Array and u.size()==3 else NAN)
+	return output
+func bounds(values_array: Array) -> Dictionary:
+	var low := INF
+	var high := -INF
+	for v in values_array:
+		if is_finite(v): low=minf(low,v); high=maxf(high,v)
+	return {} if low==INF else {"low":low,"high":high}
+func build(result: Dictionary, field: String, scale: float) -> Dictionary:
+	var nodes: Array=result.get("nodes",[])
+	var cells: Array=result.get("elements",result.get("tetrahedra",[]))
+	var displacement: Array=result.get("displacement",[])
+	if nodes.is_empty() or displacement.size()!=nodes.size() or not is_finite(scale): return {"error":"Invalid displacement/node mapping"}
+	for u in displacement:
+		if not u is Array or u.size()!=3 or not (is_finite(u[0]) and is_finite(u[1]) and is_finite(u[2])): return {"error":"Invalid displacement vector"}
+	for cell in cells:
+		if cell.size() not in [4,8]: return {"error":"Unsupported result connectivity"}
+		for id in cell:
+			if int(id)!=id or id<0 or id>=nodes.size(): return {"error":"Invalid solver node ID"}
+	var data := {"nodes":nodes,"elements":cells}
+	var scalar := values(result,field)
+	var range_values := bounds(scalar)
+	var low: float=range_values.get("low",0.0)
+	var high: float=range_values.get("high",0.0)
+	var vertices := PackedVector3Array()
+	var colors := PackedColorArray()
+	var scalars := PackedVector2Array()
+	for record in Display.surface_records(data):
+		for i in range(1,record.ids.size()-1):
+			for id in [record.ids[0],record.ids[i],record.ids[i+1]]:
+				var p: Array=nodes[id]
+				var u: Array=displacement[id]
+				vertices.append(Vector3(p[0]+scale*u[0],p[1]+scale*u[1],p[2]+scale*u[2]))
+				var index: int=record.element if field=="von_mises" else id
+				colors.append(Colors.color(scalar[index] if index<scalar.size() else NAN,low,high))
+				var value: float=scalar[index] if index<scalar.size() else NAN
+				scalars.append(Vector2((value-low)/(high-low) if high>low else 0.5,0) if is_finite(value) else Vector2(0,1))
+	var arrays := []
+	arrays.resize(Mesh.ARRAY_MAX)
+	arrays[Mesh.ARRAY_VERTEX]=vertices
+	arrays[Mesh.ARRAY_COLOR]=colors
+	arrays[Mesh.ARRAY_TEX_UV]=scalars
+	var mesh := ArrayMesh.new()
+	if not vertices.is_empty(): mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,arrays)
+	var material := ShaderMaterial.new()
+	material.shader=preload("res://shaders/cae_scalar.gdshader")
+	var gradient := Gradient.new()
+	gradient.set_color(0,Colors.color(0,0,1))
+	gradient.set_color(1,Colors.color(1,0,1))
+	for i in range(1,4): gradient.add_point(i/4.0,Colors.color(i/4.0,0,1))
+	var texture := GradientTexture1D.new()
+	texture.gradient=gradient
+	texture.width=1024
+	material.set_shader_parameter("color_map",texture)
+	return {"mesh":mesh,"material":material,"low":low,"high":high}

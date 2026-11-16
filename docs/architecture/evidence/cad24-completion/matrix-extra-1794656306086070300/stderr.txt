@@ -1,0 +1,1 @@
+Error   : Invalid boundary mesh (overlapping facets) on surface 7 surface 7

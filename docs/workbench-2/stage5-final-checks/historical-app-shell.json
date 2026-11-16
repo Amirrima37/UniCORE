@@ -1,0 +1,6 @@
+{
+  "script": "tests/test_app_shell_suite.gd",
+  "exit": 3221225477,
+  "windows_hex": "0xc0000005",
+  "seconds": 12.461479300000065
+}

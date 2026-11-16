@@ -1,0 +1,276 @@
+extends RefCounted
+var last_error := ""
+func snapshot_digest(data: Dictionary) -> String:
+	var canonical=JSON.parse_string(JSON.stringify(data,"",true,true))
+	data=canonical
+	return JSON.stringify([data.get("revision"),data.get("parts"),data.get("mesh"),data.get("extreme_mesh"),data.get("analysis"),data.get("extreme_surface_groups")],"",true,true).sha256_text()
+func validate_provenance(directory: String,data: Dictionary,r: Dictionary,current: Dictionary={}) -> String:
+	var proof: Dictionary=data.get("extreme_provenance",{})
+	if proof.get("version",0)!=1 or r.get("provenance_version",0)!=1:
+		return "Legacy result lacks verifiable provenance; retained on disk. Re-solve to display safely."
+	if proof.get("snapshot_sha256","")!=snapshot_digest(data):return "Result snapshot changed (mesh, ordering, material or revision)"
+	if proof.get("job_sha256","")!=FileAccess.get_sha256(directory+"/model.ucjob"):return "Solver input changed"
+	var bytes:=FileAccess.get_file_as_bytes(directory+"/model.ucjob")
+	var fingerprint: int=1469598103934665603
+	for byte in bytes: fingerprint=(fingerprint ^ int(byte))*1099511628211
+	if str(fingerprint)!=r.get("input_fingerprint",""):return "Result belongs to a different solver input"
+	if not current.is_empty():
+		current=JSON.parse_string(JSON.stringify(current,"",true,true))
+		for key in ["revision","parts","mesh","analysis"]:
+			if JSON.stringify(current.get(key),"",true,true)!=JSON.stringify(data.get(key),"",true,true):return "Current project differs from solved snapshot: "+key
+	var mesh: Dictionary=data.get("extreme_mesh",{})
+	var n: int=mesh.get("nodes",[]).size()
+	var e: int=mesh.get("elements",[]).size()
+	if n==0 or e==0:return "Empty numerical mapping"
+	var lengths: Dictionary={"temperature":n,"heat_reactions":n,"heat_flux":e} if r.has("temperature") else {"displacement_flat":3*n,"reactions_flat":3*n,"stress":e,"strain":e,"von_mises":e}
+	for key in lengths:
+		if not r.get(key) is Array or r[key].size()!=lengths[key]:return "Invalid result field mapping: "+key
+		var width: int=3 if key=="heat_flux" else 6 if key in ["stress","strain"] else 0
+		for value in r[key]:
+			if width>0:
+				if not value is Array or value.size()!=width:return "Invalid vector/tensor width: "+key
+				for component in value:
+					if not (component is float or component is int) or not is_finite(component):return "Invalid numerical field: "+key
+			elif not (value is float or value is int) or not is_finite(value):return "Invalid numerical field: "+key
+	if r.has("temperature"):
+		var faces=r.get("radiation_surface_nodes")
+		if not faces is Array:return "Missing radiation surface mapping"
+		for face in faces:
+			if not face is Array or face.size()!=3:return "Invalid radiation triangle"
+			for id in face:
+				if not (id is int or id is float) or not is_finite(id) or id!=int(id) or id<0 or id>=n:return "Invalid radiation node ID"
+		for key in ["radiative_heat_flux","radiative_power_W","surface_emissivity"]:
+			if not finite_field(r.get(key),faces.size()):return "Invalid radiation field: "+key
+		var history=r.get("history",[])
+		var times=r.get("times",[])
+		if not history is Array or not finite_field(times,history.size()):return "Invalid temperature history times"
+		for frame in history:
+			if not finite_field(frame,n):return "Invalid temperature history mapping"
+		for i in times.size():
+			if times[i]<0 or (i>0 and times[i]<=times[i-1]):return "Nonmonotonic history times"
+		for key in ["heat_flux_history","radiative_heat_flux_history"]:
+			var frames=r.get(key,[])
+			if not frames is Array or (not frames.is_empty() and frames.size()!=history.size()):return "Invalid history length: "+key
+			for frame in frames:
+				if key=="radiative_heat_flux_history":
+					if not finite_field(frame,faces.size()):return "Invalid radiation history"
+				else:
+					if not frame is Array or frame.size()!=e:return "Invalid flux history mapping"
+					for vector in frame:
+						if not finite_field(vector,3):return "Invalid flux history vector"
+	return ""
+func finite_field(values, count: int) -> bool:
+	if not values is Array or values.size()!=count:return false
+	for value in values:
+		if not (value is float or value is int) or not is_finite(value):return false
+	return true
+func launch(document,threads: int,memory_mb: int) -> String:
+	last_error=""
+	var errors=document.validate()
+	if not errors.is_empty():last_error="; ".join(errors);return ""
+	if document.data.mesh.is_empty():last_error="Generate a numerical mesh first";return ""
+	var data: Dictionary=document.data.duplicate(false)
+	data.results={}
+	data=data.duplicate(true)
+	var mesh: Dictionary=data.mesh
+	var thermal: bool=data.get("analysis",{}).get("type","static_structural")!="static_structural"
+	var transient: bool=data.get("analysis",{}).get("type","")=="transient_thermal"
+	var cells:=[];var owners:=[]
+	var parts_by_id: Dictionary={}
+	for i in data.parts.size():parts_by_id[str(data.parts[i].id)]=i
+	for i in mesh.elements.size():
+		var cell: Array=mesh.elements[i]
+		var owner: int=i/maxi(1,int(mesh.get("divisions",1))**3)
+		if mesh.get("material_regions",[]).size()==mesh.elements.size():owner=int(parts_by_id.get(str(mesh.material_regions[i]),-1))
+		if owner<0 or owner>=data.parts.size():last_error="Element material region is not assigned to a body";return ""
+		if (thermal or data.get("analysis",{}).get("element","TET4")!="HEX8") and cell.size()==8:
+			for split in [[0,1,2,6],[0,2,3,6],[0,3,7,6],[0,7,4,6],[0,4,5,6],[0,5,1,6]]:
+				var tet:=[]
+				for j in split:tet.append(cell[j])
+				cells.append(tet);owners.append(owner)
+		else:cells.append(cell);owners.append(owner)
+	var tokens:=PackedStringArray(["UNICORE_JOB 1 "+data.get("analysis",{}).get("type","static_structural"),str(mesh.nodes.size())+" "+str(cells.size())])
+	for p in mesh.nodes:tokens.append(" ".join(p.map(func(x):return scalar(x))))
+	for i in cells.size():
+		var part: Dictionary=data.parts[owners[i]];var m: Dictionary=part.material
+		var row:=str(cells[i].size())+" "+" ".join(cells[i].map(func(x):return str(x)))
+		if thermal:
+			if not m.has("k") or (transient and (not m.has("density") or not m.has("cp"))):last_error="Missing thermal material properties";return ""
+			row+=" %s %s %s" % [scalar(m.k),scalar(part.get("heat_source",0)),scalar(float(m.get("density",0))*float(m.get("cp",0)))]
+		else:
+			if not m.has("E") or not m.has("nu"):last_error="Missing isotropic elastic properties";return ""
+			row+=" %s %s" % [scalar(m.E),scalar(m.nu)]
+		tokens.append(row)
+	var fixed:=[];var values:=[];var force:=[]
+	fixed.resize(mesh.nodes.size()*(1 if thermal else 3));fixed.fill(0);values.resize(fixed.size());values.fill(0);force.resize(fixed.size());force.fill(0)
+	var surfaces:=[]
+	data.extreme_surface_groups=[]
+	var records: Array=load("res://core/cae/mesh_display.gd").surface_records({"elements":cells})
+	for part in data.parts:
+		var groups: Dictionary=mesh.regions[part.id]
+		if thermal:
+			for bc in part.get("thermal",[]):
+				if not groups.has(bc.get("face","")):last_error="Unknown thermal boundary face";return ""
+				if bc.get("kind","") not in ["temperature","flux","convection","radiation"]:last_error="Unsupported thermal boundary";return ""
+				if bc.kind=="radiation" and (not bc.has("surroundings") or (not bc.get("use_material_emissivity",false) and not bc.has("emissivity"))):last_error="Radiation properties are missing";return ""
+				if bc.kind=="convection" and (not bc.has("h") or not bc.has("ambient")):last_error="Convection properties are missing";return ""
+				var ids: Array=groups[bc.face]
+				if bc.kind=="temperature":
+					for id in ids:
+						if fixed[id] and values[id]!=bc.value:last_error="Conflicting temperatures";return ""
+						fixed[id]=1;values[id]=bc.value
+				else:
+					for record in records:
+						if record.ids.all(func(id):return ids.has(id)):
+							var eps: float=float(part.material.get("emissivity",-1)) if bc.get("use_material_emissivity",false) else float(bc.get("emissivity",0))
+							if bc.kind=="radiation" and eps<0:last_error="Material emissivity missing";return ""
+							surfaces.append("%d %d %d %s %s %s %s %s" % [record.ids[0],record.ids[1],record.ids[2],bc.get("value",0) if bc.kind=="flux" else 0,bc.get("h",0),bc.get("ambient",0),eps if bc.kind=="radiation" else 0,bc.get("surroundings",293.15)])
+							data.extreme_surface_groups.append(str(part.id)+"/"+str(bc.face))
+		else:
+			if part.get("support","")!="":
+				for id in groups[part.support]:
+					for j in 3:fixed[id*3+j]=1
+			if part.has("prescribed"):
+				for id in groups[part.prescribed.face]:
+					for j in 3:
+						var value: float=part.prescribed["values"][j]
+						if fixed[id*3+j] and absf(values[id*3+j]-value)>1e-14:last_error="Conflicting prescribed displacements";return ""
+						fixed[id*3+j]=1;values[id*3+j]=value
+			if part.has("gravity"):
+				var part_index: int=data.parts.find(part)
+				var divisions: int=mesh.get("divisions",1)
+				for h in range(part_index*divisions**3,(part_index+1)*divisions**3):
+					var cell: Array=mesh.elements[h]
+					var volume: float=dot64(sub64(mesh.nodes[cell[1]],mesh.nodes[cell[0]]),cross64(sub64(mesh.nodes[cell[3]],mesh.nodes[cell[0]]),sub64(mesh.nodes[cell[4]],mesh.nodes[cell[0]])))
+					for id in cell:
+						for j in 3:force[id*3+j]+=part.material.density*volume*part.gravity[j]/cell.size()
+			if part.has("pressure"):
+				var ids: Array=groups[part.pressure.face]
+				for record in records:
+					if not record.ids.all(func(id):return ids.has(id)):continue
+					var a: Array=mesh.nodes[record.ids[0]];var normal: Array=[0.0,0.0,0.0]
+					for k in range(1,record.ids.size()-1):
+						var p1: Array=mesh.nodes[record.ids[k]];var p2: Array=mesh.nodes[record.ids[k+1]]
+						var contribution: Array=cross64(sub64(p1,a),sub64(p2,a))
+						for j in 3:normal[j]+=contribution[j]/2
+					if dot64(normal,sub64(a,part.position))<0:
+						for j in 3:normal[j]=-normal[j]
+					for id in record.ids:
+						for j in 3:force[id*3+j]-=part.pressure.value*normal[j]/record.ids.size()
+			if part.get("load_face","")!="":
+				var ids: Array=groups[part.load_face]
+				var faces:=[];var total:=0.0
+				for record in records:
+					if not record.ids.all(func(id):return ids.has(id)):continue
+					var area:=0.0
+					var a: Array=mesh.nodes[record.ids[0]]
+					for k in range(1,record.ids.size()-1):
+						var p1: Array=mesh.nodes[record.ids[k]];var p2: Array=mesh.nodes[record.ids[k+1]]
+						var vector: Array=cross64(sub64(p1,a),sub64(p2,a))
+						area+=sqrt(dot64(vector,vector))/2
+					faces.append({"ids":record.ids,"area":area});total+=area
+				if total<=0:last_error="Loaded face has no positive area";return ""
+				for record in faces:
+					for id in record.ids:
+						for j in 3:force[id*3+j]+=part.force[j]*record.area/(total*record.ids.size())
+	for i in fixed.size():tokens.append("%s %s" % [fixed[i],scalar(values[i])] if thermal else "%s %s %s" % [scalar(force[i]),fixed[i],scalar(values[i])])
+	if thermal:
+		tokens.append(str(surfaces.size()));tokens.append_array(surfaces)
+		tokens.append("%s %s %s" % [data.get("analysis",{}).get("time_step",0) if transient else 0,data.get("analysis",{}).get("steps",0) if transient else 0,data.get("analysis",{}).get("initial_temperature",293.15)])
+	var directory: String="user://extreme_jobs/"+str(Time.get_unix_time_from_system()).replace(".","_")+"_"+str(OS.get_process_id())+"_"+str(Time.get_ticks_usec())
+	DirAccess.make_dir_recursive_absolute(directory)
+	var file:=FileAccess.open(directory+"/status.json",FileAccess.WRITE);file.store_string(JSON.stringify({"state":"Queued"}));file.close()
+	file=FileAccess.open(directory+"/model.ucjob",FileAccess.WRITE);file.store_string("\n".join(tokens));file.close()
+	data.extreme_mesh={"nodes":mesh.nodes,"elements":cells,"material_regions":[]}
+	for owner in owners:data.extreme_mesh.material_regions.append(data.parts[owner].id)
+	data.extreme_provenance={"version":1,"job_sha256":FileAccess.get_sha256(directory+"/model.ucjob"),"snapshot_sha256":snapshot_digest(data)}
+	file=FileAccess.open(directory+"/project.json",FileAccess.WRITE);file.store_string(JSON.stringify(data,"",true,true));file.close()
+	var exe:=ProjectSettings.globalize_path("res://bin/unicore_solver.exe")
+	var arguments:=PackedStringArray(["--job",ProjectSettings.globalize_path(directory+"/model.ucjob"),"--threads",str(threads),"--memory-mb",str(memory_mb),"--output",ProjectSettings.globalize_path(directory)])
+	arguments.append_array(solver_arguments(data))
+	var pid:=OS.create_process(exe,arguments)
+	if pid<0:last_error="Standalone executable could not be launched";return ""
+	file=FileAccess.open(directory+"/process.json",FileAccess.WRITE);file.store_string(JSON.stringify({"schema":1,"pid":pid,"threads":threads,"memory_mb":memory_mb}));file.close()
+	return directory
+func jobs() -> PackedStringArray:
+	var names:=DirAccess.get_directories_at("user://extreme_jobs");names.sort();names.reverse();return names
+
+func load_result(directory: String, current: Dictionary={}) -> Dictionary:
+	last_error=""
+	if not FileAccess.file_exists(directory+"/results.json") or status(directory).get("state","")!="Completed":return {}
+	var data=JSON.parse_string(FileAccess.get_file_as_string(directory+"/project.json"))
+	var r=JSON.parse_string(FileAccess.get_file_as_string(directory+"/results.json"))
+	if not data is Dictionary or not r is Dictionary or not r.get("ok",false):return {}
+	last_error=validate_provenance(directory,data,r,current)
+	if not last_error.is_empty():return {}
+	var numerical: Dictionary=data.get("extreme_mesh",data.mesh)
+	r.source_mesh_sha256=JSON.stringify(data.mesh,"",true,true).sha256_text();r.material_regions=numerical.get("material_regions",[]);r.provenance="Verified input fingerprint and snapshot";r.nodes=numerical.nodes;r.elements=numerical.elements;r.tetrahedra=r.elements.filter(func(cell):return cell.size()==4);r.model_parts=data.parts.duplicate(true);r.revision=data.revision;r.mesh_divisions=data.mesh.divisions;r.backend="Independent native CPU solver"
+	if r.has("temperature"):
+		r.min_temperature=r.temperature.min();r.max_temperature=r.temperature.max()
+		r.warnings=[]
+		for part in data.parts:
+			var bounds=part.material.get("temperature_range_K")
+			if bounds is Array and bounds.size()==2:
+				if r.min_temperature<float(bounds[0]) or r.max_temperature>float(bounds[1]):r.warnings.append(str(part.get("name","Body"))+": CONSTANT_PROPERTIES_OUTSIDE_DOCUMENTED_TEMPERATURE_RANGE")
+			else:r.warnings.append(str(part.get("name","Body"))+": MATERIAL_TEMPERATURE_RANGE_UNSPECIFIED")
+		r.radiation_surface_groups=data.get("extreme_surface_groups",[])
+		r.radiation_group_power_W={}
+		for i in r.radiative_power_W.size():
+			var group: String=r.radiation_surface_groups[i] if i<r.radiation_surface_groups.size() else str(i)
+			r.radiation_group_power_W[group]=r.radiation_group_power_W.get(group,0.0)+r.radiative_power_W[i]
+	else:
+		r.displacement=[];r.reactions=[];r.max_displacement=0.0
+		for i in range(0,r.reactions_flat.size(),3):r.reactions.append([r.reactions_flat[i],r.reactions_flat[i+1],r.reactions_flat[i+2]])
+		for i in range(0,r.displacement_flat.size(),3):
+			var u: Array=[r.displacement_flat[i],r.displacement_flat[i+1],r.displacement_flat[i+2]]
+			r.displacement.append(u);r.max_displacement=maxf(r.max_displacement,Vector3(u[0],u[1],u[2]).length())
+	data.results=r
+	return data
+
+func resources() -> Dictionary:
+	DirAccess.make_dir_recursive_absolute("user://extreme_jobs")
+	var path:=ProjectSettings.globalize_path("user://extreme_jobs/resources.json")
+	if OS.execute(ProjectSettings.globalize_path("res://bin/unicore_solver.exe"),PackedStringArray(["--resources",path]))!=0:return {}
+	var parser:=JSON.new()
+	if parser.parse(FileAccess.get_file_as_string(path))!=OK:return {}
+	return parser.data
+
+func status(directory: String) -> Dictionary:
+	var file:=FileAccess.open(directory+"/status.json",FileAccess.READ)
+	if file==null:return {"state":"Created"}
+	var text:=file.get_as_text();file.close()
+	var parser:=JSON.new()
+	if parser.parse(text)!=OK:return {"state":"Status temporarily unavailable"}
+	var state: Dictionary=parser.data
+	if state.get("state","") in ["Queued","Validating"] and FileAccess.file_exists(directory+"/process.json"):
+		var process=JSON.parse_string(FileAccess.get_file_as_string(directory+"/process.json"))
+		if process is Dictionary and not OS.is_process_running(int(process.pid)):state.state="Failed" if FileAccess.file_exists(directory+"/error.log") else "Restartable" if FileAccess.file_exists(directory+"/checkpoint.ucstate") else "Interrupted"
+	if state.get("state")=="Running" and state.has("pid") and (not OS.is_process_running(int(state.pid)) or not FileAccess.file_exists(directory+"/running.lock")):
+		state.state="Completed" if FileAccess.file_exists(directory+"/results.json") else "Restartable" if FileAccess.file_exists(directory+"/checkpoint.ucstate") else "Interrupted"
+	if state.has("phase"):state.phase_name=["Preparing solve","Validation","Mesh input","Assembly","Linear/nonlinear solve","Postprocessing","Complete"][clampi(int(state.phase),0,6)]
+	return state
+
+func sub64(a: Array,b: Array) -> Array:
+	return [float(a[0])-float(b[0]),float(a[1])-float(b[1]),float(a[2])-float(b[2])]
+func cross64(a: Array,b: Array) -> Array:
+	return [a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]]
+func dot64(a: Array,b: Array) -> float:
+	return a[0]*b[0]+a[1]*b[1]+a[2]*b[2]
+
+func scalar(value) -> String:
+	return JSON.stringify(value,"",true,true)
+
+func restart(directory: String,threads: int,memory_mb: int) -> bool:
+	if not FileAccess.file_exists(directory+"/checkpoint.ucstate"):return false
+	var arguments:=PackedStringArray(["--job",ProjectSettings.globalize_path(directory+"/model.ucjob"),"--output",ProjectSettings.globalize_path(directory),"--restart",ProjectSettings.globalize_path(directory+"/checkpoint.ucstate"),"--threads",str(threads),"--memory-mb",str(memory_mb)])
+	var snapshot=JSON.parse_string(FileAccess.get_file_as_string(directory+"/project.json"))
+	if snapshot is Dictionary: arguments.append_array(solver_arguments(snapshot))
+	var pid:=OS.create_process(ProjectSettings.globalize_path("res://bin/unicore_solver.exe"),arguments)
+	if pid<0:return false
+	var file:=FileAccess.open(directory+"/process.json",FileAccess.WRITE);file.store_string(JSON.stringify({"schema":1,"pid":pid,"threads":threads,"memory_mb":memory_mb}));file.close()
+	return true
+
+func solver_arguments(data: Dictionary) -> PackedStringArray:
+	var options: Dictionary=data.get("analysis",{}).get("extreme_solver",{})
+	if options.is_empty(): return PackedStringArray()
+	return PackedStringArray(["--preconditioner",str(options.preconditioner),"--relative-tolerance",scalar(options.relative_tolerance),"--absolute-tolerance",scalar(options.absolute_tolerance),"--max-iterations",str(int(options.max_iterations))])

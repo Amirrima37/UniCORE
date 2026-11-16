@@ -1,0 +1,16 @@
+[
+  {
+    "test": "gui_inspect",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad23_gui_inspect.gd"
+    ],
+    "seconds": 18.211377600004198,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\gui-1794614693477009900"
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "outcome": "PASS",
+    "test": "open-CAD21-compatibility"
+  },
+  {
+    "outcome": "PASS",
+    "test": "apply-settings-and-face-rule"
+  },
+  {
+    "outcome": "PASS",
+    "test": "generated-mesh-current"
+  },
+  {
+    "outcome": "PASS",
+    "test": "genuine-CalculiX-current"
+  },
+  {
+    "outcome": "PASS",
+    "test": "lossless-settings-mesh-result-save-reopen"
+  },
+  {
+    "outcome": "PASS",
+    "test": "settings-edit-retains-old-mesh-but-rejects-freshness"
+  },
+  {
+    "outcome": "PASS",
+    "test": "stale-mesh-solve-rejected"
+  },
+  {
+    "outcome": "PASS",
+    "test": "undo-settings-restores-current-result"
+  },
+  {
+    "outcome": "PASS",
+    "test": "save-during-active-meshing"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-stale-asynchronous-mesh-publication-after-settings-edit"
+  },
+  {
+    "outcome": "PASS",
+    "test": "cancel-before-owned-mesh-launch"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-corrupt-schema-without-document-replacement"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-corrupt-nan-without-document-replacement"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-corrupt-face-without-document-replacement"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-corrupt-encoding-without-document-replacement"
+  },
+  {
+    "outcome": "PASS",
+    "test": "CAD-edit-for-local-rule-safety"
+  },
+  {
+    "outcome": "PASS",
+    "test": "modified-face-rule-disabled-for-review-with-original-ID"
+  },
+  {
+    "outcome": "PASS",
+    "test": "observe-owned-Gmsh-active-before-Workbench-shutdown"
+  },
+  {
+    "outcome": "PASS",
+    "test": "safe-Workbench-shutdown-joins-owned-Gmsh-child"
+  }
+]

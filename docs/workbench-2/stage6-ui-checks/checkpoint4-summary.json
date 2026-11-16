@@ -1,0 +1,133 @@
+{
+  "verdict": "PARTIAL",
+  "default_passed": 28,
+  "focused_passed": 7,
+  "ui_matrix": {
+    "exit": 0,
+    "passed": true,
+    "seconds": 66.07994150000013
+  },
+  "studies": [
+    {
+      "edit_undo_redo_cases": 4,
+      "elements": 192,
+      "geometry": "Cylinder",
+      "nodes": 75,
+      "residual": 9.70939136118425e-11,
+      "study": "static_structural",
+      "ui_launch_import": true
+    },
+    {
+      "edit_undo_redo_cases": 4,
+      "elements": 192,
+      "geometry": "Cylinder",
+      "nodes": 75,
+      "residual": 4.10511352112711e-11,
+      "study": "steady_thermal",
+      "ui_launch_import": true
+    },
+    {
+      "edit_undo_redo_cases": 4,
+      "elements": 384,
+      "geometry": "Sphere",
+      "nodes": 125,
+      "residual": 7.43383321733767e-15,
+      "study": "static_structural",
+      "ui_launch_import": true
+    },
+    {
+      "edit_undo_redo_cases": 4,
+      "elements": 384,
+      "geometry": "Sphere",
+      "nodes": 125,
+      "residual": 1.16774121305073e-15,
+      "study": "steady_thermal",
+      "ui_launch_import": true
+    },
+    {
+      "edit_undo_redo_cases": 4,
+      "elements": 1536,
+      "geometry": "Pipe",
+      "nodes": 480,
+      "residual": 7.26594070542043e-11,
+      "study": "static_structural",
+      "ui_launch_import": true
+    },
+    {
+      "edit_undo_redo_cases": 4,
+      "elements": 1536,
+      "geometry": "Pipe",
+      "nodes": 480,
+      "residual": 8.76942968332062e-11,
+      "study": "steady_thermal",
+      "ui_launch_import": true
+    }
+  ],
+  "edit_undo_redo_sequences": 24,
+  "screenshots": [
+    {
+      "file": "stage6-ui-Sphere-static_structural-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-ui-Sphere-static_structural-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "stage6-ui-Sphere-steady_thermal-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-ui-Sphere-steady_thermal-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "stage6-ui-Pipe-static_structural-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-ui-Pipe-static_structural-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "stage6-ui-Pipe-steady_thermal-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-ui-Pipe-steady_thermal-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "remaining": [
+    "Cancellation/failure UI coverage",
+    "Full condition-dialog editing/removal",
+    "Geometry-specific picking/probes",
+    "Sphere thermal cutaway",
+    "Broader load/density/region-remap matrices"
+  ],
+  "historical_crash": "Unresolved; no new native fix claimed"
+}

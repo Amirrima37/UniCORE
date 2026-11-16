@@ -155,7 +155,7 @@ Dictionary UniCoreStructuralSolver::solve_model(const Dictionary &project) {
         Dictionary result;result["ok"]=true;result["revision"]=project.get("revision",0);result["backend"]=use_hex?"C++ HEX8 full 2x2x2 / isotropic elasticity / Jacobi PCG":"C++ TET4 / isotropic elasticity / Jacobi PCG";result["element_type"]=formulation;result["elements"]=result_elements;result["mesh_quality"]=mesh["quality"];result["stress_location"]=use_hex?"element center, unaveraged":"element constant, unaveraged";
         result["nodes"]=nodes;result["tetrahedra"]=tetrahedra;result["displacement"]=displacement;result["reactions"]=reactions;
         result["principal_stress"]=principal;result["stress"]=stress;result["strain"]=strain;result["von_mises"]=vm;result["max_displacement"]=maximum;
-        result["relative_residual"]=solution.residual;result["iterations"]=solution.iterations;result["mesh_divisions"]=divisions;phase.store(6);return result;
+        result["relative_residual"]=solution.residual;result["iterations"]=solution.iterations;result["mesh_divisions"]=divisions;phase.store(6);if(bool(project.get("profile",false))){Dictionary timings;timings["assembly"]=solution.assembly_ms;timings["solve"]=solution.solve_ms;timings["postprocessing"]=solution.post_ms;result["timings_ms"]=timings;}return result;
     }catch(const std::exception &e){return error(e.what());}
 }
 

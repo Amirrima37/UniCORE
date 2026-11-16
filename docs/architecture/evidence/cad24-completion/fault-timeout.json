@@ -1,0 +1,35 @@
+{
+  "godot_exit": 0,
+  "terminated_native": null,
+  "observed": [
+    {
+      "pid": 10480,
+      "action": "box",
+      "operation_id": "167092b6-6fc8-42c2-b2bb-a2b4132d308f"
+    }
+  ],
+  "recovered": true,
+  "fault": "Native deadline forced to zero seconds",
+  "mode": "timeout",
+  "native_process_receipts": [
+    {
+      "pid": 10480,
+      "exit_code": 0,
+      "seconds": 0.24968989999615587,
+      "job_object": true
+    }
+  ],
+  "stdout": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-timeout-1794666085467844200.stdout.txt",
+  "stderr": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-timeout-1794666085467844200.stderr.txt",
+  "launcher": {
+    "state": "completed",
+    "exit_code": 0,
+    "error": "",
+    "job_object": true,
+    "seconds": 2.0216005999973277,
+    "peak_process_memory_bytes": 662786048,
+    "peak_job_memory_bytes": 664059904,
+    "memory_limit_bytes": 805306368
+  },
+  "observed_native_pids_still_alive": []
+}

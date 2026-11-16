@@ -1,0 +1,11 @@
+{
+  "name": "endurance",
+  "exit_code": 0,
+  "outcome": "PASS",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/cad24_endurance.py"
+  ],
+  "seconds": 438.3149482000008,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\endurance-1794663369438647600"
+}

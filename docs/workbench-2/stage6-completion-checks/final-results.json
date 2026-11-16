@@ -1,0 +1,32 @@
+[
+  {
+    "test": "test_stage6_topology",
+    "exit": 0,
+    "seconds": 25.767431299995224,
+    "passed": true
+  },
+  {
+    "test": "test_stage6_cylinder",
+    "exit": 0,
+    "seconds": 1.9008583999966504,
+    "passed": true
+  },
+  {
+    "test": "test_cylinder_fem",
+    "exit": 0,
+    "seconds": 6.412847200001124,
+    "passed": true
+  },
+  {
+    "test": "test_stage51_cache",
+    "exit": 0,
+    "seconds": 3.0940565999990213,
+    "passed": true
+  },
+  {
+    "test": "test_app_shell_suite",
+    "exit": 0,
+    "seconds": 9.440275200002361,
+    "passed": true
+  }
+]

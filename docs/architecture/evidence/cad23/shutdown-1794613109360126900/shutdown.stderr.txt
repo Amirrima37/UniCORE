@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad23_shutdown.py", line 15, in <module>
+    details=json.loads((OUT/('shutdown-'+mode+'.json')).read_text());job=Path(details['directory']);running=json.loads((job/'running.json').read_text());receipt=json.loads((job/'receipt.json').read_text())
+                                                                                                                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Victus\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\calculix_jobs\\6224706\\receipt.json'

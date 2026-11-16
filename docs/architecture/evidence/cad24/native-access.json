@@ -1,0 +1,26 @@
+{
+  "gmsh": "4.15.2",
+  "public_occ_api": {
+    "BRepCheck_Analyzer": false,
+    "BRepAlgoAPI_Fuse": false,
+    "BRepAlgoAPI_Cut": false,
+    "BRepAlgoAPI_Common": false,
+    "BRepBuilderAPI_Transform": false,
+    "BRepBuilderAPI_GTransform": false,
+    "TopExp_Explorer": false,
+    "TopTools_IndexedMapOfShape": false,
+    "BRepGProp": false,
+    "BRepTools": false,
+    "ShapeFix_Shape": false,
+    "Modified": false,
+    "Generated": false,
+    "IsDeleted": false
+  },
+  "python_packages": {
+    "OCC": false,
+    "OCP": false,
+    "cadquery": false
+  },
+  "new_dependencies": [],
+  "decision": "retain public Gmsh; native helper blocked pending supported SDK"
+}

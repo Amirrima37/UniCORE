@@ -1,0 +1,37 @@
+[
+  [
+    "elastic-large-32",
+    "block-jacobi",
+    4
+  ],
+  [
+    "elastic-large-32",
+    "ic0",
+    4
+  ],
+  [
+    "elastic-large-32",
+    "jacobi",
+    4
+  ],
+  [
+    "thermal-large-46",
+    "block-jacobi",
+    4
+  ],
+  [
+    "thermal-large-46",
+    "ic0",
+    4
+  ],
+  [
+    "thermal-large-46",
+    "jacobi",
+    4
+  ],
+  [
+    "thermal-large-62",
+    "jacobi",
+    4
+  ]
+]

@@ -1,0 +1,471 @@
+{
+  "assertions": 3132,
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "rows": [
+    {
+      "name": "build-release",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "native/extreme/build.ps1"
+      ],
+      "exit_code": 0,
+      "seconds": 40.41239590000259,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\build-release.log",
+      "binary_sha256": "921014c2974b38c3445f95201b234c33da5532a9d31a5aedbe098c8b0765a1b7"
+    },
+    {
+      "name": "dynamic-release",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\dynamic-release.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\dynamic-release",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5724656999991566,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\dynamic-release.log",
+      "assembly_ms": 0.8178,
+      "setup_ms": 0.7524,
+      "integration_ms": 9.6949,
+      "peak_working_set_bytes": 5545984,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 2.168404344971009e-19,
+      "linear_iterations": 1009
+    },
+    {
+      "name": "structural-release",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\0\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\structural-release",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0787417000028654,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\structural-release.log"
+    },
+    {
+      "name": "thermal-release",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\1\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\thermal-release",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08040400000027148,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\thermal-release.log"
+    },
+    {
+      "name": "modal-release",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\builds-verified\\modal-release.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\modal-release",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09064700000089942,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\modal-release.log"
+    },
+    {
+      "name": "thermal-restart-release",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\thermal-restart-release",
+        "--restart",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09671370000069146,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\thermal-restart-release.log"
+    },
+    {
+      "name": "build-debug",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "native/extreme/build.ps1",
+        "-Debug"
+      ],
+      "exit_code": 0,
+      "seconds": 24.056670800000575,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\build-debug.log",
+      "binary_sha256": "663525ecd79e31c27ab96d9dc46372a0511fb4ec800a556bb5561196a21b2862"
+    },
+    {
+      "name": "dynamic-debug",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\dynamic-debug.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\dynamic-debug",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9765460999988136,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\dynamic-debug.log",
+      "assembly_ms": 3.969,
+      "setup_ms": 2.1485,
+      "integration_ms": 99.2222,
+      "peak_working_set_bytes": 5763072,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 2.168404344971009e-19,
+      "linear_iterations": 1009
+    },
+    {
+      "name": "structural-debug",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\0\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\structural-debug",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08628529999987222,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\structural-debug.log"
+    },
+    {
+      "name": "thermal-debug",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\1\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\thermal-debug",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05953130000125384,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\thermal-debug.log"
+    },
+    {
+      "name": "modal-debug",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\builds-verified\\modal-release.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\modal-debug",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.23310830000264104,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\modal-debug.log"
+    },
+    {
+      "name": "thermal-restart-debug",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\thermal-restart-debug",
+        "--restart",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08008390000031795,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\thermal-restart-debug.log"
+    },
+    {
+      "name": "build-serial",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "native/extreme/build.ps1",
+        "-NoOpenMP"
+      ],
+      "exit_code": 0,
+      "seconds": 31.145358800000395,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\build-serial.log",
+      "binary_sha256": "a8b1de0ecb4e1ac5e45b59da7b970d3e5162e3abf2e12a3d9787e8c241f76891"
+    },
+    {
+      "name": "dynamic-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\dynamic-serial.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\dynamic-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.48820559999876423,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\dynamic-serial.log",
+      "assembly_ms": 1.0258,
+      "setup_ms": 0.6177,
+      "integration_ms": 12.087,
+      "peak_working_set_bytes": 5410816,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 2.168404344971009e-19,
+      "linear_iterations": 1009
+    },
+    {
+      "name": "structural-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\0\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\structural-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07456550000279094,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\structural-serial.log"
+    },
+    {
+      "name": "thermal-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\1\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\thermal-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07462680000026012,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\thermal-serial.log"
+    },
+    {
+      "name": "modal-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\builds-verified\\modal-release.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\modal-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09196590000283322,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\modal-serial.log"
+    },
+    {
+      "name": "thermal-restart-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\thermal-restart-serial",
+        "--restart",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08214399999997113,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\thermal-restart-serial.log"
+    },
+    {
+      "name": "build-debug-serial",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "native/extreme/build.ps1",
+        "-Debug",
+        "-NoOpenMP"
+      ],
+      "exit_code": 0,
+      "seconds": 23.61915389999922,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\build-debug-serial.log",
+      "binary_sha256": "1019d5e3551e8e1437e2fda4fc025133c1e46e47736d9b1b48527bc6c312803b"
+    },
+    {
+      "name": "dynamic-debug-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\dynamic-debug-serial.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\dynamic-debug-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9124656000021787,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\dynamic-debug-serial.log",
+      "assembly_ms": 8.8892,
+      "setup_ms": 3.4873,
+      "integration_ms": 94.7352,
+      "peak_working_set_bytes": 5722112,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 2.168404344971009e-19,
+      "linear_iterations": 1009
+    },
+    {
+      "name": "structural-debug-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\0\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\structural-debug-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07487110000147368,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\structural-debug-serial.log"
+    },
+    {
+      "name": "thermal-debug-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\1\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\thermal-debug-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0615049000007275,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\thermal-debug-serial.log"
+    },
+    {
+      "name": "modal-debug-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\builds-verified\\modal-release.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\modal-debug-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1884712999999465,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\modal-debug-serial.log"
+    },
+    {
+      "name": "thermal-restart-debug-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\dynamics-builds\\thermal-restart-debug-serial",
+        "--restart",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07200549999834038,
+      "expected_exit": 0,
+      "log": ".tools\\godot472-migration\\dynamics-builds\\thermal-restart-debug-serial.log"
+    }
+  ]
+}

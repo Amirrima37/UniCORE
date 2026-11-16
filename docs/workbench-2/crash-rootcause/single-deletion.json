@@ -1,0 +1,79 @@
+[
+  {
+    "name": "orb_inst",
+    "exit": 3221225477,
+    "script_error": false,
+    "seconds": 11.446173199998157
+  },
+  {
+    "name": "prompt_inst",
+    "timeout": true,
+    "seconds": 23.146452100001625
+  },
+  {
+    "name": "drawer_inst",
+    "exit": 0,
+    "script_error": false,
+    "seconds": 7.765316400000302
+  },
+  {
+    "name": "test_diag_logger",
+    "exit": 3221225477,
+    "script_error": false,
+    "seconds": 8.696597900001507
+  },
+  {
+    "name": "viewport_inst",
+    "exit": 0,
+    "script_error": true,
+    "seconds": 5.095685999993293
+  },
+  {
+    "name": "menu_inst",
+    "exit": 3221225477,
+    "script_error": false,
+    "seconds": 7.234374500003469
+  },
+  {
+    "name": "topbar_inst",
+    "exit": 3221225477,
+    "script_error": false,
+    "seconds": 7.214628199995786
+  },
+  {
+    "name": "space_mgr",
+    "exit": 3221225477,
+    "script_error": false,
+    "seconds": 7.4190250000028755
+  },
+  {
+    "name": "mod_mgr",
+    "exit": 0,
+    "script_error": false,
+    "seconds": 5.092515300006198
+  },
+  {
+    "name": "world_root",
+    "exit": 3221225477,
+    "script_error": false,
+    "seconds": 7.2333333999995375
+  },
+  {
+    "name": "event_bus",
+    "exit": 3221225477,
+    "script_error": false,
+    "seconds": 10.342162000000826
+  },
+  {
+    "name": "settings_mgr",
+    "exit": 3221225477,
+    "script_error": false,
+    "seconds": 12.320680800003174
+  },
+  {
+    "name": "minimal_control",
+    "exit": 0,
+    "script_error": false,
+    "seconds": 0.5980019000053289
+  }
+]

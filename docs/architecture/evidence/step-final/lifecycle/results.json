@@ -1,0 +1,122 @@
+[
+  {
+    "engine": "gmsh",
+    "action": "cancel",
+    "outcome": "PASS",
+    "launcher_exit": 1,
+    "receipt": {
+      "state": "cancelled",
+      "exit_code": 1
+    },
+    "observed_active": true,
+    "owned_pid": 11824,
+    "owned_pid_alive": false,
+    "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\step-final\\lifecycle\\gmsh-cancel-1794594577478093600"
+  },
+  {
+    "engine": "gmsh",
+    "action": "timeout",
+    "outcome": "PASS",
+    "launcher_exit": 1,
+    "receipt": {
+      "state": "timeout",
+      "exit_code": 1
+    },
+    "observed_active": false,
+    "owned_pid": 7472,
+    "owned_pid_alive": false,
+    "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\step-final\\lifecycle\\gmsh-timeout-1794594578399441900"
+  },
+  {
+    "engine": "gmsh",
+    "action": "recovery",
+    "outcome": "PASS",
+    "launcher_exit": 0,
+    "receipt": {
+      "state": "completed",
+      "exit_code": 0
+    },
+    "observed_active": false,
+    "owned_pid": 20672,
+    "owned_pid_alive": false,
+    "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\step-final\\lifecycle\\gmsh-recovery-1794594581526260000"
+  },
+  {
+    "engine": "gmsh",
+    "action": "corrupt",
+    "outcome": "PASS",
+    "launcher_exit": 1,
+    "receipt": {
+      "state": "failed",
+      "exit_code": 1
+    },
+    "observed_active": false,
+    "owned_pid": 8568,
+    "owned_pid_alive": false,
+    "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\step-final\\lifecycle\\gmsh-corrupt-1794594584373879400"
+  },
+  {
+    "engine": "calculix",
+    "action": "cancel",
+    "outcome": "PASS",
+    "launcher_exit": 1,
+    "receipt": {
+      "state": "cancelled",
+      "exit_code": 1,
+      "started_utc": "2026-11-13T18:29:48.957483+00:00",
+      "ended_utc": "2026-11-13T18:29:49.019292+00:00"
+    },
+    "observed_active": true,
+    "owned_pid": 21516,
+    "owned_pid_alive": false,
+    "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\step-final\\lifecycle\\calculix-cancel-1794594587884001600"
+  },
+  {
+    "engine": "calculix",
+    "action": "timeout",
+    "outcome": "PASS",
+    "launcher_exit": 1,
+    "receipt": {
+      "state": "timeout",
+      "exit_code": 1,
+      "started_utc": "2026-11-13T18:29:49.362013+00:00",
+      "ended_utc": "2026-11-13T18:29:49.793064+00:00"
+    },
+    "observed_active": false,
+    "owned_pid": 11140,
+    "owned_pid_alive": false,
+    "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\step-final\\lifecycle\\calculix-timeout-1794594589043775300"
+  },
+  {
+    "engine": "calculix",
+    "action": "recovery",
+    "outcome": "PASS",
+    "launcher_exit": 0,
+    "receipt": {
+      "state": "completed",
+      "exit_code": 0,
+      "started_utc": "2026-11-13T18:29:50.959942+00:00",
+      "ended_utc": "2026-11-13T18:29:52.170529+00:00"
+    },
+    "observed_active": false,
+    "owned_pid": 21660,
+    "owned_pid_alive": false,
+    "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\step-final\\lifecycle\\calculix-recovery-1794594589828063600"
+  },
+  {
+    "engine": "calculix",
+    "action": "missing",
+    "outcome": "PASS",
+    "launcher_exit": 1,
+    "receipt": {
+      "state": "failed",
+      "exit_code": null,
+      "started_utc": "2026-11-13T18:29:52.546636+00:00",
+      "ended_utc": "2026-11-13T18:29:52.549100+00:00"
+    },
+    "observed_active": false,
+    "owned_pid": null,
+    "owned_pid_alive": null,
+    "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\step-final\\lifecycle\\calculix-missing-1794594592203872200"
+  }
+]

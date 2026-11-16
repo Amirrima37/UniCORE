@@ -1,0 +1,17 @@
+[
+  {
+    "name": "workbench-lifecycle",
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/step_final_workbench_lifecycle.gd"
+    ],
+    "exit_code": 0,
+    "outcome": "PASS",
+    "state": "completed",
+    "seconds": 5.345580599998357
+  }
+]

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad23_lifecycle.py", line 55, in <module>
+    assert all(r['outcome']=='PASS' for r in rows)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

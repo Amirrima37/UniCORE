@@ -1,0 +1,28 @@
+[
+  {
+    "job": "contrast-conduction-16",
+    "samples": 6,
+    "exact": true,
+    "fields": [
+      "temperature",
+      "heat_flux",
+      "heat_reactions",
+      "relative_residual",
+      "iterations"
+    ]
+  },
+  {
+    "job": "elastic-16",
+    "samples": 6,
+    "exact": true,
+    "fields": [
+      "displacement_flat",
+      "reactions_flat",
+      "stress",
+      "strain",
+      "von_mises",
+      "relative_residual",
+      "iterations"
+    ]
+  }
+]

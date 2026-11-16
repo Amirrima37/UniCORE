@@ -1,0 +1,2 @@
+ERROR: ConservationSentry.audit: Array size mismatch (pos: 2, vel: 2, mass: 0)
+   at: push_error (core/variant/variant_utility.cpp:894)

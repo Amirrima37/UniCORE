@@ -1,0 +1,6 @@
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+ERROR: CalculiX failed/cancelled/timed out: { "state": "failed", "exit_code": 201.0, "error": "", "seconds": 0.12693600000057, "peak_working_set_bytes": 8183808.0, "peak_memory_bytes": 10997760.0, "job_object": true }. Inspect C:/Users/Victus/Desktop/UniCORE-main/.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs/2165507/stdout.txt, stderr.txt and launcher-error.txt; check the executable and model, then retry.
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _initialize (res://tests/cad23_smoke.gd:17)

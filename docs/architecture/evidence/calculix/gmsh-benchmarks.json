@@ -1,0 +1,62 @@
+[
+  {
+    "bending": false,
+    "elements": 434,
+    "job": "user://calculix_jobs/1942669",
+    "nodes": 190,
+    "reference_m": 0.000000476190476190476,
+    "relative_error": 0.0000000499999996961265,
+    "resolution": 2,
+    "tip_mean_m": 0.0000004761905
+  },
+  {
+    "bending": true,
+    "elements": 434,
+    "job": "user://calculix_jobs/6415902",
+    "nodes": 190,
+    "reference_m": 0.00019047619047619,
+    "relative_error": 0.47342955,
+    "resolution": 2,
+    "tip_mean_m": 0.000100299133333333
+  },
+  {
+    "bending": false,
+    "elements": 1818,
+    "job": "user://calculix_jobs/10688171",
+    "nodes": 592,
+    "reference_m": 0.000000476190476190476,
+    "relative_error": 0.0000000499999994740818,
+    "resolution": 3,
+    "tip_mean_m": 0.0000004761905
+  },
+  {
+    "bending": true,
+    "elements": 1818,
+    "job": "user://calculix_jobs/14329693",
+    "nodes": 592,
+    "reference_m": 0.00019047619047619,
+    "relative_error": 0.2122157125,
+    "resolution": 3,
+    "tip_mean_m": 0.00015005415
+  },
+  {
+    "bending": false,
+    "elements": 3613,
+    "job": "user://calculix_jobs/18305080",
+    "nodes": 1082,
+    "reference_m": 0.000000476190476190476,
+    "relative_error": 0.0000000499999994740818,
+    "resolution": 4,
+    "tip_mean_m": 0.0000004761905
+  },
+  {
+    "bending": true,
+    "elements": 3613,
+    "job": "user://calculix_jobs/21775181",
+    "nodes": 1082,
+    "reference_m": 0.00019047619047619,
+    "relative_error": 0.158613881451613,
+    "resolution": 4,
+    "tip_mean_m": 0.000160264022580645
+  }
+]

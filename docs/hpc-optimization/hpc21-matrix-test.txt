@@ -1,0 +1,3 @@
+OpenMP release, OpenMP debug (-O0 -g), and no-OpenMP release: PASS
+Heterogeneous thermal TET4 stiffness/source/capacity exact equality at 1/2/4/6/8/12 thread requests.
+Mixed heterogeneous HEX8/TET4 matrix exact equality: 60 runs per build; cancellation PASS.

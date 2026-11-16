@@ -1,0 +1,27 @@
+{
+  "godot_exit": 0,
+  "terminated_native": {
+    "pid": 15700,
+    "action": "cut",
+    "operation_id": "99b36422-bb37-4eb5-994a-d0ec2bb8e9ed"
+  },
+  "observed": [
+    {
+      "pid": 16660,
+      "action": "box",
+      "operation_id": "9e549e4f-c65f-44ff-ac17-4fff11310914"
+    },
+    {
+      "pid": 23976,
+      "action": "cylinder",
+      "operation_id": "dca5b4ff-9f1c-478a-9014-c61e23272043"
+    },
+    {
+      "pid": 15700,
+      "action": "cut",
+      "operation_id": "99b36422-bb37-4eb5-994a-d0ec2bb8e9ed"
+    }
+  ],
+  "recovered": true,
+  "fault": "TerminateProcess(77) against observed owned native cut worker; not an OCCT segfault"
+}

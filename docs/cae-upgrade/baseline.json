@@ -1,0 +1,44 @@
+[
+	{
+		"elements": 64,
+		"generation_ms": 0.621,
+		"memory_delta_bytes": 313116,
+		"nodes": 125,
+		"pick_p95_ms": 0.25,
+		"preparation_ms": 13.051,
+		"stages": {
+			"bvh_ms": 3.57,
+			"connectivity_ms": 0.122,
+			"faces_ms": 1.906,
+			"quality_ms": 3.876
+		}
+	},
+	{
+		"elements": 512,
+		"generation_ms": 0.796,
+		"memory_delta_bytes": 1295524,
+		"nodes": 729,
+		"pick_p95_ms": 0.656,
+		"preparation_ms": 79.871,
+		"stages": {
+			"bvh_ms": 25.341,
+			"connectivity_ms": 0.891,
+			"faces_ms": 15.402,
+			"quality_ms": 27.818
+		}
+	},
+	{
+		"elements": 4096,
+		"generation_ms": 5.686,
+		"memory_delta_bytes": 7906724,
+		"nodes": 4913,
+		"pick_p95_ms": 0.67,
+		"preparation_ms": 561.607,
+		"stages": {
+			"bvh_ms": 152.576,
+			"connectivity_ms": 7.594,
+			"faces_ms": 132.364,
+			"quality_ms": 218.4
+		}
+	}
+]

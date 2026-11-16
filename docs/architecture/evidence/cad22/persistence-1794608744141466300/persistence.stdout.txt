@@ -1,0 +1,4 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+SHUTDOWN_OBSERVATION user://gmsh_18929925 pid={ "pid": 23216.0, "parent_pid": 23544.0, "job_object": true } active=false
+CAD22_PERSISTENCE_FAIL

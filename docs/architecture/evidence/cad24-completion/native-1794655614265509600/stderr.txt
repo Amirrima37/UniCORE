@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad24_native.py", line 27, in <module>
+    assert sum((face['center'][i]-p['centroid'][i])*face['plane_outward_normal'][i] for i in range(3))>0,'Reflected box face normal points inward'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Reflected box face normal points inward

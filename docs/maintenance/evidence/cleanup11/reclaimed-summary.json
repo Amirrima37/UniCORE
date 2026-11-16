@@ -1,0 +1,10 @@
+{
+  "deleted_files": 0,
+  "deleted_logical_bytes": 0,
+  "deleted_allocated_bytes": 0,
+  "compression_logical_bytes": 5379030305,
+  "compression_allocated_before": 5379030305,
+  "compression_allocated_after": 2861538384,
+  "compression_disk_bytes_reclaimed": 2517491921,
+  "hashes_verified": 25862
+}

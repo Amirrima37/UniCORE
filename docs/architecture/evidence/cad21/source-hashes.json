@@ -1,0 +1,18 @@
+{
+  "core/cae/cad_model.gd": "1da1ccde26524755a8138f80832e76b4d2878e827df827398fa66810da5e3983",
+  "core/cae/cad_geometry_job.gd": "fbb5b31804e78218f2335c4f45e875edeb8dc19553623aa95d8f15af0ed00caf",
+  "core/cae/cae_document.gd": "6da991216cef6b1cc5cf6b579085bc7598df8701a1a2e168eabe4f3cd47c250d",
+  "core/cae/calculix_workbench.gd": "aa2fa9781379ea6518b21adea972a9e81972fe9e36ae419eccd0c7a26e8dcd7d",
+  "ui/cae/cad_boolean_panel.gd": "4c83459c42293950dc78efd42f58f5682b0dbec6ef806336ab0e2ed7248826f6",
+  "ui/cae/cae_workspace.gd": "e16a26588d8fb1f59da5c07d179926cc0719814651434db96b19f53b3cd892f5",
+  "ui/cae/cad_viewport.gd": "7aa75356fcce049270fb499a1f980532e844bf461cb8e4754ced551d8180366b",
+  "scripts/engines/cad_model.py": "ba17034d5c478716035b301e1fa55e5398f6e8a493b11718a2c80155f1a11de7",
+  "scripts/engines/run_owned_geometry.py": "0c1da8aca22af796dfd46e3bed515e0256041633f4363cbd0c9130b10719602a",
+  "scripts/engines/gmsh_study.py": "9b58f6abb88bc53cfb16fc19b352430dad8924eea68b6ce499f24a23439aa3cb",
+  "tests/cad21_geometry.py": "941957fa9c13dba9b09989ef53f8ff57b53118ceb9eb4a7447676fc94f4f697f",
+  "tests/cad21_integration.gd": "f9ee15f1c17ce2c17100a0b5e68f8c147bee8047af48fc25bec8c703ffddc09c",
+  "tests/cad21_gui.gd": "b6db7444aa15bb621650e81045da5b3e2ebd32fb16c50e1223dd845ef6140d64",
+  "tests/cad21_lifecycle.py": "ede673e77d3d75717410bb7dc781379b027c3f7f09903df78e708ca36f53c1b4",
+  "tests/run_cad21.py": "258f6282eb47057a07df85b8c0643a7b5468f70014a61be6693a1e64b95c4e1a",
+  "tests/summarize_cad21.py": "e4c84dc565d131f9b69b94d89527b761cdd8ea30afe4a4e9fc5c34fbb9a7f2c2"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "case": "scaled-rotated-box",
+    "outcome": "PASS",
+    "volume_m3": 0.04800000000000002,
+    "expected_m3": 0.048
+  },
+  {
+    "case": "scaled-cylinder",
+    "outcome": "PASS",
+    "volume_m3": 0.018849555921538773,
+    "expected_m3": 0.01884955592153876
+  },
+  {
+    "case": "blind-cavity",
+    "outcome": "PASS",
+    "volume_m3": 0.0019371681469282042,
+    "expected_m3": 0.0019371681469282042
+  },
+  {
+    "case": "step-step",
+    "outcome": "PASS",
+    "volume_m3": 0.015000000000000003,
+    "expected_m3": 0.015
+  }
+]

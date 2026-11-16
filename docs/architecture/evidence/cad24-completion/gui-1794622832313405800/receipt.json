@@ -1,0 +1,14 @@
+{
+  "name": "gui",
+  "exit_code": 1,
+  "outcome": "FAIL",
+  "command": [
+    "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+    "--path",
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+    "-s",
+    "res://tests/cad24_gui.gd"
+  ],
+  "seconds": 4.19895489999908,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\gui-1794622832313405800"
+}

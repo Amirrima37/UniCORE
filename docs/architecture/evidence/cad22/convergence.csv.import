@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://ts31miaymkyg"
+
+[deps]
+
+files=["res://docs/architecture/evidence/cad22/convergence.level.translation", "res://docs/architecture/evidence/cad22/convergence.mesh.translation", "res://docs/architecture/evidence/cad22/convergence.nodes.translation", "res://docs/architecture/evidence/cad22/convergence.tet4.translation", "res://docs/architecture/evidence/cad22/convergence.exact.translation", "res://docs/architecture/evidence/cad22/convergence.discrete.translation", "res://docs/architecture/evidence/cad22/convergence.absolute.translation", "res://docs/architecture/evidence/cad22/convergence.relative.translation", "res://docs/architecture/evidence/cad22/convergence.minimum.translation", "res://docs/architecture/evidence/cad22/convergence.maximum.translation", "res://docs/architecture/evidence/cad22/convergence.tip.translation", "res://docs/architecture/evidence/cad22/convergence.analytical.translation", "res://docs/architecture/evidence/cad22/convergence.relative.translation", "res://docs/architecture/evidence/cad22/convergence.max.translation", "res://docs/architecture/evidence/cad22/convergence.max.translation", "res://docs/architecture/evidence/cad22/convergence.sample.translation", "res://docs/architecture/evidence/cad22/convergence.normalized.translation", "res://docs/architecture/evidence/cad22/convergence.meshing.translation", "res://docs/architecture/evidence/cad22/convergence.meshing.translation", "res://docs/architecture/evidence/cad22/convergence.solver.translation", "res://docs/architecture/evidence/cad22/convergence.mesh.translation", "res://docs/architecture/evidence/cad22/convergence.solver.translation", "res://docs/architecture/evidence/cad22/convergence.effective.translation", "res://docs/architecture/evidence/cad22/convergence.observed.translation", "res://docs/architecture/evidence/cad22/convergence.solver.translation"]
+
+source_file="res://docs/architecture/evidence/cad22/convergence.csv"
+dest_files=["res://docs/architecture/evidence/cad22/convergence.level.translation", "res://docs/architecture/evidence/cad22/convergence.mesh.translation", "res://docs/architecture/evidence/cad22/convergence.nodes.translation", "res://docs/architecture/evidence/cad22/convergence.tet4.translation", "res://docs/architecture/evidence/cad22/convergence.exact.translation", "res://docs/architecture/evidence/cad22/convergence.discrete.translation", "res://docs/architecture/evidence/cad22/convergence.absolute.translation", "res://docs/architecture/evidence/cad22/convergence.relative.translation", "res://docs/architecture/evidence/cad22/convergence.minimum.translation", "res://docs/architecture/evidence/cad22/convergence.maximum.translation", "res://docs/architecture/evidence/cad22/convergence.tip.translation", "res://docs/architecture/evidence/cad22/convergence.analytical.translation", "res://docs/architecture/evidence/cad22/convergence.relative.translation", "res://docs/architecture/evidence/cad22/convergence.max.translation", "res://docs/architecture/evidence/cad22/convergence.max.translation", "res://docs/architecture/evidence/cad22/convergence.sample.translation", "res://docs/architecture/evidence/cad22/convergence.normalized.translation", "res://docs/architecture/evidence/cad22/convergence.meshing.translation", "res://docs/architecture/evidence/cad22/convergence.meshing.translation", "res://docs/architecture/evidence/cad22/convergence.solver.translation", "res://docs/architecture/evidence/cad22/convergence.mesh.translation", "res://docs/architecture/evidence/cad22/convergence.solver.translation", "res://docs/architecture/evidence/cad22/convergence.effective.translation", "res://docs/architecture/evidence/cad22/convergence.observed.translation", "res://docs/architecture/evidence/cad22/convergence.solver.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

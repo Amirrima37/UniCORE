@@ -1,0 +1,6016 @@
+{
+  "preserved_cad23_numerical": "docs/architecture/evidence/cad24-completion/preserved-cad23-numerical.json",
+  "schema": 1,
+  "checkpoint": "CAD 2.4 completion",
+  "created_utc": "2026-11-14T13:48:53.706833+00:00",
+  "verdict": "PASS",
+  "gates": {
+    "runtime_dependencies": true,
+    "all_required_campaigns": true,
+    "pinned_binaries_unchanged": true,
+    "default_28": true,
+    "real_structural_cases": true,
+    "native_cycles": true,
+    "gui_cycles": true,
+    "gui_resolutions": true,
+    "serialized_reordering": true,
+    "transitive_provenance": true,
+    "preserved_32_numerical_cases": true,
+    "native_observed_orphans_zero": true,
+    "native_endurance_exits_zero": true,
+    "fault_observed_orphans_zero": true
+  },
+  "baseline": {
+    "branch": "master",
+    "head": "13e40a5a565a273485aa80ea14ed110df36136a2",
+    "hashes": {
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\calculix\\CalculiX-2.23.0-win-x64\\bin\\ccx.exe": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_debug.x86_64.dll": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_release.x86_64.dll": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_debug.x86_64.dll": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_release.x86_64.dll": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\gmsh-4.15.2-Windows64-sdk\\lib\\gmsh-4.15.dll": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c",
+      "scripts/engines/cad_model.py": "3ea73102054ddd19aedc32763535e8c214ab5a34f2077fd9567853f6ea239329",
+      "core/cae/cae_document.gd": "29a176ac01e3632fd0f45719aebafce1fb714b25505bba3c0319a67a94d7dd98",
+      "core/cae/calculix_workbench.gd": "ef6ff563a262710a1430495507d978cee930196338ee5da20414aa8e49e0d1bb",
+      "ui/cae/cae_workspace.gd": "7403c895fa2ad2d6d00474e269eb076beb392eae87e8f5b03c71a8db25da2dff"
+    }
+  },
+  "current_branch": "master",
+  "current_head": "13e40a5a565a273485aa80ea14ed110df36136a2",
+  "dirty_tree_preserved": true,
+  "baseline_inventory": "docs/architecture/evidence/cad24-completion/working-tree-before.txt",
+  "source_baseline_limitation": "Only four production files were hashed at recovery start; all final production sources are sealed below. The older PARTIAL report lacked pre-edit source hashes.",
+  "production_files": {
+    "native/build_occt.ps1": "cb1efa0de0958e763bfbe7edabcfa126da4954b66be1c8c1c120458f53221647",
+    "native/occt/worker.cpp": "6c5726522a74aa2164d77ea203cb5c7935594647bb4709d01d23b32fde527a40",
+    "native/occt/setup_sdk.py": "0aa5c2f81307256969ee63936bd9d6f545f77dcc18d467a4909e56f75886b543",
+    "native/occt/provision_runtime.py": "734beaac930a236e6875243f852fdc6a21ef8437502f7d2ddfb11e8115849fc6",
+    "native/occt/audit_runtime.py": "a2e6f06de9888bb9e8962bc2458372f73c8874a87f3fe636d993c86cc9170e45",
+    "native/occt/seal_build.py": "13597c08eb587ad1a2592a97c594baaabdfd56edce78417d9df1cd3a94704577",
+    "native/occt/lock_sdk.py": "cb02c16093b6f72ec3ee5840e62af0ba90864764e4814dd9231ee7985fd49bbb",
+    "native/occt/sdk-lock.json": "13b487ddd1f7743ca90ab4f4fb3b898130249a313bff523b229b04c668521648",
+    "scripts/engines/native_occt.py": "a572bfe09fd33b8b4c9173dc3bd85eaf4bc29a244dbce02abc4e82098688042f",
+    "scripts/engines/process_memory.py": "4c6f05ae1fb60faeac9fd86d7ac28cc0480e52610854894d96878d10c3c19006",
+    "scripts/engines/native_graph.py": "4f9f06cb3bc4efabdc44605cf0f56e6d55de6a109e9cbc92e31fdf815924c282",
+    "scripts/engines/artifact_retention.py": "d2d70a81fd4978e337059c5ba692cbad32ddedaa93a0321f049a65b65f86c1d8",
+    "scripts/engines/cad_model.py": "a02d81f03ac06eecd3bc89ed598da38606ad6c9b35346ea8f658e6b4a54b95a8",
+    "scripts/engines/gmsh_study.py": "ca6d4b2da5aa1515b9e6aecd5334658e09856389605c1af8ebfb5f56b33fbf11",
+    "scripts/engines/owned_mesh_job.py": "184b03dcb2e100695f1886574f00a48a12553f178ef00f2bb4357bf15b8425f3",
+    "scripts/engines/owned_execution.py": "754fd0ffde3a494d0a60994ac8f5366acfc296389a6d6f448c17c32c563bfca8",
+    "scripts/engines/run_owned_geometry.py": "798bd15411b8ef41ffb29e7b4e4bacb073186ffe9e929f68771e4105fa9a13d5",
+    "scripts/engines/run_owned_mesh.py": "a8aec9349bc8a2340509167e92539f2b0e3453d5d5d69164753c15e8278031ce",
+    "scripts/engines/run_owned_solver.py": "e18c8bde04eadb41ee1f6b9ef12506a0eedf1685f2819c9ea7e6ef2d050eee2a",
+    "core/cae/cae_document.gd": "1ed82205b015d1efa9798e4c22cc3251716aac34bf6ee5c235fa54a318f73ca7",
+    "core/cae/cad_model.gd": "c81fdd5836522f157dec63963b51df4b3afe26d4db22ec5383811133b70467b9",
+    "core/cae/cad_geometry_job.gd": "db1a135f47f810b4a15719b6af3d4ebcd781598c7c057bd97e070e47a7b6aba4",
+    "core/cae/calculix_workbench.gd": "7d704c4e61c4e2615d6dcd82131ddac870695ff0888cd1378081af70a861e8b4",
+    "ui/cae/cae_workspace.gd": "f98ae80412c4f3ef7da86fd73f4d57b16601bb6b5b6064ecf5541d4b39bee884",
+    "ui/cae/cad_boolean_panel.gd": "a76f3d85ce0d67de1adc7616f6c1da314e099b3a5da7d13a5b6534b1d440640e",
+    "ui/cae/cad_validation_panel.gd": "e3f3ab5f79343227e54c7d22777a73bf9496c46fe146337fbdf487d1e77e519e"
+  },
+  "test_files": {
+    "tests/cad24_boundary.gd": "c88f8ace0d861f110c618f890d5346ec7930976858dd48acb24b98285647155d",
+    "tests/cad24_deck_audit.py": "97dc1f426debed2019ce29a3a93f91e7242964386d72be4179506035f7f37518",
+    "tests/cad24_endurance.py": "36685d2684205111fdb8f44b78d7a7503a536c3d5ba6109df8f3756d7c4175f2",
+    "tests/cad24_failure.gd": "b42645c8bf290cfcf5f9f974c040012176f923dceaf553e5db057356c398bdfc",
+    "tests/cad24_failure.py": "f4d83060e78f9625b956f1e8acd6c4a08e05a92003db4455ee97511544319ebd",
+    "tests/cad24_gui.gd": "1ae79df2b9c38ff56abd1df7ba88feb47584225cb04fbc2372049c5ed9e1135c",
+    "tests/cad24_gui_endurance.gd": "978a3ccf7f94d0bcd0865308329f3eb2a11de16be3774540da8b1b40e7ee650c",
+    "tests/cad24_gui_endurance.py": "4c69e7912dc815777d22838ec6bd6e739b07fe6431c5e3267024a3201ce4d95b",
+    "tests/cad24_history.py": "ac2f48cac3f0d7e47a4a8e9a57055756796a1a6c6d6b2646b2dfe3722c1f115c",
+    "tests/cad24_matrix_extra.py": "a7f2e089f7526f544174417b7960766ad5c30b05a84d1892f76c98e321360798",
+    "tests/cad24_native.py": "51ff1bbfb729e1a09c77a0fd79e094550dfd95bd0daf6418026f94faa6c25838",
+    "tests/cad24_numerical.gd": "4b6167b91c7b7cc42f7ad2637bd5e15f5e631035cbe52c3c14a31e74d3be113b",
+    "tests/cad24_protocol.py": "68a0c08681a4e6e2ca930ade8b7b8b9a9fc4259fe6ff6572a761cf13fa299926",
+    "tests/cad24_retention.py": "a4328196c9dd6ac81f72dc1310f06a297507eff58fbea2c4b925719eaa94241e",
+    "tests/run_cad24.py": "1a5f75c24d960e74a4bf0730bfbfeeceeaf5cfa117fa9edf4c9d532467a81118",
+    "tests/run_cad24_completion.py": "259f7498e7d2304944a7ac20fa3244008760f5e491cc4640e4da1b028ec464cc",
+    "tests/summarize_cad24.py": "d9ab952d4b2f0a37e525b617ea6b92aa2bbc9ebbe5d872a3930b74c3aba9c7c8",
+    "tests/summarize_cad24_completion.py": "c2faf214faa2119e62c68b807434582f238bf91f9e2284a67da1a7d1ef3d9c78",
+    "native/occt/make_fixtures.cpp": "3897d7bb0e8b78b2b813c5b70176055bc8210b6ee221411b53bdcd88360857e1",
+    "tests/cad22_independent.py": "1c2bb91649ab8b62d0cc867284baba7c8911b5b3e2a05bd7f143aec55513cb49"
+  },
+  "pinned_binaries": {
+    "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe": {
+      "before": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424",
+      "after": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\calculix\\CalculiX-2.23.0-win-x64\\bin\\ccx.exe": {
+      "before": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "after": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_debug.x86_64.dll": {
+      "before": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc",
+      "after": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_release.x86_64.dll": {
+      "before": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f",
+      "after": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_debug.x86_64.dll": {
+      "before": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868",
+      "after": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_release.x86_64.dll": {
+      "before": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb",
+      "after": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\gmsh-4.15.2-Windows64-sdk\\lib\\gmsh-4.15.dll": {
+      "before": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c",
+      "after": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c"
+    }
+  },
+  "native_build": {
+    "schema": 1,
+    "worker_sha256": "1d903dab37d35c22acba70c2937bbe604d6456a6bb6da3855c514153e79f774a",
+    "source_sha256": "6c5726522a74aa2164d77ea203cb5c7935594647bb4709d01d23b32fde527a40",
+    "dlls": {
+      "avcodec-58.dll": "684944e75b78deb6b7fb3dec9d9c25c4b4a56b57b5461ce8b86031c178ed998a",
+      "avdevice-58.dll": "f19c72502716d5540032a44e3fec81e107f35d379268356b5bb80b8debe99185",
+      "avfilter-7.dll": "fda0aa1097337eb0d24f88f4c8ee62c10533c861eab015736d80c1012782f867",
+      "avformat-58.dll": "0f579dca179aff35407e06c555df5eee0c93d25a03eb23313e25af3a9db76ed6",
+      "avutil-56.dll": "2e2cf0ec9bf8d6a6e7ad6125ce7a9be2e5e8f5fa07011936c1e8fc90afdf5862",
+      "edit.dll": "4a52a91d0c5c3bad66c3512e23c78229615bc555c9d4ae41c8531b0effa1f953",
+      "libaom.dll": "104a091bb474eb742a02b9f1ec0e2fa7289c79d7bcb427e9d893b6c8a19eaed2",
+      "libasprintf-0.dll": "d0fc42f24842823c7158cca22b5b5809312c72d16480c59f955c4ec0d5a32730",
+      "libass-9.dll": "816ab02649e579fa885b512c41576dff5648aed23dd60fd02cc1a998d9103e40",
+      "libatomic-1.dll": "38b124d442a2f8f2b8694c9ca824d2a1f4e18a9032631f56b298ff1332f4a86c",
+      "libbluray-2.dll": "2850a1973fe1c2511812168e8b2ed4bbdb9175c1d16d30edd16903d8f23a73da",
+      "libbrotlicommon.dll": "d1b3876c373a8d28e4464b041d53ac003a5c67e2b37db3a4daafe023cb292d51",
+      "libbrotlidec.dll": "46713275af60f374f76059eddf2ff6e4347db8f6c6723c9404682d1197367448",
+      "libbrotlienc.dll": "1939086542361c7242e26cb48e2a294eaf77b843545dd56a6c23a555e6ce436d",
+      "libbz2-1.dll": "669a4bf9266d5f020e843aa5fd75b93ce8ebde27014d5ac466a8b3cf39d8aba7",
+      "libcaca++-0.dll": "3fd7e6c552eb1a236e7f031e32f79678c23170bb938a0563648b8dfe789ea53f",
+      "libcaca-0.dll": "307a1c74f6f479c6f5b62b6d013c217e890a2ffe2cccfd96a47f4c3d335d72aa",
+      "libcairo-2.dll": "8ac18d2ed9daa80f3f145018e2045996e5739d974d87796dd88976b1c13a7091",
+      "libcairo-gobject-2.dll": "b40a169ea251a13b076da95e73cae8a382b9459842c3323e21ac6930fdb06a1f",
+      "libcairo-script-interpreter-2.dll": "f27300cda5db2c8f43cdf21f2f629b58659d47c2ba031ff8cd7d33bc3aa4ea19",
+      "libcharset-1.dll": "c14064d1654c1f360eb09e18631cd5f7dabf5c6447f6457c32b60a46cd576fef",
+      "libcrypto-3-x64.dll": "7909ab97fd1226890af8448a43cb9acd0e9758bfd595298c46c125211c3e61c7",
+      "libdatrie-1.dll": "b6b2aba075f08534ac83e10c8a601a83125b031942a289a104fc0758bf9016d1",
+      "libdav1d-7.dll": "1754200b7a39344f5857680c9dce33eca71e5903f0fa5925cf46549337213e3d",
+      "libdeflate.dll": "334692568321a603fc647d34dd3477ae50e795fa75c54032f6d7f0c7ed4fc081",
+      "libexif-12.dll": "bb1133931a9ed8f2d7c3b6fa3fca3735205e5c8a7388718b065a421fd24420fa",
+      "libexpat-1.dll": "25f7c0a93c6d648666bfd013ee2f71107833e570ba1bae125bef3b0390fa326c",
+      "libffi-8.dll": "85e1a5fa7ca812dd9e5cad01e6ff78b5be73980b204adde69b3138044f14d486",
+      "libfontconfig-1.dll": "0194147398723856c287da51878bba850c403aef38bf1b2c2d191cef265d380e",
+      "libformw6.dll": "0dd96394af6883467c23fd92f78805ab4c1f9f70fd464bec1e5c1b22e16eca19",
+      "libfreeglut.dll": "24e03c3dba19d47307b3251f5332bdd644154753a0ca37fa6d17b9b8daacdb08",
+      "libfreeimage-3.dll": "15a14ba84b8a09b82558a37af2068d4d2fd8660b1cdcb89e295f3b4bd0f021c4",
+      "libfreeimageplus-3.dll": "0e432ff3840a8267663def11fbc155f24e2176badfb9eabc2a03ba2e8f1213b2",
+      "libfreetype-6.dll": "168e6577690ba7b4bf4c0fddeeda9ac73abe59800f39f7129520b37f5c3e1e28",
+      "libfribidi-0.dll": "73a712fd51fa0085e8660084743a821ae7388de138069cd6cd8c171d4487da84",
+      "libgcc_s_seh-1.dll": "171d1471d1f7e4ff680f1fc3ee1bbffa0ead419b04f1fac2fc6d8bba3c7b032c",
+      "libgdk_pixbuf-2.0-0.dll": "54ef30bfb43d433e35bd50be6e2e4603e14846c8b8e7e9413c0215588ec5aa9a",
+      "libgif-7.dll": "6bfabfac05eaa1c831c8bf3459066d336de61500a075fb0e0612d1ab75e4404b",
+      "libgio-2.0-0.dll": "4c2ba6a183d7fa333977443d8e80aa92b936789bcf59d08b6a6689e0ab5fae29",
+      "libgirepository-2.0-0.dll": "dd73abc9e1b787dc9674dfbad078232ff4727b4ba068b8fb72e5c28a9f62be31",
+      "libglib-2.0-0.dll": "139ee665e9c43cd24b60474f6e37f9d6e915623a76ae9be9e13f615b6188d648",
+      "libgme.dll": "27d7b0d8c70b9d2c076696cf7f8f08cfa21f5a869e270bd8d92af5f84262d63f",
+      "libgmodule-2.0-0.dll": "adbe9ae92d3a169a43c8530bed8ee7e2635a8e9dc15793821399ac1113951323",
+      "libgmp-10.dll": "c2567ccf3f410c3411ba7cd4b7ba14f393a0e70a1d0c0593297df6706b5fba96",
+      "libgmpxx-4.dll": "b563feecd50808924f93c9c2cb495bafa3b8ac50f5c9ca55f9f730afa002886c",
+      "libgnutls-30.dll": "83debcc5609021146bb8163c4032290fe7946152ec9d814461725bf49b8fa2f7",
+      "libgnutls-openssl-27.dll": "07c9b80fcb38cb5fe0d819f2de37a96b803a601eccf5af77ebffc218c1dcd6ae",
+      "libgnutlsxx-30.dll": "2191c1a132e366bad044312d17adcb1cbf086a2d999db8cf173ef8272163a554",
+      "libgobject-2.0-0.dll": "2ce25f2edea4e26f81bf179cb5c26e330e1c5449baa471b5081afe8140331a70",
+      "libgomp-1.dll": "078738041aff7e106a2bcf204f3c1357d99167ffe3bbcfe9902ab300ee779ef9",
+      "libgraphite2.dll": "d19e2587db996cc44799bc22bd9f7a1fda91427aa4cb63bb581da485acff66e0",
+      "libgsm.dll": "893553b5b267c39d1b213c706ca04898986cad3bae81d1804cde3e7429ddfe46",
+      "libgthread-2.0-0.dll": "e0af34af1b6762e46720a39c2d5ba0b19ed4ebf8d5fc9d1908c3b094ae705800",
+      "libharfbuzz-0.dll": "8d35490149edee500e6cd483091a45af4d808eac1ab8f04b3af5fe07e1225d9f",
+      "libharfbuzz-gobject-0.dll": "e5f68d642ea90e3b6e8c0da9b9029103c41de2d840d5673125536c379dd64bd7",
+      "libharfbuzz-subset-0.dll": "f140556ae1dd8f0363ae5ed5f8b97c3e0f75bfd0cb8338276f17186154687b4c",
+      "libhdr10plus.dll": "8bd3e67d3e8df22bba4e15869066391978dd1eec6b3f27a679e881a3cda62c2c",
+      "libhistory8.dll": "aeeaad630d4df07bb3cd24f3200067705594ad4d34dc3537b467509eb853b9f5",
+      "libhogweed-6.dll": "c5a558f8fbf9ca3e1a109bb80d62fb4a5259faacd290b34dc88fa3ad6fd5818d",
+      "libiconv-2.dll": "b37d1b4acab5310c4e4f6e2a961d146454ff740d943724a68fa3cebc85deb7cd",
+      "libidn2-0.dll": "e2e96a13357c6a30ca16c027f594f376871e1d8c760b19c632c4d16660a06ce3",
+      "libIex-3_3.dll": "fc6f2f3074739dcb18df2864cc20e261d5a9fce85ce81b42756e526d525ef319",
+      "libIlmThread-3_3.dll": "2f56b9ed00c2bd2df2ec849c63f588ed7e2cc6e6820a1198ef3722bc7d483b99",
+      "libImath-3_1.dll": "5e74b9b05eb0bcf43199bb4c1b6f06f240bd28279ff9dc58390a6a6837f346dd",
+      "libintl-8.dll": "b61f5a1a854812a75e7579fb0417b73ee65c4d67e2ad472bb958c7215f9028de",
+      "libjasper.dll": "98b666464975e019cd592dd00381fc3c252d8736edca44f9e4219509a3b01de6",
+      "libjbig-0.dll": "6d1657e08318630738fb0841ee28bbe7272b41b3b2ef93adaa228c4cd10092c6",
+      "libjpeg-8.dll": "92c1742557056be1d8102747274893c83025b0340627fad9a311ac762afdd60a",
+      "libjpegxr.dll": "da618bc758c40e96dfc24539df21da98ee85991a57da899f364d676797aa8943",
+      "libjxrglue.dll": "c31e2f8d6fe9948c8e4a93092bd3f2492a3fb316849f72b5e316108375e979b5",
+      "liblcms2-2.dll": "f66d4ff92204ec372b31acd142c87e96cf0850a2b3fc62fb33bce69d55a5bdb8",
+      "liblcms2_fast_float-2.dll": "a48a4c2b8f0883da2bc05ba54301be942c6bbaa9764640b8372aca95ac622486",
+      "libLerc.dll": "df5ee8e5b37881f5af435681a30f445d24e2d2ec8c49563a1f31ffa8d2c57484",
+      "liblzma-5.dll": "a351c084c6dc2b230484630f1ad75549957565b1f51eaf86aba7c4c6a11c1653",
+      "liblzo2-2.dll": "38a15f07f84ec7f16862e508024eb1f9cacc2f27032eaf037bb709ee0f3c5a49",
+      "libmenuw6.dll": "7154be6bc5af1dbb7da9048b9005d68a4abf1c0899eedf1990657ab9b8707245",
+      "libmfx-1.dll": "86f314786480742f3e657b29fe8d070bd9b2a7afd29989e70538b462b66a9f41",
+      "libmodplug-1.dll": "44af3e0726929e8592d2348dfaa8db8346bb55892e9d4f1c7fe432302f12f8dd",
+      "libmp3lame-0.dll": "7ae709bf841478222fc468d6aa08cdb47a683feb40ff13fe9fb36359333d4559",
+      "libmpdec++-4.dll": "680378db4cc654efa8ce6155ff6d5df6c79ae3081267cac39067e3df44473b9a",
+      "libmpdec-4.dll": "e58c84fe6211100ac4b2a2738a3dfada4330f10fba6516353b81dfa0ed606a9f",
+      "libmysofa.dll": "a2cf391a7313df22f1781a9d0111d9e74c324690960f29dd505cb41c910cca6c",
+      "libncurses++w6.dll": "0e6a8f708eca0f38087a2aaa5075cbe2c754c218f09b4d5f1aa3cb79d4987f7b",
+      "libncursesw6.dll": "bbac30730feee0f7812ed48bfe92003f4510e2539cd95e8b9ccc08d96472a5c5",
+      "libnettle-8.dll": "c909d223cf500f4917b34dd1b9e4751a6cfd1346fe3e0a1641b292beb37529f0",
+      "libogg-0.dll": "9baf145436285b2e1e4fbc665245c3c34c9a9c906a372abbe44ce6a27b7abac2",
+      "libomp.dll": "ffdd177d28adcd1630726977c89d0e89a88325fc00274cfa2bc626791108f3fa",
+      "libopenal-1.dll": "597cd82b17db65586c634814e639ea1e2a0adc8e043a343abbcbcef4722ff70a",
+      "libopencore-amrnb-0.dll": "9d36d5661fd002f8889d90e0a53f2c5d693c641c075ef55c26ade85d958d1369",
+      "libopencore-amrwb-0.dll": "54341e49eab692d77e0ff8534a40a3cce6d0d58b9cd157ed69c817c4b852bbdb",
+      "libOpenEXR-3_3.dll": "1a37fc90429d75e69eab401941232b5746dc2b9a67e0d80c4dc608d5739ed542",
+      "libOpenEXRCore-3_3.dll": "f379a50a67177181853df019e770c7e37851e383253347b3cccdce879712762f",
+      "libOpenEXRUtil-3_3.dll": "ba9f00f67ba1b9c874413885d0bab110211726808ecf34da5e8e39f453c7bf99",
+      "libopenjp2-7.dll": "760565afb387f81dd5bfc906c894fcc0e99fbe17bc054153225f457a816d2052",
+      "libopenjpip-7.dll": "eaaaac6f24358dff5bd70c68856f4d31e80e3ae14951fcf16ec5765e6ad62427",
+      "libopenvr_api.dll": "ce9d988fe74a0ecfbee3bc6f28b07c487be1d2ba9b992dac8d49e999081f7481",
+      "libopus-0.dll": "cc9ba4e03e6aa4fa3aaa5f0d68076eba2a582691bdc48fa969cca4943ef870af",
+      "libp11-kit-0.dll": "072cfd739a13f185af01fc17bfebe528bfc903b077f1121d8434db8e51c92480",
+      "libpanelw6.dll": "754e6acd5a5089a9659ed8cbbf084678832298eb0296eb31dafc51a6bb811c5a",
+      "libpango-1.0-0.dll": "3040739a8666857488d097f39759512aefbd0c190003a169bce1dc549a8083ea",
+      "libpangocairo-1.0-0.dll": "4f07656b5f9f7cfeab3590cbc553dab1552462cd0f9a0af09fbf5bdf66111fa9",
+      "libpangoft2-1.0-0.dll": "5db4c86aefd7cbd1d061bcfd0722575fc1c00fd53fb4992b96640d9373b934ee",
+      "libpangowin32-1.0-0.dll": "af168c38f814773fab0ab1efcf1bcc81706913e28c88abb11ca4d9d07ab8ef3a",
+      "libpcre2-16-0.dll": "bffe7fd823224192ae10e445ebd25e532828d28abcc17332ab25062fe2b3c5cb",
+      "libpcre2-32-0.dll": "da37d5873fc661d980793f77b158d5c4d6990343e9fea3ea9d417436f95c4855",
+      "libpcre2-8-0.dll": "b2f9c37c347d4a0f87c7b21bed28c66d95add7bfbb4821e84a10a70619fe856d",
+      "libpcre2-posix-3.dll": "406ef50772d062ea0995c960ae69665e3b9c3f54ead12334124d0b28e9000dc0",
+      "libpixman-1-0.dll": "3141ad33ceda46e643e590365ffef4d6dc69a77a77e7e881c5945717fb51b808",
+      "libpng16-16.dll": "e78cef72189a48df9111635b13a195bbb4609ea0dac4d5c6a89cf758b5ced003",
+      "libPyImath_Python3_12-3_1.dll": "854eae09b54680bcbb749ea6f76b04ce3aedb9da4539dca7d0fd909aec96627e",
+      "libpython3.12.dll": "96694da0fa21c21156c5385ddafa272f282304a5a52ee4491d9de56f22b619e0",
+      "libpython3.dll": "5f97e766b1df8d129a69f46e49c72b420e2e0931c600766c08a5ba97383b47ca",
+      "libquadmath-0.dll": "ac1ead51c726da3c2bf2328eac08338dbdf0a0566d25a05f3686aacd4830615a",
+      "librav1e.dll": "82a00412b8c2ab7b9ad44ca0935d6798e88b01704a4a93bf587986854787779a",
+      "libraw-23.dll": "c22f65de114f0cb6529431ffa56f0e8af4bf033b1675f4a7caddc5043e689ffd",
+      "libraw_r-23.dll": "101532d9464d56273cadfe2ba272348fbf578552cc67a0ec3c26c7030cecedfd",
+      "libreadline8.dll": "0c2f4b69d6783b134fed722f79e28aa7bf65f975fe39bd7fa237cec2bf779242",
+      "librsvg-2-2.dll": "8cd34f00cb46290abd896321474c6abe1c7a2a905ee676e70e54008c81ee49a4",
+      "librtmp-1.dll": "52ac83860d0eabbcbf928ab372e6d7e927bb43d52da8a2119a22ae7f6a0e0065",
+      "libsharpyuv-0.dll": "6bc3f12513ca57e3e10cb23f03c0ee3e5ea59768adc365c652ac7385df4a5f2a",
+      "libsoxr-lsr.dll": "fb06c51f07ee0dbc137f12a6ceb8607880087a99184d2e86c08472af227f2b25",
+      "libsoxr.dll": "ac03eccb5567b2fabf6d58a7fb249316e688bdaa718763964d437b8fc887ee4e",
+      "libspeex-1.dll": "70517dd82e962c0956f0e8d3bb700cd7ecc62b8c08741b35d71f2e95d601621d",
+      "libspeexdsp-1.dll": "32da0c976440acb19e6d0fb4221a948838f10933cf2b465325ffd178988442d7",
+      "libsqlite3-0.dll": "f63cffdedd636e6bf688fb1af7687ddf0a133b63960d02ff14ee041b74e29d46",
+      "libsrt.dll": "67882871eecd42146cde11286058195a98ccd081850988e8e1155fc50de266be",
+      "libssh.dll": "7268326a756637646dc9abc10f8687685ea423d5142aae7cf5fdc5ce2a67185a",
+      "libssl-3-x64.dll": "85377317f9fbc5a0b8264ba25c87670dbce2fe0988d186eb98d107460d8b416c",
+      "libstdc++-6.dll": "459dddb92b26e20ebd640ce3f1905c7bf16a1b494d416461c223df0682d28653",
+      "libSvtAv1Enc-3.dll": "c60e66700550cc63e9e77837fa885f53f6a6ae28486340666af2867bd4c3e1cb",
+      "libsystre-0.dll": "906253331cf1b73a52e0ca4682ccdcdbc48402134f75d49539c67bcf55bb53b9",
+      "libtasn1-6.dll": "598910c74245b835e288067b76a6968e8e2cc64446c94ec37043002e8fdd8dd9",
+      "libtbb12.dll": "f253ba9954c5ac21b56e75ee61b91f0350e13b65cb50afa1bcbba560ff0528e0",
+      "libtbbbind_2_5.dll": "0070a2570fd0db9521ef0d87cc8b8b2ce134e9cb11df696bd4d7a56670b6ba0b",
+      "libtbbmalloc.dll": "dfa00b35453cd94e1b1e0d06eaae6a2c8079492d035bf52b0bff04a3b2bc1308",
+      "libtbbmalloc_proxy.dll": "3e110465d6a44cd182533b2dbfe7895970e6bd83f7f7a0a76f31b9cbf015e928",
+      "libtermcap-0.dll": "2d385ceed73c784e797a7d54fe18a059fcf7479cb3ee2e5b124e227ddb897130",
+      "libthai-0.dll": "fff204bbbdc8f4cab75471c8340319d144538f2c4d9dfdc4ca26766c53951294",
+      "libtheora-1.dll": "fdd04df606b2c3933884ffc20d03c38aaf625475c3538927ad67e800a1aeb25d",
+      "libtheoradec-2.dll": "0b9877e581421abe4090abacf2cd8c04df6de00520d7a34b9f41b46a11a02a80",
+      "libtheoraenc-2.dll": "ed0fb82d04220070d2f53832a9cb653546ddce2c704a53bfacae7597666db4d7",
+      "libtiff-6.dll": "b08d73f09767c0e45173bd812bbc5c8fa34e7e7e1b10bb1d5feb156c82feca0c",
+      "libtiffxx-6.dll": "f9ff92026210e26fe6406c837de0ef55fa04b0955761b8f51b729823ea8796b6",
+      "libTKBin.dll": "97206f7bcfc6877b46fb7c27bf6dfcb3bd4fd87ea45ae2dc2d546b8b20f34c52",
+      "libTKBinL.dll": "faf228c186c37a1ecebbf2476b99eb19e0262baa5eb77a7cc94a63f0864b7cc5",
+      "libTKBinTObj.dll": "40c7a17392a941f3c8734ddc3c3dec531a95939b4e4d1c26fbac1496d5ca2e6a",
+      "libTKBinXCAF.dll": "5f7c7e55215c2a6ae918118a170c2959f2a3a14ecfbf3c06e7f4573e6aedb142",
+      "libTKBO.dll": "9fdafa31eb36e46a8eaefa31a2780fa1acea3272523bb443c0a8c9bd7c95d663",
+      "libTKBool.dll": "9680ccac58932e2c041eff37389dc5f54f055944a8370b9021e44dcb7de30403",
+      "libTKBRep.dll": "ab1ea0901754f71ea31f4caac543134b0ced92e0a3d831b6c1a4cd801dc86803",
+      "libTKCAF.dll": "2b3c26296b93dbdd0e2e51f7adbf279af0f481886544f12bf368e23d4287d37d",
+      "libTKCDF.dll": "ba1391f3dd170a465e125387eb7b63c53824d35223045070acd24f5368f219ce",
+      "libTKD3DHost.dll": "32568abe1be08a514d8d1e1db7f5ffcfbba5377ffd72b85db840f7766bcc8169",
+      "libTKD3DHostTest.dll": "6acbb6bbbaa9aa104407cc6afd9aa8329536a4ad9fea1f7a9b8cdf3b66dc029b",
+      "libTKDCAF.dll": "7cdaca0c7601206b86c767bc9f2abd06c385114387e8121d4a69f99f8044abd3",
+      "libTKDE.dll": "1a003b030354ec0bcd85e2f30d3675dd8ba295a9b52806bb0d7a3340c1e4541e",
+      "libTKDECascade.dll": "6eff9fcef99ba35c474b3b60ced523d25aa99b78e4e9e97b4ee7fe9f009ea311",
+      "libTKDEGLTF.dll": "543831359b60cf380da289f33704f31b7524ae961611e1d69ac5c3d84353880a",
+      "libTKDEIGES.dll": "ea4adad7214367bbc58e0a462b1d4c45c48a2368f1a38271e76b067888c603ee",
+      "libTKDEOBJ.dll": "5e059bf43b0a43cb51693de0d7c92bfdf2549bac82e2cd0d057a8bb4a86553e0",
+      "libTKDEPLY.dll": "e83e9b9e05db285229a03a64beede1f86e2e76fb7cf13cde68c93c859308ac37",
+      "libTKDESTEP.dll": "248f678cf2cd12d1f767666684fac8c5a2089c5a374fa4d05b88ca8901af999a",
+      "libTKDESTL.dll": "e21523d00b974118b231385e19ee50d6dccf2e6981d6a3b4fba2db4112da6a78",
+      "libTKDEVRML.dll": "85318a63e10fd9a3d58c6ef4591dde6dc914f39be907c89c60ef93c0271f2355",
+      "libTKDraw.dll": "4f9a4ff4135434801cd58fe2699d16c2169c9ac2e7dc543870e65f5c46cc71b2",
+      "libTKernel.dll": "2125ea13fb80393e5cf9efd85c281505fec4e47df02719eef640478f38b8830d",
+      "libTKExpress.dll": "c1f13040680d0dbb4209746b8282d3bd905bdbb49159bf0c9552a1326935d9d0",
+      "libTKFeat.dll": "178b2ddaec12171d69915fa90e635a9b0371a4a44e0cfc311ccd8aeaeec9b06a",
+      "libTKFillet.dll": "3e786c3d2a6e5ff5f2193c3b106414a68a47b8df105a7c78ab9d6c260a5a59e4",
+      "libTKG2d.dll": "8f56de17bc883c3310ee37500fc181fc65ef8ffafe85a6618bbe78601de07dcb",
+      "libTKG3d.dll": "4011c1b38b81d9d34b818490e2086ebd1526e26fb33303cf1faf9c3529bd7c7c",
+      "libTKGeomAlgo.dll": "acfd43379f8528893c1610200b3775a2aabf455258ba71fec6cca629f5746589",
+      "libTKGeomBase.dll": "981b870905d300dc8e4e28d81f8aee57c639a9d1c065e330396b279f1578aa77",
+      "libTKHLR.dll": "b2510d0a12c4b31d24b99f303767c7c60ee5568d78db5f2dfbc00211494c544a",
+      "libTKIVtk.dll": "b2a20d5e6138653c65c67057dd4c9937e3bcc70a04809a5e4d0d10bba62a9f65",
+      "libTKIVtkDraw.dll": "7979ed5167c368c022dad327fc5e40fe4d963277761c12d86386dcb06cdfcc39",
+      "libTKLCAF.dll": "95c662125c21cb8d21281a729367a80ae22e75fe3d1f6d50b6a6d57af2319ed7",
+      "libTKMath.dll": "91d6c4f33a50f8dfe79add6993b7a7a99deb09c964177f74a7d7ebc32ee200ce",
+      "libTKMesh.dll": "2135f3a039726bf789dda86c6b049ba0404e164c4b09202d599b04ab1ef36a3f",
+      "libTKMeshVS.dll": "2c32061b6776f7cb2b98e9075068b09771575e9416fd334c1fb19f3f2c125f3a",
+      "libTKOffset.dll": "89d5c43c8607612babf05d6da0f2bec1a61731f3c1d483f179b777926d181cb5",
+      "libTKOpenGl.dll": "b1c7e36295b2c22f3936928eb9f167dd02562437323efa57be90c3fe29868b01",
+      "libTKOpenGlTest.dll": "4747d9a866ca53d6e65d9235bec926ece7173d9a2e0a8da3d23f2257b10a17be",
+      "libTKPrim.dll": "8a491b898fb57ce76ac95a4e468e4bea5f18f914df63f185ab1cdd7d935433a8",
+      "libTKQADraw.dll": "6304c9ec93691189f37afa61c5037168d1694a10f5cda680399d67bfdd94acc5",
+      "libTKRWMesh.dll": "f7d04d3f7e2096a7614a663973048d4d99fe14ab2b2928f9f4dcfb209b66fd41",
+      "libTKService.dll": "58bd089f98e98a4fa8811fb46ef546c52c4fc6e2f3252f02492ccce4934ceff5",
+      "libTKShHealing.dll": "02a30d2d39a62f58b2c11c83270431e2e1031e8b796a72e39e4a61582a2acbbc",
+      "libTKStd.dll": "deaf48f7b39a278e0a1c23bde23c53a4fb2bb8feaa54b009231cae0e14052828",
+      "libTKStdL.dll": "29e924e13fe25d38f4ba2329115eaa452126529c106677745c4d21bd3ed09925",
+      "libTKTObj.dll": "fbd22787a081c2123fc2a894251920ccba29fe196fa7439558e45b519ef679fb",
+      "libTKTObjDRAW.dll": "fab59ccfece2e198c9ddc6ca6a3908cd67ec9feb0875fb6fd226a6a2d890f2a6",
+      "libTKTopAlgo.dll": "4c4e38ff9c5c395570336c68c76b2e46bd5616d16237c0dd392e60f7aaa4a22d",
+      "libTKTopTest.dll": "ca408e0512c7718dcb58d9ed9df4798b3044dd668130fedb9311b0c06aabe222",
+      "libTKV3d.dll": "b89303b5fae786ce6e117e5c6a262bb34dc7b0eda3e095fc981825ec52b1b8f0",
+      "libTKVCAF.dll": "752b801ccdabad847ad8e88e3ad8724ca55a646ee807f21e49b5cf6557321c80",
+      "libTKViewerTest.dll": "fd8f5b289fbb1c4382abcc78b4ea30d408e53d1c8386fd89939d9d4791ce5870",
+      "libTKXCAF.dll": "6639b55de52cf31dcdc022bdfd8c3575d10d8ac77cebad4ef7983962a1ce7d9f",
+      "libTKXDEDRAW.dll": "1d2461843bfa342c415e9422e38e0f9f13e4d91f40a2e1ccb3b6ad20c7409d1e",
+      "libTKXMesh.dll": "ceda0a92e622054e9009536dddc35a62619d4d77bd786ad508b4ef949b3599be",
+      "libTKXml.dll": "f485d45db9734992b7bc3ab8e4cd9d0aaf3ea5a1dcdadf7700e3dd1e42cd6309",
+      "libTKXmlL.dll": "3f171eb202c68f56c560d0183235e3b0f8154199693ecc199a37894f09eba5db",
+      "libTKXmlTObj.dll": "c7e9ad652490b3089da7c7058576074e58cc9051c2a10790ef9b4df2233824bd",
+      "libTKXmlXCAF.dll": "f9782d6022b23a5940082782d804b0e1d5602e36fd0ca0e32c3dcff168ff3743",
+      "libTKXSBase.dll": "764588d7abf8b4a834b060369b5a9717eb2aa3d7e2ec019c42c6c6bee67dee19",
+      "libTKXSDRAW.dll": "a5cc29e9f65f7cfc94d12aa006b23decade7cfd6946b64da8a28d8c0059c6933",
+      "libTKXSDRAWDE.dll": "722412ac74d65966dd8e5a1c7c983e46b9a386a491c16d66c7e67764e78e7e76",
+      "libTKXSDRAWGLTF.dll": "743575a3f3c5e9f00751d8ce5ff4f0486aa425f7f5f57cbd1313a0e847c236f2",
+      "libTKXSDRAWIGES.dll": "55fa71b4fe9da1b9bba7f307bb9b3079cf6be38068e113c2fc9c2d09bb16e8cf",
+      "libTKXSDRAWOBJ.dll": "bfb557cd8a3a89d56d2248f89e793c1a170f29a8d8d75b7eaab6e911b213ebad",
+      "libTKXSDRAWPLY.dll": "fda5da8a8cdccfec408d7c63883af41c24ba2674859addb862a837820996d37e",
+      "libTKXSDRAWSTEP.dll": "3a9ea0b2bcd790ac72464f230bc89aaaeff54dc8640a6f6c25291330dcdedcb0",
+      "libTKXSDRAWSTL.dll": "5a01cacaec725f60296de0ba3e321279a7dcd320a55f4b198c6f07934dc22676",
+      "libTKXSDRAWVRML.dll": "0fdec41cd64b2a179c4ea472fce1df539d9672259be7806b219136d73bae2b02",
+      "libtre-5.dll": "0bb89e15ab603510537cf89435c02216e282cef86f109b78325ee217762ed0f9",
+      "libturbojpeg.dll": "a043a58c57144d421704a1db19359a37f50d73524164528ae014b06c8dd95497",
+      "libunibreak-6.dll": "c66ec1562bd2e8fcdc2475af06a5d2ab1b9b27a9318e59f37d4afce7a882ec2e",
+      "libunistring-5.dll": "2fd22f7d04bfa8ee8614e0f2445265df3dceb9bf32021c826a72f53ee693cf3e",
+      "libvidstab.dll": "d2e33a012982ae0bee724ffe0694d62a530f50f7b9e017e193316f360d4ba3f7",
+      "libvorbis-0.dll": "43b00d5e347b6b35a3912e3179d6433b5bdae7233cc04cbe38bcc61f164cdc6f",
+      "libvorbisenc-2.dll": "a765abbbe42de7c8bba31b41591cfe4c4307c30af67c478f372f76116f28e72e",
+      "libvorbisfile-3.dll": "fdf5aa6913cdf3afd3f731c0283babb2dd15eb41840a7966cfebb9470877dd14",
+      "libvpx-1.dll": "f31c77f205d68a74d9e08a72b2c0c72efc81ebf24b979aca8bf37df3bca60e9e",
+      "libwebp-7.dll": "979509568e58ce67cb19ce6be932de118daf204c8a49916379216dd59f8a3d6a",
+      "libwebpdecoder-3.dll": "311a780bada2ab520e6d34e4562c9d22ca4bc68e5fa2d5ba5bf143aaa704bb5e",
+      "libwebpdemux-2.dll": "9ac8166d19bd7a48cba893c11e6d60b48d246abef0c97a35ac8f8e9ce05db237",
+      "libwebpmux-3.dll": "f4f9ef43c5b8d97cf1e0fe62ea9686ab6cd9a839c4c4b010a300e0365d82a533",
+      "libwinpthread-1.dll": "459e5414cd8a125bd903dacc5c46227c32ec5a8bdc6d879c062e199dda68cfd4",
+      "libx264-164.dll": "cb41fa0ad4e1c38a99a1eba75e909441de07936454eee7bbd666196e14771873",
+      "libx265-215.dll": "3562586850c4213260ef2478b0c5f12e25c30858479edd2bb03c956a8e66ef31",
+      "libxml2-2.dll": "60d6290310e5903e7565b36adb5b04132cbd7a1ff4d5257322e9ddd7e7b1b919",
+      "libzimg-2.dll": "3ee166f06477df24c784457f8cab628ea51879392d252b214d6fca25a5b961f4",
+      "libzstd.dll": "a25427164f8775046eb8ce488d7d08842c3b33224c5817d4c0c3628b5b588129",
+      "libzvbi-0.dll": "2efc9d4da88b9cea2c4f3a8ea6a954ca96a3bd574bf83dd5de7bbcc94b691e29",
+      "postproc-55.dll": "14a7bc035e5302ae0b6dd0d446500aa45839f2264622a847f3e726102e562a7d",
+      "SDL2.dll": "70d48f4dcb01415c9023f4d993a3b7b07e6637d77a67e0deb4863e4aaf3f96a9",
+      "swresample-3.dll": "fcd4969abee8d148ade67dc451372349dc31b6b79b7926aae8e0b7b69ed88790",
+      "swscale-5.dll": "83eab6e4596770c29157f9a05ec9d45f0badce110f847adf1808c603d39a76bd",
+      "tcl86.dll": "e2c70465bd2bbb7032cbe8337b462100165f81885de5ad7c42c9966b1f5e0aa1",
+      "tk86.dll": "ad5829cac701a7c5dcddf1dafebfa84d2e409934e463f4868628a145a51fe152",
+      "vulkan-1.dll": "02dea638586018ec0da289b8d7c989aed077c6db5984cad1c0663b301fd1dad7",
+      "xvidcore.dll": "ede236a90cd2bf8b9547212197ad89b69763041aa140642b0b6daa3de34bc5fc",
+      "zlib1.dll": "1dc85208162ee57fe97e892bb5160fe9588903992995f90adc3a3a358dac6fc6"
+    },
+    "external_winpthread_sha256": "92e996ab2cb61f5106b8b67a4dc23dd2959958cdb3afe6d2f9c6fc3afef85258"
+  },
+  "sdk_provenance": "docs/architecture/evidence/cad24-completion/sdk-provenance.json",
+  "runtime_audit": "docs/architecture/evidence/cad24-completion/runtime-audit-release.json",
+  "actual_native_apis": [
+    "BRepCheck_Analyzer",
+    "TopExp_Explorer",
+    "TopTools_IndexedMapOfShape",
+    "BRepGProp::VolumeProperties",
+    "BRepGProp::SurfaceProperties",
+    "BRepTools::Read/Write",
+    "BRepAlgoAPI_Fuse/Cut/Common",
+    "Modified",
+    "Generated",
+    "IsDeleted",
+    "BRepBuilderAPI_Transform",
+    "BRepBuilderAPI_GTransform",
+    "STEPControl_Reader"
+  ],
+  "architecture": "Owned isolated executable; no TopoDS objects or native pointers cross into Gmsh or Godot. SHA-256 checked metre BREP handoff with complete unique descriptor mapping.",
+  "campaign": {
+    "native": {
+      "name": "native",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_native.py"
+      ],
+      "seconds": 108.8784971999994,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\native-1794663175128118500"
+    },
+    "matrix-extra": {
+      "name": "matrix-extra",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_matrix_extra.py"
+      ],
+      "seconds": 25.805074100004276,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\matrix-extra-1794663284010404900"
+    },
+    "protocol": {
+      "name": "protocol",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_protocol.py"
+      ],
+      "seconds": 21.78066150000086,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\protocol-1794663309818609500"
+    },
+    "history": {
+      "name": "history",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_history.py"
+      ],
+      "seconds": 34.55340960000467,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\history-1794663331603666900"
+    },
+    "boundary": {
+      "name": "boundary",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+        "-s",
+        "res://tests/cad24_boundary.gd"
+      ],
+      "seconds": 2.8385060999862617,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\boundary-1794663988364920900"
+    },
+    "numerical": {
+      "name": "numerical",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+        "-s",
+        "res://tests/cad24_numerical.gd"
+      ],
+      "seconds": 273.88264060000074,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\numerical-1794663674428255100"
+    },
+    "gui": {
+      "name": "gui",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+        "--path",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+        "-s",
+        "res://tests/cad24_gui.gd"
+      ],
+      "seconds": 80.01397889999498,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\gui-1794663948314677900"
+    },
+    "deck-audit": {
+      "name": "deck-audit",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_deck_audit.py"
+      ],
+      "seconds": 1.526212900003884,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\deck-audit-1794664028332113600"
+    },
+    "endurance": {
+      "name": "endurance",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_endurance.py"
+      ],
+      "seconds": 438.3149482000008,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\endurance-1794663369438647600"
+    },
+    "gui-endurance": {
+      "name": "gui-endurance",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_gui_endurance.py"
+      ],
+      "seconds": 1062.8621876999969,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\gui-endurance-1794660144503845100"
+    },
+    "failure": {
+      "name": "failure",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_failure.py"
+      ],
+      "seconds": 38.66312860000471,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\failure-1794663905106758700"
+    },
+    "cancel-cut": {
+      "name": "cancel-cut",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_failure.py",
+        "cancel-cut"
+      ],
+      "seconds": 30.10726390000491,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cancel-cut-1794663874996005700"
+    },
+    "cancel-step": {
+      "name": "cancel-step",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_failure.py",
+        "cancel-step"
+      ],
+      "seconds": 21.27590870000131,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cancel-step-1794663853716872600"
+    },
+    "timeout": {
+      "name": "timeout",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_failure.py",
+        "timeout"
+      ],
+      "seconds": 25.194476000004215,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\timeout-1794663828519012700"
+    },
+    "owner-exit": {
+      "name": "owner-exit",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_failure.py",
+        "owner-exit"
+      ],
+      "seconds": 20.75437239999883,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\owner-exit-1794663807758226700"
+    },
+    "retention": {
+      "name": "retention",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/cad24_retention.py"
+      ],
+      "seconds": 3.710321300008218,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\retention-1794663943774344500"
+    },
+    "scan": {
+      "name": "scan",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+        "--headless",
+        "--editor",
+        "--path",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+        "--quit"
+      ],
+      "seconds": 34.73361750000913,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\scan-1794663953627464600"
+    },
+    "regressions": {
+      "name": "regressions",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "native/run_regressions.py",
+        "--godot",
+        "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\default-regressions"
+      ],
+      "seconds": 94.5802163000044,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\regressions-1794663991208041600"
+    },
+    "cad21-geometry": {
+      "name": "cad21-geometry",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad21.py",
+        "geometry"
+      ],
+      "seconds": 37.393122599998605,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-geometry-1794655636530578300"
+    },
+    "cad21-integration": {
+      "name": "cad21-integration",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad21.py",
+        "integration"
+      ],
+      "seconds": 74.10745070000121,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-integration-1794655673925826800"
+    },
+    "cad21-lifecycle": {
+      "name": "cad21-lifecycle",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad21.py",
+        "lifecycle"
+      ],
+      "seconds": 28.674045899999328,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-lifecycle-1794655748036405800"
+    },
+    "cad21-preservation": {
+      "name": "cad21-preservation",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad21.py",
+        "preservation"
+      ],
+      "seconds": 23.879930900002364,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-preservation-1794657105926211600"
+    },
+    "cad22-validation": {
+      "name": "cad22-validation",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad22.py",
+        "validation"
+      ],
+      "seconds": 5.306827099993825,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-validation-1794655810740097700"
+    },
+    "cad22-numerical": {
+      "name": "cad22-numerical",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad22.py",
+        "numerical"
+      ],
+      "seconds": 117.13013269999647,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-numerical-1794655816049320700"
+    },
+    "cad22-persistence": {
+      "name": "cad22-persistence",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad22.py",
+        "persistence"
+      ],
+      "seconds": 36.406382199988,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-persistence-1794655933181170800"
+    },
+    "cad22-independent": {
+      "name": "cad22-independent",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad22.py",
+        "independent"
+      ],
+      "seconds": 2.860315999991144,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-independent-1794657202298765500"
+    },
+    "cad22-lifecycle": {
+      "name": "cad22-lifecycle",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad22.py",
+        "lifecycle"
+      ],
+      "seconds": 22.199006399998325,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-lifecycle-1794655971145700800"
+    },
+    "cad23-unit": {
+      "name": "cad23-unit",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad23.py",
+        "unit"
+      ],
+      "seconds": 14.934190300002228,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-unit-1794655993346312300"
+    },
+    "cad23-numerical": {
+      "name": "cad23-numerical",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad23.py",
+        "numerical"
+      ],
+      "seconds": 426.02058299999044,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-numerical-1794656008282229400"
+    },
+    "cad23-persistence": {
+      "name": "cad23-persistence",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad23.py",
+        "persistence"
+      ],
+      "seconds": 44.37409339999431,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-persistence-1794656434304802400"
+    },
+    "cad23-independent": {
+      "name": "cad23-independent",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad23.py",
+        "independent"
+      ],
+      "seconds": 19.3824855999992,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-independent-1794656478681933600"
+    },
+    "cad23-lifecycle": {
+      "name": "cad23-lifecycle",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad23.py",
+        "lifecycle"
+      ],
+      "seconds": 73.34664619999239,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-lifecycle-1794656498066538500"
+    },
+    "cad23-shutdown": {
+      "name": "cad23-shutdown",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad23.py",
+        "shutdown"
+      ],
+      "seconds": 28.720699699988472,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-shutdown-1794656571415217600"
+    },
+    "cad23-gui": {
+      "name": "cad23-gui",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "tests/run_cad23.py",
+        "gui"
+      ],
+      "seconds": 101.06504889999633,
+      "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad23-gui-1794656600139371700"
+    }
+  },
+  "regressions": {
+    "passed": true,
+    "expected": 28,
+    "recorded": 28,
+    "missing": [],
+    "results_file": "results.json"
+  },
+  "numerical_cases": [
+    {
+      "analytic_reference_m": 6.34920634920635e-08,
+      "case": "overlap",
+      "completion": {
+        "ended_utc": "2026-11-14T13:41:33.400916+00:00",
+        "error": "",
+        "exit_code": 0.0,
+        "job_object": true,
+        "peak_memory_bytes": 170127360.0,
+        "peak_working_set_bytes": 9420800.0,
+        "seconds": 0.378903800010448,
+        "started_utc": "2026-11-14T13:41:33.022013+00:00",
+        "state": "completed"
+      },
+      "heartbeat_frames": 2457,
+      "order": 1,
+      "reaction_moment_Nm": [
+        0.0,
+        2.44249065417534e-15,
+        -25.0000038146973
+      ],
+      "reaction_relative_imbalance": 6.103515625e-08,
+      "solver_job": "user://calculix_jobs/22612_12912990_efcc10776a633f45",
+      "tip_m": 6.34920616666666e-08
+    },
+    {
+      "analytic_reference_m": 6.34920634920635e-08,
+      "case": "overlap",
+      "completion": {
+        "ended_utc": "2026-11-14T13:41:58.908780+00:00",
+        "error": "",
+        "exit_code": 0.0,
+        "job_object": true,
+        "peak_memory_bytes": 171032576.0,
+        "peak_working_set_bytes": 18382848.0,
+        "seconds": 1.25367160000314,
+        "started_utc": "2026-11-14T13:41:57.655109+00:00",
+        "state": "completed"
+      },
+      "heartbeat_frames": 3688,
+      "order": 2,
+      "reaction_moment_Nm": [
+        6.25848770141602e-07,
+        -3.91378214017156e-14,
+        -25.0000019073486
+      ],
+      "reaction_relative_imbalance": 6.103515625e-08,
+      "solver_job": "user://calculix_jobs/22612_31732238_4882f11ef3d90d71",
+      "tip_m": 6.34920599999999e-08
+    },
+    {
+      "analytic_reference_m": 1.08926160228385e-07,
+      "case": "through-hole",
+      "completion": {
+        "ended_utc": "2026-11-14T13:42:23.553563+00:00",
+        "error": "",
+        "exit_code": 0.0,
+        "job_object": true,
+        "peak_memory_bytes": 176631808.0,
+        "peak_working_set_bytes": 40017920.0,
+        "seconds": 4.25162910000654,
+        "started_utc": "2026-11-14T13:42:19.301933+00:00",
+        "state": "completed"
+      },
+      "heartbeat_frames": 3553,
+      "order": 1,
+      "reaction_moment_Nm": [
+        1.09151005744934e-06,
+        9.77706804405898e-12,
+        3.42726707458496e-07
+      ],
+      "reaction_relative_imbalance": 2.44140625e-07,
+      "solver_job": "user://calculix_jobs/22612_59376054_5c05c9db4610cdaa",
+      "tip_m": 1.08805446527778e-07
+    },
+    {
+      "analytic_reference_m": 1.08926160228385e-07,
+      "case": "through-hole",
+      "completion": {
+        "ended_utc": "2026-11-14T13:44:40.022718+00:00",
+        "error": "",
+        "exit_code": 0.0,
+        "job_object": true,
+        "peak_memory_bytes": 397328384.0,
+        "peak_working_set_bytes": 386785280.0,
+        "seconds": 32.1632432999904,
+        "started_utc": "2026-11-14T13:44:07.859470+00:00",
+        "state": "completed"
+      },
+      "heartbeat_frames": 19714,
+      "order": 2,
+      "reaction_moment_Nm": [
+        -7.15255737304688e-07,
+        2.80886425230165e-14,
+        -9.16421413421631e-07
+      ],
+      "reaction_relative_imbalance": 1.220703125e-07,
+      "solver_job": "user://calculix_jobs/22612_123199474_c3ea4da58cf130bd",
+      "tip_m": 1.08926116030534e-07
+    },
+    {
+      "analytic_reference_m": 2.38095238095238e-07,
+      "case": "step-scaled",
+      "completion": {
+        "ended_utc": "2026-11-14T13:45:07.207970+00:00",
+        "error": "",
+        "exit_code": 0.0,
+        "job_object": true,
+        "peak_memory_bytes": 170147840.0,
+        "peak_working_set_bytes": 10293248.0,
+        "seconds": 0.586864400000195,
+        "started_utc": "2026-11-14T13:45:06.621108+00:00",
+        "state": "completed"
+      },
+      "heartbeat_frames": 2350,
+      "order": 1,
+      "reaction_moment_Nm": [
+        400.000030517578,
+        -5.11590769747272e-13,
+        -200.000015258789
+      ],
+      "reaction_relative_imbalance": 6.103515625e-08,
+      "solver_job": "user://calculix_jobs/22612_226017472_0f596f99ae5195ff",
+      "tip_m": 2.38095225e-07
+    },
+    {
+      "analytic_reference_m": 2.38095238095238e-07,
+      "case": "step-scaled",
+      "completion": {
+        "ended_utc": "2026-11-14T13:45:47.152102+00:00",
+        "error": "",
+        "exit_code": 0.0,
+        "job_object": true,
+        "peak_memory_bytes": 171696128.0,
+        "peak_working_set_bytes": 25088000.0,
+        "seconds": 1.55684350000229,
+        "started_utc": "2026-11-14T13:45:45.595287+00:00",
+        "state": "completed"
+      },
+      "heartbeat_frames": 5755,
+      "order": 2,
+      "reaction_moment_Nm": [
+        400.000061035156,
+        7.18694743474801e-13,
+        -200.000015258789
+      ],
+      "reaction_relative_imbalance": 5.60448432454508e-15,
+      "solver_job": "user://calculix_jobs/22612_254475356_10beff7110a2290b",
+      "tip_m": 2.380952e-07
+    }
+  ],
+  "independent_force_moment_audit": "docs/architecture/evidence/cad24-completion/independent-deck-audit.json",
+  "geometry_matrix": [
+    "docs/architecture/evidence/cad24-completion/native-qualification.json",
+    "docs/architecture/evidence/cad24-completion/geometry-extra-matrix.json",
+    "docs/architecture/evidence/cad24-completion/protocol-and-invalid-geometry.json"
+  ],
+  "history": {
+    "serialized_native_face_reordering_verified": true,
+    "transitive_edit_versioning": true,
+    "numeric_serialization_normalized": true,
+    "outcome": "PASS",
+    "reordering": true,
+    "unique_continuations": [
+      "N_5922a883dd07a382513dc285",
+      "N_5960408a6bd63211f5d3fd6e",
+      "N_b11195edd77e564bae7dbee8",
+      "N_c1f44aac978bb662feee4a2e"
+    ],
+    "invalidated": [
+      "N_c0d8f502f7cf285aaa1633c4",
+      "N_d6c665931e8362749dc93827",
+      "N_dc60cf47e80aa98fc783f1ed"
+    ],
+    "split_faces": [
+      {
+        "identity": "N_5922a883dd07a382513dc285",
+        "ancestry": [
+          {
+            "identity": "N_5922a883dd07a382513dc285",
+            "relation": "unchanged",
+            "split": false
+          }
+        ],
+        "state": "unchanged",
+        "descriptor": {
+          "area": 0.020000000000000004,
+          "bounds": [
+            -0.05,
+            -0.1,
+            -0.05,
+            -0.05,
+            0.1,
+            0.05
+          ],
+          "center": [
+            -0.05,
+            1.0842021724855044e-18,
+            1.3552527156068805e-18
+          ],
+          "inertia": [
+            8.333333333333337e-05,
+            0.0,
+            0.0,
+            0.0,
+            1.6666666666666674e-05,
+            -5.082197683525803e-22,
+            0.0,
+            -5.082197683525803e-22,
+            6.666666666666668e-05
+          ],
+          "orientation": 1,
+          "plane_outward_normal": [
+            -1.0,
+            -0.0,
+            0.0
+          ],
+          "slot": 1
+        }
+      },
+      {
+        "identity": "N_af946c8791d52b80a0c183de",
+        "ancestry": [
+          {
+            "identity": "N_af946c8791d52b80a0c183de",
+            "relation": "unchanged",
+            "split": false
+          }
+        ],
+        "state": "unchanged",
+        "descriptor": {
+          "area": 0.010000000000000002,
+          "bounds": [
+            -0.05,
+            -0.1,
+            -0.05,
+            0.05,
+            -0.1,
+            0.05
+          ],
+          "center": [
+            2.0057740190981832e-18,
+            -0.1,
+            -8.131516293641278e-20
+          ],
+          "inertia": [
+            8.333333333333337e-06,
+            0.0,
+            -1.2705494208814507e-22,
+            0.0,
+            1.6666666666666674e-05,
+            0.0,
+            -1.2705494208814507e-22,
+            0.0,
+            8.333333333333337e-06
+          ],
+          "orientation": 1,
+          "plane_outward_normal": [
+            0.0,
+            -1.0,
+            -0.0
+          ],
+          "slot": 2
+        }
+      },
+      {
+        "identity": "N_345938f18e6d535e96911bca",
+        "ancestry": [
+          {
+            "identity": "N_c1f44aac978bb662feee4a2e",
+            "relation": "modified",
+            "split": false
+          }
+        ],
+        "state": "modified",
+        "descriptor": {
+          "area": 0.018500000000000006,
+          "bounds": [
+            -0.05,
+            -0.1,
+            0.05,
+            0.05,
+            0.1,
+            0.05000000000000001
+          ],
+          "center": [
+            -9.55270022243985e-19,
+            -0.0050675675675675574,
+            0.05
+          ],
+          "inertia": [
+            5.962908220720722e-05,
+            2.623512858252508e-22,
+            1.88079096131566e-37,
+            2.623512858252508e-22,
+            1.6616666666666673e-05,
+            0.0,
+            1.88079096131566e-37,
+            0.0,
+            7.62457488738739e-05
+          ],
+          "orientation": 0,
+          "plane_outward_normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "slot": 3
+        }
+      },
+      {
+        "identity": "N_8df49ab961e5af90518f2640",
+        "ancestry": [
+          {
+            "identity": "N_9570e2e8d42051c2c58be79f",
+            "relation": "modified",
+            "split": true
+          }
+        ],
+        "state": "split",
+        "descriptor": {
+          "area": 0.004,
+          "bounds": [
+            -0.05,
+            0.1,
+            -0.05,
+            -0.010000000000000002,
+            0.1,
+            0.05
+          ],
+          "center": [
+            -0.030000000000000002,
+            0.1,
+            -8.131516293641278e-20
+          ],
+          "inertia": [
+            3.3333333333333376e-06,
+            0.0,
+            8.47032947254301e-25,
+            0.0,
+            3.866666666666668e-06,
+            0.0,
+            8.47032947254301e-25,
+            0.0,
+            5.333333333333305e-07
+          ],
+          "orientation": 0,
+          "plane_outward_normal": [
+            -0.0,
+            1.0,
+            0.0
+          ],
+          "slot": 4
+        }
+      },
+      {
+        "identity": "N_dd6624794cdc58e474c585a2",
+        "ancestry": [
+          {
+            "identity": "N_b11195edd77e564bae7dbee8",
+            "relation": "modified",
+            "split": false
+          }
+        ],
+        "state": "modified",
+        "descriptor": {
+          "area": 0.018500000000000006,
+          "bounds": [
+            -0.05,
+            -0.1,
+            -0.05,
+            0.05,
+            0.1,
+            -0.05
+          ],
+          "center": [
+            -9.55270022243985e-19,
+            -0.0050675675675675574,
+            -0.05
+          ],
+          "inertia": [
+            5.962908220720722e-05,
+            2.623512858252508e-22,
+            0.0,
+            2.623512858252508e-22,
+            1.6616666666666673e-05,
+            0.0,
+            0.0,
+            0.0,
+            7.62457488738739e-05
+          ],
+          "orientation": 1,
+          "plane_outward_normal": [
+            -0.0,
+            -0.0,
+            -1.0
+          ],
+          "slot": 5
+        }
+      },
+      {
+        "identity": "N_5960408a6bd63211f5d3fd6e",
+        "ancestry": [
+          {
+            "identity": "N_5960408a6bd63211f5d3fd6e",
+            "relation": "unchanged",
+            "split": false
+          }
+        ],
+        "state": "unchanged",
+        "descriptor": {
+          "area": 0.020000000000000004,
+          "bounds": [
+            0.05,
+            -0.1,
+            -0.05,
+            0.05,
+            0.1,
+            0.05
+          ],
+          "center": [
+            0.05,
+            1.0842021724855044e-18,
+            1.3552527156068805e-18
+          ],
+          "inertia": [
+            8.333333333333337e-05,
+            0.0,
+            0.0,
+            0.0,
+            1.6666666666666674e-05,
+            -5.082197683525803e-22,
+            0.0,
+            -5.082197683525803e-22,
+            6.666666666666668e-05
+          ],
+          "orientation": 0,
+          "plane_outward_normal": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "slot": 6
+        }
+      },
+      {
+        "identity": "N_9178fa9e0059c461184efdb2",
+        "ancestry": [
+          {
+            "identity": "N_dd629504df7fa4e53767e734",
+            "relation": "modified",
+            "split": false
+          }
+        ],
+        "state": "modified",
+        "descriptor": {
+          "area": 0.0075000000000000015,
+          "bounds": [
+            -0.010000000000000002,
+            0.024999999999999994,
+            -0.05,
+            -0.01,
+            0.1,
+            0.05000000000000002
+          ],
+          "center": [
+            -0.01,
+            0.0625,
+            -1.6805133673525326e-18
+          ],
+          "inertia": [
+            9.765625000000009e-06,
+            0.0,
+            0.0,
+            0.0,
+            6.250000000000004e-06,
+            1.9058241313221728e-23,
+            0.0,
+            1.9058241313221728e-23,
+            3.5156250000000024e-06
+          ],
+          "orientation": 0,
+          "plane_outward_normal": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "slot": 7
+        }
+      },
+      {
+        "identity": "N_22686d045d04cc624843d13f",
+        "ancestry": [
+          {
+            "identity": "N_77ff033316e3e1011671d128",
+            "relation": "modified",
+            "split": false
+          }
+        ],
+        "state": "modified",
+        "descriptor": {
+          "area": 0.0020000000000000005,
+          "bounds": [
+            -0.01,
+            0.024999999999999994,
+            -0.05,
+            0.010000000000000005,
+            0.024999999999999994,
+            0.05000000000000002
+          ],
+          "center": [
+            1.4636729328554306e-18,
+            0.024999999999999994,
+            -3.4152368433293405e-18
+          ],
+          "inertia": [
+            1.6666666666666677e-06,
+            0.0,
+            3.1763735522035887e-24,
+            0.0,
+            1.7333333333333342e-06,
+            0.0,
+            3.1763735522035887e-24,
+            0.0,
+            6.666666666666673e-08
+          ],
+          "orientation": 0,
+          "plane_outward_normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "slot": 8
+        }
+      },
+      {
+        "identity": "N_56fe96252cfe559a56bf3129",
+        "ancestry": [
+          {
+            "identity": "N_586e5e44334139ef580a2bb0",
+            "relation": "modified",
+            "split": false
+          }
+        ],
+        "state": "modified",
+        "descriptor": {
+          "area": 0.0075000000000000015,
+          "bounds": [
+            0.01,
+            0.024999999999999994,
+            -0.05,
+            0.010000000000000002,
+            0.1,
+            0.05000000000000002
+          ],
+          "center": [
+            0.01,
+            0.0625,
+            -1.6805133673525326e-18
+          ],
+          "inertia": [
+            9.765625000000009e-06,
+            0.0,
+            0.0,
+            0.0,
+            6.250000000000004e-06,
+            1.9058241313221728e-23,
+            0.0,
+            1.9058241313221728e-23,
+            3.5156250000000024e-06
+          ],
+          "orientation": 1,
+          "plane_outward_normal": [
+            -1.0,
+            -0.0,
+            0.0
+          ],
+          "slot": 9
+        }
+      },
+      {
+        "identity": "N_478651d3cb86844ef9a916a3",
+        "ancestry": [
+          {
+            "identity": "N_9570e2e8d42051c2c58be79f",
+            "relation": "modified",
+            "split": true
+          }
+        ],
+        "state": "split",
+        "descriptor": {
+          "area": 0.004,
+          "bounds": [
+            0.010000000000000002,
+            0.1,
+            -0.05,
+            0.05,
+            0.1,
+            0.05
+          ],
+          "center": [
+            0.03,
+            0.1,
+            -8.131516293641278e-20
+          ],
+          "inertia": [
+            3.3333333333333376e-06,
+            0.0,
+            1.609362599783171e-23,
+            0.0,
+            3.866666666666668e-06,
+            0.0,
+            1.609362599783171e-23,
+            0.0,
+            5.333333333333305e-07
+          ],
+          "orientation": 0,
+          "plane_outward_normal": [
+            -0.0,
+            1.0,
+            0.0
+          ],
+          "slot": 10
+        }
+      }
+    ],
+    "similar_unrelated_faces_disjoint": true
+  },
+  "screenshots": [
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/archived-boundaries-needs-review-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "27b00c740a8634f4cd71e17e476a4cbac0913f5009fb83d9a81348d2ada04b5e"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/archived-boundaries-needs-review-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "5fd0868c4ae86fe2f0988f4340c68b6c91ac439de1e9666f24747d38490f19b6"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-primitive-validation-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "f39f1c6d78c2f7e6ad8aef00f48199045e94b0188564652f77a1b8e648722e7e"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-primitive-validation-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "15480874bcb869b2a87352701874f9ceef466b3193329fbde25d21a9b08c0cb5"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-save-reopen-current-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "b923df0faf843a3d299eadd29425f14330ff9d7c48171a96df4dfea64860234a"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-save-reopen-current-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "2bf79a30bee48da95a7488998420705a89c473eb898948d53f8cf0179a2e36e0"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-transform-preview-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "673ba9b5523fd0a7fe78d68e9ad330c297e6a34b3fc8bea65f9fd837907cff1c"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-transform-preview-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "ea60e61083642df4077351a3ee1ab153e6239235915cf4c423e4685b1c53a3ef"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-transformed-calculix-displacement-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "195f1b12f4bd7237e558d6c0f4097ec554a8f69d5416144bb0bb5271bb4e0f7b"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-transformed-calculix-displacement-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "8bb302b7499ea81e0cf3ff1a3612f3cfbe265d80c523cbd80e10cbe35558254b"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-transformed-calculix-stress-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "3561169c537b42a1c3700c79f3fdce9c73800d209138237a11deb18afab8af44"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-transformed-calculix-stress-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "81b768dea7b39d04696e41f9752409721e77e9b72d823dbb8c9052fbf6bb9229"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-transformed-step-history-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "8dd4db5a00089dcc6c4b90acdf94f8290bc00baa56855450ad7638fb16baa534"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-transformed-step-history-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "6ad04317da099cd8e0a1cbb097cb8a2661d59fdb36b10687094cafebdc19f6fa"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-validation-1280.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "857aecc48583cbd2604df37d893187ee28fcaafaf8d57a84956ded1dada7ccab"
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/screenshots/native-validation-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "a27b58a9e0013a7d203eba7bd9c6d254fd154354eb670d4a53fa0dfbab13ecac"
+    }
+  ],
+  "endurance": {
+    "iterations": 100,
+    "elapsed_seconds": 434.0227523999929,
+    "rows": [
+      {
+        "iteration": 0,
+        "host_working_set_after_cleanup": 69173248,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          8708,
+          20924,
+          7824,
+          14748,
+          22420
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 1,
+        "host_working_set_after_cleanup": 69177344,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          22956,
+          17104,
+          22160,
+          372
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 2,
+        "host_working_set_after_cleanup": 69206016,
+        "native_peak_commit": 23908352,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21040,
+          20568,
+          1980,
+          19388
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 3,
+        "host_working_set_after_cleanup": 69214208,
+        "native_peak_commit": 23883776,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21284,
+          8868,
+          7508,
+          13360
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 4,
+        "host_working_set_after_cleanup": 69214208,
+        "native_peak_commit": 23879680,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20952,
+          19644,
+          23680,
+          17800
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 5,
+        "host_working_set_after_cleanup": 69214208,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          17360,
+          19840,
+          15896,
+          2756
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 6,
+        "host_working_set_after_cleanup": 69242880,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          12724,
+          17032,
+          20564,
+          21908
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 7,
+        "host_working_set_after_cleanup": 69275648,
+        "native_peak_commit": 23904256,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20592,
+          22492,
+          23076,
+          23044
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 8,
+        "host_working_set_after_cleanup": 69275648,
+        "native_peak_commit": 23883776,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          16560,
+          7876,
+          20424,
+          14108
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 9,
+        "host_working_set_after_cleanup": 69275648,
+        "native_peak_commit": 23912448,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          9632,
+          20032,
+          7140,
+          13236
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 10,
+        "host_working_set_after_cleanup": 96731136,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          19332,
+          11556,
+          24248,
+          13624,
+          2304
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 11,
+        "host_working_set_after_cleanup": 96780288,
+        "native_peak_commit": 23879680,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          23076,
+          412,
+          20424,
+          20276
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 12,
+        "host_working_set_after_cleanup": 96804864,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20204,
+          23152,
+          21536,
+          21204
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 13,
+        "host_working_set_after_cleanup": 96804864,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          4472,
+          5164,
+          21408,
+          23256
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 14,
+        "host_working_set_after_cleanup": 96804864,
+        "native_peak_commit": 23883776,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          23184,
+          14788,
+          24276,
+          2892
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 15,
+        "host_working_set_after_cleanup": 96858112,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          16252,
+          18152,
+          17788,
+          12700
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 16,
+        "host_working_set_after_cleanup": 96858112,
+        "native_peak_commit": 23883776,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          14132,
+          23600,
+          24372,
+          3496
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 17,
+        "host_working_set_after_cleanup": 96862208,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          17392,
+          23476,
+          6944,
+          20288
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 18,
+        "host_working_set_after_cleanup": 96862208,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          10768,
+          15756,
+          14300,
+          11508
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 19,
+        "host_working_set_after_cleanup": 96866304,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          5924,
+          23496,
+          24400,
+          20096
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 20,
+        "host_working_set_after_cleanup": 90165248,
+        "native_peak_commit": 23908352,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          17516,
+          12900,
+          16664,
+          20152,
+          10336
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 21,
+        "host_working_set_after_cleanup": 90296320,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21904,
+          12724,
+          2112,
+          18200
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 22,
+        "host_working_set_after_cleanup": 88207360,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          2336,
+          21024,
+          10152,
+          19264
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 23,
+        "host_working_set_after_cleanup": 88272896,
+        "native_peak_commit": 23879680,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          24164,
+          22804,
+          20308,
+          21948
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 24,
+        "host_working_set_after_cleanup": 88293376,
+        "native_peak_commit": 23908352,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20568,
+          19812,
+          23068,
+          20428
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 25,
+        "host_working_set_after_cleanup": 88293376,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20872,
+          10224,
+          15528,
+          7308
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 26,
+        "host_working_set_after_cleanup": 88293376,
+        "native_peak_commit": 23879680,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          9340,
+          8388,
+          15028,
+          23580
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 27,
+        "host_working_set_after_cleanup": 88293376,
+        "native_peak_commit": 23875584,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          19020,
+          13668,
+          17948,
+          19824
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 28,
+        "host_working_set_after_cleanup": 88293376,
+        "native_peak_commit": 23883776,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21444,
+          6968,
+          8112,
+          9068
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 29,
+        "host_working_set_after_cleanup": 88305664,
+        "native_peak_commit": 23883776,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20904,
+          4088,
+          21092,
+          21332
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 30,
+        "host_working_set_after_cleanup": 102461440,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21584,
+          8916,
+          3496,
+          23076,
+          23444
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 31,
+        "host_working_set_after_cleanup": 102494208,
+        "native_peak_commit": 23937024,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20456,
+          19528,
+          8228,
+          11132
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 32,
+        "host_working_set_after_cleanup": 102498304,
+        "native_peak_commit": 23908352,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21816,
+          22544,
+          24060,
+          15712
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 33,
+        "host_working_set_after_cleanup": 102498304,
+        "native_peak_commit": 23912448,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20056,
+          10768,
+          12968,
+          2724
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 34,
+        "host_working_set_after_cleanup": 102502400,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          18896,
+          18680,
+          13012,
+          7296
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 35,
+        "host_working_set_after_cleanup": 102559744,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20024,
+          22784,
+          24476,
+          16704
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 36,
+        "host_working_set_after_cleanup": 102559744,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          6664,
+          21976,
+          22364,
+          21804
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 37,
+        "host_working_set_after_cleanup": 102559744,
+        "native_peak_commit": 23904256,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          14964,
+          16152,
+          7668,
+          9204
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 38,
+        "host_working_set_after_cleanup": 102559744,
+        "native_peak_commit": 23932928,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          13960,
+          19824,
+          10216,
+          10356
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 39,
+        "host_working_set_after_cleanup": 102559744,
+        "native_peak_commit": 23916544,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          24320,
+          19288,
+          24072,
+          6032
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 40,
+        "host_working_set_after_cleanup": 98701312,
+        "native_peak_commit": 23908352,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          13636,
+          16956,
+          18740,
+          12936,
+          12340
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 41,
+        "host_working_set_after_cleanup": 98758656,
+        "native_peak_commit": 23912448,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20872,
+          24036,
+          3208,
+          4980
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 42,
+        "host_working_set_after_cleanup": 97755136,
+        "native_peak_commit": 23924736,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          18844,
+          17280,
+          15164,
+          22056
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 43,
+        "host_working_set_after_cleanup": 97759232,
+        "native_peak_commit": 23916544,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          24432,
+          20192,
+          12680,
+          9992
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 44,
+        "host_working_set_after_cleanup": 97759232,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          13308,
+          256,
+          21168,
+          2644
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 45,
+        "host_working_set_after_cleanup": 97759232,
+        "native_peak_commit": 23920640,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          8588,
+          5004,
+          2628,
+          23656
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 46,
+        "host_working_set_after_cleanup": 97767424,
+        "native_peak_commit": 23920640,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          1960,
+          19388,
+          23476,
+          9520
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 47,
+        "host_working_set_after_cleanup": 97779712,
+        "native_peak_commit": 23904256,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          13580,
+          20332,
+          14332,
+          18276
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 48,
+        "host_working_set_after_cleanup": 97787904,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21536,
+          24200,
+          21516,
+          2220
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 49,
+        "host_working_set_after_cleanup": 97808384,
+        "native_peak_commit": 23912448,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          19936,
+          19488,
+          7468,
+          19348
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 50,
+        "host_working_set_after_cleanup": 102899712,
+        "native_peak_commit": 23916544,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          13076,
+          21148,
+          15100,
+          7984,
+          7400
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 51,
+        "host_working_set_after_cleanup": 102162432,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          4860,
+          24076,
+          5936,
+          7092
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 52,
+        "host_working_set_after_cleanup": 102391808,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          16828,
+          20176,
+          6992,
+          10376
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 53,
+        "host_working_set_after_cleanup": 102416384,
+        "native_peak_commit": 23916544,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21744,
+          23716,
+          9816,
+          11208
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 54,
+        "host_working_set_after_cleanup": 102424576,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          23824,
+          24056,
+          21404,
+          19680
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 55,
+        "host_working_set_after_cleanup": 102531072,
+        "native_peak_commit": 23879680,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          10052,
+          17208,
+          23208,
+          23456
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 56,
+        "host_working_set_after_cleanup": 102535168,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21436,
+          22632,
+          13440,
+          15872
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 57,
+        "host_working_set_after_cleanup": 102543360,
+        "native_peak_commit": 23904256,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          6524,
+          24492,
+          14712,
+          7840
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 58,
+        "host_working_set_after_cleanup": 102563840,
+        "native_peak_commit": 23883776,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          7988,
+          11456,
+          23112,
+          20576
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 59,
+        "host_working_set_after_cleanup": 102658048,
+        "native_peak_commit": 23920640,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          9148,
+          16820,
+          24232,
+          22984
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 60,
+        "host_working_set_after_cleanup": 99893248,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          3972,
+          18232,
+          19780,
+          24416,
+          5176
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 61,
+        "host_working_set_after_cleanup": 99987456,
+        "native_peak_commit": 23912448,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          18228,
+          3572,
+          20100,
+          7508
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 62,
+        "host_working_set_after_cleanup": 97910784,
+        "native_peak_commit": 23904256,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          15772,
+          2100,
+          19908,
+          15984
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 63,
+        "host_working_set_after_cleanup": 97939456,
+        "native_peak_commit": 23904256,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          22964,
+          3788,
+          9960,
+          1336
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 64,
+        "host_working_set_after_cleanup": 97939456,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          22080,
+          7840,
+          6592,
+          22028
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 65,
+        "host_working_set_after_cleanup": 97964032,
+        "native_peak_commit": 23912448,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          12108,
+          13508,
+          15756,
+          11552
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 66,
+        "host_working_set_after_cleanup": 97968128,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          2892,
+          19756,
+          11880,
+          20500
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 67,
+        "host_working_set_after_cleanup": 98000896,
+        "native_peak_commit": 23871488,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21752,
+          21252,
+          9712,
+          15008
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 68,
+        "host_working_set_after_cleanup": 98017280,
+        "native_peak_commit": 23875584,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20376,
+          24464,
+          21136,
+          17624
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 69,
+        "host_working_set_after_cleanup": 98021376,
+        "native_peak_commit": 23875584,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          10768,
+          9964,
+          19156,
+          2288
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 70,
+        "host_working_set_after_cleanup": 103305216,
+        "native_peak_commit": 23887872,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          15384,
+          10468,
+          21264,
+          24164,
+          3784
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 71,
+        "host_working_set_after_cleanup": 103395328,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20336,
+          20588,
+          6400,
+          4720
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 72,
+        "host_working_set_after_cleanup": 103419904,
+        "native_peak_commit": 23879680,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21392,
+          17528,
+          22644,
+          6188
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 73,
+        "host_working_set_after_cleanup": 103419904,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          14992,
+          18544,
+          21924,
+          21388
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 74,
+        "host_working_set_after_cleanup": 103424000,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          6372,
+          3492,
+          20024,
+          12820
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 75,
+        "host_working_set_after_cleanup": 103444480,
+        "native_peak_commit": 23871488,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          17148,
+          13088,
+          24272,
+          20248
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 76,
+        "host_working_set_after_cleanup": 103444480,
+        "native_peak_commit": 23871488,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          14476,
+          21588,
+          13240,
+          20188
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 77,
+        "host_working_set_after_cleanup": 102719488,
+        "native_peak_commit": 23879680,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          12944,
+          13160,
+          2936,
+          21876
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 78,
+        "host_working_set_after_cleanup": 102785024,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          19268,
+          18280,
+          21784,
+          18384
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 79,
+        "host_working_set_after_cleanup": 102887424,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          24008,
+          23128,
+          21852,
+          20404
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 80,
+        "host_working_set_after_cleanup": 100425728,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          24084,
+          7712,
+          12268,
+          22876,
+          8364
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 81,
+        "host_working_set_after_cleanup": 100601856,
+        "native_peak_commit": 23887872,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20620,
+          9984,
+          23488,
+          16152
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 82,
+        "host_working_set_after_cleanup": 98521088,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          14624,
+          10460,
+          20384,
+          9064
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 83,
+        "host_working_set_after_cleanup": 98537472,
+        "native_peak_commit": 23912448,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20932,
+          18028,
+          24144,
+          10380
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 84,
+        "host_working_set_after_cleanup": 98541568,
+        "native_peak_commit": 23883776,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21936,
+          20256,
+          21416,
+          21424
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 85,
+        "host_working_set_after_cleanup": 98553856,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          9908,
+          18668,
+          14724,
+          22864
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 86,
+        "host_working_set_after_cleanup": 98598912,
+        "native_peak_commit": 23883776,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          22856,
+          3972,
+          19812,
+          3496
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 87,
+        "host_working_set_after_cleanup": 98639872,
+        "native_peak_commit": 23904256,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          12472,
+          4856,
+          17328,
+          24200
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 88,
+        "host_working_set_after_cleanup": 98656256,
+        "native_peak_commit": 23896064,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          13752,
+          21924,
+          22288,
+          19544
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 89,
+        "host_working_set_after_cleanup": 98717696,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          19848,
+          22600,
+          20896,
+          2304
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 90,
+        "host_working_set_after_cleanup": 104910848,
+        "native_peak_commit": 23879680,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          18328,
+          18420,
+          23888,
+          17280,
+          24024
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 91,
+        "host_working_set_after_cleanup": 104964096,
+        "native_peak_commit": 23883776,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          23976,
+          200,
+          14764,
+          12968
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 92,
+        "host_working_set_after_cleanup": 105078784,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          12872,
+          420,
+          22004,
+          24356
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 93,
+        "host_working_set_after_cleanup": 105078784,
+        "native_peak_commit": 23879680,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          22284,
+          9828,
+          23276,
+          20032
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 94,
+        "host_working_set_after_cleanup": 105091072,
+        "native_peak_commit": 23875584,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21508,
+          16684,
+          19700,
+          12820
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 95,
+        "host_working_set_after_cleanup": 105091072,
+        "native_peak_commit": 23891968,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          20776,
+          20272,
+          8764,
+          8536
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 96,
+        "host_working_set_after_cleanup": 104144896,
+        "native_peak_commit": 23900160,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          14508,
+          10232,
+          24160,
+          18608
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 97,
+        "host_working_set_after_cleanup": 104439808,
+        "native_peak_commit": 23887872,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          13960,
+          13648,
+          15036,
+          23568
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 98,
+        "host_working_set_after_cleanup": 104529920,
+        "native_peak_commit": 23875584,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          19324,
+          14060,
+          8988,
+          23720
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      },
+      {
+        "iteration": 99,
+        "host_working_set_after_cleanup": 104570880,
+        "native_peak_commit": 23883776,
+        "native_exits": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "native_pids": [
+          21304,
+          21252,
+          21480,
+          13724
+        ],
+        "orphan_count": 0,
+        "retained_native_temp_directories": 21
+      }
+    ],
+    "scope": "100 native cycles; 10 STEP imports; 10 alternating TET4/TET10 remeshes. Separate campaigns cover solver/GUI/cancellation. No universal leak-free claim."
+  },
+  "gui_endurance": {
+    "exit_code": 0,
+    "iterations": 60,
+    "expected_iterations": 60,
+    "elapsed_seconds": 1057.9565688000002,
+    "peak_working_set_bytes": 885030912,
+    "rows": [
+      {
+        "archive_count": 2,
+        "godot_static_memory_bytes": 82768548,
+        "heartbeat": 4083,
+        "iteration": 0,
+        "maximum_frame_delta_s": 0.147110333333333,
+        "node_count": 391.0,
+        "operation_heartbeat_frames": 4082,
+        "order": 1,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 452620288,
+        "observed_commit_bytes": 466833408
+      },
+      {
+        "archive_count": 4,
+        "godot_static_memory_bytes": 79105680,
+        "heartbeat": 5755,
+        "iteration": 1,
+        "maximum_frame_delta_s": 0.147110333333333,
+        "node_count": 390.0,
+        "operation_heartbeat_frames": 1672,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 443506688,
+        "observed_commit_bytes": 457756672
+      },
+      {
+        "archive_count": 6,
+        "godot_static_memory_bytes": 79752208,
+        "heartbeat": 7536,
+        "iteration": 2,
+        "maximum_frame_delta_s": 0.147110333333333,
+        "node_count": 390.0,
+        "operation_heartbeat_frames": 1781,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 449908736,
+        "observed_commit_bytes": 464379904
+      },
+      {
+        "archive_count": 8,
+        "godot_static_memory_bytes": 79849312,
+        "heartbeat": 9236,
+        "iteration": 3,
+        "maximum_frame_delta_s": 0.147110333333333,
+        "node_count": 390.0,
+        "operation_heartbeat_frames": 1700,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 450277376,
+        "observed_commit_bytes": 464867328
+      },
+      {
+        "archive_count": 10,
+        "godot_static_memory_bytes": 79946440,
+        "heartbeat": 10948,
+        "iteration": 4,
+        "maximum_frame_delta_s": 0.147110333333333,
+        "node_count": 390.0,
+        "operation_heartbeat_frames": 1712,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 452218880,
+        "observed_commit_bytes": 466767872
+      },
+      {
+        "archive_count": 12,
+        "godot_static_memory_bytes": 105873344,
+        "heartbeat": 16390,
+        "iteration": 5,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 401.0,
+        "operation_heartbeat_frames": 5442,
+        "order": 2,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 497508352,
+        "observed_commit_bytes": 519528448
+      },
+      {
+        "archive_count": 14,
+        "godot_static_memory_bytes": 97980904,
+        "heartbeat": 18459,
+        "iteration": 6,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 400.0,
+        "operation_heartbeat_frames": 2069,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 490336256,
+        "observed_commit_bytes": 513241088
+      },
+      {
+        "archive_count": 16,
+        "godot_static_memory_bytes": 98764920,
+        "heartbeat": 20152,
+        "iteration": 7,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 400.0,
+        "operation_heartbeat_frames": 1693,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 491261952,
+        "observed_commit_bytes": 514023424
+      },
+      {
+        "archive_count": 18,
+        "godot_static_memory_bytes": 98861920,
+        "heartbeat": 21998,
+        "iteration": 8,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 400.0,
+        "operation_heartbeat_frames": 1846,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 492077056,
+        "observed_commit_bytes": 514539520
+      },
+      {
+        "archive_count": 20,
+        "godot_static_memory_bytes": 98959136,
+        "heartbeat": 23615,
+        "iteration": 9,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 400.0,
+        "operation_heartbeat_frames": 1617,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 492687360,
+        "observed_commit_bytes": 515010560
+      },
+      {
+        "archive_count": 22,
+        "godot_static_memory_bytes": 100632556,
+        "heartbeat": 27269,
+        "iteration": 10,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 411.0,
+        "operation_heartbeat_frames": 3654,
+        "order": 1,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 496009216,
+        "observed_commit_bytes": 521789440
+      },
+      {
+        "archive_count": 24,
+        "godot_static_memory_bytes": 96864552,
+        "heartbeat": 29136,
+        "iteration": 11,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 410.0,
+        "operation_heartbeat_frames": 1867,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 498520064,
+        "observed_commit_bytes": 525758464
+      },
+      {
+        "archive_count": 26,
+        "godot_static_memory_bytes": 97778992,
+        "heartbeat": 30875,
+        "iteration": 12,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 410.0,
+        "operation_heartbeat_frames": 1739,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 499384320,
+        "observed_commit_bytes": 526061568
+      },
+      {
+        "archive_count": 28,
+        "godot_static_memory_bytes": 97876328,
+        "heartbeat": 32356,
+        "iteration": 13,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 410.0,
+        "operation_heartbeat_frames": 1481,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 499703808,
+        "observed_commit_bytes": 526385152
+      },
+      {
+        "archive_count": 30,
+        "godot_static_memory_bytes": 97973664,
+        "heartbeat": 33923,
+        "iteration": 14,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 410.0,
+        "operation_heartbeat_frames": 1567,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 499863552,
+        "observed_commit_bytes": 526385152
+      },
+      {
+        "archive_count": 32,
+        "godot_static_memory_bytes": 122366632,
+        "heartbeat": 38620,
+        "iteration": 15,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 421.0,
+        "operation_heartbeat_frames": 4697,
+        "order": 2,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 542035968,
+        "observed_commit_bytes": 565104640
+      },
+      {
+        "archive_count": 34,
+        "godot_static_memory_bytes": 114418304,
+        "heartbeat": 40366,
+        "iteration": 16,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 420.0,
+        "operation_heartbeat_frames": 1746,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 545390592,
+        "observed_commit_bytes": 571289600
+      },
+      {
+        "archive_count": 36,
+        "godot_static_memory_bytes": 115477672,
+        "heartbeat": 41909,
+        "iteration": 17,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 420.0,
+        "operation_heartbeat_frames": 1543,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 545918976,
+        "observed_commit_bytes": 571621376
+      },
+      {
+        "archive_count": 38,
+        "godot_static_memory_bytes": 115574672,
+        "heartbeat": 43680,
+        "iteration": 18,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 420.0,
+        "operation_heartbeat_frames": 1771,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 547090432,
+        "observed_commit_bytes": 571650048
+      },
+      {
+        "archive_count": 40,
+        "godot_static_memory_bytes": 115671672,
+        "heartbeat": 45114,
+        "iteration": 19,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 420.0,
+        "operation_heartbeat_frames": 1434,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 547209216,
+        "observed_commit_bytes": 571785216
+      },
+      {
+        "archive_count": 42,
+        "godot_static_memory_bytes": 117391868,
+        "heartbeat": 48891,
+        "iteration": 20,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 431.0,
+        "operation_heartbeat_frames": 3777,
+        "order": 1,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 564965376,
+        "observed_commit_bytes": 590135296
+      },
+      {
+        "archive_count": 44,
+        "godot_static_memory_bytes": 113512248,
+        "heartbeat": 50618,
+        "iteration": 21,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 430.0,
+        "operation_heartbeat_frames": 1727,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 558993408,
+        "observed_commit_bytes": 580546560
+      },
+      {
+        "archive_count": 46,
+        "godot_static_memory_bytes": 114695136,
+        "heartbeat": 52339,
+        "iteration": 22,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 430.0,
+        "operation_heartbeat_frames": 1721,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 560517120,
+        "observed_commit_bytes": 582053888
+      },
+      {
+        "archive_count": 48,
+        "godot_static_memory_bytes": 114784944,
+        "heartbeat": 53989,
+        "iteration": 23,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 430.0,
+        "operation_heartbeat_frames": 1650,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 562089984,
+        "observed_commit_bytes": 583548928
+      },
+      {
+        "archive_count": 50,
+        "godot_static_memory_bytes": 114881944,
+        "heartbeat": 55597,
+        "iteration": 24,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 430.0,
+        "operation_heartbeat_frames": 1608,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 562196480,
+        "observed_commit_bytes": 583585792
+      },
+      {
+        "archive_count": 52,
+        "godot_static_memory_bytes": 139367916,
+        "heartbeat": 60618,
+        "iteration": 25,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 441.0,
+        "operation_heartbeat_frames": 5021,
+        "order": 2,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 612515840,
+        "observed_commit_bytes": 637931520
+      },
+      {
+        "archive_count": 54,
+        "godot_static_memory_bytes": 131245992,
+        "heartbeat": 62469,
+        "iteration": 26,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 440.0,
+        "operation_heartbeat_frames": 1851,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 605233152,
+        "observed_commit_bytes": 631648256
+      },
+      {
+        "archive_count": 56,
+        "godot_static_memory_bytes": 132573472,
+        "heartbeat": 64097,
+        "iteration": 27,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 440.0,
+        "operation_heartbeat_frames": 1628,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 606138368,
+        "observed_commit_bytes": 632172544
+      },
+      {
+        "archive_count": 58,
+        "godot_static_memory_bytes": 132670472,
+        "heartbeat": 65944,
+        "iteration": 28,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 440.0,
+        "operation_heartbeat_frames": 1847,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 606736384,
+        "observed_commit_bytes": 632766464
+      },
+      {
+        "archive_count": 60,
+        "godot_static_memory_bytes": 132767472,
+        "heartbeat": 67586,
+        "iteration": 29,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 440.0,
+        "operation_heartbeat_frames": 1642,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 607318016,
+        "observed_commit_bytes": 633397248
+      },
+      {
+        "archive_count": 62,
+        "godot_static_memory_bytes": 135069732,
+        "heartbeat": 71655,
+        "iteration": 30,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 451.0,
+        "operation_heartbeat_frames": 4069,
+        "order": 1,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 610422784,
+        "observed_commit_bytes": 633044992
+      },
+      {
+        "archive_count": 64,
+        "godot_static_memory_bytes": 131062392,
+        "heartbeat": 73416,
+        "iteration": 31,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 450.0,
+        "operation_heartbeat_frames": 1761,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 616091648,
+        "observed_commit_bytes": 641970176
+      },
+      {
+        "archive_count": 66,
+        "godot_static_memory_bytes": 132535408,
+        "heartbeat": 75161,
+        "iteration": 32,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 450.0,
+        "operation_heartbeat_frames": 1745,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 616378368,
+        "observed_commit_bytes": 642211840
+      },
+      {
+        "archive_count": 68,
+        "godot_static_memory_bytes": 132632408,
+        "heartbeat": 76791,
+        "iteration": 33,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 450.0,
+        "operation_heartbeat_frames": 1630,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 616890368,
+        "observed_commit_bytes": 643317760
+      },
+      {
+        "archive_count": 70,
+        "godot_static_memory_bytes": 132729408,
+        "heartbeat": 78593,
+        "iteration": 34,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 450.0,
+        "operation_heartbeat_frames": 1802,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 617099264,
+        "observed_commit_bytes": 643428352
+      },
+      {
+        "archive_count": 72,
+        "godot_static_memory_bytes": 157162560,
+        "heartbeat": 83800,
+        "iteration": 35,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 461.0,
+        "operation_heartbeat_frames": 5207,
+        "order": 2,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 710115328,
+        "observed_commit_bytes": 743006208
+      },
+      {
+        "archive_count": 74,
+        "godot_static_memory_bytes": 148925596,
+        "heartbeat": 85553,
+        "iteration": 36,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 460.0,
+        "operation_heartbeat_frames": 1753,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 711835648,
+        "observed_commit_bytes": 745062400
+      },
+      {
+        "archive_count": 76,
+        "godot_static_memory_bytes": 150535812,
+        "heartbeat": 87095,
+        "iteration": 37,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 460.0,
+        "operation_heartbeat_frames": 1542,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 712257536,
+        "observed_commit_bytes": 745160704
+      },
+      {
+        "archive_count": 78,
+        "godot_static_memory_bytes": 150632812,
+        "heartbeat": 88895,
+        "iteration": 38,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 460.0,
+        "operation_heartbeat_frames": 1800,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 712318976,
+        "observed_commit_bytes": 745164800
+      },
+      {
+        "archive_count": 80,
+        "godot_static_memory_bytes": 150729812,
+        "heartbeat": 90513,
+        "iteration": 39,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 460.0,
+        "operation_heartbeat_frames": 1618,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 712323072,
+        "observed_commit_bytes": 745164800
+      },
+      {
+        "archive_count": 82,
+        "godot_static_memory_bytes": 153201100,
+        "heartbeat": 94447,
+        "iteration": 40,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 471.0,
+        "operation_heartbeat_frames": 3934,
+        "order": 1,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 723177472,
+        "observed_commit_bytes": 753340416
+      },
+      {
+        "archive_count": 84,
+        "godot_static_memory_bytes": 149067432,
+        "heartbeat": 96069,
+        "iteration": 41,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 470.0,
+        "operation_heartbeat_frames": 1622,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 724111360,
+        "observed_commit_bytes": 754917376
+      },
+      {
+        "archive_count": 86,
+        "godot_static_memory_bytes": 150815048,
+        "heartbeat": 97762,
+        "iteration": 42,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 470.0,
+        "operation_heartbeat_frames": 1693,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 724582400,
+        "observed_commit_bytes": 755003392
+      },
+      {
+        "archive_count": 88,
+        "godot_static_memory_bytes": 150912048,
+        "heartbeat": 99660,
+        "iteration": 43,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 470.0,
+        "operation_heartbeat_frames": 1898,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 724652032,
+        "observed_commit_bytes": 755232768
+      },
+      {
+        "archive_count": 90,
+        "godot_static_memory_bytes": 151009048,
+        "heartbeat": 101576,
+        "iteration": 44,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 470.0,
+        "operation_heartbeat_frames": 1916,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 724922368,
+        "observed_commit_bytes": 755232768
+      },
+      {
+        "archive_count": 92,
+        "godot_static_memory_bytes": 174234372,
+        "heartbeat": 107306,
+        "iteration": 45,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 481.0,
+        "operation_heartbeat_frames": 5730,
+        "order": 2,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 769916928,
+        "observed_commit_bytes": 800952320
+      },
+      {
+        "archive_count": 94,
+        "godot_static_memory_bytes": 165864956,
+        "heartbeat": 109176,
+        "iteration": 46,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 480.0,
+        "operation_heartbeat_frames": 1870,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 770682880,
+        "observed_commit_bytes": 801484800
+      },
+      {
+        "archive_count": 96,
+        "godot_static_memory_bytes": 167751100,
+        "heartbeat": 110775,
+        "iteration": 47,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 480.0,
+        "operation_heartbeat_frames": 1599,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 771108864,
+        "observed_commit_bytes": 801488896
+      },
+      {
+        "archive_count": 98,
+        "godot_static_memory_bytes": 167848100,
+        "heartbeat": 112616,
+        "iteration": 48,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 480.0,
+        "operation_heartbeat_frames": 1841,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 771084288,
+        "observed_commit_bytes": 801390592
+      },
+      {
+        "archive_count": 100,
+        "godot_static_memory_bytes": 167945100,
+        "heartbeat": 114336,
+        "iteration": 49,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 480.0,
+        "operation_heartbeat_frames": 1720,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 771190784,
+        "observed_commit_bytes": 801492992
+      },
+      {
+        "archive_count": 102,
+        "godot_static_memory_bytes": 169825944,
+        "heartbeat": 118509,
+        "iteration": 50,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 491.0,
+        "operation_heartbeat_frames": 4173,
+        "order": 1,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 783335424,
+        "observed_commit_bytes": 812826624
+      },
+      {
+        "archive_count": 104,
+        "godot_static_memory_bytes": 165590340,
+        "heartbeat": 120432,
+        "iteration": 51,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 490.0,
+        "operation_heartbeat_frames": 1923,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 784072704,
+        "observed_commit_bytes": 813580288
+      },
+      {
+        "archive_count": 106,
+        "godot_static_memory_bytes": 167613884,
+        "heartbeat": 122083,
+        "iteration": 52,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 490.0,
+        "operation_heartbeat_frames": 1651,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 784175104,
+        "observed_commit_bytes": 813740032
+      },
+      {
+        "archive_count": 108,
+        "godot_static_memory_bytes": 167696500,
+        "heartbeat": 124022,
+        "iteration": 53,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 490.0,
+        "operation_heartbeat_frames": 1939,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 784474112,
+        "observed_commit_bytes": 813842432
+      },
+      {
+        "archive_count": 110,
+        "godot_static_memory_bytes": 167786308,
+        "heartbeat": 125723,
+        "iteration": 54,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 490.0,
+        "operation_heartbeat_frames": 1701,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 784416768,
+        "observed_commit_bytes": 813740032
+      },
+      {
+        "archive_count": 112,
+        "godot_static_memory_bytes": 193576368,
+        "heartbeat": 130957,
+        "iteration": 55,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 501.0,
+        "operation_heartbeat_frames": 5234,
+        "order": 2,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 858628096,
+        "observed_commit_bytes": 886534144
+      },
+      {
+        "archive_count": 114,
+        "godot_static_memory_bytes": 184867904,
+        "heartbeat": 132916,
+        "iteration": 56,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 500.0,
+        "operation_heartbeat_frames": 1959,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 856272896,
+        "observed_commit_bytes": 883986432
+      },
+      {
+        "archive_count": 116,
+        "godot_static_memory_bytes": 187021656,
+        "heartbeat": 134659,
+        "iteration": 57,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 500.0,
+        "operation_heartbeat_frames": 1743,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 856371200,
+        "observed_commit_bytes": 883986432
+      },
+      {
+        "archive_count": 118,
+        "godot_static_memory_bytes": 187118656,
+        "heartbeat": 136616,
+        "iteration": 58,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 500.0,
+        "operation_heartbeat_frames": 1957,
+        "order": 0,
+        "result_current": false,
+        "solved": false,
+        "observed_working_set_bytes": 856395776,
+        "observed_commit_bytes": 884002816
+      },
+      {
+        "archive_count": 120,
+        "godot_static_memory_bytes": 202545336,
+        "heartbeat": 142012,
+        "iteration": 59,
+        "maximum_frame_delta_s": 0.15,
+        "node_count": 509.0,
+        "operation_heartbeat_frames": 5396,
+        "order": 2,
+        "result_current": true,
+        "solved": true,
+        "observed_working_set_bytes": 871243776,
+        "observed_commit_bytes": 899829760
+      }
+    ],
+    "logs": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\gui-endurance-1794660145416887800",
+    "storage_before": {
+      "sample_epoch": 1794660146.9829895,
+      "logical_bytes": 1986395009,
+      "files": 9338,
+      "job_directories": 1029,
+      "managed_directories": 485
+    },
+    "storage_after": {
+      "sample_epoch": 1794661207.3233788,
+      "logical_bytes": 2028241857,
+      "files": 10032,
+      "job_directories": 1115,
+      "managed_directories": 571
+    },
+    "storage_samples": [
+      {
+        "sample_epoch": 1794660146.9829895,
+        "logical_bytes": 1986395009,
+        "files": 9338,
+        "job_directories": 1029,
+        "managed_directories": 485
+      },
+      {
+        "sample_epoch": 1794660153.8783548,
+        "logical_bytes": 1986395009,
+        "files": 9338,
+        "job_directories": 1029,
+        "managed_directories": 485
+      },
+      {
+        "sample_epoch": 1794660160.7875726,
+        "logical_bytes": 1986416109,
+        "files": 9342,
+        "job_directories": 1030,
+        "managed_directories": 486
+      },
+      {
+        "sample_epoch": 1794660167.765149,
+        "logical_bytes": 1986418559,
+        "files": 9347,
+        "job_directories": 1030,
+        "managed_directories": 486
+      },
+      {
+        "sample_epoch": 1794660174.5763905,
+        "logical_bytes": 1987565280,
+        "files": 9346,
+        "job_directories": 1031,
+        "managed_directories": 486
+      },
+      {
+        "sample_epoch": 1794660181.4002092,
+        "logical_bytes": 1987990832,
+        "files": 9354,
+        "job_directories": 1032,
+        "managed_directories": 487
+      },
+      {
+        "sample_epoch": 1794660188.1064572,
+        "logical_bytes": 1988276132,
+        "files": 9366,
+        "job_directories": 1033,
+        "managed_directories": 488
+      },
+      {
+        "sample_epoch": 1794660194.8911781,
+        "logical_bytes": 1988278813,
+        "files": 9374,
+        "job_directories": 1033,
+        "managed_directories": 489
+      },
+      {
+        "sample_epoch": 1794660201.832683,
+        "logical_bytes": 1988404722,
+        "files": 9373,
+        "job_directories": 1034,
+        "managed_directories": 489
+      },
+      {
+        "sample_epoch": 1794660209.0540397,
+        "logical_bytes": 1988407263,
+        "files": 9381,
+        "job_directories": 1034,
+        "managed_directories": 490
+      },
+      {
+        "sample_epoch": 1794660216.206895,
+        "logical_bytes": 1988533179,
+        "files": 9384,
+        "job_directories": 1035,
+        "managed_directories": 491
+      },
+      {
+        "sample_epoch": 1794660223.593079,
+        "logical_bytes": 1988640887,
+        "files": 9386,
+        "job_directories": 1035,
+        "managed_directories": 491
+      },
+      {
+        "sample_epoch": 1794660230.7450452,
+        "logical_bytes": 1988677903,
+        "files": 9396,
+        "job_directories": 1036,
+        "managed_directories": 492
+      },
+      {
+        "sample_epoch": 1794660237.8360407,
+        "logical_bytes": 1988791045,
+        "files": 9394,
+        "job_directories": 1037,
+        "managed_directories": 492
+      },
+      {
+        "sample_epoch": 1794660245.0384448,
+        "logical_bytes": 1988793587,
+        "files": 9402,
+        "job_directories": 1037,
+        "managed_directories": 493
+      },
+      {
+        "sample_epoch": 1794660252.3197303,
+        "logical_bytes": 1989361975,
+        "files": 9405,
+        "job_directories": 1038,
+        "managed_directories": 494
+      },
+      {
+        "sample_epoch": 1794660259.6052794,
+        "logical_bytes": 1990145320,
+        "files": 9407,
+        "job_directories": 1038,
+        "managed_directories": 494
+      },
+      {
+        "sample_epoch": 1794660267.0260944,
+        "logical_bytes": 1990725096,
+        "files": 9414,
+        "job_directories": 1039,
+        "managed_directories": 494
+      },
+      {
+        "sample_epoch": 1794660274.0901453,
+        "logical_bytes": 1991794744,
+        "files": 9422,
+        "job_directories": 1039,
+        "managed_directories": 495
+      },
+      {
+        "sample_epoch": 1794660281.4375384,
+        "logical_bytes": 1991815911,
+        "files": 9427,
+        "job_directories": 1040,
+        "managed_directories": 496
+      },
+      {
+        "sample_epoch": 1794660288.6337786,
+        "logical_bytes": 1991923871,
+        "files": 9429,
+        "job_directories": 1040,
+        "managed_directories": 496
+      },
+      {
+        "sample_epoch": 1794660295.645073,
+        "logical_bytes": 1991945039,
+        "files": 9434,
+        "job_directories": 1041,
+        "managed_directories": 497
+      },
+      {
+        "sample_epoch": 1794660302.6873512,
+        "logical_bytes": 1992073763,
+        "files": 9437,
+        "job_directories": 1042,
+        "managed_directories": 497
+      },
+      {
+        "sample_epoch": 1794660309.6091273,
+        "logical_bytes": 1992089655,
+        "files": 9445,
+        "job_directories": 1042,
+        "managed_directories": 498
+      },
+      {
+        "sample_epoch": 1794660316.541916,
+        "logical_bytes": 1992203100,
+        "files": 9444,
+        "job_directories": 1043,
+        "managed_directories": 498
+      },
+      {
+        "sample_epoch": 1794660323.541187,
+        "logical_bytes": 1992205781,
+        "files": 9452,
+        "job_directories": 1043,
+        "managed_directories": 499
+      },
+      {
+        "sample_epoch": 1794660330.6322694,
+        "logical_bytes": 1992332727,
+        "files": 9454,
+        "job_directories": 1044,
+        "managed_directories": 500
+      },
+      {
+        "sample_epoch": 1794660337.7187245,
+        "logical_bytes": 1992436037,
+        "files": 9457,
+        "job_directories": 1044,
+        "managed_directories": 500
+      },
+      {
+        "sample_epoch": 1794660344.6314743,
+        "logical_bytes": 1993526083,
+        "files": 9462,
+        "job_directories": 1045,
+        "managed_directories": 501
+      },
+      {
+        "sample_epoch": 1794660351.6292663,
+        "logical_bytes": 1994239641,
+        "files": 9477,
+        "job_directories": 1046,
+        "managed_directories": 502
+      },
+      {
+        "sample_epoch": 1794660358.6395247,
+        "logical_bytes": 1994260794,
+        "files": 9482,
+        "job_directories": 1047,
+        "managed_directories": 503
+      },
+      {
+        "sample_epoch": 1794660365.76195,
+        "logical_bytes": 1994364458,
+        "files": 9484,
+        "job_directories": 1047,
+        "managed_directories": 503
+      },
+      {
+        "sample_epoch": 1794660372.7457533,
+        "logical_bytes": 1994385612,
+        "files": 9489,
+        "job_directories": 1048,
+        "managed_directories": 504
+      },
+      {
+        "sample_epoch": 1794660380.0439672,
+        "logical_bytes": 1994488901,
+        "files": 9491,
+        "job_directories": 1048,
+        "managed_directories": 504
+      },
+      {
+        "sample_epoch": 1794660386.2981217,
+        "logical_bytes": 1994525815,
+        "files": 9500,
+        "job_directories": 1049,
+        "managed_directories": 505
+      },
+      {
+        "sample_epoch": 1794660393.037393,
+        "logical_bytes": 1994634979,
+        "files": 9502,
+        "job_directories": 1050,
+        "managed_directories": 506
+      },
+      {
+        "sample_epoch": 1794660399.987383,
+        "logical_bytes": 1994738336,
+        "files": 9505,
+        "job_directories": 1050,
+        "managed_directories": 506
+      },
+      {
+        "sample_epoch": 1794660406.949558,
+        "logical_bytes": 1994759489,
+        "files": 9510,
+        "job_directories": 1051,
+        "managed_directories": 507
+      },
+      {
+        "sample_epoch": 1794660414.0037153,
+        "logical_bytes": 1995371826,
+        "files": 9513,
+        "job_directories": 1052,
+        "managed_directories": 507
+      },
+      {
+        "sample_epoch": 1794660420.6973197,
+        "logical_bytes": 1995374761,
+        "files": 9518,
+        "job_directories": 1052,
+        "managed_directories": 508
+      },
+      {
+        "sample_epoch": 1794660427.3428435,
+        "logical_bytes": 1996733898,
+        "files": 9526,
+        "job_directories": 1053,
+        "managed_directories": 508
+      },
+      {
+        "sample_epoch": 1794660434.1536334,
+        "logical_bytes": 1997792599,
+        "files": 9534,
+        "job_directories": 1053,
+        "managed_directories": 509
+      },
+      {
+        "sample_epoch": 1794660441.0879967,
+        "logical_bytes": 1997813752,
+        "files": 9539,
+        "job_directories": 1054,
+        "managed_directories": 510
+      },
+      {
+        "sample_epoch": 1794660448.09021,
+        "logical_bytes": 1997917740,
+        "files": 9541,
+        "job_directories": 1054,
+        "managed_directories": 510
+      },
+      {
+        "sample_epoch": 1794660455.0102868,
+        "logical_bytes": 1997938907,
+        "files": 9546,
+        "job_directories": 1055,
+        "managed_directories": 511
+      },
+      {
+        "sample_epoch": 1794660461.810453,
+        "logical_bytes": 1998065161,
+        "files": 9549,
+        "job_directories": 1056,
+        "managed_directories": 511
+      },
+      {
+        "sample_epoch": 1794660468.7572458,
+        "logical_bytes": 1998067843,
+        "files": 9557,
+        "job_directories": 1056,
+        "managed_directories": 512
+      },
+      {
+        "sample_epoch": 1794660475.4414907,
+        "logical_bytes": 1998192452,
+        "files": 9556,
+        "job_directories": 1057,
+        "managed_directories": 512
+      },
+      {
+        "sample_epoch": 1794660482.2324483,
+        "logical_bytes": 1998297711,
+        "files": 9562,
+        "job_directories": 1057,
+        "managed_directories": 513
+      },
+      {
+        "sample_epoch": 1794660489.1475186,
+        "logical_bytes": 1998318879,
+        "files": 9567,
+        "job_directories": 1058,
+        "managed_directories": 514
+      },
+      {
+        "sample_epoch": 1794660496.138091,
+        "logical_bytes": 1999552346,
+        "files": 9570,
+        "job_directories": 1059,
+        "managed_directories": 514
+      },
+      {
+        "sample_epoch": 1794660503.0864556,
+        "logical_bytes": 1999555591,
+        "files": 9578,
+        "job_directories": 1059,
+        "managed_directories": 515
+      },
+      {
+        "sample_epoch": 1794660510.0080242,
+        "logical_bytes": 2000299121,
+        "files": 9589,
+        "job_directories": 1060,
+        "managed_directories": 516
+      },
+      {
+        "sample_epoch": 1794660516.8827124,
+        "logical_bytes": 2000320288,
+        "files": 9594,
+        "job_directories": 1061,
+        "managed_directories": 517
+      },
+      {
+        "sample_epoch": 1794660523.8586423,
+        "logical_bytes": 2000427429,
+        "files": 9596,
+        "job_directories": 1061,
+        "managed_directories": 517
+      },
+      {
+        "sample_epoch": 1794660530.7095156,
+        "logical_bytes": 2000448583,
+        "files": 9601,
+        "job_directories": 1062,
+        "managed_directories": 518
+      },
+      {
+        "sample_epoch": 1794660537.5512695,
+        "logical_bytes": 2000573616,
+        "files": 9604,
+        "job_directories": 1063,
+        "managed_directories": 518
+      },
+      {
+        "sample_epoch": 1794660544.5811472,
+        "logical_bytes": 2000576390,
+        "files": 9613,
+        "job_directories": 1063,
+        "managed_directories": 519
+      },
+      {
+        "sample_epoch": 1794660551.6129422,
+        "logical_bytes": 2000699281,
+        "files": 9614,
+        "job_directories": 1064,
+        "managed_directories": 520
+      },
+      {
+        "sample_epoch": 1794660558.712949,
+        "logical_bytes": 2000803364,
+        "files": 9617,
+        "job_directories": 1064,
+        "managed_directories": 520
+      },
+      {
+        "sample_epoch": 1794660565.6739357,
+        "logical_bytes": 2000824517,
+        "files": 9622,
+        "job_directories": 1065,
+        "managed_directories": 521
+      },
+      {
+        "sample_epoch": 1794660572.4770617,
+        "logical_bytes": 2001493150,
+        "files": 9625,
+        "job_directories": 1066,
+        "managed_directories": 521
+      },
+      {
+        "sample_epoch": 1794660579.3621285,
+        "logical_bytes": 2001495973,
+        "files": 9630,
+        "job_directories": 1066,
+        "managed_directories": 522
+      },
+      {
+        "sample_epoch": 1794660586.2873204,
+        "logical_bytes": 2002549222,
+        "files": 9635,
+        "job_directories": 1067,
+        "managed_directories": 522
+      },
+      {
+        "sample_epoch": 1794660593.1940508,
+        "logical_bytes": 2003111604,
+        "files": 9645,
+        "job_directories": 1067,
+        "managed_directories": 523
+      },
+      {
+        "sample_epoch": 1794660599.9665363,
+        "logical_bytes": 2003982990,
+        "files": 9647,
+        "job_directories": 1068,
+        "managed_directories": 523
+      },
+      {
+        "sample_epoch": 1794660607.0640717,
+        "logical_bytes": 2003985672,
+        "files": 9655,
+        "job_directories": 1068,
+        "managed_directories": 524
+      },
+      {
+        "sample_epoch": 1794660613.9288425,
+        "logical_bytes": 2004108374,
+        "files": 9654,
+        "job_directories": 1069,
+        "managed_directories": 524
+      },
+      {
+        "sample_epoch": 1794660620.9761894,
+        "logical_bytes": 2004117986,
+        "files": 9665,
+        "job_directories": 1069,
+        "managed_directories": 525
+      },
+      {
+        "sample_epoch": 1794660627.9968302,
+        "logical_bytes": 2004232856,
+        "files": 9665,
+        "job_directories": 1070,
+        "managed_directories": 526
+      },
+      {
+        "sample_epoch": 1794660635.0500915,
+        "logical_bytes": 2004337447,
+        "files": 9667,
+        "job_directories": 1070,
+        "managed_directories": 526
+      },
+      {
+        "sample_epoch": 1794660641.9740427,
+        "logical_bytes": 2004358598,
+        "files": 9672,
+        "job_directories": 1071,
+        "managed_directories": 527
+      },
+      {
+        "sample_epoch": 1794660649.0085735,
+        "logical_bytes": 2004483616,
+        "files": 9675,
+        "job_directories": 1072,
+        "managed_directories": 527
+      },
+      {
+        "sample_epoch": 1794660656.029013,
+        "logical_bytes": 2004499508,
+        "files": 9683,
+        "job_directories": 1072,
+        "managed_directories": 528
+      },
+      {
+        "sample_epoch": 1794660663.0193474,
+        "logical_bytes": 2005775351,
+        "files": 9682,
+        "job_directories": 1073,
+        "managed_directories": 528
+      },
+      {
+        "sample_epoch": 1794660670.0860536,
+        "logical_bytes": 2005778688,
+        "files": 9691,
+        "job_directories": 1073,
+        "managed_directories": 529
+      },
+      {
+        "sample_epoch": 1794660677.0877855,
+        "logical_bytes": 2006554504,
+        "files": 9701,
+        "job_directories": 1074,
+        "managed_directories": 530
+      },
+      {
+        "sample_epoch": 1794660684.0267186,
+        "logical_bytes": 2006575658,
+        "files": 9706,
+        "job_directories": 1075,
+        "managed_directories": 531
+      },
+      {
+        "sample_epoch": 1794660691.0308552,
+        "logical_bytes": 2006679077,
+        "files": 9708,
+        "job_directories": 1075,
+        "managed_directories": 531
+      },
+      {
+        "sample_epoch": 1794660698.0332325,
+        "logical_bytes": 2006700229,
+        "files": 9713,
+        "job_directories": 1076,
+        "managed_directories": 532
+      },
+      {
+        "sample_epoch": 1794660704.9919946,
+        "logical_bytes": 2006803600,
+        "files": 9715,
+        "job_directories": 1076,
+        "managed_directories": 532
+      },
+      {
+        "sample_epoch": 1794660712.0027251,
+        "logical_bytes": 2006840602,
+        "files": 9725,
+        "job_directories": 1077,
+        "managed_directories": 533
+      },
+      {
+        "sample_epoch": 1794660718.9229105,
+        "logical_bytes": 2006949914,
+        "files": 9723,
+        "job_directories": 1078,
+        "managed_directories": 533
+      },
+      {
+        "sample_epoch": 1794660726.0901735,
+        "logical_bytes": 2006952442,
+        "files": 9731,
+        "job_directories": 1078,
+        "managed_directories": 534
+      },
+      {
+        "sample_epoch": 1794660733.068356,
+        "logical_bytes": 2007075353,
+        "files": 9730,
+        "job_directories": 1079,
+        "managed_directories": 534
+      },
+      {
+        "sample_epoch": 1794660740.088906,
+        "logical_bytes": 2007078324,
+        "files": 9735,
+        "job_directories": 1079,
+        "managed_directories": 535
+      },
+      {
+        "sample_epoch": 1794660747.10263,
+        "logical_bytes": 2007797282,
+        "files": 9741,
+        "job_directories": 1080,
+        "managed_directories": 536
+      },
+      {
+        "sample_epoch": 1794660754.174577,
+        "logical_bytes": 2008660705,
+        "files": 9743,
+        "job_directories": 1080,
+        "managed_directories": 536
+      },
+      {
+        "sample_epoch": 1794660761.2109854,
+        "logical_bytes": 2009234761,
+        "files": 9750,
+        "job_directories": 1081,
+        "managed_directories": 536
+      },
+      {
+        "sample_epoch": 1794660767.9431283,
+        "logical_bytes": 2010302368,
+        "files": 9758,
+        "job_directories": 1081,
+        "managed_directories": 537
+      },
+      {
+        "sample_epoch": 1794660774.91922,
+        "logical_bytes": 2010323521,
+        "files": 9763,
+        "job_directories": 1082,
+        "managed_directories": 538
+      },
+      {
+        "sample_epoch": 1794660781.8976755,
+        "logical_bytes": 2010427964,
+        "files": 9765,
+        "job_directories": 1082,
+        "managed_directories": 538
+      },
+      {
+        "sample_epoch": 1794660788.79133,
+        "logical_bytes": 2010464878,
+        "files": 9774,
+        "job_directories": 1083,
+        "managed_directories": 539
+      },
+      {
+        "sample_epoch": 1794660795.5501177,
+        "logical_bytes": 2010574649,
+        "files": 9773,
+        "job_directories": 1084,
+        "managed_directories": 539
+      },
+      {
+        "sample_epoch": 1794660802.686153,
+        "logical_bytes": 2010583822,
+        "files": 9784,
+        "job_directories": 1084,
+        "managed_directories": 540
+      },
+      {
+        "sample_epoch": 1794660809.6691833,
+        "logical_bytes": 2010700928,
+        "files": 9783,
+        "job_directories": 1085,
+        "managed_directories": 541
+      },
+      {
+        "sample_epoch": 1794660816.7842293,
+        "logical_bytes": 2010805249,
+        "files": 9786,
+        "job_directories": 1085,
+        "managed_directories": 541
+      },
+      {
+        "sample_epoch": 1794660823.8514144,
+        "logical_bytes": 2010826417,
+        "files": 9791,
+        "job_directories": 1086,
+        "managed_directories": 542
+      },
+      {
+        "sample_epoch": 1794660830.973924,
+        "logical_bytes": 2010932626,
+        "files": 9793,
+        "job_directories": 1086,
+        "managed_directories": 542
+      },
+      {
+        "sample_epoch": 1794660837.990621,
+        "logical_bytes": 2012170919,
+        "files": 9798,
+        "job_directories": 1087,
+        "managed_directories": 543
+      },
+      {
+        "sample_epoch": 1794660844.8484354,
+        "logical_bytes": 2012718137,
+        "files": 9803,
+        "job_directories": 1088,
+        "managed_directories": 544
+      },
+      {
+        "sample_epoch": 1794660851.7490919,
+        "logical_bytes": 2013003479,
+        "files": 9814,
+        "job_directories": 1089,
+        "managed_directories": 544
+      },
+      {
+        "sample_epoch": 1794660858.1698318,
+        "logical_bytes": 2013006020,
+        "files": 9822,
+        "job_directories": 1089,
+        "managed_directories": 545
+      },
+      {
+        "sample_epoch": 1794660865.3596509,
+        "logical_bytes": 2013131067,
+        "files": 9825,
+        "job_directories": 1090,
+        "managed_directories": 546
+      },
+      {
+        "sample_epoch": 1794660872.3264155,
+        "logical_bytes": 2013237217,
+        "files": 9827,
+        "job_directories": 1090,
+        "managed_directories": 546
+      },
+      {
+        "sample_epoch": 1794660879.3762412,
+        "logical_bytes": 2013258385,
+        "files": 9832,
+        "job_directories": 1091,
+        "managed_directories": 547
+      },
+      {
+        "sample_epoch": 1794660886.1583283,
+        "logical_bytes": 2013366722,
+        "files": 9834,
+        "job_directories": 1091,
+        "managed_directories": 547
+      },
+      {
+        "sample_epoch": 1794660893.3329747,
+        "logical_bytes": 2013387890,
+        "files": 9839,
+        "job_directories": 1092,
+        "managed_directories": 548
+      },
+      {
+        "sample_epoch": 1794660900.892875,
+        "logical_bytes": 2013495772,
+        "files": 9841,
+        "job_directories": 1092,
+        "managed_directories": 548
+      },
+      {
+        "sample_epoch": 1794660908.2880204,
+        "logical_bytes": 2013532701,
+        "files": 9850,
+        "job_directories": 1093,
+        "managed_directories": 549
+      },
+      {
+        "sample_epoch": 1794660915.6009114,
+        "logical_bytes": 2014299629,
+        "files": 9849,
+        "job_directories": 1094,
+        "managed_directories": 549
+      },
+      {
+        "sample_epoch": 1794660922.8444772,
+        "logical_bytes": 2014307722,
+        "files": 9859,
+        "job_directories": 1094,
+        "managed_directories": 550
+      },
+      {
+        "sample_epoch": 1794660929.9146583,
+        "logical_bytes": 2015441678,
+        "files": 9856,
+        "job_directories": 1095,
+        "managed_directories": 550
+      },
+      {
+        "sample_epoch": 1794660936.8792236,
+        "logical_bytes": 2015801224,
+        "files": 9862,
+        "job_directories": 1095,
+        "managed_directories": 550
+      },
+      {
+        "sample_epoch": 1794660943.8548,
+        "logical_bytes": 2016871909,
+        "files": 9870,
+        "job_directories": 1095,
+        "managed_directories": 551
+      },
+      {
+        "sample_epoch": 1794660950.971861,
+        "logical_bytes": 2016893077,
+        "files": 9875,
+        "job_directories": 1096,
+        "managed_directories": 552
+      },
+      {
+        "sample_epoch": 1794660958.0210514,
+        "logical_bytes": 2017000824,
+        "files": 9877,
+        "job_directories": 1096,
+        "managed_directories": 552
+      },
+      {
+        "sample_epoch": 1794660964.9675686,
+        "logical_bytes": 2017021990,
+        "files": 9882,
+        "job_directories": 1097,
+        "managed_directories": 553
+      },
+      {
+        "sample_epoch": 1794660971.944452,
+        "logical_bytes": 2017150791,
+        "files": 9885,
+        "job_directories": 1098,
+        "managed_directories": 553
+      },
+      {
+        "sample_epoch": 1794660979.08867,
+        "logical_bytes": 2017173407,
+        "files": 9897,
+        "job_directories": 1098,
+        "managed_directories": 554
+      },
+      {
+        "sample_epoch": 1794660986.0646677,
+        "logical_bytes": 2017280839,
+        "files": 9892,
+        "job_directories": 1099,
+        "managed_directories": 554
+      },
+      {
+        "sample_epoch": 1794660993.2403984,
+        "logical_bytes": 2017290013,
+        "files": 9903,
+        "job_directories": 1099,
+        "managed_directories": 555
+      },
+      {
+        "sample_epoch": 1794661000.365875,
+        "logical_bytes": 2017409023,
+        "files": 9902,
+        "job_directories": 1100,
+        "managed_directories": 556
+      },
+      {
+        "sample_epoch": 1794661007.5543716,
+        "logical_bytes": 2017418946,
+        "files": 9910,
+        "job_directories": 1100,
+        "managed_directories": 556
+      },
+      {
+        "sample_epoch": 1794661014.8450046,
+        "logical_bytes": 2018836424,
+        "files": 9907,
+        "job_directories": 1101,
+        "managed_directories": 557
+      },
+      {
+        "sample_epoch": 1794661021.9798784,
+        "logical_bytes": 2019347880,
+        "files": 9912,
+        "job_directories": 1101,
+        "managed_directories": 557
+      },
+      {
+        "sample_epoch": 1794661029.024491,
+        "logical_bytes": 2019681804,
+        "files": 9925,
+        "job_directories": 1102,
+        "managed_directories": 558
+      },
+      {
+        "sample_epoch": 1794661036.1559005,
+        "logical_bytes": 2019702972,
+        "files": 9930,
+        "job_directories": 1103,
+        "managed_directories": 559
+      },
+      {
+        "sample_epoch": 1794661043.2570739,
+        "logical_bytes": 2019810025,
+        "files": 9932,
+        "job_directories": 1103,
+        "managed_directories": 559
+      },
+      {
+        "sample_epoch": 1794661050.230235,
+        "logical_bytes": 2019831192,
+        "files": 9937,
+        "job_directories": 1104,
+        "managed_directories": 560
+      },
+      {
+        "sample_epoch": 1794661057.4836178,
+        "logical_bytes": 2019959631,
+        "files": 9940,
+        "job_directories": 1105,
+        "managed_directories": 560
+      },
+      {
+        "sample_epoch": 1794661064.6862397,
+        "logical_bytes": 2019982168,
+        "files": 9951,
+        "job_directories": 1105,
+        "managed_directories": 561
+      },
+      {
+        "sample_epoch": 1794661071.8601449,
+        "logical_bytes": 2020084165,
+        "files": 9947,
+        "job_directories": 1106,
+        "managed_directories": 561
+      },
+      {
+        "sample_epoch": 1794661079.0814888,
+        "logical_bytes": 2020093339,
+        "files": 9958,
+        "job_directories": 1106,
+        "managed_directories": 562
+      },
+      {
+        "sample_epoch": 1794661086.3338325,
+        "logical_bytes": 2020208907,
+        "files": 9957,
+        "job_directories": 1107,
+        "managed_directories": 563
+      },
+      {
+        "sample_epoch": 1794661093.4960089,
+        "logical_bytes": 2020312287,
+        "files": 9960,
+        "job_directories": 1107,
+        "managed_directories": 563
+      },
+      {
+        "sample_epoch": 1794661100.5838253,
+        "logical_bytes": 2021046929,
+        "files": 9965,
+        "job_directories": 1108,
+        "managed_directories": 564
+      },
+      {
+        "sample_epoch": 1794661107.792861,
+        "logical_bytes": 2022233200,
+        "files": 9968,
+        "job_directories": 1109,
+        "managed_directories": 564
+      },
+      {
+        "sample_epoch": 1794661115.0420275,
+        "logical_bytes": 2022589911,
+        "files": 9974,
+        "job_directories": 1109,
+        "managed_directories": 564
+      },
+      {
+        "sample_epoch": 1794661121.9964247,
+        "logical_bytes": 2023694862,
+        "files": 9982,
+        "job_directories": 1109,
+        "managed_directories": 565
+      },
+      {
+        "sample_epoch": 1794661129.1797564,
+        "logical_bytes": 2023716016,
+        "files": 9987,
+        "job_directories": 1110,
+        "managed_directories": 566
+      },
+      {
+        "sample_epoch": 1794661136.4690702,
+        "logical_bytes": 2023818879,
+        "files": 9989,
+        "job_directories": 1110,
+        "managed_directories": 566
+      },
+      {
+        "sample_epoch": 1794661143.7893515,
+        "logical_bytes": 2023840032,
+        "files": 9994,
+        "job_directories": 1111,
+        "managed_directories": 567
+      },
+      {
+        "sample_epoch": 1794661151.1354363,
+        "logical_bytes": 2023943159,
+        "files": 9996,
+        "job_directories": 1111,
+        "managed_directories": 567
+      },
+      {
+        "sample_epoch": 1794661158.226329,
+        "logical_bytes": 2023964312,
+        "files": 10001,
+        "job_directories": 1112,
+        "managed_directories": 568
+      },
+      {
+        "sample_epoch": 1794661165.554501,
+        "logical_bytes": 2024067763,
+        "files": 10003,
+        "job_directories": 1112,
+        "managed_directories": 568
+      },
+      {
+        "sample_epoch": 1794661172.6109009,
+        "logical_bytes": 2024104677,
+        "files": 10012,
+        "job_directories": 1113,
+        "managed_directories": 569
+      },
+      {
+        "sample_epoch": 1794661179.5848932,
+        "logical_bytes": 2025587443,
+        "files": 10011,
+        "job_directories": 1114,
+        "managed_directories": 569
+      },
+      {
+        "sample_epoch": 1794661186.6103625,
+        "logical_bytes": 2025594797,
+        "files": 10021,
+        "job_directories": 1114,
+        "managed_directories": 570
+      },
+      {
+        "sample_epoch": 1794661193.8903472,
+        "logical_bytes": 2026784579,
+        "files": 10021,
+        "job_directories": 1115,
+        "managed_directories": 570
+      },
+      {
+        "sample_epoch": 1794661201.0113738,
+        "logical_bytes": 2027830605,
+        "files": 10031,
+        "job_directories": 1115,
+        "managed_directories": 571
+      }
+    ],
+    "sampled_peak_temp_logical_bytes": 2027830605,
+    "scope": "Graphical parameter edits, selections, reassignments and save/reopen cycles; alternating TET4/TET10 solves every fifth cycle and on the final cycle. Not an unlimited leak-free claim.",
+    "host_job_peak_process_commit_bytes": 925298688
+  },
+  "lifecycle": {
+    "terminate-cut": {
+      "godot_exit": 0,
+      "terminated_native": {
+        "pid": 14956,
+        "action": "cut",
+        "operation_id": "df95c3ec-ba7f-45ab-980d-b7b1dc9414a0"
+      },
+      "observed": [
+        {
+          "pid": 1036,
+          "action": "box",
+          "operation_id": "d3d3338a-17bd-4769-9c0f-83d9fa66d20d"
+        },
+        {
+          "pid": 16556,
+          "action": "cylinder",
+          "operation_id": "2f02baf6-57fb-4c93-a7db-a7c4758f8082"
+        },
+        {
+          "pid": 14956,
+          "action": "cut",
+          "operation_id": "df95c3ec-ba7f-45ab-980d-b7b1dc9414a0"
+        }
+      ],
+      "recovered": true,
+      "fault": "TerminateProcess(77) against observed owned native Cut worker; injected termination, not an OCCT segfault",
+      "mode": "terminate-cut",
+      "native_exit_code_dword": 77,
+      "native_process_receipts": [
+        {
+          "pid": 14956,
+          "exit_code": 77,
+          "seconds": 0.9252372000046307,
+          "job_object": true
+        }
+      ],
+      "stdout": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-terminate-cut-1794663906578913100.stdout.txt",
+      "stderr": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-terminate-cut-1794663906578913100.stderr.txt",
+      "launcher": {
+        "state": "completed",
+        "exit_code": 0,
+        "error": "",
+        "job_object": true,
+        "seconds": 13.400627499999246,
+        "peak_process_memory_bytes": 662507520,
+        "peak_job_memory_bytes": 663764992,
+        "memory_limit_bytes": 805306368
+      },
+      "observed_native_pids_still_alive": []
+    },
+    "cancel-cut": {
+      "godot_exit": 0,
+      "terminated_native": {
+        "pid": 632,
+        "action": "cut",
+        "operation_id": "d151a489-fddb-4da8-bdf3-aeb2c59cdd70"
+      },
+      "observed": [
+        {
+          "pid": 21448,
+          "action": "box",
+          "operation_id": "e521e87c-9aa7-4a29-945c-7e8b43d9f737"
+        },
+        {
+          "pid": 19472,
+          "action": "cylinder",
+          "operation_id": "c0d067ad-f19e-49c3-ad4a-8af0f9272945"
+        },
+        {
+          "pid": 632,
+          "action": "cut",
+          "operation_id": "d151a489-fddb-4da8-bdf3-aeb2c59cdd70"
+        }
+      ],
+      "recovered": true,
+      "fault": "Cooperative job cancellation during observed native Cut",
+      "mode": "cancel-cut",
+      "native_exit_code_dword": 0,
+      "native_process_receipts": [],
+      "stdout": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-cancel-cut-1794663876483310900.stdout.txt",
+      "stderr": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-cancel-cut-1794663876483310900.stderr.txt",
+      "launcher": {
+        "state": "cancelled",
+        "exit_code": 1,
+        "error": "",
+        "job_object": true,
+        "seconds": 6.632925699988846,
+        "peak_process_memory_bytes": 662544384,
+        "peak_job_memory_bytes": 663793664,
+        "memory_limit_bytes": 805306368
+      },
+      "observed_native_pids_still_alive": []
+    },
+    "cancel-step": {
+      "godot_exit": 0,
+      "terminated_native": {
+        "pid": 19392,
+        "action": "step",
+        "operation_id": "46c9f00e-a334-4d6f-91c1-fc9d2319a2e2"
+      },
+      "observed": [
+        {
+          "pid": 19392,
+          "action": "step",
+          "operation_id": "46c9f00e-a334-4d6f-91c1-fc9d2319a2e2"
+        }
+      ],
+      "recovered": true,
+      "fault": "Cooperative job cancellation during observed native STEP import",
+      "mode": "cancel-step",
+      "native_exit_code_dword": 0,
+      "native_process_receipts": [],
+      "stdout": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-cancel-step-1794663855289524600.stdout.txt",
+      "stderr": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-cancel-step-1794663855289524600.stderr.txt",
+      "launcher": {
+        "state": "cancelled",
+        "exit_code": 1,
+        "error": "",
+        "job_object": true,
+        "seconds": 4.058185600006254,
+        "peak_process_memory_bytes": 662532096,
+        "peak_job_memory_bytes": 663789568,
+        "memory_limit_bytes": 805306368
+      },
+      "observed_native_pids_still_alive": []
+    },
+    "timeout": {
+      "godot_exit": 0,
+      "terminated_native": null,
+      "observed": [
+        {
+          "pid": 22592,
+          "action": "box",
+          "operation_id": "1674ecdd-3eaa-4c96-b4b0-1ba7c8015253"
+        }
+      ],
+      "recovered": true,
+      "fault": "Native deadline forced to zero seconds",
+      "mode": "timeout",
+      "native_process_receipts": [
+        {
+          "pid": 22592,
+          "exit_code": 0,
+          "seconds": 0.23529140000755433,
+          "job_object": true
+        }
+      ],
+      "stdout": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-timeout-1794663830235807800.stdout.txt",
+      "stderr": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-timeout-1794663830235807800.stderr.txt",
+      "launcher": {
+        "state": "completed",
+        "exit_code": 0,
+        "error": "",
+        "job_object": true,
+        "seconds": 6.64777260000119,
+        "peak_process_memory_bytes": 662851584,
+        "peak_job_memory_bytes": 664104960,
+        "memory_limit_bytes": 805306368
+      },
+      "observed_native_pids_still_alive": []
+    },
+    "owner-exit": {
+      "godot_exit": 1,
+      "terminated_native": {
+        "pid": 23692,
+        "action": "cut",
+        "operation_id": "737b672f-1fe7-4478-8d31-99cd646dcda4"
+      },
+      "observed": [
+        {
+          "pid": 17788,
+          "action": "box",
+          "operation_id": "ddc0e54e-5e0e-4251-a817-6f33d26d6ab1"
+        },
+        {
+          "pid": 21604,
+          "action": "cylinder",
+          "operation_id": "8cbf8fc0-d015-46a0-8f78-6c9890ad6dc8"
+        },
+        {
+          "pid": 23692,
+          "action": "cut",
+          "operation_id": "737b672f-1fe7-4478-8d31-99cd646dcda4"
+        }
+      ],
+      "recovered": false,
+      "fault": "Terminate Godot owner while native worker is active",
+      "mode": "owner-exit",
+      "native_exit_code_dword": 259,
+      "native_process_receipts": [],
+      "stdout": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-owner-exit-1794663809484742900.stdout.txt",
+      "stderr": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-owner-exit-1794663809484742900.stderr.txt",
+      "launcher": {
+        "state": "owner_exited",
+        "exit_code": 1,
+        "error": "",
+        "job_object": true,
+        "seconds": 10.706286999993608,
+        "peak_process_memory_bytes": 662593536,
+        "peak_job_memory_bytes": 663883776,
+        "memory_limit_bytes": 805306368
+      },
+      "observed_native_pids_still_alive": []
+    }
+  },
+  "retention": {
+    "bytes_before": 4225,
+    "bytes_after": 3168,
+    "protected_bytes": 3168,
+    "removed": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\tmp94gngfvj\\gmsh_old"
+    ],
+    "errors": [],
+    "quota_bytes": 0,
+    "quota_accounted_bytes": 0,
+    "quota_met": true,
+    "failed_cleanup": {
+      "bytes_before": 3230,
+      "bytes_after": 3230,
+      "protected_bytes": 3168,
+      "removed": [],
+      "errors": [
+        "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\tmp94gngfvj\\\\gmsh_locked' -> 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\tmp94gngfvj\\\\.cad24-trash-94282b57ee47405abd200d0042d7b51f'"
+      ],
+      "quota_bytes": 0,
+      "quota_accounted_bytes": 62,
+      "quota_met": false
+    },
+    "recovery": {
+      "bytes_before": 3230,
+      "bytes_after": 3168,
+      "protected_bytes": 3168,
+      "removed": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\tmp94gngfvj\\gmsh_locked"
+      ],
+      "errors": [],
+      "quota_bytes": 0,
+      "quota_accounted_bytes": 0,
+      "quota_met": true
+    },
+    "concurrent_sweeper_skipped": true,
+    "reparse_escape_protected": true,
+    "abandoned_job_recovered": true,
+    "concurrent_completion_marker_retry": true
+  },
+  "failed_campaign_attempts": [
+    {
+      "path": "docs/architecture/evidence/cad24-completion/boundary-1794627172406038700/receipt.json",
+      "receipt": {
+        "name": "boundary",
+        "exit_code": null,
+        "outcome": "FAIL",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad24_boundary.gd"
+        ],
+        "seconds": 2100.0699435999995,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\boundary-1794627172406038700"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad21-geometry-1794623057057578000/receipt.json",
+      "receipt": {
+        "name": "cad21-geometry",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad21.py",
+          "geometry"
+        ],
+        "seconds": 27.147197700003744,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-geometry-1794623057057578000"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad21-integration-1794623084207826600/receipt.json",
+      "receipt": {
+        "name": "cad21-integration",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad21.py",
+          "integration"
+        ],
+        "seconds": 106.10635390000243,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-integration-1794623084207826600"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad21-preservation-1794655776712272400/receipt.json",
+      "receipt": {
+        "name": "cad21-preservation",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad21.py",
+          "preservation"
+        ],
+        "seconds": 34.02621130000625,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-preservation-1794655776712272400"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad22-independent-1794623488353218300/receipt.json",
+      "receipt": {
+        "name": "cad22-independent",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad22.py",
+          "independent"
+        ],
+        "seconds": 0.8882277000084287,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-independent-1794623488353218300"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad22-independent-1794655969589359200/receipt.json",
+      "receipt": {
+        "name": "cad22-independent",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad22.py",
+          "independent"
+        ],
+        "seconds": 1.5543709999910789,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-independent-1794655969589359200"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/cad22-independent-1794657129807990100/receipt.json",
+      "receipt": {
+        "name": "cad22-independent",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/run_cad22.py",
+          "independent"
+        ],
+        "seconds": 1.3976828000013484,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad22-independent-1794657129807990100"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/deck-audit-1794663552455080800/receipt.json",
+      "receipt": {
+        "name": "deck-audit",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_deck_audit.py"
+        ],
+        "seconds": 1.6669614999991609,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\deck-audit-1794663552455080800"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/failure-1794623566035521400/receipt.json",
+      "receipt": {
+        "name": "failure",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_failure.py"
+        ],
+        "seconds": 34.74557420000201,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\failure-1794623566035521400"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/failure-1794623836827504000/receipt.json",
+      "receipt": {
+        "name": "failure",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_failure.py"
+        ],
+        "seconds": 37.98545599999488,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\failure-1794623836827504000"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/failure-1794623963717482400/receipt.json",
+      "receipt": {
+        "name": "failure",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_failure.py"
+        ],
+        "seconds": 99.03475479999906,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\failure-1794623963717482400"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/failure-1794624156283095800/receipt.json",
+      "receipt": {
+        "name": "failure",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_failure.py"
+        ],
+        "seconds": 94.81384010000329,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\failure-1794624156283095800"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/failure-1794655627387454000/receipt.json",
+      "receipt": {
+        "name": "failure",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_failure.py"
+        ],
+        "seconds": 15.298780800003442,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\failure-1794655627387454000"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/gui-1794622832313405800/receipt.json",
+      "receipt": {
+        "name": "gui",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad24_gui.gd"
+        ],
+        "seconds": 4.19895489999908,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\gui-1794622832313405800"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/gui-1794622964589624900/receipt.json",
+      "receipt": {
+        "name": "gui",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad24_gui.gd"
+        ],
+        "seconds": 2.6965227000036975,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\gui-1794622964589624900"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/gui-1794629278764759300/receipt.json",
+      "receipt": {
+        "name": "gui",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad24_gui.gd"
+        ],
+        "seconds": 5.1635205000056885,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\gui-1794629278764759300"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/gui-endurance-1794658321530534600/receipt.json",
+      "receipt": {
+        "name": "gui-endurance",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_gui_endurance.py"
+        ],
+        "seconds": 903.3245134000026,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\gui-endurance-1794658321530534600"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/native-1794655614265509600/receipt.json",
+      "receipt": {
+        "name": "native",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad24_native.py"
+        ],
+        "seconds": 3.4849761000077706,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\native-1794655614265509600"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/numerical-1794622826923622600/receipt.json",
+      "receipt": {
+        "name": "numerical",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad24_numerical.gd"
+        ],
+        "seconds": 5.3884055000089575,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\numerical-1794622826923622600"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/numerical-1794622943196240700/receipt.json",
+      "receipt": {
+        "name": "numerical",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad24_numerical.gd"
+        ],
+        "seconds": 21.39212280001084,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\numerical-1794622943196240700"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/numerical-1794629272478119900/receipt.json",
+      "receipt": {
+        "name": "numerical",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad24_numerical.gd"
+        ],
+        "seconds": 6.283626000004006,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\numerical-1794629272478119900"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/numerical-1794655737135484000/receipt.json",
+      "receipt": {
+        "name": "numerical",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad24_numerical.gd"
+        ],
+        "seconds": 39.14891780000471,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\numerical-1794655737135484000"
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/cad24-completion/numerical-1794663212814231200/receipt.json",
+      "receipt": {
+        "name": "numerical",
+        "exit_code": 1,
+        "outcome": "FAIL",
+        "command": [
+          "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad24_numerical.gd"
+        ],
+        "seconds": 251.25212119999924,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\numerical-1794663212814231200"
+      }
+    }
+  ],
+  "limitations": [
+    "Supported CAE domain is one closed positive-volume solid; assemblies/contact are outside scope.",
+    "Native validation is not a guarantee against every geometric self-intersection or a guarantee of mesh success.",
+    "Modified, generated, split, merged, transformed or ambiguous faces require explicit boundary review; preservation is restricted to verified unchanged provenance.",
+    "Curved nonuniform STEP example is explicitly rejected because computed affine volume misses the invariant by 0.8615%; planar nonuniform scaling is qualified.",
+    "Coarse thin pipe meshing fails and refined settings succeed. Tiny-feature and nested-cut coarse meshing failures are retained and reported, not relabelled geometry successes.",
+    "60-cycle GUI memory and archive growth is measured; no unlimited leak-free claim. The historical Godot access violation is unresolved.",
+    "Retention applies to registered completed jobs; active, grace-period, historical, pinned and explicitly archived data are excluded. It is not an operating-system disk quota.",
+    "Crash isolation uses injected TerminateProcess(77); it does not reproduce a specific OCCT segmentation fault.",
+    "MSYS2 package PGP signatures were not verified; official HTTPS provenance and exact archive SHA-256 locks are retained."
+  ]
+}

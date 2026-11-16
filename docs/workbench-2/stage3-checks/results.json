@@ -1,0 +1,34 @@
+[
+  {
+    "test": "tests/test_workbench2.gd",
+    "graphical": false,
+    "exit_code": 0,
+    "script_error": false,
+    "passed": true,
+    "seconds": 1.933
+  },
+  {
+    "test": "tests/test_workbench2_stage2.gd",
+    "graphical": false,
+    "exit_code": 0,
+    "script_error": false,
+    "passed": true,
+    "seconds": 2.101
+  },
+  {
+    "test": "tests/test_workbench2_stage3.gd",
+    "graphical": false,
+    "exit_code": 0,
+    "script_error": false,
+    "passed": true,
+    "seconds": 2.677
+  },
+  {
+    "test": "tests/test_workbench2_stage3.gd",
+    "graphical": true,
+    "exit_code": 0,
+    "script_error": false,
+    "passed": true,
+    "seconds": 5.407
+  }
+]

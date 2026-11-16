@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad22_independent.py", line 53, in <module>
+    assert sha(job/name)==sha(dest/name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

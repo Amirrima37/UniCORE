@@ -1,0 +1,6 @@
+Godot 4.0 stable, Vulkan / AMD Radeon RX 6550M.
+Command: Godot_v4.0-stable_win64_console.exe --path . --script tests/test_extreme_gui.gd
+Exit code: 0
+Extreme GUI: launch, persistent discovery, import, minimal rendering and thermal restart PASS
+Screenshots: configuration.png, static_structural.png, transient_thermal.png
+Automated application-handler coverage; exhaustive physical mouse/keyboard coverage is not claimed.

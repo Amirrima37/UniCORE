@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad24_deck_audit.py", line 29, in <module>
+    assert len(rows)==6
+           ^^^^^^^^^^^^
+AssertionError

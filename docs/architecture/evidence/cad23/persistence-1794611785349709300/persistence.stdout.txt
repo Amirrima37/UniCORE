@@ -1,0 +1,3 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CURRENT_DIAG revision 1.0/1.0 parts false analysis true settings true meshhash true divisions 4.0/4.0

@@ -1,0 +1,324 @@
+{
+  "outcome": "PARTIAL",
+  "campaigns": {
+    "geometry": [
+      {
+        "case": "geometry",
+        "outcome": "PASS",
+        "exit_code": 0,
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad21_geometry.py"
+        ],
+        "seconds": 3.282195599997067,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\geometry-1794603612900898800"
+      }
+    ],
+    "integration": [
+      {
+        "case": "integration",
+        "outcome": "PASS",
+        "exit_code": 0,
+        "command": [
+          "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad21_integration.gd"
+        ],
+        "seconds": 26.85867820000567,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\integration-1794603819757251700"
+      }
+    ],
+    "gui": [
+      {
+        "case": "gui",
+        "outcome": "PASS",
+        "exit_code": 0,
+        "command": [
+          "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/cad21_gui.gd"
+        ],
+        "seconds": 12.887667699993472,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\gui-1794603464945423200"
+      }
+    ],
+    "lifecycle": [
+      {
+        "case": "lifecycle",
+        "outcome": "PASS",
+        "exit_code": 0,
+        "command": [
+          "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+          "tests/cad21_lifecycle.py"
+        ],
+        "seconds": 12.28343210001185,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\lifecycle-1794603316122716600"
+      }
+    ],
+    "scan": [
+      {
+        "case": "scan",
+        "outcome": "PASS",
+        "exit_code": 0,
+        "command": [
+          "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--editor",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "--quit"
+        ],
+        "seconds": 11.908746200002497,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\scan-1794604045066414800"
+      }
+    ],
+    "preservation": [
+      {
+        "case": "fingerprint",
+        "outcome": "PASS",
+        "exit_code": 0,
+        "command": [
+          "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/test_mesh_fingerprint.gd"
+        ],
+        "seconds": 0.7755775000114227,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\preservation-1794603658312083200"
+      },
+      {
+        "case": "step-bar",
+        "outcome": "PASS",
+        "exit_code": 0,
+        "command": [
+          "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/test_godot472_step_workbench.gd"
+        ],
+        "seconds": 5.57460639999772,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\preservation-1794603658312083200"
+      },
+      {
+        "case": "step-cylinder",
+        "outcome": "PASS",
+        "exit_code": 0,
+        "command": [
+          "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+          "--headless",
+          "--path",
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+          "-s",
+          "res://tests/test_godot472_step_workbench.gd"
+        ],
+        "seconds": 7.966795300002559,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\preservation-1794603658312083200"
+      },
+      {
+        "case": "modal",
+        "outcome": "PASS",
+        "exit_code": 0,
+        "command": [
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\stage7-modal-test.exe"
+        ],
+        "seconds": 0.4668511000054423,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\preservation-1794603658312083200"
+      },
+      {
+        "case": "dynamics",
+        "outcome": "PASS",
+        "exit_code": 0,
+        "command": [
+          "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\dynamics_test.exe"
+        ],
+        "seconds": 0.18927509999775793,
+        "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\preservation-1794603658312083200"
+      }
+    ]
+  },
+  "default_regressions": {
+    "passed": 28,
+    "expected": 28,
+    "all_exits_zero": true
+  },
+  "geometry": [
+    {
+      "case": "fuse",
+      "outcome": "PASS",
+      "expected_volume_m3": 0.003,
+      "volume_m3": 0.003,
+      "relative_error": 0.0,
+      "faces": 6,
+      "nodes": 131,
+      "tet4": 338,
+      "quality": {
+        "minimum_jacobian": 1.761874913063737e-05,
+        "inverted_elements": 0,
+        "degenerate_elements": 0
+      },
+      "elapsed_s": 0.21808629999577533,
+      "geometry_revision": "1ff96f4619defa1088169fbda2e9448dfa3a42062fc22f6383cfb47ffbe34263"
+    },
+    {
+      "case": "hole",
+      "outcome": "PASS",
+      "expected_volume_m3": 0.0017486725877128165,
+      "volume_m3": 0.001748672587712817,
+      "relative_error": 2.220446049250313e-16,
+      "faces": 7,
+      "nodes": 154,
+      "tet4": 426,
+      "quality": {
+        "minimum_jacobian": 2.921954047202259e-06,
+        "inverted_elements": 0,
+        "degenerate_elements": 0
+      },
+      "elapsed_s": 0.16267589999188203,
+      "geometry_revision": "617a52165bba7ee8b60d8ec2fc0e529eac038b0e0cc3a64f5d214ad7a0114c65"
+    },
+    {
+      "case": "pipe",
+      "outcome": "PASS",
+      "expected_volume_m3": 0.0010053096491487341,
+      "volume_m3": 0.0010053096491487337,
+      "relative_error": 4.440892098500626e-16,
+      "faces": 4,
+      "nodes": 117,
+      "tet4": 310,
+      "quality": {
+        "minimum_jacobian": 4.519244564886094e-06,
+        "inverted_elements": 0,
+        "degenerate_elements": 0
+      },
+      "elapsed_s": 0.1406635000021197,
+      "geometry_revision": "281042742e89fb1c943e9f56eef13cdcce935004da45f44e4abe3b2dde0141d7"
+    },
+    {
+      "case": "intersect",
+      "outcome": "PASS",
+      "expected_volume_m3": 0.001,
+      "volume_m3": 0.0010000000000000002,
+      "relative_error": 2.220446049250313e-16,
+      "faces": 6,
+      "nodes": 76,
+      "tet4": 172,
+      "quality": {
+        "minimum_jacobian": 1.4123385219169806e-05,
+        "inverted_elements": 0,
+        "degenerate_elements": 0
+      },
+      "elapsed_s": 0.13509470000281,
+      "geometry_revision": "16d28f83c09cf13e10c26a18330417fa9983bd0eb06055686de52089dbe44d43"
+    },
+    {
+      "case": "step-cut",
+      "outcome": "PASS",
+      "expected_volume_m3": 0.008743362938564083,
+      "volume_m3": 0.008743362938564083,
+      "relative_error": 0.0,
+      "faces": 7,
+      "nodes": 358,
+      "tet4": 1107,
+      "quality": {
+        "minimum_jacobian": 2.857790842410535e-06,
+        "inverted_elements": 0,
+        "degenerate_elements": 0
+      },
+      "elapsed_s": 0.2644092999980785,
+      "geometry_revision": "bb31bba4e609ee8b2fe867b91f7f45fc792aaa8dd603997bc5d9a3309fc42043"
+    },
+    {
+      "case": "sphere",
+      "outcome": "PASS",
+      "expected_volume_m3": 0.0005235987755982989,
+      "volume_m3": 0.0005235987755982989,
+      "relative_error": 0.0,
+      "faces": 1,
+      "nodes": 28,
+      "tet4": 50,
+      "quality": {
+        "minimum_jacobian": 2.1515407323221904e-05,
+        "inverted_elements": 0,
+        "degenerate_elements": 0
+      },
+      "elapsed_s": 0.12294790000305511,
+      "geometry_revision": "3aa4bdf27216c1aa20e7f669bc759f1f7ebe6e2a1f192d3bf399bcfaeea9b428"
+    }
+  ],
+  "integration": [
+    {
+      "backend": "CalculiX 2.23",
+      "case": "fuse",
+      "graph_reconstruction": true,
+      "main_thread_frames": 338,
+      "maximum_displacement_m": 6.349206671529828e-08,
+      "maximum_von_mises_Pa": 66666.67047558418,
+      "nodes": 131,
+      "outcome": "PASS",
+      "parameter_recompute": true,
+      "provenance": {
+        "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+        "dat_sha256": "073f44ef61142937f9a2f8c7a056d5022613b5776d6ceae10b03eb0790707930",
+        "input_sha256": "5b61e2b1ce979675da3656fb041809672432292b2b4e2d79b7a5e82a2948b02f",
+        "schema": 1
+      },
+      "reaction_relative_imbalance": 6.103515625e-08,
+      "save_reopen": true,
+      "tet4": 338,
+      "undo_redo": true
+    },
+    {
+      "backend": "CalculiX 2.23",
+      "case": "step-cut",
+      "graph_reconstruction": true,
+      "main_thread_frames": 116,
+      "maximum_displacement_m": 5.226218604548194e-07,
+      "maximum_von_mises_Pa": 116746.53130717872,
+      "nodes": 358,
+      "outcome": "PASS",
+      "parameter_recompute": true,
+      "provenance": {
+        "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+        "dat_sha256": "e3ff3e80c131a9056037cbd0c6ab2a0dcd62c060f04360c33e79d6444984a8e9",
+        "input_sha256": "9956d24279a3a5179bd8b3955c136a909428fa7343421b13b8319814d08029c8",
+        "schema": 1
+      },
+      "reaction_relative_imbalance": 1.220704143634066e-07,
+      "save_reopen": true,
+      "tet4": 1107,
+      "undo_redo": true
+    }
+  ],
+  "screenshots": 16,
+  "native_crash_observed": false,
+  "remaining_gaps": [
+    "No direct BRepCheck_Analyzer/self-intersection analysis",
+    "No direct OCCT per-face modified/generated/deleted history",
+    "General imported/Boolean BRep scaling rejected",
+    "Monitored log/disk thresholds; no aggregate retention limit",
+    "No long-duration Godot memory qualification"
+  ],
+  "acceptance_criteria": {
+    "1_real_booleans_and_full_validity": "PARTIAL",
+    "2_primitive_and_step_operands": "PASS",
+    "3_parametric_recompute": "PASS",
+    "4_persistent_graph": "PASS",
+    "5_undo_redo": "PASS",
+    "6_topology_safety_general_qualification": "PARTIAL",
+    "7_five_gmsh_solids": "PASS",
+    "8_two_calculix_solids": "PASS",
+    "9_graphical_workbench": "PASS",
+    "10_default_regressions": "PASS",
+    "11_no_new_observed_native_crash": "PASS",
+    "12_documentation_and_evidence": "PASS"
+  }
+}

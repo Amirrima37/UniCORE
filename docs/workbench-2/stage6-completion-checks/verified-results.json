@@ -1,0 +1,26 @@
+[
+  {
+    "test": "test_stage6_remesh",
+    "exit": 0,
+    "seconds": 1.3827358999988064,
+    "passed": true
+  },
+  {
+    "test": "benchmark_stage6_cylinder",
+    "exit": 0,
+    "seconds": 8.592828299995745,
+    "passed": true
+  },
+  {
+    "test": "test_stage5_provenance",
+    "exit": 0,
+    "seconds": 0.8965473999996902,
+    "passed": true
+  },
+  {
+    "test": "test_stage5_probes",
+    "exit": 0,
+    "seconds": 2.7804808000000776,
+    "passed": true
+  }
+]

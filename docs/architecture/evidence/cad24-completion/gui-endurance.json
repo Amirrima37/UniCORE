@@ -1,0 +1,519 @@
+{
+  "exit_code": 0,
+  "iterations": 20,
+  "expected_iterations": 20,
+  "elapsed_seconds": 179.27341310000338,
+  "peak_working_set_bytes": 813604864,
+  "rows": [
+    {
+      "archive_count": 2,
+      "godot_static_memory_bytes": 81842236,
+      "heartbeat": 2911,
+      "iteration": 0,
+      "maximum_frame_delta_s": 0.145897222222223,
+      "node_count": 391.0,
+      "operation_heartbeat_frames": 2910,
+      "order": 1,
+      "result_current": true,
+      "solved": true,
+      "observed_working_set_bytes": 447025152,
+      "observed_commit_bytes": 461082624
+    },
+    {
+      "archive_count": 4,
+      "godot_static_memory_bytes": 79381728,
+      "heartbeat": 3663,
+      "iteration": 1,
+      "maximum_frame_delta_s": 0.145897222222223,
+      "node_count": 392.0,
+      "operation_heartbeat_frames": 752,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 459227136,
+      "observed_commit_bytes": 479211520
+    },
+    {
+      "archive_count": 6,
+      "godot_static_memory_bytes": 80432572,
+      "heartbeat": 4396,
+      "iteration": 2,
+      "maximum_frame_delta_s": 0.145897222222223,
+      "node_count": 394.0,
+      "operation_heartbeat_frames": 733,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 463339520,
+      "observed_commit_bytes": 486297600
+    },
+    {
+      "archive_count": 8,
+      "godot_static_memory_bytes": 81482636,
+      "heartbeat": 5111,
+      "iteration": 3,
+      "maximum_frame_delta_s": 0.145897222222223,
+      "node_count": 396.0,
+      "operation_heartbeat_frames": 715,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 464674816,
+      "observed_commit_bytes": 484151296
+    },
+    {
+      "archive_count": 10,
+      "godot_static_memory_bytes": 82532724,
+      "heartbeat": 5834,
+      "iteration": 4,
+      "maximum_frame_delta_s": 0.145897222222223,
+      "node_count": 398.0,
+      "operation_heartbeat_frames": 723,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 478818304,
+      "observed_commit_bytes": 502251520
+    },
+    {
+      "archive_count": 12,
+      "godot_static_memory_bytes": 103108620,
+      "heartbeat": 8050,
+      "iteration": 5,
+      "maximum_frame_delta_s": 0.145897222222223,
+      "node_count": 401.0,
+      "operation_heartbeat_frames": 2216,
+      "order": 2,
+      "result_current": true,
+      "solved": true,
+      "observed_working_set_bytes": 525664256,
+      "observed_commit_bytes": 551907328
+    },
+    {
+      "archive_count": 14,
+      "godot_static_memory_bytes": 96532544,
+      "heartbeat": 8811,
+      "iteration": 6,
+      "maximum_frame_delta_s": 0.145897222222223,
+      "node_count": 402.0,
+      "operation_heartbeat_frames": 761,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 536670208,
+      "observed_commit_bytes": 565182464
+    },
+    {
+      "archive_count": 16,
+      "godot_static_memory_bytes": 97582648,
+      "heartbeat": 9559,
+      "iteration": 7,
+      "maximum_frame_delta_s": 0.145897222222223,
+      "node_count": 404.0,
+      "operation_heartbeat_frames": 748,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 534065152,
+      "observed_commit_bytes": 563118080
+    },
+    {
+      "archive_count": 18,
+      "godot_static_memory_bytes": 98468752,
+      "heartbeat": 10293,
+      "iteration": 8,
+      "maximum_frame_delta_s": 0.145897222222223,
+      "node_count": 406.0,
+      "operation_heartbeat_frames": 734,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 545722368,
+      "observed_commit_bytes": 582135808
+    },
+    {
+      "archive_count": 20,
+      "godot_static_memory_bytes": 99518928,
+      "heartbeat": 11029,
+      "iteration": 9,
+      "maximum_frame_delta_s": 0.145897222222223,
+      "node_count": 408.0,
+      "operation_heartbeat_frames": 736,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 545730560,
+      "observed_commit_bytes": 578101248
+    },
+    {
+      "archive_count": 22,
+      "godot_static_memory_bytes": 96438508,
+      "heartbeat": 12684,
+      "iteration": 10,
+      "maximum_frame_delta_s": 0.147091555555561,
+      "node_count": 411.0,
+      "operation_heartbeat_frames": 1655,
+      "order": 1,
+      "result_current": true,
+      "solved": true,
+      "observed_working_set_bytes": 537415680,
+      "observed_commit_bytes": 573300736
+    },
+    {
+      "archive_count": 24,
+      "godot_static_memory_bytes": 94150976,
+      "heartbeat": 13467,
+      "iteration": 11,
+      "maximum_frame_delta_s": 0.147091555555561,
+      "node_count": 412.0,
+      "operation_heartbeat_frames": 783,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 533708800,
+      "observed_commit_bytes": 561815552
+    },
+    {
+      "archive_count": 26,
+      "godot_static_memory_bytes": 95198908,
+      "heartbeat": 14214,
+      "iteration": 12,
+      "maximum_frame_delta_s": 0.147091555555561,
+      "node_count": 414.0,
+      "operation_heartbeat_frames": 747,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 556310528,
+      "observed_commit_bytes": 598507520
+    },
+    {
+      "archive_count": 28,
+      "godot_static_memory_bytes": 96249708,
+      "heartbeat": 14953,
+      "iteration": 13,
+      "maximum_frame_delta_s": 0.147091555555561,
+      "node_count": 416.0,
+      "operation_heartbeat_frames": 739,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 552812544,
+      "observed_commit_bytes": 586301440
+    },
+    {
+      "archive_count": 30,
+      "godot_static_memory_bytes": 97310196,
+      "heartbeat": 15689,
+      "iteration": 14,
+      "maximum_frame_delta_s": 0.147091555555561,
+      "node_count": 418.0,
+      "operation_heartbeat_frames": 736,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 687812608,
+      "observed_commit_bytes": 710635520
+    },
+    {
+      "archive_count": 32,
+      "godot_static_memory_bytes": 116661184,
+      "heartbeat": 18010,
+      "iteration": 15,
+      "maximum_frame_delta_s": 0.147091555555561,
+      "node_count": 421.0,
+      "operation_heartbeat_frames": 2321,
+      "order": 2,
+      "result_current": true,
+      "solved": true,
+      "observed_working_set_bytes": 590807040,
+      "observed_commit_bytes": 623370240
+    },
+    {
+      "archive_count": 34,
+      "godot_static_memory_bytes": 110229684,
+      "heartbeat": 18769,
+      "iteration": 16,
+      "maximum_frame_delta_s": 0.147091555555561,
+      "node_count": 422.0,
+      "operation_heartbeat_frames": 759,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 738697216,
+      "observed_commit_bytes": 761888768
+    },
+    {
+      "archive_count": 36,
+      "godot_static_memory_bytes": 111279644,
+      "heartbeat": 19525,
+      "iteration": 17,
+      "maximum_frame_delta_s": 0.147091555555561,
+      "node_count": 424.0,
+      "operation_heartbeat_frames": 756,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 740773888,
+      "observed_commit_bytes": 762642432
+    },
+    {
+      "archive_count": 38,
+      "godot_static_memory_bytes": 112329604,
+      "heartbeat": 20257,
+      "iteration": 18,
+      "maximum_frame_delta_s": 0.147091555555561,
+      "node_count": 426.0,
+      "operation_heartbeat_frames": 732,
+      "order": 0,
+      "result_current": false,
+      "solved": false,
+      "observed_working_set_bytes": 595881984,
+      "observed_commit_bytes": 630575104
+    },
+    {
+      "archive_count": 40,
+      "godot_static_memory_bytes": 123050540,
+      "heartbeat": 22556,
+      "iteration": 19,
+      "maximum_frame_delta_s": 0.147091555555561,
+      "node_count": 429.0,
+      "operation_heartbeat_frames": 2299,
+      "order": 2,
+      "result_current": true,
+      "solved": true,
+      "observed_working_set_bytes": 613720064,
+      "observed_commit_bytes": 659861504
+    }
+  ],
+  "logs": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\gui-endurance-1794665896141027200",
+  "storage_before": {
+    "sample_epoch": 1794665896.8301451,
+    "logical_bytes": 2120404002,
+    "files": 10457,
+    "job_directories": 1156,
+    "managed_directories": 612
+  },
+  "storage_after": {
+    "sample_epoch": 1794666077.174152,
+    "logical_bytes": 2135926841,
+    "files": 10708,
+    "job_directories": 1186,
+    "managed_directories": 642
+  },
+  "storage_samples": [
+    {
+      "sample_epoch": 1794665896.8301451,
+      "logical_bytes": 2120404002,
+      "files": 10457,
+      "job_directories": 1156,
+      "managed_directories": 612
+    },
+    {
+      "sample_epoch": 1794665903.1477604,
+      "logical_bytes": 2120425025,
+      "files": 10458,
+      "job_directories": 1157,
+      "managed_directories": 612
+    },
+    {
+      "sample_epoch": 1794665909.1829722,
+      "logical_bytes": 2120425102,
+      "files": 10461,
+      "job_directories": 1157,
+      "managed_directories": 613
+    },
+    {
+      "sample_epoch": 1794665915.1175425,
+      "logical_bytes": 2121578569,
+      "files": 10465,
+      "job_directories": 1158,
+      "managed_directories": 613
+    },
+    {
+      "sample_epoch": 1794665921.2017865,
+      "logical_bytes": 2122091216,
+      "files": 10483,
+      "job_directories": 1159,
+      "managed_directories": 615
+    },
+    {
+      "sample_epoch": 1794665927.1890163,
+      "logical_bytes": 2122400348,
+      "files": 10492,
+      "job_directories": 1160,
+      "managed_directories": 616
+    },
+    {
+      "sample_epoch": 1794665933.1879783,
+      "logical_bytes": 2122530597,
+      "files": 10499,
+      "job_directories": 1161,
+      "managed_directories": 617
+    },
+    {
+      "sample_epoch": 1794665939.2555008,
+      "logical_bytes": 2122682437,
+      "files": 10507,
+      "job_directories": 1163,
+      "managed_directories": 618
+    },
+    {
+      "sample_epoch": 1794665945.2357829,
+      "logical_bytes": 2122813489,
+      "files": 10514,
+      "job_directories": 1164,
+      "managed_directories": 619
+    },
+    {
+      "sample_epoch": 1794665951.2249887,
+      "logical_bytes": 2123388674,
+      "files": 10522,
+      "job_directories": 1165,
+      "managed_directories": 621
+    },
+    {
+      "sample_epoch": 1794665957.0482426,
+      "logical_bytes": 2124753299,
+      "files": 10534,
+      "job_directories": 1166,
+      "managed_directories": 621
+    },
+    {
+      "sample_epoch": 1794665963.0523605,
+      "logical_bytes": 2125844126,
+      "files": 10548,
+      "job_directories": 1167,
+      "managed_directories": 623
+    },
+    {
+      "sample_epoch": 1794665969.0723689,
+      "logical_bytes": 2125975175,
+      "files": 10555,
+      "job_directories": 1168,
+      "managed_directories": 624
+    },
+    {
+      "sample_epoch": 1794665975.101615,
+      "logical_bytes": 2126105961,
+      "files": 10562,
+      "job_directories": 1169,
+      "managed_directories": 625
+    },
+    {
+      "sample_epoch": 1794665981.1631324,
+      "logical_bytes": 2126237229,
+      "files": 10569,
+      "job_directories": 1170,
+      "managed_directories": 626
+    },
+    {
+      "sample_epoch": 1794665987.1606214,
+      "logical_bytes": 2126384466,
+      "files": 10580,
+      "job_directories": 1171,
+      "managed_directories": 627
+    },
+    {
+      "sample_epoch": 1794665993.2330356,
+      "logical_bytes": 2127569271,
+      "files": 10588,
+      "job_directories": 1172,
+      "managed_directories": 628
+    },
+    {
+      "sample_epoch": 1794665999.210416,
+      "logical_bytes": 2128302499,
+      "files": 10604,
+      "job_directories": 1174,
+      "managed_directories": 630
+    },
+    {
+      "sample_epoch": 1794666005.265158,
+      "logical_bytes": 2128429245,
+      "files": 10611,
+      "job_directories": 1175,
+      "managed_directories": 631
+    },
+    {
+      "sample_epoch": 1794666011.273355,
+      "logical_bytes": 2128555612,
+      "files": 10618,
+      "job_directories": 1176,
+      "managed_directories": 632
+    },
+    {
+      "sample_epoch": 1794666017.2861729,
+      "logical_bytes": 2128682513,
+      "files": 10625,
+      "job_directories": 1177,
+      "managed_directories": 633
+    },
+    {
+      "sample_epoch": 1794666023.3003504,
+      "logical_bytes": 2128808896,
+      "files": 10632,
+      "job_directories": 1178,
+      "managed_directories": 634
+    },
+    {
+      "sample_epoch": 1794666029.3903754,
+      "logical_bytes": 2129425673,
+      "files": 10639,
+      "job_directories": 1179,
+      "managed_directories": 635
+    },
+    {
+      "sample_epoch": 1794666035.1765547,
+      "logical_bytes": 2130789057,
+      "files": 10648,
+      "job_directories": 1180,
+      "managed_directories": 635
+    },
+    {
+      "sample_epoch": 1794666041.2012937,
+      "logical_bytes": 2131868867,
+      "files": 10661,
+      "job_directories": 1181,
+      "managed_directories": 637
+    },
+    {
+      "sample_epoch": 1794666047.2017627,
+      "logical_bytes": 2131995951,
+      "files": 10668,
+      "job_directories": 1182,
+      "managed_directories": 638
+    },
+    {
+      "sample_epoch": 1794666053.181519,
+      "logical_bytes": 2132124180,
+      "files": 10672,
+      "job_directories": 1183,
+      "managed_directories": 638
+    },
+    {
+      "sample_epoch": 1794666059.2459743,
+      "logical_bytes": 2132253398,
+      "files": 10679,
+      "job_directories": 1184,
+      "managed_directories": 639
+    },
+    {
+      "sample_epoch": 1794666065.240257,
+      "logical_bytes": 2133488280,
+      "files": 10686,
+      "job_directories": 1185,
+      "managed_directories": 640
+    },
+    {
+      "sample_epoch": 1794666071.2061045,
+      "logical_bytes": 2134524476,
+      "files": 10696,
+      "job_directories": 1186,
+      "managed_directories": 641
+    }
+  ],
+  "sampled_peak_temp_logical_bytes": 2134524476,
+  "scope": "Graphical parameter edits, selections, reassignments and save/reopen cycles; alternating TET4/TET10 solves every fifth cycle and on the final cycle. Not an unlimited leak-free claim.",
+  "host_job_peak_process_commit_bytes": 844980224
+}

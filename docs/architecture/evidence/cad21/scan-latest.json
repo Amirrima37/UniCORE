@@ -1,0 +1,17 @@
+[
+  {
+    "case": "scan",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--editor",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--quit"
+    ],
+    "seconds": 11.908746200002497,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\scan-1794604045066414800"
+  }
+]

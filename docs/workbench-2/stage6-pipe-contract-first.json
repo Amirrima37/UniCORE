@@ -1,0 +1,100 @@
+{
+  "inner_pressure_radial_dot_sum": 0.000174381885042939,
+  "meshes": [
+    {
+      "density": 1,
+      "edge_ratio_max": 3.5738491891029,
+      "elements": 96,
+      "generation_ms": 6.491,
+      "inner_radius": 0.05,
+      "mean_ratio_median": 0.737914381411089,
+      "mean_ratio_min": 0.51395631880278,
+      "nodes": 64,
+      "warnings": 0
+    },
+    {
+      "density": 2,
+      "edge_ratio_max": 3.48839613435685,
+      "elements": 768,
+      "generation_ms": 43.942,
+      "inner_radius": 0.05,
+      "mean_ratio_median": 0.679021490587808,
+      "mean_ratio_min": 0.53230594922344,
+      "nodes": 288,
+      "warnings": 0
+    },
+    {
+      "density": 4,
+      "edge_ratio_max": 3.44865482804118,
+      "elements": 6144,
+      "generation_ms": 354.166,
+      "inner_radius": 0.05,
+      "mean_ratio_median": 0.686837622547351,
+      "mean_ratio_min": 0.540268552478705,
+      "nodes": 1600,
+      "warnings": 0
+    },
+    {
+      "density": 1,
+      "edge_ratio_max": 4.02791509614604,
+      "elements": 384,
+      "generation_ms": 25.291,
+      "inner_radius": 0.09,
+      "mean_ratio_median": 0.368899542096027,
+      "mean_ratio_min": 0.28518975964293,
+      "nodes": 160,
+      "warnings": 128
+    },
+    {
+      "density": 2,
+      "edge_ratio_max": 4.0747017648658,
+      "elements": 3072,
+      "generation_ms": 189.389,
+      "inner_radius": 0.09,
+      "mean_ratio_median": 0.363250218209641,
+      "mean_ratio_min": 0.279847652811438,
+      "nodes": 864,
+      "warnings": 1024
+    },
+    {
+      "density": 4,
+      "edge_ratio_max": 4.12598097546715,
+      "elements": 24576,
+      "generation_ms": 1449.565,
+      "inner_radius": 0.09,
+      "mean_ratio_median": 0.365475152080243,
+      "mean_ratio_min": 0.276963486464808,
+      "nodes": 5440,
+      "warnings": 8192
+    },
+    {
+      "density": 1,
+      "edge_ratio_max": 39.0309423137817,
+      "elements": 3840,
+      "generation_ms": 264.727,
+      "inner_radius": 0.099,
+      "mean_ratio_median": 0.0188929069313952,
+      "mean_ratio_min": 0.0141515660801615,
+      "nodes": 1312,
+      "warnings": 3840
+    },
+    {
+      "density": 2,
+      "edge_ratio_max": 39.2198733462656,
+      "elements": 30720,
+      "generation_ms": 2498.715,
+      "inner_radius": 0.099,
+      "mean_ratio_median": 0.0188921045049198,
+      "mean_ratio_min": 0.0141626310343603,
+      "nodes": 7776,
+      "warnings": 30720
+    },
+    {
+      "density": 4,
+      "inner_radius": 0.099,
+      "rejected": "Pipe node limit: 10000; reduce density or length/radius ratio"
+    }
+  ],
+  "pressure_residual": 0.0000000000935473895714001,
+  "reaction_norm_N": 0.0000000000751854784006311
+}

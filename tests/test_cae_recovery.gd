@@ -75,7 +75,10 @@ func _initialize() -> void:
 	check(workspace.document.save_project("res://.tools/cae-recovery.ucae")==OK,"Save engineering document")
 	var loaded=load("res://core/cae/cae_document.gd").new()
 	check(loaded.open_project("res://.tools/cae-recovery.ucae")=="","Load engineering document")
-	check(JSON.stringify(loaded.data.parts,"",true,true)==JSON.stringify(workspace.document.data.parts,"",true,true),"All primitive parameters roundtrip")
+	# JSON represents 0 and 0.0 as the same numeric value after parsing.
+	var loaded_parts_json := JSON.stringify(JSON.parse_string(JSON.stringify(loaded.data.parts,"",true,true)),"",true,true)
+	var original_parts_json := JSON.stringify(JSON.parse_string(JSON.stringify(workspace.document.data.parts,"",true,true)),"",true,true)
+	check(loaded_parts_json==original_parts_json,"All primitive parameters roundtrip")
 	workspace.file_dialog(true)
 	var escape:=InputEventKey.new()
 	escape.keycode=KEY_ESCAPE

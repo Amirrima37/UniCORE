@@ -1,0 +1,464 @@
+[
+	{
+		"case": "Box-static_structural",
+		"ms": 10.502,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 0
+	},
+	{
+		"case": "Box-static_structural",
+		"ms": 10.752,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 1
+	},
+	{
+		"case": "Box-static_structural",
+		"ms": 8.334,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 2
+	},
+	{
+		"case": "Box-static_structural",
+		"ms": 9.572,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 3
+	},
+	{
+		"case": "Box-static_structural",
+		"ms": 9.885,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 4
+	},
+	{
+		"case": "Box-static_structural",
+		"field": "displacement",
+		"ms": 38.044,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 0
+	},
+	{
+		"case": "Box-static_structural",
+		"field": "von_mises",
+		"ms": 23.64,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 1
+	},
+	{
+		"case": "Box-static_structural",
+		"field": "displacement",
+		"ms": 24.363,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 2
+	},
+	{
+		"case": "Box-static_structural",
+		"field": "von_mises",
+		"ms": 19.675,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 3
+	},
+	{
+		"case": "Box-static_structural",
+		"field": "displacement",
+		"ms": 23.871,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 4
+	},
+	{
+		"case": "Box-static_structural",
+		"field": "von_mises",
+		"ms": 22.906,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 5
+	},
+	{
+		"case": "Box-static_structural",
+		"operation": "build",
+		"phases": {
+
+		}
+	},
+	{
+		"case": "Box-static_structural",
+		"operation": "build",
+		"phases": {
+
+		}
+	},
+	{
+		"case": "Box-static_structural",
+		"operation": "build",
+		"phases": {
+
+		}
+	},
+	{
+		"case": "Box-steady_thermal",
+		"ms": 12.591,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 0
+	},
+	{
+		"case": "Box-steady_thermal",
+		"ms": 12.86,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 1
+	},
+	{
+		"case": "Box-steady_thermal",
+		"ms": 12.243,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 2
+	},
+	{
+		"case": "Box-steady_thermal",
+		"ms": 10.079,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 3
+	},
+	{
+		"case": "Box-steady_thermal",
+		"ms": 11.588,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 4
+	},
+	{
+		"case": "Box-steady_thermal",
+		"field": "temperature",
+		"ms": 45.68,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 0
+	},
+	{
+		"case": "Box-steady_thermal",
+		"field": "heat_flux",
+		"ms": 24.429,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 1
+	},
+	{
+		"case": "Box-steady_thermal",
+		"field": "temperature",
+		"ms": 21.004,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 2
+	},
+	{
+		"case": "Box-steady_thermal",
+		"field": "heat_flux",
+		"ms": 32.409,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 3
+	},
+	{
+		"case": "Box-steady_thermal",
+		"field": "temperature",
+		"ms": 26.939,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 4
+	},
+	{
+		"case": "Box-steady_thermal",
+		"field": "heat_flux",
+		"ms": 31.471,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 5
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"ms": 451.669,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 0
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"ms": 429.828,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 1
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"ms": 424.575,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 2
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"ms": 425.445,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 3
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"ms": 420.149,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 4
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"field": "displacement",
+		"ms": 640.568,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 0
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"field": "von_mises",
+		"ms": 650.291,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 1
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"field": "displacement",
+		"ms": 623.947,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 2
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"field": "von_mises",
+		"ms": 581.884,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 3
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"field": "displacement",
+		"ms": 665.787,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 4
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"field": "von_mises",
+		"ms": 619.08,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 5
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"operation": "build",
+		"phases": {
+
+		}
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"operation": "build",
+		"phases": {
+
+		}
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"operation": "build",
+		"phases": {
+
+		}
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"ms": 404.064,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 0
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"ms": 400.318,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 1
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"ms": 366.66,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 2
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"ms": 361.417,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 3
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"ms": 351.582,
+		"operation": "import",
+		"phases": {
+
+		},
+		"sample": 4
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"field": "temperature",
+		"ms": 560.927,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 0
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"field": "heat_flux",
+		"ms": 434.612,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 1
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"field": "temperature",
+		"ms": 423.384,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 2
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"field": "heat_flux",
+		"ms": 440.275,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 3
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"field": "temperature",
+		"ms": 425.535,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 4
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"field": "heat_flux",
+		"ms": 431.97,
+		"operation": "switch",
+		"phases": {
+
+		},
+		"sample": 5
+	}
+]

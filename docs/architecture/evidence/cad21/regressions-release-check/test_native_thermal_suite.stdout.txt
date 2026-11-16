@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+Conduction linear profile maximum error K: 0.0000000000004 heat balance W: -0.00000000000128
+Transient slab midpoint error K: 0.66387760522281 Fourier reference K: 377.231160685859
+Thermal analytical suite: 0 failures

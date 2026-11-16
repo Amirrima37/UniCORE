@@ -3,7 +3,7 @@
 # 🌐 UniCORE
 ### Universal Autonomous Runtime & Self-Synthesizing Modular Cyber-Engine
 
-[![Godot Engine](https://img.shields.io/badge/Godot-4.0.stable-478CBF?style=flat-square&logo=godotengine&logoColor=white)](https://godotengine.org)
+[![Godot Engine](https://img.shields.io/badge/Godot-4.7.2-478CBF?style=flat-square&logo=godotengine&logoColor=white)](https://godotengine.org)
 [![Language](https://img.shields.io/badge/Language-GDScript%202.0-355570?style=flat-square&logo=godotengine)](https://docs.godotengine.org)
 [![License](https://img.shields.io/badge/License-MIT-00E5FF?style=flat-square)](LICENSE)
 [![Tests](https://img.shields.io/badge/Tests-100%25%20PASS%20(18%2F18%20Suites)-00E673?style=flat-square&logo=checkmarx&logoColor=white)](tests/)
@@ -136,7 +136,7 @@ sequenceDiagram
 ## 🚀 Быстрый старт
 
 ### Системные требования
-* **Godot Engine**: `v4.0.stable` (Standard Edition, 64-bit).
+* **Godot Engine**: `v4.7.2` (Standard Edition, 64-bit).
 * **ОС**: Windows 10/11, Linux (x86_64).
 * **LLM API (Опционально)**: Ключ Google Gemini, OpenAI, OpenRouter или запущенная локально Ollama. *Без API система полноценно работает в оффлайн-режиме за счет встроенного семантического кэша и предустановленных модулей.*
 
@@ -147,7 +147,7 @@ cd UniCORE
 ```
 
 ### 2. Запуск через редактор Godot
-1. Запустите **Godot Engine 4.0**.
+1. Запустите **Godot Engine 4.7.2**.
 2. Нажмите кнопку **Import** (Импорт) и выберите файл `project.godot`.
 3. Нажмите **Edit**, затем клавишу **F5** (Запуск проекта).
 
@@ -160,7 +160,7 @@ cd UniCORE
 & "C:\Godot\godot.exe" --headless --path "c:\dev\UniCORE" --check-only
 
 # Запуск полного сьюта модульных и интеграционных тестов
-& "C:\Godot\Godot_v4.0-stable_win64_console.exe" --headless --path "c:\dev\UniCORE" -s res://tests/test_runner.gd
+& "C:\Godot\Godot_v4.7.2-stable_win64_console.exe" --headless --path "c:\dev\UniCORE" -s res://tests/test_runner.gd
 ```
 
 ### 4. Настройка LLM-провайдера
@@ -197,7 +197,7 @@ cd UniCORE
 Проект следует методологии **TDAID (Test-Driven AI Development)**. Любая подсистема покрывается автономными модульными тестами в директории `tests/`.
 
 ```powershell
-& "C:\Godot\Godot_v4.0-stable_win64_console.exe" --headless --path c:\dev\UniCORE -s res://tests/test_runner.gd
+& "C:\Godot\Godot_v4.7.2-stable_win64_console.exe" --headless --path c:\dev\UniCORE -s res://tests/test_runner.gd
 ```
 
 * **Текущее покрытие:** 18 из 18 тестовых сьютов (100% PASS).
@@ -227,3 +227,18 @@ cd UniCORE
 
 Проект распространяется под открытой лицензией [MIT License](LICENSE).
 Copyright (c) 2026 Amirrima37 & UniCORE Contributors.
+
+
+### Third-party engineering tools and licenses
+
+UniCORE may use separately installed engineering tools. Their licenses are separate from UniCORE's MIT license. Preserve each upstream license and notice when redistributing a tool or build; verify the exact package's terms.
+
+| Component | Project version | License |
+|---|---:|---|
+| Godot Engine | 4.7.2 | MIT License |
+| Gmsh | 4.15.2 | GNU GPL v2 or later, with Gmsh exception |
+| CalculiX | 2.23 | GNU GPL v2 (per accompanying distribution license) |
+| Open CASCADE Technology (OCCT) | 7.8.1 | LGPL-2.1 with OCCT exception (check SDK notices) |
+| godot-cpp | 4.7 | MIT License |
+
+These are dependency license summaries, not legal advice. Optional components and binary distributions may carry additional notices or terms.

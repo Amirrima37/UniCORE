@@ -1,0 +1,14 @@
+extends "res://core/event_bus.gd"
+func unsubscribe_all_for_target(target):
+ print("UNSUB begin ",target.get_class())
+ for event in _listeners.keys():
+  for callback in _listeners[event]:
+   print("CALLABLE before is_valid ",event)
+   var valid=callback.is_valid()
+   print("CALLABLE valid=",valid)
+   if valid:
+    print("CALLABLE before get_object")
+    var obj=callback.get_object()
+    print("CALLABLE object queried")
+ super.unsubscribe_all_for_target(target)
+ print("UNSUB end")

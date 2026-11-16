@@ -1,0 +1,1 @@
+CALCULIX_EXTREME_COMPARISON [{"kind": "Box", "exit_code": 0, "displacement_relative_l2": 1.1576959638472872e-07, "stress_relative_l2": 1.9414022506406003e-07, "extreme_residual": 3.338860361626223e-11}, {"kind": "Cylinder", "exit_code": 0, "displacement_relative_l2": 2.2208174204649365e-07, "stress_relative_l2": 2.0966274159838577e-07, "extreme_residual": 6.176478961617115e-11}]

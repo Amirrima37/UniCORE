@@ -1,0 +1,7 @@
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+ERROR: Unsupported CAD topology metadata; recompute with a supported version
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] fail (res://tests/cad24_gui.gd:4)
+       [1] _initialize (res://tests/cad24_gui.gd:14)

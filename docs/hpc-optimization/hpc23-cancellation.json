@@ -1,0 +1,8 @@
+{
+  "exit_code": 3,
+  "cancel_latency_s": 0.035613599999123835,
+  "status": {
+    "state": "Cancelled",
+    "error": "CANCELLED"
+  }
+}

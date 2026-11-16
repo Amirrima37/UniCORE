@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad23_independent.py", line 100, in <module>
+    assert kinematic_error<.005,(row['case'],order,row['level'],kinematic_error)
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('bending', 2, 2, 0.006820742503708251)

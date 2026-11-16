@@ -1,0 +1,77 @@
+[
+    {
+        "name":  "CrossDeviceService",
+        "pid":  10780,
+        "cpu_s":  8.890625
+    },
+    {
+        "name":  "msedgewebview2",
+        "pid":  17192,
+        "cpu_s":  3.96875
+    },
+    {
+        "name":  "explorer",
+        "pid":  3860,
+        "cpu_s":  3.203125
+    },
+    {
+        "name":  "msedgewebview2",
+        "pid":  16904,
+        "cpu_s":  2.140625
+    },
+    {
+        "name":  "GoogleDriveFS",
+        "pid":  15992,
+        "cpu_s":  0.875
+    },
+    {
+        "name":  "python",
+        "pid":  83788,
+        "cpu_s":  0.84375
+    },
+    {
+        "name":  "codex",
+        "pid":  19328,
+        "cpu_s":  0.6875
+    },
+    {
+        "name":  "WindowsTerminal",
+        "pid":  10260,
+        "cpu_s":  0.671875
+    },
+    {
+        "name":  "BloodyWorkShop8",
+        "pid":  14808,
+        "cpu_s":  0.578125
+    },
+    {
+        "name":  "powershell",
+        "pid":  43028,
+        "cpu_s":  0.25
+    },
+    {
+        "name":  "OpenConsole",
+        "pid":  22136,
+        "cpu_s":  0.125
+    },
+    {
+        "name":  "xray",
+        "pid":  8604,
+        "cpu_s":  0.09375
+    },
+    {
+        "name":  "codex",
+        "pid":  19396,
+        "cpu_s":  0.09375
+    },
+    {
+        "name":  "codex",
+        "pid":  20092,
+        "cpu_s":  0.046875
+    },
+    {
+        "name":  "chrome",
+        "pid":  20896,
+        "cpu_s":  0.046875
+    }
+]

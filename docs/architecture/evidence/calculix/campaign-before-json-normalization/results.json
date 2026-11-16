@@ -1,0 +1,74 @@
+[
+  {
+    "name": "export",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:12:01.723197+00:00",
+    "ended_utc": "2026-11-12T21:12:02.348448+00:00",
+    "seconds": 0.6252238000015495
+  },
+  {
+    "name": "patch",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:12:02.350533+00:00",
+    "ended_utc": "2026-11-12T21:12:03.627992+00:00",
+    "seconds": 1.2774518000078388
+  },
+  {
+    "name": "graphical-workbench",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:12:03.629626+00:00",
+    "ended_utc": "2026-11-12T21:12:21.642881+00:00",
+    "seconds": 18.01326030000928
+  },
+  {
+    "name": "owned-process",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:12:21.644821+00:00",
+    "ended_utc": "2026-11-12T21:12:24.568071+00:00",
+    "seconds": 2.923248399994918
+  },
+  {
+    "name": "mesh-repeatability",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:12:24.569094+00:00",
+    "ended_utc": "2026-11-12T21:12:31.192361+00:00",
+    "seconds": 6.623275099991588
+  },
+  {
+    "name": "extreme-comparison",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:12:31.193621+00:00",
+    "ended_utc": "2026-11-12T21:12:31.788252+00:00",
+    "seconds": 0.594626000005519
+  },
+  {
+    "name": "bar-cantilever",
+    "exit_code": 1,
+    "passed": false,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:12:31.789356+00:00",
+    "ended_utc": "2026-11-12T21:12:34.389243+00:00",
+    "seconds": 2.599893799997517
+  },
+  {
+    "name": "default-regressions",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:12:34.390576+00:00",
+    "ended_utc": "2026-11-12T21:13:28.802999+00:00",
+    "seconds": 54.412427000002936
+  }
+]

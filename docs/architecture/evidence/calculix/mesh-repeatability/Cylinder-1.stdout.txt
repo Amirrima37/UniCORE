@@ -1,0 +1,54 @@
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Circle)
+Info    : [ 40%] Meshing curve 2 (Line)
+Info    : [ 70%] Meshing curve 3 (Circle)
+Info    : Done meshing 1D (Wall 0.000543118s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Cylinder, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.00499678s, CPU 0s)
+Info    : Meshing 3D...
+Info    : 3D Meshing 1 volume with 1 connected component
+Info    : Tetrahedrizing 36 nodes...
+Info    : Done tetrahedrizing 44 nodes (Wall 0.000715017s, CPU 0s)
+Info    : Reconstructing mesh...
+Info    :  - Creating surface mesh
+Info    :  - Identifying boundary edges
+Info    :  - Recovering boundary
+Info    : Done reconstructing mesh (Wall 0.00172591s, CPU 0.015625s)
+Info    : Found volume 1
+Info    : It. 0 - 0 nodes created - worst tet radius 1.11735 (nodes removed 0 0)
+Info    : 3D refinement terminated (38 nodes total):
+Info    :  - 0 Delaunay cavities modified for star shapeness
+Info    :  - 0 nodes could not be inserted
+Info    :  - 77 tetrahedra created in 0.000129223 sec. (595869 tets/s)
+Info    : 0 node relocations
+Info    : Done meshing 3D (Wall 0.00293589s, CPU 0.015625s)
+Info    : Optimizing mesh...
+Info    : Optimizing volume 1
+Info    : Optimization starts (volume = 0.00126306) with worst = 0.260713 / average = 0.759835:
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         4 elements
+Info    : 0.30 < quality < 0.40 :         3 elements
+Info    : 0.40 < quality < 0.50 :         7 elements
+Info    : 0.50 < quality < 0.60 :         6 elements
+Info    : 0.60 < quality < 0.70 :         1 elements
+Info    : 0.70 < quality < 0.80 :        11 elements
+Info    : 0.80 < quality < 0.90 :        23 elements
+Info    : 0.90 < quality < 1.00 :        22 elements
+Info    : 4 edge swaps, 1 node relocations (volume = 0.00126306): worst = 0.307212 / average = 0.792744 (Wall 0.000242949s, CPU 0s)
+Info    : No ill-shaped tets in the mesh :-)
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :         3 elements
+Info    : 0.40 < quality < 0.50 :         3 elements
+Info    : 0.50 < quality < 0.60 :         5 elements
+Info    : 0.60 < quality < 0.70 :         7 elements
+Info    : 0.70 < quality < 0.80 :        11 elements
+Info    : 0.80 < quality < 0.90 :        27 elements
+Info    : 0.90 < quality < 1.00 :        19 elements
+Info    : Done optimizing mesh (Wall 0.000445843s, CPU 0s)
+Info    : 38 nodes 161 elements

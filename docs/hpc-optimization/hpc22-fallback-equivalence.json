@@ -1,0 +1,110 @@
+[
+  {
+    "job": "docs\\extreme-mode\\examples\\tet.ucjob",
+    "mode": "serial",
+    "threads": 1,
+    "exact": true
+  },
+  {
+    "job": "docs\\extreme-mode\\examples\\tet.ucjob",
+    "mode": "serial",
+    "threads": 4,
+    "exact": true
+  },
+  {
+    "job": "docs\\extreme-mode\\examples\\tet.ucjob",
+    "mode": "serial",
+    "threads": 12,
+    "exact": true
+  },
+  {
+    "job": "docs\\extreme-mode\\examples\\tet.ucjob",
+    "mode": "row-owned",
+    "threads": 1,
+    "exact": true
+  },
+  {
+    "job": "docs\\extreme-mode\\examples\\tet.ucjob",
+    "mode": "row-owned",
+    "threads": 4,
+    "exact": true
+  },
+  {
+    "job": "docs\\extreme-mode\\examples\\tet.ucjob",
+    "mode": "row-owned",
+    "threads": 12,
+    "exact": true
+  },
+  {
+    "job": ".tools\\extreme-thermal\\model.ucjob",
+    "mode": "serial",
+    "threads": 1,
+    "exact": true
+  },
+  {
+    "job": ".tools\\extreme-thermal\\model.ucjob",
+    "mode": "serial",
+    "threads": 4,
+    "exact": true
+  },
+  {
+    "job": ".tools\\extreme-thermal\\model.ucjob",
+    "mode": "serial",
+    "threads": 12,
+    "exact": true
+  },
+  {
+    "job": ".tools\\extreme-thermal\\model.ucjob",
+    "mode": "row-owned",
+    "threads": 1,
+    "exact": true
+  },
+  {
+    "job": ".tools\\extreme-thermal\\model.ucjob",
+    "mode": "row-owned",
+    "threads": 4,
+    "exact": true
+  },
+  {
+    "job": ".tools\\extreme-thermal\\model.ucjob",
+    "mode": "row-owned",
+    "threads": 12,
+    "exact": true
+  },
+  {
+    "job": ".tools\\extreme-checkpoint\\model.ucjob",
+    "mode": "serial",
+    "threads": 1,
+    "exact": true
+  },
+  {
+    "job": ".tools\\extreme-checkpoint\\model.ucjob",
+    "mode": "serial",
+    "threads": 4,
+    "exact": true
+  },
+  {
+    "job": ".tools\\extreme-checkpoint\\model.ucjob",
+    "mode": "serial",
+    "threads": 12,
+    "exact": true
+  },
+  {
+    "job": ".tools\\extreme-checkpoint\\model.ucjob",
+    "mode": "row-owned",
+    "threads": 1,
+    "exact": true
+  },
+  {
+    "job": ".tools\\extreme-checkpoint\\model.ucjob",
+    "mode": "row-owned",
+    "threads": 4,
+    "exact": true
+  },
+  {
+    "job": ".tools\\extreme-checkpoint\\model.ucjob",
+    "mode": "row-owned",
+    "threads": 12,
+    "exact": true
+  }
+]

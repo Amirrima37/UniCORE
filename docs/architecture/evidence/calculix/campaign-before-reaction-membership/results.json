@@ -1,0 +1,74 @@
+[
+  {
+    "name": "export",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:14:24.392224+00:00",
+    "ended_utc": "2026-11-12T21:14:24.947817+00:00",
+    "seconds": 0.5555714000074659
+  },
+  {
+    "name": "patch",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:14:24.948809+00:00",
+    "ended_utc": "2026-11-12T21:14:26.243785+00:00",
+    "seconds": 1.2949827999982517
+  },
+  {
+    "name": "graphical-workbench",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:14:26.244974+00:00",
+    "ended_utc": "2026-11-12T21:14:46.928040+00:00",
+    "seconds": 20.683069199993042
+  },
+  {
+    "name": "owned-process",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:14:46.929306+00:00",
+    "ended_utc": "2026-11-12T21:14:49.902327+00:00",
+    "seconds": 2.973020400007954
+  },
+  {
+    "name": "mesh-repeatability",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:14:49.903269+00:00",
+    "ended_utc": "2026-11-12T21:14:56.633695+00:00",
+    "seconds": 6.73042570000689
+  },
+  {
+    "name": "extreme-comparison",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:14:56.634518+00:00",
+    "ended_utc": "2026-11-12T21:14:57.219000+00:00",
+    "seconds": 0.584489200002281
+  },
+  {
+    "name": "bar-cantilever",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:14:57.220152+00:00",
+    "ended_utc": "2026-11-12T21:15:16.379032+00:00",
+    "seconds": 19.15888429999177
+  },
+  {
+    "name": "default-regressions",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:15:16.380129+00:00",
+    "ended_utc": "2026-11-12T21:16:09.804915+00:00",
+    "seconds": 53.42478960000153
+  }
+]

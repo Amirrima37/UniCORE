@@ -1,0 +1,92 @@
+[
+  {
+    "case": "axial-cylinder",
+    "cost": "dofs",
+    "linear_level": 2,
+    "quadratic_level": 0,
+    "linear_cost": 822,
+    "quadratic_cost": 825,
+    "linear_error": 0.013307910388820066,
+    "quadratic_error": 0.00019425862624222745
+  },
+  {
+    "case": "axial-cylinder",
+    "cost": "solver_process_s",
+    "linear_level": 1,
+    "quadratic_level": 0,
+    "linear_cost": 0.11787860000913497,
+    "quadratic_cost": 0.11113939998904243,
+    "linear_error": 0.028276980882121494,
+    "quadratic_error": 0.00019425862624222745
+  },
+  {
+    "case": "axial-cylinder",
+    "cost": "solver_peak_commit_MiB",
+    "linear_level": 2,
+    "quadratic_level": 0,
+    "linear_cost": 162.23828125,
+    "quadratic_cost": 162.234375,
+    "linear_error": 0.013307910388820066,
+    "quadratic_error": 0.00019425862624222745
+  },
+  {
+    "case": "bending",
+    "cost": "dofs",
+    "linear_level": 2,
+    "quadratic_level": 0,
+    "linear_cost": 1782,
+    "quadratic_cost": 2172,
+    "linear_error": 0.20191749624999944,
+    "quadratic_error": 0.003689947972972507
+  },
+  {
+    "case": "bending",
+    "cost": "solver_process_s",
+    "linear_level": 2,
+    "quadratic_level": 0,
+    "linear_cost": 0.21593259999644943,
+    "quadratic_cost": 0.2443550000025425,
+    "linear_error": 0.20191749624999944,
+    "quadratic_error": 0.003689947972972507
+  },
+  {
+    "case": "bending",
+    "cost": "solver_peak_commit_MiB",
+    "linear_level": 1,
+    "quadratic_level": 0,
+    "linear_cost": 162.26171875,
+    "quadratic_cost": 162.234375,
+    "linear_error": 0.4331893499999996,
+    "quadratic_error": 0.003689947972972507
+  },
+  {
+    "case": "step-hole",
+    "cost": "dofs",
+    "linear_level": 3,
+    "quadratic_level": 0,
+    "linear_cost": 12681,
+    "quadratic_cost": 16224,
+    "linear_error": 0.001731646388944852,
+    "quadratic_error": 6.763965946565698e-05
+  },
+  {
+    "case": "step-hole",
+    "cost": "solver_process_s",
+    "linear_level": 3,
+    "quadratic_level": 0,
+    "linear_cost": 1.2756197999988217,
+    "quadratic_cost": 1.4349210999935167,
+    "linear_error": 0.001731646388944852,
+    "quadratic_error": 6.763965946565698e-05
+  },
+  {
+    "case": "step-hole",
+    "cost": "solver_peak_commit_MiB",
+    "linear_level": 3,
+    "quadratic_level": 0,
+    "linear_cost": 168.76953125,
+    "quadratic_cost": 169.796875,
+    "linear_error": 0.001731646388944852,
+    "quadratic_error": 6.763965946565698e-05
+  }
+]

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad23_unit.py", line 40, in <module>
+    mesh=mesh_study(ROOT,data,.07);assert all(len(c)==10 for c in mesh['elements'])
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\gmsh_study.py", line 135, in mesh_study
+    else: raise ValueError('Only Box and Cylinder supported')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Only Box and Cylinder supported

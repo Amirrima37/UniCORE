@@ -1,0 +1,86 @@
+{
+  "cases": [
+    {
+      "areas": {
+        "InletEnd": 0.0229610059419054,
+        "InnerWall": 0.0312144515225805,
+        "OuterWall": 0.062428903045161,
+        "OutletEnd": 0.0229610059419054
+      },
+      "centroid_flux_relative_rms": 0.164023168397454,
+      "density": 1,
+      "displacement_m": 0.00435520988292192,
+      "elements": 192,
+      "energy_balance_W": 0.000000000000085265128291212,
+      "generation_ms": 12.593,
+      "heat_inner_W": 954.77936342234,
+      "heat_relative_error": 0.0532915893102726,
+      "mean_ratio_median": 0.716583121762803,
+      "mean_ratio_min": 0.503526202915779,
+      "nodes": 96,
+      "reaction_N": -0.99999999999938,
+      "residual": 0,
+      "structural_native_solve_ms": 3.3097,
+      "structural_residual": 0.0000000000668766850922003,
+      "structural_stress_max_error_Pa": 0.00000000945939859775535,
+      "temperature_max_error_K": 0,
+      "thermal_native_solve_ms": 0.2303,
+      "volume_relative_error": 0.025504641595567
+    },
+    {
+      "areas": {
+        "InletEnd": 0.0234108386419354,
+        "InnerWall": 0.0313654849054594,
+        "OuterWall": 0.0627309698109188,
+        "OutletEnd": 0.0234108386419354
+      },
+      "centroid_flux_relative_rms": 0.0852732255335109,
+      "density": 2,
+      "displacement_m": 0.00427152574623739,
+      "elements": 1536,
+      "energy_balance_W": 0.0000000000204316563667817,
+      "generation_ms": 97.937,
+      "heat_inner_W": 919.233813452065,
+      "heat_relative_error": 0.0140785205580345,
+      "mean_ratio_median": 0.677502389414364,
+      "mean_ratio_min": 0.519591857044386,
+      "nodes": 480,
+      "reaction_N": -0.99999999999706,
+      "residual": 0.0000000000807353771646989,
+      "structural_native_solve_ms": 27.6835,
+      "structural_residual": 0.0000000000907045398092632,
+      "structural_stress_max_error_Pa": 0.0000000154561874410319,
+      "temperature_max_error_K": 0.834318500434108,
+      "thermal_native_solve_ms": 1.4347,
+      "volume_relative_error": 0.00641314885578559
+    },
+    {
+      "areas": {
+        "InletEnd": 0.0235241136790946,
+        "InnerWall": 0.0314033115695479,
+        "OuterWall": 0.0628066231390958,
+        "OutletEnd": 0.0235241136790946
+      },
+      "centroid_flux_relative_rms": 0.043460267541654,
+      "density": 4,
+      "displacement_m": 0.00425095718224171,
+      "elements": 12288,
+      "energy_balance_W": 0.0000000000828315194212337,
+      "generation_ms": 676.712,
+      "heat_inner_W": 909.72818412881,
+      "heat_relative_error": 0.00359211940520909,
+      "mean_ratio_median": 0.671866477305424,
+      "mean_ratio_min": 0.526361697727836,
+      "nodes": 2880,
+      "reaction_N": -1.00000000001257,
+      "residual": 0.0000000000647977808393554,
+      "structural_native_solve_ms": 346.8498,
+      "structural_residual": 0.000000000088477016583526,
+      "structural_stress_max_error_Pa": 0.0000000410153120355972,
+      "temperature_max_error_K": 0.266562426306336,
+      "thermal_native_solve_ms": 20.173,
+      "volume_relative_error": 0.00160560696454881
+    }
+  ],
+  "failures": 0
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "no_clipboard_timer",
+    "exit": 3221225477,
+    "script_error": false,
+    "seconds": 12.310828200003016
+  },
+  {
+    "name": "detach_drawer_first",
+    "exit": 3221225477,
+    "script_error": false,
+    "seconds": 10.51159120000375
+  }
+]

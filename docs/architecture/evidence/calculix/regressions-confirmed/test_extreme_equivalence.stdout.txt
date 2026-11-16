@@ -1,0 +1,10 @@
+Godot Engine v4.0.stable.official.92bee43ad - https://godotengine.org
+ 
+static_structural native ok=true 
+static_structural difference=0
+steady_thermal native ok=true 
+steady_thermal difference=0.00000000000006
+transient_thermal native ok=true 
+transient_thermal difference=0.00000000000006
+[{"analysis":"static_structural","history_difference":0,"iterations":33,"maximum_field_difference":0.00000000000000000000000330872245,"native_residual":0.00000000000805919638700014,"residual":0.00000000000805919638700014,"stress_or_flux_difference":0.000000000000454747350886464},{"analysis":"steady_thermal","history_difference":0,"iterations":48,"maximum_field_difference":0.000000000000056843418860808,"native_residual":0.000000000000375930392008082,"residual":0.000000000000375479726275894,"stress_or_flux_difference":0.000000000000227373675443232},{"analysis":"transient_thermal","history_difference":0.000000000000056843418860808,"iterations":9,"maximum_field_difference":0.000000000000056843418860808,"native_residual":0.000000000538302644408502,"residual":0.000000000538302614550731,"stress_or_flux_difference":0.00000000000000000693889390390723}]
+Standalone numerical equivalence PASS

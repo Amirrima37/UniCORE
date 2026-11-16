@@ -1,0 +1,610 @@
+{
+  "schema": 1,
+  "revision": 1,
+  "units": "m-N-Pa-kg",
+  "parts": [
+    {
+      "kind": "CAD",
+      "cad_model": {
+        "schema": 1,
+        "units": "m",
+        "root": "sphere",
+        "nodes": [
+          {
+            "id": "sphere",
+            "type": "Sphere",
+            "dimensions": [
+              0.1,
+              0.1,
+              0.1
+            ]
+          }
+        ]
+      },
+      "cad_format": "brep",
+      "cad_base64": "REJSZXBfRHJhd2FibGVTaGFwZQoKQ0FTQ0FERSBUb3BvbG9neSBWMSwgKGMpIE1hdHJhLURhdGF2aXNpb24KTG9jYXRpb25zIDAKQ3VydmUyZHMgNAoxIDAgMS41NzA3OTYzMjY3OTQ4OTY2IDEgMCAKMSA2LjI4MzE4NTMwNzE3OTU4NjIgLTYuMjgzMTg1MzA3MTc5NTg2MiAwIDEgCjEgMCAtNi4yODMxODUzMDcxNzk1ODYyIDAgMSAKMSAwIC0xLjU3MDc5NjMyNjc5NDg5NjYgMSAwIApDdXJ2ZXMgMQoyIDAgMCAwIC0yLjQ0OTI5MzU5ODI5NDcwNjRlLTE2IC0xIDAgMSAtMi40NDkyOTM1OTgyOTQ3MDY0ZS0xNiAwIDAgMCAxIDAuMDUwMDAwMDAwMDAwMDAwMDAzClBvbHlnb24zRCAwClBvbHlnb25PblRyaWFuZ3VsYXRpb25zIDAKU3VyZmFjZXMgMQo0IDAgMCAwIDAgMCAxIDEgMCAtMCAtMCAxIDAgMC4wNTAwMDAwMDAwMDAwMDAwMDMKVHJpYW5ndWxhdGlvbnMgMAoKVFNoYXBlcyAxMApWZQoxZS0wNwozLjA2MTYxNjk5Nzg2ODM4ZS0xOCAtNy40OTg3OTg5MTMzMDkyOWUtMzQgMC4wNQowIDAKCjAxMDExMDEKKgpFZAogMWUtMDcgMSAxIDEKMiAgMSAxIDAgMCA2LjI4MzE4NTMwNzE3OTU5CjAKCjAxMDEwMDAKKzEwIDAgLTEwIDAgKgpWZQoxZS0wNwozLjA2MTYxNjk5Nzg2ODM4ZS0xOCAtNy40OTg3OTg5MTMzMDkyOWUtMzQgLTAuMDUKMCAwCgowMTAxMTAxCioKRWQKIDFlLTA3IDEgMSAwCjEgIDEgMCA0LjcxMjM4ODk4MDM4NDY5IDcuODUzOTgxNjMzOTc0NDgKMyAgMiAzQ04gMSAwIDQuNzEyMzg4OTgwMzg0NjkgNy44NTM5ODE2MzM5NzQ0OAowCgowMTAxMDAwCi0xMCAwICs4IDAgKgpFZAogMWUtMDcgMSAxIDEKMiAgNCAxIDAgMCA2LjI4MzE4NTMwNzE3OTU5CjAKCjAxMDEwMDAKKzggMCAtOCAwICoKV2kKCjAxMDExMDAKLTkgMCArNyAwICs2IDAgLTcgMCAqCkZhCjAgIDFlLTA3IDEgMAoKMDExMTAwMAorNSAwICoKU2gKCjAxMDExMDAKKzQgMCAqClNvCgowMTAwMDAwCiszIDAgKgpDbwoKMTEwMDAwMAorMiAwICoKCisxIDAg",
+      "cad_sha256": "d9ad22ba4b488eba2da19e6b0d46ee1359945a95e3cd91acb50d2ea4707fb31b",
+      "cad_geometry_revision": "3aa4bdf27216c1aa20e7f669bc759f1f7ebe6e2a1f192d3bf399bcfaeea9b428",
+      "cad_faces": [
+        "N_a71b60120c00712c3fda27d1"
+      ],
+      "cad_face_descriptors": {
+        "N_a71b60120c00712c3fda27d1": {
+          "type": "Sphere",
+          "area": 0.031415926535897934,
+          "center": [
+            9.360305371269173e-20,
+            6.709081862688904e-19,
+            3.767602549387126e-18
+          ],
+          "bounds": [
+            -0.050000100000000006,
+            -0.050000100000000006,
+            -0.050000100000000006,
+            0.050000100000000006,
+            0.050000100000000006,
+            0.050000100000000006
+          ],
+          "inertia": [
+            5.2359877559829896e-05,
+            2.048600485206646e-21,
+            1.382608802462643e-22,
+            2.048600485206646e-21,
+            5.2359877559829896e-05,
+            1.7003768242833929e-22,
+            1.382608802462643e-22,
+            1.7003768242833929e-22,
+            5.235987755982988e-05
+          ],
+          "edges": [
+            {
+              "type": "Circle",
+              "length": 0.15707963267948954,
+              "bounds": [
+                -1.0000000000918455e-07,
+                -1.0000000001224646e-07,
+                -0.050000100000000006,
+                0.050000100000000006,
+                1e-07,
+                0.050000100000000006
+              ],
+              "points": [
+                [
+                  -9.18454765366783e-18,
+                  2.2495653771361282e-33,
+                  -0.05
+                ],
+                [
+                  0.03535533905932734,
+                  -8.659560562354925e-18,
+                  -0.03535533905932742
+                ],
+                [
+                  0.05,
+                  -1.2246467991473533e-17,
+                  -1.010639055082363e-16
+                ],
+                [
+                  0.03535533905932745,
+                  -8.659560562354952e-18,
+                  0.0353553390593273
+                ],
+                [
+                  1.4853434237779852e-16,
+                  -3.63804213912856e-32,
+                  0.05
+                ]
+              ]
+            },
+            {
+              "type": "Circle",
+              "length": 0.15707963267948954,
+              "bounds": [
+                -1.0000000000918455e-07,
+                -1.0000000001224646e-07,
+                -0.050000100000000006,
+                0.050000100000000006,
+                1e-07,
+                0.050000100000000006
+              ],
+              "points": [
+                [
+                  -9.18454765366783e-18,
+                  2.2495653771361282e-33,
+                  -0.05
+                ],
+                [
+                  0.03535533905932734,
+                  -8.659560562354925e-18,
+                  -0.03535533905932742
+                ],
+                [
+                  0.05,
+                  -1.2246467991473533e-17,
+                  -1.010639055082363e-16
+                ],
+                [
+                  0.03535533905932745,
+                  -8.659560562354952e-18,
+                  0.0353553390593273
+                ],
+                [
+                  1.4853434237779852e-16,
+                  -3.63804213912856e-32,
+                  0.05
+                ]
+              ]
+            },
+            {
+              "type": "Unknown",
+              "length": 1.9236071623538825e-17,
+              "bounds": [
+                -1.0000000000308231e-07,
+                -1.0000000000307884e-07,
+                -0.050000100000000006,
+                1.0000000000308231e-07,
+                1.0000000000307884e-07,
+                -0.0499999
+              ],
+              "points": [
+                [
+                  3.0615158845559432e-18,
+                  0.0,
+                  -0.05
+                ],
+                [
+                  -2.5317147500039616e-33,
+                  3.0615158845559432e-18,
+                  -0.05
+                ],
+                [
+                  -3.0615158845559432e-18,
+                  -5.063429500007923e-33,
+                  -0.05
+                ],
+                [
+                  7.595144250011885e-33,
+                  -3.0615158845559432e-18,
+                  -0.05
+                ],
+                [
+                  3.0615158845559432e-18,
+                  1.0126859000015847e-32,
+                  -0.05
+                ]
+              ]
+            },
+            {
+              "type": "Unknown",
+              "length": 1.9236071623538825e-17,
+              "bounds": [
+                -1.0000000000308231e-07,
+                -1.0000000000307884e-07,
+                0.0499999,
+                1.0000000000308231e-07,
+                1.0000000000307884e-07,
+                0.050000100000000006
+              ],
+              "points": [
+                [
+                  3.0615158845559432e-18,
+                  0.0,
+                  0.05
+                ],
+                [
+                  -2.5317147500039616e-33,
+                  3.0615158845559432e-18,
+                  0.05
+                ],
+                [
+                  -3.0615158845559432e-18,
+                  -5.063429500007923e-33,
+                  0.05
+                ],
+                [
+                  7.595144250011885e-33,
+                  -3.0615158845559432e-18,
+                  0.05
+                ],
+                [
+                  3.0615158845559432e-18,
+                  1.0126859000015847e-32,
+                  0.05
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "cad_face_areas": {
+        "N_a71b60120c00712c3fda27d1": 0.031415926535897934
+      },
+      "cad_face_centers": {
+        "N_a71b60120c00712c3fda27d1": [
+          9.360305371269173e-20,
+          6.709081862688904e-19,
+          3.767602549387126e-18
+        ]
+      },
+      "cad_volume": 0.0005235987755982989,
+      "cad_bounds": [
+        -0.050000100000000006,
+        -0.050000100000000006,
+        -0.050000100000000006,
+        0.050000100000000006,
+        0.050000100000000006,
+        0.050000100000000006
+      ],
+      "cad_source_units": "m",
+      "cad_source_to_m": 1.0,
+      "cad_kernel": {
+        "gmsh": "4.15.2",
+        "occt": "7.8.1",
+        "tolerance_m": 1e-08
+      },
+      "dimensions": [
+        0.10000020000000001,
+        0.10000020000000001,
+        0.10000020000000001
+      ],
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "cad_evaluated_model": {
+        "schema": 1,
+        "units": "m",
+        "root": "sphere",
+        "nodes": [
+          {
+            "id": "sphere",
+            "type": "Sphere",
+            "dimensions": [
+              0.1,
+              0.1,
+              0.1
+            ]
+          }
+        ]
+      },
+      "cad_validation": {
+        "schema": 1,
+        "native_available": true,
+        "analyzer_valid": true,
+        "area": 0.031415926535897934,
+        "bounds": [
+          -0.05,
+          -0.05,
+          -0.05,
+          0.05,
+          0.05,
+          0.05
+        ],
+        "centroid": [
+          3.066430442400716e-19,
+          -4.868184987255947e-19,
+          3.8476471629026593e-19
+        ],
+        "closed_shells": true,
+        "diagnostics": [],
+        "edge_count": 3,
+        "face_count": 1,
+        "faces": [
+          {
+            "area": 0.031415926535897934,
+            "bounds": [
+              -0.05,
+              -0.05,
+              -0.05,
+              0.05,
+              0.05,
+              0.05
+            ],
+            "center": [
+              -4.999420772490638e-19,
+              -9.966477404949078e-19,
+              1.904130065427667e-18
+            ],
+            "inertia": [
+              5.2359877559829896e-05,
+              2.5462104512110437e-21,
+              -1.4695101745468504e-22,
+              2.5462104512110437e-21,
+              5.2359877559829896e-05,
+              -7.755748143441704e-23,
+              -1.4695101745468504e-22,
+              -7.755748143441704e-23,
+              5.235987755982989e-05
+            ],
+            "orientation": 0,
+            "slot": 1
+          }
+        ],
+        "manifold_edge_incidence": true,
+        "maximum_tolerance_m": 1e-07,
+        "self_intersection_guarantee": false,
+        "shape_type": 2,
+        "shell_count": 1,
+        "solid_count": 1,
+        "status": "VALID",
+        "vertex_count": 2,
+        "volume": 0.0005235987755982989
+      },
+      "cad_topology_metadata": {
+        "schema": 2,
+        "strategy": "native-feature-history-v1",
+        "native_history": true,
+        "geometry_revision": "3aa4bdf27216c1aa20e7f669bc759f1f7ebe6e2a1f192d3bf399bcfaeea9b428",
+        "operations": [
+          {
+            "feature": "sphere",
+            "feature_uuid": "9e34dbc3-25e2-5171-bae2-1a21ee340d72",
+            "operation_uuid": "84463ee7-7ff4-5930-8bf6-14d38f39e6b6",
+            "stage": "construction",
+            "receipt": {
+              "before": {
+                "analyzer_valid": true,
+                "area": 0.031415926535897934,
+                "bounds": [
+                  -0.05,
+                  -0.05,
+                  -0.05,
+                  0.05,
+                  0.05,
+                  0.05
+                ],
+                "centroid": [
+                  3.066430442400716e-19,
+                  -4.868184987255947e-19,
+                  3.8476471629026593e-19
+                ],
+                "closed_shells": true,
+                "diagnostics": [],
+                "edge_count": 3,
+                "face_count": 1,
+                "faces": [
+                  {
+                    "area": 0.031415926535897934,
+                    "bounds": [
+                      -0.05,
+                      -0.05,
+                      -0.05,
+                      0.05,
+                      0.05,
+                      0.05
+                    ],
+                    "center": [
+                      -4.999420772490638e-19,
+                      -9.966477404949078e-19,
+                      1.904130065427667e-18
+                    ],
+                    "inertia": [
+                      5.2359877559829896e-05,
+                      2.5462104512110437e-21,
+                      -1.4695101745468504e-22,
+                      2.5462104512110437e-21,
+                      5.2359877559829896e-05,
+                      -7.755748143441704e-23,
+                      -1.4695101745468504e-22,
+                      -7.755748143441704e-23,
+                      5.235987755982989e-05
+                    ],
+                    "orientation": 0,
+                    "slot": 1
+                  }
+                ],
+                "manifold_edge_incidence": true,
+                "maximum_tolerance_m": 1e-07,
+                "self_intersection_guarantee": false,
+                "shape_type": 2,
+                "shell_count": 1,
+                "solid_count": 1,
+                "status": "VALID",
+                "vertex_count": 2,
+                "volume": 0.0005235987755982989
+              },
+              "face_history": [],
+              "feature_id": "sphere",
+              "input_hashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              ],
+              "occt_version": "7.8.1",
+              "ok": true,
+              "operation_id": "cee5ce32-7e38-409e-ad02-bc60e422c4d2",
+              "output_sha256": "2b1048eda1727c38ffdf90a65a6b3f875948206516fec630a6d0e47252d18925",
+              "schema": 1,
+              "units": "m",
+              "validation": {
+                "analyzer_valid": true,
+                "area": 0.031415926535897934,
+                "bounds": [
+                  -0.05,
+                  -0.05,
+                  -0.05,
+                  0.05,
+                  0.05,
+                  0.05
+                ],
+                "centroid": [
+                  3.066430442400716e-19,
+                  -4.868184987255947e-19,
+                  3.8476471629026593e-19
+                ],
+                "closed_shells": true,
+                "diagnostics": [],
+                "edge_count": 3,
+                "face_count": 1,
+                "faces": [
+                  {
+                    "area": 0.031415926535897934,
+                    "bounds": [
+                      -0.05,
+                      -0.05,
+                      -0.05,
+                      0.05,
+                      0.05,
+                      0.05
+                    ],
+                    "center": [
+                      -4.999420772490638e-19,
+                      -9.966477404949078e-19,
+                      1.904130065427667e-18
+                    ],
+                    "inertia": [
+                      5.2359877559829896e-05,
+                      2.5462104512110437e-21,
+                      -1.4695101745468504e-22,
+                      2.5462104512110437e-21,
+                      5.2359877559829896e-05,
+                      -7.755748143441704e-23,
+                      -1.4695101745468504e-22,
+                      -7.755748143441704e-23,
+                      5.235987755982989e-05
+                    ],
+                    "orientation": 0,
+                    "slot": 1
+                  }
+                ],
+                "manifold_edge_incidence": true,
+                "maximum_tolerance_m": 1e-07,
+                "self_intersection_guarantee": false,
+                "shape_type": 2,
+                "shell_count": 1,
+                "solid_count": 1,
+                "status": "VALID",
+                "vertex_count": 2,
+                "volume": 0.0005235987755982989
+              },
+              "worker_version": "1",
+              "exit_code": 0,
+              "process": {
+                "pid": 12808,
+                "exit_code": 0,
+                "peak_commit_bytes": 23908352,
+                "seconds": 0.3330715999909444,
+                "job_object": true
+              }
+            },
+            "faces": {
+              "1": {
+                "identity": "N_a71b60120c00712c3fda27d1",
+                "ancestry": [],
+                "state": "original",
+                "descriptor": {
+                  "area": 0.031415926535897934,
+                  "bounds": [
+                    -0.05,
+                    -0.05,
+                    -0.05,
+                    0.05,
+                    0.05,
+                    0.05
+                  ],
+                  "center": [
+                    -4.999420772490638e-19,
+                    -9.966477404949078e-19,
+                    1.904130065427667e-18
+                  ],
+                  "inertia": [
+                    5.2359877559829896e-05,
+                    2.5462104512110437e-21,
+                    -1.4695101745468504e-22,
+                    2.5462104512110437e-21,
+                    5.2359877559829896e-05,
+                    -7.755748143441704e-23,
+                    -1.4695101745468504e-22,
+                    -7.755748143441704e-23,
+                    5.235987755982989e-05
+                  ],
+                  "orientation": 0,
+                  "slot": 1
+                }
+              }
+            }
+          }
+        ],
+        "faces": [
+          {
+            "identity": "N_a71b60120c00712c3fda27d1",
+            "ancestry": [],
+            "state": "original",
+            "descriptor": {
+              "area": 0.031415926535897934,
+              "bounds": [
+                -0.05,
+                -0.05,
+                -0.05,
+                0.05,
+                0.05,
+                0.05
+              ],
+              "center": [
+                -4.999420772490638e-19,
+                -9.966477404949078e-19,
+                1.904130065427667e-18
+              ],
+              "inertia": [
+                5.2359877559829896e-05,
+                2.5462104512110437e-21,
+                -1.4695101745468504e-22,
+                2.5462104512110437e-21,
+                5.2359877559829896e-05,
+                -7.755748143441704e-23,
+                -1.4695101745468504e-22,
+                -7.755748143441704e-23,
+                5.235987755982989e-05
+              ],
+              "orientation": 0,
+              "slot": 1
+            }
+          }
+        ]
+      },
+      "cad_safe_continuations": [
+        "N_a71b60120c00712c3fda27d1"
+      ],
+      "cad_cross_kernel": {
+        "solid_count": 1,
+        "face_count": 1,
+        "volume_difference_m3": 0.0,
+        "area_difference_m2": 0.0,
+        "centroid_difference_m": 7.940933880509046e-19,
+        "bounds_difference_m": 1.0000000000287557e-07,
+        "bounds_budget_m": 2e-07,
+        "complete_boundary_coverage": true
+      },
+      "id": "sphere",
+      "name": "sphere",
+      "material": {
+        "E": 210000000000.0,
+        "nu": 0,
+        "density": 7850
+      },
+      "support": "",
+      "load_face": "",
+      "force": [
+        0,
+        1000,
+        0
+      ]
+    }
+  ],
+  "mesh": {},
+  "results": {},
+  "analysis": {
+    "type": "static_structural",
+    "backend": "calculix",
+    "element": "TET4"
+  }
+}

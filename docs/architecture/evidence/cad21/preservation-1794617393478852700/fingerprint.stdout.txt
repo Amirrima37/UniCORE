@@ -1,0 +1,4 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+FIRST_DIFFERENCE byte=18241 original=5.0],"nodes":[[-2.4492127076450002e-17,0.2,0.1],[-2.4492127076450002e-17,0.0,0.1 restored=5.0],"nodes":[[-2.449212707645e-17,0.2,0.1],[-2.449212707645e-17,0.0,0.1],[0.054
+CANONICAL_MESH_TEST failures=0

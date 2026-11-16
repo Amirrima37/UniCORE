@@ -1,0 +1,19 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CAD22_NUMERICAL axial-bar level=0 nodes=140 volume_error=0.0 displacement_error=0.00000005
+CAD22_NUMERICAL axial-bar level=1 nodes=190 volume_error=0.0 displacement_error=0.00000005
+CAD22_NUMERICAL axial-bar level=2 nodes=594 volume_error=0.0 displacement_error=0.00000005
+CAD22_NUMERICAL axial-bar level=3 nodes=1458 volume_error=0.0 displacement_error=0.000000036
+CAD22_NUMERICAL axial-cylinder level=0 nodes=55 volume_error=0.05779397684293 displacement_error=0.05896263967455
+CAD22_NUMERICAL axial-cylinder level=1 nodes=124 volume_error=0.02840962340981 displacement_error=0.02827698088212
+CAD22_NUMERICAL axial-cylinder level=2 nodes=274 volume_error=0.01364961314362 displacement_error=0.01330791038882
+CAD22_NUMERICAL axial-cylinder level=3 nodes=767 volume_error=0.00578885195013 displacement_error=0.00557170001795
+CAD22_NUMERICAL bending level=0 nodes=140 volume_error=0.0 displacement_error=0.550680040625
+CAD22_NUMERICAL bending level=1 nodes=190 volume_error=0.0 displacement_error=0.43318935
+CAD22_NUMERICAL bending level=2 nodes=594 volume_error=0.0 displacement_error=0.20191749625
+CAD22_NUMERICAL bending level=3 nodes=1458 volume_error=0.0 displacement_error=0.13084659833333
+CAD22_NUMERICAL step-hole level=0 nodes=942 volume_error=0.01140717733475 displacement_error=0.01117305269765
+CAD22_NUMERICAL step-hole level=1 nodes=1927 volume_error=0.00480150295178 displacement_error=0.00472102135343
+CAD22_NUMERICAL step-hole level=2 nodes=4199 volume_error=0.00216276249763 displacement_error=0.00210017278969
+CAD22_NUMERICAL step-hole level=3 nodes=7873 volume_error=0.00112528170994 displacement_error=0.00109450501271
+CAD22_NUMERICAL_PASS

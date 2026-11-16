@@ -1,0 +1,26 @@
+[
+	{
+		"elements": 64,
+		"generation_ms": 0.159,
+		"memory_delta_bytes": 312584,
+		"nodes": 125,
+		"pick_p95_ms": 0.301,
+		"preparation_ms": 12.047
+	},
+	{
+		"elements": 512,
+		"generation_ms": 1.19,
+		"memory_delta_bytes": 1294992,
+		"nodes": 729,
+		"pick_p95_ms": 0.715,
+		"preparation_ms": 83.078
+	},
+	{
+		"elements": 4096,
+		"generation_ms": 6.092,
+		"memory_delta_bytes": 7906192,
+		"nodes": 4913,
+		"pick_p95_ms": 0.646,
+		"preparation_ms": 557.677
+	}
+]

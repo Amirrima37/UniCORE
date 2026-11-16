@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+Vulkan 1.4.315 - Forward+ - Using Device #0: AMD - AMD Radeon(TM) RX 6550M
+
+CAD21_GUI_STAGE boolean-controls
+CAD21_GUI_STAGE boolean-preview
+CAD21_GUI_STAGE boolean-solid-operation-tree
+CAD21_GUI_STAGE selected-cad-face
+CAD21_GUI_STAGE boolean-tet4-mesh
+CAD21_GUI_STAGE calculix-displacement
+CAD21_GUI_STAGE calculix-von-mises
+CAD21_GUI_STAGE edit-cylinder-feature
+CAD21_GUI_PASS

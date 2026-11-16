@@ -1,0 +1,114 @@
+[
+  {
+    "path": "screenshots\\global-settings-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "84f2802b17a365cc19edd74cc09c89c97a6120284f1f2e885332cabf69dc7851",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\global-settings-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "2cfd3a64a1ce42206c2306281561ee2a1a275b42d66195866faf6bdaa3509153",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\local-face-refinement-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "328397d2407e0671cf51bd6f393be729af47fa797ea139865e024a7dc3a3274f",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\local-face-refinement-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "f9393c08331c66b7bd097a67f9eb9dea2388de73bff53bbbc396295b6bfe8575",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\mean-ratio-quality-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "25d6f916bb698498466eb183acc7d5d1e62abd72547d20c1d4a206c943e7d486",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\mean-ratio-quality-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "c3f78e676e1fcca7a22f02287d265143835e242ee77daabdd4ebfcf42c539851",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\mesh-statistics-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "55f63fb19612d14cf26cf1417bf89bb507fd2f69f0585b21ad8e76ec2c30ab95",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\mesh-statistics-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "efd7d4de21cd64e38657c2c5761e4ec4911d4dedecffc622355cb05a8289c93f",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\refined-displacement-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "fc609c76a7dbe66a7f13618f523256e3d32f46f3e1efdc03512b3e8d880d710f",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\refined-displacement-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "88e8636b62055c0a8c20ccd1db706eddaee78b88a7bf5f92eb91a2bc41a4b482",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\refined-through-hole-mesh-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "7b1d4473fa458218265eabd2a1137511d363313c0cd63f2597416ad68232d373",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\refined-through-hole-mesh-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "7cd7b138a3881b0de2ebaeed711e0ecbb0805eb1dae83aabacdeceb6b10027d2",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\refined-von-mises-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "4bf1b28495a5ef9ab6d775f46f0afe2fe9cd78be15e94810f0b06981a0afb9d6",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\refined-von-mises-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "a03afc8893b517a7d2599a80289e0a8d47b5a2e2f00beccfbdd672ed42bf2f44",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\worst-element-metrics-1280.png",
+    "width": 1280,
+    "height": 720,
+    "sha256": "8cc65f0ff75dd375ef31a415017cbb9910135101c70f8c45c21419fe665c7f71",
+    "outcome": "PASS"
+  },
+  {
+    "path": "screenshots\\worst-element-metrics-1920.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "19fad029f704c3e8fdb01ac7bcef7f14d2151f1b36c1602f34539b65e5295923",
+    "outcome": "PASS"
+  }
+]

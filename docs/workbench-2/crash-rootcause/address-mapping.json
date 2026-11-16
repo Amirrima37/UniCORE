@@ -1,0 +1,6 @@
+{
+  "preferred_image_base": "0x140000000",
+  "preferred_address": "0x140518504",
+  "aslr_runtime_address_known": false,
+  "tool_exit": 0
+}

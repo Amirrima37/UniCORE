@@ -1,0 +1,42 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\native_occt.py", line 13, in workspace
+    try:yield str(job)
+        ^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\native_occt.py", line 51, in run
+    if p.returncode or not r.get('ok'):raise ValueError('Native OCCT: '+str(r.get('error','kernel failure')))
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Native OCCT: Invalid/unsupported input solid
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad21_geometry.py", line 71, in <module>
+    try:evaluate(dict(model=graph([node],'assembly'),quality=8))
+        ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\cad_model.py", line 99, in evaluate
+    native_raw,native_faces,native_operations=native_evaluate(model)
+                                              ~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\native_graph.py", line 74, in evaluate
+    raw,faces=build(model['root']);return raw,faces,operations
+              ~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\native_graph.py", line 38, in build
+    receipt,raw=run(raw,'step',feature=key)
+                ~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\native_occt.py", line 20, in run
+    with workspace() as directory:
+         ~~~~~~~~~^^
+  File "C:\Users\Victus\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\native_occt.py", line 14, in workspace
+    except Exception as e:raise ValueError(str(e)+'; native diagnostics retained: '+str(job)) from e
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Native OCCT: Invalid/unsupported input solid; native diagnostics retained: C:\Users\Victus\Desktop\UniCORE-main\.tools\occt-sdk\jobs\occt-1v_994c_
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad21_geometry.py", line 73, in <module>
+    assert 'assemblies/shells unsupported' in str(error)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

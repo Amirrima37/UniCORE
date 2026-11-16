@@ -1,0 +1,158 @@
+[
+  {
+    "name": "test_stage51_cache",
+    "exit": 0,
+    "seconds": 3.1093436000010115,
+    "passed": true
+  },
+  {
+    "name": "test_stage5_provenance",
+    "exit": 0,
+    "seconds": 0.7926337999997486,
+    "passed": true
+  },
+  {
+    "name": "test_stage5_quality",
+    "exit": 0,
+    "seconds": 0.9727110999992874,
+    "passed": true
+  },
+  {
+    "name": "test_stage5_display",
+    "exit": 0,
+    "seconds": 0.5203357000027609,
+    "passed": true
+  },
+  {
+    "name": "test_stage5_probes",
+    "exit": 0,
+    "seconds": 2.093564899998455,
+    "passed": true
+  },
+  {
+    "name": "test_cylinder_fem",
+    "exit": 0,
+    "seconds": 2.825033799999801,
+    "passed": true
+  },
+  {
+    "name": "test_workbench2",
+    "exit": 0,
+    "seconds": 2.0117151999984344,
+    "passed": true
+  },
+  {
+    "name": "test_workbench2_stage2",
+    "exit": 0,
+    "seconds": 2.193418999999267,
+    "passed": true
+  },
+  {
+    "name": "test_workbench2_stage3",
+    "exit": 0,
+    "seconds": 2.6523068999995303,
+    "passed": true
+  },
+  {
+    "name": "checkpoint-restart",
+    "exit": 0,
+    "seconds": 0.4924523000008776,
+    "passed": true
+  },
+  {
+    "name": "release-extension-test_native_structural_suite",
+    "exit": 0,
+    "seconds": 1.9480936999971163,
+    "passed": true
+  },
+  {
+    "name": "release-extension-test_native_thermal_suite",
+    "exit": 0,
+    "seconds": 1.2645512000017334,
+    "passed": true
+  },
+  {
+    "name": "release-extension-test_native_radiation",
+    "exit": 0,
+    "seconds": 0.6007270000009157,
+    "passed": true
+  },
+  {
+    "name": "cylinder-graphics-performance",
+    "exit": 0,
+    "seconds": 15.904056900002615,
+    "passed": true
+  },
+  {
+    "name": "box-graphics",
+    "exit": 0,
+    "seconds": 6.5479285000001255,
+    "passed": true
+  },
+  {
+    "name": "box-thermal-graphics-playback",
+    "exit": 0,
+    "seconds": 6.571608099999139,
+    "passed": true
+  },
+  {
+    "name": "native-structural_solver_test-debug",
+    "exit": 0,
+    "seconds": 0.31147710000004736,
+    "passed": true
+  },
+  {
+    "name": "native-hex8_test-debug",
+    "exit": 0,
+    "seconds": 0.46728750000329455,
+    "passed": true
+  },
+  {
+    "name": "native-thermal_radiation_test-debug",
+    "exit": 0,
+    "seconds": 0.6226501000019198,
+    "passed": true
+  },
+  {
+    "name": "native-sparse_preconditioner_test-debug",
+    "exit": 0,
+    "seconds": 0.04630220000035479,
+    "passed": true
+  },
+  {
+    "name": "native-parallel_assembly_test-debug",
+    "exit": 0,
+    "seconds": 4.272173400000611,
+    "passed": true
+  },
+  {
+    "name": "native-structural_solver_test-noomp",
+    "exit": 0,
+    "seconds": 0.04360359999918728,
+    "passed": true
+  },
+  {
+    "name": "native-hex8_test-noomp",
+    "exit": 0,
+    "seconds": 0.028865400003269315,
+    "passed": true
+  },
+  {
+    "name": "native-thermal_radiation_test-noomp",
+    "exit": 0,
+    "seconds": 0.0957312999998976,
+    "passed": true
+  },
+  {
+    "name": "native-sparse_preconditioner_test-noomp",
+    "exit": 0,
+    "seconds": 0.042143899998336565,
+    "passed": true
+  },
+  {
+    "name": "native-parallel_assembly_test-noomp",
+    "exit": 0,
+    "seconds": 0.8994330999994418,
+    "passed": true
+  }
+]

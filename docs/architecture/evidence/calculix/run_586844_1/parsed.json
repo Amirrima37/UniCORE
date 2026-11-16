@@ -1,0 +1,71 @@
+{
+  "displacement_by_id": {
+    "0": [
+      0,
+      0,
+      0
+    ],
+    "1": [
+      0.003,
+      0,
+      0
+    ],
+    "2": [
+      0,
+      -0.00075,
+      0
+    ],
+    "3": [
+      0,
+      0,
+      -0.00075
+    ]
+  },
+  "provenance": {
+    "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+    "dat_sha256": "a4b267a540255898d58fd5d939d84f9bfcab429728f77888cbf8ba1394ece84a",
+    "input_sha256": "2a7aa68b4b4053e66272a5846e7050b412edbf9f65f95eb3054711878758a10b",
+    "schema": 1
+  },
+  "reaction_by_id": {
+    "0": [
+      -1,
+      0,
+      0.00000000000000007401487
+    ],
+    "1": [
+      1,
+      0,
+      0
+    ],
+    "2": [
+      0,
+      0,
+      0
+    ],
+    "3": [
+      0,
+      0,
+      -0
+    ]
+  },
+  "stress_association": "integration_point",
+  "stress_by_id": {
+    "0": [
+      6,
+      0,
+      -0,
+      0,
+      0,
+      0
+    ]
+  },
+  "stress_order": [
+    "xx",
+    "yy",
+    "zz",
+    "xy",
+    "xz",
+    "yz"
+  ]
+}

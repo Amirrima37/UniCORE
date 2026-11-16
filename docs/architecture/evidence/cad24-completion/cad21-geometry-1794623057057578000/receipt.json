@@ -1,0 +1,12 @@
+{
+  "name": "cad21-geometry",
+  "exit_code": 1,
+  "outcome": "FAIL",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/run_cad21.py",
+    "geometry"
+  ],
+  "seconds": 27.147197700003744,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cad21-geometry-1794623057057578000"
+}

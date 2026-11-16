@@ -1,0 +1,13 @@
+[
+  {
+    "test": "validation",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 3.5902824999939185,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/cad22_validation.py"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\validation-1794666470807380200"
+  }
+]

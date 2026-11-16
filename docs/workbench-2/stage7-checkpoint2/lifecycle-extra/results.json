@@ -1,0 +1,57 @@
+[
+  {
+    "name": "structural-restart-deferred",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-final\\recovery.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\lifecycle-extra\\structural-restart-deferred",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256",
+      "--restart",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate"
+    ],
+    "exit_code": 2,
+    "expected_exit": 2,
+    "seconds": 0.02622490000067046
+  },
+  {
+    "name": "structural-pause-deferred",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-final\\recovery.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\lifecycle-extra\\structural-pause-deferred",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256",
+      "--pause-after",
+      "1"
+    ],
+    "exit_code": 2,
+    "expected_exit": 2,
+    "seconds": 0.02495180000551045
+  },
+  {
+    "name": "effective-nonconvergence",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+      "--job",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\lifecycle-extra\\effective-nonconvergence.ucjob",
+      "--output",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\lifecycle-extra\\effective-nonconvergence",
+      "--threads",
+      "1",
+      "--memory-mb",
+      "256"
+    ],
+    "exit_code": 2,
+    "expected_exit": 2,
+    "seconds": 0.038672000002407
+  }
+]

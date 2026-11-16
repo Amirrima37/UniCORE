@@ -1,0 +1,182 @@
+{
+  "before_accessible_bytes": 8589683219,
+  "after_accessible_bytes": 7968495733,
+  "net_reduction_bytes": 621187486,
+  "percent_reduction": 7.231785738337367,
+  "deleted_files": 1980,
+  "deleted_file_bytes": 622750871,
+  "deleted_paths_regenerated": [],
+  "before_files": 80036,
+  "after_files": 78065,
+  "inaccessible_paths": [
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\molecular-native-2as4khhu",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\molecular-native-2as4khhu'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\molecular-native-883glfnc",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\molecular-native-883glfnc'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\molecular-native-o6zi8uc_",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\molecular-native-o6zi8uc_'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\molecular-script-4669g3vh",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\molecular-script-4669g3vh'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\molecular-script-a68wwea5",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\molecular-script-a68wwea5'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\molecular-script-d0l712ju",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\molecular-script-d0l712ju'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\python-packages\\bin",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\python-packages\\\\bin'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\python-packages\\SCons",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\python-packages\\\\SCons'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\python-packages\\scons-4.10.1.dist-info",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\python-packages\\\\scons-4.10.1.dist-info'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\scons-migrate\\bin",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\scons-migrate\\\\bin'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\scons-migrate\\SCons",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\scons-migrate\\\\SCons'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\scons-migrate\\scons-4.10.1.dist-info",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\scons-migrate\\\\scons-4.10.1.dist-info'",
+      "bytes": null
+    }
+  ],
+  "physical_storage_note": "Logical file lengths; prior NTFS compression means logical bytes removed do not equal physical disk blocks freed. No relocation or compression counted as deletion.",
+  "all_pins_unchanged": true,
+  "tests": [
+    {
+      "name": "native",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "editor",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "regressions",
+      "exit_code": 0,
+      "passed": true
+    }
+  ],
+  "external_validation_output": "C:\\Users\\Victus\\AppData\\Local\\Temp\\unicore-cleanup-checks-ete8cbwi",
+  "top_remaining": [
+    [
+      ".tools",
+      6409724005
+    ],
+    [
+      ".tools/godot472-migration",
+      2717870789
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot",
+      2671419692
+    ],
+    [
+      ".tools/godot472-migration/roaming",
+      2671419692
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE",
+      2671401986
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot/app_userdata",
+      2671401986
+    ],
+    [
+      ".tools/occt-sdk",
+      1632730542
+    ],
+    [
+      ".tools/occt-sdk/ucrt64",
+      1397221442
+    ],
+    [
+      "docs",
+      1370661040
+    ],
+    [
+      ".tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs",
+      1222501492
+    ],
+    [
+      "docs/architecture",
+      1041962631
+    ],
+    [
+      "docs/architecture/evidence",
+      1041812270
+    ],
+    [
+      ".tools/hpc23-bench",
+      817649820
+    ],
+    [
+      ".tools/occt-sdk/ucrt64/lib",
+      769322303
+    ],
+    [
+      "docs/architecture/evidence/cad23",
+      679496594
+    ],
+    [
+      ".tools/hpc22",
+      498479590
+    ],
+    [
+      ".tools/occt-sdk/ucrt64/bin",
+      384682025
+    ],
+    [
+      "docs/architecture/evidence/cad23/solver-jobs",
+      359941240
+    ],
+    [
+      ".tools/hpc23-bench/thermal-large-46",
+      359759892
+    ],
+    [
+      ".tools/engines",
+      211687494
+    ]
+  ],
+  "regression_receipt": {
+    "passed": true,
+    "expected": 28,
+    "recorded": 28,
+    "missing": [],
+    "results_file": "results.json"
+  }
+}

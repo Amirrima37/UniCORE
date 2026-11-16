@@ -1,0 +1,566 @@
+[
+	{
+		"case": "Box-static_structural",
+		"ms": 11.531,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 2.863,
+			"parse_ms": 1.284,
+			"provenance_ms": 5.594,
+			"snapshot_ms": 3.644
+		},
+		"sample": 0
+	},
+	{
+		"case": "Box-static_structural",
+		"ms": 8.974,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 3.077,
+			"parse_ms": 1.253,
+			"provenance_ms": 2.973,
+			"snapshot_ms": 2.179
+		},
+		"sample": 1
+	},
+	{
+		"case": "Box-static_structural",
+		"ms": 8.899,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 2.821,
+			"parse_ms": 0.999,
+			"provenance_ms": 3.546,
+			"snapshot_ms": 2.367
+		},
+		"sample": 2
+	},
+	{
+		"case": "Box-static_structural",
+		"ms": 7.935,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 2.449,
+			"parse_ms": 0.93,
+			"provenance_ms": 3.2,
+			"snapshot_ms": 2.414
+		},
+		"sample": 3
+	},
+	{
+		"case": "Box-static_structural",
+		"ms": 8.171,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 2.596,
+			"parse_ms": 1.122,
+			"provenance_ms": 2.796,
+			"snapshot_ms": 2.093
+		},
+		"sample": 4
+	},
+	{
+		"case": "Box-static_structural",
+		"field": "displacement",
+		"ms": 52.883,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 6.965,
+			"inspector_ms": 12.165
+		},
+		"sample": 0
+	},
+	{
+		"case": "Box-static_structural",
+		"field": "von_mises",
+		"ms": 22.584,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 8.122,
+			"inspector_ms": 12.506
+		},
+		"sample": 1
+	},
+	{
+		"case": "Box-static_structural",
+		"field": "displacement",
+		"ms": 19.267,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 7.611,
+			"inspector_ms": 10.991
+		},
+		"sample": 2
+	},
+	{
+		"case": "Box-static_structural",
+		"field": "von_mises",
+		"ms": 22.778,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 9.391,
+			"inspector_ms": 12.205
+		},
+		"sample": 3
+	},
+	{
+		"case": "Box-static_structural",
+		"field": "displacement",
+		"ms": 17.247,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 6.068,
+			"inspector_ms": 10.036
+		},
+		"sample": 4
+	},
+	{
+		"case": "Box-static_structural",
+		"field": "von_mises",
+		"ms": 17.51,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 6.709,
+			"inspector_ms": 10.393
+		},
+		"sample": 5
+	},
+	{
+		"case": "Box-static_structural",
+		"operation": "build",
+		"phases": {
+			"buffers_ms": 0.854,
+			"exterior_ms": 0.428,
+			"resources_ms": 0.278,
+			"scalar_ms": 0.015
+		}
+	},
+	{
+		"case": "Box-static_structural",
+		"operation": "build",
+		"phases": {
+			"buffers_ms": 0.653,
+			"exterior_ms": 0.621,
+			"resources_ms": 0.151,
+			"scalar_ms": 0.012
+		}
+	},
+	{
+		"case": "Box-static_structural",
+		"operation": "build",
+		"phases": {
+			"buffers_ms": 0.639,
+			"exterior_ms": 0.45,
+			"resources_ms": 0.118,
+			"scalar_ms": 0.01
+		}
+	},
+	{
+		"case": "Box-steady_thermal",
+		"ms": 10.661,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 3.485,
+			"parse_ms": 1.066,
+			"provenance_ms": 4.056,
+			"snapshot_ms": 2.716
+		},
+		"sample": 0
+	},
+	{
+		"case": "Box-steady_thermal",
+		"ms": 12.393,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 4.259,
+			"parse_ms": 1.095,
+			"provenance_ms": 5.634,
+			"snapshot_ms": 4.456
+		},
+		"sample": 1
+	},
+	{
+		"case": "Box-steady_thermal",
+		"ms": 9.214,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 2.878,
+			"parse_ms": 1.171,
+			"provenance_ms": 3.854,
+			"snapshot_ms": 3.033
+		},
+		"sample": 2
+	},
+	{
+		"case": "Box-steady_thermal",
+		"ms": 9.107,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 3.117,
+			"parse_ms": 1.095,
+			"provenance_ms": 3.587,
+			"snapshot_ms": 2.672
+		},
+		"sample": 3
+	},
+	{
+		"case": "Box-steady_thermal",
+		"ms": 8.997,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 3.184,
+			"parse_ms": 1.1,
+			"provenance_ms": 3.415,
+			"snapshot_ms": 2.666
+		},
+		"sample": 4
+	},
+	{
+		"case": "Box-steady_thermal",
+		"field": "temperature",
+		"ms": 30.4,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 5.68,
+			"inspector_ms": 17.635
+		},
+		"sample": 0
+	},
+	{
+		"case": "Box-steady_thermal",
+		"field": "heat_flux",
+		"ms": 27.441,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 5.959,
+			"inspector_ms": 18.983
+		},
+		"sample": 1
+	},
+	{
+		"case": "Box-steady_thermal",
+		"field": "temperature",
+		"ms": 29.23,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 7.529,
+			"inspector_ms": 21.512
+		},
+		"sample": 2
+	},
+	{
+		"case": "Box-steady_thermal",
+		"field": "heat_flux",
+		"ms": 26.76,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 7.492,
+			"inspector_ms": 18.963
+		},
+		"sample": 3
+	},
+	{
+		"case": "Box-steady_thermal",
+		"field": "temperature",
+		"ms": 27.844,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 6.762,
+			"inspector_ms": 20.535
+		},
+		"sample": 4
+	},
+	{
+		"case": "Box-steady_thermal",
+		"field": "heat_flux",
+		"ms": 25.518,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 6.063,
+			"inspector_ms": 19.238
+		},
+		"sample": 5
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"ms": 383.254,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 162.34,
+			"parse_ms": 27.994,
+			"provenance_ms": 152.532,
+			"snapshot_ms": 137.897
+		},
+		"sample": 0
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"ms": 390.381,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 160.524,
+			"parse_ms": 27.814,
+			"provenance_ms": 159.716,
+			"snapshot_ms": 141.495
+		},
+		"sample": 1
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"ms": 398.097,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 166.855,
+			"parse_ms": 27.942,
+			"provenance_ms": 155.991,
+			"snapshot_ms": 142.068
+		},
+		"sample": 2
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"ms": 396.5,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 156.558,
+			"parse_ms": 28.274,
+			"provenance_ms": 170.047,
+			"snapshot_ms": 155.859
+		},
+		"sample": 3
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"ms": 399.516,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 152.272,
+			"parse_ms": 32.451,
+			"provenance_ms": 169.976,
+			"snapshot_ms": 155.46
+		},
+		"sample": 4
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"field": "displacement",
+		"ms": 632.115,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 472.136,
+			"inspector_ms": 176.808
+		},
+		"sample": 0
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"field": "von_mises",
+		"ms": 607.841,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 477.339,
+			"inspector_ms": 174.417
+		},
+		"sample": 1
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"field": "displacement",
+		"ms": 611.123,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 470.796,
+			"inspector_ms": 168.414
+		},
+		"sample": 2
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"field": "von_mises",
+		"ms": 649.504,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 478.587,
+			"inspector_ms": 183.865
+		},
+		"sample": 3
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"field": "displacement",
+		"ms": 629.193,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 473.522,
+			"inspector_ms": 175.34
+		},
+		"sample": 4
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"field": "von_mises",
+		"ms": 634.335,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 496.048,
+			"inspector_ms": 180.734
+		},
+		"sample": 5
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"operation": "build",
+		"phases": {
+			"buffers_ms": 13.536,
+			"exterior_ms": 100.769,
+			"resources_ms": 0.303,
+			"scalar_ms": 0.81
+		}
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"operation": "build",
+		"phases": {
+			"buffers_ms": 13.838,
+			"exterior_ms": 94.328,
+			"resources_ms": 0.436,
+			"scalar_ms": 0.796
+		}
+	},
+	{
+		"case": "Cylinder-static_structural",
+		"operation": "build",
+		"phases": {
+			"buffers_ms": 14.799,
+			"exterior_ms": 102.952,
+			"resources_ms": 0.297,
+			"scalar_ms": 0.963
+		}
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"ms": 357.139,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 144.207,
+			"parse_ms": 22.393,
+			"provenance_ms": 148.644,
+			"snapshot_ms": 137.668
+		},
+		"sample": 0
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"ms": 376.145,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 150.656,
+			"parse_ms": 22.458,
+			"provenance_ms": 154.046,
+			"snapshot_ms": 142.509
+		},
+		"sample": 1
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"ms": 401.409,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 175.079,
+			"parse_ms": 21.5,
+			"provenance_ms": 166.753,
+			"snapshot_ms": 155.412
+		},
+		"sample": 2
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"ms": 363.42,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 148.35,
+			"parse_ms": 20.363,
+			"provenance_ms": 152.604,
+			"snapshot_ms": 142.646
+		},
+		"sample": 3
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"ms": 383.751,
+		"operation": "import",
+		"phases": {
+			"compatibility_ms": 154.4,
+			"parse_ms": 22.021,
+			"provenance_ms": 158.631,
+			"snapshot_ms": 147.854
+		},
+		"sample": 4
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"field": "temperature",
+		"ms": 546.123,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 396.375,
+			"inspector_ms": 93.346
+		},
+		"sample": 0
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"field": "heat_flux",
+		"ms": 426.171,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 390.431,
+			"inspector_ms": 98.861
+		},
+		"sample": 1
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"field": "temperature",
+		"ms": 410.43,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 389.759,
+			"inspector_ms": 100.736
+		},
+		"sample": 2
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"field": "heat_flux",
+		"ms": 422.249,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 397.787,
+			"inspector_ms": 112.727
+		},
+		"sample": 3
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"field": "temperature",
+		"ms": 420.785,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 401.502,
+			"inspector_ms": 98.673
+		},
+		"sample": 4
+	},
+	{
+		"case": "Cylinder-steady_thermal",
+		"field": "heat_flux",
+		"ms": 431.227,
+		"operation": "switch",
+		"phases": {
+			"current_ms": 407.301,
+			"inspector_ms": 103.399
+		},
+		"sample": 5
+	}
+]

@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CAD21_SOLVE fuse 0.00000006349207 equilibrium=0.00000006103516
+CAD21_SOLVE step-cut 0.00000052262186 equilibrium=0.00000012207041
+CAD21_INTEGRATION_PASS

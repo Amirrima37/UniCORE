@@ -1,0 +1,19 @@
+extends SceneTree
+func _init():
+ var bus=load("res://core/event_bus.gd").new()
+ root.add_child(bus)
+ var owner=load("res://ui/analysis_drawer/analysis_drawer.tscn").instantiate()
+ 
+ root.add_child(owner)
+ owner.setup(bus)
+ var manager=load("res://core/module_manager.gd").new()
+ root.add_child(manager)
+ var world=Node3D.new()
+ root.add_child(world)
+ manager.setup(bus,world)
+ owner.queue_free()
+ manager.queue_free()
+ world.queue_free()
+ bus.queue_free()
+ print("REPRO queued cleanup")
+ quit(0)

@@ -1,0 +1,32 @@
+[
+	{
+		"displacement_error": 0.00000000000000000000000165436123,
+		"element": "TET4",
+		"load": "pressure"
+	},
+	{
+		"displacement_error": 0.00000000000000000006290543122343,
+		"element": "TET4",
+		"load": "gravity"
+	},
+	{
+		"displacement_error": 0.00000000000000000954097911787244,
+		"element": "TET4",
+		"load": "prescribed"
+	},
+	{
+		"displacement_error": 0.00000000000000000000000165436123,
+		"element": "HEX8",
+		"load": "pressure"
+	},
+	{
+		"displacement_error": 0.00000000000000000023462812638944,
+		"element": "HEX8",
+		"load": "gravity"
+	},
+	{
+		"displacement_error": 0.00000000000000000986623976961809,
+		"element": "HEX8",
+		"load": "prescribed"
+	}
+]

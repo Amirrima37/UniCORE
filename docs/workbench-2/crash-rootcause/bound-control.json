@@ -1,0 +1,17 @@
+[
+  {
+    "name": "bound_full",
+    "exit": 0,
+    "script_error": false
+  },
+  {
+    "name": "minimal_deferred",
+    "exit": 0,
+    "script_error": false
+  },
+  {
+    "name": "minimal_deferred_bound",
+    "exit": 0,
+    "script_error": false
+  }
+]

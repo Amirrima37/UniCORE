@@ -1,0 +1,101 @@
+[
+  {
+    "workspace": "Structures and mechanical",
+    "status": "planned",
+    "reference_only": true,
+    "capabilities": [
+      "Mechanical / MAPDL — linear, nonlinear, dynamic and thermal structural FEA",
+      "LS-DYNA — explicit crash and impact dynamics",
+      "Autodyn — severe deformation and impact",
+      "Motion — rigid and flexible multibody dynamics",
+      "Sherlock — electronics thermal, mechanical and vibration reliability",
+      "Additive Suite / Additive Print — metal additive process, distortion and supports",
+      "Forming — metal forming",
+      "Sound Pro / SAS — acoustics, sound quality and psychoacoustics",
+      "Fatigue Module — fatigue life",
+      "Aqwa — floating and fixed offshore hydrodynamics"
+    ]
+  },
+  {
+    "workspace": "Fluids",
+    "status": "planned",
+    "reference_only": true,
+    "capabilities": [
+      "Fluent — flow, turbulence and heat transfer",
+      "CFX — rotating equipment and turbomachinery CFD",
+      "Rocky — DEM granular flow and particles",
+      "Polyflow — viscoelastic flow and polymer processing",
+      "Chemkin / Reaction Workbench — chemical kinetics and reacting flow",
+      "Forte — internal combustion engines",
+      "FENSAP-ICE — aircraft and surface ice accretion",
+      "EnSight — general simulation postprocessing",
+      "CFD-Post — fluid postprocessing",
+      "ICEM CFD — geometry acquisition, meshing and postprocessing",
+      "TurboGrid / BladeModeler / VistaTF — turbomachinery design and analysis"
+    ]
+  },
+  {
+    "workspace": "Electronics and electromagnetics",
+    "status": "planned",
+    "reference_only": true,
+    "capabilities": [
+      "HFSS — 3D RF, microwave and antennas",
+      "Maxwell — low frequency fields, machines and transformers",
+      "SIwave — PCB and package signal / power integrity, EMI / EMC",
+      "Icepak — electronics cooling",
+      "Q3D Extractor — parasitic R, L, C, G extraction",
+      "Electronics Desktop / AEDT — integrated electronics workspace",
+      "Motor-CAD — motor design and analysis",
+      "EMC Plus / Charge Plus — EMC and electrostatic discharge",
+      "SynMatrix Filter / NuHertz FilterSolutions — RF filters"
+    ]
+  },
+  {
+    "workspace": "Semiconductors",
+    "status": "planned",
+    "reference_only": true,
+    "capabilities": [
+      "RedHawk-SC — digital and mixed signal power / signal integrity and reliability signoff",
+      "Totem — analog and mixed signal power integrity and reliability",
+      "PowerArtist — RTL power analysis and reduction",
+      "Pathfinder — static and dynamic ESD",
+      "ParagonX / PowerX / RaptorX — power grid and signal integrity signoff"
+    ]
+  },
+  {
+    "workspace": "Optics and photonics",
+    "status": "planned",
+    "reference_only": true,
+    "capabilities": [
+      "Zemax OpticStudio — lens and optical system design",
+      "Speos — human vision, lighting and optical systems",
+      "Lumerical FDTD / MODE / CHARGE / HEAT — nanophotonics, silicon photonics and optoelectronic devices"
+    ]
+  },
+  {
+    "workspace": "Systems and optimization",
+    "status": "planned",
+    "reference_only": true,
+    "capabilities": [
+      "optiSLang — PIDO, sensitivity, optimization and robustness",
+      "Twin Builder — reduced order models and digital twins",
+      "ModelCenter — multidisciplinary optimization and MBSE",
+      "Medini Analyze — safety and cybersecurity standards including ISO 26262",
+      "SCADE Suite / Display / Architect — embedded and critical software development"
+    ]
+  },
+  {
+    "workspace": "Materials, design and platform",
+    "status": "planned",
+    "reference_only": true,
+    "capabilities": [
+      "GRANTA MI / Materials Data for Simulation / EduPack — materials information",
+      "Discovery Modeling / Simulation — real time CAD and structural, thermal and fluid exploration",
+      "SpaceClaim — direct modeling, preparation and simplification",
+      "Workbench — project schematic, integration and data management",
+      "Geometry Interfaces — CATIA, NX, Creo, SOLIDWORKS, SolidEdge, Inventor and other CAD translators",
+      "Cloud / Remote Solve Manager (RSM) — local and cloud HPC management",
+      "PyAnsys — scripting and automation ecosystem"
+    ]
+  }
+]

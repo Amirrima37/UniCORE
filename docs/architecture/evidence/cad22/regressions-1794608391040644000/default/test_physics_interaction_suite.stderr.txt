@@ -1,0 +1,79 @@
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:559)
+   GDScript backtrace (most recent call first):
+       [0] _resolve_gravity_module (res://modules/physics/tools/celestial_spawner_tool.gd:50)
+       [1] initialize (res://modules/physics/tools/celestial_spawner_tool.gd:38)
+       [2] _test_celestial_spawner_tool (res://tests/test_physics_interaction_suite.gd:227)
+       [3] _init (res://tests/test_physics_interaction_suite.gd:65)
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:559)
+   GDScript backtrace (most recent call first):
+       [0] _resolve_gravity_module (res://modules/physics/tools/celestial_spawner_tool.gd:50)
+       [1] spawn_body (res://modules/physics/tools/celestial_spawner_tool.gd:57)
+       [2] _test_celestial_spawner_tool (res://tests/test_physics_interaction_suite.gd:234)
+       [3] _init (res://tests/test_physics_interaction_suite.gd:65)
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:559)
+   GDScript backtrace (most recent call first):
+       [0] _resolve_md_module (res://modules/physics/tools/particle_injector_tool.gd:51)
+       [1] initialize (res://modules/physics/tools/particle_injector_tool.gd:39)
+       [2] _test_particle_injector_tool (res://tests/test_physics_interaction_suite.gd:249)
+       [3] _init (res://tests/test_physics_interaction_suite.gd:66)
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:559)
+   GDScript backtrace (most recent call first):
+       [0] _resolve_md_module (res://modules/physics/tools/particle_injector_tool.gd:51)
+       [1] inject_molecules (res://modules/physics/tools/particle_injector_tool.gd:58)
+       [2] _test_particle_injector_tool (res://tests/test_physics_interaction_suite.gd:256)
+       [3] _init (res://tests/test_physics_interaction_suite.gd:66)
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:559)
+   GDScript backtrace (most recent call first):
+       [0] _resolve_nuclear_module (res://modules/physics/tools/nuclear_lab_tool.gd:62)
+       [1] initialize (res://modules/physics/tools/nuclear_lab_tool.gd:47)
+       [2] _test_nuclear_lab_tool (res://tests/test_physics_interaction_suite.gd:271)
+       [3] _init (res://tests/test_physics_interaction_suite.gd:67)
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:559)
+   GDScript backtrace (most recent call first):
+       [0] _resolve_nuclear_module (res://modules/physics/tools/nuclear_lab_tool.gd:62)
+       [1] fire_neutron (res://modules/physics/tools/nuclear_lab_tool.gd:100)
+       [2] _test_nuclear_lab_tool (res://tests/test_physics_interaction_suite.gd:278)
+       [3] _init (res://tests/test_physics_interaction_suite.gd:67)
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:559)
+   GDScript backtrace (most recent call first):
+       [0] _resolve_nuclear_module (res://modules/physics/tools/nuclear_lab_tool.gd:62)
+       [1] set_control_rods (res://modules/physics/tools/nuclear_lab_tool.gd:116)
+       [2] _test_nuclear_lab_tool (res://tests/test_physics_interaction_suite.gd:287)
+       [3] _init (res://tests/test_physics_interaction_suite.gd:67)
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:559)
+   GDScript backtrace (most recent call first):
+       [0] _resolve_quantum_module (res://modules/physics/tools/quantum_bench_tool.gd:58)
+       [1] initialize (res://modules/physics/tools/quantum_bench_tool.gd:43)
+       [2] _test_quantum_bench_tool (res://tests/test_physics_interaction_suite.gd:301)
+       [3] _init (res://tests/test_physics_interaction_suite.gd:68)
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:559)
+   GDScript backtrace (most recent call first):
+       [0] _resolve_quantum_module (res://modules/physics/tools/quantum_bench_tool.gd:58)
+       [1] inject_wavepacket (res://modules/physics/tools/quantum_bench_tool.gd:83)
+       [2] _test_quantum_bench_tool (res://tests/test_physics_interaction_suite.gd:308)
+       [3] _init (res://tests/test_physics_interaction_suite.gd:68)
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:559)
+   GDScript backtrace (most recent call first):
+       [0] _resolve_physics_modules (res://modules/physics/tools/scientific_probe_tool.gd:62)
+       [1] initialize (res://modules/physics/tools/scientific_probe_tool.gd:47)
+       [2] _test_scientific_probe_tool (res://tests/test_physics_interaction_suite.gd:323)
+       [3] _init (res://tests/test_physics_interaction_suite.gd:69)
+ERROR: Parameter "data.tree" is null.
+   at: get_tree (scene/main/node.h:559)
+   GDScript backtrace (most recent call first):
+       [0] _resolve_physics_modules (res://modules/physics/tools/scientific_probe_tool.gd:62)
+       [1] initialize (res://modules/physics/tools/scientific_probe_tool.gd:47)
+       [2] _test_e2e_interaction_pipeline (res://tests/test_physics_interaction_suite.gd:372)
+       [3] _init (res://tests/test_physics_interaction_suite.gd:72)
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)

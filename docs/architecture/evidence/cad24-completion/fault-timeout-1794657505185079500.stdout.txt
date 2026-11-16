@@ -1,0 +1,4 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CAD24_EXPECTED_ERROR Native OCCT timeout; native diagnostics retained: C:\Users\Victus\Desktop\UniCORE-main\.tools\godot472-migration\roaming\Godot\app_userdata\UniCORE\cad_geometry\9120_453095_988c8bd1d6602204\kernel-temp\occt-vrfpmdm8
+CAD24_FAILURE_RECOVERY_PASS heartbeat=1147

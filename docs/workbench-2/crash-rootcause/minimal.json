@@ -1,0 +1,12 @@
+[
+  {
+    "name": "minimal_lambda",
+    "exit": 0,
+    "seconds": 0.5472738000025856
+  },
+  {
+    "name": "minimal_bound",
+    "exit": 0,
+    "seconds": 0.49974829999700887
+  }
+]

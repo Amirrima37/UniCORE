@@ -1,0 +1,58 @@
+[
+  {
+    "kind": "Box",
+    "repeat": 0,
+    "elements": 24,
+    "nodes": 14,
+    "sha256": "69aaabc1976396cd07c1c8c26d18aae456df210859f01a82d30dc28040de3483",
+    "provenance": {
+      "gmsh": "4.15.2",
+      "threads": 1,
+      "size": 0.1,
+      "mesh_volume": 0.0009999999999999998,
+      "cad_volume": 0.0010000000000000002
+    }
+  },
+  {
+    "kind": "Box",
+    "repeat": 1,
+    "elements": 24,
+    "nodes": 14,
+    "sha256": "69aaabc1976396cd07c1c8c26d18aae456df210859f01a82d30dc28040de3483",
+    "provenance": {
+      "gmsh": "4.15.2",
+      "threads": 1,
+      "size": 0.1,
+      "mesh_volume": 0.0009999999999999998,
+      "cad_volume": 0.0010000000000000002
+    }
+  },
+  {
+    "kind": "Cylinder",
+    "repeat": 0,
+    "elements": 75,
+    "nodes": 38,
+    "sha256": "9ce0edf33cf7d061c171b2c5faf8f3aa6e059fe3e0af385c951f66de6a6075b9",
+    "provenance": {
+      "gmsh": "4.15.2",
+      "threads": 1,
+      "size": 0.1,
+      "mesh_volume": 0.0012630646105106533,
+      "cad_volume": 0.0015707963267948967
+    }
+  },
+  {
+    "kind": "Cylinder",
+    "repeat": 1,
+    "elements": 75,
+    "nodes": 38,
+    "sha256": "9ce0edf33cf7d061c171b2c5faf8f3aa6e059fe3e0af385c951f66de6a6075b9",
+    "provenance": {
+      "gmsh": "4.15.2",
+      "threads": 1,
+      "size": 0.1,
+      "mesh_volume": 0.0012630646105106533,
+      "cad_volume": 0.0015707963267948967
+    }
+  }
+]

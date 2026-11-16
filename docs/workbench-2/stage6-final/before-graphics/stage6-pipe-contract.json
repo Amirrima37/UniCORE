@@ -1,0 +1,82 @@
+{
+  "inner_pressure_radial_dot_sum": 0.000174381885042939,
+  "meshes": [
+    {
+      "density": 1,
+      "edge_ratio_max": 3.5738491891029,
+      "elements": 96,
+      "generation_ms": 5.407,
+      "inner_radius": 0.05,
+      "mean_ratio_median": 0.737914381411089,
+      "mean_ratio_min": 0.51395631880278,
+      "nodes": 64,
+      "warnings": 0
+    },
+    {
+      "density": 2,
+      "edge_ratio_max": 3.48839613435685,
+      "elements": 768,
+      "generation_ms": 39.827,
+      "inner_radius": 0.05,
+      "mean_ratio_median": 0.679021490587808,
+      "mean_ratio_min": 0.53230594922344,
+      "nodes": 288,
+      "warnings": 0
+    },
+    {
+      "density": 4,
+      "edge_ratio_max": 3.44865482804118,
+      "elements": 6144,
+      "generation_ms": 361.292,
+      "inner_radius": 0.05,
+      "mean_ratio_median": 0.686837622547351,
+      "mean_ratio_min": 0.540268552478705,
+      "nodes": 1600,
+      "warnings": 0
+    },
+    {
+      "density": 1,
+      "edge_ratio_max": 1.91702179305947,
+      "elements": 1536,
+      "generation_ms": 103.454,
+      "inner_radius": 0.09,
+      "mean_ratio_median": 0.761704254348533,
+      "mean_ratio_min": 0.675494171394007,
+      "nodes": 640,
+      "warnings": 0
+    },
+    {
+      "density": 2,
+      "edge_ratio_max": 1.90207131692207,
+      "elements": 12288,
+      "generation_ms": 833.087,
+      "inner_radius": 0.09,
+      "mean_ratio_median": 0.755669108968507,
+      "mean_ratio_min": 0.681648609378986,
+      "nodes": 3456,
+      "warnings": 0
+    },
+    {
+      "density": 4,
+      "inner_radius": 0.09,
+      "rejected": "Pipe node limit: 10000; reduce density or length/radius ratio"
+    },
+    {
+      "density": 1,
+      "inner_radius": 0.099,
+      "rejected": "Pipe node limit: 10000; reduce density or length/radius ratio"
+    },
+    {
+      "density": 2,
+      "inner_radius": 0.099,
+      "rejected": "Pipe node limit: 10000; reduce density or length/radius ratio"
+    },
+    {
+      "density": 4,
+      "inner_radius": 0.099,
+      "rejected": "Pipe node limit: 10000; reduce density or length/radius ratio"
+    }
+  ],
+  "pressure_residual": 0.0000000000935473895714001,
+  "reaction_norm_N": 0.0000000000751854784006311
+}

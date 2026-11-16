@@ -1,0 +1,1 @@
+{"state": "cancelled", "exit_code": 1, "error": "", "seconds": 0.7494410000072094, "started_utc": "2026-11-14T11:42:31.632545+00:00", "ended_utc": "2026-11-14T11:42:32.381987+00:00", "peak_working_set_bytes": 2142208, "peak_memory_bytes": 462848, "job_object": true}

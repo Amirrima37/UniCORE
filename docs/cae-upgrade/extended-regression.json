@@ -1,0 +1,366 @@
+[
+  {
+    "script": "tests/test_adversarial_stress_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.81
+  },
+  {
+    "script": "tests/test_ambient_graph_canvas_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.33
+  },
+  {
+    "script": "tests/test_app_shell_suite.gd",
+    "exit_code": 3221225477,
+    "passed": false,
+    "script_error": false,
+    "seconds": 5.021
+  },
+  {
+    "script": "tests/test_cae_ai_commands.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.988
+  },
+  {
+    "script": "tests/test_cae_analysis_commands.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.715
+  },
+  {
+    "script": "tests/test_cae_recovery.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.716
+  },
+  {
+    "script": "tests/test_cae_shell.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.655
+  },
+  {
+    "script": "tests/test_conversation_memory_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.347
+  },
+  {
+    "script": "tests/test_design_system_foundation_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.331
+  },
+  {
+    "script": "tests/test_diagnostic_logger_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": true,
+    "seconds": 2.923
+  },
+  {
+    "script": "tests/test_display_server_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.754
+  },
+  {
+    "script": "tests/test_fluid_orb_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.347
+  },
+  {
+    "script": "tests/test_input_mapper_overlay_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.531
+  },
+  {
+    "script": "tests/test_input_mapper_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.084
+  },
+  {
+    "script": "tests/test_interactive_sandbox_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.618
+  },
+  {
+    "script": "tests/test_liquid_glass_settings_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.448
+  },
+  {
+    "script": "tests/test_local_ai_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.011
+  },
+  {
+    "script": "tests/test_materials_thermal_ui.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.804
+  },
+  {
+    "script": "tests/test_mesh_async.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.816
+  },
+  {
+    "script": "tests/test_mesh_inspection.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.334
+  },
+  {
+    "script": "tests/test_mesh_result_integration.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.902
+  },
+  {
+    "script": "tests/test_module_library_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.368
+  },
+  {
+    "script": "tests/test_multiplayer_sync_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.615
+  },
+  {
+    "script": "tests/test_native_geometry_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.339
+  },
+  {
+    "script": "tests/test_native_gravity_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.639
+  },
+  {
+    "script": "tests/test_native_metrics_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.355
+  },
+  {
+    "script": "tests/test_native_molecular_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.906
+  },
+  {
+    "script": "tests/test_native_nuclear_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.432
+  },
+  {
+    "script": "tests/test_native_quantum_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.532
+  },
+  {
+    "script": "tests/test_native_radiation.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.35
+  },
+  {
+    "script": "tests/test_native_remaining_fixtures_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.348
+  },
+  {
+    "script": "tests/test_native_structural_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.531
+  },
+  {
+    "script": "tests/test_native_structural_ui.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.719
+  },
+  {
+    "script": "tests/test_native_thermal_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.617
+  },
+  {
+    "script": "tests/test_network_layer_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.083
+  },
+  {
+    "script": "tests/test_object_editor_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.451
+  },
+  {
+    "script": "tests/test_physics_engine_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.092
+  },
+  {
+    "script": "tests/test_physics_features_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.719
+  },
+  {
+    "script": "tests/test_physics_interaction_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.731
+  },
+  {
+    "script": "tests/test_precession_diagnostic.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.451
+  },
+  {
+    "script": "tests/test_presence_chat_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.334
+  },
+  {
+    "script": "tests/test_rk4_empirical_verification.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.431
+  },
+  {
+    "script": "tests/test_self_repair_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": true,
+    "seconds": 0.899
+  },
+  {
+    "script": "tests/test_semantic_cache_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.285
+  },
+  {
+    "script": "tests/test_settings_audio_persistence_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.654
+  },
+  {
+    "script": "tests/test_space_management_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.085
+  },
+  {
+    "script": "tests/test_space_state_machine_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.342
+  },
+  {
+    "script": "tests/test_space_viewport_start_menu_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 2.924
+  },
+  {
+    "script": "tests/test_structural_expansion.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 1.915
+  },
+  {
+    "script": "tests/test_validator_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": true,
+    "seconds": 0.336
+  },
+  {
+    "script": "tests/test_verlet_empirical_verification.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.348
+  },
+  {
+    "script": "tests/test_welcome_and_boot_screen_suite.gd",
+    "exit_code": 0,
+    "passed": true,
+    "script_error": false,
+    "seconds": 0.533
+  }
+]

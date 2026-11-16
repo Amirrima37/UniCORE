@@ -1,0 +1,74 @@
+[
+  {
+    "binary": "unicore_solver.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794443296_017_16376_1317271",
+    "pid_stopped": true,
+    "reference_error": 0.0000000000121005427899945,
+    "residual": 0.000000000040149838285664,
+    "thermal": false,
+    "threads": 2
+  },
+  {
+    "binary": "unicore_solver.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794443296_157_16376_1457056",
+    "pid_stopped": true,
+    "reference_error": 0.000000000000113686837721616,
+    "residual": 0.000000000000000501107688440117,
+    "thermal": true,
+    "threads": 2
+  },
+  {
+    "binary": "unicore_solver_debug.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794443296_29_16376_1589998",
+    "pid_stopped": true,
+    "reference_error": 0.0000000000121005427899945,
+    "residual": 0.000000000040149838285664,
+    "thermal": false,
+    "threads": 2
+  },
+  {
+    "binary": "unicore_solver_debug.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794443296_44_16376_1740027",
+    "pid_stopped": true,
+    "reference_error": 0.000000000000113686837721616,
+    "residual": 0.000000000000000501107688440117,
+    "thermal": true,
+    "threads": 2
+  },
+  {
+    "binary": "unicore_solver_noomp.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794443296_573_16376_1872808",
+    "pid_stopped": true,
+    "reference_error": 0.0000000000121005427899945,
+    "residual": 0.000000000040149838285664,
+    "thermal": false,
+    "threads": 1
+  },
+  {
+    "binary": "unicore_solver_noomp.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794443297_002_16376_2302634",
+    "pid_stopped": true,
+    "reference_error": 0.000000000000113686837721616,
+    "residual": 0.000000000000000501107688440117,
+    "thermal": true,
+    "threads": 1
+  },
+  {
+    "binary": "unicore_solver_debug_noomp.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794443297_128_16376_2428751",
+    "pid_stopped": true,
+    "reference_error": 0.0000000000121005427899945,
+    "residual": 0.000000000040149838285664,
+    "thermal": false,
+    "threads": 1
+  },
+  {
+    "binary": "unicore_solver_debug_noomp.exe",
+    "directory": "C:/Users/Victus/Desktop/UniCORE-main/.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs/1794443297_885_16376_3185277",
+    "pid_stopped": true,
+    "reference_error": 0.000000000000113686837721616,
+    "residual": 0.000000000000000501107688440117,
+    "thermal": true,
+    "threads": 1
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "test": "test_stage6_load_persistence",
+    "timeout": true,
+    "passed": false
+  },
+  {
+    "test": "test_stage6_condition_conflicts",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.7109029999992345
+  },
+  {
+    "test": "test_stage6_sphere_dialog",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.6269954000017606
+  },
+  {
+    "test": "test_stage5_provenance",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.9018808999971952
+  },
+  {
+    "test": "test_stage51_cache",
+    "exit": 0,
+    "passed": true,
+    "seconds": 3.3244295999975293
+  },
+  {
+    "test": "test_stage5_probes",
+    "exit": 0,
+    "passed": true,
+    "seconds": 2.4006942999985768
+  },
+  {
+    "test": "test_app_shell_suite",
+    "exit": 0,
+    "passed": true,
+    "seconds": 9.917326599999797
+  }
+]

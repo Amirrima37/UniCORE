@@ -1,0 +1,15 @@
+{
+  "name": "numerical",
+  "exit_code": 1,
+  "outcome": "FAIL",
+  "command": [
+    "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+    "--headless",
+    "--path",
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+    "-s",
+    "res://tests/cad24_numerical.gd"
+  ],
+  "seconds": 5.3884055000089575,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\numerical-1794622826923622600"
+}

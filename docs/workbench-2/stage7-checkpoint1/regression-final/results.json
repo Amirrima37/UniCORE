@@ -1,0 +1,106 @@
+{
+  "assertions": 14,
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "rows": [
+    {
+      "name": "default-manifest",
+      "command": [
+        "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "native/run_regressions.py",
+        "--godot",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64.exe",
+        "--output",
+        "docs\\workbench-2\\stage7-checkpoint1\\regression-final\\default"
+      ],
+      "exit_code": 0,
+      "seconds": 64.89867190000223,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\regression-final\\default-manifest.log",
+      "expected_exit": 0
+    },
+    {
+      "name": "structural_solver_test-build",
+      "command": [
+        "C:/Qt/Tools/mingw1310_64/bin/x86_64-w64-mingw32-g++.exe",
+        "-std=c++17",
+        "-O2",
+        "-static",
+        "-ffp-contract=off",
+        "-Inative/src",
+        "native/tests/structural_solver_test.cpp",
+        "-o",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\regression-final\\structural_solver_test.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 4.102391699998407,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\regression-final\\structural_solver_test-build.log",
+      "expected_exit": 0
+    },
+    {
+      "name": "structural_solver_test",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\regression-final\\structural_solver_test.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4599732999995467,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\regression-final\\structural_solver_test.log",
+      "expected_exit": 0
+    },
+    {
+      "name": "hex8_test-build",
+      "command": [
+        "C:/Qt/Tools/mingw1310_64/bin/x86_64-w64-mingw32-g++.exe",
+        "-std=c++17",
+        "-O2",
+        "-static",
+        "-ffp-contract=off",
+        "-Inative/src",
+        "native/tests/hex8_test.cpp",
+        "-o",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\regression-final\\hex8_test.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 6.898491400002968,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\regression-final\\hex8_test-build.log",
+      "expected_exit": 0
+    },
+    {
+      "name": "hex8_test",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\regression-final\\hex8_test.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4192901000060374,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\regression-final\\hex8_test.log",
+      "expected_exit": 0
+    },
+    {
+      "name": "thermal_radiation_test-build",
+      "command": [
+        "C:/Qt/Tools/mingw1310_64/bin/x86_64-w64-mingw32-g++.exe",
+        "-std=c++17",
+        "-O2",
+        "-static",
+        "-ffp-contract=off",
+        "-Inative/src",
+        "native/tests/thermal_radiation_test.cpp",
+        "-o",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\regression-final\\thermal_radiation_test.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 8.088787599997886,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\regression-final\\thermal_radiation_test-build.log",
+      "expected_exit": 0
+    },
+    {
+      "name": "thermal_radiation_test",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\regression-final\\thermal_radiation_test.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5222145999941858,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\regression-final\\thermal_radiation_test.log",
+      "expected_exit": 0
+    }
+  ]
+}

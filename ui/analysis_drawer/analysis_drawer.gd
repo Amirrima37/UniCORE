@@ -62,7 +62,10 @@ func _ready() -> void:
 func setup(event_bus: Node = null) -> void:
 	_event_bus = event_bus
 	if _event_bus:
-		_event_bus.subscribe("interface_settings_changed", func(_d): _apply_cyber_styling())
+		_event_bus.subscribe("interface_settings_changed", _on_interface_settings_changed)
+
+func _on_interface_settings_changed(_data: Dictionary) -> void:
+	_apply_cyber_styling()
 
 func _apply_cyber_styling() -> void:
 	var is_white := CyberTheme.is_white_theme()

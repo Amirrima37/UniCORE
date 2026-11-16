@@ -1,0 +1,17 @@
+[
+  {
+    "name": "step-numerical",
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/step_final_numerical.gd"
+    ],
+    "exit_code": 0,
+    "outcome": "PASS",
+    "state": "completed",
+    "seconds": 32.037286500002665
+  }
+]

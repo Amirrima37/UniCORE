@@ -1,0 +1,44 @@
+[
+  {
+    "backend": "CalculiX 2.23",
+    "case": "fuse",
+    "graph_reconstruction": true,
+    "main_thread_frames": 530,
+    "maximum_displacement_m": 6.349206671529828e-08,
+    "maximum_von_mises_Pa": 66666.67047558418,
+    "nodes": 131,
+    "outcome": "PASS",
+    "parameter_recompute": true,
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "073f44ef61142937f9a2f8c7a056d5022613b5776d6ceae10b03eb0790707930",
+      "input_sha256": "5b61e2b1ce979675da3656fb041809672432292b2b4e2d79b7a5e82a2948b02f",
+      "schema": 1
+    },
+    "reaction_relative_imbalance": 6.103515625e-08,
+    "save_reopen": true,
+    "tet4": 338,
+    "undo_redo": true
+  },
+  {
+    "backend": "CalculiX 2.23",
+    "case": "step-cut",
+    "graph_reconstruction": true,
+    "main_thread_frames": 404,
+    "maximum_displacement_m": 5.226218604548194e-07,
+    "maximum_von_mises_Pa": 116746.53130717872,
+    "nodes": 358,
+    "outcome": "PASS",
+    "parameter_recompute": true,
+    "provenance": {
+      "binary_sha256": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "dat_sha256": "d9b7a48dc32f31fbada9badb7a4929740aaf332e251aa26721a51a73313be69a",
+      "input_sha256": "add16647db0d075a2831c0629537dea637efc43abd702555f6fb57248e7fb5e9",
+      "schema": 1
+    },
+    "reaction_relative_imbalance": 1.220704143634066e-07,
+    "save_reopen": true,
+    "tet4": 1107,
+    "undo_redo": true
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "case": "fingerprint",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/test_mesh_fingerprint.gd"
+    ],
+    "seconds": 0.8068045999971218,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\preservation-1794655777965101900"
+  },
+  {
+    "case": "step-bar",
+    "outcome": "FAIL",
+    "exit_code": 1,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/test_godot472_step_workbench.gd"
+    ],
+    "seconds": 9.263353599992115,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\preservation-1794655777965101900"
+  },
+  {
+    "case": "step-cylinder",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/test_godot472_step_workbench.gd"
+    ],
+    "seconds": 22.075616899994202,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\preservation-1794655777965101900"
+  },
+  {
+    "case": "modal",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\stage7-modal-test.exe"
+    ],
+    "seconds": 0.4507517000020016,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\preservation-1794655777965101900"
+  },
+  {
+    "case": "dynamics",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\dynamics_test.exe"
+    ],
+    "seconds": 0.1594669000041904,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\preservation-1794655777965101900"
+  }
+]

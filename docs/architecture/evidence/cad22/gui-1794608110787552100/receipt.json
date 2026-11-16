@@ -1,0 +1,16 @@
+[
+  {
+    "test": "gui",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 34.11999829999695,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/cad22_gui.gd"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\gui-1794608110787552100"
+  }
+]

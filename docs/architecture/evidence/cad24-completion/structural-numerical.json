@@ -1,0 +1,152 @@
+[
+  {
+    "analytic_reference_m": 0.0000000634920634920635,
+    "case": "overlap",
+    "completion": {
+      "ended_utc": "2026-11-14T14:23:02.197727+00:00",
+      "error": "",
+      "exit_code": 0.0,
+      "job_object": true,
+      "peak_memory_bytes": 170119168.0,
+      "peak_working_set_bytes": 9416704.0,
+      "seconds": 0.154010400001425,
+      "started_utc": "2026-11-14T14:23:02.043689+00:00",
+      "state": "completed"
+    },
+    "heartbeat_frames": 1130,
+    "order": 1,
+    "reaction_moment_Nm": [
+      0.0,
+      0.00000000000000244249065417534,
+      -25.0000038146973
+    ],
+    "reaction_relative_imbalance": 0.00000006103515625,
+    "solver_job": "user://calculix_jobs/20940_4816136_6856b4e2ed3428b6",
+    "tip_m": 0.0000000634920616666666
+  },
+  {
+    "analytic_reference_m": 0.0000000634920634920635,
+    "case": "overlap",
+    "completion": {
+      "ended_utc": "2026-11-14T14:23:12.871471+00:00",
+      "error": "",
+      "exit_code": 0.0,
+      "job_object": true,
+      "peak_memory_bytes": 170999808.0,
+      "peak_working_set_bytes": 18350080.0,
+      "seconds": 0.398029699994368,
+      "started_utc": "2026-11-14T14:23:12.473373+00:00",
+      "state": "completed"
+    },
+    "heartbeat_frames": 1540,
+    "order": 2,
+    "reaction_moment_Nm": [
+      0.000000625848770141602,
+      -0.0000000000000391378214017156,
+      -25.0000019073486
+    ],
+    "reaction_relative_imbalance": 0.00000006103515625,
+    "solver_job": "user://calculix_jobs/20940_12902134_c25d0aa9ae4e2978",
+    "tip_m": 0.0000000634920599999999
+  },
+  {
+    "analytic_reference_m": 0.000000108926160228385,
+    "case": "through-hole",
+    "completion": {
+      "ended_utc": "2026-11-14T14:23:21.536531+00:00",
+      "error": "",
+      "exit_code": 0.0,
+      "job_object": true,
+      "peak_memory_bytes": 176599040.0,
+      "peak_working_set_bytes": 40030208.0,
+      "seconds": 1.47703130000446,
+      "started_utc": "2026-11-14T14:23:20.059243+00:00",
+      "state": "completed"
+    },
+    "heartbeat_frames": 1253,
+    "order": 1,
+    "reaction_moment_Nm": [
+      0.00000109151005744934,
+      0.00000000000977706804405898,
+      0.000000342726707458496
+    ],
+    "reaction_relative_imbalance": 0.000000244140625,
+    "solver_job": "user://calculix_jobs/20940_24364188_e2bba2cb87b7bde9",
+    "tip_m": 0.000000108805446527778
+  },
+  {
+    "analytic_reference_m": 0.000000108926160228385,
+    "case": "through-hole",
+    "completion": {
+      "ended_utc": "2026-11-14T14:24:11.958699+00:00",
+      "error": "",
+      "exit_code": 0.0,
+      "job_object": true,
+      "peak_memory_bytes": 397328384.0,
+      "peak_working_set_bytes": 386805760.0,
+      "seconds": 12.3959923999937,
+      "started_utc": "2026-11-14T14:23:59.560530+00:00",
+      "state": "completed"
+    },
+    "heartbeat_frames": 7264,
+    "order": 2,
+    "reaction_moment_Nm": [
+      -0.000000715255737304688,
+      0.0000000000000280886425230165,
+      -0.000000916421413421631
+    ],
+    "reaction_relative_imbalance": 0.0000001220703125,
+    "solver_job": "user://calculix_jobs/20940_48132550_4c078f86a80f10b0",
+    "tip_m": 0.000000108926116030534
+  },
+  {
+    "analytic_reference_m": 0.000000238095238095238,
+    "case": "step-scaled",
+    "completion": {
+      "ended_utc": "2026-11-14T14:24:24.133992+00:00",
+      "error": "",
+      "exit_code": 0.0,
+      "job_object": true,
+      "peak_memory_bytes": 170151936.0,
+      "peak_working_set_bytes": 10272768.0,
+      "seconds": 0.189214199999697,
+      "started_utc": "2026-11-14T14:24:23.944747+00:00",
+      "state": "completed"
+    },
+    "heartbeat_frames": 1097,
+    "order": 1,
+    "reaction_moment_Nm": [
+      400.000030517578,
+      -0.000000000000511590769747272,
+      -200.000015258789
+    ],
+    "reaction_relative_imbalance": 0.00000006103515625,
+    "solver_job": "user://calculix_jobs/20940_86685105_43f759c106377a9c",
+    "tip_m": 0.000000238095225
+  },
+  {
+    "analytic_reference_m": 0.000000238095238095238,
+    "case": "step-scaled",
+    "completion": {
+      "ended_utc": "2026-11-14T14:24:35.454420+00:00",
+      "error": "",
+      "exit_code": 0.0,
+      "job_object": true,
+      "peak_memory_bytes": 171696128.0,
+      "peak_working_set_bytes": 25096192.0,
+      "seconds": 0.570298399994499,
+      "started_utc": "2026-11-14T14:24:34.884022+00:00",
+      "state": "completed"
+    },
+    "heartbeat_frames": 1632,
+    "order": 2,
+    "reaction_moment_Nm": [
+      400.000061035156,
+      0.000000000000718694743474801,
+      -200.000015258789
+    ],
+    "reaction_relative_imbalance": 0.00000000000000560448432454508,
+    "solver_job": "user://calculix_jobs/20940_95064358_d865a8ba28788585",
+    "tip_m": 0.0000002380952
+  }
+]

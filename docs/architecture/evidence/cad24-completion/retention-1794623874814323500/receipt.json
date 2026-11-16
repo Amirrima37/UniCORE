@@ -1,0 +1,11 @@
+{
+  "name": "retention",
+  "exit_code": 0,
+  "outcome": "PASS",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/cad24_retention.py"
+  ],
+  "seconds": 1.4532269000046654,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\retention-1794623874814323500"
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "export",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:25:34.591848+00:00",
+    "ended_utc": "2026-11-12T21:25:35.308174+00:00",
+    "seconds": 0.7163052999967476
+  },
+  {
+    "name": "patch",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:25:35.310219+00:00",
+    "ended_utc": "2026-11-12T21:25:36.702683+00:00",
+    "seconds": 1.3924602000042796
+  },
+  {
+    "name": "graphical-workbench",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:25:36.703504+00:00",
+    "ended_utc": "2026-11-12T21:25:58.717760+00:00",
+    "seconds": 22.014267300008214
+  },
+  {
+    "name": "owned-process",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:25:58.719207+00:00",
+    "ended_utc": "2026-11-12T21:26:01.785840+00:00",
+    "seconds": 3.0666379000031156
+  },
+  {
+    "name": "mesh-repeatability",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:26:01.787136+00:00",
+    "ended_utc": "2026-11-12T21:26:08.575325+00:00",
+    "seconds": 6.788183600001503
+  },
+  {
+    "name": "extreme-comparison",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:26:08.576363+00:00",
+    "ended_utc": "2026-11-12T21:26:09.211230+00:00",
+    "seconds": 0.6348734000057448
+  },
+  {
+    "name": "bar-cantilever",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:26:09.212586+00:00",
+    "ended_utc": "2026-11-12T21:26:34.013183+00:00",
+    "seconds": 24.800600899994606
+  },
+  {
+    "name": "default-regressions",
+    "exit_code": 0,
+    "passed": true,
+    "state": "completed",
+    "started_utc": "2026-11-12T21:26:34.014367+00:00",
+    "ended_utc": "2026-11-12T21:27:28.839708+00:00",
+    "seconds": 54.825341499992646
+  }
+]

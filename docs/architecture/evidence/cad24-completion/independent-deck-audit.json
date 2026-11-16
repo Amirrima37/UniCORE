@@ -1,0 +1,140 @@
+[
+  {
+    "case": "overlap",
+    "order": 1,
+    "deck": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\calculix_jobs\\20940_4816136_6856b4e2ed3428b6\\model.inp",
+    "applied_force_N": [
+      0.0,
+      999.9999999999998,
+      0.0
+    ],
+    "applied_moment_Nm": [
+      -4.5470917352655015e-08,
+      0.0,
+      25.000000874308434
+    ],
+    "reaction_moment_Nm": [
+      0.0,
+      2.44249065417534e-15,
+      -25.0000038146973
+    ],
+    "relative_moment_imbalance": 1.9604936222454313e-08,
+    "node_cards": 192,
+    "load_cards": 30
+  },
+  {
+    "case": "overlap",
+    "order": 2,
+    "deck": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\calculix_jobs\\20940_12902134_c25d0aa9ae4e2978\\model.inp",
+    "applied_force_N": [
+      0.0,
+      999.9999999999997,
+      0.0
+    ],
+    "applied_moment_Nm": [
+      8.049116928532385e-16,
+      0.0,
+      24.99999999999999
+    ],
+    "reaction_moment_Nm": [
+      6.25848770141602e-07,
+      -3.91378214017156e-14,
+      -25.0000019073486
+    ],
+    "relative_moment_imbalance": 1.3382684351009226e-08,
+    "node_cards": 1109,
+    "load_cards": 71
+  },
+  {
+    "case": "through-hole",
+    "order": 1,
+    "deck": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\calculix_jobs\\20940_24364188_e2bba2cb87b7bde9\\model.inp",
+    "applied_force_N": [
+      0.0,
+      999.9999999999998,
+      0.0
+    ],
+    "applied_moment_Nm": [
+      -9.450174198732952e-09,
+      0.0,
+      2.2858347528686984e-07
+    ],
+    "reaction_moment_Nm": [
+      1.09151005744934e-06,
+      9.77706804405898e-12,
+      3.42726707458496e-07
+    ],
+    "relative_moment_imbalance": 9.99082551125265e-09,
+    "node_cards": 2926,
+    "load_cards": 144
+  },
+  {
+    "case": "through-hole",
+    "order": 2,
+    "deck": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\calculix_jobs\\20940_48132550_4c078f86a80f10b0\\model.inp",
+    "applied_force_N": [
+      0.0,
+      999.9999999999986,
+      0.0
+    ],
+    "applied_moment_Nm": [
+      -6.38378239159465e-16,
+      0.0,
+      3.039235529911366e-15
+    ],
+    "reaction_moment_Nm": [
+      -7.15255737304688e-07,
+      2.80886425230165e-14,
+      -9.16421413421631e-07
+    ],
+    "relative_moment_imbalance": 9.491817430705741e-09,
+    "node_cards": 20007,
+    "load_cards": 428
+  },
+  {
+    "case": "step-scaled",
+    "order": 1,
+    "deck": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\calculix_jobs\\20940_86685105_43f759c106377a9c\\model.inp",
+    "applied_force_N": [
+      0.0,
+      1000.0000000000001,
+      0.0
+    ],
+    "applied_moment_Nm": [
+      -399.99999962265383,
+      0.0,
+      200.0000050332862
+    ],
+    "reaction_moment_Nm": [
+      400.000030517578,
+      -5.11590769747272e-13,
+      -200.000015258789
+    ],
+    "relative_moment_imbalance": 1.4298643508251739e-08,
+    "node_cards": 338,
+    "load_cards": 20
+  },
+  {
+    "case": "step-scaled",
+    "order": 2,
+    "deck": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\calculix_jobs\\20940_95064358_d865a8ba28788585\\model.inp",
+    "applied_force_N": [
+      0.0,
+      999.999999999999,
+      0.0
+    ],
+    "applied_moment_Nm": [
+      -399.99999999999966,
+      0.0,
+      199.99999999999983
+    ],
+    "reaction_moment_Nm": [
+      400.000061035156,
+      7.18694743474801e-13,
+      -200.000015258789
+    ],
+    "relative_moment_imbalance": 2.7642648486358015e-08,
+    "node_cards": 1862,
+    "load_cards": 45
+  }
+]

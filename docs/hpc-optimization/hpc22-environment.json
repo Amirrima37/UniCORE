@@ -1,0 +1,14 @@
+{
+  "platform": "Windows-11-10.0.26300-SP0",
+  "compiler": "x86_64-w64-mingw32-g++.exe (x86_64-posix-seh-rev1, Built by MinGW-Builds project) 13.1.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "power": "GUID \u0441\u0445\u0435\u043c\u044b \u043f\u0438\u0442\u0430\u043d\u0438\u044f: 381b4222-f694-41f0-9685-ff5bb260df2e  (\u0421\u0431\u0430\u043b\u0430\u043d\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u0430\u044f)",
+  "flags": "-std=c++17 -municode -static -fopenmp -ffp-contract=off -O2",
+  "timeout_sample": {
+    "total_runtime_ms": 222120.3617,
+    "preparation_ms": 214058.5955,
+    "parse_and_model_ms": 213930.1651,
+    "model_in_parse_ms": 94703.6715,
+    "assembly_ms": 3567.689,
+    "note": "First internal serial sample exceeded harness 180s timeout; solver subsequently completed. Not included in successful paired medians; unexplained shared-host stall."
+  }
+}

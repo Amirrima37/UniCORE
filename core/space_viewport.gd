@@ -843,7 +843,7 @@ func _on_local_llm_download_progress(_item: String, received: int, total: int, p
 	if prompt_bar and is_instance_valid(prompt_bar):
 		prompt_bar.set_status(msg, CyberTheme.COLOR_AMBER_LED)
 	if top_bar and is_instance_valid(top_bar) and top_bar.detroit_orb:
-		top_bar.detroit_orb.flash_amber()
+		top_bar.detroit_orb.set_processing("Local model download")
 
 func _on_local_llm_download_completed(model_path: String) -> void:
 	var msg: String = "Локальная модель загружена: %s" % model_path.get_file()

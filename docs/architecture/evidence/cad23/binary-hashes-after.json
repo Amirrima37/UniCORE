@@ -1,0 +1,37 @@
+{
+  "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe": {
+    "before": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424",
+    "after": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424",
+    "outcome": "PASS"
+  },
+  "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\calculix\\CalculiX-2.23.0-win-x64\\bin\\ccx.exe": {
+    "before": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+    "after": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+    "outcome": "PASS"
+  },
+  "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_debug.x86_64.dll": {
+    "before": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc",
+    "after": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc",
+    "outcome": "PASS"
+  },
+  "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_release.x86_64.dll": {
+    "before": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f",
+    "after": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f",
+    "outcome": "PASS"
+  },
+  "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_debug.x86_64.dll": {
+    "before": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868",
+    "after": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868",
+    "outcome": "PASS"
+  },
+  "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_release.x86_64.dll": {
+    "before": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb",
+    "after": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb",
+    "outcome": "PASS"
+  },
+  "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\gmsh-4.15.2-Windows64-sdk\\lib\\gmsh-4.15.dll": {
+    "before": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c",
+    "after": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c",
+    "outcome": "PASS"
+  }
+}

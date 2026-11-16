@@ -1,0 +1,33 @@
+core/cae/extreme_jobs.gd
+native/extreme/CMakeLists.txt
+native/extreme/backend.hpp
+native/extreme/benchmark.cpp
+native/extreme/build.ps1
+native/extreme/main.cpp
+native/src/bindings/structural_solver.cpp
+native/src/bindings/thermal_solver.cpp
+native/src/kernels/structural_solver.hpp
+native/src/kernels/thermal_solver.hpp
+native/src/math/csr_backend.hpp
+native/src/math/parallel_for.hpp
+native/src/math/sparse_pcg.hpp
+tests/benchmark_extreme_axial.py
+tests/benchmark_extreme_normal.gd
+tests/benchmark_extreme_thermal.py
+tests/capture_extreme_mode.gd
+tests/launch_extreme_then_exit.gd
+tests/native_regression_manifest.json
+tests/test_extreme_advanced.gd
+tests/test_extreme_checkpoint.py
+tests/test_extreme_cli.py
+tests/test_extreme_configurations.py
+tests/test_extreme_equivalence.gd
+tests/test_extreme_gui.gd
+tests/test_extreme_lifetime.py
+tests/test_extreme_res.gd
+ui/cae/cae_workspace.gd
+docs/extreme-mode/ (report, measured data and screenshots)
+bin/unicore_solver.exe (generated)
+bin/unicore_solver_debug.exe (generated)
+bin/windows/x86_64/unicore_native.windows.template_debug.x86_64.dll (rebuilt)
+bin/windows/x86_64/unicore_native.windows.template_release.x86_64.dll (rebuilt)

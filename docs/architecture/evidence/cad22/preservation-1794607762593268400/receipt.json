@@ -1,0 +1,38 @@
+[
+  {
+    "test": "cad21-geometry",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 5.568219000007957,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/run_cad21.py",
+      "geometry"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\preservation-1794607762593268400"
+  },
+  {
+    "test": "cad21-integration",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 33.119298100005835,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/run_cad21.py",
+      "integration"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\preservation-1794607762593268400"
+  },
+  {
+    "test": "step-modal-transient",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 18.2454185999959,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/run_cad21.py",
+      "preservation"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\preservation-1794607762593268400"
+  }
+]

@@ -1,0 +1,11 @@
+Error   : Invalid boundary mesh (overlapping facets) on surface 7 surface 7
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad22_validation.py", line 30, in <module>
+    p['mesh_settings']=config;start=time.monotonic();mesh=mesh_study(ROOT,data,.05)
+                                                          ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Victus\Desktop\UniCORE-main\scripts\engines\gmsh_study.py", line 166, in mesh_study
+    gmsh.model.mesh.generate(3)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Victus\Desktop\UniCORE-main\.tools\engines\gmsh-4.15.2-Windows64-sdk\lib\gmsh.py", line 2189, in generate
+    raise Exception(logger.getLastError())
+Exception: Invalid boundary mesh (overlapping facets) on surface 7 surface 7

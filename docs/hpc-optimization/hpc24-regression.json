@@ -1,0 +1,128 @@
+[
+  {
+    "test": "hpc23_structural_solver_test",
+    "exit": 0,
+    "stdout": "Structural affine patch, six rigid modes, material validation passed\n",
+    "stderr": ""
+  },
+  {
+    "test": "hpc23_hex8_test",
+    "exit": 0,
+    "stdout": "HEX8 volume, Gauss integration, stiffness symmetry, six rigid modes, affine strain, principal stress and invalid mesh/support tests passed\n",
+    "stderr": ""
+  },
+  {
+    "test": "hpc23_thermal_radiation_test",
+    "exit": 0,
+    "stdout": "A flux=5511.603935267985 expected=5511.603935268 balance=1.745320332702249e-08\nB/C initial=200 T=600.0000000407624 Newton=4 residual=3.291220232970372e-10 balance=-4.744444595417008e-06 relative_balance=2.355887616890853e-10\nB/C initial=1000 T=600.0000000005067 Newton=6 residual=6.984269915946813e-13 balance=-5.89334376854822e-08 relative_balance=2.926381650618327e-12\nD dt=0.002 Bi=2.760862719495608e-06 cooling=585.1779800964815 RK4=585.1704503890693 error=0.007529707412231801 E balance=1.902481017168611e-08 Newton=200\nD dt=0.001 Bi=2.760862719495608e-06 cooling=585.1742186097525 RK4=585.1704503890693 error=0.003768220683241452 E balance=1.177795638795942e-08 Newton=400\nConsistent surface tangent finite-difference PASS\nRadiation native analytical checks PASS\n",
+    "stderr": ""
+  },
+  {
+    "test": "hpc23_sparse_preconditioner_test_release",
+    "exit": 0,
+    "stdout": "Preconditioners, true residuals, prescribed values, SPD IC breakdown fallback, asymmetry, indefinite curvature, zero RHS, limits and cancellation PASS\n",
+    "stderr": ""
+  },
+  {
+    "test": "hpc23_sparse_preconditioner_test_debug",
+    "exit": 0,
+    "stdout": "Preconditioners, true residuals, prescribed values, SPD IC breakdown fallback, asymmetry, indefinite curvature, zero RHS, limits and cancellation PASS\n",
+    "stderr": ""
+  },
+  {
+    "test": "hpc23_sparse_preconditioner_test_noomp",
+    "exit": 0,
+    "stdout": "Preconditioners, true residuals, prescribed values, SPD IC breakdown fallback, asymmetry, indefinite curvature, zero RHS, limits and cancellation PASS\n",
+    "stderr": ""
+  },
+  {
+    "test": "hpc23_parallel_assembly_test_release",
+    "exit": 0,
+    "stdout": "Heterogeneous thermal TET4 stiffness/source/capacity exact equality PASS\nMixed heterogeneous HEX8/TET4 matrix exact equality: 60 runs; cancellation PASS\n",
+    "stderr": ""
+  },
+  {
+    "test": "hpc23_parallel_assembly_test_debug",
+    "exit": 0,
+    "stdout": "Heterogeneous thermal TET4 stiffness/source/capacity exact equality PASS\nMixed heterogeneous HEX8/TET4 matrix exact equality: 60 runs; cancellation PASS\n",
+    "stderr": ""
+  },
+  {
+    "test": "hpc23_parallel_assembly_test_noomp",
+    "exit": 0,
+    "stdout": "Heterogeneous thermal TET4 stiffness/source/capacity exact equality PASS\nMixed heterogeneous HEX8/TET4 matrix exact equality: 60 runs; cancellation PASS\n",
+    "stderr": ""
+  },
+  {
+    "fixture": "docs/extreme-mode/examples/tet.ucjob",
+    "exe": "unicore_solver.exe",
+    "assembly": "serial",
+    "exact_fields": true
+  },
+  {
+    "fixture": "docs/extreme-mode/examples/tet.ucjob",
+    "exe": "unicore_solver.exe",
+    "assembly": "row-owned",
+    "exact_fields": true
+  },
+  {
+    "fixture": "docs/extreme-mode/examples/tet.ucjob",
+    "exe": "unicore_solver_debug.exe",
+    "assembly": "serial",
+    "exact_fields": true
+  },
+  {
+    "fixture": "docs/extreme-mode/examples/tet.ucjob",
+    "exe": "unicore_solver_debug.exe",
+    "assembly": "row-owned",
+    "exact_fields": true
+  },
+  {
+    "fixture": "docs/extreme-mode/examples/tet.ucjob",
+    "exe": "unicore_solver_noomp.exe",
+    "assembly": "serial",
+    "exact_fields": true
+  },
+  {
+    "fixture": "docs/extreme-mode/examples/tet.ucjob",
+    "exe": "unicore_solver_noomp.exe",
+    "assembly": "row-owned",
+    "exact_fields": true
+  },
+  {
+    "fixture": ".tools/hpc24-checkpoint/model.ucjob",
+    "exe": "unicore_solver.exe",
+    "assembly": "serial",
+    "exact_fields": true
+  },
+  {
+    "fixture": ".tools/hpc24-checkpoint/model.ucjob",
+    "exe": "unicore_solver.exe",
+    "assembly": "row-owned",
+    "exact_fields": true
+  },
+  {
+    "fixture": ".tools/hpc24-checkpoint/model.ucjob",
+    "exe": "unicore_solver_debug.exe",
+    "assembly": "serial",
+    "exact_fields": true
+  },
+  {
+    "fixture": ".tools/hpc24-checkpoint/model.ucjob",
+    "exe": "unicore_solver_debug.exe",
+    "assembly": "row-owned",
+    "exact_fields": true
+  },
+  {
+    "fixture": ".tools/hpc24-checkpoint/model.ucjob",
+    "exe": "unicore_solver_noomp.exe",
+    "assembly": "serial",
+    "exact_fields": true
+  },
+  {
+    "fixture": ".tools/hpc24-checkpoint/model.ucjob",
+    "exe": "unicore_solver_noomp.exe",
+    "assembly": "row-owned",
+    "exact_fields": true
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "test": "test_stage6_remesh",
+    "exit": 0,
+    "passed": true,
+    "seconds": 1.5031500000040978
+  },
+  {
+    "test": "test_stage6_cylinder",
+    "exit": 0,
+    "passed": true,
+    "seconds": 1.9004208000042127
+  },
+  {
+    "test": "test_mesh_inspection",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.7866683999964152
+  },
+  {
+    "test": "test_stage5_display",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.48849100000370527
+  }
+]

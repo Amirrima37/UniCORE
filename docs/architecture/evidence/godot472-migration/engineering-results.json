@@ -1,0 +1,91 @@
+[
+  {
+    "name": "calculix-adapter",
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/test_calculix_adapter.gd"
+    ],
+    "exit_code": 0,
+    "state": "completed",
+    "passed": true,
+    "seconds": 7.5
+  },
+  {
+    "name": "calculix-patch",
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/test_godot472_calculix_numerical.gd"
+    ],
+    "exit_code": 0,
+    "state": "completed",
+    "passed": true,
+    "seconds": 3.966
+  },
+  {
+    "name": "calculix-process",
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/test_godot472_calculix_process.py"
+    ],
+    "exit_code": 0,
+    "state": "completed",
+    "passed": true,
+    "seconds": 3.546
+  },
+  {
+    "name": "gmsh-repeatability",
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/test_godot472_gmsh_repeatability.py"
+    ],
+    "exit_code": 0,
+    "state": "completed",
+    "passed": true,
+    "seconds": 9.547
+  },
+  {
+    "name": "extreme-comparison",
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/compare_godot472_calculix_extreme.py"
+    ],
+    "exit_code": 0,
+    "state": "completed",
+    "passed": true,
+    "seconds": 1.068
+  },
+  {
+    "name": "bar-cantilever",
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/benchmark_godot472_calculix_gmsh.gd"
+    ],
+    "exit_code": 0,
+    "state": "completed",
+    "passed": true,
+    "seconds": 25.791
+  },
+  {
+    "name": "step-occ",
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/test_step_gmsh_real.py"
+    ],
+    "exit_code": 0,
+    "state": "completed",
+    "passed": true,
+    "seconds": 1.467
+  }
+]

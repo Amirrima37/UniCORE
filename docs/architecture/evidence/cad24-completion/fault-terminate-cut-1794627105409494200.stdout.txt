@@ -1,0 +1,4 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CAD24_EXPECTED_ERROR Cannot resume owned child thread; native diagnostics retained: C:\Users\Victus\Desktop\UniCORE-main\.tools\godot472-migration\roaming\Godot\app_userdata\UniCORE\cad_geometry\20824_553281_fe0243c1d893f672\kernel-temp\occt-xrl04zyw
+CAD24_FAILURE_RECOVERY_PASS heartbeat=1271

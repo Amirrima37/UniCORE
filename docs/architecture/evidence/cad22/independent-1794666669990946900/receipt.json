@@ -1,0 +1,13 @@
+[
+  {
+    "test": "independent",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "seconds": 2.2355527999898186,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/cad22_independent.py"
+    ],
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad22\\independent-1794666669990946900"
+  }
+]

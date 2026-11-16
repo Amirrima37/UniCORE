@@ -1,0 +1,12 @@
+{
+  "name": "cancel-step",
+  "exit_code": 0,
+  "outcome": "PASS",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/cad24_failure.py",
+    "cancel-step"
+  ],
+  "seconds": 8.844058600006974,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\cancel-step-1794657513767922000"
+}

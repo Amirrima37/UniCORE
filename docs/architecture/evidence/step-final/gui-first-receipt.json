@@ -1,0 +1,30 @@
+[
+  {
+    "name": "gui-bar",
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/step_final_graphical.gd"
+    ],
+    "exit_code": 0,
+    "outcome": "PASS",
+    "state": "completed",
+    "seconds": 12.975191400000767
+  },
+  {
+    "name": "gui-cylinder",
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "-s",
+      "res://tests/step_final_graphical.gd"
+    ],
+    "exit_code": null,
+    "outcome": "FAIL",
+    "state": "timeout",
+    "seconds": 240.1776852000039
+  }
+]

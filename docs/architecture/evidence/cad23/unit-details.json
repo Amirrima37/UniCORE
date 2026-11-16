@@ -1,0 +1,124 @@
+{
+  "outcome": "PASS",
+  "gmsh_to_ccx": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    8
+  ],
+  "regular_volume": 0.16666666666666663,
+  "curved_inversion_rejected": true,
+  "tri6_weights": [
+    -7.112366251504909e-17,
+    -8.500145032286355e-17,
+    -8.673617379884035e-17,
+    0.16666666666666613,
+    0.16666666666666613,
+    0.16666666666666613
+  ],
+  "force_moment": {
+    "area": 0.49999999999999867,
+    "resultant": [
+      0.0,
+      0.0,
+      999.9999999999994
+    ],
+    "moment": [
+      333.33333333333314,
+      -333.33333333333314,
+      0.0
+    ],
+    "expected_moment": [
+      333.333333333333,
+      -333.33333333333303,
+      0.0
+    ],
+    "element_faces": [
+      {
+        "element": 0,
+        "ccx_face": 1,
+        "nodes": [
+          0,
+          2,
+          1,
+          6,
+          5,
+          4
+        ]
+      }
+    ],
+    "rule": "adaptive 7-point degree-5 TRI6 Cartesian traction; 1e-10 relative rule refinement tolerance, depth <=4; force/area on actual quadratic face"
+  },
+  "cases": [
+    {
+      "case": "Box",
+      "outcome": "PASS",
+      "nodes": 219,
+      "tet10": 90,
+      "volume_error": 4.440892098500626e-16,
+      "jacobian_lower": 5.8593749999999686e-05
+    },
+    {
+      "case": "Cylinder",
+      "outcome": "PASS",
+      "nodes": 1075,
+      "tet10": 561,
+      "volume_error": 8.661343517946118e-05,
+      "jacobian_lower": 4.540787641649781e-06
+    },
+    {
+      "case": "Sphere",
+      "outcome": "PASS",
+      "nodes": 290,
+      "tet10": 114,
+      "volume_error": 0.001247962569803307,
+      "jacobian_lower": 1.2082693224307399e-05
+    },
+    {
+      "case": "Pipe",
+      "outcome": "PASS",
+      "nodes": 1883,
+      "tet10": 908,
+      "volume_error": 8.424988205324446e-05,
+      "jacobian_lower": 1.8851920301552565e-06
+    },
+    {
+      "case": "fuse",
+      "outcome": "PASS",
+      "nodes": 307,
+      "tet10": 130,
+      "volume_error": 1.1102230246251565e-16,
+      "jacobian_lower": 5.350330923480827e-05
+    },
+    {
+      "case": "intersect",
+      "outcome": "PASS",
+      "nodes": 183,
+      "tet10": 78,
+      "volume_error": 4.440892098500626e-16,
+      "jacobian_lower": 3.356481481481468e-05
+    },
+    {
+      "case": "hole",
+      "outcome": "PASS",
+      "nodes": 2584,
+      "tet10": 1412,
+      "volume_error": 1.2438820603088985e-05,
+      "jacobian_lower": 4.3156475195466835e-07
+    },
+    {
+      "case": "step-cut",
+      "outcome": "PASS",
+      "nodes": 12092,
+      "tet10": 6774,
+      "volume_error": 1.2290926610480923e-05,
+      "jacobian_lower": 4.494964387088126e-07
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "godot_exit": 0,
+  "duplicate_launch_exit": 6,
+  "status_after_godot_exit": {
+    "state": "Running",
+    "phase": 3,
+    "elapsed_s": 1.4344365,
+    "linear_iteration": 0,
+    "linear_residual": 0,
+    "memory_bytes": 7450624,
+    "pid": 15212
+  },
+  "action": "cancel after confirmed Godot exit",
+  "final_status": {
+    "state": "Cancelled",
+    "error": "CANCELLED"
+  }
+}

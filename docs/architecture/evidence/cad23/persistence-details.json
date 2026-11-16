@@ -1,0 +1,94 @@
+[
+  {
+    "outcome": "PASS",
+    "test": "TET10-current-save-reopen"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-midpoint-without-revision"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-connectivity-without-revision"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-material-without-revision"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-load-without-revision"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-geometry-without-revision"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-sizing-without-revision"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-order-without-revision"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-analysis-without-revision"
+  },
+  {
+    "outcome": "PASS",
+    "test": "quadratic-strain-display"
+  },
+  {
+    "outcome": "PASS",
+    "test": "complete-four-IP-DAT"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-truncated-quadratic-DAT"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-duplicate-quadratic-DAT"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-malformed-quadratic-DAT"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-oversized-quadratic-DAT-before-reading"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-unknown-quadratic-schema-before-document-replacement"
+  },
+  {
+    "outcome": "PASS",
+    "test": "order-switch-invalidates-1"
+  },
+  {
+    "outcome": "PASS",
+    "test": "actual-order-generated-1"
+  },
+  {
+    "outcome": "PASS",
+    "test": "recalculated-order-current-1"
+  },
+  {
+    "outcome": "PASS",
+    "test": "order-switch-invalidates-2"
+  },
+  {
+    "outcome": "PASS",
+    "test": "actual-order-generated-2"
+  },
+  {
+    "outcome": "PASS",
+    "test": "recalculated-order-current-2"
+  },
+  {
+    "outcome": "PASS",
+    "test": "reject-stale-quadratic-worker"
+  }
+]

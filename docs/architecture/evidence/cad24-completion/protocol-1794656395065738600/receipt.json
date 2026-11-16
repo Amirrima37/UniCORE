@@ -1,0 +1,11 @@
+{
+  "name": "protocol",
+  "exit_code": 0,
+  "outcome": "PASS",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/cad24_protocol.py"
+  ],
+  "seconds": 6.6857887000078335,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\protocol-1794656395065738600"
+}

@@ -1,0 +1,3 @@
+Godot Engine v4.0.stable.official.92bee43ad - https://godotengine.org
+ 
+CALCULIX_NUMERICAL_PASS: analytical patch, Poisson strain, E/F scaling, input tamper rejection

@@ -1,0 +1,20 @@
+[
+  {
+    "test": "render-signal",
+    "exit": 0,
+    "passed": false,
+    "seconds": 2.599027999996906
+  },
+  {
+    "test": "render-control",
+    "exit": 0,
+    "passed": true,
+    "seconds": 2.1621011000024737
+  },
+  {
+    "test": "matrix-final",
+    "exit": 0,
+    "passed": true,
+    "seconds": 73.8056699000008
+  }
+]

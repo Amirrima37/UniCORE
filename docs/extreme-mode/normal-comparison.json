@@ -1,0 +1,43 @@
+{
+	"dof": 14739,
+	"elements": 4096,
+	"mesh_ms": 5.314,
+	"normal_core_ms": {
+		"assembly": 172.4025,
+		"postprocessing": 82.0732,
+		"solve": 85.0498
+	},
+	"normal_wall_ms": 430.12,
+	"standalone": [
+		{
+			"assembly_ms": 241.6216,
+			"export_launch_ms": 306.146,
+			"maximum_difference": 0.00000000000000000997465998686664,
+			"peak_working_set_bytes": 68980736,
+			"post_ms": 95.9772,
+			"solve_ms": 98.8642,
+			"threads": 1,
+			"total_runtime_ms": 786.643
+		},
+		{
+			"assembly_ms": 136.4604,
+			"export_launch_ms": 262.115,
+			"maximum_difference": 0.00000000000000000997465998686664,
+			"peak_working_set_bytes": 69095424,
+			"post_ms": 44.8265,
+			"solve_ms": 76.5355,
+			"threads": 2,
+			"total_runtime_ms": 603.6826
+		},
+		{
+			"assembly_ms": 126.3826,
+			"export_launch_ms": 337.65,
+			"maximum_difference": 0.00000000000000000997465998686664,
+			"peak_working_set_bytes": 69296128,
+			"post_ms": 45.2003,
+			"solve_ms": 81.6377,
+			"threads": 4,
+			"total_runtime_ms": 612.0007
+		}
+	]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "modal",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\stage7-modal-test.exe"
+    ],
+    "exit_code": 0,
+    "outcome": "PASS",
+    "state": "completed",
+    "seconds": 1.503010300002643
+  },
+  {
+    "name": "dynamics",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\dynamics_test.exe"
+    ],
+    "exit_code": 0,
+    "outcome": "PASS",
+    "state": "completed",
+    "seconds": 0.5568459999994957
+  },
+  {
+    "name": "numeric-job",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\job_numeric_test.exe"
+    ],
+    "exit_code": 0,
+    "outcome": "PASS",
+    "state": "completed",
+    "seconds": 3.1855461000013747
+  }
+]

@@ -1,0 +1,471 @@
+{
+  "assertions": 3132,
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "rows": [
+    {
+      "name": "build-release",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "native/extreme/build.ps1"
+      ],
+      "exit_code": 0,
+      "seconds": 14.074335700002848,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\build-release.log",
+      "binary_sha256": "e36a56b209a1cc8c0ad6c7caa2b4458ac805fd1bda2e7b77b6bafe04c5f731df"
+    },
+    {
+      "name": "dynamic-release",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\dynamic-release.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\dynamic-release",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2469455000027665,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\dynamic-release.log",
+      "assembly_ms": 0.4076,
+      "setup_ms": 0.2139,
+      "integration_ms": 4.4485,
+      "peak_working_set_bytes": 5885952,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 2.168404344971009e-19,
+      "linear_iterations": 1009
+    },
+    {
+      "name": "structural-release",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\0\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\structural-release",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03067919999739388,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\structural-release.log"
+    },
+    {
+      "name": "thermal-release",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\1\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-release",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0312567000000854,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-release.log"
+    },
+    {
+      "name": "modal-release",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\builds-verified\\modal-release.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\modal-release",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03697590000228956,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\modal-release.log"
+    },
+    {
+      "name": "thermal-restart-release",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-restart-release",
+        "--restart",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.039295800001127645,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-restart-release.log"
+    },
+    {
+      "name": "build-debug",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "native/extreme/build.ps1",
+        "-Debug"
+      ],
+      "exit_code": 0,
+      "seconds": 10.127929700000095,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\build-debug.log",
+      "binary_sha256": "ab9f6d2b2fabace97fc2df1dbb20790122790360c25ea154e374f0cdbc7a9250"
+    },
+    {
+      "name": "dynamic-debug",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\dynamic-debug.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\dynamic-debug",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.42807230000471463,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\dynamic-debug.log",
+      "assembly_ms": 2.0214,
+      "setup_ms": 1.2414,
+      "integration_ms": 39.7841,
+      "peak_working_set_bytes": 6250496,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 2.168404344971009e-19,
+      "linear_iterations": 1009
+    },
+    {
+      "name": "structural-debug",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\0\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\structural-debug",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03629920000093989,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\structural-debug.log"
+    },
+    {
+      "name": "thermal-debug",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\1\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-debug",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03400069999770494,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-debug.log"
+    },
+    {
+      "name": "modal-debug",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\builds-verified\\modal-release.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\modal-debug",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08872340000380063,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\modal-debug.log"
+    },
+    {
+      "name": "thermal-restart-debug",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-restart-debug",
+        "--restart",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03995099999883678,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-restart-debug.log"
+    },
+    {
+      "name": "build-serial",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "native/extreme/build.ps1",
+        "-NoOpenMP"
+      ],
+      "exit_code": 0,
+      "seconds": 14.13951029999589,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\build-serial.log",
+      "binary_sha256": "6ecf6144c0a44daf1131fd72930da5a541e66f5a7fbab3c6587b2149dd5ecc74"
+    },
+    {
+      "name": "dynamic-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\dynamic-serial.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\dynamic-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.24532650000037393,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\dynamic-serial.log",
+      "assembly_ms": 0.3564,
+      "setup_ms": 0.3098,
+      "integration_ms": 5.0866,
+      "peak_working_set_bytes": 5861376,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 2.168404344971009e-19,
+      "linear_iterations": 1009
+    },
+    {
+      "name": "structural-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\0\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\structural-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.036561500004609115,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\structural-serial.log"
+    },
+    {
+      "name": "thermal-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\1\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03469849999964936,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-serial.log"
+    },
+    {
+      "name": "modal-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\builds-verified\\modal-release.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\modal-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03614259999449132,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\modal-serial.log"
+    },
+    {
+      "name": "thermal-restart-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-restart-serial",
+        "--restart",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0386620000062976,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-restart-serial.log"
+    },
+    {
+      "name": "build-debug-serial",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "native/extreme/build.ps1",
+        "-Debug",
+        "-NoOpenMP"
+      ],
+      "exit_code": 0,
+      "seconds": 9.957825999998022,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\build-debug-serial.log",
+      "binary_sha256": "06a8f23a9034d52171811e566f27848eb0b254f4f876c9cfef92397329b8434c"
+    },
+    {
+      "name": "dynamic-debug-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\dynamic-debug-serial.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\dynamic-debug-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.4274535999938962,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\dynamic-debug-serial.log",
+      "assembly_ms": 1.842,
+      "setup_ms": 1.2801,
+      "integration_ms": 39.8718,
+      "peak_working_set_bytes": 6127616,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 2.168404344971009e-19,
+      "linear_iterations": 1009
+    },
+    {
+      "name": "structural-debug-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\0\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\structural-debug-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.038246000003709923,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\structural-debug-serial.log"
+    },
+    {
+      "name": "thermal-debug-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\native-jobs\\1\\model.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-debug-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.033161900006234646,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-debug-serial.log"
+    },
+    {
+      "name": "modal-debug-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\builds-verified\\modal-release.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\modal-debug-serial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09121030000096653,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\modal-debug-serial.log"
+    },
+    {
+      "name": "thermal-restart-debug-serial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver_debug_noomp.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\cylinder.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-restart-debug-serial",
+        "--restart",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\restart\\paused\\checkpoint.ucstate",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04320980000193231,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\builds-final\\thermal-restart-debug-serial.log"
+    }
+  ]
+}

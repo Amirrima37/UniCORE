@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad21_geometry.py", line 17, in <module>
+    relative=abs(p['cad_volume']/expected-1);assert relative<1e-8,(name,p['cad_volume'],expected)
+                                                    ^^^^^^^^^^^^^
+AssertionError: ('hole', 0.0017466921838981842, 0.0017486725877128165)

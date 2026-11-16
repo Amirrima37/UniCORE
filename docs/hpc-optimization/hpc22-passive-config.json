@@ -1,0 +1,1 @@
+[["passive-serial","bin/unicore_solver.exe",["--assembly","serial"]],["passive-row-owned","bin/unicore_solver.exe",["--assembly","row-owned"]]]

@@ -1,0 +1,1709 @@
+{
+  "schema": 1,
+  "revision": 1,
+  "units": "m-N-Pa-kg",
+  "parts": [
+    {
+      "kind": "CAD",
+      "cad_model": {
+        "schema": 1,
+        "units": "m",
+        "root": "pipe",
+        "nodes": [
+          {
+            "id": "pipe",
+            "type": "Pipe",
+            "dimensions": [
+              0.1,
+              0.2,
+              0.1
+            ],
+            "inner_diameter": 0.06
+          }
+        ]
+      },
+      "cad_format": "brep",
+      "cad_base64": "REJSZXBfRHJhd2FibGVTaGFwZQoKQ0FTQ0FERSBUb3BvbG9neSBWMSwgKGMpIE1hdHJhLURhdGF2aXNpb24KTG9jYXRpb25zIDAKQ3VydmUyZHMgMTQKMSAwIDAuMjAwMDAwMDAwMDAwMDAwMDEgMSAwIAoyIDAgMCAxIDAgLTAgMSAwLjA1MDAwMDAwMDAwMDAwMDAwMwoxIDYuMjgzMTg1MzA3MTc5NTg2MiAtMCAwIDEgCjEgMCAtMCAwIDEgCjEgMCAwIDEgMCAKMiAwIDAgMSAwIC0wIDEgMC4wNTAwMDAwMDAwMDAwMDAwMDMKMSAwIDAuMjAwMDAwMDAwMDAwMDAwMDEgMSAwIAoyIDAgMCAxIDAgLTAgMSAwLjAyOTk5OTk5OTk5OTk5OTk5OQoyIDAgMCAxIDAgLTAgMSAwLjAyOTk5OTk5OTk5OTk5OTk5OQoxIDAgMCAxIDAgCjIgMCAwIDEgMCAtMCAxIDAuMDI5OTk5OTk5OTk5OTk5OTk5CjIgMCAwIDEgMCAtMCAxIDAuMDI5OTk5OTk5OTk5OTk5OTk5CjEgNi4yODMxODUzMDcxNzk1ODYyIC0wIDAgMSAKMSAwIC0wIDAgMSAKQ3VydmVzIDYKMiAwIDAuMTAwMDAwMDAwMDAwMDAwMDEgMCAwIDEgMCAwIC0wIDEgMSAwIC0wIDAuMDUwMDAwMDAwMDAwMDAwMDAzCjEgLTEuMjI0NjQ2Nzk5MTQ3MzUzM2UtMTcgLTAuMTAwMDAwMDAwMDAwMDAwMDEgMC4wNTAwMDAwMDAwMDAwMDAwMDMgMCAxIDAgCjIgMCAtMC4xMDAwMDAwMDAwMDAwMDAwMSAwIDAgMSAwIDAgLTAgMSAxIDAgLTAgMC4wNTAwMDAwMDAwMDAwMDAwMDMKMiAwIDAuMTAwMDAwMDAwMDAwMDAwMDEgMCAwIDEgMCAwIC0wIDEgMSAwIC0wIDAuMDI5OTk5OTk5OTk5OTk5OTk5CjIgMCAtMC4xMDAwMDAwMDAwMDAwMDAwMSAwIDAgMSAwIDAgLTAgMSAxIDAgLTAgMC4wMjk5OTk5OTk5OTk5OTk5OTkKMSAtNy4zNDc4ODA3OTQ4ODQxMTg0ZS0xOCAtMC4xMDAwMDAwMDAwMDAwMDAwMSAwLjAyOTk5OTk5OTk5OTk5OTk5OSAwIDEgMCAKUG9seWdvbjNEIDAKUG9seWdvbk9uVHJpYW5ndWxhdGlvbnMgMApTdXJmYWNlcyA2CjIgMCAtMC4xMDAwMDAwMDAwMDAwMDAwMSAwIDAgMSAwIDAgLTAgMSAxIDAgLTAgMC4wNTAwMDAwMDAwMDAwMDAwMDMKMSAwIDAuMTAwMDAwMDAwMDAwMDAwMDEgMCAwIDEgMCAwIC0wIDEgMSAwIC0wIAoxIDAgLTAuMTAwMDAwMDAwMDAwMDAwMDEgMCAwIDEgMCAwIC0wIDEgMSAwIC0wIAoyIDAgLTAuMTAwMDAwMDAwMDAwMDAwMDEgMCAwIDEgMCAwIC0wIDEgMSAwIC0wIDAuMDI5OTk5OTk5OTk5OTk5OTk5CjEgMCAwLjEwMDAwMDAwMDAwMDAwMDAxIDAgMCAxIDAgMCAtMCAxIDEgMCAtMCAKMSAwIC0wLjEwMDAwMDAwMDAwMDAwMDAxIDAgMCAxIDAgMCAtMCAxIDEgMCAtMCAKVHJpYW5ndWxhdGlvbnMgMAoKVFNoYXBlcyAyMwpWZQoxZS0wNwotMS4yMjQ2NDY3OTkxNDczNWUtMTcgMC4xIDAuMDUKMCAwCgowMTAxMTAxCioKRWQKIDFlLTA3IDEgMSAwCjEgIDEgMCAwIDYuMjgzMTg1MzA3MTc5NTkKMiAgMSAxIDAgMCA2LjI4MzE4NTMwNzE3OTU5CjIgIDIgMiAwIDAgNi4yODMxODUzMDcxNzk1OQowCgowMTAxMDAwCisyMyAwIC0yMyAwICoKVmUKMWUtMDcKLTEuMjI0NjQ2Nzk5MTQ3MzVlLTE3IC0wLjEgMC4wNQowIDAKCjAxMDExMDEKKgpFZAogMWUtMDcgMSAxIDAKMSAgMiAwIDAgMC4yCjMgIDMgNENOIDEgMCAwIDAuMgowCgowMTAxMDAwCi0yMyAwICsyMSAwICoKRWQKIDFlLTA3IDEgMSAwCjEgIDMgMCAwIDYuMjgzMTg1MzA3MTc5NTkKMiAgNSAxIDAgMCA2LjI4MzE4NTMwNzE3OTU5CjIgIDYgMyAwIDAgNi4yODMxODUzMDcxNzk1OQowCgowMTAxMDAwCisyMSAwIC0yMSAwICoKV2kKCjAxMDExMDAKLTIyIDAgKzIwIDAgKzE5IDAgLTIwIDAgKgpGYQowICAxZS0wNyAxIDAKCjAxMTEwMDAKKzE4IDAgKgpXaQoKMDEwMTEwMAorMjIgMCAqClZlCjFlLTA3Ci03LjM0Nzg4MDc5NDg4NDEyZS0xOCAwLjEgMC4wMwowIDAKCjAxMDExMDEKKgpFZAogMWUtMDcgMSAxIDAKMSAgNCAwIDAgNi4yODMxODUzMDcxNzk1OQoyICA3IDQgMCAwIDYuMjgzMTg1MzA3MTc5NTkKMiAgOCA1IDAgMCA2LjI4MzE4NTMwNzE3OTU5CjIgIDkgMiAwIDAgNi4yODMxODUzMDcxNzk1OQowCgowMTAxMDAwCisxNSAwIC0xNSAwICoKV2kKCjAxMDExMDAKLTE0IDAgKgpGYQowICAxZS0wNyAyIDAKCjAxMDEwMDAKKzE2IDAgKzEzIDAgKgpXaQoKMDEwMTEwMAorMTkgMCAqClZlCjFlLTA3Ci03LjM0Nzg4MDc5NDg4NDEyZS0xOCAtMC4xIDAuMDMKMCAwCgowMTAxMTAxCioKRWQKIDFlLTA3IDEgMSAwCjEgIDUgMCAwIDYuMjgzMTg1MzA3MTc5NTkKMiAgMTAgNCAwIDAgNi4yODMxODUzMDcxNzk1OQoyICAxMSA2IDAgMCA2LjI4MzE4NTMwNzE3OTU5CjIgIDEyIDMgMCAwIDYuMjgzMTg1MzA3MTc5NTkKMAoKMDEwMTAwMAorMTAgMCAtMTAgMCAqCldpCgowMTAxMTAwCi05IDAgKgpGYQowICAxZS0wNyAzIDAKCjAxMDEwMDAKKzExIDAgKzggMCAqCkVkCiAxZS0wNyAxIDEgMAoxICA2IDAgMCAwLjIKMyAgMTMgMTRDTiA0IDAgMCAwLjIKMAoKMDEwMTAwMAotMTUgMCArMTAgMCAqCldpCgowMTAxMTAwCi0xNCAwICs2IDAgKzkgMCAtNiAwICoKRmEKMCAgMWUtMDcgNCAwCgowMTExMDAwCis1IDAgKgpTaAoKMDEwMTEwMAorMTcgMCArMTIgMCAtNyAwIC00IDAgKgpTbwoKMDEwMDAwMAorMyAwICoKQ28KCjExMDAwMDAKKzIgMCAqCgorMSAwIA==",
+      "cad_sha256": "130d2436bf5080df963a7965c35607db1ce83072dca00db828ae878165754f42",
+      "cad_geometry_revision": "281042742e89fb1c943e9f56eef13cdcce935004da45f44e4abe3b2dde0141d7",
+      "cad_faces": [
+        "N_3149283b105f92ef8ab47935",
+        "N_9b24eb50a1dfdf5f9cdeb7c0",
+        "N_a440be392038035025573136",
+        "N_d0c5232cda95fd4581363dac"
+      ],
+      "cad_face_descriptors": {
+        "N_a440be392038035025573136": {
+          "type": "Cylinder",
+          "area": 0.06283185307179587,
+          "center": [
+            5.479646768027017e-19,
+            3.0380566142985146e-18,
+            -1.3877787807814457e-17
+          ],
+          "bounds": [
+            -0.050000100000000006,
+            -0.10000010000000001,
+            -0.050000100000000006,
+            0.050000100000000006,
+            0.10000010000000001,
+            0.050000100000000006
+          ],
+          "inertia": [
+            0.0002879793265790644,
+            4.906278643191098e-22,
+            8.901153660460568e-21,
+            4.906278643191098e-22,
+            0.00015707963267948963,
+            3.0493186101154824e-21,
+            8.901153660460568e-21,
+            3.0493186101154824e-21,
+            0.00028797932657906436
+          ],
+          "edges": [
+            {
+              "type": "Circle",
+              "length": 0.31415926535897953,
+              "bounds": [
+                -0.050000100000000006,
+                -0.10000010000000001,
+                -0.050000100000000006,
+                0.050000100000000006,
+                -0.0999999,
+                0.050000100000000006
+              ],
+              "points": [
+                [
+                  1.6538962040180128e-16,
+                  -0.1,
+                  0.05
+                ],
+                [
+                  -0.05,
+                  -0.1,
+                  1.2404221530135097e-16
+                ],
+                [
+                  -8.269481020090064e-17,
+                  -0.1,
+                  -0.05
+                ],
+                [
+                  0.05,
+                  -0.1,
+                  -4.134740510045032e-17
+                ],
+                [
+                  0.0,
+                  -0.1,
+                  0.05
+                ]
+              ]
+            },
+            {
+              "type": "Circle",
+              "length": 0.31415926535897953,
+              "bounds": [
+                -0.050000100000000006,
+                0.0999999,
+                -0.050000100000000006,
+                0.050000100000000006,
+                0.10000010000000001,
+                0.050000100000000006
+              ],
+              "points": [
+                [
+                  1.6538962040180128e-16,
+                  0.1,
+                  0.05
+                ],
+                [
+                  -0.05,
+                  0.1,
+                  1.2404221530135097e-16
+                ],
+                [
+                  -8.269481020090064e-17,
+                  0.1,
+                  -0.05
+                ],
+                [
+                  0.05,
+                  0.1,
+                  -4.134740510045032e-17
+                ],
+                [
+                  0.0,
+                  0.1,
+                  0.05
+                ]
+              ]
+            },
+            {
+              "type": "Line",
+              "length": 0.2,
+              "bounds": [
+                -1.0000000001224646e-07,
+                -0.10000010000000001,
+                0.0499999,
+                9.999999998775353e-08,
+                0.10000010000000001,
+                0.050000100000000006
+              ],
+              "points": [
+                [
+                  -1.2246467991473533e-17,
+                  -0.1,
+                  0.05
+                ],
+                [
+                  -1.2246467991473533e-17,
+                  -0.05,
+                  0.05
+                ],
+                [
+                  -1.2246467991473533e-17,
+                  0.0,
+                  0.05
+                ],
+                [
+                  -1.2246467991473533e-17,
+                  0.05000000000000002,
+                  0.05
+                ],
+                [
+                  -1.2246467991473533e-17,
+                  0.1,
+                  0.05
+                ]
+              ]
+            },
+            {
+              "type": "Line",
+              "length": 0.2,
+              "bounds": [
+                -1.0000000001224646e-07,
+                -0.10000010000000001,
+                0.0499999,
+                9.999999998775353e-08,
+                0.10000010000000001,
+                0.050000100000000006
+              ],
+              "points": [
+                [
+                  -1.2246467991473533e-17,
+                  -0.1,
+                  0.05
+                ],
+                [
+                  -1.2246467991473533e-17,
+                  -0.05,
+                  0.05
+                ],
+                [
+                  -1.2246467991473533e-17,
+                  0.0,
+                  0.05
+                ],
+                [
+                  -1.2246467991473533e-17,
+                  0.05000000000000002,
+                  0.05
+                ],
+                [
+                  -1.2246467991473533e-17,
+                  0.1,
+                  0.05
+                ]
+              ]
+            }
+          ]
+        },
+        "N_3149283b105f92ef8ab47935": {
+          "type": "Plane",
+          "area": 0.00502654824574368,
+          "center": [
+            -1.0789791128242442e-17,
+            0.1,
+            2.0816681711721685e-17
+          ],
+          "bounds": [
+            -0.050000100000000006,
+            0.0999999,
+            -0.050000100000000006,
+            0.050000100000000006,
+            0.10000010000000001,
+            0.050000100000000006
+          ],
+          "inertia": [
+            4.272566008882019e-06,
+            0.0,
+            1.0727287202909319e-21,
+            0.0,
+            8.54513201776447e-06,
+            0.0,
+            1.0727287202909319e-21,
+            0.0,
+            4.272566008882459e-06
+          ],
+          "edges": [
+            {
+              "type": "Circle",
+              "length": 0.31415926535897953,
+              "bounds": [
+                -0.050000100000000006,
+                0.0999999,
+                -0.050000100000000006,
+                0.050000100000000006,
+                0.10000010000000001,
+                0.050000100000000006
+              ],
+              "points": [
+                [
+                  1.6538962040180128e-16,
+                  0.1,
+                  0.05
+                ],
+                [
+                  -0.05,
+                  0.1,
+                  1.2404221530135097e-16
+                ],
+                [
+                  -8.269481020090064e-17,
+                  0.1,
+                  -0.05
+                ],
+                [
+                  0.05,
+                  0.1,
+                  -4.134740510045032e-17
+                ],
+                [
+                  0.0,
+                  0.1,
+                  0.05
+                ]
+              ]
+            },
+            {
+              "type": "Circle",
+              "length": 0.18849555921538771,
+              "bounds": [
+                -0.0300001,
+                0.0999999,
+                -0.0300001,
+                0.0300001,
+                0.10000010000000001,
+                0.0300001
+              ],
+              "points": [
+                [
+                  9.923377224108076e-17,
+                  0.1,
+                  0.03
+                ],
+                [
+                  -0.03,
+                  0.1,
+                  7.442532918081057e-17
+                ],
+                [
+                  -4.961688612054038e-17,
+                  0.1,
+                  -0.03
+                ],
+                [
+                  0.03,
+                  0.1,
+                  -2.480844306027019e-17
+                ],
+                [
+                  0.0,
+                  0.1,
+                  0.03
+                ]
+              ]
+            }
+          ]
+        },
+        "N_9b24eb50a1dfdf5f9cdeb7c0": {
+          "type": "Plane",
+          "area": 0.00502654824574368,
+          "center": [
+            -1.0789791128242442e-17,
+            -0.1,
+            2.0816681711721685e-17
+          ],
+          "bounds": [
+            -0.050000100000000006,
+            -0.10000010000000001,
+            -0.050000100000000006,
+            0.050000100000000006,
+            -0.0999999,
+            0.050000100000000006
+          ],
+          "inertia": [
+            4.272566008882019e-06,
+            0.0,
+            1.0727287202909319e-21,
+            0.0,
+            8.54513201776447e-06,
+            0.0,
+            1.0727287202909319e-21,
+            0.0,
+            4.272566008882459e-06
+          ],
+          "edges": [
+            {
+              "type": "Circle",
+              "length": 0.31415926535897953,
+              "bounds": [
+                -0.050000100000000006,
+                -0.10000010000000001,
+                -0.050000100000000006,
+                0.050000100000000006,
+                -0.0999999,
+                0.050000100000000006
+              ],
+              "points": [
+                [
+                  1.6538962040180128e-16,
+                  -0.1,
+                  0.05
+                ],
+                [
+                  -0.05,
+                  -0.1,
+                  1.2404221530135097e-16
+                ],
+                [
+                  -8.269481020090064e-17,
+                  -0.1,
+                  -0.05
+                ],
+                [
+                  0.05,
+                  -0.1,
+                  -4.134740510045032e-17
+                ],
+                [
+                  0.0,
+                  -0.1,
+                  0.05
+                ]
+              ]
+            },
+            {
+              "type": "Circle",
+              "length": 0.18849555921538771,
+              "bounds": [
+                -0.0300001,
+                -0.10000010000000001,
+                -0.0300001,
+                0.0300001,
+                -0.0999999,
+                0.0300001
+              ],
+              "points": [
+                [
+                  9.923377224108076e-17,
+                  -0.1,
+                  0.03
+                ],
+                [
+                  -0.03,
+                  -0.1,
+                  7.442532918081057e-17
+                ],
+                [
+                  -4.961688612054038e-17,
+                  -0.1,
+                  -0.03
+                ],
+                [
+                  0.03,
+                  -0.1,
+                  -2.480844306027019e-17
+                ],
+                [
+                  0.0,
+                  -0.1,
+                  0.03
+                ]
+              ]
+            }
+          ]
+        },
+        "N_d0c5232cda95fd4581363dac": {
+          "type": "Cylinder",
+          "area": 0.03769911184307752,
+          "center": [
+            -4.233864510802154e-19,
+            -3.576595229746344e-18,
+            -6.938893903907228e-18
+          ],
+          "bounds": [
+            -0.0300001,
+            -0.10000010000000001,
+            -0.0300001,
+            0.0300001,
+            0.10000010000000001,
+            0.0300001
+          ],
+          "inertia": [
+            0.0001426283064729766,
+            -5.342854285169971e-22,
+            1.0081986825431982e-21,
+            -5.342854285169971e-22,
+            3.392920065876975e-05,
+            6.274820073259861e-21,
+            1.0081986825431982e-21,
+            6.274820073259861e-21,
+            0.0001426283064729766
+          ],
+          "edges": [
+            {
+              "type": "Circle",
+              "length": 0.18849555921538771,
+              "bounds": [
+                -0.0300001,
+                -0.10000010000000001,
+                -0.0300001,
+                0.0300001,
+                -0.0999999,
+                0.0300001
+              ],
+              "points": [
+                [
+                  9.923377224108076e-17,
+                  -0.1,
+                  0.03
+                ],
+                [
+                  -0.03,
+                  -0.1,
+                  7.442532918081057e-17
+                ],
+                [
+                  -4.961688612054038e-17,
+                  -0.1,
+                  -0.03
+                ],
+                [
+                  0.03,
+                  -0.1,
+                  -2.480844306027019e-17
+                ],
+                [
+                  0.0,
+                  -0.1,
+                  0.03
+                ]
+              ]
+            },
+            {
+              "type": "Circle",
+              "length": 0.18849555921538771,
+              "bounds": [
+                -0.0300001,
+                0.0999999,
+                -0.0300001,
+                0.0300001,
+                0.10000010000000001,
+                0.0300001
+              ],
+              "points": [
+                [
+                  9.923377224108076e-17,
+                  0.1,
+                  0.03
+                ],
+                [
+                  -0.03,
+                  0.1,
+                  7.442532918081057e-17
+                ],
+                [
+                  -4.961688612054038e-17,
+                  0.1,
+                  -0.03
+                ],
+                [
+                  0.03,
+                  0.1,
+                  -2.480844306027019e-17
+                ],
+                [
+                  0.0,
+                  0.1,
+                  0.03
+                ]
+              ]
+            },
+            {
+              "type": "Line",
+              "length": 0.2,
+              "bounds": [
+                -1.0000000000734787e-07,
+                -0.10000010000000001,
+                0.0299999,
+                9.999999999265212e-08,
+                0.10000010000000001,
+                0.0300001
+              ],
+              "points": [
+                [
+                  -7.347880794884118e-18,
+                  -0.1,
+                  0.03
+                ],
+                [
+                  -7.347880794884118e-18,
+                  -0.05,
+                  0.03
+                ],
+                [
+                  -7.347880794884118e-18,
+                  0.0,
+                  0.03
+                ],
+                [
+                  -7.347880794884118e-18,
+                  0.05000000000000002,
+                  0.03
+                ],
+                [
+                  -7.347880794884118e-18,
+                  0.1,
+                  0.03
+                ]
+              ]
+            },
+            {
+              "type": "Line",
+              "length": 0.2,
+              "bounds": [
+                -1.0000000000734787e-07,
+                -0.10000010000000001,
+                0.0299999,
+                9.999999999265212e-08,
+                0.10000010000000001,
+                0.0300001
+              ],
+              "points": [
+                [
+                  -7.347880794884118e-18,
+                  -0.1,
+                  0.03
+                ],
+                [
+                  -7.347880794884118e-18,
+                  -0.05,
+                  0.03
+                ],
+                [
+                  -7.347880794884118e-18,
+                  0.0,
+                  0.03
+                ],
+                [
+                  -7.347880794884118e-18,
+                  0.05000000000000002,
+                  0.03
+                ],
+                [
+                  -7.347880794884118e-18,
+                  0.1,
+                  0.03
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "cad_face_areas": {
+        "N_a440be392038035025573136": 0.06283185307179587,
+        "N_3149283b105f92ef8ab47935": 0.00502654824574368,
+        "N_9b24eb50a1dfdf5f9cdeb7c0": 0.00502654824574368,
+        "N_d0c5232cda95fd4581363dac": 0.03769911184307752
+      },
+      "cad_face_centers": {
+        "N_a440be392038035025573136": [
+          5.479646768027017e-19,
+          3.0380566142985146e-18,
+          -1.3877787807814457e-17
+        ],
+        "N_3149283b105f92ef8ab47935": [
+          -1.0789791128242442e-17,
+          0.1,
+          2.0816681711721685e-17
+        ],
+        "N_9b24eb50a1dfdf5f9cdeb7c0": [
+          -1.0789791128242442e-17,
+          -0.1,
+          2.0816681711721685e-17
+        ],
+        "N_d0c5232cda95fd4581363dac": [
+          -4.233864510802154e-19,
+          -3.576595229746344e-18,
+          -6.938893903907228e-18
+        ]
+      },
+      "cad_volume": 0.001005309649148735,
+      "cad_bounds": [
+        -0.050000100000000006,
+        -0.10000010000000001,
+        -0.050000100000000006,
+        0.050000100000000006,
+        0.10000010000000001,
+        0.050000100000000006
+      ],
+      "cad_source_units": "m",
+      "cad_source_to_m": 1.0,
+      "cad_kernel": {
+        "gmsh": "4.15.2",
+        "occt": "7.8.1",
+        "tolerance_m": 1e-08
+      },
+      "dimensions": [
+        0.10000020000000001,
+        0.20000020000000002,
+        0.10000020000000001
+      ],
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "cad_evaluated_model": {
+        "schema": 1,
+        "units": "m",
+        "root": "pipe",
+        "nodes": [
+          {
+            "id": "pipe",
+            "type": "Pipe",
+            "dimensions": [
+              0.1,
+              0.2,
+              0.1
+            ],
+            "inner_diameter": 0.06
+          }
+        ]
+      },
+      "cad_validation": {
+        "schema": 1,
+        "native_available": true,
+        "analyzer_valid": true,
+        "area": 0.11058406140636075,
+        "bounds": [
+          -0.05,
+          -0.1,
+          -0.05,
+          0.05,
+          0.1,
+          0.05
+        ],
+        "centroid": [
+          -4.738964947417056e-18,
+          -2.2304105568604755e-19,
+          -3.791516639546769e-18
+        ],
+        "closed_shells": true,
+        "diagnostics": [],
+        "edge_count": 6,
+        "face_count": 4,
+        "faces": [
+          {
+            "area": 0.06283185307179587,
+            "bounds": [
+              -0.05,
+              -0.1,
+              -0.05,
+              0.05,
+              0.1,
+              0.05
+            ],
+            "center": [
+              2.6420863947251413e-19,
+              3.0380566142985146e-18,
+              -1.3877787807814457e-17
+            ],
+            "inertia": [
+              0.0002879793265790644,
+              5.238907703746406e-22,
+              7.896613897583478e-21,
+              5.238907703746406e-22,
+              0.00015707963267948963,
+              3.0493186101154824e-21,
+              7.896613897583478e-21,
+              3.0493186101154824e-21,
+              0.00028797932657906436
+            ],
+            "orientation": 0,
+            "slot": 1
+          },
+          {
+            "area": 0.00502654824574368,
+            "bounds": [
+              -0.05,
+              0.1,
+              -0.05,
+              0.05,
+              0.1,
+              0.05
+            ],
+            "center": [
+              -1.1054488924259412e-17,
+              0.1,
+              2.0816681711721685e-17
+            ],
+            "inertia": [
+              4.272566008882019e-06,
+              -1.504632769052528e-36,
+              1.1259493699797844e-21,
+              -1.504632769052528e-36,
+              8.545132017764473e-06,
+              0.0,
+              1.1259493699797844e-21,
+              0.0,
+              4.272566008882459e-06
+            ],
+            "orientation": 0,
+            "plane_outward_normal": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "slot": 2
+          },
+          {
+            "area": 0.00502654824574368,
+            "bounds": [
+              -0.05,
+              -0.1,
+              -0.05,
+              0.05,
+              -0.1,
+              0.05
+            ],
+            "center": [
+              -1.1054488924259412e-17,
+              -0.1,
+              2.0816681711721685e-17
+            ],
+            "inertia": [
+              4.272566008882019e-06,
+              1.504632769052528e-36,
+              1.1259493699797844e-21,
+              1.504632769052528e-36,
+              8.545132017764473e-06,
+              0.0,
+              1.1259493699797844e-21,
+              0.0,
+              4.272566008882459e-06
+            ],
+            "orientation": 1,
+            "plane_outward_normal": [
+              -0.0,
+              -1.0,
+              -0.0
+            ],
+            "slot": 3
+          },
+          {
+            "area": 0.03769911184307752,
+            "bounds": [
+              -0.03,
+              -0.1,
+              -0.03,
+              0.03,
+              0.1,
+              0.03
+            ],
+            "center": [
+              -5.539706971152506e-19,
+              -3.576595229746344e-18,
+              -6.938893903907228e-18
+            ],
+            "inertia": [
+              0.0001426283064729766,
+              -5.342854285169948e-22,
+              8.149411983605489e-22,
+              -5.342854285169948e-22,
+              3.392920065876975e-05,
+              6.274820073259861e-21,
+              8.149411983605489e-22,
+              6.274820073259861e-21,
+              0.0001426283064729766
+            ],
+            "orientation": 1,
+            "slot": 4
+          }
+        ],
+        "manifold_edge_incidence": true,
+        "maximum_tolerance_m": 1e-07,
+        "self_intersection_guarantee": false,
+        "shape_type": 0,
+        "shell_count": 1,
+        "solid_count": 1,
+        "status": "VALID",
+        "vertex_count": 4,
+        "volume": 0.0010053096491487346
+      },
+      "cad_topology_metadata": {
+        "schema": 2,
+        "strategy": "native-feature-history-v1",
+        "native_history": true,
+        "geometry_revision": "281042742e89fb1c943e9f56eef13cdcce935004da45f44e4abe3b2dde0141d7",
+        "operations": [
+          {
+            "feature": "pipe",
+            "feature_uuid": "d1693801-ab45-57a5-ac63-3373dd7efa6b",
+            "operation_uuid": "79aa2fe1-5535-5fe1-b968-993d8c205e6c",
+            "stage": "construction",
+            "receipt": {
+              "before": {
+                "analyzer_valid": true,
+                "area": 0.07853981633974488,
+                "bounds": [
+                  -0.05,
+                  -0.1,
+                  -0.05,
+                  0.05,
+                  0.1,
+                  0.05
+                ],
+                "centroid": [
+                  1.8837272091364204e-19,
+                  2.156951688275495e-18,
+                  9.706282597239727e-18
+                ],
+                "closed_shells": true,
+                "diagnostics": [],
+                "edge_count": 3,
+                "face_count": 3,
+                "faces": [
+                  {
+                    "area": 0.06283185307179587,
+                    "bounds": [
+                      -0.05,
+                      -0.1,
+                      -0.05,
+                      0.05,
+                      0.1,
+                      0.05
+                    ],
+                    "center": [
+                      2.6420863947251413e-19,
+                      3.0380566142985146e-18,
+                      -1.3877787807814457e-17
+                    ],
+                    "inertia": [
+                      0.0002879793265790644,
+                      5.238907703746406e-22,
+                      7.896613897583478e-21,
+                      5.238907703746406e-22,
+                      0.00015707963267948963,
+                      3.0493186101154824e-21,
+                      7.896613897583478e-21,
+                      3.0493186101154824e-21,
+                      0.00028797932657906436
+                    ],
+                    "orientation": 0,
+                    "slot": 1
+                  },
+                  {
+                    "area": 0.007853981633974503,
+                    "bounds": [
+                      -0.05,
+                      0.1,
+                      -0.05,
+                      0.05,
+                      0.1,
+                      0.05
+                    ],
+                    "center": [
+                      7.554877488799852e-19,
+                      0.1,
+                      0.0
+                    ],
+                    "inertia": [
+                      4.908738521233928e-06,
+                      0.0,
+                      -1.3637791482768448e-21,
+                      0.0,
+                      9.817477042468371e-06,
+                      0.0,
+                      -1.3637791482768448e-21,
+                      0.0,
+                      4.908738521234443e-06
+                    ],
+                    "orientation": 0,
+                    "plane_outward_normal": [
+                      0.0,
+                      1.0,
+                      0.0
+                    ],
+                    "slot": 2
+                  },
+                  {
+                    "area": 0.007853981633974503,
+                    "bounds": [
+                      -0.05,
+                      -0.1,
+                      -0.05,
+                      0.05,
+                      -0.1,
+                      0.05
+                    ],
+                    "center": [
+                      7.554877488799852e-19,
+                      -0.1,
+                      0.0
+                    ],
+                    "inertia": [
+                      4.908738521233928e-06,
+                      0.0,
+                      -1.3637791482768448e-21,
+                      0.0,
+                      9.817477042468371e-06,
+                      0.0,
+                      -1.3637791482768448e-21,
+                      0.0,
+                      4.908738521234443e-06
+                    ],
+                    "orientation": 1,
+                    "plane_outward_normal": [
+                      -0.0,
+                      -1.0,
+                      -0.0
+                    ],
+                    "slot": 3
+                  }
+                ],
+                "manifold_edge_incidence": true,
+                "maximum_tolerance_m": 1e-07,
+                "self_intersection_guarantee": false,
+                "shape_type": 2,
+                "shell_count": 1,
+                "solid_count": 1,
+                "status": "VALID",
+                "vertex_count": 2,
+                "volume": 0.001570796326794898
+              },
+              "face_history": [
+                {
+                  "deleted": false,
+                  "generated": [],
+                  "input_slot": 1,
+                  "modified": [],
+                  "operand": 0,
+                  "unchanged": [
+                    1
+                  ]
+                },
+                {
+                  "deleted": false,
+                  "generated": [],
+                  "input_slot": 2,
+                  "modified": [
+                    2
+                  ],
+                  "operand": 0,
+                  "unchanged": []
+                },
+                {
+                  "deleted": false,
+                  "generated": [],
+                  "input_slot": 3,
+                  "modified": [
+                    3
+                  ],
+                  "operand": 0,
+                  "unchanged": []
+                },
+                {
+                  "deleted": false,
+                  "generated": [],
+                  "input_slot": 1,
+                  "modified": [],
+                  "operand": 1,
+                  "unchanged": []
+                },
+                {
+                  "deleted": true,
+                  "generated": [],
+                  "input_slot": 2,
+                  "modified": [],
+                  "operand": 1,
+                  "unchanged": []
+                },
+                {
+                  "deleted": true,
+                  "generated": [],
+                  "input_slot": 3,
+                  "modified": [],
+                  "operand": 1,
+                  "unchanged": []
+                }
+              ],
+              "feature_id": "pipe",
+              "input_hashes": [
+                "8386ff2373a6a78ead16216a4615bbd07681ea7bfadde6e14ac077d2ebe378f3",
+                "03a35ef508d58a8d63be13aaec7f63c162c22fdf3c978ae6041a722285c7d7d2"
+              ],
+              "occt_version": "7.8.1",
+              "ok": true,
+              "operation_id": "118aea7c-a525-4e42-8b88-9d14f6d82ea0",
+              "output_sha256": "6640a91203f04739e0c38c851a216200cd0d30b3d68b6071e5ef4f718ba7814e",
+              "schema": 1,
+              "tool_before": {
+                "analyzer_valid": true,
+                "area": 0.04335397861953916,
+                "bounds": [
+                  -0.03,
+                  -0.1,
+                  -0.03,
+                  0.03,
+                  0.1,
+                  0.03
+                ],
+                "centroid": [
+                  -6.362292135858057e-19,
+                  1.497883116857983e-18,
+                  -3.7447077921449574e-19
+                ],
+                "closed_shells": true,
+                "diagnostics": [],
+                "edge_count": 3,
+                "face_count": 3,
+                "faces": [
+                  {
+                    "area": 0.03769911184307752,
+                    "bounds": [
+                      -0.03,
+                      -0.1,
+                      -0.03,
+                      0.03,
+                      0.1,
+                      0.03
+                    ],
+                    "center": [
+                      -5.539706971152506e-19,
+                      -3.576595229746344e-18,
+                      -6.938893903907228e-18
+                    ],
+                    "inertia": [
+                      0.0001426283064729766,
+                      -5.342854285169948e-22,
+                      8.149411983605489e-22,
+                      -5.342854285169948e-22,
+                      3.392920065876975e-05,
+                      6.274820073259861e-21,
+                      8.149411983605489e-22,
+                      6.274820073259861e-21,
+                      0.0001426283064729766
+                    ],
+                    "orientation": 0,
+                    "slot": 1
+                  },
+                  {
+                    "area": 0.0028274333882308197,
+                    "bounds": [
+                      -0.03,
+                      0.1,
+                      -0.03,
+                      0.03,
+                      0.1,
+                      0.03
+                    ],
+                    "center": [
+                      -2.730374797699226e-18,
+                      0.09999999999999999,
+                      0.0
+                    ],
+                    "inertia": [
+                      6.361725123519263e-07,
+                      1.88079096131566e-37,
+                      6.569423945967725e-23,
+                      1.88079096131566e-37,
+                      1.272345024703902e-06,
+                      0.0,
+                      6.569423945967725e-23,
+                      0.0,
+                      6.36172512351994e-07
+                    ],
+                    "orientation": 0,
+                    "plane_outward_normal": [
+                      0.0,
+                      1.0,
+                      0.0
+                    ],
+                    "slot": 2
+                  },
+                  {
+                    "area": 0.0028274333882308197,
+                    "bounds": [
+                      -0.03,
+                      -0.1,
+                      -0.03,
+                      0.03,
+                      -0.1,
+                      0.03
+                    ],
+                    "center": [
+                      -2.730374797699226e-18,
+                      -0.09999999999999999,
+                      0.0
+                    ],
+                    "inertia": [
+                      6.361725123519263e-07,
+                      -1.88079096131566e-37,
+                      6.569423945967725e-23,
+                      -1.88079096131566e-37,
+                      1.272345024703902e-06,
+                      0.0,
+                      6.569423945967725e-23,
+                      0.0,
+                      6.36172512351994e-07
+                    ],
+                    "orientation": 1,
+                    "plane_outward_normal": [
+                      -0.0,
+                      -1.0,
+                      -0.0
+                    ],
+                    "slot": 3
+                  }
+                ],
+                "manifold_edge_incidence": true,
+                "maximum_tolerance_m": 1e-07,
+                "self_intersection_guarantee": false,
+                "shape_type": 2,
+                "shell_count": 1,
+                "solid_count": 1,
+                "status": "VALID",
+                "vertex_count": 2,
+                "volume": 0.0005654866776461632
+              },
+              "units": "m",
+              "validation": {
+                "analyzer_valid": true,
+                "area": 0.11058406140636075,
+                "bounds": [
+                  -0.05,
+                  -0.1,
+                  -0.05,
+                  0.05,
+                  0.1,
+                  0.05
+                ],
+                "centroid": [
+                  -4.738964947417056e-18,
+                  -2.2304105568604755e-19,
+                  -3.791516639546769e-18
+                ],
+                "closed_shells": true,
+                "diagnostics": [],
+                "edge_count": 6,
+                "face_count": 4,
+                "faces": [
+                  {
+                    "area": 0.06283185307179587,
+                    "bounds": [
+                      -0.05,
+                      -0.1,
+                      -0.05,
+                      0.05,
+                      0.1,
+                      0.05
+                    ],
+                    "center": [
+                      2.6420863947251413e-19,
+                      3.0380566142985146e-18,
+                      -1.3877787807814457e-17
+                    ],
+                    "inertia": [
+                      0.0002879793265790644,
+                      5.238907703746406e-22,
+                      7.896613897583478e-21,
+                      5.238907703746406e-22,
+                      0.00015707963267948963,
+                      3.0493186101154824e-21,
+                      7.896613897583478e-21,
+                      3.0493186101154824e-21,
+                      0.00028797932657906436
+                    ],
+                    "orientation": 0,
+                    "slot": 1
+                  },
+                  {
+                    "area": 0.00502654824574368,
+                    "bounds": [
+                      -0.05,
+                      0.1,
+                      -0.05,
+                      0.05,
+                      0.1,
+                      0.05
+                    ],
+                    "center": [
+                      -1.1054488924259412e-17,
+                      0.1,
+                      2.0816681711721685e-17
+                    ],
+                    "inertia": [
+                      4.272566008882019e-06,
+                      -1.504632769052528e-36,
+                      1.1259493699797844e-21,
+                      -1.504632769052528e-36,
+                      8.545132017764473e-06,
+                      0.0,
+                      1.1259493699797844e-21,
+                      0.0,
+                      4.272566008882459e-06
+                    ],
+                    "orientation": 0,
+                    "plane_outward_normal": [
+                      0.0,
+                      1.0,
+                      0.0
+                    ],
+                    "slot": 2
+                  },
+                  {
+                    "area": 0.00502654824574368,
+                    "bounds": [
+                      -0.05,
+                      -0.1,
+                      -0.05,
+                      0.05,
+                      -0.1,
+                      0.05
+                    ],
+                    "center": [
+                      -1.1054488924259412e-17,
+                      -0.1,
+                      2.0816681711721685e-17
+                    ],
+                    "inertia": [
+                      4.272566008882019e-06,
+                      1.504632769052528e-36,
+                      1.1259493699797844e-21,
+                      1.504632769052528e-36,
+                      8.545132017764473e-06,
+                      0.0,
+                      1.1259493699797844e-21,
+                      0.0,
+                      4.272566008882459e-06
+                    ],
+                    "orientation": 1,
+                    "plane_outward_normal": [
+                      -0.0,
+                      -1.0,
+                      -0.0
+                    ],
+                    "slot": 3
+                  },
+                  {
+                    "area": 0.03769911184307752,
+                    "bounds": [
+                      -0.03,
+                      -0.1,
+                      -0.03,
+                      0.03,
+                      0.1,
+                      0.03
+                    ],
+                    "center": [
+                      -5.539706971152506e-19,
+                      -3.576595229746344e-18,
+                      -6.938893903907228e-18
+                    ],
+                    "inertia": [
+                      0.0001426283064729766,
+                      -5.342854285169948e-22,
+                      8.149411983605489e-22,
+                      -5.342854285169948e-22,
+                      3.392920065876975e-05,
+                      6.274820073259861e-21,
+                      8.149411983605489e-22,
+                      6.274820073259861e-21,
+                      0.0001426283064729766
+                    ],
+                    "orientation": 1,
+                    "slot": 4
+                  }
+                ],
+                "manifold_edge_incidence": true,
+                "maximum_tolerance_m": 1e-07,
+                "self_intersection_guarantee": false,
+                "shape_type": 0,
+                "shell_count": 1,
+                "solid_count": 1,
+                "status": "VALID",
+                "vertex_count": 4,
+                "volume": 0.0010053096491487346
+              },
+              "worker_version": "1",
+              "exit_code": 0,
+              "process": {
+                "pid": 23420,
+                "exit_code": 0,
+                "peak_commit_bytes": 23879680,
+                "seconds": 0.3437827999878209,
+                "job_object": true
+              }
+            },
+            "faces": {
+              "1": {
+                "identity": "N_a440be392038035025573136",
+                "ancestry": [],
+                "state": "original",
+                "descriptor": {
+                  "area": 0.06283185307179587,
+                  "bounds": [
+                    -0.05,
+                    -0.1,
+                    -0.05,
+                    0.05,
+                    0.1,
+                    0.05
+                  ],
+                  "center": [
+                    2.6420863947251413e-19,
+                    3.0380566142985146e-18,
+                    -1.3877787807814457e-17
+                  ],
+                  "inertia": [
+                    0.0002879793265790644,
+                    5.238907703746406e-22,
+                    7.896613897583478e-21,
+                    5.238907703746406e-22,
+                    0.00015707963267948963,
+                    3.0493186101154824e-21,
+                    7.896613897583478e-21,
+                    3.0493186101154824e-21,
+                    0.00028797932657906436
+                  ],
+                  "orientation": 0,
+                  "slot": 1
+                }
+              },
+              "2": {
+                "identity": "N_3149283b105f92ef8ab47935",
+                "ancestry": [],
+                "state": "original",
+                "descriptor": {
+                  "area": 0.00502654824574368,
+                  "bounds": [
+                    -0.05,
+                    0.1,
+                    -0.05,
+                    0.05,
+                    0.1,
+                    0.05
+                  ],
+                  "center": [
+                    -1.1054488924259412e-17,
+                    0.1,
+                    2.0816681711721685e-17
+                  ],
+                  "inertia": [
+                    4.272566008882019e-06,
+                    -1.504632769052528e-36,
+                    1.1259493699797844e-21,
+                    -1.504632769052528e-36,
+                    8.545132017764473e-06,
+                    0.0,
+                    1.1259493699797844e-21,
+                    0.0,
+                    4.272566008882459e-06
+                  ],
+                  "orientation": 0,
+                  "plane_outward_normal": [
+                    0.0,
+                    1.0,
+                    0.0
+                  ],
+                  "slot": 2
+                }
+              },
+              "3": {
+                "identity": "N_9b24eb50a1dfdf5f9cdeb7c0",
+                "ancestry": [],
+                "state": "original",
+                "descriptor": {
+                  "area": 0.00502654824574368,
+                  "bounds": [
+                    -0.05,
+                    -0.1,
+                    -0.05,
+                    0.05,
+                    -0.1,
+                    0.05
+                  ],
+                  "center": [
+                    -1.1054488924259412e-17,
+                    -0.1,
+                    2.0816681711721685e-17
+                  ],
+                  "inertia": [
+                    4.272566008882019e-06,
+                    1.504632769052528e-36,
+                    1.1259493699797844e-21,
+                    1.504632769052528e-36,
+                    8.545132017764473e-06,
+                    0.0,
+                    1.1259493699797844e-21,
+                    0.0,
+                    4.272566008882459e-06
+                  ],
+                  "orientation": 1,
+                  "plane_outward_normal": [
+                    -0.0,
+                    -1.0,
+                    -0.0
+                  ],
+                  "slot": 3
+                }
+              },
+              "4": {
+                "identity": "N_d0c5232cda95fd4581363dac",
+                "ancestry": [],
+                "state": "original",
+                "descriptor": {
+                  "area": 0.03769911184307752,
+                  "bounds": [
+                    -0.03,
+                    -0.1,
+                    -0.03,
+                    0.03,
+                    0.1,
+                    0.03
+                  ],
+                  "center": [
+                    -5.539706971152506e-19,
+                    -3.576595229746344e-18,
+                    -6.938893903907228e-18
+                  ],
+                  "inertia": [
+                    0.0001426283064729766,
+                    -5.342854285169948e-22,
+                    8.149411983605489e-22,
+                    -5.342854285169948e-22,
+                    3.392920065876975e-05,
+                    6.274820073259861e-21,
+                    8.149411983605489e-22,
+                    6.274820073259861e-21,
+                    0.0001426283064729766
+                  ],
+                  "orientation": 1,
+                  "slot": 4
+                }
+              }
+            }
+          }
+        ],
+        "faces": [
+          {
+            "identity": "N_a440be392038035025573136",
+            "ancestry": [],
+            "state": "original",
+            "descriptor": {
+              "area": 0.06283185307179587,
+              "bounds": [
+                -0.05,
+                -0.1,
+                -0.05,
+                0.05,
+                0.1,
+                0.05
+              ],
+              "center": [
+                2.6420863947251413e-19,
+                3.0380566142985146e-18,
+                -1.3877787807814457e-17
+              ],
+              "inertia": [
+                0.0002879793265790644,
+                5.238907703746406e-22,
+                7.896613897583478e-21,
+                5.238907703746406e-22,
+                0.00015707963267948963,
+                3.0493186101154824e-21,
+                7.896613897583478e-21,
+                3.0493186101154824e-21,
+                0.00028797932657906436
+              ],
+              "orientation": 0,
+              "slot": 1
+            }
+          },
+          {
+            "identity": "N_3149283b105f92ef8ab47935",
+            "ancestry": [],
+            "state": "original",
+            "descriptor": {
+              "area": 0.00502654824574368,
+              "bounds": [
+                -0.05,
+                0.1,
+                -0.05,
+                0.05,
+                0.1,
+                0.05
+              ],
+              "center": [
+                -1.1054488924259412e-17,
+                0.1,
+                2.0816681711721685e-17
+              ],
+              "inertia": [
+                4.272566008882019e-06,
+                -1.504632769052528e-36,
+                1.1259493699797844e-21,
+                -1.504632769052528e-36,
+                8.545132017764473e-06,
+                0.0,
+                1.1259493699797844e-21,
+                0.0,
+                4.272566008882459e-06
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "slot": 2
+            }
+          },
+          {
+            "identity": "N_9b24eb50a1dfdf5f9cdeb7c0",
+            "ancestry": [],
+            "state": "original",
+            "descriptor": {
+              "area": 0.00502654824574368,
+              "bounds": [
+                -0.05,
+                -0.1,
+                -0.05,
+                0.05,
+                -0.1,
+                0.05
+              ],
+              "center": [
+                -1.1054488924259412e-17,
+                -0.1,
+                2.0816681711721685e-17
+              ],
+              "inertia": [
+                4.272566008882019e-06,
+                1.504632769052528e-36,
+                1.1259493699797844e-21,
+                1.504632769052528e-36,
+                8.545132017764473e-06,
+                0.0,
+                1.1259493699797844e-21,
+                0.0,
+                4.272566008882459e-06
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                -0.0,
+                -1.0,
+                -0.0
+              ],
+              "slot": 3
+            }
+          },
+          {
+            "identity": "N_d0c5232cda95fd4581363dac",
+            "ancestry": [],
+            "state": "original",
+            "descriptor": {
+              "area": 0.03769911184307752,
+              "bounds": [
+                -0.03,
+                -0.1,
+                -0.03,
+                0.03,
+                0.1,
+                0.03
+              ],
+              "center": [
+                -5.539706971152506e-19,
+                -3.576595229746344e-18,
+                -6.938893903907228e-18
+              ],
+              "inertia": [
+                0.0001426283064729766,
+                -5.342854285169948e-22,
+                8.149411983605489e-22,
+                -5.342854285169948e-22,
+                3.392920065876975e-05,
+                6.274820073259861e-21,
+                8.149411983605489e-22,
+                6.274820073259861e-21,
+                0.0001426283064729766
+              ],
+              "orientation": 1,
+              "slot": 4
+            }
+          }
+        ]
+      },
+      "cad_safe_continuations": [
+        "N_a440be392038035025573136",
+        "N_3149283b105f92ef8ab47935",
+        "N_9b24eb50a1dfdf5f9cdeb7c0",
+        "N_d0c5232cda95fd4581363dac"
+      ],
+      "cad_cross_kernel": {
+        "solid_count": 1,
+        "face_count": 4,
+        "volume_difference_m3": 4.336808689942018e-19,
+        "area_difference_m2": 0.0,
+        "centroid_difference_m": 6.319194399244614e-18,
+        "bounds_difference_m": 1.0000000000287557e-07,
+        "bounds_budget_m": 2e-07,
+        "complete_boundary_coverage": true
+      },
+      "id": "pipe",
+      "name": "pipe",
+      "material": {
+        "E": 210000000000.0,
+        "nu": 0,
+        "density": 7850
+      },
+      "support": "",
+      "load_face": "",
+      "force": [
+        0,
+        1000,
+        0
+      ]
+    }
+  ],
+  "mesh": {},
+  "results": {},
+  "analysis": {
+    "type": "static_structural",
+    "backend": "calculix",
+    "element": "TET4"
+  }
+}

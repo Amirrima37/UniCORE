@@ -1,0 +1,13 @@
+[
+  {
+    "case": "lifecycle",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/cad21_lifecycle.py"
+    ],
+    "seconds": 28.203169000000344,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad21\\lifecycle-1794655748490996200"
+  }
+]

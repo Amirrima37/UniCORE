@@ -1,0 +1,90 @@
+{
+  "verdict": "PARTIAL",
+  "checkpoint1": "PASS",
+  "focused": [
+    {
+      "test": "test_stage6_remesh",
+      "exit": 0,
+      "seconds": 1.3827358999988064,
+      "passed": true
+    },
+    {
+      "test": "test_stage6_cylinder",
+      "exit": 0,
+      "seconds": 1.9008583999966504,
+      "passed": true
+    },
+    {
+      "test": "test_mesh_inspection",
+      "exit": 0,
+      "passed": true,
+      "seconds": 0.7866683999964152
+    },
+    {
+      "test": "test_stage5_display",
+      "exit": 0,
+      "passed": true,
+      "seconds": 0.48849100000370527
+    },
+    {
+      "test": "test_stage6_topology",
+      "exit": 0,
+      "seconds": 30.149904199999582,
+      "passed": true
+    },
+    {
+      "test": "test_cylinder_fem",
+      "exit": 0,
+      "seconds": 6.412847200001124,
+      "passed": true
+    },
+    {
+      "test": "test_stage51_cache",
+      "exit": 0,
+      "seconds": 3.0940565999990213,
+      "passed": true
+    },
+    {
+      "test": "test_app_shell_suite",
+      "exit": 0,
+      "seconds": 9.440275200002361,
+      "passed": true
+    },
+    {
+      "test": "test_stage5_provenance",
+      "exit": 0,
+      "seconds": 0.8965473999996902,
+      "passed": true
+    },
+    {
+      "test": "test_stage5_probes",
+      "exit": 0,
+      "seconds": 2.7804808000000776,
+      "passed": true
+    }
+  ],
+  "focused_passed": 10,
+  "regression_passed": 28,
+  "app_shell_repeats": [
+    {
+      "test": "test_app_shell_suite",
+      "exit": 0,
+      "seconds": 9.440275200002361,
+      "passed": true
+    },
+    {
+      "test": "app-shell-repeat1",
+      "exit": 0,
+      "seconds": 11.645694799997727,
+      "passed": true
+    },
+    {
+      "test": "app-shell-repeat2",
+      "exit": 0,
+      "seconds": 10.048244899997371,
+      "passed": true
+    }
+  ],
+  "benchmark": "8 sequential real jobs passed",
+  "remaining": "Checkpoints 2-5 not implemented in this continuation; historical crash investigation unresolved"
+}

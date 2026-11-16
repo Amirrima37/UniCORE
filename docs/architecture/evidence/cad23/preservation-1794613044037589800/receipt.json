@@ -1,0 +1,26 @@
+[
+  {
+    "test": "cad22-preservation",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/run_cad22.py",
+      "preservation"
+    ],
+    "seconds": 121.9998440999916,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\preservation-1794613044037589800"
+  },
+  {
+    "test": "cad22-validation",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/run_cad22.py",
+      "validation"
+    ],
+    "seconds": 6.234771600007662,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\preservation-1794613044037589800"
+  }
+]

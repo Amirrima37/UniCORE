@@ -1,0 +1,198 @@
+[
+    {
+        "success_banner":  true,
+        "script":  "tests/test_physics_engine_suite.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  true,
+        "script":  "tests/test_physics_features_suite.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  true,
+        "script":  "tests/test_physics_interaction_suite.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  true,
+        "script":  "tests/test_verlet_empirical_verification.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  true,
+        "script":  "tests/test_rk4_empirical_verification.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_precession_diagnostic.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_native_metrics_suite.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_native_molecular_suite.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_native_gravity_suite.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_native_quantum_suite.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_native_nuclear_suite.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_native_remaining_fixtures_suite.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_native_geometry_suite.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_native_structural_suite.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_structural_expansion.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_native_thermal_suite.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_materials_thermal_ui.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_cae_analysis_commands.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  true,
+        "script":  "tests/test_native_structural_ui.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_cae_recovery.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_cae_shell.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_cae_ai_commands.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  true,
+        "script":  "tests/test_mesh_inspection.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  true,
+        "script":  "tests/test_mesh_result_integration.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  false,
+        "script":  "tests/test_native_radiation.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  true,
+        "script":  "tests/test_mesh_async.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  false
+    },
+    {
+        "success_banner":  true,
+        "script":  "tests/test_extreme_equivalence.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    },
+    {
+        "success_banner":  true,
+        "script":  "tests/test_extreme_advanced.gd",
+        "exit_status":  "unverified: Start-Process ExitCode returned null",
+        "script_errors":  [
+
+                          ]
+    }
+]

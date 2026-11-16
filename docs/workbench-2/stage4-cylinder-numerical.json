@@ -1,0 +1,44 @@
+{
+  "cases": [
+    {
+      "circle_displacement_relative_error": 0.110720734540779,
+      "circle_heat_rate_relative_error": 0.0996836838468171,
+      "density": 1,
+      "displacement_m": 0.00883883476484129,
+      "generation_ms": 6.99,
+      "heat_rate_W": 113.137084989355,
+      "nodes": 54,
+      "polygon_area": 0.113137084989848,
+      "reaction_N": -0.99999999999919,
+      "temperature_max_error_K": 0.00000000918754494705354,
+      "tets": 120
+    },
+    {
+      "circle_displacement_relative_error": 0.0261721529773695,
+      "circle_heat_rate_relative_error": 0.0255046416189143,
+      "density": 2,
+      "displacement_m": 0.00816601853048005,
+      "generation_ms": 49.304,
+      "heat_rate_W": 122.458698353895,
+      "nodes": 275,
+      "polygon_area": 0.122458698356829,
+      "reaction_N": -1.00000000000302,
+      "temperature_max_error_K": 0.000000024647874852235,
+      "tets": 960
+    },
+    {
+      "circle_displacement_relative_error": 0.0115151599278107,
+      "circle_heat_rate_relative_error": 0.0113840705900513,
+      "density": 3,
+      "displacement_m": 0.00804938188574501,
+      "generation_ms": 190.776,
+      "heat_rate_W": 124.233141642246,
+      "nodes": 784,
+      "polygon_area": 0.12423314164921,
+      "reaction_N": -1.00000000000029,
+      "temperature_max_error_K": 0.0000000231621015700512,
+      "tets": 3240
+    }
+  ],
+  "failures": 0
+}

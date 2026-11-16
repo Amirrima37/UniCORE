@@ -1,0 +1,129 @@
+[
+  {
+    "test": "reject-target_size",
+    "outcome": "PASS",
+    "error": "Invalid mesh setting target_size"
+  },
+  {
+    "test": "reject-min_size",
+    "outcome": "PASS",
+    "error": "Invalid mesh setting min_size"
+  },
+  {
+    "test": "reject-max_size",
+    "outcome": "PASS",
+    "error": "Invalid mesh setting max_size"
+  },
+  {
+    "test": "reject-algorithm",
+    "outcome": "PASS",
+    "error": "Unsupported mesh algorithm/optimization/boundary setting"
+  },
+  {
+    "test": "reject-schema",
+    "outcome": "PASS",
+    "error": "Unknown/missing mesh settings fields"
+  },
+  {
+    "test": "reject-schema",
+    "outcome": "PASS",
+    "error": "Unsupported mesh settings schema"
+  },
+  {
+    "test": "reject-max_nodes",
+    "outcome": "PASS",
+    "error": "Invalid mesh setting max_nodes"
+  },
+  {
+    "test": "reject-timeout_s",
+    "outcome": "PASS",
+    "error": "Invalid mesh setting timeout_s"
+  },
+  {
+    "test": "reject-memory_mb",
+    "outcome": "PASS",
+    "error": "Invalid mesh setting memory_mb"
+  },
+  {
+    "test": "reject-curvature_points",
+    "outcome": "PASS",
+    "error": "Invalid mesh setting curvature_points"
+  },
+  {
+    "test": "reject-inconsistent-bounds",
+    "outcome": "PASS",
+    "error": "Mesh sizes require min <= target <= max"
+  },
+  {
+    "test": "independent-regular-inverted-degenerate-tetrahedra",
+    "outcome": "PASS",
+    "mean_ratio": 1.0
+  },
+  {
+    "test": "genuine-face-local-density",
+    "outcome": "PASS",
+    "measurements": [
+      {
+        "local": false,
+        "surface_nodes": 596,
+        "surface_triangles": 1176,
+        "mean_surface_edge_m": 0.015635676240172706,
+        "nodes": 942,
+        "tet4": 3238,
+        "volume_error": 0.011407177334752161,
+        "minimum_mean_ratio": 0.2829126478546408,
+        "seconds": 1.3627494999964256
+      },
+      {
+        "local": true,
+        "surface_nodes": 2006,
+        "surface_triangles": 3980,
+        "mean_surface_edge_m": 0.008583765365531513,
+        "nodes": 2728,
+        "tet4": 9411,
+        "volume_error": 0.003517542726987566,
+        "minimum_mean_ratio": 0.2203633694453032,
+        "seconds": 1.326992500005872
+      }
+    ]
+  },
+  {
+    "test": "algorithm-delaunay-none",
+    "outcome": "PASS",
+    "nodes": 108,
+    "tet4": 276,
+    "before": 0.10381426267908639,
+    "after": 0.10381426267908639
+  },
+  {
+    "test": "algorithm-delaunay-netgen",
+    "outcome": "PASS",
+    "nodes": 136,
+    "tet4": 434,
+    "before": 0.10381426267908639,
+    "after": 0.5361994342335434
+  },
+  {
+    "test": "algorithm-hxt-gmsh",
+    "outcome": "PASS",
+    "nodes": 110,
+    "tet4": 282,
+    "before": 0.10381426267908639,
+    "after": 0.4742108254072718
+  },
+  {
+    "test": "reject-cost",
+    "outcome": "PASS",
+    "error": "Mesh request exceeds preflight density budget; increase size or limits within supported bounds"
+  },
+  {
+    "test": "reject-quality",
+    "outcome": "PASS",
+    "error": "Mesh rejected by quality thresholds"
+  },
+  {
+    "test": "reject-counts",
+    "outcome": "PASS",
+    "error": "Mesh request exceeds preflight density budget; increase size or limits within supported bounds"
+  }
+]

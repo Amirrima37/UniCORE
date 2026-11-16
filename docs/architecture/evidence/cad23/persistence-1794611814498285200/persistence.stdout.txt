@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PART_DIFF visible saved=<null> restored=true
+PART_DIFF inner_diameter saved=<null> restored=0.7
+CURRENT_DIAG revision 1.0/1.0 parts false analysis true settings true meshhash true divisions 4.0/4.0

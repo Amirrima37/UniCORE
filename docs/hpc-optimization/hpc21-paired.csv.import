@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dwwid1mxlcutu"
+
+[deps]
+
+files=["res://docs/hpc-optimization/hpc21-paired.threads.translation", "res://docs/hpc-optimization/hpc21-paired.method.translation", "res://docs/hpc-optimization/hpc21-paired.integration.translation", "res://docs/hpc-optimization/hpc21-paired.scatter.translation", "res://docs/hpc-optimization/hpc21-paired.total.translation", "res://docs/hpc-optimization/hpc21-paired.exact.translation"]
+
+source_file="res://docs/hpc-optimization/hpc21-paired.csv"
+dest_files=["res://docs/hpc-optimization/hpc21-paired.threads.translation", "res://docs/hpc-optimization/hpc21-paired.method.translation", "res://docs/hpc-optimization/hpc21-paired.integration.translation", "res://docs/hpc-optimization/hpc21-paired.scatter.translation", "res://docs/hpc-optimization/hpc21-paired.total.translation", "res://docs/hpc-optimization/hpc21-paired.exact.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\Victus\Desktop\UniCORE-main\tests\cad23_unit.py", line 41, in <module>
+    assert max(abs(a-b) for a,b in zip(cw,independent))<1e-8 and abs(ca-ia)<1e-8 and max(abs(a-b) for a,b in zip(cm,im))<1e-8
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

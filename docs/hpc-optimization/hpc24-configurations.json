@@ -1,0 +1,14 @@
+[
+  {
+    "analysis": "static_structural",
+    "maximum_debug_release_difference": 0,
+    "release_residual": 0,
+    "debug_residual": 0
+  },
+  {
+    "analysis": "transient_thermal",
+    "maximum_debug_release_difference": 0.0,
+    "release_residual": 2.9591131517322286e-12,
+    "debug_residual": 2.9591131517322286e-12
+  }
+]

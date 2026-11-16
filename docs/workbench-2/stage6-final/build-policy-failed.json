@@ -1,0 +1,66 @@
+[
+  {
+    "name": "compiler",
+    "command": [
+      "C:/Qt/Tools/mingw1310_64/bin/x86_64-w64-mingw32-g++.exe",
+      "--version"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 0.03,
+    "log": "docs\\workbench-2\\stage6-final\\compiler.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": true
+  },
+  {
+    "name": "build-release",
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-File",
+      "native/extreme/build.ps1"
+    ],
+    "exit_code": 1,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 0.696,
+    "log": "docs\\workbench-2\\stage6-final\\build-release.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": false
+  },
+  {
+    "name": "build-debug",
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-File",
+      "native/extreme/build.ps1",
+      "-Debug"
+    ],
+    "exit_code": 1,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 0.619,
+    "log": "docs\\workbench-2\\stage6-final\\build-debug.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": false
+  },
+  {
+    "name": "build-noomp",
+    "command": [
+      "powershell",
+      "-NoProfile",
+      "-File",
+      "native/extreme/build.ps1",
+      "-NoOpenMP"
+    ],
+    "exit_code": 1,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 0.614,
+    "log": "docs\\workbench-2\\stage6-final\\build-noomp.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": false
+  }
+]

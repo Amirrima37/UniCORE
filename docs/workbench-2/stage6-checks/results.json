@@ -1,0 +1,56 @@
+[
+  {
+    "test": "test_stage6_cylinder",
+    "exit": 0,
+    "passed": true,
+    "seconds": 1.9328624000045238
+  },
+  {
+    "test": "test_cylinder_fem",
+    "exit": 0,
+    "passed": true,
+    "seconds": 7.669926400005352
+  },
+  {
+    "test": "test_stage5_quality",
+    "exit": 0,
+    "passed": true,
+    "seconds": 1.4819451000003028
+  },
+  {
+    "test": "test_stage5_provenance",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.9143851000044378
+  },
+  {
+    "test": "test_stage5_display",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.6389596000008169
+  },
+  {
+    "test": "test_stage5_probes",
+    "exit": 0,
+    "passed": true,
+    "seconds": 2.390423799995915
+  },
+  {
+    "test": "test_stage51_cache",
+    "exit": 0,
+    "passed": true,
+    "seconds": 3.503436099999817
+  },
+  {
+    "test": "test_stage51_equivalence",
+    "exit": 0,
+    "passed": true,
+    "seconds": 2.1517272999990382
+  },
+  {
+    "test": "test_app_shell_suite",
+    "exit": 0,
+    "passed": true,
+    "seconds": 11.096259400001145
+  }
+]

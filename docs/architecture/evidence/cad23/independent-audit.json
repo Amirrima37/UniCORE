@@ -1,0 +1,1586 @@
+[
+  {
+    "case": "axial-bar",
+    "order": 1,
+    "level": 0,
+    "outcome": "PASS",
+    "reference_m": 4.761904761904762e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 4.761905e-07,
+    "relative_error": 4.9999999918171056e-08,
+    "reaction_relative_imbalance": 1.9999999949504862e-08,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      4.000000000216294e-13,
+      -999.99998,
+      -3.299999998669665e-13
+    ],
+    "applied_moment_Nm": [
+      -50.00000087857127,
+      0.0,
+      50.000000280325864
+    ],
+    "independent_surface_moment_Nm": [
+      -50.0,
+      0.0,
+      50.00000000000001
+    ],
+    "moment_error_per_force_m": 9.22209338446642e-10,
+    "loaded_area_m2": 0.010000000000000002,
+    "independent_quadratic_volume_m3": 0.010000000000000004,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 2.5688768329608504e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.4875637166418176,
+    "sample": {
+      "point_m": [
+        0.047,
+        0.487,
+        0.043
+      ],
+      "element": 19,
+      "tensor_Pa": [
+        -5.404829e-05,
+        100000.0,
+        0.0002782453,
+        0.0007682626,
+        0.0002423539,
+        0.000355933
+      ],
+      "von_mises_Pa": 99999.9998879015,
+      "association": "constant single integration-point tensor"
+    },
+    "effective_h_m": 0.03193649184995276,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-bar-o1-0-a14101f56f88-11508_9401922_6ad53c117f763444"
+  },
+  {
+    "case": "axial-bar",
+    "order": 1,
+    "level": 1,
+    "outcome": "PASS",
+    "reference_m": 4.761904761904762e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 4.761905e-07,
+    "relative_error": 4.9999999918171056e-08,
+    "reaction_relative_imbalance": 1.99999999495051e-08,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      1.0999999997219911e-13,
+      -999.99998,
+      3.1460000000152008e-12
+    ],
+    "applied_moment_Nm": [
+      -50.0000003846924,
+      0.0,
+      50.00000055446475
+    ],
+    "independent_surface_moment_Nm": [
+      -50.0,
+      0.0,
+      50.0
+    ],
+    "moment_error_per_force_m": 6.748476853108752e-10,
+    "loaded_area_m2": 0.010000000000000002,
+    "independent_quadratic_volume_m3": 0.010000000000000004,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 2.0582894072320354e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.3377823071464702,
+    "sample": {
+      "point_m": [
+        0.047,
+        0.487,
+        0.043
+      ],
+      "element": 68,
+      "tensor_Pa": [
+        -2.586881e-06,
+        100000.0,
+        6.136145e-05,
+        0.0003710394,
+        3.471313e-05,
+        -0.0003035591
+      ],
+      "von_mises_Pa": 99999.99997061271,
+      "association": "constant single integration-point tensor"
+    },
+    "effective_h_m": 0.02847764255473534,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-bar-o1-1-d100f3dbd25b-11508_15841019_01476d44ed200606"
+  },
+  {
+    "case": "axial-bar",
+    "order": 1,
+    "level": 2,
+    "outcome": "PASS",
+    "reference_m": 4.761904761904762e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 4.7619049999999994e-07,
+    "relative_error": 4.9999999918171056e-08,
+    "reaction_relative_imbalance": 9.999999974752749e-09,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      1.9999999999774524e-12,
+      -1000.00001,
+      -1.5580000000053004e-12
+    ],
+    "applied_moment_Nm": [
+      -49.99999986468937,
+      0.0,
+      50.0000002645499
+    ],
+    "independent_surface_moment_Nm": [
+      -50.00000000000001,
+      0.0,
+      50.00000000000002
+    ],
+    "moment_error_per_force_m": 2.971457632956982e-10,
+    "loaded_area_m2": 0.01,
+    "independent_quadratic_volume_m3": 0.01,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 1.5037892070172666e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.20268728743058534,
+    "sample": {
+      "point_m": [
+        0.047,
+        0.487,
+        0.043
+      ],
+      "element": 1131,
+      "tensor_Pa": [
+        6.507466e-06,
+        100000.0,
+        3.242682e-06,
+        -0.0002486521,
+        -1.144044e-06,
+        0.0001135932
+      ],
+      "von_mises_Pa": 99999.99999512493,
+      "association": "constant single integration-point tensor"
+    },
+    "effective_h_m": 0.01764263102281956,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-bar-o1-2-77e98eaa2a0a-11508_23310923_1fdbb24e2d0fedd1"
+  },
+  {
+    "case": "axial-bar",
+    "order": 1,
+    "level": 3,
+    "outcome": "PASS",
+    "reference_m": 4.761904761904762e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 4.761904933333333e-07,
+    "relative_error": 3.600000009207349e-08,
+    "reaction_relative_imbalance": 9.999999974752532e-09,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      1.3100000000077224e-12,
+      -1000.00001,
+      6.309999999761515e-13
+    ],
+    "applied_moment_Nm": [
+      -50.000001026199136,
+      0.0,
+      50.000000430485166
+    ],
+    "independent_surface_moment_Nm": [
+      -49.99999999999997,
+      0.0,
+      49.999999999999986
+    ],
+    "moment_error_per_force_m": 1.1128352150695737e-09,
+    "loaded_area_m2": 0.010000000000000007,
+    "independent_quadratic_volume_m3": 0.01,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 5.50834009400966e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.4580696943292888,
+    "sample": {
+      "point_m": [
+        0.047,
+        0.487,
+        0.043
+      ],
+      "element": 1641,
+      "tensor_Pa": [
+        -8.055587e-05,
+        100000.0,
+        0.0001206917,
+        -0.0003831153,
+        -2.982009e-05,
+        -0.0002980473
+      ],
+      "von_mises_Pa": 99999.9999799321,
+      "association": "constant single integration-point tensor"
+    },
+    "effective_h_m": 0.012479720924804273,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-bar-o1-3-7af20c00f2f4-11508_30302972_32d81be6c450588c"
+  },
+  {
+    "case": "axial-bar",
+    "order": 2,
+    "level": 0,
+    "outcome": "PASS",
+    "reference_m": 4.761904761904762e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 4.7619050000000004e-07,
+    "relative_error": 5.000000014021566e-08,
+    "reaction_relative_imbalance": 9.999999633691917e-09,
+    "applied_force_N": [
+      0.0,
+      999.9999999999995,
+      0.0
+    ],
+    "reaction_force_N": [
+      -2.1855035519999995e-13,
+      -999.9999899999999,
+      9.39077284e-14
+    ],
+    "applied_moment_Nm": [
+      -49.99999999999998,
+      0.0,
+      49.99999999999998
+    ],
+    "independent_surface_moment_Nm": [
+      -49.99999999999997,
+      0.0,
+      50.000000000000014
+    ],
+    "moment_error_per_force_m": 3.6230712748823524e-17,
+    "loaded_area_m2": 0.009999999999999995,
+    "independent_quadratic_volume_m3": 0.009999999999999993,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 6.467252870548208e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.4412712127875118,
+    "sample": {
+      "point_m": [
+        0.047,
+        0.487,
+        0.043
+      ],
+      "element": 19,
+      "tensor_Pa": [
+        -2.5644262462959556e-10,
+        100000.0,
+        -3.275026246126972e-11,
+        -4.31696562307355e-10,
+        -4.425060616412591e-11,
+        2.5387789610077333e-10
+      ],
+      "von_mises_Pa": 100000.00000000015,
+      "association": "linear reconstruction of 4 integration-point tensors"
+    },
+    "effective_h_m": 0.03193649184995276,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-bar-o2-0-1b264e0899b5-11508_43604224_020b34b5f8f7d4e4"
+  },
+  {
+    "case": "axial-bar",
+    "order": 2,
+    "level": 1,
+    "outcome": "PASS",
+    "reference_m": 4.761904761904762e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 4.7619050000000004e-07,
+    "relative_error": 5.000000014021566e-08,
+    "reaction_relative_imbalance": 9.99999952000582e-09,
+    "applied_force_N": [
+      0.0,
+      999.9999999999993,
+      0.0
+    ],
+    "reaction_force_N": [
+      -3.009178632e-12,
+      -999.9999899999998,
+      -2.4138494997e-12
+    ],
+    "applied_moment_Nm": [
+      -49.99999999999998,
+      0.0,
+      49.99999999999997
+    ],
+    "independent_surface_moment_Nm": [
+      -49.99999999999997,
+      0.0,
+      50.00000000000001
+    ],
+    "moment_error_per_force_m": 3.6230712748823524e-17,
+    "loaded_area_m2": 0.009999999999999992,
+    "independent_quadratic_volume_m3": 0.009999999999999993,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 7.706728747170394e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.48616346136779903,
+    "sample": {
+      "point_m": [
+        0.047,
+        0.487,
+        0.043
+      ],
+      "element": 68,
+      "tensor_Pa": [
+        -1.6432123916499534e-10,
+        100000.0,
+        1.2861672336911717e-10,
+        5.332378457014506e-10,
+        1.5138346870246518e-11,
+        3.753923669616022e-10
+      ],
+      "von_mises_Pa": 100000.00000000001,
+      "association": "linear reconstruction of 4 integration-point tensors"
+    },
+    "effective_h_m": 0.02847764255473534,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-bar-o2-1-6f8c9674aeb4-11508_53729920_0f29e69b768b3ba2"
+  },
+  {
+    "case": "axial-bar",
+    "order": 2,
+    "level": 2,
+    "outcome": "PASS",
+    "reference_m": 4.761904761904762e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 4.761905e-07,
+    "relative_error": 4.9999999918171056e-08,
+    "reaction_relative_imbalance": 5.000000066957053e-08,
+    "applied_force_N": [
+      0.0,
+      999.9999999999992,
+      0.0
+    ],
+    "reaction_force_N": [
+      2.2923836621e-12,
+      -1000.0000499999999,
+      6.880733926e-12
+    ],
+    "applied_moment_Nm": [
+      -49.99999999999994,
+      0.0,
+      49.999999999999964
+    ],
+    "independent_surface_moment_Nm": [
+      -49.99999999999993,
+      0.0,
+      49.99999999999985
+    ],
+    "moment_error_per_force_m": 1.1457157353758233e-16,
+    "loaded_area_m2": 0.010000000000000018,
+    "independent_quadratic_volume_m3": 0.009999999999999995,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 1.2829462733398892e-05,
+    "kinematic_DAT_rounding_budget_fraction": 0.32000398159385207,
+    "sample": {
+      "point_m": [
+        0.047,
+        0.487,
+        0.043
+      ],
+      "element": 1131,
+      "tensor_Pa": [
+        -1.6128123764624974e-10,
+        100000.0,
+        -7.88706143135049e-10,
+        -7.604525281947257e-10,
+        4.842260387922446e-10,
+        -2.6449313424682756e-09
+      ],
+      "von_mises_Pa": 100000.00000000048,
+      "association": "linear reconstruction of 4 integration-point tensors"
+    },
+    "effective_h_m": 0.01764263102281956,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-bar-o2-2-2e0f7c375504-11508_64902982_fb0e290f2d1802b4"
+  },
+  {
+    "case": "axial-bar",
+    "order": 2,
+    "level": 3,
+    "outcome": "PASS",
+    "reference_m": 4.761904761904762e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 4.761905e-07,
+    "relative_error": 4.9999999918171056e-08,
+    "reaction_relative_imbalance": 3.999999080407623e-09,
+    "applied_force_N": [
+      0.0,
+      999.9999999999991,
+      0.0
+    ],
+    "reaction_force_N": [
+      2.134531713571e-12,
+      -999.999996,
+      -2.5054974334e-12
+    ],
+    "applied_moment_Nm": [
+      -49.99999999999995,
+      0.0,
+      49.99999999999996
+    ],
+    "independent_surface_moment_Nm": [
+      -49.99999999999979,
+      0.0,
+      49.99999999999982
+    ],
+    "moment_error_per_force_m": 2.1197527488221082e-16,
+    "loaded_area_m2": 0.010000000000000012,
+    "independent_quadratic_volume_m3": 0.009999999999999993,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 1.1846061714852666e-05,
+    "kinematic_DAT_rounding_budget_fraction": 0.38247659588349725,
+    "sample": {
+      "point_m": [
+        0.047,
+        0.487,
+        0.043
+      ],
+      "element": 1641,
+      "tensor_Pa": [
+        4.453922421419966e-10,
+        100000.0,
+        -1.4360790553781545e-10,
+        -1.437933223978556e-09,
+        4.802732493906618e-10,
+        2.598785172290971e-10
+      ],
+      "von_mises_Pa": 99999.99999999985,
+      "association": "linear reconstruction of 4 integration-point tensors"
+    },
+    "effective_h_m": 0.012479720924804273,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-bar-o2-3-43b5a51a7072-11508_82779357_75230a7922056ff2"
+  },
+  {
+    "case": "axial-cylinder",
+    "order": 1,
+    "level": 0,
+    "outcome": "PASS",
+    "reference_m": 3.031522725559911e-08,
+    "timoshenko_shear_m": 0,
+    "tip_m": 3.2102693076923076e-08,
+    "relative_error": 0.05896263967454951,
+    "reaction_relative_imbalance": 3.000020372058571e-08,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -1.0999999994210086e-08,
+      -999.99997,
+      -1.0999999999067311e-07
+    ],
+    "applied_moment_Nm": [
+      1.2016407583415045e-06,
+      0.0,
+      -1.6182843358691912e-06
+    ],
+    "independent_surface_moment_Nm": [
+      1.9912656665820738e-14,
+      0.0,
+      -2.811198588115869e-15
+    ],
+    "moment_error_per_force_m": 2.015635048036419e-09,
+    "loaded_area_m2": 0.028925442435894275,
+    "independent_quadratic_volume_m3": 0.005920055041036594,
+    "deck_coordinate_max_error_m": 4.492127076449997e-18,
+    "kinematic_stress_relative_error": 8.242620596822901e-07,
+    "kinematic_DAT_rounding_budget_fraction": 0.44566230756852515,
+    "sample": null,
+    "effective_h_m": 0.03805616362325506,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-cylinder-o1-0-ed3955026d52-11508_105632365_bf4a03fa5ddc641f"
+  },
+  {
+    "case": "axial-cylinder",
+    "order": 1,
+    "level": 1,
+    "outcome": "PASS",
+    "reference_m": 3.031522725559911e-08,
+    "timoshenko_shear_m": 0,
+    "tip_m": 3.1172450357142853e-08,
+    "relative_error": 0.028276980882121494,
+    "reaction_relative_imbalance": 1.000000202725222e-08,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -5.2999999989884056e-09,
+      -999.99999,
+      3.599999999709738e-09
+    ],
+    "applied_moment_Nm": [
+      -1.3310448652159579e-06,
+      0.0,
+      4.827063626589023e-07
+    ],
+    "independent_surface_moment_Nm": [
+      -5.608188657473403e-17,
+      0.0,
+      0.0
+    ],
+    "moment_error_per_force_m": 1.4158692967996235e-09,
+    "loaded_area_m2": 0.03020700618284496,
+    "independent_quadratic_volume_m3": 0.0061046823787885745,
+    "deck_coordinate_max_error_m": 4.492127076449997e-18,
+    "kinematic_stress_relative_error": 6.753377188365329e-07,
+    "kinematic_DAT_rounding_budget_fraction": 0.363677379483937,
+    "sample": null,
+    "effective_h_m": 0.026309964237592503,
+    "observed_error_rate": 1.9908573138483772,
+    "artifacts": "solver-jobs\\axial-cylinder-o1-1-d6ef577bf3f0-11508_112003586_ee04145c1b587544"
+  },
+  {
+    "case": "axial-cylinder",
+    "order": 1,
+    "level": 2,
+    "outcome": "PASS",
+    "reference_m": 3.031522725559911e-08,
+    "timoshenko_shear_m": 0,
+    "tip_m": 3.071865958333333e-08,
+    "relative_error": 0.013307910388820066,
+    "reaction_relative_imbalance": 1.0000008997248377e-08,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      1.1699999997606529e-08,
+      -1000.00001,
+      -6.5999999995401334e-09
+    ],
+    "applied_moment_Nm": [
+      -4.6050395563490554e-07,
+      0.0,
+      2.7604091701327604e-07
+    ],
+    "independent_surface_moment_Nm": [
+      -2.855804403091742e-15,
+      0.0,
+      -5.670419319600429e-15
+    ],
+    "moment_error_per_force_m": 5.369008116228197e-10,
+    "loaded_area_m2": 0.030846449574444938,
+    "independent_quadratic_volume_m3": 0.0061974222584269155,
+    "deck_coordinate_max_error_m": 4.6103795981987226e-18,
+    "kinematic_stress_relative_error": 4.508891187514865e-07,
+    "kinematic_DAT_rounding_budget_fraction": 0.4105264673349514,
+    "sample": null,
+    "effective_h_m": 0.018945349976239898,
+    "observed_error_rate": 2.2951102258884255,
+    "artifacts": "solver-jobs\\axial-cylinder-o1-2-9603cea3d75a-11508_119348225_b4d3cbc78fd4fd76"
+  },
+  {
+    "case": "axial-cylinder",
+    "order": 1,
+    "level": 3,
+    "outcome": "PASS",
+    "reference_m": 3.031522725559911e-08,
+    "timoshenko_shear_m": 0,
+    "tip_m": 3.048413460784314e-08,
+    "relative_error": 0.005571700017945158,
+    "reaction_relative_imbalance": 2.0000016259420754e-09,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      2.040000001228605e-09,
+      -1000.000002,
+      1.5369999992752268e-09
+    ],
+    "applied_moment_Nm": [
+      7.63027248051884e-08,
+      0.0,
+      3.4686038263842534e-08
+    ],
+    "independent_surface_moment_Nm": [
+      1.6304399415251448e-16,
+      0.0,
+      -2.7173999025419086e-16
+    ],
+    "moment_error_per_force_m": 8.381662756939596e-11,
+    "loaded_area_m2": 0.031170713830598485,
+    "independent_quadratic_volume_m3": 0.006246812877661086,
+    "deck_coordinate_max_error_m": 4.7704895589362195e-18,
+    "kinematic_stress_relative_error": 1.861910029496099e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.4455678784101388,
+    "sample": null,
+    "effective_h_m": 0.012742217840134617,
+    "observed_error_rate": 2.1950969178183786,
+    "artifacts": "solver-jobs\\axial-cylinder-o1-3-4bff6bb65dda-11508_128810611_9bb7b65a69b093e4"
+  },
+  {
+    "case": "axial-cylinder",
+    "order": 2,
+    "level": 0,
+    "outcome": "PASS",
+    "reference_m": 3.031522725559911e-08,
+    "timoshenko_shear_m": 0,
+    "tip_m": 3.032111625e-08,
+    "relative_error": 0.00019425862624222745,
+    "reaction_relative_imbalance": 2.2069998751236215e-08,
+    "applied_force_N": [
+      0.0,
+      999.9999999999987,
+      0.0
+    ],
+    "reaction_force_N": [
+      2.2000000009966995e-10,
+      -999.99997793,
+      1.770000000148385e-10
+    ],
+    "applied_moment_Nm": [
+      2.275957200481571e-15,
+      0.0,
+      5.273559366969494e-16
+    ],
+    "independent_surface_moment_Nm": [
+      1.428076191607836e-14,
+      -0.0,
+      2.2060535939069162e-15
+    ],
+    "moment_error_per_force_m": 1.212160724012856e-17,
+    "loaded_area_m2": 0.03140060305378218,
+    "independent_quadratic_volume_m3": 0.0062815251104618285,
+    "deck_coordinate_max_error_m": 2.0328790734103208e-19,
+    "kinematic_stress_relative_error": 1.6827132989602903e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.47056441142896255,
+    "sample": null,
+    "effective_h_m": 0.03805616362325506,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\axial-cylinder-o2-0-54ed704e9119-11508_147142709_7b840506dbb14eb0"
+  },
+  {
+    "case": "axial-cylinder",
+    "order": 2,
+    "level": 1,
+    "outcome": "PASS",
+    "reference_m": 3.031522725559911e-08,
+    "timoshenko_shear_m": 0,
+    "tip_m": 3.031687989583333e-08,
+    "relative_error": 5.4515185398118504e-05,
+    "reaction_relative_imbalance": 1.238943252714515e-08,
+    "applied_force_N": [
+      0.0,
+      999.9999999999989,
+      0.0
+    ],
+    "reaction_force_N": [
+      5.5999999981428775e-11,
+      -999.9999876105663,
+      8.399999978299012e-12
+    ],
+    "applied_moment_Nm": [
+      -2.3037127760972e-15,
+      0.0,
+      2.2620794126737565e-15
+    ],
+    "independent_surface_moment_Nm": [
+      -6.562171038807253e-16,
+      0.0,
+      3.2705523395660546e-15
+    ],
+    "moment_error_per_force_m": 1.931646871000684e-18,
+    "loaded_area_m2": 0.031412379748895006,
+    "independent_quadratic_volume_m3": 0.006282784038093321,
+    "deck_coordinate_max_error_m": 4.336808689942018e-19,
+    "kinematic_stress_relative_error": 3.0294668391477607e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.5233773936508794,
+    "sample": null,
+    "effective_h_m": 0.026309964237592503,
+    "observed_error_rate": 3.442585618698287,
+    "artifacts": "solver-jobs\\axial-cylinder-o2-1-ce73ee128e3f-11508_157891101_823845c903ea14f2"
+  },
+  {
+    "case": "axial-cylinder",
+    "order": 2,
+    "level": 2,
+    "outcome": "PASS",
+    "reference_m": 3.031522725559911e-08,
+    "timoshenko_shear_m": 0,
+    "tip_m": 3.0315601058823527e-08,
+    "relative_error": 1.2330543369021285e-05,
+    "reaction_relative_imbalance": 1.2976288419499652e-09,
+    "applied_force_N": [
+      0.0,
+      999.9999999999992,
+      0.0
+    ],
+    "reaction_force_N": [
+      -1.3471999999821094e-11,
+      -1000.000001297628,
+      -2.0873999998886806e-11
+    ],
+    "applied_moment_Nm": [
+      7.216449660063518e-16,
+      0.0,
+      -7.494005416219807e-15
+    ],
+    "independent_surface_moment_Nm": [
+      -7.644729955378632e-15,
+      0.0,
+      -6.424884502617757e-15
+    ],
+    "moment_error_per_force_m": 8.434408624976673e-18,
+    "loaded_area_m2": 0.03141514634630425,
+    "independent_quadratic_volume_m3": 0.006283095289418476,
+    "deck_coordinate_max_error_m": 9.486769009248164e-20,
+    "kinematic_stress_relative_error": 2.8153676243643885e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.45704972464509624,
+    "sample": null,
+    "effective_h_m": 0.018945349976239898,
+    "observed_error_rate": 4.526335904343294,
+    "artifacts": "solver-jobs\\axial-cylinder-o2-2-cf5b8e9d88b4-11508_168413766_b5c1d2261c2b5eb7"
+  },
+  {
+    "case": "axial-cylinder",
+    "order": 2,
+    "level": 3,
+    "outcome": "PASS",
+    "reference_m": 3.031522725559911e-08,
+    "timoshenko_shear_m": 0,
+    "tip_m": 3.0315295079787236e-08,
+    "relative_error": 2.237297697105234e-06,
+    "reaction_relative_imbalance": 3.7925235574275014e-10,
+    "applied_force_N": [
+      0.0,
+      999.9999999999995,
+      0.0
+    ],
+    "reaction_force_N": [
+      6.183000003410257e-13,
+      -999.9999996207472,
+      1.6541999999622954e-13
+    ],
+    "applied_moment_Nm": [
+      5.828670879282072e-16,
+      0.0,
+      5.828670879282072e-16
+    ],
+    "independent_surface_moment_Nm": [
+      -5.555439904371049e-15,
+      0.0,
+      -1.3005172333956659e-14
+    ],
+    "moment_error_per_force_m": 1.4910185379880664e-17,
+    "loaded_area_m2": 0.031415782513724684,
+    "independent_quadratic_volume_m3": 0.006283169158163976,
+    "deck_coordinate_max_error_m": 2.913793338554793e-19,
+    "kinematic_stress_relative_error": 5.17496142129293e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.42853449360141244,
+    "sample": null,
+    "effective_h_m": 0.012742217840134617,
+    "observed_error_rate": 4.3031971288338635,
+    "artifacts": "solver-jobs\\axial-cylinder-o2-3-0fc7d058318f-11508_181930615_0e586d7f570782ed"
+  },
+  {
+    "case": "bending",
+    "order": 1,
+    "level": 0,
+    "outcome": "PASS",
+    "reference_m": 0.00019047619047619045,
+    "timoshenko_shear_m": 1.4857142857142856e-06,
+    "tip_m": 8.558475416666667e-05,
+    "relative_error": 0.5506800406249999,
+    "reaction_relative_imbalance": 1.7349351568853688e-06,
+    "applied_force_N": [
+      1000.0,
+      0.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -1000.0011,
+      0.0011999999995566668,
+      -0.0005999999998067551
+    ],
+    "applied_moment_Nm": [
+      0.0,
+      50.00000087857127,
+      -1000.0
+    ],
+    "independent_surface_moment_Nm": [
+      0.0,
+      50.0,
+      -1000.0
+    ],
+    "moment_error_per_force_m": 8.78571270845896e-10,
+    "loaded_area_m2": 0.010000000000000002,
+    "independent_quadratic_volume_m3": 0.010000000000000004,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 0.00018042568890183104,
+    "kinematic_DAT_rounding_budget_fraction": 0.5512680429543375,
+    "sample": null,
+    "effective_h_m": 0.03193649184995276,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\bending-o1-0-48d9ab27184b-11508_201247990_139b89cd48d69a00"
+  },
+  {
+    "case": "bending",
+    "order": 1,
+    "level": 1,
+    "outcome": "PASS",
+    "reference_m": 0.00019047619047619045,
+    "timoshenko_shear_m": 1.4857142857142856e-06,
+    "tip_m": 0.00010796393333333333,
+    "relative_error": 0.4331893499999999,
+    "reaction_relative_imbalance": 9.481561050511792e-07,
+    "applied_force_N": [
+      1000.0,
+      0.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -1000.0003000000002,
+      -0.0007899999996965335,
+      0.00042999999992332505
+    ],
+    "applied_moment_Nm": [
+      0.0,
+      50.0000003846924,
+      -1000.0000000000001
+    ],
+    "independent_surface_moment_Nm": [
+      0.0,
+      50.0,
+      -1000.0
+    ],
+    "moment_error_per_force_m": 3.846923988248986e-10,
+    "loaded_area_m2": 0.010000000000000002,
+    "independent_quadratic_volume_m3": 0.010000000000000004,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 1.3634589839183676e-05,
+    "kinematic_DAT_rounding_budget_fraction": 0.18142661124947154,
+    "sample": null,
+    "effective_h_m": 0.02847764255473534,
+    "observed_error_rate": 2.0935098603942692,
+    "artifacts": "solver-jobs\\bending-o1-1-b1114b617008-11508_207736028_bd52e793a1e4f20e"
+  },
+  {
+    "case": "bending",
+    "order": 1,
+    "level": 2,
+    "outcome": "PASS",
+    "reference_m": 0.00019047619047619045,
+    "timoshenko_shear_m": 1.4857142857142856e-06,
+    "tip_m": 0.00015201571500000002,
+    "relative_error": 0.20191749624999977,
+    "reaction_relative_imbalance": 2.1560380331655284e-06,
+    "applied_force_N": [
+      1000.0,
+      0.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -999.9982800000001,
+      -0.0013000000003557943,
+      9.999999981857854e-06
+    ],
+    "applied_moment_Nm": [
+      0.0,
+      49.99999986468937,
+      -1000.0000000000001
+    ],
+    "independent_surface_moment_Nm": [
+      0.0,
+      50.00000000000001,
+      -1000.0
+    ],
+    "moment_error_per_force_m": 1.353106355850764e-10,
+    "loaded_area_m2": 0.01,
+    "independent_quadratic_volume_m3": 0.01,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 0.002062732791427888,
+    "kinematic_DAT_rounding_budget_fraction": 0.41907730158925705,
+    "sample": null,
+    "effective_h_m": 0.01764263102281956,
+    "observed_error_rate": 1.5942229942386523,
+    "artifacts": "solver-jobs\\bending-o1-2-9c2fd9a8bdf4-11508_215378613_6dc80dbfa38afc2f"
+  },
+  {
+    "case": "bending",
+    "order": 1,
+    "level": 3,
+    "outcome": "PASS",
+    "reference_m": 0.00019047619047619045,
+    "timoshenko_shear_m": 1.4857142857142856e-06,
+    "tip_m": 0.00016555302888888887,
+    "relative_error": 0.13084659833333334,
+    "reaction_relative_imbalance": 9.125087176445479e-07,
+    "applied_force_N": [
+      1000.0,
+      0.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -999.9997399999999,
+      0.0008699999998249552,
+      -9.040000005200444e-05
+    ],
+    "applied_moment_Nm": [
+      0.0,
+      50.000001026199136,
+      -999.9999999999999
+    ],
+    "independent_surface_moment_Nm": [
+      0.0,
+      49.99999999999997,
+      -1000.0
+    ],
+    "moment_error_per_force_m": 1.0261991647553323e-09,
+    "loaded_area_m2": 0.010000000000000007,
+    "independent_quadratic_volume_m3": 0.01,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 5.242346235581387e-05,
+    "kinematic_DAT_rounding_budget_fraction": 0.32163715945598126,
+    "sample": null,
+    "effective_h_m": 0.012479720924804273,
+    "observed_error_rate": 1.2530820914792542,
+    "artifacts": "solver-jobs\\bending-o1-3-9dd6bd9c48af-11508_224134378_696aff061cc3caf0"
+  },
+  {
+    "case": "bending",
+    "order": 2,
+    "level": 0,
+    "outcome": "PASS",
+    "reference_m": 0.00019047619047619045,
+    "timoshenko_shear_m": 1.4857142857142856e-06,
+    "tip_m": 0.00018977334324324325,
+    "relative_error": 0.00368994797297284,
+    "reaction_relative_imbalance": 3.4640764962458493e-07,
+    "applied_force_N": [
+      999.9999999999995,
+      0.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -999.9998105,
+      -0.00025399999978192866,
+      -0.0001398999999606687
+    ],
+    "applied_moment_Nm": [
+      0.0,
+      49.99999999999998,
+      -999.9999999999995
+    ],
+    "independent_surface_moment_Nm": [
+      0.0,
+      49.99999999999997,
+      -999.9999999999993
+    ],
+    "moment_error_per_force_m": 2.274846706538671e-16,
+    "loaded_area_m2": 0.009999999999999995,
+    "independent_quadratic_volume_m3": 0.009999999999999993,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 0.004968573494233394,
+    "kinematic_DAT_rounding_budget_fraction": 0.4333218918622334,
+    "sample": null,
+    "effective_h_m": 0.03193649184995276,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\bending-o2-0-0ab1164665dc-11508_237701079_5de9cf51608d1769"
+  },
+  {
+    "case": "bending",
+    "order": 2,
+    "level": 1,
+    "outcome": "PASS",
+    "reference_m": 0.00019047619047619045,
+    "timoshenko_shear_m": 1.4857142857142856e-06,
+    "tip_m": 0.00019015875135135137,
+    "relative_error": 0.0016665554054051679,
+    "reaction_relative_imbalance": 3.0257065225807286e-07,
+    "applied_force_N": [
+      999.9999999999993,
+      0.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -999.9998320000001,
+      0.00023499999971132723,
+      9.000000000369823e-05
+    ],
+    "applied_moment_Nm": [
+      0.0,
+      49.99999999999998,
+      -999.9999999999992
+    ],
+    "independent_surface_moment_Nm": [
+      0.0,
+      49.99999999999997,
+      -999.9999999999993
+    ],
+    "moment_error_per_force_m": 1.139086659085919e-16,
+    "loaded_area_m2": 0.009999999999999992,
+    "independent_quadratic_volume_m3": 0.009999999999999993,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 4.282114033585198e-05,
+    "kinematic_DAT_rounding_budget_fraction": 0.2819941963728159,
+    "sample": null,
+    "effective_h_m": 0.02847764255473534,
+    "observed_error_rate": 6.9340795513759845,
+    "artifacts": "solver-jobs\\bending-o2-1-328968b76202-11508_246847799_e3b5f3ed16704cc3"
+  },
+  {
+    "case": "bending",
+    "order": 2,
+    "level": 2,
+    "outcome": "PASS",
+    "reference_m": 0.00019047619047619045,
+    "timoshenko_shear_m": 1.4857142857142856e-06,
+    "tip_m": 0.0001903198123076923,
+    "relative_error": 0.0008209853846153914,
+    "reaction_relative_imbalance": 4.475564318219841e-07,
+    "applied_force_N": [
+      999.9999999999992,
+      0.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -999.9999359999999,
+      -0.00043699999971791303,
+      7.240000003599922e-05
+    ],
+    "applied_moment_Nm": [
+      0.0,
+      49.99999999999994,
+      -999.9999999999991
+    ],
+    "independent_surface_moment_Nm": [
+      0.0,
+      49.99999999999993,
+      -999.999999999999
+    ],
+    "moment_error_per_force_m": 1.1457157353758233e-16,
+    "loaded_area_m2": 0.010000000000000018,
+    "independent_quadratic_volume_m3": 0.009999999999999995,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 0.006820742503708251,
+    "kinematic_DAT_rounding_budget_fraction": 0.537064292759334,
+    "sample": null,
+    "effective_h_m": 0.01764263102281956,
+    "observed_error_rate": 1.4787117467013078,
+    "artifacts": "solver-jobs\\bending-o2-2-aa77bec5dfcb-11508_258196978_6ba04468ecfe7980"
+  },
+  {
+    "case": "bending",
+    "order": 2,
+    "level": 3,
+    "outcome": "PASS",
+    "reference_m": 0.00019047619047619045,
+    "timoshenko_shear_m": 1.4857142857142856e-06,
+    "tip_m": 0.00019050585796178343,
+    "relative_error": 0.00015575429936309781,
+    "reaction_relative_imbalance": 3.3486464263165034e-07,
+    "applied_force_N": [
+      999.9999999999991,
+      0.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -999.999964,
+      0.00033240000007417336,
+      1.8669999982720564e-05
+    ],
+    "applied_moment_Nm": [
+      0.0,
+      49.99999999999995,
+      -999.999999999999
+    ],
+    "independent_surface_moment_Nm": [
+      0.0,
+      49.99999999999979,
+      -999.9999999999991
+    ],
+    "moment_error_per_force_m": 1.9907880820997407e-16,
+    "loaded_area_m2": 0.010000000000000012,
+    "independent_quadratic_volume_m3": 0.009999999999999993,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 0.001369760240271376,
+    "kinematic_DAT_rounding_budget_fraction": 0.5779770974737262,
+    "sample": null,
+    "effective_h_m": 0.012479720924804273,
+    "observed_error_rate": 4.801161816381267,
+    "artifacts": "solver-jobs\\bending-o2-3-9daeb1e58574-11508_275454250_387308fb4844d639"
+  },
+  {
+    "case": "step-hole",
+    "order": 1,
+    "level": 0,
+    "outcome": "PASS",
+    "reference_m": 5.446308011419238e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 5.385436166666666e-07,
+    "relative_error": 0.011176717259644975,
+    "reaction_relative_imbalance": 1.0000017847736487e-08,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      4.999999961047448e-10,
+      -1000.00001,
+      1.8899999993055114e-08
+    ],
+    "applied_moment_Nm": [
+      -50.00000061311986,
+      0.0,
+      50.000000500023496
+    ],
+    "independent_surface_moment_Nm": [
+      -50.0,
+      0.0,
+      49.99999999999999
+    ],
+    "moment_error_per_force_m": 7.911633620187019e-10,
+    "loaded_area_m2": 0.008868629150101524,
+    "independent_quadratic_volume_m3": 0.00884310003010638,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 4.128543227189976e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.36866042771246643,
+    "sample": {
+      "point_m": [
+        0.087,
+        0.487,
+        0.083
+      ],
+      "element": 190,
+      "tensor_Pa": [
+        -0.8672597,
+        113094.6,
+        -5.05431,
+        -1.064773,
+        2.696098,
+        -2.774715
+      ],
+      "von_mises_Pa": 113097.5610565346,
+      "association": "constant single integration-point tensor"
+    },
+    "effective_h_m": 0.014387129465862044,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\step-hole-o1-0-088e160c6c3b-11508_293647034_992c3bae435dc771"
+  },
+  {
+    "case": "step-hole",
+    "order": 1,
+    "level": 1,
+    "outcome": "PASS",
+    "reference_m": 5.446308011419238e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 5.42059309375e-07,
+    "relative_error": 0.004721532020466435,
+    "reaction_relative_imbalance": 4.000005860399802e-09,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      1.845000000371319e-09,
+      -999.999996,
+      6.599999999756974e-09
+    ],
+    "applied_moment_Nm": [
+      -50.000000681377024,
+      0.0,
+      50.00000050920443
+    ],
+    "independent_surface_moment_Nm": [
+      -50.00000000000001,
+      0.0,
+      50.00000000000003
+    ],
+    "moment_error_per_force_m": 8.506255141193839e-10,
+    "loaded_area_m2": 0.008799999999999997,
+    "independent_quadratic_volume_m3": 0.00878534422152211,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 6.195709106990755e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.7460885783973146,
+    "sample": {
+      "point_m": [
+        0.087,
+        0.487,
+        0.083
+      ],
+      "element": 4336,
+      "tensor_Pa": [
+        2.285838,
+        113837.5,
+        -1.65322,
+        -1.361594,
+        0.1600303,
+        -1.331852
+      ],
+      "von_mises_Pa": 113837.18379025257,
+      "association": "constant single integration-point tensor"
+    },
+    "effective_h_m": 0.011777527687442254,
+    "observed_error_rate": 4.305467653892946,
+    "artifacts": "solver-jobs\\step-hole-o1-1-fa9a8778eb35-11508_301923281_00964086b1f8e428"
+  },
+  {
+    "case": "step-hole",
+    "order": 1,
+    "level": 2,
+    "outcome": "PASS",
+    "reference_m": 5.446308011419238e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 5.43212453125e-07,
+    "relative_error": 0.002604237611882998,
+    "reaction_relative_imbalance": 8.00000006289219e-09,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      -1.1099999996846271e-09,
+      -1000.000008,
+      -3.1199999948938116e-10
+    ],
+    "applied_moment_Nm": [
+      -50.00000085422755,
+      0.0,
+      50.00000073837331
+    ],
+    "independent_surface_moment_Nm": [
+      -50.00000000000002,
+      0.0,
+      50.000000000000014
+    ],
+    "moment_error_per_force_m": 1.1291146066826981e-09,
+    "loaded_area_m2": 0.008775413016431711,
+    "independent_quadratic_volume_m3": 0.008766764049189262,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 3.194475150018004e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.32577789378230215,
+    "sample": {
+      "point_m": [
+        0.087,
+        0.487,
+        0.083
+      ],
+      "element": 6005,
+      "tensor_Pa": [
+        -0.8884611,
+        114070.9,
+        0.6630135,
+        -1.030416,
+        -0.08142698,
+        -0.5246074
+      ],
+      "von_mises_Pa": 114071.01274938101,
+      "association": "constant single integration-point tensor"
+    },
+    "effective_h_m": 0.010063067971998789,
+    "observed_error_rate": 3.7820291881234716,
+    "artifacts": "solver-jobs\\step-hole-o1-2-0fe509edffd2-11508_310890205_df9a1c5c3d40f4db"
+  },
+  {
+    "case": "step-hole",
+    "order": 1,
+    "level": 3,
+    "outcome": "PASS",
+    "reference_m": 5.446308011419238e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 5.436880340909091e-07,
+    "relative_error": 0.001731020443643816,
+    "reaction_relative_imbalance": 1.3245754033923456e-12,
+    "applied_force_N": [
+      0.0,
+      1000.0,
+      0.0
+    ],
+    "reaction_force_N": [
+      8.799999996532908e-10,
+      -1000.0,
+      9.899999999405068e-10
+    ],
+    "applied_moment_Nm": [
+      -50.00000051091611,
+      0.0,
+      50.00000037382963
+    ],
+    "independent_surface_moment_Nm": [
+      -49.999999999999986,
+      0.0,
+      49.99999999999999
+    ],
+    "moment_error_per_force_m": 6.330749417776946e-10,
+    "loaded_area_m2": 0.008763932022500214,
+    "independent_quadratic_volume_m3": 0.008758966177691023,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 6.97786708139208e-06,
+    "kinematic_DAT_rounding_budget_fraction": 0.18753546417913086,
+    "sample": {
+      "point_m": [
+        0.087,
+        0.487,
+        0.083
+      ],
+      "element": 11482,
+      "tensor_Pa": [
+        -0.2160277,
+        114169.1,
+        0.02242584,
+        0.04570532,
+        0.0492089,
+        -0.08434685
+      ],
+      "von_mises_Pa": 114169.1968012695,
+      "association": "constant single integration-point tensor"
+    },
+    "effective_h_m": 0.008920782319445566,
+    "observed_error_rate": 3.389776533233666,
+    "artifacts": "solver-jobs\\step-hole-o1-3-90721c654bd3-11508_319474651_f73908c9c56237a6"
+  },
+  {
+    "case": "step-hole",
+    "order": 2,
+    "level": 0,
+    "outcome": "PASS",
+    "reference_m": 5.446308011419238e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 5.445939625e-07,
+    "relative_error": 6.7639659465768e-05,
+    "reaction_relative_imbalance": 2.2652188932125732e-08,
+    "applied_force_N": [
+      0.0,
+      999.999999999999,
+      0.0
+    ],
+    "reaction_force_N": [
+      2.7600000587956865e-12,
+      -999.99997734781,
+      -1.3630000008202823e-10
+    ],
+    "applied_moment_Nm": [
+      -49.99999999999994,
+      0.0,
+      49.99999999999994
+    ],
+    "independent_surface_moment_Nm": [
+      -49.99999999999993,
+      0.0,
+      49.99999999999998
+    ],
+    "moment_error_per_force_m": 3.8263897345803626e-17,
+    "loaded_area_m2": 0.008744340971875108,
+    "independent_quadratic_volume_m3": 0.008743983213077032,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 1.768689900210567e-05,
+    "kinematic_DAT_rounding_budget_fraction": 0.3961610804503519,
+    "sample": {
+      "point_m": [
+        0.087,
+        0.487,
+        0.083
+      ],
+      "element": 190,
+      "tensor_Pa": [
+        -0.016128457950337315,
+        114364.57300900132,
+        -0.03599758108918234,
+        0.0012896473460290605,
+        0.0510272047032604,
+        -0.03873517341155085
+      ],
+      "von_mises_Pa": 114364.59907207599,
+      "association": "linear reconstruction of 4 integration-point tensors"
+    },
+    "effective_h_m": 0.014387129465862044,
+    "observed_error_rate": null,
+    "artifacts": "solver-jobs\\step-hole-o2-0-e0a7ffd2fb69-11508_329960451_9f4dfdf65aebd641"
+  },
+  {
+    "case": "step-hole",
+    "order": 2,
+    "level": 1,
+    "outcome": "PASS",
+    "reference_m": 5.446308011419238e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 5.446244888888889e-07,
+    "relative_error": 1.158996704131443e-05,
+    "reaction_relative_imbalance": 2.0241296056174e-08,
+    "applied_force_N": [
+      0.0,
+      999.999999999999,
+      0.0
+    ],
+    "reaction_force_N": [
+      -2.1680000002801528e-11,
+      -1000.000020241295,
+      1.609999999956033e-11
+    ],
+    "applied_moment_Nm": [
+      -49.99999999999994,
+      0.0,
+      49.99999999999995
+    ],
+    "independent_surface_moment_Nm": [
+      -49.999999999999865,
+      0.0,
+      49.999999999999815
+    ],
+    "moment_error_per_force_m": 1.5599609355447903e-16,
+    "loaded_area_m2": 0.008743558111343884,
+    "independent_quadratic_volume_m3": 0.008743470742221371,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 3.729956389984459e-05,
+    "kinematic_DAT_rounding_budget_fraction": 0.534550823083756,
+    "sample": {
+      "point_m": [
+        0.087,
+        0.487,
+        0.083
+      ],
+      "element": 4336,
+      "tensor_Pa": [
+        0.0044392782941094725,
+        114371.1,
+        -0.0012070160663695182,
+        0.0024525728783229054,
+        0.003019247773739906,
+        0.0013054190131049166
+      ],
+      "von_mises_Pa": 114371.0983838692,
+      "association": "linear reconstruction of 4 integration-point tensors"
+    },
+    "effective_h_m": 0.011777527687442254,
+    "observed_error_rate": 8.81407103404189,
+    "artifacts": "solver-jobs\\step-hole-o2-1-4547de5bb895-11508_350064861_40d76643b2465a38"
+  },
+  {
+    "case": "step-hole",
+    "order": 2,
+    "level": 2,
+    "outcome": "PASS",
+    "reference_m": 5.446308011419238e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 5.446289403846154e-07,
+    "relative_error": 3.41654806246261e-06,
+    "reaction_relative_imbalance": 5.018843580736189e-09,
+    "applied_force_N": [
+      0.0,
+      999.9999999999986,
+      0.0
+    ],
+    "reaction_force_N": [
+      2.6919999992236234e-12,
+      -999.999994981155,
+      -8.319999999780206e-12
+    ],
+    "applied_moment_Nm": [
+      -49.99999999999992,
+      0.0,
+      49.999999999999936
+    ],
+    "independent_surface_moment_Nm": [
+      -50.0000000000001,
+      0.0,
+      50.00000000000008
+    ],
+    "moment_error_per_force_m": 2.274846706538671e-16,
+    "loaded_area_m2": 0.008743424913318447,
+    "independent_quadratic_volume_m3": 0.008743396651132771,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 1.080919742131751e-05,
+    "kinematic_DAT_rounding_budget_fraction": 0.2892639091914206,
+    "sample": {
+      "point_m": [
+        0.087,
+        0.487,
+        0.083
+      ],
+      "element": 6005,
+      "tensor_Pa": [
+        -0.0016640850216634788,
+        114372.0,
+        -0.0036295638753013476,
+        -0.005677590457007636,
+        0.0017338614823914082,
+        -0.0019725688530717843
+      ],
+      "von_mises_Pa": 114372.00264682497,
+      "association": "linear reconstruction of 4 integration-point tensors"
+    },
+    "effective_h_m": 0.010063067971998789,
+    "observed_error_rate": 7.764428029274493,
+    "artifacts": "solver-jobs\\step-hole-o2-2-f42ea0adccc4-11508_377415972_f8e1585f5cd74862"
+  },
+  {
+    "case": "step-hole",
+    "order": 2,
+    "level": 3,
+    "outcome": "PASS",
+    "reference_m": 5.446308011419238e-07,
+    "timoshenko_shear_m": 0,
+    "tip_m": 5.446299918918919e-07,
+    "relative_error": 1.4858690148278342e-06,
+    "reaction_relative_imbalance": 3.366815997197145e-08,
+    "applied_force_N": [
+      0.0,
+      999.9999999999991,
+      0.0
+    ],
+    "reaction_force_N": [
+      1.5666300000268697e-11,
+      -999.9999663318391,
+      -8.128999999520797e-12
+    ],
+    "applied_moment_Nm": [
+      -49.99999999999996,
+      0.0,
+      49.99999999999995
+    ],
+    "independent_surface_moment_Nm": [
+      -49.99999999999995,
+      0.0,
+      49.999999999999964
+    ],
+    "moment_error_per_force_m": 1.588821858078255e-17,
+    "loaded_area_m2": 0.008743388365404125,
+    "independent_quadratic_volume_m3": 0.008743377654862902,
+    "deck_coordinate_max_error_m": 0.0,
+    "kinematic_stress_relative_error": 7.582876988469136e-05,
+    "kinematic_DAT_rounding_budget_fraction": 0.4436407777589812,
+    "sample": {
+      "point_m": [
+        0.087,
+        0.487,
+        0.083
+      ],
+      "element": 11482,
+      "tensor_Pa": [
+        -6.324416228117288e-05,
+        114372.3,
+        1.9021381496048517e-05,
+        -3.699192098832705e-05,
+        2.9963152598304785e-05,
+        -8.307275056913055e-05
+      ],
+      "von_mises_Pa": 114372.30002211139,
+      "association": "linear reconstruction of 4 integration-point tensors"
+    },
+    "effective_h_m": 0.008920782319445566,
+    "observed_error_rate": 6.9104630663465585,
+    "artifacts": "solver-jobs\\step-hole-o2-3-0dcc340e89f3-11508_417861891_0869fcaaa73a94c2"
+  }
+]

@@ -1,0 +1,142 @@
+[
+    {
+        "script":  "tests/test_physics_engine_suite.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_physics_features_suite.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_physics_interaction_suite.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_verlet_empirical_verification.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_rk4_empirical_verification.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_precession_diagnostic.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_native_metrics_suite.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_native_molecular_suite.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_native_gravity_suite.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_native_quantum_suite.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_native_nuclear_suite.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_native_remaining_fixtures_suite.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_native_geometry_suite.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_native_structural_suite.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_structural_expansion.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_native_thermal_suite.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_materials_thermal_ui.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_cae_analysis_commands.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_native_structural_ui.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_cae_recovery.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_cae_shell.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_cae_ai_commands.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_mesh_inspection.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_mesh_result_integration.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_native_radiation.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_mesh_async.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_extreme_equivalence.gd",
+        "finished":  true,
+        "exit_code":  null
+    },
+    {
+        "script":  "tests/test_extreme_advanced.gd",
+        "finished":  true,
+        "exit_code":  null
+    }
+]

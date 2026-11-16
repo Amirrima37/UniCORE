@@ -1,0 +1,806 @@
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-xc6f06un\result.step(350 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-r09zthnq\result.step(350 ents)  Write  Done
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Line)
+Info    : [ 10%] Meshing curve 2 (Line)
+Info    : [ 20%] Meshing curve 3 (Line)
+Info    : [ 30%] Meshing curve 4 (Line)
+Info    : [ 40%] Meshing curve 5 (TrimmedCurve)
+Info    : [ 50%] Meshing curve 6 (TrimmedCurve)
+Info    : [ 60%] Meshing curve 7 (Line)
+Info    : [ 60%] Meshing curve 8 (Line)
+Info    : [ 70%] Meshing curve 9 (TrimmedCurve)
+Info    : [ 80%] Meshing curve 10 (Line)
+Info    : [ 90%] Meshing curve 11 (TrimmedCurve)
+Info    : [100%] Meshing curve 12 (Line)
+Info    : Done meshing 1D (Wall 0.0009799s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 4 (Plane, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 5 (Plane, Frontal-Delaunay)
+Info    : [ 90%] Meshing surface 6 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.00297427s, CPU 0s)
+Info    : Meshing 3D...
+Info    : 3D Meshing 1 volume with 1 connected component
+Info    : Tetrahedrizing 60 nodes...
+Info    : Done tetrahedrizing 68 nodes (Wall 0.000402212s, CPU 0s)
+Info    : Reconstructing mesh...
+Info    :  - Creating surface mesh
+Info    :  - Identifying boundary edges
+Info    :  - Recovering boundary
+Info    : Done reconstructing mesh (Wall 0.00119185s, CPU 0s)
+Info    : Found volume 1
+Info    : It. 0 - 0 nodes created - worst tet radius 0.961503 (nodes removed 0 0)
+Info    : 3D refinement terminated (60 nodes total):
+Info    :  - 0 Delaunay cavities modified for star shapeness
+Info    :  - 0 nodes could not be inserted
+Info    :  - 138 tetrahedra created in 1.81198e-05 sec. (7615973 tets/s)
+Info    : 0 node relocations
+Info    : Done meshing 3D (Wall 0.00229096s, CPU 0s)
+Info    : Optimizing mesh...
+Info    : Optimizing volume 1
+Info    : Optimization starts (volume = 0.003) with worst = 0.165366 / average = 0.654228:
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         8 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :        12 elements
+Info    : 0.40 < quality < 0.50 :        16 elements
+Info    : 0.50 < quality < 0.60 :         8 elements
+Info    : 0.60 < quality < 0.70 :        26 elements
+Info    : 0.70 < quality < 0.80 :        36 elements
+Info    : 0.80 < quality < 0.90 :        16 elements
+Info    : 0.90 < quality < 1.00 :        16 elements
+Info    : 8 edge swaps, 0 node relocations (volume = 0.003): worst = 0.332053 / average = 0.68717 (Wall 0.000252247s, CPU 0s)
+Info    : No ill-shaped tets in the mesh :-)
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :        12 elements
+Info    : 0.40 < quality < 0.50 :        16 elements
+Info    : 0.50 < quality < 0.60 :         4 elements
+Info    : 0.60 < quality < 0.70 :        30 elements
+Info    : 0.70 < quality < 0.80 :        36 elements
+Info    : 0.80 < quality < 0.90 :        16 elements
+Info    : 0.90 < quality < 1.00 :        16 elements
+Info    : Done optimizing mesh (Wall 0.000473738s, CPU 0s)
+Info    : 60 nodes 286 elements
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-5kkfanbq\result.step(350 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-8in80bt4\result.step(350 ents)  Write  Done
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Line)
+Info    : [ 10%] Meshing curve 2 (Line)
+Info    : [ 20%] Meshing curve 3 (Line)
+Info    : [ 30%] Meshing curve 4 (Line)
+Info    : [ 40%] Meshing curve 5 (TrimmedCurve)
+Info    : [ 50%] Meshing curve 6 (TrimmedCurve)
+Info    : [ 60%] Meshing curve 7 (Line)
+Info    : [ 60%] Meshing curve 8 (Line)
+Info    : [ 70%] Meshing curve 9 (TrimmedCurve)
+Info    : [ 80%] Meshing curve 10 (Line)
+Info    : [ 90%] Meshing curve 11 (TrimmedCurve)
+Info    : [100%] Meshing curve 12 (Line)
+Info    : Done meshing 1D (Wall 0.00134397s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 4 (Plane, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 5 (Plane, Frontal-Delaunay)
+Info    : [ 90%] Meshing surface 6 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.00355101s, CPU 0.015625s)
+Info    : Meshing 3D...
+Info    : 3D Meshing 1 volume with 1 connected component
+Info    : Tetrahedrizing 56 nodes...
+Info    : Done tetrahedrizing 64 nodes (Wall 0.000552893s, CPU 0s)
+Info    : Reconstructing mesh...
+Info    :  - Creating surface mesh
+Info    :  - Identifying boundary edges
+Info    :  - Recovering boundary
+Info    : Done reconstructing mesh (Wall 0.00140309s, CPU 0s)
+Info    : Found volume 1
+Info    : It. 0 - 0 nodes created - worst tet radius 0.893784 (nodes removed 0 0)
+Info    : 3D refinement terminated (56 nodes total):
+Info    :  - 0 Delaunay cavities modified for star shapeness
+Info    :  - 0 nodes could not be inserted
+Info    :  - 133 tetrahedra created in 1.40667e-05 sec. (9454956 tets/s)
+Info    : 0 node relocations
+Info    : Done meshing 3D (Wall 0.00257111s, CPU 0s)
+Info    : Optimizing mesh...
+Info    : Optimizing volume 1
+Info    : Optimization starts (volume = 0.004) with worst = 0.0405569 / average = 0.680479:
+Info    : 0.00 < quality < 0.10 :         6 elements
+Info    : 0.10 < quality < 0.20 :         2 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :         0 elements
+Info    : 0.40 < quality < 0.50 :         0 elements
+Info    : 0.50 < quality < 0.60 :         6 elements
+Info    : 0.60 < quality < 0.70 :        67 elements
+Info    : 0.70 < quality < 0.80 :        27 elements
+Info    : 0.80 < quality < 0.90 :        16 elements
+Info    : 0.90 < quality < 1.00 :         9 elements
+Info    : 8 edge swaps, 0 node relocations (volume = 0.004): worst = 0.540733 / average = 0.720819 (Wall 0.000293255s, CPU 0s)
+Info    : No ill-shaped tets in the mesh :-)
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :         0 elements
+Info    : 0.40 < quality < 0.50 :         0 elements
+Info    : 0.50 < quality < 0.60 :         6 elements
+Info    : 0.60 < quality < 0.70 :        69 elements
+Info    : 0.70 < quality < 0.80 :        25 elements
+Info    : 0.80 < quality < 0.90 :        16 elements
+Info    : 0.90 < quality < 1.00 :         9 elements
+Info    : Done optimizing mesh (Wall 0.000512838s, CPU 0s)
+Info    : 56 nodes 273 elements
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-iob8vcew\result.step(434 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-zmu6nb55\result.step(434 ents)  Write  Done
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Line)
+Info    : [ 10%] Meshing curve 2 (Line)
+Info    : [ 20%] Meshing curve 3 (Line)
+Info    : [ 30%] Meshing curve 4 (Line)
+Info    : [ 30%] Meshing curve 5 (Line)
+Info    : [ 40%] Meshing curve 6 (Line)
+Info    : [ 50%] Meshing curve 7 (Line)
+Info    : [ 50%] Meshing curve 8 (Circle)
+Info    : [ 60%] Meshing curve 9 (Line)
+Info    : [ 70%] Meshing curve 10 (Line)
+Info    : [ 70%] Meshing curve 11 (Line)
+Info    : [ 80%] Meshing curve 12 (Line)
+Info    : [ 90%] Meshing curve 13 (Circle)
+Info    : [ 90%] Meshing curve 14 (Line)
+Info    : [100%] Meshing curve 15 (Line)
+Info    : Done meshing 1D (Wall 0.00183821s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 30%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : [ 50%] Meshing surface 4 (Plane, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 5 (Plane, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 6 (Plane, Frontal-Delaunay)
+Info    : [ 90%] Meshing surface 7 (Cylinder, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.00966597s, CPU 0.015625s)
+Info    : Meshing 3D...
+Info    : 3D Meshing 1 volume with 1 connected component
+Info    : Tetrahedrizing 93 nodes...
+Info    : Done tetrahedrizing 101 nodes (Wall 0.0012269s, CPU 0s)
+Info    : Reconstructing mesh...
+Info    :  - Creating surface mesh
+Info    :  - Identifying boundary edges
+Info    :  - Recovering boundary
+Info    : Done reconstructing mesh (Wall 0.00280809s, CPU 0s)
+Info    : Found volume 1
+Info    : It. 0 - 0 nodes created - worst tet radius 0.988718 (nodes removed 0 0)
+Info    : 3D refinement terminated (93 nodes total):
+Info    :  - 0 Delaunay cavities modified for star shapeness
+Info    :  - 0 nodes could not be inserted
+Info    :  - 264 tetrahedra created in 1.81198e-05 sec. (14569687 tets/s)
+Info    : 0 node relocations
+Info    : Done meshing 3D (Wall 0.00521493s, CPU 0s)
+Info    : Optimizing mesh...
+Info    : Optimizing volume 1
+Info    : Optimization starts (volume = 0.00185095) with worst = 0.0645183 / average = 0.585378:
+Info    : 0.00 < quality < 0.10 :         2 elements
+Info    : 0.10 < quality < 0.20 :         8 elements
+Info    : 0.20 < quality < 0.30 :         9 elements
+Info    : 0.30 < quality < 0.40 :        24 elements
+Info    : 0.40 < quality < 0.50 :        51 elements
+Info    : 0.50 < quality < 0.60 :        50 elements
+Info    : 0.60 < quality < 0.70 :        42 elements
+Info    : 0.70 < quality < 0.80 :        31 elements
+Info    : 0.80 < quality < 0.90 :        25 elements
+Info    : 0.90 < quality < 1.00 :        22 elements
+Info    : 13 edge swaps, 0 node relocations (volume = 0.00185095): worst = 0.184096 / average = 0.603424 (Wall 0.000579834s, CPU 0s)
+Info    : No ill-shaped tets in the mesh :-)
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         2 elements
+Info    : 0.20 < quality < 0.30 :         2 elements
+Info    : 0.30 < quality < 0.40 :        31 elements
+Info    : 0.40 < quality < 0.50 :        52 elements
+Info    : 0.50 < quality < 0.60 :        47 elements
+Info    : 0.60 < quality < 0.70 :        42 elements
+Info    : 0.70 < quality < 0.80 :        33 elements
+Info    : 0.80 < quality < 0.90 :        24 elements
+Info    : 0.90 < quality < 1.00 :        22 elements
+Info    : Done optimizing mesh (Wall 0.00113201s, CPU 0s)
+Info    : 93 nodes 496 elements
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-n0dsiitv\result.step(440 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-4fke3vnw\result.step(440 ents)  Write  Done
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Line)
+Info    : [ 10%] Meshing curve 2 (Line)
+Info    : [ 20%] Meshing curve 3 (Line)
+Info    : [ 30%] Meshing curve 4 (Line)
+Info    : [ 30%] Meshing curve 5 (Line)
+Info    : [ 40%] Meshing curve 6 (Line)
+Info    : [ 50%] Meshing curve 7 (Line)
+Info    : [ 50%] Meshing curve 8 (Line)
+Info    : [ 60%] Meshing curve 9 (Line)
+Info    : [ 70%] Meshing curve 10 (Line)
+Info    : [ 70%] Meshing curve 11 (Line)
+Info    : [ 80%] Meshing curve 12 (Circle)
+Info    : [ 90%] Meshing curve 13 (Line)
+Info    : [ 90%] Meshing curve 14 (Line)
+Info    : [100%] Meshing curve 15 (Circle)
+Info    : Done meshing 1D (Wall 0.00177217s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 30%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 4 (Plane, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 5 (Plane, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 6 (Plane, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 7 (Cylinder, Frontal-Delaunay)
+Info    : [ 90%] Meshing surface 8 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.0073359s, CPU 0s)
+Info    : Meshing 3D...
+Info    : 3D Meshing 1 volume with 1 connected component
+Info    : Tetrahedrizing 83 nodes...
+Info    : Done tetrahedrizing 91 nodes (Wall 0.000762939s, CPU 0s)
+Info    : Reconstructing mesh...
+Info    :  - Creating surface mesh
+Info    :  - Identifying boundary edges
+Info    :  - Recovering boundary
+Info    : Done reconstructing mesh (Wall 0.00166392s, CPU 0s)
+Info    : Found volume 1
+Info    : It. 0 - 0 nodes created - worst tet radius 1.5217 (nodes removed 0 0)
+Info    : 3D refinement terminated (91 nodes total):
+Info    :  - 0 Delaunay cavities modified for star shapeness
+Info    :  - 2 nodes could not be inserted
+Info    :  - 278 tetrahedra created in 0.000236034 sec. (1177794 tets/s)
+Info    : 1 node relocations
+Info    : Done meshing 3D (Wall 0.003016s, CPU 0.015625s)
+Info    : Optimizing mesh...
+Info    : Optimizing volume 1
+Info    : Optimization starts (volume = 0.00194271) with worst = 0.0431154 / average = 0.597778:
+Info    : 0.00 < quality < 0.10 :         2 elements
+Info    : 0.10 < quality < 0.20 :         4 elements
+Info    : 0.20 < quality < 0.30 :        16 elements
+Info    : 0.30 < quality < 0.40 :        24 elements
+Info    : 0.40 < quality < 0.50 :        39 elements
+Info    : 0.50 < quality < 0.60 :        51 elements
+Info    : 0.60 < quality < 0.70 :        45 elements
+Info    : 0.70 < quality < 0.80 :        53 elements
+Info    : 0.80 < quality < 0.90 :        26 elements
+Info    : 0.90 < quality < 1.00 :        18 elements
+Info    : 11 edge swaps, 3 node relocations (volume = 0.00194271): worst = 0.154266 / average = 0.613702 (Wall 0.000536919s, CPU 0s)
+Info    : 13 edge swaps, 3 node relocations (volume = 0.00194271): worst = 0.154266 / average = 0.617341 (Wall 0.000792027s, CPU 0s)
+Info    : No ill-shaped tets in the mesh :-)
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         1 elements
+Info    : 0.20 < quality < 0.30 :         6 elements
+Info    : 0.30 < quality < 0.40 :        32 elements
+Info    : 0.40 < quality < 0.50 :        37 elements
+Info    : 0.50 < quality < 0.60 :        45 elements
+Info    : 0.60 < quality < 0.70 :        48 elements
+Info    : 0.70 < quality < 0.80 :        56 elements
+Info    : 0.80 < quality < 0.90 :        25 elements
+Info    : 0.90 < quality < 1.00 :        17 elements
+Info    : Done optimizing mesh (Wall 0.00108504s, CPU 0s)
+Info    : 91 nodes 483 elements
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-frgdv558\result.step(202 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-svujithz\result.step(202 ents)  Write  Done
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Circle)
+Info    : [ 20%] Meshing curve 2 (Line)
+Info    : [ 40%] Meshing curve 3 (Circle)
+Info    : [ 60%] Meshing curve 4 (Circle)
+Info    : [ 70%] Meshing curve 5 (Circle)
+Info    : [ 90%] Meshing curve 6 (Line)
+Info    : Done meshing 1D (Wall 0.000497103s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Cylinder, Frontal-Delaunay)
+Info    : [ 30%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 4 (Cylinder, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.00672793s, CPU 0s)
+Info    : Meshing 3D...
+Info    : 3D Meshing 1 volume with 1 connected component
+Info    : Tetrahedrizing 85 nodes...
+Info    : Done tetrahedrizing 93 nodes (Wall 0.00115609s, CPU 0s)
+Info    : Reconstructing mesh...
+Info    :  - Creating surface mesh
+Info    :  - Identifying boundary edges
+Info    :  - Recovering boundary
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-q_503yb_\result.step(350 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-zboyu4jb\result.step(350 ents)  Write  Done
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Line)
+Info    : [ 10%] Meshing curve 2 (Line)
+Info    : [ 20%] Meshing curve 3 (Line)
+Info    : [ 30%] Meshing curve 4 (Line)
+Info    : [ 40%] Meshing curve 5 (Line)
+Info    : [ 50%] Meshing curve 6 (Line)
+Info    : [ 60%] Meshing curve 7 (Line)
+Info    : [ 60%] Meshing curve 8 (Line)
+Info    : [ 70%] Meshing curve 9 (Line)
+Info    : [ 80%] Meshing curve 10 (Line)
+Info    : [ 90%] Meshing curve 11 (Line)
+Info    : [100%] Meshing curve 12 (Line)
+Info    : Done meshing 1D (Wall 0.00109792s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 4 (Plane, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 5 (Plane, Frontal-Delaunay)
+Info    : [ 90%] Meshing surface 6 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.0508327s, CPU 0s)
+Info    : Meshing 3D...
+Info    : 3D Meshing 1 volume with 1 connected component
+Info    : Tetrahedrizing 496 nodes...
+Info    : Done tetrahedrizing 504 nodes (Wall 0.00509691s, CPU 0.015625s)
+Info    : Reconstructing mesh...
+Info    :  - Creating surface mesh
+Info    :  - Identifying boundary edges
+Info    :  - Recovering boundary
+Info    : Done reconstructing mesh (Wall 0.0106938s, CPU 0.015625s)
+Info    : Found volume 1
+Info    : It. 0 - 0 nodes created - worst tet radius 1.53654 (nodes removed 0 0)
+Info    : 3D refinement terminated (541 nodes total):
+Info    :  - 0 Delaunay cavities modified for star shapeness
+Info    :  - 0 nodes could not be inserted
+Info    :  - 1565 tetrahedra created in 0.0031271 sec. (500463 tets/s)
+Info    : 0 node relocations
+Info    : Done meshing 3D (Wall 0.0210721s, CPU 0.03125s)
+Info    : Optimizing mesh...
+Info    : Optimizing volume 1
+Info    : Optimization starts (volume = 0.08) with worst = 0.011781 / average = 0.721864:
+Info    : 0.00 < quality < 0.10 :        13 elements
+Info    : 0.10 < quality < 0.20 :        17 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :        17 elements
+Info    : 0.40 < quality < 0.50 :         7 elements
+Info    : 0.50 < quality < 0.60 :       144 elements
+Info    : 0.60 < quality < 0.70 :       436 elements
+Info    : 0.70 < quality < 0.80 :       561 elements
+Info    : 0.80 < quality < 0.90 :       191 elements
+Info    : 0.90 < quality < 1.00 :       179 elements
+Info    : 30 edge swaps, 0 node relocations (volume = 0.08): worst = 0.347087 / average = 0.734902 (Wall 0.000738859s, CPU 0s)
+Info    : No ill-shaped tets in the mesh :-)
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :         9 elements
+Info    : 0.40 < quality < 0.50 :         7 elements
+Info    : 0.50 < quality < 0.60 :       147 elements
+Info    : 0.60 < quality < 0.70 :       450 elements
+Info    : 0.70 < quality < 0.80 :       545 elements
+Info    : 0.80 < quality < 0.90 :       198 elements
+Info    : 0.90 < quality < 1.00 :       179 elements
+Info    : Done optimizing mesh (Wall 0.00203609s, CPU 0s)
+Info    : 541 nodes 2671 elements
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-8rg_8ijb\result.step(350 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-rmttzj7r\result.step(350 ents)  Write  Done
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Line)
+Info    : [ 10%] Meshing curve 2 (Line)
+Info    : [ 20%] Meshing curve 3 (Line)
+Info    : [ 30%] Meshing curve 4 (Line)
+Info    : [ 40%] Meshing curve 5 (Line)
+Info    : [ 50%] Meshing curve 6 (Line)
+Info    : [ 60%] Meshing curve 7 (Line)
+Info    : [ 60%] Meshing curve 8 (Line)
+Info    : [ 70%] Meshing curve 9 (Line)
+Info    : [ 80%] Meshing curve 10 (Line)
+Info    : [ 90%] Meshing curve 11 (Line)
+Info    : [100%] Meshing curve 12 (Line)
+Info    : Done meshing 1D (Wall 0.0012641s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 4 (Plane, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 5 (Plane, Frontal-Delaunay)
+Info    : [ 90%] Meshing surface 6 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.0275438s, CPU 0.015625s)
+Info    : Meshing 3D...
+Info    : 3D Meshing 1 volume with 1 connected component
+Info    : Tetrahedrizing 140 nodes...
+Info    : Done tetrahedrizing 148 nodes (Wall 0.0016942s, CPU 0.015625s)
+Info    : Reconstructing mesh...
+Info    :  - Creating surface mesh
+Info    :  - Identifying boundary edges
+Info    :  - Recovering boundary
+Info    : Done reconstructing mesh (Wall 0.003618s, CPU 0.015625s)
+Info    : Found volume 1
+Info    : It. 0 - 0 nodes created - worst tet radius 0.910044 (nodes removed 0 0)
+Info    : 3D refinement terminated (140 nodes total):
+Info    :  - 0 Delaunay cavities modified for star shapeness
+Info    :  - 0 nodes could not be inserted
+Info    :  - 308 tetrahedra created in 2.00272e-05 sec. (15379114 tets/s)
+Info    : 0 node relocations
+Info    : Done meshing 3D (Wall 0.00584769s, CPU 0.015625s)
+Info    : Optimizing mesh...
+Info    : Optimizing volume 1
+Info    : Optimization starts (volume = 0.01) with worst = 0.0478522 / average = 0.727917:
+Info    : 0.00 < quality < 0.10 :         2 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :         0 elements
+Info    : 0.40 < quality < 0.50 :         0 elements
+Info    : 0.50 < quality < 0.60 :        11 elements
+Info    : 0.60 < quality < 0.70 :       139 elements
+Info    : 0.70 < quality < 0.80 :        93 elements
+Info    : 0.80 < quality < 0.90 :         7 elements
+Info    : 0.90 < quality < 1.00 :        56 elements
+Info    : 2 edge swaps, 0 node relocations (volume = 0.01): worst = 0.513426 / average = 0.73233 (Wall 0.000122786s, CPU 0s)
+Info    : No ill-shaped tets in the mesh :-)
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :         0 elements
+Info    : 0.40 < quality < 0.50 :         0 elements
+Info    : 0.50 < quality < 0.60 :        11 elements
+Info    : 0.60 < quality < 0.70 :       139 elements
+Info    : 0.70 < quality < 0.80 :        93 elements
+Info    : 0.80 < quality < 0.90 :         7 elements
+Info    : 0.90 < quality < 1.00 :        56 elements
+Info    : Done optimizing mesh (Wall 0.000444174s, CPU 0s)
+Info    : 140 nodes 666 elements
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-enepzw1p\result.step(314 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-8tjcpso4\result.step(314 ents)  Write  Done
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (TrimmedCurve)
+Info    : [ 10%] Meshing curve 2 (TrimmedCurve)
+Info    : [ 20%] Meshing curve 3 (TrimmedCurve)
+Info    : [ 30%] Meshing curve 4 (TrimmedCurve)
+Info    : [ 40%] Meshing curve 5 (TrimmedCurve)
+Info    : [ 50%] Meshing curve 6 (TrimmedCurve)
+Info    : [ 60%] Meshing curve 7 (TrimmedCurve)
+Info    : [ 60%] Meshing curve 8 (TrimmedCurve)
+Info    : [ 70%] Meshing curve 9 (TrimmedCurve)
+Info    : [ 80%] Meshing curve 10 (TrimmedCurve)
+Info    : [ 90%] Meshing curve 11 (TrimmedCurve)
+Info    : [100%] Meshing curve 12 (TrimmedCurve)
+Info    : Done meshing 1D (Wall 0.00539279s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (BSpline surface, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 2 (BSpline surface, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 3 (BSpline surface, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 4 (BSpline surface, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 5 (BSpline surface, Frontal-Delaunay)
+Info    : [ 90%] Meshing surface 6 (BSpline surface, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.084111s, CPU 0.0625s)
+Info    : Meshing 3D...
+Info    : 3D Meshing 1 volume with 1 connected component
+Info    : Tetrahedrizing 990 nodes...
+Info    : Done tetrahedrizing 998 nodes (Wall 0.015306s, CPU 0.015625s)
+Info    : Reconstructing mesh...
+Info    :  - Creating surface mesh
+Info    :  - Identifying boundary edges
+Info    :  - Recovering boundary
+Info    : Done reconstructing mesh (Wall 0.0324919s, CPU 0.046875s)
+Info    : Found volume 1
+Info    : It. 0 - 0 nodes created - worst tet radius 1.67697 (nodes removed 0 0)
+Info    : 3D refinement terminated (1176 nodes total):
+Info    :  - 0 Delaunay cavities modified for star shapeness
+Info    :  - 0 nodes could not be inserted
+Info    :  - 3893 tetrahedra created in 0.013294 sec. (292839 tets/s)
+Info    : 0 node relocations
+Info    : Done meshing 3D (Wall 0.0714941s, CPU 0.078125s)
+Info    : Optimizing mesh...
+Info    : Optimizing volume 1
+Info    : Optimization starts (volume = 0.24) with worst = 0.0134833 / average = 0.739381:
+Info    : 0.00 < quality < 0.10 :        14 elements
+Info    : 0.10 < quality < 0.20 :        30 elements
+Info    : 0.20 < quality < 0.30 :        41 elements
+Info    : 0.30 < quality < 0.40 :        58 elements
+Info    : 0.40 < quality < 0.50 :        85 elements
+Info    : 0.50 < quality < 0.60 :       240 elements
+Info    : 0.60 < quality < 0.70 :       823 elements
+Info    : 0.70 < quality < 0.80 :      1241 elements
+Info    : 0.80 < quality < 0.90 :       886 elements
+Info    : 0.90 < quality < 1.00 :       475 elements
+Info    : 80 edge swaps, 1 node relocations (volume = 0.24): worst = 0.300101 / average = 0.752437 (Wall 0.00163007s, CPU 0s)
+Info    : No ill-shaped tets in the mesh :-)
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :        51 elements
+Info    : 0.40 < quality < 0.50 :        86 elements
+Info    : 0.50 < quality < 0.60 :       229 elements
+Info    : 0.60 < quality < 0.70 :       835 elements
+Info    : 0.70 < quality < 0.80 :      1242 elements
+Info    : 0.80 < quality < 0.90 :       909 elements
+Info    : 0.90 < quality < 1.00 :       466 elements
+Info    : Done optimizing mesh (Wall 0.00507689s, CPU 0s)
+Info    : 1176 nodes 6010 elements
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-prgtltug\result.step(350 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-t7qyc8z0\result.step(350 ents)  Write  Done
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Line)
+Info    : [ 10%] Meshing curve 2 (Line)
+Info    : [ 20%] Meshing curve 3 (Line)
+Info    : [ 30%] Meshing curve 4 (Line)
+Info    : [ 40%] Meshing curve 5 (Line)
+Info    : [ 50%] Meshing curve 6 (Line)
+Info    : [ 60%] Meshing curve 7 (Line)
+Info    : [ 60%] Meshing curve 8 (Line)
+Info    : [ 70%] Meshing curve 9 (Line)
+Info    : [ 80%] Meshing curve 10 (Line)
+Info    : [ 90%] Meshing curve 11 (Line)
+Info    : [100%] Meshing curve 12 (Line)
+Info    : Done meshing 1D (Wall 0.00130725s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 4 (Plane, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 5 (Plane, Frontal-Delaunay)
+Info    : [ 90%] Meshing surface 6 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.0276659s, CPU 0.03125s)
+Info    : Meshing 3D...
+Info    : 3D Meshing 1 volume with 1 connected component
+Info    : Tetrahedrizing 140 nodes...
+Info    : Done tetrahedrizing 148 nodes (Wall 0.00184512s, CPU 0s)
+Info    : Reconstructing mesh...
+Info    :  - Creating surface mesh
+Info    :  - Identifying boundary edges
+Info    :  - Recovering boundary
+Info    : Done reconstructing mesh (Wall 0.00390911s, CPU 0s)
+Info    : Found volume 1
+Info    : It. 0 - 0 nodes created - worst tet radius 0.910044 (nodes removed 0 0)
+Info    : 3D refinement terminated (140 nodes total):
+Info    :  - 0 Delaunay cavities modified for star shapeness
+Info    :  - 0 nodes could not be inserted
+Info    :  - 308 tetrahedra created in 2.38419e-05 sec. (12918456 tets/s)
+Info    : 0 node relocations
+Info    : Done meshing 3D (Wall 0.00684905s, CPU 0.015625s)
+Info    : Optimizing mesh...
+Info    : Optimizing volume 1
+Info    : Optimization starts (volume = 0.01) with worst = 0.0478522 / average = 0.726436:
+Info    : 0.00 < quality < 0.10 :         2 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :         0 elements
+Info    : 0.40 < quality < 0.50 :         1 elements
+Info    : 0.50 < quality < 0.60 :         8 elements
+Info    : 0.60 < quality < 0.70 :       143 elements
+Info    : 0.70 < quality < 0.80 :        90 elements
+Info    : 0.80 < quality < 0.90 :         8 elements
+Info    : 0.90 < quality < 1.00 :        56 elements
+Info    : 2 edge swaps, 0 node relocations (volume = 0.01): worst = 0.495176 / average = 0.73084 (Wall 0.000195026s, CPU 0s)
+Info    : No ill-shaped tets in the mesh :-)
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :         0 elements
+Info    : 0.40 < quality < 0.50 :         1 elements
+Info    : 0.50 < quality < 0.60 :         8 elements
+Info    : 0.60 < quality < 0.70 :       143 elements
+Info    : 0.70 < quality < 0.80 :        90 elements
+Info    : 0.80 < quality < 0.90 :         8 elements
+Info    : 0.90 < quality < 1.00 :        56 elements
+Info    : Done optimizing mesh (Wall 0.000686169s, CPU 0s)
+Info    : 140 nodes 666 elements
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-cusl0jty\result.step(350 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\Victus\AppData\Local\Temp\unicore-cad21-fnsou6vd\result.step(350 ents)  Write  Done
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Line)
+Info    : [ 10%] Meshing curve 2 (TrimmedCurve)
+Info    : [ 20%] Meshing curve 3 (Line)
+Info    : [ 30%] Meshing curve 4 (TrimmedCurve)
+Info    : [ 40%] Meshing curve 5 (Line)
+Info    : [ 50%] Meshing curve 6 (Line)
+Info    : [ 60%] Meshing curve 7 (Line)
+Info    : [ 60%] Meshing curve 8 (TrimmedCurve)
+Info    : [ 70%] Meshing curve 9 (Line)
+Info    : [ 80%] Meshing curve 10 (TrimmedCurve)
+Info    : [ 90%] Meshing curve 11 (Line)
+Info    : [100%] Meshing curve 12 (Line)
+Info    : Done meshing 1D (Wall 0.000855923s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 4 (Plane, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 5 (Plane, Frontal-Delaunay)
+Info    : [ 90%] Meshing surface 6 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.00665212s, CPU 0s)
+Info    : Meshing 3D...
+Info    : 3D Meshing 1 volume with 1 connected component
+Info    : Tetrahedrizing 140 nodes...
+Info    : Done tetrahedrizing 148 nodes (Wall 0.00193214s, CPU 0s)
+Info    : Reconstructing mesh...
+Info    :  - Creating surface mesh
+Info    :  - Identifying boundary edges
+Info    :  - Recovering boundary
+Info    : Done reconstructing mesh (Wall 0.00400615s, CPU 0s)
+Info    : Found volume 1
+Info    : It. 0 - 0 nodes created - worst tet radius 0.871897 (nodes removed 0 0)
+Info    : 3D refinement terminated (140 nodes total):
+Info    :  - 0 Delaunay cavities modified for star shapeness
+Info    :  - 0 nodes could not be inserted
+Info    :  - 305 tetrahedra created in 1.88351e-05 sec. (16193198 tets/s)
+Info    : 0 node relocations
+Info    : Done meshing 3D (Wall 0.00689673s, CPU 0s)
+Info    : Optimizing mesh...
+Info    : Optimizing volume 1
+Info    : Optimization starts (volume = 0.0105) with worst = 0.516965 / average = 0.728428:
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :         0 elements
+Info    : 0.40 < quality < 0.50 :         0 elements
+Info    : 0.50 < quality < 0.60 :        10 elements
+Info    : 0.60 < quality < 0.70 :       138 elements
+Info    : 0.70 < quality < 0.80 :        94 elements
+Info    : 0.80 < quality < 0.90 :         2 elements
+Info    : 0.90 < quality < 1.00 :        61 elements
+Info    : No ill-shaped tets in the mesh :-)
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :         0 elements
+Info    : 0.40 < quality < 0.50 :         0 elements
+Info    : 0.50 < quality < 0.60 :        10 elements
+Info    : 0.60 < quality < 0.70 :       138 elements
+Info    : 0.70 < quality < 0.80 :        94 elements
+Info    : 0.80 < quality < 0.90 :         2 elements
+Info    : 0.90 < quality < 1.00 :        61 elements
+Info    : Done optimizing mesh (Wall 0.000530958s, CPU 0s)
+Info    : 140 nodes 665 elements
+CAD24_NATIVE_PASS

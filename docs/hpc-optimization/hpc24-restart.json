@@ -1,0 +1,7 @@
+{
+  "temperature_difference": 0.0,
+  "restart_initial_time_s": 0.01,
+  "pause_exit": 3,
+  "restart_exit": 0,
+  "incompatible_checkpoint_exit": 2
+}

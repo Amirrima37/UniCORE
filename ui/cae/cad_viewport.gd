@@ -8,6 +8,7 @@ var camera: Camera3D
 var instances: Dictionary = {}
 var geometry_keys: Dictionary = {}
 var faces: Dictionary = {}
+var triangle_faces: Dictionary = {}
 var meshes: Array[MeshInstance3D] = []
 var target := Vector3.ZERO
 var orbit := Vector2(0.65, 0.45)
@@ -15,6 +16,8 @@ var distance := 2.5
 var projection_name := "Perspective"
 var transition: Tween
 var geometry_builds := 0
+var grid: MeshInstance3D
+var grid_opacity := 0.25
 var active := false
 
 func _ready() -> void:
@@ -86,7 +89,11 @@ func build_grid() -> void:
 	mesh.surface_end()
 	var instance := MeshInstance3D.new()
 	instance.mesh = mesh
-	instance.material_override = line_material(Color.WHITE)
+	var grid_material := ShaderMaterial.new()
+	grid_material.shader=preload("res://shaders/cae_grid.gdshader")
+	grid_material.set_shader_parameter("opacity",grid_opacity)
+	instance.material_override=grid_material
+	grid=instance
 	scene_root.add_child(instance)
 
 func pipe_mesh(outer: float, inner: float, height: float) -> ArrayMesh:
@@ -130,6 +137,26 @@ func create_shape(p: Dictionary) -> Mesh:
 			mesh.height = d[0]
 			return mesh
 		"Pipe": return pipe_mesh(d[0]/2,p.inner_diameter/2,d[1])
+		"CAD":
+			var model: Dictionary=get_meta("cad_mesh",{})
+			if model.is_empty() or not model.get("surface_regions",{}).has(p.id): return null
+			var r = p.get("rotation",[0,0,0])
+			var placement = Transform3D(Basis.from_euler(Vector3(r[0],r[1],r[2])),Vector3(p.position[0],p.position[1],p.position[2])).affine_inverse()
+			var tool:=SurfaceTool.new()
+			tool.begin(Mesh.PRIMITIVE_TRIANGLES)
+			triangle_faces[p.id]=[]
+			for region in model.surface_regions[p.id]:
+				var triangles=model.surface_regions[p.id][region]
+				for triangle in triangles:
+					triangle_faces[p.id].append(region)
+					var points=[]
+					for index in triangle:
+						var xyz=model.nodes[int(index)];points.append(Vector3(xyz[0],xyz[1],xyz[2]))
+					tool.set_normal(placement.basis * (points[1]-points[0]).cross(points[2]-points[0]).normalized())
+					for index in triangle:
+						var xyz: Array=model.nodes[int(index)]
+						tool.add_vertex(placement * Vector3(xyz[0],xyz[1],xyz[2]))
+			return tool.commit()
 	return null
 
 func sync_model(parts: Array, selected: int) -> void:
@@ -147,13 +174,14 @@ func sync_model(parts: Array, selected: int) -> void:
 			instance.material_override = material
 			instances[p.id] = instance
 			instance.set_meta("part_id", p.id)
+			instance.set_meta("instance_uuid",p.get("instance_uuid",p.id))
 			scene_root.add_child(instance)
 		var instance: MeshInstance3D = instances[p.id]
-		var key := JSON.stringify([p.kind,p.dimensions,p.get("inner_diameter",0)], "", true, true)
+		var key := JSON.stringify([p.kind,p.dimensions,p.get("inner_diameter",0),p.get("cad_sha256",""),p.position,p.get("rotation"),get_meta("cad_mesh",{}).get("element_tags",[]).size(),get_meta("cad_mesh",{}).get("nodes",[]).size()], "", true, true)
 		if geometry_keys.get(p.id) != key:
 			instance.mesh = create_shape(p)
 			geometry_keys[p.id] = key
-			faces[p.id] = instance.mesh.get_faces()
+			faces[p.id] = instance.mesh.get_faces() if instance.mesh != null else PackedVector3Array()
 		instance.position = Vector3(p.position[0],p.position[1],p.position[2])
 		var rotation: Array = p.get("rotation",[0,0,0])
 		var scale: Array = p.get("scale",[1,1,1])
@@ -168,6 +196,7 @@ func sync_model(parts: Array, selected: int) -> void:
 			instances.erase(id)
 			geometry_keys.erase(id)
 			faces.erase(id)
+			triangle_faces.erase(id)
 
 func pick(point: Vector2) -> void:
 	var origin := camera.project_ray_origin(point)
@@ -195,6 +224,9 @@ func pick(point: Vector2) -> void:
 			# Face signs come from local hit coordinates, independent of triangle winding.
 			var axis := normal.abs().max_axis_index()
 			selected_face = ["X","Y","Z"][axis] + ("+" if hit[axis] > 0 else "-")
+			var table: Array=triangle_faces.get(instance.get_meta("part_id"),[])
+			if not table.is_empty():
+				selected_face=str(table[int(j/3)]) if int(j/3)<table.size() else ""
 	body_picked.emit(selected,selected_face)
 
 func update_camera() -> void:
@@ -205,6 +237,7 @@ func update_camera() -> void:
 	camera.position = target + direction*distance
 	camera.look_at(target,Vector3.FORWARD if absf(direction.y) > 0.9999 else Vector3.UP)
 	camera.size = distance*0.85
+	if is_instance_valid(grid): grid.material_override.set_shader_parameter("fade_distance",distance*2.0)
 	invalidate()
 	camera_changed.emit()
 
@@ -230,12 +263,17 @@ func fit(selection := -1) -> void:
 	var bounds := AABB()
 	var found := false
 	for i in meshes.size():
-		if not meshes[i].visible or (selection >= 0 and selection != i): continue
+		if meshes[i].mesh==null or not meshes[i].visible or (selection >= 0 and selection != i): continue
 		var box: AABB = meshes[i].global_transform * meshes[i].get_aabb()
 		bounds = bounds.merge(box) if found else box
 		found = true
 	target = bounds.get_center() if found else Vector3.ZERO
-	distance = maxf(bounds.size.length()*1.6,0.2) if found else 2.5
+	if found:
+		var diameter := maxf(bounds.size.length(),0.00001)
+		var aspect := maxf(size.x,1.0)/maxf(size.y,1.0)
+		var half_angle := atan(tan(deg_to_rad(camera.fov)*0.5)*minf(aspect,1.0))
+		distance = diameter*0.56/maxf(sin(half_angle),0.01) if camera.projection==Camera3D.PROJECTION_PERSPECTIVE else diameter*1.12/(0.85*minf(aspect,1.0))
+	else: distance=2.5
 	update_camera()
 
 func navigate(event: InputEvent) -> void:

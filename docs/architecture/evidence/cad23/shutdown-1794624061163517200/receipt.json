@@ -1,0 +1,13 @@
+[
+  {
+    "test": "shutdown",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "tests/cad23_shutdown.py"
+    ],
+    "seconds": 18.892838700005086,
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\shutdown-1794624061163517200"
+  }
+]

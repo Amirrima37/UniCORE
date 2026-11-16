@@ -1,0 +1,39 @@
+[
+  {
+    "test": "Godot-shutdown-mesh",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "observed_active": true,
+    "pid": 19660,
+    "pid_alive": false,
+    "receipt": {
+      "state": "cancelled",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 4.070722100004787,
+      "peak_memory_bytes": 57450496,
+      "job_object": true
+    },
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\gmsh_2860_1965419_ed955bf390ca8e2c"
+  },
+  {
+    "test": "Godot-shutdown-solver",
+    "outcome": "PASS",
+    "exit_code": 0,
+    "observed_active": true,
+    "pid": 9952,
+    "pid_alive": false,
+    "receipt": {
+      "state": "cancelled",
+      "exit_code": 1,
+      "error": "",
+      "seconds": 0.7171252999978606,
+      "started_utc": "2026-11-14T14:41:24.813522+00:00",
+      "ended_utc": "2026-11-14T14:41:25.530738+00:00",
+      "peak_working_set_bytes": 38641664,
+      "peak_memory_bytes": 184475648,
+      "job_object": true
+    },
+    "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\calculix_jobs\\18636_2054654_a2e9ee7e78f1e087"
+  }
+]

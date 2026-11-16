@@ -1,0 +1,8 @@
+[
+	{
+		"energy_balance_W": 0.00000000248507348032945,
+		"expected_flux_y_W_m2": -3750,
+		"flux_vector_error_W_m2": 0.000012876113942184,
+		"temperature_error_K": 0.0000000419356069869536
+	}
+]

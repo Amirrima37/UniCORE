@@ -1,0 +1,6 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+Analytical 1PN Precession: 1.00531 rad (57.60 deg)
+Sign +1.0: Detected 8 perihelia: [-0.83442402854476, -1.66840081336645, -2.50628128502383, 2.93949086547452, 2.10263873530103, 1.2618296933163, 0.42365213575919, -0.41630611906813]
+  Raw d_phi = -0.83398 rad (-47.78 deg)
+Sign -1.0: Detected 0 perihelia: []

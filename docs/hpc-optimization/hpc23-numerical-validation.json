@@ -1,0 +1,334 @@
+[
+  {
+    "workload": "elastic-8",
+    "method": "jacobi",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 0,
+      "reactions_flat": 0.0,
+      "stress": 0.0,
+      "strain": 0.0,
+      "von_mises": 0.0
+    }
+  },
+  {
+    "workload": "elastic-8",
+    "method": "block-jacobi",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 1.7694851660310373e-13,
+      "reactions_flat": 1.6184545023611996e-12,
+      "stress": 3.9819525454731775e-10,
+      "strain": 5.054230965938901e-13,
+      "von_mises": 5.080795784095926e-10
+    }
+  },
+  {
+    "workload": "elastic-8",
+    "method": "ic0",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 1.1459453592288269e-13,
+      "reactions_flat": 2.1136148387057574e-12,
+      "stress": 3.0490616942549715e-10,
+      "strain": 3.7351010088786474e-13,
+      "von_mises": 2.7502478072705117e-10
+    }
+  },
+  {
+    "workload": "elastic-8",
+    "method": "auto",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 0,
+      "reactions_flat": 0.0,
+      "stress": 0.0,
+      "strain": 0.0,
+      "von_mises": 0.0
+    }
+  },
+  {
+    "workload": "elastic-16",
+    "method": "jacobi",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 0,
+      "reactions_flat": 0.0,
+      "stress": 0.0,
+      "strain": 0.0,
+      "von_mises": 0.0
+    }
+  },
+  {
+    "workload": "elastic-16",
+    "method": "block-jacobi",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 2.0257146654545366e-13,
+      "reactions_flat": 8.220977044740413e-13,
+      "stress": 6.460131683993518e-10,
+      "strain": 8.73286594497697e-13,
+      "von_mises": 7.594422868351103e-10
+    }
+  },
+  {
+    "workload": "elastic-16",
+    "method": "ic0",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 1.1089747698534937e-12,
+      "reactions_flat": 2.9608108499667996e-12,
+      "stress": 2.9340605364742572e-09,
+      "strain": 2.9340605364742573e-12,
+      "von_mises": 2.0885806417680897e-09
+    }
+  },
+  {
+    "workload": "elastic-16",
+    "method": "auto",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 0,
+      "reactions_flat": 0.0,
+      "stress": 0.0,
+      "strain": 0.0,
+      "von_mises": 0.0
+    }
+  },
+  {
+    "workload": "slender-bending",
+    "method": "jacobi",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 0,
+      "reactions_flat": 0.0,
+      "stress": 0.0,
+      "strain": 0.0,
+      "von_mises": 0.0
+    }
+  },
+  {
+    "workload": "slender-bending",
+    "method": "block-jacobi",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 7.714717753515288e-12,
+      "reactions_flat": 5.731637386929833e-12,
+      "stress": 4.955289512054151e-10,
+      "strain": 5.706546346573305e-13,
+      "von_mises": 4.559232991141471e-10
+    }
+  },
+  {
+    "workload": "slender-bending",
+    "method": "ic0",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 1.9277640166690327e-11,
+      "reactions_flat": 2.03865813119819e-11,
+      "stress": 9.931753197633952e-10,
+      "strain": 1.028510610012745e-12,
+      "von_mises": 1.0074270306859034e-09
+    }
+  },
+  {
+    "workload": "slender-bending",
+    "method": "auto",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 0,
+      "reactions_flat": 0.0,
+      "stress": 0.0,
+      "strain": 0.0,
+      "von_mises": 0.0
+    }
+  },
+  {
+    "workload": "heterogeneous-elastic",
+    "method": "jacobi",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 0,
+      "reactions_flat": 0.0,
+      "stress": 0.0,
+      "strain": 0.0,
+      "von_mises": 0.0
+    }
+  },
+  {
+    "workload": "heterogeneous-elastic",
+    "method": "block-jacobi",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 1.276349902504248e-15,
+      "reactions_flat": 5.4192761389515454e-14,
+      "stress": 7.279614688826541e-10,
+      "strain": 7.705858520723474e-15,
+      "von_mises": 4.3608450184251524e-10
+    }
+  },
+  {
+    "workload": "heterogeneous-elastic",
+    "method": "ic0",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 1.6204709639045365e-14,
+      "reactions_flat": 1.9181184418570751e-13,
+      "stress": 8.21711032550354e-10,
+      "strain": 2.4989830083727016e-14,
+      "von_mises": 7.141105484720356e-10
+    }
+  },
+  {
+    "workload": "heterogeneous-elastic",
+    "method": "auto",
+    "relative_tolerance": 1e-10,
+    "maximum_field_differences": {
+      "displacement_flat": 0,
+      "reactions_flat": 0.0,
+      "stress": 0.0,
+      "strain": 0.0,
+      "von_mises": 0.0
+    }
+  },
+  {
+    "workload": "contrast-conduction-8",
+    "method": "jacobi",
+    "relative_tolerance": 1e-13,
+    "maximum_field_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_reactions": 0.0
+    }
+  },
+  {
+    "workload": "contrast-conduction-8",
+    "method": "block-jacobi",
+    "relative_tolerance": 1e-13,
+    "maximum_field_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_reactions": 0.0
+    }
+  },
+  {
+    "workload": "contrast-conduction-8",
+    "method": "ic0",
+    "relative_tolerance": 1e-13,
+    "maximum_field_differences": {
+      "temperature": 1.2911129942949628e-08,
+      "heat_flux": 0.00024271011352539062,
+      "heat_reactions": 2.384185791015625e-06
+    }
+  },
+  {
+    "workload": "contrast-conduction-8",
+    "method": "auto",
+    "relative_tolerance": 1e-13,
+    "maximum_field_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_reactions": 0.0
+    }
+  },
+  {
+    "workload": "contrast-conduction-16",
+    "method": "jacobi",
+    "relative_tolerance": 1e-13,
+    "maximum_field_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_reactions": 0.0
+    }
+  },
+  {
+    "workload": "contrast-conduction-16",
+    "method": "block-jacobi",
+    "relative_tolerance": 1e-13,
+    "maximum_field_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_reactions": 0.0
+    }
+  },
+  {
+    "workload": "contrast-conduction-16",
+    "method": "ic0",
+    "relative_tolerance": 1e-13,
+    "maximum_field_differences": {
+      "temperature": 2.9049658678559354e-08,
+      "heat_flux": 0.0006971359252929688,
+      "heat_reactions": 1.7136335372924805e-06
+    }
+  },
+  {
+    "workload": "contrast-conduction-16",
+    "method": "auto",
+    "relative_tolerance": 1e-13,
+    "maximum_field_differences": {
+      "temperature": 0,
+      "heat_flux": 0.0,
+      "heat_reactions": 0.0
+    }
+  },
+  {
+    "executable": "unicore_solver.exe",
+    "method": "jacobi",
+    "analytic_max_error": 1.3010426069826053e-18
+  },
+  {
+    "executable": "unicore_solver.exe",
+    "method": "block-jacobi",
+    "analytic_max_error": 1.7694829976266924e-13
+  },
+  {
+    "executable": "unicore_solver.exe",
+    "method": "ic0",
+    "analytic_max_error": 8.912835747221237e-14
+  },
+  {
+    "executable": "unicore_solver.exe",
+    "method": "auto",
+    "analytic_max_error": 1.3010426069826053e-18
+  },
+  {
+    "executable": "unicore_solver_debug.exe",
+    "method": "jacobi",
+    "analytic_max_error": 1.3010426069826053e-18
+  },
+  {
+    "executable": "unicore_solver_debug.exe",
+    "method": "block-jacobi",
+    "analytic_max_error": 1.7694829976266924e-13
+  },
+  {
+    "executable": "unicore_solver_debug.exe",
+    "method": "ic0",
+    "analytic_max_error": 8.912835747221237e-14
+  },
+  {
+    "executable": "unicore_solver_debug.exe",
+    "method": "auto",
+    "analytic_max_error": 1.3010426069826053e-18
+  },
+  {
+    "executable": "unicore_solver_noomp.exe",
+    "method": "jacobi",
+    "analytic_max_error": 1.3010426069826053e-18
+  },
+  {
+    "executable": "unicore_solver_noomp.exe",
+    "method": "block-jacobi",
+    "analytic_max_error": 1.7694829976266924e-13
+  },
+  {
+    "executable": "unicore_solver_noomp.exe",
+    "method": "ic0",
+    "analytic_max_error": 8.912835747221237e-14
+  },
+  {
+    "executable": "unicore_solver_noomp.exe",
+    "method": "auto",
+    "analytic_max_error": 1.3010426069826053e-18
+  }
+]

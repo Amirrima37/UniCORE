@@ -1,0 +1,100 @@
+native/src/math/csr_backend.hpp:12:44: note: ***** Analysis failed with vector mode VOID
+native/src/math/csr_backend.hpp:11:8: note: ***** Analysis failed with vector mode VOID
+native/src/math/csr_backend.hpp:11:8: missed: statement clobbers memory: operator delete (this_2(D), 8);
+native/src/math/csr_backend.hpp:11:8: note: ***** Analysis failed with vector mode VOID
+native/src/math/csr_backend.hpp:13:7: note: vectorized 0 loops in function.
+native/src/math/csr_backend.hpp:13:7: missed: statement clobbers memory: __builtin_GOMP_parallel (_ZNK7unicore7compute10CPUBackend5applyERKNS0_7CSRViewERKSt6vectorIdSaIdEERS7_RKS5_IbSaIbEE._omp_fn.0, &.omp_data_o.68, _13, 0);
+native/src/math/csr_backend.hpp:16:11: note: ***** Analysis succeeded with vector mode V2DI
+native/src/math/csr_backend.hpp:16:11: note: SLPing BB part
+native/src/math/csr_backend.hpp:16:11: note: Costing subgraph: 
+native/src/math/csr_backend.hpp:16:11: note: node 0000000008d7a948 (max_nunits=2, refcnt=1) vector(2) long long unsigned int
+native/src/math/csr_backend.hpp:16:11: note: op template: .omp_data_o.68.a = a_5(D);
+native/src/math/csr_backend.hpp:16:11: note: 	stmt 0 .omp_data_o.68.a = a_5(D);
+native/src/math/csr_backend.hpp:16:11: note: 	stmt 1 .omp_data_o.68.x = x_2(D);
+native/src/math/csr_backend.hpp:16:11: note: 	stmt 2 .omp_data_o.68.y = y_8(D);
+native/src/math/csr_backend.hpp:16:11: note: 	stmt 3 .omp_data_o.68.fixed = fixed_10(D);
+native/src/math/csr_backend.hpp:16:11: note: 	children 0000000008d7a9c8
+native/src/math/csr_backend.hpp:16:11: note: node (external) 0000000008d7a9c8 (max_nunits=1, refcnt=1) vector(2) long long unsigned int
+native/src/math/csr_backend.hpp:16:11: note: 	{ a_5(D), x_2(D), y_8(D), fixed_10(D) }
+native/src/math/csr_backend.hpp:16:11: note: Cost model analysis: 
+native/src/math/csr_backend.hpp:16:11: note: Cost model analysis for part in loop 0:
+native/src/math/csr_backend.hpp:16:11: note: Basic block will be vectorized using SLP
+native/src/math/csr_backend.hpp:16:11: note: Vectorizing SLP tree:
+native/src/math/csr_backend.hpp:16:11: note: node 0000000008d7a948 (max_nunits=2, refcnt=1) vector(2) long long unsigned int
+native/src/math/csr_backend.hpp:16:11: note: op template: .omp_data_o.68.a = a_5(D);
+native/src/math/csr_backend.hpp:16:11: note: 	stmt 0 .omp_data_o.68.a = a_5(D);
+native/src/math/csr_backend.hpp:16:11: note: 	stmt 1 .omp_data_o.68.x = x_2(D);
+native/src/math/csr_backend.hpp:16:11: note: 	stmt 2 .omp_data_o.68.y = y_8(D);
+native/src/math/csr_backend.hpp:16:11: note: 	stmt 3 .omp_data_o.68.fixed = fixed_10(D);
+native/src/math/csr_backend.hpp:16:11: note: 	children 0000000008d7a9c8
+native/src/math/csr_backend.hpp:16:11: note: node (external) 0000000008d7a9c8 (max_nunits=1, refcnt=1) vector(2) long long unsigned int
+native/src/math/csr_backend.hpp:16:11: note: 	{ a_5(D), x_2(D), y_8(D), fixed_10(D) }
+native/src/math/csr_backend.hpp:16:11: note: ------>vectorizing SLP node starting from: .omp_data_o.68.a = a_5(D);
+native/src/math/csr_backend.hpp:16:11: note: vect_is_simple_use: operand x_2(D), type of def: external
+native/src/math/csr_backend.hpp:16:11: note: vect_is_simple_use: operand y_8(D), type of def: external
+native/src/math/csr_backend.hpp:16:11: note: vect_is_simple_use: operand fixed_10(D), type of def: external
+native/src/math/csr_backend.hpp:16:11: note: conflicting alias set types.
+native/src/math/csr_backend.hpp:16:11: note: transform store. ncopies = 1
+native/src/math/csr_backend.hpp:16:11: note: create vector_type-pointer variable to type: vector(2) long long unsigned int  vectorizing a pointer ref: .omp_data_o.68.a
+native/src/math/csr_backend.hpp:16:11: note: created &.omp_data_o.68
+native/src/math/csr_backend.hpp:16:11: note: add new stmt: MEM <vector(2) long long unsigned int> [(void *)&.omp_data_o.68] = _29;
+native/src/math/csr_backend.hpp:16:11: note: add new stmt: MEM <vector(2) long long unsigned int> [(void *)&.omp_data_o.68 + 16B] = _26;
+native/src/math/csr_backend.hpp:16:11: note: vectorizing stmts using SLP.
+native/src/math/csr_backend.hpp:16:11: optimized: basic block part vectorized using 16 byte vectors
+native/src/math/csr_backend.hpp:16:11: note: ***** The result for vector mode V16QI would be the same
+native/src/math/csr_backend.hpp:18:74: missed: couldn't vectorize loop
+native/src/math/csr_backend.hpp:18:74: missed: not vectorized: control flow in loop.
+native/src/math/csr_backend.hpp:16:11: note: vectorized 0 loops in function.
+native/src/math/sparse_pcg.hpp:42:21: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:42:21: missed: not vectorized: control flow in loop.
+native/src/math/sparse_pcg.hpp:42:73: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:42:109: missed: not vectorized: no vectype for stmt: _56 = *_424;
+native/src/math/sparse_pcg.hpp:31:103: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:31:124: missed: not vectorized: no vectype for stmt: _1135 = *_1134;
+native/src/math/sparse_pcg.hpp:39:69: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:39:85: missed: not vectorized: no vectype for stmt: _42 = *_406;
+native/src/math/sparse_pcg.hpp:31:103: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:31:124: missed: not vectorized: no vectype for stmt: _1118 = *_1117;
+native/src/math/sparse_pcg.hpp:38:25: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:38:48: missed: not vectorized: no vectype for stmt: _33 = *_401;
+native/src/math/sparse_pcg.hpp:31:103: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:31:124: missed: not vectorized: no vectype for stmt: _1101 = *_1100;
+native/src/math/sparse_pcg.hpp:31:103: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:31:124: missed: not vectorized: no vectype for stmt: _1152 = *_1151;
+native/src/math/sparse_pcg.hpp:31:103: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:31:124: missed: not vectorized: no vectype for stmt: _1059 = *_1058;
+native/src/math/sparse_pcg.hpp:31:103: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:31:124: missed: not vectorized: no vectype for stmt: _1076 = *_1075;
+native/src/math/sparse_pcg.hpp:30:21: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:30:21: missed: not vectorized: control flow in loop.
+native/src/math/sparse_pcg.hpp:30:78: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:30:78: missed: not vectorized: control flow in loop.
+native/src/math/sparse_pcg.hpp:26:24: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:26:24: missed: not vectorized: control flow in loop.
+native/src/math/sparse_pcg.hpp:20:37: missed: couldn't vectorize loop
+native/src/math/sparse_pcg.hpp:14:21: note: vectorized 0 loops in function.
+native/src/math/sparse_pcg.hpp:14:21: missed: splitting region at control altering definition _570 = operator new (_569);
+native/src/math/sparse_pcg.hpp:20:52: note: ***** Analysis failed with vector mode V2DI
+native/src/math/sparse_pcg.hpp:20:52: note: ***** The result for vector mode V16QI would be the same
+native/src/math/sparse_pcg.hpp:20:52: note: ***** Re-trying analysis with vector mode V8QI
+native/src/math/sparse_pcg.hpp:20:52: note: ***** Analysis failed with vector mode V8QI
+native/src/math/sparse_pcg.hpp:20:52: note: ***** Re-trying analysis with vector mode V4QI
+native/src/math/sparse_pcg.hpp:20:52: note: ***** Analysis failed with vector mode V4QI
+native/src/math/sparse_pcg.hpp:20:52: missed: splitting region at dominance boundary bb49
+native/src/math/sparse_pcg.hpp:20:52: note: ***** Analysis failed with vector mode VOID
+native/src/math/sparse_pcg.hpp:20:52: missed: splitting region at dominance boundary bb397
+native/src/math/sparse_pcg.hpp:26:24: missed: not vectorized: more than one data ref in stmt: entry = MEM[(const struct pair &)SR.1025_1443];
+native/src/math/sparse_pcg.hpp:26:24: note: ***** Analysis failed with vector mode V2DI
+native/src/math/sparse_pcg.hpp:26:24: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DI
+native/src/math/sparse_pcg.hpp:26:24: missed: splitting region at loop 2 exit at bb139
+native/src/math/sparse_pcg.hpp:21:21: note: ***** Analysis failed with vector mode V2DI
+native/src/math/sparse_pcg.hpp:21:21: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DI
+native/src/math/sparse_pcg.hpp:21:21: missed: splitting region at control altering definition _510 = OBJ_TYPE_REF(prephitmp_951;iftmp.51_80->2B) (iftmp.51_80);
+native/src/math/sparse_pcg.hpp:32:117: missed: not vectorized: statement can throw an exception: _510 = OBJ_TYPE_REF(prephitmp_951;iftmp.51_80->2B) (iftmp.51_80);
+native/src/math/sparse_pcg.hpp:32:168: missed: statement clobbers memory: _241 = __cxa_allocate_exception (16);
+native/src/math/sparse_pcg.hpp:32:168: missed: not vectorized: statement can throw an exception: std::runtime_error::runtime_error (_241, "FP64_BACKEND_REQUIRED");
+native/src/math/sparse_pcg.hpp:32:168: missed: not vectorized: statement can throw an exception: __cxa_throw (_241, &_ZTISt13runtime_error, __dt_comp );
+native/src/math/sparse_pcg.hpp:32:168: missed: statement clobbers memory: __cxa_free_exception (_241);
+native/src/math/sparse_pcg.hpp:14:21: missed: not vectorized: statement can throw an exception: resx 56
+native/src/math/sparse_pcg.hpp:32:168: note: ***** Analysis failed with vector mode VOID
+native/src/math/sparse_pcg.hpp:32:168: missed: splitting region at dominance boundary bb176

@@ -1,0 +1,44 @@
+[
+  {
+    "test": "test_stage6_sphere",
+    "exit": 0,
+    "seconds": 8.839824299997417,
+    "passed": true
+  },
+  {
+    "test": "test_stage6_sphere_contract",
+    "exit": 0,
+    "seconds": 1.3634464999995544,
+    "passed": true
+  },
+  {
+    "test": "test_workbench2_stage2",
+    "exit": 0,
+    "seconds": 2.9290437000017846,
+    "passed": true
+  },
+  {
+    "test": "test_stage6_cylinder",
+    "exit": 0,
+    "seconds": 2.2033299999966403,
+    "passed": true
+  },
+  {
+    "test": "test_cylinder_fem",
+    "exit": 0,
+    "seconds": 7.179894799999602,
+    "passed": true
+  },
+  {
+    "test": "test_stage5_provenance",
+    "exit": 0,
+    "seconds": 0.9929074999963632,
+    "passed": true
+  },
+  {
+    "test": "test_stage51_cache",
+    "exit": 0,
+    "seconds": 3.3009193999969284,
+    "passed": true
+  }
+]

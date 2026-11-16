@@ -1,0 +1,15 @@
+ERROR: Failed to open 'user://logs/godot2026-11-14T17.13.05.log'.
+   at: copy (core/io/dir_access.cpp:429)
+ERROR: Failed to open log file for writing: user://logs/godot.log
+   at: rotate_file (core/io/logger.cpp:169)
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+SCRIPT ERROR: Cannot call method 'store_string' on a null value.
+   at: launch (res://core/cae/extreme_jobs.gd:194)
+   GDScript backtrace (most recent call first):
+       [0] launch (res://core/cae/extreme_jobs.gd:194)
+       [1] _initialize (res://tests/test_extreme_advanced.gd:17)
+SCRIPT ERROR: Assertion failed.
+   at: _initialize (res://tests/test_extreme_advanced.gd:17)
+   GDScript backtrace (most recent call first):
+       [0] _initialize (res://tests/test_extreme_advanced.gd:17)

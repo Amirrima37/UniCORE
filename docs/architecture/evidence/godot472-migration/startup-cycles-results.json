@@ -1,0 +1,87 @@
+[
+  {
+    "cycle": 1,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--quit-after",
+      "5"
+    ],
+    "exit_code": 0,
+    "seconds": 11.852,
+    "shell_ready": true,
+    "script_error": false,
+    "access_violation": false,
+    "log": "cycle-1.log"
+  },
+  {
+    "cycle": 2,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--quit-after",
+      "5"
+    ],
+    "exit_code": 0,
+    "seconds": 8.039,
+    "shell_ready": true,
+    "script_error": false,
+    "access_violation": false,
+    "log": "cycle-2.log"
+  },
+  {
+    "cycle": 3,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--quit-after",
+      "5"
+    ],
+    "exit_code": 0,
+    "seconds": 8.16,
+    "shell_ready": true,
+    "script_error": false,
+    "access_violation": false,
+    "log": "cycle-3.log"
+  },
+  {
+    "cycle": 4,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--quit-after",
+      "5"
+    ],
+    "exit_code": 0,
+    "seconds": 8.208,
+    "shell_ready": true,
+    "script_error": false,
+    "access_violation": false,
+    "log": "cycle-4.log"
+  },
+  {
+    "cycle": 5,
+    "command": [
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--quit-after",
+      "5"
+    ],
+    "exit_code": 0,
+    "seconds": 8.008,
+    "shell_ready": true,
+    "script_error": false,
+    "access_violation": false,
+    "log": "cycle-5.log"
+  }
+]

@@ -1,0 +1,94 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+==================================================================
+   UniCORE Interactive Physics & Toolset: Headless Test Suite    
+==================================================================
+Engine: Godot 4.0.stable (Headless)
+
+
+--- 1. ScreenRaycaster Math Tests ---
+  [PASS] Ray intersects XY plane at origin
+  [PASS] Ray intersects horizontal plane at Y=2
+  [PASS] Parallel ray returns null (no intersection)
+  [PASS] Ray pointing away from plane returns null
+
+--- 2. VelocityVectorGizmo Tests ---
+  [PASS] Gizmo initially invisible
+  [PASS] Gizmo visible after set_vector
+  [PASS] Gizmo positioned at anchor
+  [PASS] Zero velocity hides gizmo
+
+--- 3. KeplerTrajectoryPreview Tests ---
+  [PASS] Preview visible when orbit updated
+  [PASS] clear_orbit hides preview
+
+--- 4. PhysicsInteractionManager Tests ---
+  [PASS] Tool mode switched to GRAVITY
+  [PASS] Tool mode switched to THERMODYNAMICS
+  [PASS] Tool mode switched to NUCLEAR
+  [PASS] Tool mode switched to QUANTUM
+  [PASS] Tool mode switched to SENSOR
+  [PASS] Time command paused time controller
+  [PASS] Time command updated time scale to 2.5
+  [PASS] Parameter change updated gravity_spawn_mass to 500.0
+  [PASS] Celestial body spawn emitted entity_spawned
+  [PASS] Module ID is n_body_gravity_module
+  [PASS] Mass passed correctly
+
+--- 5a. CelestialSpawnerTool Tests ---
+  [PASS] Tool ID is celestial_spawner_tool
+  [PASS] Action bindings registered
+  [PASS] body_spawned_into_gravity signal emitted
+  [PASS] Parameters matched
+
+--- 5b. ParticleInjectorTool Tests ---
+  [PASS] Tool ID is particle_injector_tool
+  [PASS] Action bindings registered
+  [PASS] gas_injected signal emitted
+  [PASS] Injection params matched
+
+--- 5c. NuclearLabTool Tests ---
+  [PASS] Tool ID is nuclear_lab_tool
+  [PASS] Action bindings registered
+  [PASS] neutron_fired signal emitted
+  [PASS] Neutron velocity matches
+  [PASS] Control rods depth adjusted to 0.45
+
+--- 5d. QuantumBenchTool Tests ---
+  [PASS] Tool ID is quantum_bench_tool
+  [PASS] Action bindings registered
+  [PASS] wavepacket_injected signal emitted
+  [PASS] Wavepacket wavenumber matched
+
+--- 5e. ScientificProbeTool Tests ---
+  [PASS] Tool ID is scientific_probe_tool
+  [PASS] Action bindings registered
+  [PASS] Probe deployed with valid id
+  [PASS] Probe stored in probe map
+  [PASS] Telemetry contains gravity_vector
+  [PASS] Telemetry contains gas_density
+  [PASS] Telemetry contains gas_temperature
+  [PASS] Telemetry contains radiation_cps
+  [PASS] Telemetry contains quantum_probability_density
+  [PASS] Probe removed successfully
+
+--- 6. E2E Cross-Module Interaction Pipeline ---
+  [PASS] Probe deployed into active simulation domain
+  [PASS] Probe detected negative gravitational acceleration towards origin
+  [PASS] Non-zero gravity magnitude measured
+  [PASS] Probe measured positive gas density near injection
+  [PASS] find_body_near_ray located spawned body
+  [PASS] Ray picked entity has mass 5.0
+  [PASS] MD particles maintained after Maxwell reset
+  [PASS] Quantum potential_type set to 1 (Rectangular Barrier)
+  [PASS] Barrier height set to 8.0
+  [PASS] Barrier width set to 1.5
+  [PASS] Quantum potential cycled to 2 (Harmonic Well)
+  [PASS] Quantum active dimension toggled to 2D
+  E2E interaction pipeline completed cleanly.
+
+==================================================================
+SUMMARY: 60 passed, 0 failed in 70.95 ms
+
+RESULT: ALL INTERACTION TESTS PASSED (100% SUCCESS) (Exit Code: 0)
+==================================================================

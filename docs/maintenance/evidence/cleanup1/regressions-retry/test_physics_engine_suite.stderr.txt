@@ -1,0 +1,61 @@
+ERROR: SimulationTimeController: fixed_delta must be strictly positive.
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] @fixed_delta_setter (res://core/physics/simulation_time_controller.gd:29)
+       [1] set_fixed_delta (res://core/physics/simulation_time_controller.gd:105)
+       [2] _tier1_simulation_time_controller (res://tests/test_physics_engine_suite.gd:146)
+       [3] _init (res://tests/test_physics_engine_suite.gd:52)
+ERROR: PhysicalIntegrator: Array size mismatch (pos: 2, vel: 1, mass: 2)
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] validate_state (res://core/physics/physical_integrator.gd:43)
+       [1] _tier1_physical_integrator_base (res://tests/test_physics_engine_suite.gd:251)
+       [2] _init (res://tests/test_physics_engine_suite.gd:54)
+ERROR: PhysicalIntegrator: dt must be positive, got: -0.010000
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] validate_inputs (res://core/physics/physical_integrator.gd:60)
+       [1] _tier1_physical_integrator_base (res://tests/test_physics_engine_suite.gd:255)
+       [2] _init (res://tests/test_physics_engine_suite.gd:54)
+ERROR: PhysicalIntegrator: dt must be positive, got: 0.000000
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] validate_inputs (res://core/physics/physical_integrator.gd:60)
+       [1] _tier1_physical_integrator_base (res://tests/test_physics_engine_suite.gd:256)
+       [2] _init (res://tests/test_physics_engine_suite.gd:54)
+ERROR: VerletIntegrator: dt must be positive, got: -0.050000
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] integrate (res://core/physics/verlet_integrator.gd:25)
+       [1] _tier1_verlet_integrator (res://tests/test_physics_engine_suite.gd:338)
+       [2] _init (res://tests/test_physics_engine_suite.gd:55)
+ERROR: VerletIntegrator: Array size mismatch (pos: 2, vel: 1, mass: 2)
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] integrate (res://core/physics/verlet_integrator.gd:30)
+       [1] _tier2_boundary_and_corner_cases (res://tests/test_physics_engine_suite.gd:575)
+       [2] _init (res://tests/test_physics_engine_suite.gd:64)
+ERROR: RK4Integrator: Array size mismatch (pos: 2, vel: 1, mass: 2)
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] integrate (res://core/physics/rk4_integrator.gd:40)
+       [1] _tier2_boundary_and_corner_cases (res://tests/test_physics_engine_suite.gd:576)
+       [2] _init (res://tests/test_physics_engine_suite.gd:64)
+ERROR: UnitConverter: Lennard-Jones parameters must be strictly positive.
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] configure_lennard_jones (res://core/physics/unit_converter.gd:62)
+       [1] _tier2_boundary_and_corner_cases (res://tests/test_physics_engine_suite.gd:650)
+       [2] _init (res://tests/test_physics_engine_suite.gd:64)
+ERROR: UnitConverter: Lennard-Jones parameters must be strictly positive.
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] configure_lennard_jones (res://core/physics/unit_converter.gd:62)
+       [1] _tier2_boundary_and_corner_cases (res://tests/test_physics_engine_suite.gd:651)
+       [2] _init (res://tests/test_physics_engine_suite.gd:64)
+ERROR: UnitConverter: Astronomical parameters must be strictly positive.
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] configure_astronomical (res://core/physics/unit_converter.gd:72)
+       [1] _tier2_boundary_and_corner_cases (res://tests/test_physics_engine_suite.gd:652)
+       [2] _init (res://tests/test_physics_engine_suite.gd:64)

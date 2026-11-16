@@ -23,7 +23,13 @@ void initialize_unicore(ModuleInitializationLevel level) {
 }
 void uninitialize_unicore(ModuleInitializationLevel) {}
 extern "C" {
-GDExtensionBool GDE_EXPORT unicore_native_init(const GDExtensionInterface *interface, GDExtensionClassLibraryPtr library, GDExtensionInitialization *initialization) {
+GDExtensionBool GDE_EXPORT unicore_native_init(
+#if GODOT_VERSION_MINOR >= 1
+    GDExtensionInterfaceGetProcAddress interface,
+#else
+    const GDExtensionInterface *interface,
+#endif
+    GDExtensionClassLibraryPtr library, GDExtensionInitialization *initialization) {
     GDExtensionBinding::InitObject init(interface, library, initialization);
     init.register_initializer(initialize_unicore);
     init.register_terminator(uninitialize_unicore);

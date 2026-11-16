@@ -1,0 +1,82 @@
+[
+  {
+    "case": "Box-static_structural",
+    "file": "project.json",
+    "sha256": "1fcd3b560f1d909e27c6a969244d7187e56f690f0fe1d60cc7808da48acd0e00"
+  },
+  {
+    "case": "Box-static_structural",
+    "file": "model.ucjob",
+    "sha256": "0491e37e63ae6aa7f0b559eada89456bafd3c0057b3488fa7b87c16a46698fde"
+  },
+  {
+    "case": "Box-static_structural",
+    "file": "results.json",
+    "sha256": "92c16697e4f076d89390159d13dfc6d4f432c493eadf46800091b8e115fa572b"
+  },
+  {
+    "case": "Box-static_structural",
+    "file": "status.json",
+    "sha256": "44a1428ea919c52330eff7a6fbaaeaa228d04e6b2f050299a09d3248bab7f2f7"
+  },
+  {
+    "case": "Box-steady_thermal",
+    "file": "project.json",
+    "sha256": "4b9b0bd1a0ce9d06aa65037b1858295d172478f106fa73d85fab4bc8695198f1"
+  },
+  {
+    "case": "Box-steady_thermal",
+    "file": "model.ucjob",
+    "sha256": "1bf6b72bc9c48ff42bb60ad59cacdb8074786813a14881bff8ea52e6bc756c57"
+  },
+  {
+    "case": "Box-steady_thermal",
+    "file": "results.json",
+    "sha256": "c7f1a4a1eded1a2fa5b9cca3c3dc8c5b0072c14c5be7eccc46dface5062cabf7"
+  },
+  {
+    "case": "Box-steady_thermal",
+    "file": "status.json",
+    "sha256": "1d2776558984d042dfbcc984b3c22d16429a65dd129417c2a041d43d4ced5ae8"
+  },
+  {
+    "case": "Cylinder-static_structural",
+    "file": "project.json",
+    "sha256": "9b1047def73255da68f7da1436901cded0e12ac088c48d7d05f6f85f57c7532b"
+  },
+  {
+    "case": "Cylinder-static_structural",
+    "file": "model.ucjob",
+    "sha256": "a170233427717e50183c55e9729d72adaf02f87e866d46a30d07be719aa98311"
+  },
+  {
+    "case": "Cylinder-static_structural",
+    "file": "results.json",
+    "sha256": "da5f408ea7737d1025e6153eec83d2c86c990dbc63001020b6aaeb0eaa41af25"
+  },
+  {
+    "case": "Cylinder-static_structural",
+    "file": "status.json",
+    "sha256": "a455f52b2f8f6035423870a66df5017ff91da432b325151a4787f1d664c435ea"
+  },
+  {
+    "case": "Cylinder-steady_thermal",
+    "file": "project.json",
+    "sha256": "a6477db9aa42d3a3f09ecc61b96ec7cc4a2d53f79271a494e2a7c7e5429e07a4"
+  },
+  {
+    "case": "Cylinder-steady_thermal",
+    "file": "model.ucjob",
+    "sha256": "105d25583f16b5fbccb5dc628652123990584668eafe309105086c0620a1f5e0"
+  },
+  {
+    "case": "Cylinder-steady_thermal",
+    "file": "results.json",
+    "sha256": "5ab9ce2a7d31ce074c0b508a0790618b9d15f6cf08dc25f0158bcd01a7ed2b4f"
+  },
+  {
+    "case": "Cylinder-steady_thermal",
+    "file": "status.json",
+    "sha256": "0b067b4e6d0689d951c99c767601e4524b976a48606ab573b299adecd871350d"
+  }
+]

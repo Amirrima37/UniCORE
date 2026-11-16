@@ -1,0 +1,150 @@
+{
+  "checkpoint3": "PASS within bounded scope; Lam? reference not claimed",
+  "stage6": "PARTIAL",
+  "default_passed": 28,
+  "focused_tests": [
+    {
+      "exit": 0,
+      "passed": true,
+      "seconds": 16.65293489999749,
+      "test": "test_stage6_pipe"
+    },
+    {
+      "exit": 0,
+      "passed": true,
+      "seconds": 5.065505999999004,
+      "test": "test_stage6_pipe_contract"
+    },
+    {
+      "test": "test_stage6_sphere",
+      "exit": 0,
+      "passed": true,
+      "seconds": 8.029532800006564
+    },
+    {
+      "test": "test_stage6_cylinder",
+      "exit": 0,
+      "passed": true,
+      "seconds": 1.9983367000022554
+    },
+    {
+      "test": "test_stage5_provenance",
+      "exit": 0,
+      "passed": true,
+      "seconds": 0.9010258999987855
+    },
+    {
+      "test": "test_stage51_cache",
+      "exit": 0,
+      "passed": true,
+      "seconds": 3.2827269999979762
+    },
+    {
+      "test": "test_app_shell_suite",
+      "exit": 0,
+      "passed": true,
+      "seconds": 8.396192000000156
+    }
+  ],
+  "graphics": {
+    "test": "capture_stage6_pipe",
+    "exit": 0,
+    "passed": true,
+    "seconds": 25.993812100001378
+  },
+  "screenshots": [
+    {
+      "file": "stage6-pipe-mesh-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-pipe-mesh-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "stage6-pipe-inner_wall-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-pipe-inner_wall-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "stage6-pipe-displacement-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-pipe-displacement-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "stage6-pipe-temperature-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-pipe-temperature-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "stage6-pipe-heat_flux-1280.png",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "stage6-pipe-heat_flux-1920.png",
+      "size": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "independent_area_checks": [
+    {
+      "density": 1,
+      "end_area_relative_error": 0.025504641595567423,
+      "wall_area_relative_error": 0.006413148855794248
+    },
+    {
+      "density": 2,
+      "end_area_relative_error": 0.0064131488557943594,
+      "wall_area_relative_error": 0.0016056069643816118
+    },
+    {
+      "density": 4,
+      "end_area_relative_error": 0.0016056069643816118,
+      "wall_area_relative_error": 0.00040154685032089965
+    }
+  ],
+  "limitations": [
+    "Extreme thin walls exceed resource limits",
+    "Axial structural reference; no Lam? radial-stress validation",
+    "Historical crash unresolved",
+    "No new native builds or checkpoint/restart certification"
+  ]
+}

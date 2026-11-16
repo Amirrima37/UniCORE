@@ -1,0 +1,9 @@
+{
+  "command": [
+    "git",
+    "diff",
+    "--check"
+  ],
+  "exit_code": 2,
+  "output": "ui/cae/cae_workspace.gd:1862: new blank line at EOF.\nwarning: in the working copy of 'modules/llm_turret_mod.gd', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'modules/local_cube_module.gd', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'modules/quartz_cached_mod.gd', LF will be replaced by CRLF the next time Git touches it\n"
+}

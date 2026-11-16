@@ -1,0 +1,74 @@
+[
+	{
+		"elements": 4096,
+		"frames_during_preparation": 79,
+		"generation_ms": 5.274,
+		"max_frame_gap_ms": 8.108,
+		"nodes": 4913,
+		"pick_p95_ms": 0.173,
+		"resource_ms": 0.267,
+		"snapshot_ms": 0.046,
+		"stages": {
+			"bvh_ms": 46.214,
+			"connectivity_ms": 8.872,
+			"faces_ms": 109.276,
+			"quality_ms": 249.218
+		},
+		"static_memory_bytes": 31083728,
+		"worker_wall_ms": 529.985
+	},
+	{
+		"elements": 10000,
+		"frames_during_preparation": 180,
+		"generation_ms": 12.162,
+		"max_frame_gap_ms": 8.537,
+		"nodes": 11466,
+		"pick_p95_ms": 0.379,
+		"resource_ms": 0.357,
+		"snapshot_ms": 0.012,
+		"stages": {
+			"bvh_ms": 105.69,
+			"connectivity_ms": 21.981,
+			"faces_ms": 276.53,
+			"quality_ms": 606.372
+		},
+		"static_memory_bytes": 47666792,
+		"worker_wall_ms": 1238.259
+	},
+	{
+		"elements": 50000,
+		"frames_during_preparation": 1400,
+		"generation_ms": 62.241,
+		"max_frame_gap_ms": 8.544,
+		"nodes": 54621,
+		"pick_p95_ms": 0.398,
+		"resource_ms": 2.606,
+		"snapshot_ms": 0.016,
+		"stages": {
+			"bvh_ms": 859.527,
+			"connectivity_ms": 187.728,
+			"faces_ms": 2090.335,
+			"quality_ms": 5205.739
+		},
+		"static_memory_bytes": 150504960,
+		"worker_wall_ms": 9675.224
+	},
+	{
+		"elements": 100000,
+		"frames_during_preparation": 2511,
+		"generation_ms": 219.827,
+		"max_frame_gap_ms": 8.618,
+		"nodes": 106641,
+		"pick_p95_ms": 0.311,
+		"resource_ms": 3.97,
+		"snapshot_ms": 0.031,
+		"stages": {
+			"bvh_ms": 1072.934,
+			"connectivity_ms": 315.443,
+			"faces_ms": 4641.897,
+			"quality_ms": 8755.034
+		},
+		"static_memory_bytes": 274681832,
+		"worker_wall_ms": 17432.087
+	}
+]

@@ -1,0 +1,11 @@
+{
+  "name": "native",
+  "exit_code": 0,
+  "outcome": "PASS",
+  "command": [
+    "C:\\Users\\Victus\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "tests/cad24_native.py"
+  ],
+  "seconds": 21.16994330000307,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\native-1794622917898336300"
+}

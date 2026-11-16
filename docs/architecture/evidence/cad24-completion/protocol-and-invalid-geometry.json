@@ -1,0 +1,1343 @@
+{
+  "factory": {
+    "state": "completed",
+    "exit_code": 0,
+    "error": "",
+    "seconds": 0.25453879999986384,
+    "started_utc": "2026-11-14T14:22:15.541806+00:00",
+    "ended_utc": "2026-11-14T14:22:15.796389+00:00",
+    "peak_working_set_bytes": 33124352,
+    "peak_memory_bytes": 23904256,
+    "job_object": true
+  },
+  "fixtures": {
+    "inverted.brep": "9ce96699c0be6af135f14a2bc36b7ce8fcd46986d052aad33ad772fcdca9f525",
+    "open-shell.brep": "508640be512018ec00b96260b1d003fc5ee1477f0bbeedd5eb9c645d909f8676",
+    "open-shell.step": "b5d91ebcf9eb475d67111c55924187be994156383424c440a2ff11c2ec02a829",
+    "ordered.brep": "6d0dd8d77b59c08ee4a6a787c0e488dcd369e8cc2c16098c7c06a80551d17b45",
+    "reordered.brep": "30c4193959b4e9341b54c40166665289b0e290f3f703ee7af150525558e58485"
+  },
+  "cases": [
+    {
+      "case": "inverted.brep",
+      "outcome": "CORRECT_REJECTION",
+      "native": {
+        "before": {
+          "analyzer_valid": true,
+          "area": 0.10000000000000002,
+          "bounds": [
+            0.0,
+            0.0,
+            0.0,
+            0.1,
+            0.2,
+            0.1
+          ],
+          "centroid": [
+            0.05000000000000001,
+            0.10000000000000002,
+            0.05000000000000002
+          ],
+          "closed_shells": true,
+          "diagnostics": [
+            "Nonpositive signed physical volume; check orientation or degenerate geometry"
+          ],
+          "edge_count": 12,
+          "face_count": 6,
+          "faces": [
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.0,
+                0.1,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                6.66666666666667e-05
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                1.0,
+                0.0,
+                -0.0
+              ],
+              "slot": 1
+            },
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.1,
+                0.0,
+                0.0,
+                0.1,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.1,
+                0.1,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                6.66666666666667e-05
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                -1.0,
+                -0.0,
+                0.0
+              ],
+              "slot": 2
+            },
+            {
+              "area": 0.010000000000000002,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.1
+              ],
+              "center": [
+                0.05,
+                0.0,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-06,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-06
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                -0.0,
+                1.0,
+                0.0
+              ],
+              "slot": 3
+            },
+            {
+              "area": 0.010000000000000002,
+              "bounds": [
+                0.0,
+                0.2,
+                0.0,
+                0.1,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.05,
+                0.2,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-06,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-06
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "slot": 4
+            },
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.2,
+                0.0
+              ],
+              "center": [
+                0.05,
+                0.1,
+                0.0
+              ],
+              "inertia": [
+                6.66666666666667e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-05
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "slot": 5
+            },
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.0,
+                0.0,
+                0.1,
+                0.1,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.05,
+                0.1,
+                0.1
+              ],
+              "inertia": [
+                6.66666666666667e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-05
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              "slot": 6
+            }
+          ],
+          "manifold_edge_incidence": true,
+          "maximum_tolerance_m": 1e-07,
+          "self_intersection_guarantee": false,
+          "shape_type": 2,
+          "shell_count": 1,
+          "solid_count": 1,
+          "status": "INVALID",
+          "vertex_count": 8,
+          "volume": -0.002
+        },
+        "face_history": [],
+        "feature_id": "geometry",
+        "input_hashes": [
+          "9ce96699c0be6af135f14a2bc36b7ce8fcd46986d052aad33ad772fcdca9f525"
+        ],
+        "occt_version": "7.8.1",
+        "ok": true,
+        "operation_id": "1f55d80f-4d27-455e-b570-204d212a5c7c",
+        "schema": 1,
+        "units": "m",
+        "validation": {
+          "analyzer_valid": true,
+          "area": 0.10000000000000002,
+          "bounds": [
+            0.0,
+            0.0,
+            0.0,
+            0.1,
+            0.2,
+            0.1
+          ],
+          "centroid": [
+            0.05000000000000001,
+            0.10000000000000002,
+            0.05000000000000002
+          ],
+          "closed_shells": true,
+          "diagnostics": [
+            "Nonpositive signed physical volume; check orientation or degenerate geometry"
+          ],
+          "edge_count": 12,
+          "face_count": 6,
+          "faces": [
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.0,
+                0.1,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                6.66666666666667e-05
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                1.0,
+                0.0,
+                -0.0
+              ],
+              "slot": 1
+            },
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.1,
+                0.0,
+                0.0,
+                0.1,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.1,
+                0.1,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                6.66666666666667e-05
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                -1.0,
+                -0.0,
+                0.0
+              ],
+              "slot": 2
+            },
+            {
+              "area": 0.010000000000000002,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.1
+              ],
+              "center": [
+                0.05,
+                0.0,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-06,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-06
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                -0.0,
+                1.0,
+                0.0
+              ],
+              "slot": 3
+            },
+            {
+              "area": 0.010000000000000002,
+              "bounds": [
+                0.0,
+                0.2,
+                0.0,
+                0.1,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.05,
+                0.2,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-06,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-06
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "slot": 4
+            },
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.2,
+                0.0
+              ],
+              "center": [
+                0.05,
+                0.1,
+                0.0
+              ],
+              "inertia": [
+                6.66666666666667e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-05
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "slot": 5
+            },
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.0,
+                0.0,
+                0.1,
+                0.1,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.05,
+                0.1,
+                0.1
+              ],
+              "inertia": [
+                6.66666666666667e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-05
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              "slot": 6
+            }
+          ],
+          "manifold_edge_incidence": true,
+          "maximum_tolerance_m": 1e-07,
+          "self_intersection_guarantee": false,
+          "shape_type": 2,
+          "shell_count": 1,
+          "solid_count": 1,
+          "status": "INVALID",
+          "vertex_count": 8,
+          "volume": -0.002
+        },
+        "worker_version": "1",
+        "exit_code": 0,
+        "process": {
+          "pid": 6132,
+          "exit_code": 0,
+          "peak_commit_bytes": 23879680,
+          "seconds": 0.1942328000004636,
+          "job_object": true
+        }
+      }
+    },
+    {
+      "case": "open-shell.brep",
+      "outcome": "CORRECT_REJECTION",
+      "native": {
+        "before": {
+          "analyzer_valid": true,
+          "area": 0.08000000000000002,
+          "bounds": [
+            0.0,
+            0.0,
+            0.0,
+            0.1,
+            0.2,
+            0.1
+          ],
+          "centroid": [
+            0.058750000000000004,
+            0.1,
+            0.05
+          ],
+          "closed_shells": false,
+          "diagnostics": [
+            "Closed shells are required for solid CAE",
+            "Exactly one solid without auxiliary topology is supported"
+          ],
+          "edge_count": 12,
+          "face_count": 5,
+          "faces": [
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.1,
+                0.0,
+                0.0,
+                0.1,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.1,
+                0.1,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                6.66666666666667e-05
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                1.0,
+                0.0,
+                -0.0
+              ],
+              "slot": 1
+            },
+            {
+              "area": 0.010000000000000002,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.1
+              ],
+              "center": [
+                0.05,
+                0.0,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-06,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-06
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "slot": 2
+            },
+            {
+              "area": 0.010000000000000002,
+              "bounds": [
+                0.0,
+                0.2,
+                0.0,
+                0.1,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.05,
+                0.2,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-06,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-06
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                -0.0,
+                1.0,
+                0.0
+              ],
+              "slot": 3
+            },
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.2,
+                0.0
+              ],
+              "center": [
+                0.05,
+                0.1,
+                0.0
+              ],
+              "inertia": [
+                6.66666666666667e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-05
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              "slot": 4
+            },
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.0,
+                0.0,
+                0.1,
+                0.1,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.05,
+                0.1,
+                0.1
+              ],
+              "inertia": [
+                6.66666666666667e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-05
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "slot": 5
+            }
+          ],
+          "manifold_edge_incidence": true,
+          "maximum_tolerance_m": 1e-07,
+          "self_intersection_guarantee": false,
+          "shape_type": 3,
+          "shell_count": 1,
+          "solid_count": 0,
+          "status": "INVALID",
+          "vertex_count": 8,
+          "volume": 0.0016000000000000003
+        },
+        "face_history": [],
+        "feature_id": "geometry",
+        "input_hashes": [
+          "508640be512018ec00b96260b1d003fc5ee1477f0bbeedd5eb9c645d909f8676"
+        ],
+        "occt_version": "7.8.1",
+        "ok": true,
+        "operation_id": "a81dc91a-c927-467e-9728-43dcd02b157e",
+        "schema": 1,
+        "units": "m",
+        "validation": {
+          "analyzer_valid": true,
+          "area": 0.08000000000000002,
+          "bounds": [
+            0.0,
+            0.0,
+            0.0,
+            0.1,
+            0.2,
+            0.1
+          ],
+          "centroid": [
+            0.058750000000000004,
+            0.1,
+            0.05
+          ],
+          "closed_shells": false,
+          "diagnostics": [
+            "Closed shells are required for solid CAE",
+            "Exactly one solid without auxiliary topology is supported"
+          ],
+          "edge_count": 12,
+          "face_count": 5,
+          "faces": [
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.1,
+                0.0,
+                0.0,
+                0.1,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.1,
+                0.1,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                6.66666666666667e-05
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                1.0,
+                0.0,
+                -0.0
+              ],
+              "slot": 1
+            },
+            {
+              "area": 0.010000000000000002,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.1
+              ],
+              "center": [
+                0.05,
+                0.0,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-06,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-06
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "slot": 2
+            },
+            {
+              "area": 0.010000000000000002,
+              "bounds": [
+                0.0,
+                0.2,
+                0.0,
+                0.1,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.05,
+                0.2,
+                0.05
+              ],
+              "inertia": [
+                8.333333333333337e-06,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-06
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                -0.0,
+                1.0,
+                0.0
+              ],
+              "slot": 3
+            },
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.2,
+                0.0
+              ],
+              "center": [
+                0.05,
+                0.1,
+                0.0
+              ],
+              "inertia": [
+                6.66666666666667e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-05
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              "slot": 4
+            },
+            {
+              "area": 0.020000000000000004,
+              "bounds": [
+                0.0,
+                0.0,
+                0.1,
+                0.1,
+                0.2,
+                0.1
+              ],
+              "center": [
+                0.05,
+                0.1,
+                0.1
+              ],
+              "inertia": [
+                6.66666666666667e-05,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666674e-05,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333337e-05
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "slot": 5
+            }
+          ],
+          "manifold_edge_incidence": true,
+          "maximum_tolerance_m": 1e-07,
+          "self_intersection_guarantee": false,
+          "shape_type": 3,
+          "shell_count": 1,
+          "solid_count": 0,
+          "status": "INVALID",
+          "vertex_count": 8,
+          "volume": 0.0016000000000000003
+        },
+        "worker_version": "1",
+        "exit_code": 0,
+        "process": {
+          "pid": 3880,
+          "exit_code": 0,
+          "peak_commit_bytes": 23883776,
+          "seconds": 0.20276910001120996,
+          "job_object": true
+        }
+      }
+    },
+    {
+      "case": "unknown-schema",
+      "outcome": "CORRECT_REJECTION",
+      "native": {
+        "error": "Unsupported schema or units",
+        "occt_version": "7.8.1",
+        "ok": false,
+        "schema": 1,
+        "status": "UNSUPPORTED",
+        "units": "m",
+        "worker_version": "1"
+      },
+      "process": {
+        "state": "failed",
+        "exit_code": 1,
+        "error": "",
+        "seconds": 0.20456019999983255,
+        "started_utc": "2026-11-14T14:22:16.407493+00:00",
+        "ended_utc": "2026-11-14T14:22:16.612086+00:00",
+        "peak_working_set_bytes": 28434432,
+        "peak_memory_bytes": 23924736,
+        "job_object": true
+      },
+      "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\protocol\\unknown-schema-1794666136405922100"
+    },
+    {
+      "case": "traversal",
+      "outcome": "CORRECT_REJECTION",
+      "native": {
+        "error": "Job-local filename required",
+        "occt_version": "7.8.1",
+        "ok": false,
+        "schema": 1,
+        "status": "INVALID",
+        "units": "m",
+        "worker_version": "1"
+      },
+      "process": {
+        "state": "failed",
+        "exit_code": 1,
+        "error": "",
+        "seconds": 0.20739480000338517,
+        "started_utc": "2026-11-14T14:22:16.614188+00:00",
+        "ended_utc": "2026-11-14T14:22:16.821621+00:00",
+        "peak_working_set_bytes": 28401664,
+        "peak_memory_bytes": 23924736,
+        "job_object": true
+      },
+      "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\protocol\\traversal-1794666136612676500"
+    },
+    {
+      "case": "wrong-hash",
+      "outcome": "CORRECT_REJECTION",
+      "native": {
+        "error": "Native input SHA-256 mismatch",
+        "occt_version": "7.8.1",
+        "ok": false,
+        "schema": 1,
+        "status": "INVALID",
+        "units": "m",
+        "worker_version": "1"
+      },
+      "process": {
+        "state": "failed",
+        "exit_code": 1,
+        "error": "",
+        "seconds": 0.21904530000756495,
+        "started_utc": "2026-11-14T14:22:16.823715+00:00",
+        "ended_utc": "2026-11-14T14:22:17.042798+00:00",
+        "peak_working_set_bytes": 27619328,
+        "peak_memory_bytes": 23949312,
+        "job_object": true
+      },
+      "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\protocol\\wrong-hash-1794666136822090800"
+    },
+    {
+      "case": "oversize-request",
+      "outcome": "CORRECT_REJECTION",
+      "native": {
+        "error": "Request limit",
+        "occt_version": "7.8.1",
+        "ok": false,
+        "schema": 1,
+        "status": "INVALID",
+        "units": "m",
+        "worker_version": "1"
+      },
+      "process": {
+        "state": "failed",
+        "exit_code": 1,
+        "error": "",
+        "seconds": 0.19926300000224728,
+        "started_utc": "2026-11-14T14:22:17.052938+00:00",
+        "ended_utc": "2026-11-14T14:22:17.252232+00:00",
+        "peak_working_set_bytes": 28254208,
+        "peak_memory_bytes": 23904256,
+        "job_object": true
+      },
+      "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\protocol\\oversize-request-1794666137043293700"
+    },
+    {
+      "case": "oversize-brep",
+      "outcome": "CORRECT_REJECTION",
+      "native": {
+        "error": "Input/output file limit",
+        "occt_version": "7.8.1",
+        "ok": false,
+        "schema": 1,
+        "status": "INVALID",
+        "units": "m",
+        "worker_version": "1"
+      },
+      "process": {
+        "state": "failed",
+        "exit_code": 1,
+        "error": "",
+        "seconds": 0.1762008999940008,
+        "started_utc": "2026-11-14T14:22:17.269365+00:00",
+        "ended_utc": "2026-11-14T14:22:17.445596+00:00",
+        "peak_working_set_bytes": 27303936,
+        "peak_memory_bytes": 23887872,
+        "job_object": true
+      },
+      "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\protocol\\oversize-brep-1794666137252799900"
+    },
+    {
+      "case": "open-shell-step",
+      "outcome": "CORRECT_REJECTION",
+      "native": {
+        "before": {
+          "analyzer_valid": true,
+          "area": 8.000000000000001e-08,
+          "bounds": [
+            0.0,
+            0.0,
+            0.0,
+            0.0001,
+            0.0002,
+            0.0001
+          ],
+          "centroid": [
+            5.8750000000000005e-05,
+            0.00010000000000000002,
+            5e-05
+          ],
+          "closed_shells": false,
+          "diagnostics": [
+            "Closed shells are required for solid CAE",
+            "Exactly one solid without auxiliary topology is supported"
+          ],
+          "edge_count": 12,
+          "face_count": 5,
+          "faces": [
+            {
+              "area": 2.0000000000000004e-08,
+              "bounds": [
+                0.0001,
+                0.0,
+                0.0,
+                0.0001,
+                0.0002,
+                0.0001
+              ],
+              "center": [
+                0.0001,
+                0.00010000000000000002,
+                5e-05
+              ],
+              "inertia": [
+                8.333333333333334e-17,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666658e-17,
+                0.0,
+                0.0,
+                0.0,
+                6.666666666666668e-17
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                1.0,
+                0.0,
+                -0.0
+              ],
+              "slot": 1
+            },
+            {
+              "area": 1.0000000000000002e-08,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.0001,
+                0.0,
+                0.0001
+              ],
+              "center": [
+                5.000000000000001e-05,
+                0.0,
+                5e-05
+              ],
+              "inertia": [
+                8.333333333333335e-18,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666677e-17,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333338e-18
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                0.0,
+                -1.0,
+                -0.0
+              ],
+              "slot": 2
+            },
+            {
+              "area": 1.0000000000000002e-08,
+              "bounds": [
+                0.0,
+                0.0002,
+                0.0,
+                0.0001,
+                0.0002,
+                0.0001
+              ],
+              "center": [
+                5.000000000000001e-05,
+                0.0002,
+                5e-05
+              ],
+              "inertia": [
+                8.333333333333354e-18,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666677e-17,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333354e-18
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                -0.0,
+                1.0,
+                0.0
+              ],
+              "slot": 3
+            },
+            {
+              "area": 2.0000000000000004e-08,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.0001,
+                0.0002,
+                0.0
+              ],
+              "center": [
+                5e-05,
+                0.00010000000000000002,
+                0.0
+              ],
+              "inertia": [
+                6.666666666666671e-17,
+                0.0,
+                0.0,
+                0.0,
+                1.666666666666667e-17,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333339e-17
+              ],
+              "orientation": 1,
+              "plane_outward_normal": [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              "slot": 4
+            },
+            {
+              "area": 2.0000000000000004e-08,
+              "bounds": [
+                0.0,
+                0.0,
+                0.0001,
+                0.0001,
+                0.0002,
+                0.0001
+              ],
+              "center": [
+                5e-05,
+                0.00010000000000000002,
+                0.0001
+              ],
+              "inertia": [
+                6.666666666666668e-17,
+                0.0,
+                0.0,
+                0.0,
+                1.6666666666666658e-17,
+                0.0,
+                0.0,
+                0.0,
+                8.333333333333339e-17
+              ],
+              "orientation": 0,
+              "plane_outward_normal": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "slot": 5
+            }
+          ],
+          "manifold_edge_incidence": true,
+          "maximum_tolerance_m": 1e-07,
+          "self_intersection_guarantee": false,
+          "shape_type": 3,
+          "shell_count": 1,
+          "solid_count": 0,
+          "status": "INVALID",
+          "vertex_count": 8,
+          "volume": 1.6e-12
+        },
+        "error": "Invalid/unsupported input solid",
+        "feature_id": "fixture",
+        "input_hashes": [
+          "b5d91ebcf9eb475d67111c55924187be994156383424c440a2ff11c2ec02a829"
+        ],
+        "occt_version": "7.8.1",
+        "ok": false,
+        "operation_id": "98273a5e-39ac-4092-a877-91941ff763df",
+        "schema": 1,
+        "status": "INVALID",
+        "units": "m",
+        "worker_version": "1"
+      },
+      "process": {
+        "state": "failed",
+        "exit_code": 1,
+        "error": "",
+        "seconds": 0.23194759999751113,
+        "started_utc": "2026-11-14T14:22:17.449440+00:00",
+        "ended_utc": "2026-11-14T14:22:17.681433+00:00",
+        "peak_working_set_bytes": 34996224,
+        "peak_memory_bytes": 23945216,
+        "job_object": true
+      },
+      "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\protocol\\open-shell-step-1794666137446890800"
+    },
+    {
+      "case": "empty-brep",
+      "outcome": "CORRECT_REJECTION",
+      "native": {
+        "error": "Invalid BREP serialization",
+        "occt_version": "7.8.1",
+        "ok": false,
+        "schema": 1,
+        "status": "INVALID",
+        "units": "m",
+        "worker_version": "1"
+      },
+      "process": {
+        "state": "failed",
+        "exit_code": 1,
+        "error": "",
+        "seconds": 0.2059397999983048,
+        "started_utc": "2026-11-14T14:22:17.683955+00:00",
+        "ended_utc": "2026-11-14T14:22:17.889934+00:00",
+        "peak_working_set_bytes": 26615808,
+        "peak_memory_bytes": 23912448,
+        "job_object": true
+      },
+      "job": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\protocol\\empty-brep-1794666137682242200"
+    }
+  ]
+}

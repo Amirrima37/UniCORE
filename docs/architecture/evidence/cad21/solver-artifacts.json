@@ -1,0 +1,14 @@
+[
+  {
+    "case": "fuse",
+    "path": "solver-jobs\\fuse-5b61e2b1ce97",
+    "input_sha256": "5b61e2b1ce979675da3656fb041809672432292b2b4e2d79b7a5e82a2948b02f",
+    "dat_sha256": "073f44ef61142937f9a2f8c7a056d5022613b5776d6ceae10b03eb0790707930"
+  },
+  {
+    "case": "step-cut",
+    "path": "solver-jobs\\step-cut-9956d24279a3",
+    "input_sha256": "9956d24279a3a5179bd8b3955c136a909428fa7343421b13b8319814d08029c8",
+    "dat_sha256": "e3ff3e80c131a9056037cbd0c6ab2a0dcd62c060f04360c33e79d6444984a8e9"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "boundary",
+  "exit_code": 0,
+  "outcome": "PASS",
+  "command": [
+    "D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe",
+    "--headless",
+    "--path",
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+    "-s",
+    "res://tests/cad24_boundary.gd"
+  ],
+  "seconds": 0.8165761999989627,
+  "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\boundary-1794655736317128500"
+}

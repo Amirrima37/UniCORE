@@ -1,0 +1,767 @@
+{
+  "assertions": 31458,
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "rows": [
+    {
+      "name": "unit-build",
+      "command": [
+        "C:/Qt/Tools/mingw1310_64/bin/x86_64-w64-mingw32-g++.exe",
+        "-std=c++17",
+        "-O2",
+        "-static",
+        "-ffp-contract=off",
+        "-Inative/src",
+        "native/tests/dynamics_test.cpp",
+        "-o",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 2.7839200000016717,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\unit-build.log"
+    },
+    {
+      "name": "unit-smoke",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2817351999983657,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\unit-smoke.log"
+    },
+    {
+      "name": "free",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe",
+        "free",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.022112599996034987,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\free.log",
+      "analytical_max_errors_u_v_a": [
+        7.565420862082339e-06,
+        1.682430583616057e-05,
+        3.0261683448329357e-05
+      ]
+    },
+    {
+      "name": "damped",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe",
+        "damped",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.023967500004800968,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\damped.log",
+      "analytical_max_errors_u_v_a": [
+        3.351466321108859e-06,
+        7.08317100081568e-06,
+        1.4186945366964632e-05
+      ]
+    },
+    {
+      "name": "step",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe",
+        "step",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.021674000003258698,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\step.log",
+      "analytical_max_errors_u_v_a": [
+        1.6492988947569565e-05,
+        2.6503796546201164e-05,
+        6.59719557902505e-05
+      ]
+    },
+    {
+      "name": "constant",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe",
+        "constant",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.021829700002854224,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\constant.log",
+      "analytical_max_errors_u_v_a": [
+        1.6492988947569565e-05,
+        2.6503796546201164e-05,
+        6.59719557902505e-05
+      ]
+    },
+    {
+      "name": "sine",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe",
+        "sine",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.022938299996894784,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\sine.log",
+      "analytical_max_errors_u_v_a": [
+        6.480568823907795e-06,
+        1.7550545882011326e-05,
+        2.592227529552016e-05
+      ]
+    },
+    {
+      "name": "velocity",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe",
+        "velocity",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.025257799999963026,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\velocity.log",
+      "analytical_max_errors_u_v_a": [
+        7.951138964401583e-06,
+        1.9791586738066025e-05,
+        3.1804555857592454e-05
+      ]
+    },
+    {
+      "name": "ramp",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe",
+        "ramp",
+        "0.005",
+        "800"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02773709999746643,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\ramp.log",
+      "analytical_max_errors_u_v_a": [
+        1.0126959101519617e-05,
+        2.6210361207507082e-05,
+        4.050783640602296e-05
+      ]
+    },
+    {
+      "name": "phase-0.04",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe",
+        "phase",
+        "0.04",
+        "100"
+      ],
+      "exit_code": 0,
+      "seconds": 0.018082099995808676,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\phase-0.04.log",
+      "phase_error_rad": 0.004262575341990704,
+      "normalized_u_v_a_errors": [
+        0.004218523128613465,
+        0.0033874915180486832,
+        0.004218523128613448
+      ]
+    },
+    {
+      "name": "phase-0.02",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe",
+        "phase",
+        "0.02",
+        "200"
+      ],
+      "exit_code": 0,
+      "seconds": 0.017068900000595022,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\phase-0.02.log",
+      "phase_error_rad": 0.0010664107397859723,
+      "normalized_u_v_a_errors": [
+        0.0010551804361977682,
+        0.0008479845621932151,
+        0.0010551804361977682
+      ]
+    },
+    {
+      "name": "phase-0.01",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe",
+        "phase",
+        "0.01",
+        "400"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02067739999620244,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\phase-0.01.log",
+      "phase_error_rad": 0.00026665066780928726,
+      "normalized_u_v_a_errors": [
+        0.00026387928060691776,
+        0.00021202352860372545,
+        0.00026387928060691776
+      ]
+    },
+    {
+      "name": "coupled",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe",
+        "coupled",
+        "0.001",
+        "1000"
+      ],
+      "exit_code": 0,
+      "seconds": 0.032789999997476116,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\coupled.log",
+      "reference_errors_u_v_a": [
+        7.459385990005174e-07,
+        3.4509247289760125e-06,
+        2.255199527356755e-05
+      ]
+    },
+    {
+      "name": "large-step-stability",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dynamics_test.exe",
+        "phase",
+        "1",
+        "100"
+      ],
+      "exit_code": 0,
+      "seconds": 0.01953969999885885,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\large-step-stability.log"
+    },
+    {
+      "name": "cylinder-time-500",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\cylinder-time-500.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\cylinder-time-500",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2931635999993887,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\cylinder-time-500.log",
+      "assembly_ms": 0.3547,
+      "setup_ms": 0.2286,
+      "integration_ms": 18.9938,
+      "peak_working_set_bytes": 6754304,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 2.710505431213761e-19,
+      "linear_iterations": 4509,
+      "temporal_normalized_u_v_a_errors": [
+        0.637368536930823,
+        0.6301796001859885,
+        0.6373685369327143
+      ],
+      "phase_error_rad": 0.6552697876371241,
+      "modal_Hz": 310.97638782154206,
+      "estimated_Hz": 309.35481037598174,
+      "expected_discrete_Hz": 309.35481037597566
+    },
+    {
+      "name": "cylinder-time-1000",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\cylinder-time-1000.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\cylinder-time-1000",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2397452000004705,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\cylinder-time-1000.log",
+      "assembly_ms": 0.3708,
+      "setup_ms": 0.2078,
+      "integration_ms": 33.6602,
+      "peak_working_set_bytes": 7634944,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 3.7947076036992655e-19,
+      "linear_iterations": 9009,
+      "temporal_normalized_u_v_a_errors": [
+        0.1627877497545071,
+        0.16455356796251638,
+        0.16278774975227647
+      ],
+      "phase_error_rad": 0.1649762049463135,
+      "modal_Hz": 310.97638782154206,
+      "estimated_Hz": 310.5681259147024,
+      "expected_discrete_Hz": 310.5681259146964
+    },
+    {
+      "name": "cylinder-time-2000",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\cylinder-time-2000.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\cylinder-time-2000",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.31551150000450434,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\cylinder-time-2000.log",
+      "assembly_ms": 0.4622,
+      "setup_ms": 0.2839,
+      "integration_ms": 78.1621,
+      "peak_working_set_bytes": 7548928,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 4.87890977618477e-19,
+      "linear_iterations": 20009,
+      "temporal_normalized_u_v_a_errors": [
+        0.040781874661070784,
+        0.041387151464306354,
+        0.04078187466420205
+      ],
+      "phase_error_rad": 0.041317237908742754,
+      "modal_Hz": 310.97638782154206,
+      "estimated_Hz": 310.8741412318629,
+      "expected_discrete_Hz": 310.8741412318568,
+      "fft_peak_Hz": 310.66572209944263,
+      "fft_resolution_Hz": 15.533286104972131
+    },
+    {
+      "name": "spatial-1",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\spatial-1.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\spatial-1",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06508949999988545,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\spatial-1.log",
+      "assembly_ms": 0.4252,
+      "setup_ms": 0.2213,
+      "integration_ms": 4.4826,
+      "peak_working_set_bytes": 5971968,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 1.6263032587282567e-19,
+      "linear_iterations": 1009,
+      "first_discrete_spatial_frequency_Hz": 310.97638782154206
+    },
+    {
+      "name": "spatial-2",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\spatial-2.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\spatial-2",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1534922999999253,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\spatial-2.log",
+      "assembly_ms": 2.3022,
+      "setup_ms": 1.3345,
+      "integration_ms": 25.4277,
+      "peak_working_set_bytes": 7081984,
+      "max_equilibrium_residual": 3.2426972934225376e-12,
+      "max_energy_balance_J": 1.8973538018496328e-19,
+      "linear_iterations": 810,
+      "first_discrete_spatial_frequency_Hz": 278.6816683285975
+    },
+    {
+      "name": "repeat",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\repeat.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\repeat",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3249175999953877,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\repeat.log",
+      "assembly_ms": 0.4222,
+      "setup_ms": 0.2678,
+      "integration_ms": 86.7588,
+      "peak_working_set_bytes": 7430144,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 4.87890977618477e-19,
+      "linear_iterations": 20009
+    },
+    {
+      "name": "FEM-damped-forced",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\FEM-damped-forced.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\FEM-damped-forced",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14612900000065565,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\FEM-damped-forced.log",
+      "assembly_ms": 0.3695,
+      "setup_ms": 0.1807,
+      "integration_ms": 18.1412,
+      "peak_working_set_bytes": 6692864,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 1.1817803680091998e-17,
+      "linear_iterations": 4509
+    },
+    {
+      "name": "density-zero",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\density-zero.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\density-zero",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.03324530000099912,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\density-zero.log"
+    },
+    {
+      "name": "density-negative",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\density-negative.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\density-negative",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.03586849999555852,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\density-negative.log"
+    },
+    {
+      "name": "elastic-invalid",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\elastic-invalid.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\elastic-invalid",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.037004199999501,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\elastic-invalid.log"
+    },
+    {
+      "name": "nonfinite-initial",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\nonfinite-initial.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\nonfinite-initial",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.041425099996558856,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\nonfinite-initial.log"
+    },
+    {
+      "name": "support-motion",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\support-motion.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\support-motion",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.04323809999914374,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\support-motion.log"
+    },
+    {
+      "name": "trailing",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\trailing.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\trailing",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.03773240000009537,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\trailing.log"
+    },
+    {
+      "name": "malformed-load",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\malformed-load.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\malformed-load",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.036585900001227856,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\malformed-load.log"
+    },
+    {
+      "name": "bad-version",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\bad-version.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\bad-version",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.03619060000346508,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\bad-version.log"
+    },
+    {
+      "name": "dt-zero",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dt-zero.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dt-zero",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.03061380000144709,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dt-zero.log"
+    },
+    {
+      "name": "dt-negative",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dt-negative.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dt-negative",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.026109800004633144,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\dt-negative.log"
+    },
+    {
+      "name": "excessive-steps",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\excessive-steps.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\excessive-steps",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.027210799999011215,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\excessive-steps.log"
+    },
+    {
+      "name": "negative-damping",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\negative-damping.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\negative-damping",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.03015130000130739,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\negative-damping.log"
+    },
+    {
+      "name": "nonfinite-damping",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\nonfinite-damping.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\nonfinite-damping",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.032807299998239614,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\nonfinite-damping.log"
+    },
+    {
+      "name": "nonconvergence",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\nonconvergence.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\nonconvergence",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.032195100000535604,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\nonconvergence.log"
+    },
+    {
+      "name": "wall-limit",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\wall-limit.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\wall-limit",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.03232910000224365,
+      "expected_exit": 2,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\wall-limit.log"
+    },
+    {
+      "name": "cancel-running",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\cancel-running.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\cancel-running",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 3,
+      "expected_exit": 3,
+      "seconds": 0.27531959999760147
+    },
+    {
+      "name": "recovery",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\recovery.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\recovery",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04308119999768678,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\numerical-attempt1\\recovery.log",
+      "assembly_ms": 0.4707,
+      "setup_ms": 0.2907,
+      "integration_ms": 7.2733,
+      "peak_working_set_bytes": 5799936,
+      "max_equilibrium_residual": 4.118740984502525e-12,
+      "max_energy_balance_J": 7.860465750519907e-19,
+      "linear_iterations": 1809
+    }
+  ]
+}

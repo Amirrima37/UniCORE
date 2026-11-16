@@ -1,0 +1,44 @@
+[
+  {
+    "test": "test_stage6_condition_conflicts",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.9446802999955253
+  },
+  {
+    "test": "test_stage6_sphere",
+    "exit": 0,
+    "passed": true,
+    "seconds": 9.458210199998575
+  },
+  {
+    "test": "test_stage6_pipe",
+    "exit": 0,
+    "passed": true,
+    "seconds": 20.327414399995178
+  },
+  {
+    "test": "test_stage6_cylinder",
+    "exit": 0,
+    "passed": true,
+    "seconds": 2.3287587000013446
+  },
+  {
+    "test": "test_stage5_provenance",
+    "exit": 0,
+    "passed": true,
+    "seconds": 0.9043593000023975
+  },
+  {
+    "test": "test_stage51_cache",
+    "exit": 0,
+    "passed": true,
+    "seconds": 3.565900999994483
+  },
+  {
+    "test": "test_app_shell_suite",
+    "exit": 0,
+    "passed": true,
+    "seconds": 10.259785499998543
+  }
+]

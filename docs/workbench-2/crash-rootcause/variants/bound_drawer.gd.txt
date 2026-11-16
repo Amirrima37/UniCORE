@@ -1,0 +1,6 @@
+extends "res://ui/analysis_drawer/analysis_drawer.gd"
+func setup(event_bus: Node = null):
+ _event_bus=event_bus
+ if _event_bus:_event_bus.subscribe("interface_settings_changed",_on_interface_update)
+func _on_interface_update(_data):
+ _apply_cyber_styling()

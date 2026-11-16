@@ -1,0 +1,194 @@
+[
+  {
+    "name": "build-structural_solver_test-release",
+    "exit": 0,
+    "seconds": 3.3560402000002796
+  },
+  {
+    "name": "structural_solver_test-release",
+    "exit": 0,
+    "seconds": 0.5265768999997817
+  },
+  {
+    "name": "build-hex8_test-release",
+    "exit": 0,
+    "seconds": 8.172388099999807
+  },
+  {
+    "name": "hex8_test-release",
+    "exit": 0,
+    "seconds": 0.4880042000004323
+  },
+  {
+    "name": "build-thermal_radiation_test-release",
+    "exit": 0,
+    "seconds": 8.46415849999903
+  },
+  {
+    "name": "thermal_radiation_test-release",
+    "exit": 0,
+    "seconds": 0.6222994999989169
+  },
+  {
+    "name": "build-sparse_preconditioner_test-release",
+    "exit": 0,
+    "seconds": 4.70986499999708
+  },
+  {
+    "name": "sparse_preconditioner_test-release",
+    "exit": 0,
+    "seconds": 0.5667296999999962
+  },
+  {
+    "name": "build-parallel_assembly_test-release",
+    "exit": 0,
+    "seconds": 6.282918100001552
+  },
+  {
+    "name": "parallel_assembly_test-release",
+    "exit": 0,
+    "seconds": 1.552333899999212
+  },
+  {
+    "name": "build-structural_solver_test-debug",
+    "exit": 0,
+    "seconds": 2.887965699999768
+  },
+  {
+    "name": "structural_solver_test-debug",
+    "exit": 0,
+    "seconds": 0.5339020999999775
+  },
+  {
+    "name": "build-hex8_test-debug",
+    "exit": 0,
+    "seconds": 6.001417499999661
+  },
+  {
+    "name": "hex8_test-debug",
+    "exit": 0,
+    "seconds": 0.9241403000014543
+  },
+  {
+    "name": "build-thermal_radiation_test-debug",
+    "exit": 0,
+    "seconds": 6.140152800002397
+  },
+  {
+    "name": "thermal_radiation_test-debug",
+    "exit": 0,
+    "seconds": 1.0516820000011649
+  },
+  {
+    "name": "build-sparse_preconditioner_test-debug",
+    "exit": 0,
+    "seconds": 3.9565653999998176
+  },
+  {
+    "name": "sparse_preconditioner_test-debug",
+    "exit": 0,
+    "seconds": 0.7871003000000201
+  },
+  {
+    "name": "build-parallel_assembly_test-debug",
+    "exit": 0,
+    "seconds": 5.162858100000449
+  },
+  {
+    "name": "parallel_assembly_test-debug",
+    "exit": 0,
+    "seconds": 5.396431900000607
+  },
+  {
+    "name": "build-structural_solver_test-noomp",
+    "exit": 0,
+    "seconds": 3.248048599998583
+  },
+  {
+    "name": "structural_solver_test-noomp",
+    "exit": 0,
+    "seconds": 0.45977200000197627
+  },
+  {
+    "name": "build-hex8_test-noomp",
+    "exit": 0,
+    "seconds": 7.756162700003188
+  },
+  {
+    "name": "hex8_test-noomp",
+    "exit": 0,
+    "seconds": 0.47238609999840264
+  },
+  {
+    "name": "build-thermal_radiation_test-noomp",
+    "exit": 0,
+    "seconds": 8.578157200001442
+  },
+  {
+    "name": "thermal_radiation_test-noomp",
+    "exit": 0,
+    "seconds": 0.48574899999948684
+  },
+  {
+    "name": "build-sparse_preconditioner_test-noomp",
+    "exit": 0,
+    "seconds": 4.996264400000655
+  },
+  {
+    "name": "sparse_preconditioner_test-noomp",
+    "exit": 0,
+    "seconds": 0.42179480000049807
+  },
+  {
+    "name": "build-parallel_assembly_test-noomp",
+    "exit": 0,
+    "seconds": 5.691454200001317
+  },
+  {
+    "name": "parallel_assembly_test-noomp",
+    "exit": 0,
+    "seconds": 2.0644600999985414
+  },
+  {
+    "name": "solve-examples-release",
+    "exit": 0,
+    "seconds": 0.07432270000208518,
+    "exact_fields": true,
+    "binary_sha256": "792a7ae22def65bd804386768f77dc49c2970b97c7105d2fb99c7aa23fc8de56"
+  },
+  {
+    "name": "solve-examples-debug",
+    "exit": 0,
+    "seconds": 0.7042849999997998,
+    "exact_fields": true,
+    "binary_sha256": "ab398f387f8a9de6304afd9954b6ffbf386e765d1c39a31cfc43c723dfa97133"
+  },
+  {
+    "name": "solve-examples-noomp",
+    "exit": 0,
+    "seconds": 0.3411201999988407,
+    "exact_fields": true,
+    "binary_sha256": "863a644b0d3cb2a963c5f34b2eee261841893d4d834e9ac4e4633d13ba9f91b6"
+  },
+  {
+    "name": "solve-extreme-checkpoint-release",
+    "exit": 0,
+    "seconds": 0.07822980000128155,
+    "exact_fields": true,
+    "binary_sha256": "792a7ae22def65bd804386768f77dc49c2970b97c7105d2fb99c7aa23fc8de56"
+  },
+  {
+    "name": "solve-extreme-checkpoint-debug",
+    "exit": 0,
+    "seconds": 0.06168919999981881,
+    "exact_fields": true,
+    "binary_sha256": "ab398f387f8a9de6304afd9954b6ffbf386e765d1c39a31cfc43c723dfa97133"
+  },
+  {
+    "name": "solve-extreme-checkpoint-noomp",
+    "exit": 0,
+    "seconds": 0.07112929999857442,
+    "exact_fields": true,
+    "binary_sha256": "863a644b0d3cb2a963c5f34b2eee261841893d4d834e9ac4e4633d13ba9f91b6"
+  }
+]

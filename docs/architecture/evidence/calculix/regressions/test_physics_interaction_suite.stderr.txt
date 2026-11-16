@@ -1,0 +1,34 @@
+ERROR: Condition "!data.tree" is true. Returning: nullptr
+   at: get_tree (scene/main/node.h:329)
+ERROR: Condition "!data.tree" is true. Returning: nullptr
+   at: get_tree (scene/main/node.h:329)
+ERROR: Condition "!data.tree" is true. Returning: nullptr
+   at: get_tree (scene/main/node.h:329)
+ERROR: Condition "!data.tree" is true. Returning: nullptr
+   at: get_tree (scene/main/node.h:329)
+ERROR: Condition "!data.tree" is true. Returning: nullptr
+   at: get_tree (scene/main/node.h:329)
+ERROR: Condition "!data.tree" is true. Returning: nullptr
+   at: get_tree (scene/main/node.h:329)
+ERROR: Condition "!data.tree" is true. Returning: nullptr
+   at: get_tree (scene/main/node.h:329)
+ERROR: Condition "!data.tree" is true. Returning: nullptr
+   at: get_tree (scene/main/node.h:329)
+ERROR: Condition "!data.tree" is true. Returning: nullptr
+   at: get_tree (scene/main/node.h:329)
+ERROR: Condition "!data.tree" is true. Returning: nullptr
+   at: get_tree (scene/main/node.h:329)
+ERROR: Condition "!data.tree" is true. Returning: nullptr
+   at: get_tree (scene/main/node.h:329)
+ERROR: Condition "!m" is true. Returning: 0
+   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:110)
+ERROR: Condition "!m" is true. Returning: 0
+   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:110)
+ERROR: Condition "!m" is true. Returning: 0
+   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:110)
+ERROR: Condition "!m" is true. Returning: 0
+   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:110)
+ERROR: Condition "!m" is true. Returning: 0
+   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:110)
+ERROR: Condition "!m" is true. Returning: 0
+   at: mesh_get_surface_count (servers/rendering/dummy/storage/mesh_storage.h:110)

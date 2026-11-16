@@ -1,0 +1,14 @@
+[
+  {
+    "kind": "Box",
+    "source": "C:\\Users\\Victus\\AppData\\Roaming\\Godot\\app_userdata\\UniCORE\\calculix_jobs\\8199522",
+    "input_sha256": "6e82eec62c9e9768c1dc5ecc952da07d0f210f36b2391fc2d9582d35f012fd21",
+    "dat_sha256": "a52fc096349aace0554592010ebeac001770bb5b41aebd73a74c459397d0f32a"
+  },
+  {
+    "kind": "Cylinder",
+    "source": "C:\\Users\\Victus\\AppData\\Roaming\\Godot\\app_userdata\\UniCORE\\calculix_jobs\\15934537",
+    "input_sha256": "295f0e2d09873a451efd8479101d617d32260e0de6a925fd07a7b2759cd4e509",
+    "dat_sha256": "38ca86d97aae49a7fa7dda9229b4a385428b329addc8fc3e7a19c2dbdd718528"
+  }
+]

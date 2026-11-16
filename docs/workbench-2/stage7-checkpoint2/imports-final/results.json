@@ -1,0 +1,24 @@
+{
+  "assertions": 2,
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "rows": [
+    {
+      "name": "workbench-import-rejection",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64.exe",
+        "--headless",
+        "--path",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+        "-s",
+        "res://tests/test_stage7_dynamic_import_rejection.gd",
+        "--",
+        "res://docs/workbench-2/stage7-checkpoint2/numerical-final"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6272460000036517,
+      "expected_exit": 0,
+      "log": "docs\\workbench-2\\stage7-checkpoint2\\imports-final\\workbench-import-rejection.log"
+    }
+  ]
+}

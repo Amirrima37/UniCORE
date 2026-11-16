@@ -1,0 +1,27 @@
+[
+  {
+    "name": "test_analysis_drawer_listener_lifetime",
+    "exit": 0,
+    "script_error": false
+  },
+  {
+    "name": "test_stage51_equivalence",
+    "exit": 0,
+    "script_error": false
+  },
+  {
+    "name": "test_stage5_probes",
+    "exit": 0,
+    "script_error": false
+  },
+  {
+    "name": "structural",
+    "exit": 0,
+    "script_error": false
+  },
+  {
+    "name": "thermal",
+    "exit": 0,
+    "script_error": false
+  }
+]

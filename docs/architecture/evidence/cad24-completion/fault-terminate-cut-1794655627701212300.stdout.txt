@@ -1,0 +1,4 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+CAD24_EXPECTED_ERROR [WinError 32] Процесс не может получить доступ к файлу, так как этот файл занят другим процессом: 'C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\23300_1249295_caf358532a992ccf\\kernel-temp\\occt-1lm8yl9a\\running.json'
+CAD24_FAILURE_RECOVERY_PASS heartbeat=1922

@@ -1,0 +1,387 @@
+[
+  {
+    "name": "test_stage6_cylinder",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage6_cylinder-engine.log",
+      "-s",
+      "res://tests/test_stage6_cylinder.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 2.641,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_cylinder.log",
+    "diagnostics": [],
+    "assertions": [
+      "Stage6 topology/determinism/quality fixtures PASS; mean ratio min=0.70012143939187 median=0.75805106455819"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage6_topology",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage6_topology-engine.log",
+      "-s",
+      "res://tests/test_stage6_topology.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 23.35,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_topology.log",
+    "diagnostics": [],
+    "assertions": [
+      "Stage6 topology density 1-8 and invalid transforms PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage6_remesh",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage6_remesh-engine.log",
+      "-s",
+      "res://tests/test_stage6_remesh.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 1.632,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_remesh.log",
+    "diagnostics": [],
+    "assertions": [
+      "Stage6 semantic support/pressure preservation and stale import rejection: radius/length/rotation/translation/density PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_cylinder_fem",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_cylinder_fem-engine.log",
+      "-s",
+      "res://tests/test_cylinder_fem.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 6.3,
+    "log": "docs\\workbench-2\\stage6-final\\test_cylinder_fem.log",
+    "diagnostics": [],
+    "assertions": [
+      "Cylinder FEM failures=0"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage6_sphere",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage6_sphere-engine.log",
+      "-s",
+      "res://tests/test_stage6_sphere.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 8.603,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_sphere.log",
+    "diagnostics": [],
+    "assertions": [
+      "Sphere geometry/topology/structural/thermal/provenance/persistence PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage6_sphere_contract",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage6_sphere_contract-engine.log",
+      "-s",
+      "res://tests/test_stage6_sphere_contract.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 1.579,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_sphere_contract.log",
+    "diagnostics": [],
+    "assertions": [
+      "Sphere invalid-input/boundedness/surface resolution/uniform scale/pressure workflow PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage6_pipe",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage6_pipe-engine.log",
+      "-s",
+      "res://tests/test_stage6_pipe.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 17.81,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_pipe.log",
+    "diagnostics": [],
+    "assertions": [
+      "Pipe failures=0"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage6_pipe_contract",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage6_pipe_contract-engine.log",
+      "-s",
+      "res://tests/test_stage6_pipe_contract.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 5.559,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_pipe_contract.log",
+    "diagnostics": [],
+    "assertions": [
+      "Pipe thin/thick bore/topology/pressure/provenance/persistence PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage6_condition_conflicts",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage6_condition_conflicts-engine.log",
+      "-s",
+      "res://tests/test_stage6_condition_conflicts.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 1.213,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_condition_conflicts.log",
+    "diagnostics": [],
+    "assertions": [
+      "Atomic sphere overlap rejection and shared-node temperature conflict PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage6_dialog_ui",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage6_dialog_ui-engine.log",
+      "-s",
+      "res://tests/test_stage6_dialog_ui.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 4.484,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_dialog_ui.log",
+    "diagnostics": [
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0"
+    ],
+    "assertions": [
+      "Cylinder condition dialog create/edit/replace/delete/reject/persist PASS",
+      "Sphere condition dialog create/edit/replace/delete/reject/persist PASS",
+      "Pipe condition dialog create/edit/replace/delete/reject/persist PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage6_failure_ui",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage6_failure_ui-engine.log",
+      "-s",
+      "res://tests/test_stage6_failure_ui.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 12.939,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage6_failure_ui.log",
+    "diagnostics": [
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0"
+    ],
+    "assertions": [
+      "UI cancellation/failure/recovery PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage5_provenance",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage5_provenance-engine.log",
+      "-s",
+      "res://tests/test_stage5_provenance.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 1.527,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage5_provenance.log",
+    "diagnostics": [],
+    "assertions": [
+      "Extreme provenance valid / ordering / connectivity / region / revision / swapped result / legacy rejection PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage5_quality",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage5_quality-engine.log",
+      "-s",
+      "res://tests/test_stage5_quality.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 2.121,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage5_quality.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": true
+  },
+  {
+    "name": "test_stage5_display",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage5_display-engine.log",
+      "-s",
+      "res://tests/test_stage5_display.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 1.116,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage5_display.log",
+    "diagnostics": [],
+    "assertions": [
+      "Stage5 mapping / constant stress / missing / deformation PASS; small build checks us=1891"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage5_probes",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage5_probes-engine.log",
+      "-s",
+      "res://tests/test_stage5_probes.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 2.674,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage5_probes.log",
+    "diagnostics": [
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0",
+      "ERROR: Condition \"!m\" is true. Returning: 0"
+    ],
+    "assertions": [
+      "Result viewport picking / actual solver element IDs / automatic scale / original-coordinate probe mode PASS"
+    ],
+    "passed": true
+  },
+  {
+    "name": "test_stage51_cache",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage51_cache-engine.log",
+      "-s",
+      "res://tests/test_stage51_cache.gd"
+    ],
+    "timeout": true,
+    "seconds": 120.024,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage51_cache.log",
+    "diagnostics": [],
+    "assertions": [],
+    "passed": false
+  },
+  {
+    "name": "test_stage51_equivalence",
+    "command": [
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main",
+      "--log-file",
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage6-final\\test_stage51_equivalence-engine.log",
+      "-s",
+      "res://tests/test_stage51_equivalence.gd"
+    ],
+    "exit_code": 0,
+    "appdata": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\cae-appdata",
+    "seconds": 2.762,
+    "log": "docs\\workbench-2\\stage6-final\\test_stage51_equivalence.log",
+    "diagnostics": [],
+    "assertions": [
+      "Pre-optimization / optimized structural vertex-color-scalar buffers EXACT: HEX8/TET4, both fields, scales 0/1/100 PASS"
+    ],
+    "passed": true
+  }
+]

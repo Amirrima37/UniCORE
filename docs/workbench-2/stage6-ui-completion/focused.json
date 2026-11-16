@@ -1,0 +1,13 @@
+[
+  {
+    "test": "test_stage6_failure_ui",
+    "timeout": true,
+    "passed": false
+  },
+  {
+    "test": "test_stage6_dialog_ui",
+    "exit": 1,
+    "passed": false,
+    "seconds": 0.8813407000052393
+  }
+]

@@ -1,0 +1,48 @@
+{"test": "reject-target_size", "outcome": "PASS", "error": "Invalid mesh setting target_size"}
+{"test": "reject-min_size", "outcome": "PASS", "error": "Invalid mesh setting min_size"}
+{"test": "reject-max_size", "outcome": "PASS", "error": "Invalid mesh setting max_size"}
+{"test": "reject-algorithm", "outcome": "PASS", "error": "Unsupported mesh algorithm/optimization/boundary setting"}
+{"test": "reject-schema", "outcome": "PASS", "error": "Unsupported mesh settings schema"}
+{"test": "reject-max_nodes", "outcome": "PASS", "error": "Invalid mesh setting max_nodes"}
+{"test": "reject-timeout_s", "outcome": "PASS", "error": "Invalid mesh setting timeout_s"}
+{"test": "reject-memory_mb", "outcome": "PASS", "error": "Invalid mesh setting memory_mb"}
+{"test": "reject-curvature_points", "outcome": "PASS", "error": "Invalid mesh setting curvature_points"}
+{"test": "reject-inconsistent-bounds", "outcome": "PASS", "error": "Mesh sizes require min <= target <= max"}
+{"test": "independent-regular-inverted-degenerate-tetrahedra", "outcome": "PASS", "mean_ratio": 1.0}
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Line)
+Info    : [ 10%] Meshing curve 2 (Line)
+Info    : [ 20%] Meshing curve 3 (Line)
+Info    : [ 30%] Meshing curve 4 (Line)
+Info    : [ 30%] Meshing curve 5 (Line)
+Info    : [ 40%] Meshing curve 6 (Line)
+Info    : [ 50%] Meshing curve 7 (Line)
+Info    : [ 50%] Meshing curve 8 (Circle)
+Info    : [ 60%] Meshing curve 9 (Line)
+Info    : [ 70%] Meshing curve 10 (Line)
+Info    : [ 70%] Meshing curve 11 (Line)
+Info    : [ 80%] Meshing curve 12 (Line)
+Info    : [ 90%] Meshing curve 13 (Circle)
+Info    : [ 90%] Meshing curve 14 (Line)
+Info    : [100%] Meshing curve 15 (Line)
+Info    : Done meshing 1D (Wall 0.00328493s, CPU 0s)
+Info    : Meshing 2D...
+Info    : [  0%] Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 2 (Plane, Frontal-Delaunay)
+Info    : [ 30%] Meshing surface 3 (Plane, Frontal-Delaunay)
+Info    : [ 50%] Meshing surface 4 (Plane, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 5 (Plane, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 6 (Plane, Frontal-Delaunay)
+Info    : [ 90%] Meshing surface 7 (Cylinder, Frontal-Delaunay)
+Info    : [ 90%] 34 triangles are equivalent
+Info    : [ 90%] Meshing surface 7 (Cylinder, MeshAdapt)
+Info    : Done meshing 2D (Wall 0.089391s, CPU 0.0625s)
+Info    : Meshing 3D...
+Info    : 3D Meshing 1 volume with 1 connected component
+Info    : Tetrahedrizing 301 nodes...
+Info    : Done tetrahedrizing 309 nodes (Wall 0.00220585s, CPU 0s)
+Info    : Reconstructing mesh...
+Info    :  - Creating surface mesh
+Info    : Found two duplicated facets.
+Info    :   1st: [228, 229, 119] #7
+Info    :   2nd: [228, 229, 119] #7

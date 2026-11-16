@@ -1,0 +1,955 @@
+{
+  "verdict": "PARTIAL",
+  "reason": "Main SDK and Godot environment migrated and validated; inaccessible scratch remnants retained and shared external toolchains left at existing locations.",
+  "before_accessible_bytes": 8072880752,
+  "after_accessible_bytes": 3724213443,
+  "net_reduction_bytes": 4348667309,
+  "percent_reduction": 53.8676024407105,
+  "bytes_migrated": 4350077065,
+  "original_file_bytes_removed": 4350077065,
+  "destinations": [
+    {
+      "path": "D:\\PROJECT\\SDK\\OCCT",
+      "current_bytes": 1633796686,
+      "current_files": 42877,
+      "errors": [],
+      "migrated_bytes": 1632478416,
+      "migrated_files": 42867
+    },
+    {
+      "path": "D:\\PROJECT\\GODOT\\TEST_ENVIRONMENTS\\godot472-migration",
+      "current_bytes": 2760030096,
+      "current_files": 14713,
+      "errors": [],
+      "migrated_bytes": 2717598649,
+      "migrated_files": 14581
+    }
+  ],
+  "updated_source_configuration_files": 71,
+  "updated_paths": [
+    "AGENTS.md",
+    "docs/architecture/README.md",
+    "native/build_godot472.ps1",
+    "native/build_occt.ps1",
+    "native/occt/audit_runtime.py",
+    "native/occt/lock_sdk.py",
+    "native/occt/provision_runtime.py",
+    "native/occt/seal_build.py",
+    "native/occt/setup_sdk.py",
+    "native/run_regressions.py",
+    "scripts/engines/native_occt.py",
+    "scripts/run_godot472.ps1",
+    "tests/benchmark_godot472_calculix_gmsh.gd",
+    "tests/cad21_geometry.py",
+    "tests/cad21_gui.gd",
+    "tests/cad21_integration.gd",
+    "tests/cad21_lifecycle.py",
+    "tests/cad22_gui.gd",
+    "tests/cad22_independent.py",
+    "tests/cad22_lifecycle.py",
+    "tests/cad22_numerical.gd",
+    "tests/cad22_persistence.gd",
+    "tests/cad22_validation.py",
+    "tests/cad23_gui.gd",
+    "tests/cad23_gui_inspect.gd",
+    "tests/cad23_independent.py",
+    "tests/cad23_lifecycle.py",
+    "tests/cad23_numerical.gd",
+    "tests/cad23_persistence.gd",
+    "tests/cad23_shutdown.gd",
+    "tests/cad23_shutdown.py",
+    "tests/cad23_unit.py",
+    "tests/cad24_boundary.gd",
+    "tests/cad24_deck_audit.py",
+    "tests/cad24_endurance.py",
+    "tests/cad24_failure.gd",
+    "tests/cad24_failure.py",
+    "tests/cad24_gui.gd",
+    "tests/cad24_gui_endurance.gd",
+    "tests/cad24_gui_endurance.py",
+    "tests/cad24_history.py",
+    "tests/cad24_matrix_extra.py",
+    "tests/cad24_native.py",
+    "tests/cad24_numerical.gd",
+    "tests/cad24_protocol.py",
+    "tests/compare_godot472_calculix_extreme.py",
+    "tests/development_paths.gd",
+    "tests/run_cad21.py",
+    "tests/run_cad22.py",
+    "tests/run_cad23.py",
+    "tests/run_cad24.py",
+    "tests/run_cad24_completion.py",
+    "tests/run_godot472_engineering.py",
+    "tests/run_godot472_scan.py",
+    "tests/run_godot472_startup_cycles.py",
+    "tests/run_mesh_fingerprint_fix.py",
+    "tests/run_step_final.py",
+    "tests/step_final_lifecycle.py",
+    "tests/step_final_numerical.gd",
+    "tests/step_final_workbench_lifecycle.gd",
+    "tests/summarize_cad21.py",
+    "tests/summarize_cad22.py",
+    "tests/summarize_cad23.py",
+    "tests/summarize_cad24.py",
+    "tests/summarize_cad24_completion.py",
+    "tests/summarize_step_final.py",
+    "tests/test_godot472_calculix_numerical.gd",
+    "tests/test_godot472_calculix_process.py",
+    "tests/test_godot472_calculix_workbench.gd",
+    "tests/test_godot472_gmsh_repeatability.py",
+    "tests/test_godot472_main_shell.gd"
+  ],
+  "remaining_tools": [
+    [
+      ".tools/hpc23-bench",
+      817649820
+    ],
+    [
+      ".tools/hpc22",
+      498479590
+    ],
+    [
+      ".tools/engines",
+      211687494
+    ],
+    [
+      ".tools/godot",
+      114631456
+    ],
+    [
+      ".tools/extreme-axial",
+      78149702
+    ],
+    [
+      ".tools/godot-cpp-4.7",
+      53500139
+    ],
+    [
+      ".tools/stage5-final-native",
+      42767688
+    ],
+    [
+      ".tools/cae-appdata",
+      32660421
+    ],
+    [
+      ".tools/python-packages",
+      22784988
+    ],
+    [
+      ".tools/scons-migrate",
+      22784988
+    ],
+    [
+      ".tools/hpc24-paired",
+      19578502
+    ],
+    [
+      ".tools/hpc24-final-paired",
+      19578460
+    ],
+    [
+      ".tools/molecular-native-2as4khhu",
+      10805891
+    ],
+    [
+      ".tools/molecular-native-o6zi8uc_",
+      10200668
+    ],
+    [
+      ".tools/molecular-native-883glfnc",
+      10200183
+    ],
+    [
+      ".tools/hpc24-initial",
+      9789303
+    ],
+    [
+      ".tools/step-calculix",
+      9213978
+    ],
+    [
+      ".tools/molecular-script-a68wwea5",
+      8059710
+    ],
+    [
+      ".tools/molecular-script-4669g3vh",
+      8008402
+    ],
+    [
+      ".tools/molecular-script-d0l712ju",
+      8007916
+    ],
+    [
+      ".tools/hpc23-tight",
+      7555908
+    ],
+    [
+      ".tools/packages",
+      6444676
+    ],
+    [
+      ".tools/script-package-check",
+      5480662
+    ],
+    [
+      ".tools/hpc21-equivalence",
+      2935951
+    ],
+    [
+      ".tools/hpc22-fallback",
+      2526704
+    ],
+    [
+      ".tools/hpc23-configs",
+      2501652
+    ],
+    [
+      ".tools/lifetime-large",
+      1896752
+    ],
+    [
+      ".tools/extreme-thermal",
+      1432326
+    ],
+    [
+      ".tools/crash-isolation",
+      414631
+    ],
+    [
+      ".tools/hpc22-final",
+      195805
+    ],
+    [
+      ".tools/hpc23-final",
+      195281
+    ],
+    [
+      ".tools/hpc21-baseline",
+      195279
+    ],
+    [
+      ".tools/hpc21-final",
+      195275
+    ],
+    [
+      ".tools/extreme-final-validation",
+      191718
+    ],
+    [
+      ".tools/hpc-baseline",
+      191717
+    ],
+    [
+      ".tools/cae-upgrade-regression",
+      191366
+    ],
+    [
+      ".tools/cae-upgrade-final",
+      191236
+    ],
+    [
+      ".tools/extreme-extended-final",
+      191191
+    ],
+    [
+      ".tools/mesh-regression",
+      187135
+    ],
+    [
+      ".tools/all-solvers-native-regression",
+      183353
+    ],
+    [
+      ".tools/regression",
+      182708
+    ],
+    [
+      ".tools/molecular-native-regression-final",
+      182223
+    ],
+    [
+      ".tools/molecular-native-regression",
+      182222
+    ],
+    [
+      ".tools/stage51-baseline",
+      131681
+    ],
+    [
+      ".tools/extreme-baseline",
+      37181
+    ],
+    [
+      ".tools/extreme-final",
+      37180
+    ],
+    [
+      ".tools/cae-upgrade-manifest",
+      37178
+    ],
+    [
+      ".tools/mesh-final-regression",
+      36773
+    ],
+    [
+      ".tools/engineering-cycle-regression",
+      33773
+    ],
+    [
+      ".tools/hpc24-modes",
+      33188
+    ],
+    [
+      ".tools/extreme-config",
+      19278
+    ],
+    [
+      ".tools/dynamic-import-367713",
+      18397
+    ],
+    [
+      ".tools/hpc24-options",
+      16921
+    ],
+    [
+      ".tools/hpc23-options",
+      12727
+    ],
+    [
+      ".tools/hpc24-config",
+      11119
+    ],
+    [
+      ".tools/extreme-restart",
+      10516
+    ],
+    [
+      ".tools/test-appdata",
+      8400
+    ],
+    [
+      ".tools/extreme-checkpoint",
+      8349
+    ],
+    [
+      ".tools/hpc24-checkpoint",
+      7381
+    ],
+    [
+      ".tools/hpc23-checkpoint-block-jacobi",
+      6317
+    ],
+    [
+      ".tools/hpc23-checkpoint-ic0",
+      6171
+    ],
+    [
+      ".tools/extreme-cli",
+      4921
+    ],
+    [
+      ".tools/hpc24-cli",
+      4849
+    ],
+    [
+      ".tools/hpc23-smoke",
+      1537
+    ],
+    [
+      ".tools/mesh-fingerprint-fix",
+      1274
+    ],
+    [
+      ".tools/extreme-example",
+      777
+    ],
+    [
+      ".tools/crash-minimal",
+      117
+    ],
+    [
+      ".tools/extreme-cancel",
+      47
+    ]
+  ],
+  "inaccessible_paths": [
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\10420_613136_0bd5e48a819acee7\\kernel-temp\\occt-mv986450",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\10420_613136_0bd5e48a819acee7\\\\kernel-temp\\\\occt-mv986450'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\11408_574349_4794cc2edaa105f7\\kernel-temp\\occt-ke6fmbp3",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\11408_574349_4794cc2edaa105f7\\\\kernel-temp\\\\occt-ke6fmbp3'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\11408_574349_4794cc2edaa105f7\\kernel-temp\\unicore-cad21-iit0ws7u",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\11408_574349_4794cc2edaa105f7\\\\kernel-temp\\\\unicore-cad21-iit0ws7u'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\11948_506117_e3f250300bf2ab40\\kernel-temp\\occt-p3paah7_",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\11948_506117_e3f250300bf2ab40\\\\kernel-temp\\\\occt-p3paah7_'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\11948_506117_e3f250300bf2ab40\\kernel-temp\\unicore-cad21-ch0dkkl_",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\11948_506117_e3f250300bf2ab40\\\\kernel-temp\\\\unicore-cad21-ch0dkkl_'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\13608_602323_0f72ccbd18edda62\\kernel-temp\\occt-6fcre9xp",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\13608_602323_0f72ccbd18edda62\\\\kernel-temp\\\\occt-6fcre9xp'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\13608_602323_0f72ccbd18edda62\\kernel-temp\\unicore-cad21-finqgmja",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\13608_602323_0f72ccbd18edda62\\\\kernel-temp\\\\unicore-cad21-finqgmja'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\16696_1235863_af81200a04199772\\kernel-temp\\occt-95xaawnh",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\16696_1235863_af81200a04199772\\\\kernel-temp\\\\occt-95xaawnh'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\18412_585305_52843016163bf767\\kernel-temp\\occt-33u3xndx",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\18412_585305_52843016163bf767\\\\kernel-temp\\\\occt-33u3xndx'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\19100_450291_0c6ea554c38e05c9\\kernel-temp\\occt-kk__fqh9",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\19100_450291_0c6ea554c38e05c9\\\\kernel-temp\\\\occt-kk__fqh9'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\19100_450291_0c6ea554c38e05c9\\kernel-temp\\unicore-cad21-8qs64_8j",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\19100_450291_0c6ea554c38e05c9\\\\kernel-temp\\\\unicore-cad21-8qs64_8j'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\19988_645229_3fd766fe8d48d244\\kernel-temp\\occt-ogzwtqmb",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\19988_645229_3fd766fe8d48d244\\\\kernel-temp\\\\occt-ogzwtqmb'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\19988_645229_3fd766fe8d48d244\\kernel-temp\\unicore-cad21-4xch9hxm",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\19988_645229_3fd766fe8d48d244\\\\kernel-temp\\\\unicore-cad21-4xch9hxm'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\20076_470639_cc1594b7e33b05f2\\kernel-temp\\occt-yb3_1ho1",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\20076_470639_cc1594b7e33b05f2\\\\kernel-temp\\\\occt-yb3_1ho1'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\20112_1228377_94d1a60f70a85583\\kernel-temp\\occt-roftmbpe",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\20112_1228377_94d1a60f70a85583\\\\kernel-temp\\\\occt-roftmbpe'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\20112_1228377_94d1a60f70a85583\\kernel-temp\\unicore-cad21-f0au3wea",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\20112_1228377_94d1a60f70a85583\\\\kernel-temp\\\\unicore-cad21-f0au3wea'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\20616_554577_c0cce002eebadcee\\kernel-temp\\occt-tf5cbfjm",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\20616_554577_c0cce002eebadcee\\\\kernel-temp\\\\occt-tf5cbfjm'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\20616_554577_c0cce002eebadcee\\kernel-temp\\unicore-cad21-bv4r3qlx",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\20616_554577_c0cce002eebadcee\\\\kernel-temp\\\\unicore-cad21-bv4r3qlx'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\20636_1452621_99470f617af1929c\\kernel-temp\\occt-pv3o3r8j",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\20636_1452621_99470f617af1929c\\\\kernel-temp\\\\occt-pv3o3r8j'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\20636_1452621_99470f617af1929c\\kernel-temp\\unicore-cad21-8phwoefz",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\20636_1452621_99470f617af1929c\\\\kernel-temp\\\\unicore-cad21-8phwoefz'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\20824_532087_de63428ca52242da\\kernel-temp\\occt-ekum_fv0",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\20824_532087_de63428ca52242da\\\\kernel-temp\\\\occt-ekum_fv0'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\20824_553281_fe0243c1d893f672\\kernel-temp\\occt-xrl04zyw",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\20824_553281_fe0243c1d893f672\\\\kernel-temp\\\\occt-xrl04zyw'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\21108_521713_d3053dfeb60e0064\\kernel-temp\\occt-n0xitmzy",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\21108_521713_d3053dfeb60e0064\\\\kernel-temp\\\\occt-n0xitmzy'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\21108_521713_d3053dfeb60e0064\\kernel-temp\\unicore-cad21-gko8uwuu",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\21108_521713_d3053dfeb60e0064\\\\kernel-temp\\\\unicore-cad21-gko8uwuu'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\2112_558185_ca6ab479176ec10b\\kernel-temp\\occt-p0p13b6j",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\2112_558185_ca6ab479176ec10b\\\\kernel-temp\\\\occt-p0p13b6j'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\21716_586519_2da6a161841c1ffa\\kernel-temp\\occt-hnz5cgni",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\21716_586519_2da6a161841c1ffa\\\\kernel-temp\\\\occt-hnz5cgni'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\21716_586519_2da6a161841c1ffa\\kernel-temp\\unicore-cad21-_2iytvjc",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\21716_586519_2da6a161841c1ffa\\\\kernel-temp\\\\unicore-cad21-_2iytvjc'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\22184_534957_3755710e62f2ae17\\kernel-temp\\occt-ycetvc3r",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\22184_534957_3755710e62f2ae17\\\\kernel-temp\\\\occt-ycetvc3r'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\22184_534957_3755710e62f2ae17\\kernel-temp\\unicore-cad21-0cv1711n",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\22184_534957_3755710e62f2ae17\\\\kernel-temp\\\\unicore-cad21-0cv1711n'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\23096_1630443_1919c24f98033a6a\\kernel-temp\\occt-jgrm8u8v",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\23096_1630443_1919c24f98033a6a\\\\kernel-temp\\\\occt-jgrm8u8v'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\23096_1630443_1919c24f98033a6a\\kernel-temp\\unicore-cad21-gbv82zcc",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\23096_1630443_1919c24f98033a6a\\\\kernel-temp\\\\unicore-cad21-gbv82zcc'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\23256_594306_af42df1278da6f13\\kernel-temp\\occt-8lgu55jp",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\23256_594306_af42df1278da6f13\\\\kernel-temp\\\\occt-8lgu55jp'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\23256_594306_af42df1278da6f13\\kernel-temp\\unicore-cad21-5oeeubg2",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\23256_594306_af42df1278da6f13\\\\kernel-temp\\\\unicore-cad21-5oeeubg2'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\23300_1249295_caf358532a992ccf\\kernel-temp\\occt-1lm8yl9a",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\23300_1249295_caf358532a992ccf\\\\kernel-temp\\\\occt-1lm8yl9a'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\23380_532310_c30eec6b1e1d9de1\\kernel-temp\\occt-dqjcj7xk",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\23380_532310_c30eec6b1e1d9de1\\\\kernel-temp\\\\occt-dqjcj7xk'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\23380_532310_c30eec6b1e1d9de1\\kernel-temp\\unicore-cad21-t8y5hw1r",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\23380_532310_c30eec6b1e1d9de1\\\\kernel-temp\\\\unicore-cad21-t8y5hw1r'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\23592_556974_aa46bc86b4f96cef\\kernel-temp\\occt-nqeoznak",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\23592_556974_aa46bc86b4f96cef\\\\kernel-temp\\\\occt-nqeoznak'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\24340_571341_6523976ee1ef5844\\kernel-temp\\occt-vsxhdch6",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\24340_571341_6523976ee1ef5844\\\\kernel-temp\\\\occt-vsxhdch6'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\3196_566081_45d8a00fabf0a1c0\\kernel-temp\\occt-0yp2d_e5",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\3196_566081_45d8a00fabf0a1c0\\\\kernel-temp\\\\occt-0yp2d_e5'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\3196_566081_45d8a00fabf0a1c0\\kernel-temp\\unicore-cad21-yi_k00_1",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\3196_566081_45d8a00fabf0a1c0\\\\kernel-temp\\\\unicore-cad21-yi_k00_1'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\376878\\kernel-temp\\occt-dq7wrgeb",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\376878\\\\kernel-temp\\\\occt-dq7wrgeb'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\384736\\kernel-temp\\occt-5t474082",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\384736\\\\kernel-temp\\\\occt-5t474082'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\4512_538455_c3084e75b8ebf7e6\\kernel-temp\\occt-_d_q9cs4",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\4512_538455_c3084e75b8ebf7e6\\\\kernel-temp\\\\occt-_d_q9cs4'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\4512_538455_c3084e75b8ebf7e6\\kernel-temp\\unicore-cad21-vupxut86",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\4512_538455_c3084e75b8ebf7e6\\\\kernel-temp\\\\unicore-cad21-vupxut86'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\478834\\kernel-temp\\occt-u8vfxpoi",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\478834\\\\kernel-temp\\\\occt-u8vfxpoi'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\478834\\kernel-temp\\unicore-cad21-edcsv0j7",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\478834\\\\kernel-temp\\\\unicore-cad21-edcsv0j7'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\480341\\kernel-temp\\occt-i_7zh8d_",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\480341\\\\kernel-temp\\\\occt-i_7zh8d_'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\480341\\kernel-temp\\unicore-cad21-2zk5xmoz",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\480341\\\\kernel-temp\\\\unicore-cad21-2zk5xmoz'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\486688\\kernel-temp\\occt-h5jj624y",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\486688\\\\kernel-temp\\\\occt-h5jj624y'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\486688\\kernel-temp\\unicore-cad21-0t8hei1e",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\486688\\\\kernel-temp\\\\unicore-cad21-0t8hei1e'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\489454\\kernel-temp\\occt-tbzs3ig9",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\489454\\\\kernel-temp\\\\occt-tbzs3ig9'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\490757\\kernel-temp\\occt-l0oe_ut3",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\490757\\\\kernel-temp\\\\occt-l0oe_ut3'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\5448_479865_411d300d143d16e4\\kernel-temp\\occt-izyeufzn",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\5448_479865_411d300d143d16e4\\\\kernel-temp\\\\occt-izyeufzn'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\5448_479865_411d300d143d16e4\\kernel-temp\\unicore-cad21-2t6ylv50",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\5448_479865_411d300d143d16e4\\\\kernel-temp\\\\unicore-cad21-2t6ylv50'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\7780_633049_d6c9efad24d5be14\\kernel-temp\\occt-52uwjihx",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\7780_633049_d6c9efad24d5be14\\\\kernel-temp\\\\occt-52uwjihx'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\7780_633049_d6c9efad24d5be14\\kernel-temp\\unicore-cad21-vry9z276",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\7780_633049_d6c9efad24d5be14\\\\kernel-temp\\\\unicore-cad21-vry9z276'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\7824_1781557_cbfd01bb31697fbf\\kernel-temp\\occt-mfnt_454",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\7824_1781557_cbfd01bb31697fbf\\\\kernel-temp\\\\occt-mfnt_454'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\9120_453095_988c8bd1d6602204\\kernel-temp\\occt-vrfpmdm8",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\9120_453095_988c8bd1d6602204\\\\kernel-temp\\\\occt-vrfpmdm8'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\91781214\\kernel-temp\\occt-wckn4ij_",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\91781214\\\\kernel-temp\\\\occt-wckn4ij_'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\cad_geometry\\91781214\\kernel-temp\\unicore-cad21-favsi3_k",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\cad_geometry\\\\91781214\\\\kernel-temp\\\\unicore-cad21-favsi3_k'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot472-migration\\roaming\\Godot\\app_userdata\\UniCORE\\gmsh_5706990\\kernel-temp\\unicore-cad-vu209pw8",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\godot472-migration\\\\roaming\\\\Godot\\\\app_userdata\\\\UniCORE\\\\gmsh_5706990\\\\kernel-temp\\\\unicore-cad-vu209pw8'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-02rizs8b",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-02rizs8b'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-1q34toos",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-1q34toos'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-1v_994c_",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-1v_994c_'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-5meuqx43",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-5meuqx43'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-5n657q00",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-5n657q00'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-7gcgbnte",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-7gcgbnte'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-8vahpt9g",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-8vahpt9g'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-91_642dh",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-91_642dh'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-ah56ldsr",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-ah56ldsr'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-b3a5vgpa",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-b3a5vgpa'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-bwqff8af",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-bwqff8af'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-cojktgvl",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-cojktgvl'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-f3voht5_",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-f3voht5_'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-jpg2v6xg",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-jpg2v6xg'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-kj28hc7h",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-kj28hc7h'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-lj4t69pb",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-lj4t69pb'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-mhe56dyp",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-mhe56dyp'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-reipfoea",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-reipfoea'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-tryexrg8",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-tryexrg8'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-uegvkgrw",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-uegvkgrw'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-x4sc9t_d",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-x4sc9t_d'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-xh5rdjqx",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-xh5rdjqx'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-xz_r5jax",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-xz_r5jax'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-y_6fj0h6",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-y_6fj0h6'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\occt-sdk\\jobs\\occt-_mvr80pz",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\.tools\\\\occt-sdk\\\\jobs\\\\occt-_mvr80pz'",
+      "bytes": null
+    },
+    {
+      "path": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\lifecycle\\mesh-recovery-1794613637146713700\\kernel-temp\\unicore-cad-5hb0sy72",
+      "error": "[WinError 5] \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u0432 \u0434\u043e\u0441\u0442\u0443\u043f\u0435: 'C:\\\\Users\\\\Victus\\\\Desktop\\\\UniCORE-main\\\\docs\\\\architecture\\\\evidence\\\\cad23\\\\lifecycle\\\\mesh-recovery-1794613637146713700\\\\kernel-temp\\\\unicore-cad-5hb0sy72'",
+      "bytes": null
+    }
+  ],
+  "inaccessible_bytes": null,
+  "pre_removal_validation": {
+    "passed": true,
+    "steps": [
+      {
+        "name": "build",
+        "exit_code": 0,
+        "passed": true,
+        "seconds": 30.28442460001679
+      },
+      {
+        "name": "editor",
+        "exit_code": 0,
+        "passed": true,
+        "seconds": 13.852641700010281
+      },
+      {
+        "name": "native",
+        "exit_code": 0,
+        "passed": true,
+        "seconds": 46.32281379998312
+      },
+      {
+        "name": "history",
+        "exit_code": 0,
+        "passed": true,
+        "seconds": 10.710751300008269
+      },
+      {
+        "name": "structural",
+        "exit_code": 0,
+        "passed": true,
+        "seconds": 107.10192230000393
+      },
+      {
+        "name": "regressions",
+        "exit_code": 0,
+        "passed": true,
+        "seconds": 34.120914999977686
+      }
+    ],
+    "pins": {
+      "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe": {
+        "expected": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424",
+        "actual": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+      },
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\calculix\\CalculiX-2.23.0-win-x64\\bin\\ccx.exe": {
+        "expected": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+        "actual": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f"
+      },
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_debug.x86_64.dll": {
+        "expected": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc",
+        "actual": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc"
+      },
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_release.x86_64.dll": {
+        "expected": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f",
+        "actual": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f"
+      },
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_debug.x86_64.dll": {
+        "expected": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868",
+        "actual": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868"
+      },
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_release.x86_64.dll": {
+        "expected": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb",
+        "actual": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb"
+      },
+      "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\gmsh-4.15.2-Windows64-sdk\\lib\\gmsh-4.15.dll": {
+        "expected": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c",
+        "actual": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c"
+      }
+    },
+    "external_output": "D:\\PROJECT\\TEST_OUTPUTS\\CAD\\external-migration-1794681208224569100",
+    "sdk": "D:\\PROJECT\\SDK\\OCCT",
+    "godot_environment": "D:\\PROJECT\\GODOT\\TEST_ENVIRONMENTS\\godot472-migration"
+  },
+  "post_removal_validation": [
+    {
+      "name": "native-after-removal",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "regressions-after-removal",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "final-editor-after-output-path-updates",
+      "exit_code": 0,
+      "passed": true
+    }
+  ],
+  "regressions": {
+    "passed": true,
+    "expected": 28,
+    "recorded": 28,
+    "missing": [],
+    "results_file": "results.json"
+  },
+  "pinned_binaries": {
+    "D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe": {
+      "expected": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424",
+      "actual": "ab1824f85bfd8e0e4128182c000c4003a3e042245b2967848d089b2a04b22424"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\calculix\\CalculiX-2.23.0-win-x64\\bin\\ccx.exe": {
+      "expected": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f",
+      "actual": "27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_debug.x86_64.dll": {
+      "expected": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc",
+      "actual": "293734a767241b3914f08d9829d6647a3efee5c93a85d375c6744c66296a20cc"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.godot472.windows.template_release.x86_64.dll": {
+      "expected": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f",
+      "actual": "7d0ab1ba5cb393068bdae4424ae1f754e8574b39a9ff93f7358ee63fad7bd03f"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_debug.x86_64.dll": {
+      "expected": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868",
+      "actual": "e091dee7d29badf2f8a95b9556417ee20be0dc867f12ab067d5a1e68efaea868"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_release.x86_64.dll": {
+      "expected": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb",
+      "actual": "2172eb05b89a7f20a7d39652e7d7253ed499b3e804dea5d8a99b95952498e6eb"
+    },
+    "C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\engines\\gmsh-4.15.2-Windows64-sdk\\lib\\gmsh-4.15.dll": {
+      "expected": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c",
+      "actual": "6cac3eefb477265d9fa60bbd869dbbbf7c7ca4cb308c0f8f2b43e91d43de3c1c"
+    }
+  },
+  "all_seven_pins_unchanged": true,
+  "sdk_build_verified": true,
+  "physical_disk_savings_claimed": 0,
+  "physical_storage_note": "Relocation reduces repository footprint. C: source and D: destination are different volumes; no whole-machine free-space saving is claimed. Previously compressed files may occupy more space at the destination.",
+  "recovery": "Use manifest source/destination mapping. To restore, copy destination files back without overwriting user files, verify critical hashes, and set UNICORE_OCCT_SDK_ROOT / UNICORE_GODOT_ENV_ROOT to restored paths. Original worker/build manifest are retained under SDK/OCCT/migration-original-build.",
+  "limitations": [
+    "Inaccessible scratch directories remain; their sizes are unknown. Report totals cover accessible regular files only.",
+    "Existing shared D:/msys64 and C:/Qt toolchains remain in place; external SDK build still requires them.",
+    "SDK package archives remain with their locked SDK-local names for offline reconstruction.",
+    "Project .godot cache remains local because Godot imports use the project directory; editor scan verified it.",
+    "Other historical HPC benchmark directories remain in .tools; historical reports and receipts are preserved.",
+    "Legacy SCons build still uses its established local intermediate paths; active Godot472 builder uses external cache."
+  ]
+}

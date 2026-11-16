@@ -1,0 +1,52 @@
+{
+  "assertions": 5,
+  "numpy": "2.5.2",
+  "scipy": "1.18.1",
+  "rows": [
+    {
+      "name": "compiler",
+      "command": [
+        "C:/Qt/Tools/mingw1310_64/bin/x86_64-w64-mingw32-g++.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.026017500000307336,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\builds-snapshot-final\\compiler.log",
+      "expected_exit": 0
+    },
+    {
+      "name": "build-release",
+      "command": [
+        "powershell",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "native/extreme/build.ps1"
+      ],
+      "exit_code": 0,
+      "seconds": 21.87714369999594,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\builds-snapshot-final\\build-release.log",
+      "expected_exit": 0,
+      "binary_sha256": "03e18502f774f8543d8b504bc9f313d4e241733f819e4a00507ec74a8f7a4963"
+    },
+    {
+      "name": "modal-release",
+      "command": [
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\unicore_solver.exe",
+        "--job",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\builds-snapshot-final\\modal-release.ucjob",
+        "--output",
+        "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\workbench-2\\stage7-checkpoint1\\builds-snapshot-final\\modal-release",
+        "--threads",
+        "1",
+        "--memory-mb",
+        "256"
+      ],
+      "exit_code": 2,
+      "seconds": 0.33813070000178413,
+      "log": "docs\\workbench-2\\stage7-checkpoint1\\builds-snapshot-final\\modal-release.log",
+      "expected_exit": 0
+    }
+  ]
+}

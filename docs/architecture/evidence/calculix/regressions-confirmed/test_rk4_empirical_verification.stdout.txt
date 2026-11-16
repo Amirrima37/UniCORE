@@ -1,0 +1,43 @@
+Godot Engine v4.0.stable.official.92bee43ad - https://godotengine.org
+ 
+==================================================================
+RK4 INTEGRATOR EMPIRICAL VERIFICATION HARNESS
+==================================================================
+
+--- Test 1: Instantiation & Class Hierarchy ---
+  [PASS] RK4Integrator instantiated
+  [PASS] RK4Integrator extends PhysicalIntegrator
+  [PASS] Initial buffer capacity is 0
+
+--- Test 2: Conservative Force (Harmonic Oscillator, 5,000 steps) ---
+  Max drift over 5,000 steps: 0.000005 (0.00000497698784)
+  Final drift at step 5,000:  0.000005 (0.0000047981739)
+  [PASS] Harmonic oscillator max drift < 0.001 (got 0.00000497698784)
+  [PASS] Harmonic oscillator final drift < 0.0001 (got 0.0000047981739)
+
+--- Test 3: Velocity-Dependent Force (Underdamped Oscillator vs Analytical) ---
+  At t = 10.0s:
+    x_num = -0.529209, x_exact = -0.529209, err = 0.00000027799058
+    v_num = 0.323979, v_exact = 0.323980, err = 0.00000017535377
+  [PASS] Position error vs exact analytical < 1e-4 (got 0.00000027799058)
+  [PASS] Velocity error vs exact analytical < 1e-4 (got 0.00000017535377)
+
+--- Test 4: Velocity-Dependent Force (Stokes Drag Terminal Velocity) ---
+  At t = 5.0s:
+    v_num = -4.899778, v_exact = -4.899778, err = 0.00000034890754
+  [PASS] Stokes drag velocity error vs exact < 1e-4 (got 0.00000034890754)
+  [PASS] Reached terminal velocity within 0.001 (got -4.899778, exact -4.900000)
+
+--- Test 5: Scratch Buffer Lifecycle & Capacity ---
+  [PASS] Capacity before integrate() is 0
+  [PASS] Capacity after integrate() is exactly n (250)
+  [PASS] Capacity on second integrate() is still n (250)
+  [PASS] Capacity after clear_buffers() is 0
+
+--- Test 6: Multi-Particle Parity & Stability ---
+  [PASS] All 50 particles have finite states after 100 steps
+  [PASS] Buffer capacity maintained at 50
+
+==================================================================
+RESULTS: 15 passed, 0 failed
+==================================================================

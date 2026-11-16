@@ -1,0 +1,92 @@
+[
+  {
+    "path": ".tools/build-script-debug.log",
+    "size": 2544,
+    "mtime": 1793947492.3227234,
+    "sha256": "3290cbf8a0f185f052c4fd51017041932745cf37225f48e330469a9dee187891",
+    "classification": "superseded successful build log",
+    "reason": "Successful earlier build; current native binaries retained; no source/report references found",
+    "recovery": "Rebuild with native build scripts to generate a fresh compiler transcript; old transcript intentionally deleted"
+  },
+  {
+    "path": ".tools/build-script-release.log",
+    "size": 1756,
+    "mtime": 1793947497.3422015,
+    "sha256": "90d738c43cfc466d5dd01dafbcdd0ee65696edbf16aeb61f4bf3798277072af6",
+    "classification": "superseded successful build log",
+    "reason": "Successful earlier build; current native binaries retained; no source/report references found",
+    "recovery": "Rebuild with native build scripts to generate a fresh compiler transcript; old transcript intentionally deleted"
+  },
+  {
+    "path": ".tools/gravity-build.log",
+    "size": 2688,
+    "mtime": 1793953838.6287663,
+    "sha256": "d42b284dda6f13ad50a72b7de2c80978d0562e4a24cd99148750642c1ab24e71",
+    "classification": "superseded successful build log",
+    "reason": "Successful earlier build; current native binaries retained; no source/report references found",
+    "recovery": "Rebuild with native build scripts to generate a fresh compiler transcript; old transcript intentionally deleted"
+  },
+  {
+    "path": ".tools/molecular-build-debug.log",
+    "size": 3188,
+    "mtime": 1793951568.6252131,
+    "sha256": "e4643033f9529cb980e02a5618f6a1e3b9512aa0965baa40424623dac5b69bf4",
+    "classification": "superseded successful build log",
+    "reason": "Successful earlier build; current native binaries retained; no source/report references found",
+    "recovery": "Rebuild with native build scripts to generate a fresh compiler transcript; old transcript intentionally deleted"
+  },
+  {
+    "path": ".tools/molecular-build-release.log",
+    "size": 2964,
+    "mtime": 1793951575.3151686,
+    "sha256": "4471e2079b45cb675563c14a118128bdbfdc9cfd6c146cdfad5f584fdd5fce6a",
+    "classification": "superseded successful build log",
+    "reason": "Successful earlier build; current native binaries retained; no source/report references found",
+    "recovery": "Rebuild with native build scripts to generate a fresh compiler transcript; old transcript intentionally deleted"
+  },
+  {
+    "path": ".tools/native-debug-build.log",
+    "size": 958436,
+    "mtime": 1793912769.692207,
+    "sha256": "bd2e47fa311da183ad0d1da329202016ab5181f9c0fc128be19e866b55551df6",
+    "classification": "superseded successful build log",
+    "reason": "Successful earlier build; current native binaries retained; no source/report references found",
+    "recovery": "Rebuild with native build scripts to generate a fresh compiler transcript; old transcript intentionally deleted"
+  },
+  {
+    "path": ".tools/nuclear-build.log",
+    "size": 2808,
+    "mtime": 1793955414.4437294,
+    "sha256": "fe8a7191d8542a61d8b31ee474306c4e400778ab15eed5cb5581a5d5b1e1ee37",
+    "classification": "superseded successful build log",
+    "reason": "Successful earlier build; current native binaries retained; no source/report references found",
+    "recovery": "Rebuild with native build scripts to generate a fresh compiler transcript; old transcript intentionally deleted"
+  },
+  {
+    "path": ".tools/quantum-build.log",
+    "size": 3300,
+    "mtime": 1793954227.5890055,
+    "sha256": "c666757fd235d098e3ecd9262a97eecbb5fc8f31a7f1b0d9aa7942c0fe3b7538",
+    "classification": "superseded successful build log",
+    "reason": "Successful earlier build; current native binaries retained; no source/report references found",
+    "recovery": "Rebuild with native build scripts to generate a fresh compiler transcript; old transcript intentionally deleted"
+  },
+  {
+    "path": ".tools/remaining-debug-build.log",
+    "size": 4092,
+    "mtime": 1793959309.6774619,
+    "sha256": "287bdac3674a5f38fb626f11731842356c2c0540f8c83570e0e8c139a2a3593a",
+    "classification": "superseded successful build log",
+    "reason": "Successful earlier build; current native binaries retained; no source/report references found",
+    "recovery": "Rebuild with native build scripts to generate a fresh compiler transcript; old transcript intentionally deleted"
+  },
+  {
+    "path": ".tools/remaining-release-build.log",
+    "size": 3618,
+    "mtime": 1793959329.4147165,
+    "sha256": "4b76c0830059926ff7f81c16926ddc8bb586499f4c0f7426430d18b502b49689",
+    "classification": "superseded successful build log",
+    "reason": "Successful earlier build; current native binaries retained; no source/report references found",
+    "recovery": "Rebuild with native build scripts to generate a fresh compiler transcript; old transcript intentionally deleted"
+  }
+]

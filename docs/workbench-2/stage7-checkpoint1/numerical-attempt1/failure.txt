@@ -1,0 +1,1 @@
+AssertionError(('cantilever-3-30', 'MODAL_INNER_TRUE_RESIDUAL\r\n'))

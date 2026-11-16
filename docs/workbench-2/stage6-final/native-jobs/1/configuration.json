@@ -1,0 +1,1 @@
+{"schema":1,"backend":"CPU_FP64","threads":2,"memory_budget_bytes":268435456,"preconditioner":"jacobi","max_iterations":20000,"pcg_relative_tolerance":1e-10,"pcg_absolute_tolerance":1e-10,"pcg_acceptance_residual":1e-7,"newton_relative_tolerance":1e-9,"outputs":"all_supported"}

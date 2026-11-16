@@ -1,0 +1,1652 @@
+[
+  {
+    "source": "core/cae/calculix_backend.gd",
+    "line": 3,
+    "text": "var executable := \"res://.tools/engines/calculix/CalculiX-2.23.0-win-x64/bin/ccx.exe\""
+  },
+  {
+    "source": "core/cae/calculix_workbench.gd",
+    "line": 9,
+    "text": "var executable := \"res://.tools/engines/calculix/CalculiX-2.23.0-win-x64/bin/ccx.exe\""
+  },
+  {
+    "source": "native/build.ps1",
+    "line": 12,
+    "text": "$env:PYTHONPATH = Join-Path $taskRoot \".tools/python-packages\""
+  },
+  {
+    "source": "native/build_direct.ps1",
+    "line": 8,
+    "text": "$objectDir=Join-Path $root \".tools/cae-build-$Target\""
+  },
+  {
+    "source": "native/build_godot472.ps1",
+    "line": 4,
+    "text": "$cpp=Join-Path $root '.tools/godot-cpp-4.7'"
+  },
+  {
+    "source": "native/build_godot472.ps1",
+    "line": 10,
+    "text": "$objectDir=Join-Path $root \".tools/cae-godot472-$Target\""
+  },
+  {
+    "source": "native/build_occt.ps1",
+    "line": 4,
+    "text": "$taskSdk=Join-Path $taskRoot '.tools/occt-sdk/ucrt64'"
+  },
+  {
+    "source": "native/build_occt.ps1",
+    "line": 5,
+    "text": "$env:PATH=\"$taskSdk/bin;D:/msys64/ucrt64/bin;\"+$env:PATH"
+  },
+  {
+    "source": "native/build_occt.ps1",
+    "line": 6,
+    "text": "& \"$taskSdk/bin/g++.exe\" -std=gnu++17 -O2 -B D:/msys64/ucrt64/lib/ -I \"$taskSdk/include\" -I \"$taskSdk/include/opencascade\" -idirafter D:/msys64/ucrt64/include native/occt/worker.cpp -L \"$taskSdk/lib\" -L D:/msys64/ucrt64/lib -lTKDESTEP -lTKXSBase -lTKDE -lTKBool -lTKBO -lTKPrim -lTKShHealing -lTKTopAlgo -lTKGeomAlgo -lTKBRep -lTKGeomBase -lTKG3d -lTKG2d -lTKMath -lTKernel -lbcrypt -o .tools/occt-sdk/unicore_occt_worker.exe"
+  },
+  {
+    "source": "native/build_occt.ps1",
+    "line": 8,
+    "text": "& \"$taskSdk/bin/g++.exe\" -std=gnu++17 -O2 -B D:/msys64/ucrt64/lib/ -I \"$taskSdk/include\" -I \"$taskSdk/include/opencascade\" -idirafter D:/msys64/ucrt64/include native/occt/make_fixtures.cpp -L \"$taskSdk/lib\" -L D:/msys64/ucrt64/lib -lTKDESTEP -lTKXSBase -lTKDE -lTKPrim -lTKTopAlgo -lTKGeomAlgo -lTKBRep -lTKGeomBase -lTKG3d -lTKG2d -lTKMath -lTKernel -o .tools/occt-sdk/make_occt_fixtures.exe"
+  },
+  {
+    "source": "native/run_regressions.py",
+    "line": 7,
+    "text": "parser.add_argument(\"--output\", default=\".tools/regression\")"
+  },
+  {
+    "source": "native/run_solver_validation.py",
+    "line": 9,
+    "text": "(root/\".tools/unicore_native_release.gdextension\").write_text((root/\"native/unicore_native.gdextension.in\").read_text(encoding=\"utf-8\").replace(\"template_debug\",\"template_release\"),encoding=\"utf-8\")"
+  },
+  {
+    "source": "native/run_solver_validation.py",
+    "line": 13,
+    "text": "    extension=[] if build==\"debug\" else [\"--extension=res://.tools/unicore_native_release.gdextension\"]"
+  },
+  {
+    "source": "native/occt/audit_runtime.py",
+    "line": 3,
+    "text": "roots=[ROOT/'.tools/occt-sdk',ROOT/'.tools/occt-sdk/ucrt64/bin',pathlib.Path('D:/msys64/ucrt64/bin'),pathlib.Path('C:/Windows/System32')]"
+  },
+  {
+    "source": "native/occt/audit_runtime.py",
+    "line": 9,
+    "text": "    s=subprocess.check_output(['D:/msys64/ucrt64/bin/objdump.exe','-p',str(p)],text=True,errors='replace')"
+  },
+  {
+    "source": "native/occt/lock_sdk.py",
+    "line": 3,
+    "text": "ROOT=Path(__file__).resolve().parents[2];SDK=ROOT/'.tools/occt-sdk';OUT=ROOT/'docs/architecture/evidence/cad24-completion'"
+  },
+  {
+    "source": "native/occt/lock_sdk.py",
+    "line": 7,
+    "text": "lock=dict(schema=1,source='Official MSYS2 HTTPS repository',occt='7.8.1-2',compiler='MSYS2 UCRT GCC 15.1.0-1',license='LGPL-2.1-or-later WITH OCCT-exception-1.0',packages=records,prerequisites='Existing MSYS2 UCRT binutils, C runtime import libraries and C headers; D:/msys64/usr/bin/tar.exe with zstd. Exact package inventory in evidence.',signature_verification='HTTPS origin and locked SHA-256; package PGP signatures were not verified')"
+  },
+  {
+    "source": "native/occt/lock_sdk.py",
+    "line": 9,
+    "text": "used=[SDK/'unicore_occt_worker.exe',*list((SDK/'ucrt64/bin').glob('libTK*.dll')),SDK/'ucrt64/bin/libtbb12.dll',SDK/'ucrt64/bin/libstdc++-6.dll',SDK/'ucrt64/bin/libgcc_s_seh-1.dll',Path('D:/msys64/ucrt64/bin/libwinpthread-1.dll')]"
+  },
+  {
+    "source": "native/occt/lock_sdk.py",
+    "line": 11,
+    "text": "p=subprocess.run(['D:/msys64/usr/bin/pacman.exe','-Q'],capture_output=True);(OUT/'msys2-installed-packages.txt').write_bytes(p.stdout+p.stderr)"
+  },
+  {
+    "source": "native/occt/provision_runtime.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[2];SDK=ROOT/'.tools/occt-sdk'"
+  },
+  {
+    "source": "native/occt/provision_runtime.py",
+    "line": 13,
+    "text": "env=os.environ.copy();env['PATH']='D:/msys64/usr/bin;'+env.get('PATH','')"
+  },
+  {
+    "source": "native/occt/provision_runtime.py",
+    "line": 26,
+    "text": "    info=subprocess.check_output(['D:/msys64/usr/bin/tar.exe','--force-local','-xOf',str(archive),'.PKGINFO'],env=env,text=True)"
+  },
+  {
+    "source": "native/occt/provision_runtime.py",
+    "line": 27,
+    "text": "    subprocess.run(['D:/msys64/usr/bin/tar.exe','--force-local','-xf',str(archive),'-C',str(SDK)],env=env,check=True)"
+  },
+  {
+    "source": "native/occt/provision_runtime.py",
+    "line": 31,
+    "text": "    (ROOT/'docs/architecture/evidence/cad24-completion/runtime-packages.json').write_text(json.dumps(records,indent=2))"
+  },
+  {
+    "source": "native/occt/sdk-lock.json",
+    "line": 760,
+    "text": "  \"prerequisites\": \"Existing MSYS2 UCRT binutils, C runtime import libraries and C headers; D:/msys64/usr/bin/tar.exe with zstd. Exact package inventory in evidence.\","
+  },
+  {
+    "source": "native/occt/seal_build.py",
+    "line": 3,
+    "text": "ROOT=Path(__file__).resolve().parents[2];SDK=ROOT/'.tools/occt-sdk'"
+  },
+  {
+    "source": "native/occt/seal_build.py",
+    "line": 5,
+    "text": "manifest=dict(schema=1,worker_sha256=sha(SDK/'unicore_occt_worker.exe'),source_sha256=sha(ROOT/'native/occt/worker.cpp'),dlls={p.name:sha(p) for p in (SDK/'ucrt64/bin').glob('*.dll')},external_winpthread_sha256=sha(Path('D:/msys64/ucrt64/bin/libwinpthread-1.dll')))"
+  },
+  {
+    "source": "native/occt/setup_sdk.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[2];SDK=ROOT/'.tools/occt-sdk';SDK.mkdir(parents=True,exist_ok=True)"
+  },
+  {
+    "source": "native/occt/setup_sdk.py",
+    "line": 6,
+    "text": "env=os.environ.copy();env['PATH']='D:/msys64/usr/bin;'+env.get('PATH','')"
+  },
+  {
+    "source": "native/occt/setup_sdk.py",
+    "line": 11,
+    "text": "    subprocess.run(['D:/msys64/usr/bin/tar.exe','--force-local','-xf',str(archive),'-C',str(SDK)],env=env,check=True)"
+  },
+  {
+    "source": "scripts/cleanup_repository.py",
+    "line": 25,
+    "text": "            if rel.startswith('.tools/'):group='G'"
+  },
+  {
+    "source": "scripts/cleanup_repository.py",
+    "line": 26,
+    "text": "            if rel.startswith('.tools/occt-sdk/'):group='C'"
+  },
+  {
+    "source": "scripts/run_godot472.ps1",
+    "line": 2,
+    "text": "    [string]$Engine = 'D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe',"
+  },
+  {
+    "source": "scripts/engines/acquire-calculix.ps1",
+    "line": 3,
+    "text": "$archive=Join-Path $root '.tools/engines/calculix-2.23.zip'"
+  },
+  {
+    "source": "scripts/engines/acquire-calculix.ps1",
+    "line": 8,
+    "text": "Expand-Archive -LiteralPath $archive -DestinationPath (Join-Path $root '.tools/engines/calculix') -Force"
+  },
+  {
+    "source": "scripts/engines/acquire-gmsh.ps1",
+    "line": 3,
+    "text": "$cache = Join-Path $root '.tools/engines'"
+  },
+  {
+    "source": "scripts/engines/cad_model.py",
+    "line": 10,
+    "text": "sys.path.insert(0,str(ROOT/'.tools/engines/gmsh-4.15.2-Windows64-sdk/lib'))"
+  },
+  {
+    "source": "scripts/engines/cad_model.py",
+    "line": 83,
+    "text": "    library=ROOT/'.tools/engines/gmsh-4.15.2-Windows64-sdk/lib/gmsh-4.15.dll'"
+  },
+  {
+    "source": "scripts/engines/gmsh_study.py",
+    "line": 58,
+    "text": "    sys.path.insert(0, str(root/'.tools/engines/gmsh-4.15.2-Windows64-sdk/lib'))"
+  },
+  {
+    "source": "scripts/engines/gmsh_study.py",
+    "line": 112,
+    "text": "    sys.path.insert(0, str(root/'.tools/engines/gmsh-4.15.2-Windows64-sdk/lib'))"
+  },
+  {
+    "source": "scripts/engines/native_occt.py",
+    "line": 6,
+    "text": "SDK=ROOT/'.tools/occt-sdk'"
+  },
+  {
+    "source": "scripts/engines/native_occt.py",
+    "line": 17,
+    "text": "    if sha(Path('D:/msys64/ucrt64/bin/libwinpthread-1.dll'))!=manifest['external_winpthread_sha256']:raise ValueError('Native winpthread prerequisite pin mismatch')"
+  },
+  {
+    "source": "scripts/engines/native_occt.py",
+    "line": 49,
+    "text": "        env=os.environ.copy();env['PATH']=str(SDK/'ucrt64/bin')+os.pathsep+'D:/msys64/ucrt64/bin'+os.pathsep+env.get('PATH','')"
+  },
+  {
+    "source": "scripts/engines/test-gmsh.ps1",
+    "line": 3,
+    "text": "$sdk = Join-Path $root '.tools/engines/gmsh-4.15.2-Windows64-sdk'"
+  },
+  {
+    "source": "scripts/engines/test-gmsh.ps1",
+    "line": 4,
+    "text": "$exe = Join-Path $root '.tools/engines/gmsh_sdk_test.exe'"
+  },
+  {
+    "source": "scripts/engines/test-gmsh.ps1",
+    "line": 5,
+    "text": "$evidence = Join-Path $root 'docs/architecture/evidence/gmsh'"
+  },
+  {
+    "source": "tests/archive_calculix_evidence.py",
+    "line": 5,
+    "text": "base=root/'docs/architecture/evidence/calculix'"
+  },
+  {
+    "source": "tests/benchmark_calculix_gmsh.gd",
+    "line": 20,
+    "text": "\tvar f=FileAccess.open(\"res://docs/architecture/evidence/calculix/gmsh-benchmarks.json\",FileAccess.WRITE);f.store_string(JSON.stringify(rows,\"  \"));f.close()"
+  },
+  {
+    "source": "tests/benchmark_extreme_axial.py",
+    "line": 5,
+    "text": " m=n+1;plane=m*m;nodes=m**3;folder=Path('.tools/extreme-axial');folder.mkdir(exist_ok=True);job=folder/'model.ucjob'"
+  },
+  {
+    "source": "tests/benchmark_extreme_thermal.py",
+    "line": 3,
+    "text": "n=10;m=n+1;plane=m*m;nodes=m**3;folder=Path('.tools/extreme-thermal');folder.mkdir(exist_ok=True);job=folder/'model.ucjob';tick=time.perf_counter()"
+  },
+  {
+    "source": "tests/benchmark_godot472_calculix_gmsh.gd",
+    "line": 20,
+    "text": "\tvar f=FileAccess.open(\"res://.tools/godot472-migration/gmsh-benchmarks.json\",FileAccess.WRITE);f.store_string(JSON.stringify(rows,\"  \"));f.close()"
+  },
+  {
+    "source": "tests/benchmark_hpc23.py",
+    "line": 22,
+    "text": "folder=Path('.tools/hpc23-bench');folder.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/benchmark_hpc24.py",
+    "line": 19,
+    "text": "    source=root/'.tools/hpc23-bench'/(job+'.ucjob');out=folder/f'{job}-{label}-{rep}'"
+  },
+  {
+    "source": "tests/benchmark_hpc_assembly.py",
+    "line": 5,
+    "text": " m=n+1;plane=m*m;nodes=m**3;folder=Path('.tools/extreme-axial');folder.mkdir(exist_ok=True);job=folder/'model.ucjob'"
+  },
+  {
+    "source": "tests/benchmark_mesh_inspection.gd",
+    "line": 30,
+    "text": "\tvar file:=FileAccess.open(\"res://.tools/mesh-benchmark.json\",FileAccess.WRITE)"
+  },
+  {
+    "source": "tests/benchmark_stage51.gd",
+    "line": 12,
+    "text": "\tif FileAccess.file_exists(\"res://.tools/stage51-fixtures.json\"):paths=JSON.parse_string(FileAccess.get_file_as_string(\"res://.tools/stage51-fixtures.json\"))"
+  },
+  {
+    "source": "tests/benchmark_stage51.gd",
+    "line": 35,
+    "text": "\t\t\t\tvar file=FileAccess.open(\"res://.tools/stage51-fixtures.json\",FileAccess.WRITE);file.store_string(JSON.stringify(paths));file.close()"
+  },
+  {
+    "source": "tests/cad21_geometry.py",
+    "line": 7,
+    "text": "OUT=ROOT/'docs/architecture/evidence/cad21';OUT.mkdir(parents=True,exist_ok=True)"
+  },
+  {
+    "source": "tests/cad21_gui.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/cad21/screenshots\""
+  },
+  {
+    "source": "tests/cad21_gui.gd",
+    "line": 51,
+    "text": "\tvar path=\"res://docs/architecture/evidence/cad21/gui.ucae\""
+  },
+  {
+    "source": "tests/cad21_integration.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/cad21\""
+  },
+  {
+    "source": "tests/cad21_lifecycle.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad21/lifecycle';OUT.mkdir(parents=True,exist_ok=True)"
+  },
+  {
+    "source": "tests/cad22_gui.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/cad22/screenshots\""
+  },
+  {
+    "source": "tests/cad22_gui.gd",
+    "line": 14,
+    "text": "\tvar error=w.document.open_project(\"res://docs/architecture/evidence/cad22/refined-hole.ucae\")"
+  },
+  {
+    "source": "tests/cad22_gui.gd",
+    "line": 45,
+    "text": "\tvar path=\"res://docs/architecture/evidence/cad22/gui-refined.ucae\""
+  },
+  {
+    "source": "tests/cad22_gui.gd",
+    "line": 47,
+    "text": "\tvar f=FileAccess.open(\"res://docs/architecture/evidence/cad22/gui-details.json\",FileAccess.WRITE);f.store_string(JSON.stringify({\"outcome\":\"PASS\",\"heartbeat_frames\":heartbeat,\"nodes\":w.document.data.mesh.nodes.size(),\"tet4\":w.document.data.mesh.elements.size(),\"quality\":w.document.data.mesh.quality.minimum_mean_ratio,\"mesh_volume_error\":w.document.data.mesh.quality.relative_volume_difference}));f.close()"
+  },
+  {
+    "source": "tests/cad22_independent.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad22'"
+  },
+  {
+    "source": "tests/cad22_lifecycle.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad22/lifecycle';OUT.mkdir(parents=True,exist_ok=True)"
+  },
+  {
+    "source": "tests/cad22_lifecycle.py",
+    "line": 17,
+    "text": "source=json.loads((ROOT/'docs/architecture/evidence/cad21/step-cut.json').read_text());rows=[]"
+  },
+  {
+    "source": "tests/cad22_numerical.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/cad22\""
+  },
+  {
+    "source": "tests/cad22_numerical.gd",
+    "line": 11,
+    "text": "\t\t\tvar error=document.open_project(\"res://docs/architecture/evidence/cad21/step-cut.json\")"
+  },
+  {
+    "source": "tests/cad22_persistence.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/cad22\""
+  },
+  {
+    "source": "tests/cad22_persistence.gd",
+    "line": 15,
+    "text": "\tif not check(w.document.open_project(\"res://docs/architecture/evidence/cad21/fuse.json\").is_empty(),\"open-CAD21-compatibility\"):quit(1);return"
+  },
+  {
+    "source": "tests/cad22_validation.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad22';sys.path.insert(0,str(ROOT/'scripts/engines'))"
+  },
+  {
+    "source": "tests/cad22_validation.py",
+    "line": 25,
+    "text": "data=json.loads((ROOT/'docs/architecture/evidence/cad21/step-cut.json').read_text());p=data['parts'][0]"
+  },
+  {
+    "source": "tests/cad23_gui.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/cad23/screenshots\""
+  },
+  {
+    "source": "tests/cad23_gui.gd",
+    "line": 14,
+    "text": "\tvar error=w.document.open_project(\"res://docs/architecture/evidence/cad23/tet10-step-hole.ucae\")"
+  },
+  {
+    "source": "tests/cad23_gui.gd",
+    "line": 41,
+    "text": "\tvar path=\"res://docs/architecture/evidence/cad23/gui-quadratic.ucae\""
+  },
+  {
+    "source": "tests/cad23_gui.gd",
+    "line": 44,
+    "text": "\tvar f=FileAccess.open(\"res://docs/architecture/evidence/cad23/gui-details.json\",FileAccess.WRITE);f.store_string(JSON.stringify({\"outcome\":\"PASS\",\"heartbeat_frames\":heartbeat,\"nodes\":w.document.data.mesh.nodes.size(),\"tet10\":w.document.data.mesh.elements.size(),\"quality\":w.document.data.mesh.quality.minimum_quadratic_quality,\"mesh_volume_error\":w.document.data.mesh.quality.relative_volume_difference}));f.close()"
+  },
+  {
+    "source": "tests/cad23_gui_inspect.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/cad23\""
+  },
+  {
+    "source": "tests/cad23_independent.py",
+    "line": 5,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad23'"
+  },
+  {
+    "source": "tests/cad23_lifecycle.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad23/lifecycle';OUT.mkdir(parents=True,exist_ok=True)"
+  },
+  {
+    "source": "tests/cad23_lifecycle.py",
+    "line": 16,
+    "text": "source=json.loads((ROOT/'docs/architecture/evidence/cad21/step-cut.json').read_text());rows=[]"
+  },
+  {
+    "source": "tests/cad23_lifecycle.py",
+    "line": 17,
+    "text": "numerical=json.loads((ROOT/'docs/architecture/evidence/cad23/numerical.json').read_text());solve_source=Path([r for r in numerical if r['case']=='bending' and r['order']==2][-1]['solver_job'])"
+  },
+  {
+    "source": "tests/cad23_lifecycle.py",
+    "line": 30,
+    "text": "            binary=ROOT/'.tools/engines/calculix/CalculiX-2.23.0-win-x64/bin/ccx.exe'"
+  },
+  {
+    "source": "tests/cad23_numerical.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/cad23\""
+  },
+  {
+    "source": "tests/cad23_numerical.gd",
+    "line": 12,
+    "text": "\t\t\tvar error=document.open_project(\"res://docs/architecture/evidence/cad21/step-cut.json\")"
+  },
+  {
+    "source": "tests/cad23_persistence.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/cad23\""
+  },
+  {
+    "source": "tests/cad23_shutdown.gd",
+    "line": 4,
+    "text": "\tvar error=w.document.open_project(\"res://docs/architecture/evidence/cad23/tet10-axial-bar.ucae\")"
+  },
+  {
+    "source": "tests/cad23_shutdown.gd",
+    "line": 21,
+    "text": "\tvar f=FileAccess.open(\"res://docs/architecture/evidence/cad23/shutdown-\"+mode+\".json\",FileAccess.WRITE);f.store_string(JSON.stringify({\"observed\":observed,\"directory\":ProjectSettings.globalize_path(path)}));f.close()"
+  },
+  {
+    "source": "tests/cad23_shutdown.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad23';rows=[]"
+  },
+  {
+    "source": "tests/cad23_shutdown.py",
+    "line": 5,
+    "text": "env=os.environ.copy();env.update(APPDATA=str(ROOT/'.tools/godot472-migration/roaming'),LOCALAPPDATA=str(ROOT/'.tools/godot472-migration/local'),UNICORE_PYTHON=sys.executable)"
+  },
+  {
+    "source": "tests/cad23_shutdown.py",
+    "line": 6,
+    "text": "godot=r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe'"
+  },
+  {
+    "source": "tests/cad23_unit.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts/engines'));OUT=ROOT/'docs/architecture/evidence/cad23'"
+  },
+  {
+    "source": "tests/cad23_unit.py",
+    "line": 5,
+    "text": "sys.path.insert(0,str(ROOT/'.tools/engines/gmsh-4.15.2-Windows64-sdk/lib'))"
+  },
+  {
+    "source": "tests/cad23_unit.py",
+    "line": 55,
+    "text": "        data=json.loads((ROOT/('docs/architecture/evidence/cad21/'+kind.lower()+'.json')).read_text());data['parts'][0]['mesh_settings']=config"
+  },
+  {
+    "source": "tests/cad24_boundary.gd",
+    "line": 4,
+    "text": "\td.data=JSON.parse_string(FileAccess.get_file_as_string(\"res://docs/architecture/evidence/cad21/fuse.json\"))"
+  },
+  {
+    "source": "tests/cad24_boundary.gd",
+    "line": 18,
+    "text": "\tassert(d.save_project(\"res://docs/architecture/evidence/cad24-completion/boundary.ucae\")==OK)"
+  },
+  {
+    "source": "tests/cad24_boundary.gd",
+    "line": 19,
+    "text": "\tassert(d.open_project(\"res://docs/architecture/evidence/cad24-completion/boundary.ucae\").is_empty())"
+  },
+  {
+    "source": "tests/cad24_boundary.gd",
+    "line": 27,
+    "text": "\tvar invalid_path=\"res://docs/architecture/evidence/cad24-completion/unknown-topology-version.json\""
+  },
+  {
+    "source": "tests/cad24_deck_audit.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad24-completion'"
+  },
+  {
+    "source": "tests/cad24_deck_audit.py",
+    "line": 5,
+    "text": "USER=ROOT/'.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE'"
+  },
+  {
+    "source": "tests/cad24_endurance.py",
+    "line": 10,
+    "text": "OUT=ROOT/'docs/architecture/evidence/cad24-completion';rows=[]"
+  },
+  {
+    "source": "tests/cad24_failure.gd",
+    "line": 13,
+    "text": "\tvar f=FileAccess.open(\"res://docs/architecture/evidence/cad24-completion/fault-owner.json\",FileAccess.WRITE);f.store_string(JSON.stringify({\"job\":ProjectSettings.globalize_path(job.directory),\"godot_pid\":OS.get_process_id()}));f.close()"
+  },
+  {
+    "source": "tests/cad24_failure.py",
+    "line": 3,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad24-completion'"
+  },
+  {
+    "source": "tests/cad24_failure.py",
+    "line": 6,
+    "text": "env=os.environ.copy();env.update(APPDATA=str(ROOT/'.tools/godot472-migration/roaming'),LOCALAPPDATA=str(ROOT/'.tools/godot472-migration/local'),UNICORE_PYTHON=sys.executable)"
+  },
+  {
+    "source": "tests/cad24_failure.py",
+    "line": 10,
+    "text": "godot=subprocess.Popen([r'D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe','--headless','--path',str(ROOT),'-s','res://tests/cad24_failure.gd'],env=env,stdout=stdout_file,stderr=stderr_file)"
+  },
+  {
+    "source": "tests/cad24_gui.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/cad24-completion/screenshots\""
+  },
+  {
+    "source": "tests/cad24_gui.gd",
+    "line": 20,
+    "text": "\tvar error=w.document.open_project(\"res://docs/architecture/evidence/cad24-completion/step-scaled-tet2.ucae\")"
+  },
+  {
+    "source": "tests/cad24_gui.gd",
+    "line": 55,
+    "text": "\tvar saved=\"res://docs/architecture/evidence/cad24-completion/gui-final.ucae\""
+  },
+  {
+    "source": "tests/cad24_gui_endurance.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/cad24-completion/gui-endurance\""
+  },
+  {
+    "source": "tests/cad24_gui_endurance.gd",
+    "line": 14,
+    "text": "\tvar error=w.document.open_project(\"res://docs/architecture/evidence/cad24-completion/step-scaled-tet2.ucae\")"
+  },
+  {
+    "source": "tests/cad24_gui_endurance.py",
+    "line": 7,
+    "text": "OUT=ROOT/'docs/architecture/evidence/cad24-completion';run=OUT/('gui-endurance-'+str(time.time_ns()));run.mkdir()"
+  },
+  {
+    "source": "tests/cad24_gui_endurance.py",
+    "line": 8,
+    "text": "USER=ROOT/'.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE'"
+  },
+  {
+    "source": "tests/cad24_gui_endurance.py",
+    "line": 32,
+    "text": "env=os.environ.copy();env.update(APPDATA=str(ROOT/'.tools/godot472-migration/roaming'),LOCALAPPDATA=str(ROOT/'.tools/godot472-migration/local'),UNICORE_PYTHON=sys.executable)"
+  },
+  {
+    "source": "tests/cad24_gui_endurance.py",
+    "line": 36,
+    "text": "    p=subprocess.Popen([r'D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe','--path',str(ROOT),'-s','res://tests/cad24_gui_endurance.gd'],env=env,stdout=out,stderr=err,creationflags=0x4)"
+  },
+  {
+    "source": "tests/cad24_history.py",
+    "line": 27,
+    "text": "fixtures=ROOT/'docs/architecture/evidence/cad24-completion/fixtures'"
+  },
+  {
+    "source": "tests/cad24_history.py",
+    "line": 28,
+    "text": "os.environ['PATH']=str(SDK/'ucrt64/bin')+';D:/msys64/ucrt64/bin;'+os.environ.get('PATH','')"
+  },
+  {
+    "source": "tests/cad24_history.py",
+    "line": 58,
+    "text": "(ROOT/'docs/architecture/evidence/cad24-completion/persistent-history.json').write_text(json.dumps(receipt,indent=2))"
+  },
+  {
+    "source": "tests/cad24_matrix_extra.py",
+    "line": 10,
+    "text": "OUT=ROOT/'docs/architecture/evidence/cad24-completion';rows=[]"
+  },
+  {
+    "source": "tests/cad24_native.py",
+    "line": 9,
+    "text": "OUT=ROOT/'docs/architecture/evidence/cad24-completion';rows=[]"
+  },
+  {
+    "source": "tests/cad24_numerical.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/cad24-completion\""
+  },
+  {
+    "source": "tests/cad24_protocol.py",
+    "line": 6,
+    "text": "OUT=ROOT/'docs/architecture/evidence/cad24-completion';fixtures=OUT/'fixtures';fixtures.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/cad24_protocol.py",
+    "line": 7,
+    "text": "os.environ['PATH']=str(SDK/'ucrt64/bin')+';D:/msys64/ucrt64/bin;'+os.environ.get('PATH','')"
+  },
+  {
+    "source": "tests/cad24_retention.py",
+    "line": 49,
+    "text": "    out=ROOT/'docs/architecture/evidence/cad24-completion/retention.json';out.write_text(json.dumps(report,indent=2))"
+  },
+  {
+    "source": "tests/capture_engineering_cycle.gd",
+    "line": 20,
+    "text": "\troot.get_texture().get_image().save_png(\"res://.tools/thermal-results.png\")"
+  },
+  {
+    "source": "tests/capture_engineering_cycle.gd",
+    "line": 26,
+    "text": "\troot.get_texture().get_image().save_png(\"res://.tools/engineering-materials.png\")"
+  },
+  {
+    "source": "tests/capture_mesh_inspection.gd",
+    "line": 47,
+    "text": "\t\troot.get_texture().get_image().save_png(\"res://.tools/mesh-\"+mode+\".png\")"
+  },
+  {
+    "source": "tests/capture_mesh_inspection.gd",
+    "line": 59,
+    "text": "\troot.get_texture().get_image().save_png(\"res://.tools/mesh-tet4.png\")"
+  },
+  {
+    "source": "tests/compare_calculix_extreme.py",
+    "line": 5,
+    "text": "base=root/'docs/architecture/evidence/calculix/extreme-comparison';base.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/compare_godot472_calculix_extreme.py",
+    "line": 5,
+    "text": "parser=argparse.ArgumentParser();parser.add_argument('--output',default='.tools/godot472-migration/extreme-comparison');args=parser.parse_args()"
+  },
+  {
+    "source": "tests/compare_godot472_calculix_extreme.py",
+    "line": 9,
+    "text": "    data=json.loads((root/'.tools/godot472-migration/workbench'/f'{kind}.json').read_text())"
+  },
+  {
+    "source": "tests/compare_stage51.py",
+    "line": 15,
+    "text": "                text=(root/'.tools/stage51-baseline'/Path(path).name).read_text(encoding='utf-8-sig')"
+  },
+  {
+    "source": "tests/compare_stage51.py",
+    "line": 23,
+    "text": "            p=subprocess.Popen([str(root/'.tools/godot/Godot_v4.0-stable_win64.exe'),'--path',str(root),'-s','res://tests/benchmark_stage51.gd'],cwd=root,env=env,stdout=log,stderr=log)"
+  },
+  {
+    "source": "tests/diagnose_cad_crash.py",
+    "line": 4,
+    "text": "out=Path('docs/architecture/evidence/cad-crash-current');out.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/diagnose_cad_crash.py",
+    "line": 16,
+    "text": "proc=subprocess.Popen(['.tools/godot/Godot_v4.0-stable_win64.exe','--headless','--path','.','-s','res://tests/test_app_shell_suite.gd'],creationflags=2,stdout=log,stderr=log)"
+  },
+  {
+    "source": "tests/diagnose_cad_minimal.py",
+    "line": 4,
+    "text": "out=Path('docs/architecture/evidence/cad-crash-minimal');out.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/diagnose_cad_minimal.py",
+    "line": 16,
+    "text": "proc=subprocess.Popen(['.tools/godot/Godot_v4.0-stable_win64.exe','--headless','--path','.tools/crash-minimal','--quit'],creationflags=2,stdout=log,stderr=log)"
+  },
+  {
+    "source": "tests/diagnose_cad_startup.py",
+    "line": 4,
+    "text": "out=Path('docs/architecture/evidence/cad-crash-startup');out.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/diagnose_cad_startup.py",
+    "line": 16,
+    "text": "proc=subprocess.Popen(['.tools/godot/Godot_v4.0-stable_win64.exe','--headless','--path','.','--quit'],creationflags=2,stdout=log,stderr=log)"
+  },
+  {
+    "source": "tests/diagnose_cad_valid_minimal.py",
+    "line": 4,
+    "text": "out=Path('docs/architecture/evidence/cad-crash-valid-minimal');out.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/diagnose_cad_valid_minimal.py",
+    "line": 16,
+    "text": "proc=subprocess.Popen(['.tools/godot/Godot_v4.0-stable_win64.exe','--headless','--path','.tools/crash-minimal','--quit'],creationflags=2,stdout=log,stderr=log)"
+  },
+  {
+    "source": "tests/diagnose_godot472_minimal.py",
+    "line": 4,
+    "text": "out=Path('docs/architecture/evidence/godot472-minimal');out.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/diagnose_godot472_minimal.py",
+    "line": 16,
+    "text": "proc=subprocess.Popen([r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe','--headless','--path','.tools/crash-minimal','--quit'],creationflags=2,stdout=log,stderr=log)"
+  },
+  {
+    "source": "tests/diagnose_godot472_unicore.py",
+    "line": 4,
+    "text": "out=Path('docs/architecture/evidence/godot472-unicore-startup');out.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/diagnose_godot472_unicore.py",
+    "line": 16,
+    "text": "proc=subprocess.Popen([r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe','--headless','--path','.','--quit'],creationflags=2,stdout=log,stderr=log)"
+  },
+  {
+    "source": "tests/diagnose_godot472_valid_minimal.py",
+    "line": 4,
+    "text": "out=Path('docs/architecture/evidence/godot472-valid-minimal');out.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/diagnose_godot472_valid_minimal.py",
+    "line": 16,
+    "text": "proc=subprocess.Popen([r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe','--headless','--path','.tools/crash-minimal','--quit'],creationflags=2,stdout=log,stderr=log)"
+  },
+  {
+    "source": "tests/diagnose_stage51_crash.py",
+    "line": 16,
+    "text": "proc=subprocess.Popen(['.tools/godot/Godot_v4.0-stable_win64.exe','--headless','--path','.','-s','res://tests/test_app_shell_suite.gd'],creationflags=2,stdout=log,stderr=log)"
+  },
+  {
+    "source": "tests/export_stage7_modal_meshes.gd",
+    "line": 13,
+    "text": "\tvar file=FileAccess.open(\"res://.tools/stage7-modal-meshes.json\",FileAccess.WRITE)"
+  },
+  {
+    "source": "tests/investigate_hpc22.py",
+    "line": 17,
+    "text": "job=Path('.tools/extreme-axial/model.ucjob'); reference=None"
+  },
+  {
+    "source": "tests/investigate_hpc22.py",
+    "line": 20,
+    "text": "  output=Path('.tools/hpc22')/label/str(rep); system_start=system_times(); start=time.perf_counter()"
+  },
+  {
+    "source": "tests/launch_extreme_then_exit.gd",
+    "line": 3,
+    "text": "\tvar directory:=ProjectSettings.globalize_path(\"res://.tools/lifetime-large\")"
+  },
+  {
+    "source": "tests/profile_cae_recovery.gd",
+    "line": 28,
+    "text": "\tvar file:=FileAccess.open(\"res://.tools/cae-recovery-performance.json\",FileAccess.WRITE)"
+  },
+  {
+    "source": "tests/run_cad21.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad21';OUT.mkdir(parents=True,exist_ok=True)"
+  },
+  {
+    "source": "tests/run_cad21.py",
+    "line": 5,
+    "text": "GODOT=r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe'"
+  },
+  {
+    "source": "tests/run_cad21.py",
+    "line": 6,
+    "text": "env=os.environ.copy();env.update(APPDATA=str(ROOT/'.tools/godot472-migration/roaming'),LOCALAPPDATA=str(ROOT/'.tools/godot472-migration/local'),UNICORE_PYTHON=sys.executable)"
+  },
+  {
+    "source": "tests/run_cad22.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad22';OUT.mkdir(parents=True,exist_ok=True)"
+  },
+  {
+    "source": "tests/run_cad22.py",
+    "line": 5,
+    "text": "GODOT=r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe'"
+  },
+  {
+    "source": "tests/run_cad22.py",
+    "line": 6,
+    "text": "env=os.environ.copy();env.update(APPDATA=str(ROOT/'.tools/godot472-migration/roaming'),LOCALAPPDATA=str(ROOT/'.tools/godot472-migration/local'),UNICORE_PYTHON=sys.executable)"
+  },
+  {
+    "source": "tests/run_cad23.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad23';OUT.mkdir(parents=True,exist_ok=True)"
+  },
+  {
+    "source": "tests/run_cad23.py",
+    "line": 5,
+    "text": "GODOT=r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe'"
+  },
+  {
+    "source": "tests/run_cad23.py",
+    "line": 6,
+    "text": "env=os.environ.copy();env.update(APPDATA=str(ROOT/'.tools/godot472-migration/roaming'),LOCALAPPDATA=str(ROOT/'.tools/godot472-migration/local'),UNICORE_PYTHON=sys.executable)"
+  },
+  {
+    "source": "tests/run_cad24.py",
+    "line": 5,
+    "text": "OUT=ROOT/'docs/architecture/evidence/cad24'"
+  },
+  {
+    "source": "tests/run_cad24.py",
+    "line": 7,
+    "text": "GODOT=r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe'"
+  },
+  {
+    "source": "tests/run_cad24.py",
+    "line": 9,
+    "text": "env.update(APPDATA=str(ROOT/'.tools/godot472-migration/roaming'),LOCALAPPDATA=str(ROOT/'.tools/godot472-migration/local'),UNICORE_PYTHON=sys.executable)"
+  },
+  {
+    "source": "tests/run_cad24.py",
+    "line": 11,
+    "text": "    pins=json.loads((ROOT/'docs/architecture/evidence/cad23/binary-hashes-after.json').read_text())"
+  },
+  {
+    "source": "tests/run_cad24_completion.py",
+    "line": 3,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad24-completion'"
+  },
+  {
+    "source": "tests/run_cad24_completion.py",
+    "line": 4,
+    "text": "GODOT=r'D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe'"
+  },
+  {
+    "source": "tests/run_cad24_completion.py",
+    "line": 5,
+    "text": "env=os.environ.copy();env.update(APPDATA=str(ROOT/'.tools/godot472-migration/roaming'),LOCALAPPDATA=str(ROOT/'.tools/godot472-migration/local'),UNICORE_PYTHON=sys.executable)"
+  },
+  {
+    "source": "tests/run_calculix_acceptance.py",
+    "line": 6,
+    "text": "out=root/'docs/architecture/evidence/calculix/final-campaign';out.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/run_calculix_acceptance.py",
+    "line": 7,
+    "text": "godot=str(root/'.tools/godot/Godot_v4.0-stable_win64_console.exe')"
+  },
+  {
+    "source": "tests/run_calculix_acceptance.py",
+    "line": 16,
+    "text": " ('default-regressions',[sys.executable,'native/run_regressions.py','--godot',godot,'--output','docs/architecture/evidence/calculix/regressions-final'])]"
+  },
+  {
+    "source": "tests/run_godot472_engineering.py",
+    "line": 12,
+    "text": "parser.add_argument('--output', default='.tools/godot472-migration/engineering')"
+  },
+  {
+    "source": "tests/run_godot472_engineering.py",
+    "line": 18,
+    "text": "exe = Path(r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe')"
+  },
+  {
+    "source": "tests/run_godot472_engineering.py",
+    "line": 20,
+    "text": "env['APPDATA'] = str(root / '.tools/godot472-migration/roaming')"
+  },
+  {
+    "source": "tests/run_godot472_engineering.py",
+    "line": 21,
+    "text": "env['LOCALAPPDATA'] = str(root / '.tools/godot472-migration/local')"
+  },
+  {
+    "source": "tests/run_godot472_scan.py",
+    "line": 9,
+    "text": "exe = Path(r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe')"
+  },
+  {
+    "source": "tests/run_godot472_scan.py",
+    "line": 10,
+    "text": "out = root / '.tools/godot472-migration'"
+  },
+  {
+    "source": "tests/run_godot472_startup_cycles.py",
+    "line": 11,
+    "text": "exe = Path(r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe')"
+  },
+  {
+    "source": "tests/run_godot472_startup_cycles.py",
+    "line": 13,
+    "text": "parser.add_argument('--output', default='.tools/godot472-migration/startup-cycles')"
+  },
+  {
+    "source": "tests/run_godot472_startup_cycles.py",
+    "line": 20,
+    "text": "env['APPDATA'] = str(root / '.tools/godot472-migration/roaming')"
+  },
+  {
+    "source": "tests/run_godot472_startup_cycles.py",
+    "line": 21,
+    "text": "env['LOCALAPPDATA'] = str(root / '.tools/godot472-migration/local')"
+  },
+  {
+    "source": "tests/run_hpc23_validation.ps1",
+    "line": 14,
+    "text": "  & $cxx @flags \"native/tests/$test.cpp\" -o \".tools/hpc23_${test}_${mode}.exe\"; Check-Exit"
+  },
+  {
+    "source": "tests/run_hpc23_validation.ps1",
+    "line": 15,
+    "text": "  & \".tools/hpc23_${test}_${mode}.exe\" 2>&1 | Tee-Object -FilePath $log -Append; Check-Exit"
+  },
+  {
+    "source": "tests/run_hpc23_validation.ps1",
+    "line": 19,
+    "text": " & $cxx -std=c++17 -O2 -fopenmp -ffp-contract=off -static -Inative/src \"native/tests/$test.cpp\" -o \".tools/hpc23_$test.exe\"; Check-Exit"
+  },
+  {
+    "source": "tests/run_hpc23_validation.ps1",
+    "line": 20,
+    "text": " & \".tools/hpc23_$test.exe\" 2>&1 | Tee-Object -FilePath $log -Append; Check-Exit"
+  },
+  {
+    "source": "tests/run_hpc23_validation.ps1",
+    "line": 22,
+    "text": "foreach($method in @('ic0','block-jacobi')){& .tools/hpc23_thermal_radiation_test.exe $method 2>&1 | Tee-Object -FilePath $log -Append; Check-Exit}"
+  },
+  {
+    "source": "tests/run_hpc23_validation.ps1",
+    "line": 23,
+    "text": "& .tools/hpc23_parallel_assembly_test_release.exe --serial 2>&1 | Tee-Object -FilePath $log -Append; Check-Exit"
+  },
+  {
+    "source": "tests/run_hpc23_validation.ps1",
+    "line": 35,
+    "text": "& $python native/run_regressions.py --godot .tools/godot/Godot_v4.0-stable_win64_console.exe --all-suites --output .tools/hpc23-final 2>&1 | Tee-Object -FilePath $log -Append"
+  },
+  {
+    "source": "tests/run_hpc23_validation.ps1",
+    "line": 37,
+    "text": "Copy-Item .tools/hpc23-final/results.json docs/hpc-optimization/hpc23-final-regression.json"
+  },
+  {
+    "source": "tests/run_hpc23_validation.ps1",
+    "line": 38,
+    "text": "Copy-Item .tools/hpc23-final/test_app_shell_suite.log docs/hpc-optimization/hpc23-app-shell.log"
+  },
+  {
+    "source": "tests/run_mesh_fingerprint_fix.py",
+    "line": 3,
+    "text": "root=Path.cwd();out=root/'.tools/mesh-fingerprint-fix';out.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/run_mesh_fingerprint_fix.py",
+    "line": 4,
+    "text": "env=os.environ.copy();env.update(APPDATA=str(root/'.tools/godot472-migration/roaming'),LOCALAPPDATA=str(root/'.tools/godot472-migration/local'),UNICORE_PYTHON=r'C:/Users/Victus/AppData/Local/Python/pythoncore-3.14-64/python.exe')"
+  },
+  {
+    "source": "tests/run_mesh_fingerprint_fix.py",
+    "line": 5,
+    "text": "exe=r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe'"
+  },
+  {
+    "source": "tests/run_step_final.py",
+    "line": 5,
+    "text": "OUT=ROOT/'docs/architecture/evidence/step-final'"
+  },
+  {
+    "source": "tests/run_step_final.py",
+    "line": 7,
+    "text": "GODOT=Path(r'D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe')"
+  },
+  {
+    "source": "tests/run_step_final.py",
+    "line": 9,
+    "text": "env.update(APPDATA=str(ROOT/'.tools/godot472-migration/roaming'),LOCALAPPDATA=str(ROOT/'.tools/godot472-migration/local'),UNICORE_PYTHON=sys.executable)"
+  },
+  {
+    "source": "tests/run_step_final.py",
+    "line": 44,
+    "text": "binary_paths=[GODOT,ROOT/'.tools/engines/calculix/CalculiX-2.23.0-win-x64/bin/ccx.exe',*list((ROOT/'bin').rglob('*.dll')),*list((ROOT/'.tools/engines/gmsh-4.15.2-Windows64-sdk/lib').glob('*.dll'))]"
+  },
+  {
+    "source": "tests/stabilize_stage5_checks.py",
+    "line": 7,
+    "text": "godot=str(root/'.tools/godot/Godot_v4.0-stable_win64_console.exe')"
+  },
+  {
+    "source": "tests/stabilize_stage5_native.py",
+    "line": 8,
+    "text": "build = root / '.tools/stage5-final-native'"
+  },
+  {
+    "source": "tests/stabilize_stage5_native.py",
+    "line": 36,
+    "text": "for fixture in ['docs/extreme-mode/examples/tet.ucjob','.tools/extreme-checkpoint/model.ucjob']:"
+  },
+  {
+    "source": "tests/stage6_acceptance_runner.py",
+    "line": 7,
+    "text": "GODOT = str(ROOT / '.tools/godot/Godot_v4.0-stable_win64.exe')"
+  },
+  {
+    "source": "tests/stage6_acceptance_runner.py",
+    "line": 9,
+    "text": "os.environ['APPDATA'] = str(ROOT / '.tools/cae-appdata')"
+  },
+  {
+    "source": "tests/stage6_acceptance_runner.py",
+    "line": 34,
+    "text": "    engine=ROOT/'.tools/cae-appdata/Godot/app_userdata/UniCORE/logs/godot.log'"
+  },
+  {
+    "source": "tests/stage6_dump_inventory.py",
+    "line": 54,
+    "text": "exe=root/'.tools/godot/Godot_v4.0-stable_win64.exe'"
+  },
+  {
+    "source": "tests/stage6_finalize_evidence.py",
+    "line": 49,
+    "text": "    row.update(command=[engine,'--headless','--path',str(root),'-s','res://'+row['script']],appdata=str(root/'.tools/cae-appdata'),log=str(log.relative_to(root)),assertions=[s for s in text.splitlines() if re.search(r'PASS|Passed|checks=|failures=',s)],diagnostics=[s for s in text.splitlines() if 'ERROR:' in s or 'WARNING:' in s])"
+  },
+  {
+    "source": "tests/stage6_lame_reference.py",
+    "line": 11,
+    "text": "jobs=root/'.tools/cae-appdata/Godot/app_userdata/UniCORE/extreme_jobs'"
+  },
+  {
+    "source": "tests/step_final_failures.gd",
+    "line": 13,
+    "text": "\tvar dir=\"res://docs/architecture/evidence/step-final/oversize-\"+str(Time.get_ticks_usec())"
+  },
+  {
+    "source": "tests/step_final_graphical.gd",
+    "line": 9,
+    "text": "\t\troot.get_texture().get_image().save_png(\"res://docs/architecture/evidence/step-final/screenshots/%s-%d.png\" % [name,width])"
+  },
+  {
+    "source": "tests/step_final_graphical.gd",
+    "line": 18,
+    "text": "\tDirAccess.make_dir_recursive_absolute(\"res://.tools/step-calculix/workbench\")"
+  },
+  {
+    "source": "tests/step_final_graphical.gd",
+    "line": 19,
+    "text": "\tDirAccess.make_dir_recursive_absolute(\"res://docs/architecture/evidence/step-final/screenshots\")"
+  },
+  {
+    "source": "tests/step_final_graphical.gd",
+    "line": 78,
+    "text": "\tvar path=\"res://.tools/step-calculix/workbench/\"+fixture+\".ucae\""
+  },
+  {
+    "source": "tests/step_final_lifecycle.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/step-final/lifecycle';OUT.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/step_final_lifecycle.py",
+    "line": 11,
+    "text": "ccx=ROOT/'.tools/engines/calculix/CalculiX-2.23.0-win-x64/bin/ccx.exe'"
+  },
+  {
+    "source": "tests/step_final_numerical.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/step-final\""
+  },
+  {
+    "source": "tests/step_final_workbench_lifecycle.gd",
+    "line": 2,
+    "text": "const OUT=\"res://docs/architecture/evidence/step-final\""
+  },
+  {
+    "source": "tests/step_final_workbench_lifecycle.gd",
+    "line": 11,
+    "text": "\tvar path=\"res://.tools/step-calculix/workbench/bar.ucae\""
+  },
+  {
+    "source": "tests/summarize_cad21.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad21'"
+  },
+  {
+    "source": "tests/summarize_cad21.py",
+    "line": 12,
+    "text": "baseline=ROOT/'.tools/cad21-working-tree-before.txt'"
+  },
+  {
+    "source": "tests/summarize_cad21.py",
+    "line": 21,
+    "text": "pins=json.loads((ROOT/'docs/architecture/evidence/step-final/binary-hashes.json').read_text())"
+  },
+  {
+    "source": "tests/summarize_cad21.py",
+    "line": 32,
+    "text": "    for job in (ROOT/'.tools/godot472-migration/roaming/Godot/app_userdata/UniCORE/calculix_jobs').iterdir():"
+  },
+  {
+    "source": "tests/summarize_cad21.py",
+    "line": 157,
+    "text": "Set `UNICORE_PYTHON` to the installed `C:/Users/Victus/AppData/Local/Python/pythoncore-3.14-64/python.exe`; set APPDATA/LOCALAPPDATA to the absolute `.tools/godot472-migration/roaming` and `local` directories. Run from the repository root:"
+  },
+  {
+    "source": "tests/summarize_cad21.py",
+    "line": 166,
+    "text": "PYTHON native/run_regressions.py --godot GODOT --output docs/architecture/evidence/cad21/regressions-final"
+  },
+  {
+    "source": "tests/summarize_cad21.py",
+    "line": 170,
+    "text": "GODOT is the unchanged `D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe`."
+  },
+  {
+    "source": "tests/summarize_cad22.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad22'"
+  },
+  {
+    "source": "tests/summarize_cad23.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad23'"
+  },
+  {
+    "source": "tests/summarize_cad24.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/cad24'"
+  },
+  {
+    "source": "tests/summarize_cad24.py",
+    "line": 17,
+    "text": "    for source in (ROOT/'docs/architecture/evidence/cad23/screenshots').glob('*.png'):"
+  },
+  {
+    "source": "tests/summarize_cad24.py",
+    "line": 24,
+    "text": "        source=ROOT/'docs/architecture/evidence'/('cad'+checkpoint)/name"
+  },
+  {
+    "source": "tests/summarize_cad24_completion.py",
+    "line": 6,
+    "text": "OUT = ROOT / 'docs/architecture/evidence/cad24-completion'"
+  },
+  {
+    "source": "tests/summarize_cad24_completion.py",
+    "line": 35,
+    "text": "preserved=read(ROOT/'docs/architecture/evidence/cad23/numerical.json')"
+  },
+  {
+    "source": "tests/summarize_cad24_completion.py",
+    "line": 41,
+    "text": "receipt=dict(preserved_cad23_numerical='docs/architecture/evidence/cad24-completion/preserved-cad23-numerical.json',schema=1,checkpoint='CAD 2.4 completion',created_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),verdict='PASS' if all(gates.values()) else 'PARTIAL',gates=gates,baseline=baseline,current_branch=subprocess.check_output(['git','branch','--show-current'],cwd=ROOT,text=True).strip(),current_head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),dirty_tree_preserved=True,baseline_inventory='docs/architecture/evidence/cad24-completion/working-tree-before.txt',source_baseline_limitation='Only four production files were hashed at recovery start; all final production sources are sealed below. The older PARTIAL report lacked pre-edit source hashes.',production_files={name:sha(ROOT/name) for name in production},test_files={name:sha(ROOT/name) for name in tests},pinned_binaries=pins,native_build=read(ROOT/'.tools/occt-sdk/build-manifest.json"
+  },
+  {
+    "source": "tests/summarize_stage7_dynamics.py",
+    "line": 17,
+    "text": "    r=dict(r);r['command']=[str(root/'.tools/godot/Godot_v4.0-stable_win64.exe'),'--headless','--path',str(root),'-s','res://'+r['script']];r['APPDATA']=str(root/'.tools/cae-appdata');path=out/'regression-final/default'/(Path(r['script']).stem+'.log');r['log']=str(path.relative_to(root));text=path.read_text(encoding='utf8');r['diagnostics']=[s for s in text.splitlines() if 'ERROR:' in s or 'WARNING:' in s];r['assertion_banners']=[s for s in text.splitlines() if re.search(r'PASS|Passed|checks=|failures=',s)];receipts.append(r)"
+  },
+  {
+    "source": "tests/summarize_stage7_modal.py",
+    "line": 19,
+    "text": "    r=dict(r);r['command']=[str(root/'.tools/godot/Godot_v4.0-stable_win64.exe'),'--headless','--path',str(root),'-s','res://'+r['script']];r['APPDATA']=str(root/'.tools/cae-appdata')"
+  },
+  {
+    "source": "tests/summarize_step_final.py",
+    "line": 4,
+    "text": "ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/architecture/evidence/step-final'"
+  },
+  {
+    "source": "tests/summarize_step_final.py",
+    "line": 36,
+    "text": "From the repository root, use `C:/Users/Victus/AppData/Local/Python/pythoncore-3.14-64/python.exe` as PYTHON and `D:/Downloads/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe` as GODOT. Set `UNICORE_PYTHON` to PYTHON; set APPDATA and LOCALAPPDATA to `.tools/godot472-migration/roaming` and `.tools/godot472-migration/local` (absolute paths)."
+  },
+  {
+    "source": "tests/summarize_step_final.py",
+    "line": 43,
+    "text": "PYTHON native/run_regressions.py --godot GODOT --output docs/architecture/evidence/step-final/regressions"
+  },
+  {
+    "source": "tests/test_cae_recovery.gd",
+    "line": 75,
+    "text": "\tcheck(workspace.document.save_project(\"res://.tools/cae-recovery.ucae\")==OK,\"Save engineering document\")"
+  },
+  {
+    "source": "tests/test_cae_recovery.gd",
+    "line": 77,
+    "text": "\tcheck(loaded.open_project(\"res://.tools/cae-recovery.ucae\")==\"\",\"Load engineering document\")"
+  },
+  {
+    "source": "tests/test_cae_shell.gd",
+    "line": 44,
+    "text": "\t\tshell.cae_workspace.cad.viewport.get_texture().get_image().save_png(\"res://.tools/cae-viewport.png\")"
+  },
+  {
+    "source": "tests/test_cae_shell.gd",
+    "line": 46,
+    "text": "\t\troot.get_texture().get_image().save_png(\"res://.tools/cae-recovery.png\")"
+  },
+  {
+    "source": "tests/test_cae_workspace.gd",
+    "line": 13,
+    "text": "\tassert(doc.save_project(\"res://.tools/cae-test.ucae\") == OK)"
+  },
+  {
+    "source": "tests/test_cae_workspace.gd",
+    "line": 15,
+    "text": "\tassert(restored.open_project(\"res://.tools/cae-test.ucae\") == \"\")"
+  },
+  {
+    "source": "tests/test_calculix_adapter.gd",
+    "line": 7,
+    "text": "\tDirAccess.make_dir_recursive_absolute(\"res://.tools/engines/ccx-test\")"
+  },
+  {
+    "source": "tests/test_calculix_adapter.gd",
+    "line": 8,
+    "text": "\tvar file=FileAccess.open(\"res://.tools/engines/ccx-test/model.inp\",FileAccess.WRITE)"
+  },
+  {
+    "source": "tests/test_calculix_numerical.gd",
+    "line": 7,
+    "text": "\tbackend.executable=\"res://.tools/engines/calculix/CalculiX-2.23.0-win-x64/bin/ccx.exe\""
+  },
+  {
+    "source": "tests/test_calculix_numerical.gd",
+    "line": 12,
+    "text": "\t\tvar directory=\"res://docs/architecture/evidence/calculix/run_%d_%d\" % [Time.get_ticks_usec(),evidence.size()]"
+  },
+  {
+    "source": "tests/test_calculix_numerical.gd",
+    "line": 29,
+    "text": "\tvar summary=FileAccess.open(\"res://docs/architecture/evidence/calculix/numerical.json\",FileAccess.WRITE)"
+  },
+  {
+    "source": "tests/test_calculix_process.py",
+    "line": 5,
+    "text": "base=root/'docs/architecture/evidence/calculix/process-tests'"
+  },
+  {
+    "source": "tests/test_calculix_process.py",
+    "line": 7,
+    "text": "exe=root/'.tools/engines/calculix/CalculiX-2.23.0-win-x64/bin/ccx.exe'"
+  },
+  {
+    "source": "tests/test_calculix_process.py",
+    "line": 9,
+    "text": "source=root/'.tools/engines/ccx-test/model.inp'"
+  },
+  {
+    "source": "tests/test_calculix_workbench.gd",
+    "line": 8,
+    "text": "\t\troot.get_texture().get_image().save_png(\"res://docs/architecture/evidence/calculix/workbench/%s-%d.png\" % [name,width])"
+  },
+  {
+    "source": "tests/test_calculix_workbench.gd",
+    "line": 14,
+    "text": "\tDirAccess.make_dir_recursive_absolute(\"res://docs/architecture/evidence/calculix/workbench\")"
+  },
+  {
+    "source": "tests/test_calculix_workbench.gd",
+    "line": 52,
+    "text": "\t\t\t\t\troot.get_texture().get_image().save_png(\"res://docs/architecture/evidence/calculix/workbench/%s-%s-%d.png\" % [kind,field,width])"
+  },
+  {
+    "source": "tests/test_calculix_workbench.gd",
+    "line": 53,
+    "text": "\t\tvar path=\"res://docs/architecture/evidence/calculix/workbench/\"+kind+\".json\""
+  },
+  {
+    "source": "tests/test_extreme_checkpoint.py",
+    "line": 3,
+    "text": "root=Path(__file__).resolve().parents[1];out=root/'.tools/extreme-checkpoint';out.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/test_extreme_cli.py",
+    "line": 3,
+    "text": "root=Path(__file__).resolve().parents[1];directory=root/'.tools/extreme-cli';directory.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/test_extreme_configurations.py",
+    "line": 4,
+    "text": "jobs=[root/'docs/extreme-mode/examples/tet.ucjob',root/'.tools/extreme-checkpoint/model.ucjob'];rows=[]"
+  },
+  {
+    "source": "tests/test_extreme_configurations.py",
+    "line": 8,
+    "text": "  output=root/'.tools/extreme-config'/str(index)/executable"
+  },
+  {
+    "source": "tests/test_extreme_lifetime.py",
+    "line": 3,
+    "text": "folder=Path('.tools/lifetime-large')"
+  },
+  {
+    "source": "tests/test_extreme_lifetime.py",
+    "line": 18,
+    "text": "r=subprocess.run([str(Path('.tools/godot/Godot_v4.0-stable_win64.exe').resolve()),'--headless','--path','.','--script','tests/launch_extreme_then_exit.gd'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,text=True,timeout=30)"
+  },
+  {
+    "source": "tests/test_gmsh_repeatability.py",
+    "line": 4,
+    "text": "base=root/'docs/architecture/evidence/calculix/mesh-repeatability';base.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/test_godot472_calculix_numerical.gd",
+    "line": 7,
+    "text": "\tbackend.executable=\"res://.tools/engines/calculix/CalculiX-2.23.0-win-x64/bin/ccx.exe\""
+  },
+  {
+    "source": "tests/test_godot472_calculix_numerical.gd",
+    "line": 12,
+    "text": "\t\tvar directory=\"res://.tools/godot472-migration/run_%d_%d\" % [Time.get_ticks_usec(),evidence.size()]"
+  },
+  {
+    "source": "tests/test_godot472_calculix_numerical.gd",
+    "line": 29,
+    "text": "\tvar summary=FileAccess.open(\"res://.tools/godot472-migration/numerical.json\",FileAccess.WRITE)"
+  },
+  {
+    "source": "tests/test_godot472_calculix_process.py",
+    "line": 5,
+    "text": "base=root/'.tools/godot472-migration/process-tests'"
+  },
+  {
+    "source": "tests/test_godot472_calculix_process.py",
+    "line": 7,
+    "text": "exe=root/'.tools/engines/calculix/CalculiX-2.23.0-win-x64/bin/ccx.exe'"
+  },
+  {
+    "source": "tests/test_godot472_calculix_process.py",
+    "line": 9,
+    "text": "source=root/'.tools/engines/ccx-test/model.inp'"
+  },
+  {
+    "source": "tests/test_godot472_calculix_workbench.gd",
+    "line": 8,
+    "text": "\t\troot.get_texture().get_image().save_png(\"res://.tools/godot472-migration/workbench/%s-%d.png\" % [name,width])"
+  },
+  {
+    "source": "tests/test_godot472_calculix_workbench.gd",
+    "line": 14,
+    "text": "\tDirAccess.make_dir_recursive_absolute(\"res://.tools/godot472-migration/workbench\")"
+  },
+  {
+    "source": "tests/test_godot472_calculix_workbench.gd",
+    "line": 52,
+    "text": "\t\t\t\t\troot.get_texture().get_image().save_png(\"res://.tools/godot472-migration/workbench/%s-%s-%d.png\" % [kind,field,width])"
+  },
+  {
+    "source": "tests/test_godot472_calculix_workbench.gd",
+    "line": 53,
+    "text": "\t\tvar path=\"res://.tools/godot472-migration/workbench/\"+kind+\".json\""
+  },
+  {
+    "source": "tests/test_godot472_gmsh_repeatability.py",
+    "line": 4,
+    "text": "base=root/'.tools/godot472-migration/mesh-repeatability';base.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/test_godot472_main_shell.gd",
+    "line": 44,
+    "text": "\t\tshell.cae_workspace.cad.viewport.get_texture().get_image().save_png(\"res://.tools/godot472-migration/cae-viewport.png\")"
+  },
+  {
+    "source": "tests/test_godot472_main_shell.gd",
+    "line": 46,
+    "text": "\t\troot.get_texture().get_image().save_png(\"res://.tools/godot472-migration/main-shell-1280.png\")"
+  },
+  {
+    "source": "tests/test_godot472_main_shell.gd",
+    "line": 51,
+    "text": "\t\tvar capture_error := root.get_texture().get_image().save_png(\"res://.tools/godot472-migration/main-shell-1920.png\")"
+  },
+  {
+    "source": "tests/test_godot472_step_preview.gd",
+    "line": 20,
+    "text": "\tDirAccess.make_dir_recursive_absolute(\"res://.tools/step-calculix/workbench\")"
+  },
+  {
+    "source": "tests/test_godot472_step_preview.gd",
+    "line": 26,
+    "text": "\t\t\troot.get_texture().get_image().save_png(\"res://.tools/step-calculix/workbench/bar-preview-%d.png\" % width)"
+  },
+  {
+    "source": "tests/test_godot472_step_workbench.gd",
+    "line": 8,
+    "text": "\t\troot.get_texture().get_image().save_png(\"res://.tools/step-calculix/workbench/%s-%d.png\" % [name,width])"
+  },
+  {
+    "source": "tests/test_godot472_step_workbench.gd",
+    "line": 16,
+    "text": "\tDirAccess.make_dir_recursive_absolute(\"res://.tools/step-calculix/workbench\")"
+  },
+  {
+    "source": "tests/test_godot472_step_workbench.gd",
+    "line": 75,
+    "text": "\tvar path=\"res://.tools/step-calculix/workbench/\"+fixture+\".ucae\""
+  },
+  {
+    "source": "tests/test_hpc22_fallback.py",
+    "line": 6,
+    "text": "for job in [Path('docs/extreme-mode/examples/tet.ucjob'),Path('.tools/extreme-thermal/model.ucjob'),Path('.tools/extreme-checkpoint/model.ucjob')]:"
+  },
+  {
+    "source": "tests/test_hpc22_fallback.py",
+    "line": 10,
+    "text": "   out=Path('.tools/hpc22-fallback')/job.parent.name/mode/str(threads)"
+  },
+  {
+    "source": "tests/test_hpc23_numerical.py",
+    "line": 4,
+    "text": "folder=Path('.tools/hpc23-bench');rows=[]"
+  },
+  {
+    "source": "tests/test_hpc23_numerical.py",
+    "line": 10,
+    "text": "   tight=Path('.tools/hpc23-tight')/workload/method"
+  },
+  {
+    "source": "tests/test_hpc23_numerical.py",
+    "line": 13,
+    "text": "  source=Path('.tools/hpc23-tight')/workload"
+  },
+  {
+    "source": "tests/test_hpc23_numerical.py",
+    "line": 32,
+    "text": "  out=Path('.tools/hpc23-configs')/exe/method"
+  },
+  {
+    "source": "tests/test_hpc23_options.py",
+    "line": 4,
+    "text": "root=Path(__file__).resolve().parents[1];folder=root/'.tools/hpc23-options';folder.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/test_hpc23_options.py",
+    "line": 29,
+    "text": " s=s.replace('.tools/extreme-checkpoint','.tools/hpc23-checkpoint-'+method).replace('docs/extreme-mode/restart.json','docs/hpc-optimization/hpc23-checkpoint-'+method+'.json')"
+  },
+  {
+    "source": "tests/test_hpc23_options.py",
+    "line": 36,
+    "text": "job=root/'.tools/hpc23-bench/contrast-conduction-16.ucjob';out=folder/'parsing-cancel';out.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/test_hpc24_modes.py",
+    "line": 6,
+    "text": "for fixture in ['docs/extreme-mode/examples/tet.ucjob','.tools/hpc24-checkpoint/model.ucjob']:"
+  },
+  {
+    "source": "tests/test_hpc24_modes.py",
+    "line": 11,
+    "text": "   out=root/'.tools/hpc24-modes'/Path(fixture).stem/exe/assembly"
+  },
+  {
+    "source": "tests/test_hpc24_validation.py",
+    "line": 6,
+    "text": " for old,new in [('docs/extreme-mode/cli-validation.json','docs/hpc-optimization/hpc24-cli.json'),('docs/extreme-mode/restart.json','docs/hpc-optimization/hpc24-restart.json'),('docs/extreme-mode/configurations.json','docs/hpc-optimization/hpc24-configurations.json'),('.tools/extreme-cli','.tools/hpc24-cli'),('.tools/extreme-checkpoint','.tools/hpc24-checkpoint'),('.tools/extreme-config','.tools/hpc24-config'),('.tools/hpc23-options','.tools/hpc24-options'),('hpc23-options.json','hpc24-options.json'),('timeout=30','timeout=10'),('timeout=60','timeout=10')]:s=s.replace(old,new)"
+  },
+  {
+    "source": "tests/test_hpc_assembly_equivalence.py",
+    "line": 3,
+    "text": "root=Path(__file__).resolve().parents[1];folder=root/'.tools/hpc21-equivalence';folder.mkdir(exist_ok=True)"
+  },
+  {
+    "source": "tests/test_hpc_assembly_equivalence.py",
+    "line": 5,
+    "text": "fixtures=[root/'.tools/extreme-thermal/model.ucjob',root/'.tools/extreme-checkpoint/model.ucjob']"
+  },
+  {
+    "source": "tests/test_hpc_assembly_equivalence.py",
+    "line": 14,
+    "text": " for exe,threads in [(root/'.tools/unicore_solver_hpc21_baseline.exe',1)]+[(root/'bin/unicore_solver.exe',t) for t in [1,2,4,6,8,12]]:"
+  },
+  {
+    "source": "tests/test_materials_thermal_ui.gd",
+    "line": 46,
+    "text": "\tcheck(workspace.document.save_project(\"res://.tools/materials-thermal.ucae\")==OK,\"Save material and thermal result\")"
+  },
+  {
+    "source": "tests/test_materials_thermal_ui.gd",
+    "line": 48,
+    "text": "\tcheck(restored.open_project(\"res://.tools/materials-thermal.ucae\")==\"\",\"Reopen incomplete mechanical material and thermal result\")"
+  },
+  {
+    "source": "tests/test_native_structural_suite.gd",
+    "line": 40,
+    "text": "\tcheck(doc.save_project(\"res://.tools/structural-test.ucae\") == OK, \"Save results\")"
+  },
+  {
+    "source": "tests/test_native_structural_suite.gd",
+    "line": 42,
+    "text": "\tcheck(restored.open_project(\"res://.tools/structural-test.ucae\") == \"\", \"Reopen results\")"
+  },
+  {
+    "source": "tests/test_stage51_cache.gd",
+    "line": 3,
+    "text": "\tvar paths=JSON.parse_string(FileAccess.get_file_as_string(\"res://.tools/stage51-fixtures.json\"))"
+  },
+  {
+    "source": "tests/test_stage51_equivalence.gd",
+    "line": 4,
+    "text": "\toriginal.source_code=FileAccess.get_file_as_string(\"res://.tools/stage51-baseline/structural_display.gd\")"
+  },
+  {
+    "source": "tests/test_stage51_equivalence.gd",
+    "line": 7,
+    "text": "\tvar paths=JSON.parse_string(FileAccess.get_file_as_string(\"res://.tools/stage51-fixtures.json\"))"
+  },
+  {
+    "source": "tests/test_stage6_dialog_ui.gd",
+    "line": 51,
+    "text": "\t\tassert(w.document.save_project(\"res://.tools/stage6-dialog.ucae\")==OK)"
+  },
+  {
+    "source": "tests/test_stage6_dialog_ui.gd",
+    "line": 52,
+    "text": "\t\tassert(w.document.open_project(\"res://.tools/stage6-dialog.ucae\").is_empty())"
+  },
+  {
+    "source": "tests/test_stage6_failure_ui.gd",
+    "line": 20,
+    "text": "\tvar missing=load(\"res://core/cae/extreme_jobs.gd\").new();missing.solver_executable=\"res://.tools/absent-solver.exe\""
+  },
+  {
+    "source": "tests/test_stage6_load_persistence.gd",
+    "line": 71,
+    "text": "\t\tassert(w.document.save_project(\"res://.tools/stage6-load.ucae\")==OK)"
+  },
+  {
+    "source": "tests/test_stage6_load_persistence.gd",
+    "line": 72,
+    "text": "\t\tvar reopened=load(\"res://core/cae/cae_document.gd\").new();assert(reopened.open_project(\"res://.tools/stage6-load.ucae\").is_empty())"
+  },
+  {
+    "source": "tests/test_stage6_pipe_contract.gd",
+    "line": 50,
+    "text": "\tdoc.data=imported;assert(doc.save_project(\"res://.tools/stage6-pipe.ucae\")==OK)"
+  },
+  {
+    "source": "tests/test_stage6_pipe_contract.gd",
+    "line": 51,
+    "text": "\tvar reopened=load(\"res://core/cae/cae_document.gd\").new();assert(reopened.open_project(\"res://.tools/stage6-pipe.ucae\").is_empty())"
+  },
+  {
+    "source": "tests/test_stage6_sphere.gd",
+    "line": 88,
+    "text": "\t\trequire(doc.save_project(\"res://.tools/stage6-sphere.ucae\")==OK,\"Project save\")"
+  },
+  {
+    "source": "tests/test_stage6_sphere.gd",
+    "line": 90,
+    "text": "\t\trequire(reopened.open_project(\"res://.tools/stage6-sphere.ucae\").is_empty(),\"Project reopen\")"
+  },
+  {
+    "source": "tests/test_stage6_workbench.gd",
+    "line": 122,
+    "text": "\t\t\tassert(w.document.save_project(\"res://.tools/stage6-ui.ucae\")==OK)"
+  },
+  {
+    "source": "tests/test_stage6_workbench.gd",
+    "line": 123,
+    "text": "\t\t\tassert(w.document.open_project(\"res://.tools/stage6-ui.ucae\").is_empty())"
+  },
+  {
+    "source": "tests/test_stage7_dynamic_import_rejection.gd",
+    "line": 11,
+    "text": "\tvar directory: String=\"res://.tools/dynamic-import-\"+str(Time.get_ticks_usec())"
+  },
+  {
+    "source": "tests/test_step_gmsh_real.py",
+    "line": 10,
+    "text": "sys.path.insert(0, str(ROOT / '.tools/engines/gmsh-4.15.2-Windows64-sdk/lib'))"
+  },
+  {
+    "source": "tests/test_workbench2_stage3.gd",
+    "line": 105,
+    "text": "\tw.document.save_project(\"res://.tools/stage3.ucae\")"
+  },
+  {
+    "source": "tests/test_workbench2_stage3.gd",
+    "line": 107,
+    "text": "\tcheck(restored.open_project(\"res://.tools/stage3.ucae\").is_empty(),\"Study/result persistence\")"
+  },
+  {
+    "source": "tests/validate_stage51.py",
+    "line": 7,
+    "text": "godot=str(root/'.tools/godot/Godot_v4.0-stable_win64_console.exe')"
+  },
+  {
+    "source": "tests/validate_stage51.py",
+    "line": 42,
+    "text": "        run('native-'+name+'-'+mode,[str(root/'.tools/stage5-final-native'/(name+'-'+mode+'.exe'))],30)"
+  },
+  {
+    "source": "tests/validate_stage7_dynamics.py",
+    "line": 155,
+    "text": "        os.environ['APPDATA']=str(ROOT/'.tools/cae-appdata');source='res://docs/workbench-2/stage7-checkpoint2/numerical-final'"
+  },
+  {
+    "source": "tests/validate_stage7_dynamics.py",
+    "line": 156,
+    "text": "        run('workbench-import-rejection',[ROOT/'.tools/godot/Godot_v4.0-stable_win64.exe','--headless','--path',ROOT,'-s','res://tests/test_stage7_dynamic_import_rejection.gd','--',source],timeout=30)"
+  },
+  {
+    "source": "tests/validate_stage7_dynamics.py",
+    "line": 173,
+    "text": "        os.environ['APPDATA']=str(ROOT/'.tools/cae-appdata');run('default-manifest',[sys.executable,'native/run_regressions.py','--godot',ROOT/'.tools/godot/Godot_v4.0-stable_win64.exe','--output',str(OUT.relative_to(ROOT)/'default')],timeout=600)"
+  },
+  {
+    "source": "tests/validate_stage7_modal.py",
+    "line": 102,
+    "text": "        os.environ['APPDATA']=str(ROOT/'.tools/cae-appdata')"
+  },
+  {
+    "source": "tests/validate_stage7_modal.py",
+    "line": 103,
+    "text": "        command('stage6-mesher-export',[ROOT/'.tools/godot/Godot_v4.0-stable_win64.exe','--headless','--path',ROOT,'-s','res://tests/export_stage7_modal_meshes.gd'],timeout=30)"
+  },
+  {
+    "source": "tests/validate_stage7_modal.py",
+    "line": 118,
+    "text": "        fixture=ROOT/'.tools/stage7-modal-meshes.json';archive=json.loads(fixture.read_text());(OUT/'stage6-cylinder-meshes.json').write_text(json.dumps(archive))"
+  },
+  {
+    "source": "tests/validate_stage7_modal.py",
+    "line": 211,
+    "text": "        os.environ['APPDATA']=str(ROOT/'.tools/cae-appdata')"
+  },
+  {
+    "source": "tests/validate_stage7_modal.py",
+    "line": 212,
+    "text": "        command('default-manifest',[sys.executable,'native/run_regressions.py','--godot',ROOT/'.tools/godot/Godot_v4.0-stable_win64.exe','--output',str(OUT.relative_to(ROOT)/'default')],timeout=600)"
+  },
+  {
+    "source": "ui/cae/analysis_editor.gd",
+    "line": 34,
+    "text": "\tif FileAccess.file_exists(preload(\"res://core/cae/calculix_workbench.gd\").new().python) and FileAccess.file_exists(\"res://.tools/engines/gmsh-4.15.2-Windows64-sdk/lib/gmsh-4.15.dll\") and FileAccess.get_sha256(\"res://.tools/engines/calculix/CalculiX-2.23.0-win-x64/bin/ccx.exe\")==\"27a9426a1ee2f72c38fbe892e0ffaf38e14867628ffd0235770261b6f3ec9c5f\":"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "godot_exit": 0,
+  "terminated_native": {
+    "pid": 24300,
+    "action": "step",
+    "operation_id": "6101f7df-50fd-47a0-bc8d-1561f16bd638"
+  },
+  "observed": [
+    {
+      "pid": 24300,
+      "action": "step",
+      "operation_id": "6101f7df-50fd-47a0-bc8d-1561f16bd638"
+    }
+  ],
+  "recovered": true,
+  "fault": "Cooperative job cancellation during observed native STEP import",
+  "mode": "cancel-step",
+  "native_exit_code_dword": 0,
+  "native_process_receipts": [],
+  "stdout": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-cancel-step-1794666097462873000.stdout.txt",
+  "stderr": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad24-completion\\fault-cancel-step-1794666097462873000.stderr.txt",
+  "launcher": {
+    "state": "cancelled",
+    "exit_code": 1,
+    "error": "",
+    "job_object": true,
+    "seconds": 1.7940520999982255,
+    "peak_process_memory_bytes": 662462464,
+    "peak_job_memory_bytes": 663715840,
+    "memory_limit_bytes": 805306368
+  },
+  "observed_native_pids_still_alive": []
+}

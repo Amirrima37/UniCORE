@@ -1,0 +1,1 @@
+{"test": "gui", "outcome": "PASS", "exit_code": 0, "command": ["D:\\Downloads\\Godot_v4.7.2-stable_win64.exe\\Godot_v4.7.2-stable_win64.exe", "--path", "C:\\Users\\Victus\\Desktop\\UniCORE-main", "-s", "res://tests/cad23_gui.gd"], "seconds": 107.32527889999619, "evidence": "C:\\Users\\Victus\\Desktop\\UniCORE-main\\docs\\architecture\\evidence\\cad23\\gui-1794624080140671600"}

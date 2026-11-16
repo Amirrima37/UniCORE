@@ -1,0 +1,260 @@
+{
+  "events": [
+    {
+      "exception": "0x80000003",
+      "first_chance": 1,
+      "tid": 11136,
+      "address": "0x7ff9671c26c9"
+    },
+    {
+      "exception": "0xc0000005",
+      "first_chance": 1,
+      "tid": 11136,
+      "address": "0x7ff756aa9148"
+    },
+    {
+      "exception": "0xc0000005",
+      "first_chance": 0,
+      "tid": 11136,
+      "address": "0x7ff756aa9148"
+    },
+    {
+      "exit": 3221225477,
+      "hex": "0xc0000005"
+    }
+  ],
+  "modules": [
+    {
+      "base": "0x7ff752360000",
+      "path": "\\\\?\\C:\\Users\\Victus\\Desktop\\UniCORE-main\\.tools\\godot\\Godot_v4.0-stable_win64.exe"
+    },
+    {
+      "base": "0x7ff9670a0000",
+      "path": "\\\\?\\C:\\Windows\\System32\\ntdll.dll"
+    },
+    {
+      "base": "0x7ff9657f0000",
+      "path": "\\\\?\\C:\\Windows\\System32\\kernel32.dll"
+    },
+    {
+      "base": "0x7ff9645c0000",
+      "path": "\\\\?\\C:\\Windows\\System32\\KernelBase.dll"
+    },
+    {
+      "base": "0x7ff964f60000",
+      "path": "\\\\?\\C:\\Windows\\System32\\advapi32.dll"
+    },
+    {
+      "base": "0x7ff966000000",
+      "path": "\\\\?\\C:\\Windows\\System32\\msvcrt.dll"
+    },
+    {
+      "base": "0x7ff9652a0000",
+      "path": "\\\\?\\C:\\Windows\\System32\\sechost.dll"
+    },
+    {
+      "base": "0x7ff9660b0000",
+      "path": "\\\\?\\C:\\Windows\\System32\\rpcrt4.dll"
+    },
+    {
+      "base": "0x7ff966980000",
+      "path": "\\\\?\\C:\\Windows\\System32\\gdi32.dll"
+    },
+    {
+      "base": "0x7ff961c20000",
+      "path": "\\\\?\\C:\\Windows\\System32\\avrt.dll"
+    },
+    {
+      "base": "0x7ff964170000",
+      "path": "\\\\?\\C:\\Windows\\System32\\bcrypt.dll"
+    },
+    {
+      "base": "0x7ff8e8d60000",
+      "path": "\\\\?\\C:\\Windows\\System32\\dinput8.dll"
+    },
+    {
+      "base": "0x7ff964bf0000",
+      "path": "\\\\?\\C:\\Windows\\System32\\win32u.dll"
+    },
+    {
+      "base": "0x7ff964a90000",
+      "path": "\\\\?\\C:\\Windows\\System32\\ucrtbase.dll"
+    },
+    {
+      "base": "0x7ff964490000",
+      "path": "\\\\?\\C:\\Windows\\System32\\gdi32full.dll"
+    },
+    {
+      "base": "0x7ff9610c0000",
+      "path": "\\\\?\\C:\\Windows\\System32\\DWrite.dll"
+    },
+    {
+      "base": "0x7ff9606d0000",
+      "path": "\\\\?\\C:\\Windows\\System32\\dwmapi.dll"
+    },
+    {
+      "base": "0x7ff965030000",
+      "path": "\\\\?\\C:\\Windows\\System32\\user32.dll"
+    },
+    {
+      "base": "0x7ff964350000",
+      "path": "\\\\?\\C:\\Windows\\System32\\msvcp_win.dll"
+    },
+    {
+      "base": "0x7ff965460000",
+      "path": "\\\\?\\C:\\Windows\\System32\\combase.dll"
+    },
+    {
+      "base": "0x7ff965970000",
+      "path": "\\\\?\\C:\\Windows\\System32\\imm32.dll"
+    },
+    {
+      "base": "0x7ff965e60000",
+      "path": "\\\\?\\C:\\Windows\\System32\\ole32.dll"
+    },
+    {
+      "base": "0x7ff962970000",
+      "path": "\\\\?\\C:\\Windows\\System32\\IPHLPAPI.DLL"
+    },
+    {
+      "base": "0x7ff964db0000",
+      "path": "\\\\?\\C:\\Windows\\System32\\oleaut32.dll"
+    },
+    {
+      "base": "0x7ff9661d0000",
+      "path": "\\\\?\\C:\\Windows\\System32\\shell32.dll"
+    },
+    {
+      "base": "0x7ff933300000",
+      "path": "\\\\?\\C:\\Windows\\System32\\opengl32.dll"
+    },
+    {
+      "base": "0x7ff965c10000",
+      "path": "\\\\?\\C:\\Windows\\System32\\shlwapi.dll"
+    },
+    {
+      "base": "0x7ff933f80000",
+      "path": "\\\\?\\C:\\Windows\\System32\\glu32.dll"
+    },
+    {
+      "base": "0x7ff966e40000",
+      "path": "\\\\?\\C:\\Windows\\System32\\ws2_32.dll"
+    },
+    {
+      "base": "0x7ff959280000",
+      "path": "\\\\?\\C:\\Windows\\System32\\winmm.dll"
+    },
+    {
+      "base": "0x7ff960a30000",
+      "path": "\\\\?\\C:\\Windows\\System32\\DXCore.dll"
+    },
+    {
+      "base": "0x7ff940ac0000",
+      "path": "\\\\?\\C:\\Windows\\System32\\wsock32.dll"
+    },
+    {
+      "base": "0x7ff9649d0000",
+      "path": "\\\\?\\C:\\Windows\\System32\\bcryptprimitives.dll"
+    },
+    {
+      "base": "0x7ff949e30000",
+      "path": "\\\\?\\C:\\Windows\\System32\\InputHost.dll"
+    },
+    {
+      "base": "0x7ff95fe60000",
+      "path": "\\\\?\\C:\\Windows\\System32\\CoreMessaging.dll"
+    },
+    {
+      "base": "0x7ff965350000",
+      "path": "\\\\?\\C:\\Windows\\System32\\SHCore.dll"
+    },
+    {
+      "base": "0x7ff963800000",
+      "path": "\\\\?\\C:\\Windows\\System32\\cryptbase.dll"
+    },
+    {
+      "base": "0x7ff962f30000",
+      "path": "\\\\?\\C:\\Windows\\System32\\kernel.appcore.dll"
+    },
+    {
+      "base": "0x7ff960370000",
+      "path": "\\\\?\\C:\\Windows\\System32\\uxtheme.dll"
+    },
+    {
+      "base": "0x7ff8e1960000",
+      "path": "\\\\?\\C:\\Users\\Victus\\Desktop\\UniCORE-main\\bin\\windows\\x86_64\\unicore_native.windows.template_debug.x86_64.dll"
+    }
+  ],
+  "fault": {
+    "pid": 10344,
+    "tid": 11136,
+    "first_chance": 0,
+    "exception": "0xc0000005",
+    "address": "0x7ff756aa9148",
+    "context_ok": true,
+    "rip": "0x7ff756aa9148",
+    "rsp": "0x6e679febe0",
+    "access_type": 0,
+    "access_address": "0x68",
+    "instruction_bytes": "48837b68000f8509250000488b842418010000488b40484885c00f845e250000",
+    "registers": {
+      "rax": "0x1f4548b9880",
+      "rcx": "0x0",
+      "rdx": "0x1f451260000",
+      "rbx": "0x0",
+      "rsp": "0x6e679febe0",
+      "rbp": "0x6e679ff240",
+      "rsi": "0x1f4548b9888",
+      "rdi": "0x4",
+      "r8": "0x7ffffffffffffffc",
+      "r9": "0x1f4548b98d0",
+      "r10": "0x1f451780000",
+      "r11": "0x6e679fe9c0",
+      "r12": "0x6e679ff2c0",
+      "r13": "0x0",
+      "r14": "0x6e679ff2a0",
+      "r15": "0x6e679ff260",
+      "rip": "0x7ff756aa9148"
+    },
+    "dump_written": true,
+    "dump_error": 6,
+    "stack": [
+      {
+        "pc": "0x7ff756aa9148",
+        "module_base": "0x7ff752360000",
+        "offset": "0x4749148"
+      },
+      {
+        "pc": "0x7ff7523f646e",
+        "module_base": "0x7ff752360000",
+        "offset": "0x9646e"
+      },
+      {
+        "pc": "0x7ff756f03615",
+        "module_base": "0x7ff752360000",
+        "offset": "0x4ba3615"
+      },
+      {
+        "pc": "0x7ff7523613c1",
+        "module_base": "0x7ff752360000",
+        "offset": "0x13c1"
+      },
+      {
+        "pc": "0x7ff7523614d6",
+        "module_base": "0x7ff752360000",
+        "offset": "0x14d6"
+      },
+      {
+        "pc": "0x7ff96581dda7",
+        "module_base": "0x7ff9657f0000",
+        "offset": "0x2dda7"
+      },
+      {
+        "pc": "0x7ff96711ee4c",
+        "module_base": "0x7ff9670a0000",
+        "offset": "0x7ee4c"
+      }
+    ]
+  },
+  "seconds": 6.344070599996485
+}
