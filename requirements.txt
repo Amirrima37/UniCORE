@@ -1,0 +1,13 @@
+# ==============================================================================
+# UniCORE Python Dependencies
+# ==============================================================================
+
+# Core numerical, matrix operations, and solver validation
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Mesh generation & CAD boundary representation API (Gmsh)
+gmsh>=4.11.0
+
+# Optional: Build tool for GDExtension C++ bindings (godot-cpp)
+scons>=4.5.0

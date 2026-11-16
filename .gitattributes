@@ -1,0 +1,22 @@
+# Auto-detect text files and normalize line endings
+* text=auto
+
+# GitHub Linguist language overrides
+# By default, Linguist excludes directories named "native/".
+# Explicitly un-vendor native/ to include C++ calculation kernels, math, and extreme solvers in repository statistics.
+native/** linguist-vendored=false
+native/** linguist-detectable=true
+
+# Language association for C++
+*.cpp linguist-language=C++
+*.hpp linguist-language=C++
+*.h linguist-language=C++
+*.c linguist-language=C
+
+# Language association for Godot
+*.gd linguist-language=GDScript
+*.gdshader linguist-language=GDShader
+
+# Mark test evidence and raw test fixtures as generated/data so they do not skew stats
+docs/architecture/evidence/** linguist-generated=true
+tests/fixtures/** linguist-generated=true

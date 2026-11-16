@@ -1,7 +1,32 @@
-﻿param([ValidateSet('template_debug','template_release')][string]$Target='template_debug')
+﻿param(
+    [ValidateSet('template_debug','template_release')][string]$Target='template_debug',
+    [string]$Compiler=""
+)
 $ErrorActionPreference='Stop'
 $root=Split-Path $PSScriptRoot -Parent
-$cxx='C:/Qt/Tools/mingw1310_64/bin/x86_64-w64-mingw32-g++.exe'
+
+if (-not $Compiler) {
+    $candidates = @(
+        $env:CXX,
+        "C:/Qt/Tools/mingw1310_64/bin/x86_64-w64-mingw32-g++.exe",
+        "C:/msys64/ucrt64/bin/g++.exe",
+        "C:/msys64/mingw64/bin/g++.exe",
+        "D:/msys64/ucrt64/bin/g++.exe",
+        "D:/msys64/mingw64/bin/g++.exe",
+        (Get-Command "x86_64-w64-mingw32-g++" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source),
+        (Get-Command "g++" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source)
+    )
+    foreach ($cand in $candidates) {
+        if ($cand -and (Test-Path $cand) -and (Get-Item $cand).Length -gt 0) {
+            $Compiler = $cand
+            break
+        }
+    }
+}
+if (-not $Compiler) {
+    throw "C++ compiler (x86_64-w64-mingw32-g++ / g++) not found. Please install MinGW-w64 / GCC or specify -Compiler path."
+}
+$cxx = $Compiler
 $flags=@('-std=c++17','-O2','-ffp-contract=off','-fPIC',('-I'+$root+'/native/src'),('-I'+$root+'/native/godot-cpp/include'),('-I'+$root+'/native/godot-cpp/gen/include'),('-I'+$root+'/native/godot-cpp/gdextension'))
 if($Target -eq 'template_debug'){$flags+=@('-DDEBUG_ENABLED','-DDEBUG_METHODS_ENABLED')}
 $objects=@()
